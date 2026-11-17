@@ -139,7 +139,7 @@ def page(title, body, depth=0, current="", desc="Data-driven pickleball paddle r
     <div><img src="{r}assets/logo.svg?v={ASSET_V}" alt="Pickleball Rx" width="129" height="50" style="height:50px;width:auto;margin-bottom:10px">
       <p style="margin:0">Paddle reviews that look inside the paddle: X-rays, microscope images, measured specs and on-court video.</p><p style="margin:8px 0 0">Started by Don, Beni and Siva.</p></div>
     <div><h4>Tools</h4><ul><li><a href="{r}finder.html">Paddle finder</a></li><li><a href="{r}compare.html">Compare</a></li><li><a href="{r}paddles.html">Database</a></li></ul></div>
-    <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}best.html">Our top picks</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
+    <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}best.html">Our top picks</a></li><li><a href="{r}grit-pickleball.html">Brand spotlight: Grit</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
     <div><h4>Follow</h4><ul><li><a href="{YOUTUBE}" rel="noopener">YouTube</a></li><li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li><li><a href="{r}about.html#contact">Contact</a></li></ul></div>
   </div>
   <p class="legal">&copy; 2026 PickleballRx.org &middot; <a href="{r}disclaimers.html">Disclaimers</a> &middot; Pickleball RX earns commission on some discount codes. Brands have no input into results.</p>
@@ -243,6 +243,8 @@ def lb_card(i, row, star=True):
     if sc: links.append(f'<a class="badge" href="specs.html#{sc}">Specs</a>')
     code = next((c for c in CODES if c["brand"].lower() == brand.lower() and c["code"]), None)
     code_html = f'<div style="font-size:.82rem;margin-top:6px">Code <strong>{e(code["code"])}</strong> &middot; {e(code["offer"])} at <a href="{e(code["url"])}" rel="sponsored noopener">{e(brand)}</a></div>' if code else ""
+    if brand == "Grit":
+        code_html += '<div style="font-size:.82rem;margin-top:6px"><a href="grit-pickleball.html">Brand spotlight</a> &middot; <a href="https://www.grit-shop.com/" rel="noopener">Where to buy</a></div>'
     top = star and i == 0
     return (f'<div class="lb-item{" lb-top" if top else ""}"><div class="lb-rank">{"&#9733;" if top else i + 1}</div>{img}<div style="min-width:0">'
             f'<div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">{e(brand)}{" &middot; top spot" if top else ""}</div>'
@@ -336,6 +338,14 @@ write("index.html", page("PickleballRx | Pickleball paddle reviews, X-rays and d
   <div class="section-head"><div><span class="tag">Rx top picks</span><h2 style="margin-top:8px">The Leader Board</h2>
   <p class="section-lead">The paddles that earned a spot on our wall after X-rays, microscope scans, spin tests and a lot of games. One paddle holds the top spot. Tap any badge to see the lab results behind it. <a href="best.html">See our top picks by core type &rarr;</a></p></div></div>
   <div class="lb-grid">{lb_html}</div>
+</section>
+<section id="spotlight" style="padding-top:0">
+  <a class="spotlight-band" href="grit-pickleball.html">
+    <img src="assets/paddles/product/grit-e2-cf.jpg" alt="Grit E2-CF Launch Edition" width="120" height="180" loading="lazy">
+    <div><span class="tag">Brand spotlight</span><h2 style="margin:8px 0 6px">The most passionate owners in pickleball</h2>
+    <p>Grit is a paddle brand from Baton Rouge, Louisiana. Their E1 paddles top our spin chart, and the E2-CF kept its spin after 50+ hours of play. We take no money from Grit. We just think they're worth knowing.</p>
+    <span class="go">Meet Grit &rarr;</span></div>
+  </a>
 </section>
 <section>
   <h2>Shop by how you play</h2>
@@ -858,7 +868,7 @@ write("grit.html", page("Grit Lab: pickleball paddle grit under the microscope |
   <h2>Head-to-head surface comparisons</h2>
   <div class="tools">{cmp_cards}</div>
   {cmp_gallery}
-  <p class="muted" style="font-size:.9rem;margin-top:12px">Grit E1 CW and E1 TW are recreational-play paddles that are not USA Pickleball approved.</p>
+  <p id="grit-e1" class="muted" style="font-size:.9rem;margin-top:12px">Grit E1 CW and E1 TW are recreational-play paddles that are not USA Pickleball approved.</p>
 </section>
 <section style="padding-top:0"><div class="note">{GRIT_DISCLAIMER} <a href="disclaimers.html#grit">Disclaimers</a>.</div></section>
 </div>""", 0, "grit", desc=f"{len(LABS['grit'])} pickleball paddle faces under a 4K microscope, plus grit wear studies."))
@@ -941,7 +951,7 @@ write("spin.html", page("Spin Lab: pickleball paddle spin test results | Pickleb
     <li>Results are adjusted for ball speed but not for small differences in impact angle between sessions. The rig was re-set during October 2026, and numbers from different setups aren't directly comparable.</li>
   </ul>
 </section>
-<section style="padding-top:0"><div class="note"><strong>Disclosures.</strong> Evolv requested the CarbonSkyn durability testing and provided the three Origin paddles. The Grit E2CF paddles were provided by the owner of Grit. Pickleball RX has discount codes with some brands (including Arronax, Evolv, Holbrook, Luzz, MARK, Pakle, RPM and Grit) and earns commission on code or link purchases. Brands have no input into the results. Static-rig numbers from one setup; not an official USA Pickleball test.</div></section>
+<section style="padding-top:0"><div class="note"><strong>Disclosures.</strong> Evolv requested the CarbonSkyn durability testing and provided the three Origin paddles. The Grit E2CF paddles were provided by the owner of Grit. Pickleball RX has discount codes with some brands (including Arronax, Evolv, Holbrook, Luzz, MARK, Pakle and RPM) and earns commission on code or link purchases. Brands have no input into the results. Static-rig numbers from one setup; not an official USA Pickleball test.</div></section>
 </div>""", 0, "spin", desc="Pickleball paddle spin test results at 960 fps, plus spin durability re-tests."))
 
 # ---------- Spec Lab ----------
@@ -1126,6 +1136,73 @@ write("disclaimers.html", page("Disclaimers | PickleballRx", f'''
   <h2 id="corrections">Questions or corrections</h2>
   <p>If you think something here is wrong, message us on <a href="{INSTAGRAM}">Instagram @picklebrx</a> and we'll check it.</p>
 </article>''', 0, "disclaimers", desc="How Pickleball RX tests paddles, who supplied what, and the limits of our results."))
+
+
+# ---------- Brand spotlight: Grit ----------
+# Public facts only: from grit-shop.com (about page) and Siva. Confidential Grit prototypes stay off the site.
+GRIT_SHOP = "https://www.grit-shop.com/"
+GRIT_LINEUP = [
+    dict(slug="grit-e2-cf", name="E2-CF", spin="Grit E2CF", usap=True,
+         text="16 mm flex-foam paddle. Comes in several colorways, including the green Launch Edition, pink and white.",
+         links=[("X-ray", "xray/grit-e2-cf.html"), ("Spin", "spin.html#grit-e2cf"), ("Spin durability", "spin.html#dur-grit-e2cf")]),
+    dict(slug="grit-e1-cw", name="E1-CW", spin="Grit E1 CW", usap=False,
+         text="16 mm, elongated, with a tight plain carbon weave under a thin glossy coat. Made for recreational play.",
+         links=[("Spin", "spin.html#grit-e1-cw"), ("Microscope", "grit.html#grit-e1")]),
+    dict(slug="grit-e1-tw", name="E1-TW", spin="Grit E1 TW", usap=False,
+         text="16 mm, elongated. The same carbon weave with titanium strands woven through it in a grid. Made for recreational play.",
+         links=[("Spin", "spin.html#grit-e1-tw"), ("Microscope", "grit.html#grit-e1")]),
+]
+_NOT_USAP = '<span class="tag" style="background:#fde2e2;color:#8a1c1c">Not USAP approved</span>'
+
+
+def grit_lineup_card(g):
+    r = next((x for x in LABS["spin"] + LABS["spin_extra"] if x["paddle"] == g["spin"]), None)
+    spin = f'<div class="spot-stat"><b>{r["avg"]:,}</b><span>RPM spin average</span></div>' if r else ""
+    label = _NOT_USAP if not g["usap"] else '<span class="tag">USAP approved</span>'
+    links = "".join(f'<a class="badge" href="{h}">{e(t)}</a>' for t, h in g["links"])
+    return (f'<div class="card spot-card"><img src="{product_photo(g["slug"])}" alt="Grit {e(g["name"])}" width="200" height="300" loading="lazy">'
+            f'<div><div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">Grit</div>'
+            f'<h3 style="margin:2px 0 6px">{e(g["name"])}</h3>{label}<p style="font-size:.95rem;margin:10px 0">{e(g["text"])}</p>{spin}'
+            f'<div class="badges" style="margin:10px 0">{links}</div>'
+            f'<a class="btn yellow" href="{GRIT_SHOP}" rel="noopener" target="_blank">Where to buy: grit-shop.com &rarr;</a></div></div>')
+
+
+_dur = next((d for d in LABS["durability"] if d["paddle"] == "Grit E2CF"), None)
+write("grit-pickleball.html", page("Grit Pickleball: brand spotlight | PickleballRx", f"""
+<section class="hero" style="padding:48px 0"><div class="wrap">
+  <div>
+    <span class="tag">Brand spotlight</span>
+    <h1>The most passionate owners in <em>pickleball</em>.</h1>
+    <p>That's our take on GRIT. PICKLEBALL, a paddle brand born in Baton Rouge, Louisiana. We've X-rayed, scoped and spin-tested their paddles, and the numbers hold up.</p>
+    <div class="btn-row"><a class="btn yellow" href="{GRIT_SHOP}" rel="noopener" target="_blank">Shop Grit</a><a class="btn ghost" href="#lab">See our lab results</a></div>
+  </div>
+  <figure class="hero-art" style="margin:0;text-align:center"><img src="assets/paddles/product/grit-e2-cf.jpg" alt="Grit E2-CF Launch Edition" width="300" height="450" style="border-radius:14px;max-width:300px;width:100%;height:auto"></figure>
+</div></section>
+<div class="wrap">
+<section style="padding-bottom:0">
+  <div class="note"><strong>No money involved.</strong> Pickleball RX takes no money from Grit. We back them because they're local, they care about their paddles, and the lab numbers hold up. Grit did provide the E2-CF paddles we tested, and we say so wherever those results appear.</div>
+</section>
+<section>
+  <h2>Their story</h2>
+  <p class="section-lead">In Grit's own words, the brand "was born in Baton Rouge, Louisiana" and started with "a simple belief: that the players who grind the hardest, compete the smartest" deserve equipment built to match their drive. Their paddles are designed in Baton Rouge, and every one says "Made for more" on the face.</p>
+  <p class="muted" style="font-size:.85rem">Source: <a href="https://www.grit-shop.com/pages/about-us" rel="noopener">Grit's About page</a>.</p>
+</section>
+<section style="padding-top:0">
+  <h2>The paddles we've tested</h2>
+  <p class="section-lead">Product photos supplied to Pickleball RX. Grit makes more models than these. See the full lineup on <a href="{GRIT_SHOP}" rel="noopener">grit-shop.com</a>.</p>
+  <div class="spot-grid">{"".join(grit_lineup_card(g) for g in GRIT_LINEUP)}</div>
+  <p class="muted" style="font-size:.9rem;margin-top:12px">Grit E1-CW and E1-TW are recreational-play paddles that are not USA Pickleball approved.</p>
+</section>
+<section id="lab" style="padding-top:0">
+  <h2>What our labs found</h2>
+  <div class="tools">
+    <a class="tool" href="spin.html"><div class="ico">RPM</div><h3>Top of our spin chart</h3><p>The E1-TW and E1-CW hold the two highest spin averages we've recorded on our rig. They're not USAP approved, so we show them for reference.</p><span class="go">See spin results &rarr;</span></a>
+    <a class="tool" href="spin.html#dur-grit-e2cf"><div class="ico">&#8635;</div><h3>Spin that lasts</h3><p>We re-tested the E2-CF after {e(_dur["time"]) if _dur else "real play"} of play. Verdict: {e(_dur["verdict"].split(":")[-1].strip()) if _dur else "see results"}{", about 2,020 RPM on the used paddle" if _dur else ""}.</p><span class="go">See durability &rarr;</span></a>
+    <a class="tool" href="xray/grit-e2-cf.html"><div class="ico">X</div><h3>E2-CF X-ray</h3><p>See inside the E2-CF: core, perimeter ring and handle, labeled from the X-ray.</p><span class="go">See inside &rarr;</span></a>
+    <a class="tool" href="grit.html#grit-e1"><div class="ico">&micro;</div><h3>Under the microscope</h3><p>E1-CW versus E1-TW at the L and M lenses: plain carbon weave versus a titanium grid.</p><span class="go">See the grit &rarr;</span></a>
+  </div>
+</section>
+</div>""", 0, "", desc="Grit Pickleball brand spotlight: a Baton Rouge paddle brand, with Pickleball RX X-ray, microscope and spin results."))
 
 write("404.html", page("Page not found | PickleballRx", '<article class="article"><h1>Page not found</h1><p>That page doesn\'t exist. <a href="/">Go to the home page</a>.</p></article>', 0))
 

@@ -284,3 +284,16 @@ td .product-thumb { float: left; height: 42px; margin: 0 10px 0 0; }
 .colorways img { width: 100%; height: auto; border-radius: 12px; display: block; }
 .colorways figcaption { font-size: .88rem; color: var(--muted, #5b6478); margin-top: 6px; }
 .lab-item figcaption img.product-thumb { width: auto; height: 60px; aspect-ratio: auto; object-fit: contain; border: 0; padding: 0; }
+.spotlight-band { display: flex; gap: 24px; align-items: center; background: var(--navy); color: #fff; border-radius: var(--radius); padding: 24px 28px; text-decoration: none; }
+.spotlight-band img { height: 180px; width: auto; border-radius: 12px; flex: none; }
+.spotlight-band h2 { color: #fff; }
+.spotlight-band p { color: #c9d3ea; margin: 0 0 10px; max-width: 70ch; }
+.spotlight-band .go { color: var(--yellow); font-weight: 700; }
+.spotlight-band:hover .go { text-decoration: underline; }
+@media (max-width: 640px) { .spotlight-band { flex-direction: column; align-items: flex-start; } .spotlight-band img { height: 150px; } }
+.spot-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; }
+.spot-card { display: flex; gap: 16px; padding: 18px; align-items: flex-start; }
+.spot-card > img { width: 120px; height: auto; border-radius: 10px; flex: none; }
+.spot-stat b { font-size: 1.5rem; display: block; line-height: 1.1; }
+.spot-stat span { font-size: .8rem; color: var(--muted, #5b6478); }
+@media (max-width: 420px) { .spot-card { flex-direction: column; } }
