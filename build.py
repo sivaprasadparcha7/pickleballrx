@@ -54,7 +54,10 @@ def product_photo(slug):
 
 # Product photos keyed by the paddle name used in the lab data.
 NAME_PHOTO = {"Evolv Origin (CarbonSkyn)": "evolv-origin", "Luzz Cannon XPP": "luzz-cannon-xpp",
-              "Grit E2CF": "grit-e2-cf", "Grit E1 CW": "grit-e1-cw", "Grit E1 TW": "grit-e1-tw"}
+              "Grit E2CF": "grit-e2-cf", "Grit E1 CW": "grit-e1-cw", "Grit E1 TW": "grit-e1-tw",
+              "Holbrook Fuze": "holbrook-fuze", "Holbrook Fuze VantaGrit": "holbrook-fuze", "Mark Unmarked 2026": "mark-unmarked-2026",
+              "MARK unMARKed 2026": "mark-unmarked-2026", "Luzz Inferno M2": "luzz-inferno-2", "Luzz Inferno2": "luzz-inferno-2",
+              "CPX Hyper+": "cpx-hyper-plus", "E6 Ignis": "e6-ignis"}
 # Extra colorways shown on a paddle's own page (assets/paddles/product/<slug>-<color>.jpg).
 COLORWAYS = {"grit-e2-cf": [("", "Green, Launch Edition"), ("pink", "Pink"), ("white", "White")]}
 
