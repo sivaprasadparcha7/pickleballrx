@@ -308,7 +308,8 @@ REVIEWERS = [
 reviewers_html = "".join(
     f'<div class="card" style="padding:18px"><div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">#{i}</div>'
     f'<h3 style="margin:4px 0 2px">{e(n)}</h3><div class="muted" style="font-size:.88rem;margin-bottom:8px">{e(sub)}</div>'
-    f'<p style="font-size:.95rem">{e(d)}</p><a class="btn ghost" style="align-self:flex-start" href="{e(h)}" rel="noopener" target="_blank">{e(lbl)} &rarr;</a></div>'
+    f'<p style="font-size:.95rem">{e(d)}</p><a class="btn ghost" style="align-self:flex-start" href="{e(h)}" rel="noopener" target="_blank">{e(lbl)} &rarr;</a>'
+    + (f'<a style="font-size:.88rem;margin-top:8px" href="best.html#supa-senpai">See Supa Senpai\'s top picks &rarr;</a>' if n == "Supa Senpai" else "") + '</div>'
     for i, (n, sub, d, h, lbl) in enumerate(REVIEWERS, 1))
 
 # Latest reviews only show on the home page once at least one real (non-placeholder) review exists.
@@ -506,6 +507,23 @@ TOP_PICKS = [
         ("Sypik", "Triton 5", "sypik-triton-5", None, "Sypik Triton 5", "sypik-triton", ""),
     ]),
 ]
+# Supa Senpai's picks, as relayed by Siva (2026-11-17). Names checked against retailer listings.
+SENPAI_PICKS = [
+    ("Diadem", "Edge BluCore", "Comes in Pro and Hybrid shapes.", None),
+    ("Crush", "Pro Force 5G", "", None),
+    ("Sypik", "Avatar", "Also sold as the Avatar Ultimate Pro Tour.", None),
+    ("Luzz", "Inferno (original)", "The first Inferno. We've X-rayed its successor, the Inferno 2.", ("Inferno 2 X-ray", "xray/luzz-inferno-2.html")),
+    ("GRUVN", "MUVN", "Comes in several shapes and thicknesses.", None),
+]
+senpai_html = "".join(
+    f'<div class="lb-item" style="grid-template-columns:auto 1fr"><div class="lb-rank">{i}</div><div style="min-width:0">'
+    f'<div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">{e(b)}</div>'
+    f'<div style="font-weight:800;font-size:1.05rem;line-height:1.25">{e(m)}</div>'
+    + (f'<div class="muted" style="font-size:.82rem;margin-top:4px">{e(n)}</div>' if n else "")
+    + (f'<div class="badges" style="margin-top:6px"><a class="badge" href="{l[1]}">{e(l[0])}</a></div>' if l else "")
+    + '</div></div>'
+    for i, (b, m, n, l) in enumerate(SENPAI_PICKS, 1))
+
 picks_html = "".join(
     f'<section id="{k}" style="padding-top:10px"><h2>{e(t)}</h2><p class="section-lead">{e(d)}</p><div class="lb-grid">{"".join(lb_card(i, r, star=False) for i, r in enumerate(rows))}</div></section>'
     for k, t, d, rows in TOP_PICKS)
@@ -515,9 +533,14 @@ write("best.html", page("Best pickleball paddles | PickleballRx", f'''
 <section style="padding-bottom:0">
   <h1 class="page-title">Our top picks</h1>
   <p class="section-lead">Our favorite paddles by core type, picked by the Pickleball RX team after X-rays, microscope scans, spin tests and a lot of games. Tap any badge to see the lab results behind a pick.</p>
-  <div class="chips">{"".join(f'<a href="#{k}">{e(t)}</a>' for k, t, _, _ in TOP_PICKS)}</div>
+  <div class="chips">{"".join(f'<a href="#{k}">{e(t)}</a>' for k, t, _, _ in TOP_PICKS)}<a href="#supa-senpai">Supa Senpai's picks</a></div>
 </section>
 {picks_html}
+<section id="supa-senpai" style="padding-top:10px">
+  <h2>Supa Senpai's top picks</h2>
+  <p class="section-lead">Paddle picks from Supa Senpai, one of <a href="index.html#reviewers">our favorite reviewers</a>. These are Supa Senpai's choices, not ours, and we haven't lab-tested them yet. <a href="https://supasenpai.com/pickleball-senpai/" rel="noopener">See Supa Senpai's reviews</a>.</p>
+  <div class="lb-grid">{senpai_html}</div>
+</section>
 <section style="padding-bottom:0"><h2>By playing style</h2>
   <p class="section-lead">Ranked automatically from the scores in our review database. These are placeholder paddles until real reviews are in.</p>
   <div class="chips">{"".join(f'<a href="#{k}">{l}</a>' for k, l, _ in STYLES)}</div>
