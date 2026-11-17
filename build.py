@@ -531,6 +531,23 @@ senpai_html = "".join(
     + '</div></div>'
     for i, (b, m, n, l) in enumerate(SENPAI_PICKS, 1))
 
+# Siva's top 5 Canadian paddles (2026-11-17). Names checked against brand and Canadian retailer listings.
+CANADIAN_PICKS = [
+    ("GRUVN", "MUVN", "Comes in several shapes and thicknesses.", None),
+    ("Combat", "Titan Foam Pro", "", None),
+    ("Apollo", "MK47 Signature Pro", "", None),
+    ("NextGen", "Hydra", "Comes in standard and elongated shapes.", None),
+    ("BOOMA", "", "Several paddle series, including Raw Carbon and Titanium.", None),
+]
+canadian_html = "".join(
+    f'<div class="lb-item" style="grid-template-columns:auto 1fr"><div class="lb-rank">{i}</div><div style="min-width:0">'
+    f'<div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">{e(b)}</div>'
+    f'<div style="font-weight:800;font-size:1.05rem;line-height:1.25">{e(m or b)}</div>'
+    + (f'<div class="muted" style="font-size:.82rem;margin-top:4px">{e(n)}</div>' if n else "")
+    + (f'<div class="badges" style="margin-top:6px"><a class="badge" href="{l[1]}">{e(l[0])}</a></div>' if l else "")
+    + '</div></div>'
+    for i, (b, m, n, l) in enumerate(CANADIAN_PICKS, 1))
+
 picks_html = "".join(
     f'<section id="{k}" style="padding-top:10px"><h2>{e(t)}</h2><p class="section-lead">{e(d)}</p><div class="lb-grid">{"".join(lb_card(i, r, star=False) for i, r in enumerate(rows))}</div></section>'
     for k, t, d, rows in TOP_PICKS)
@@ -540,9 +557,14 @@ write("best.html", page("Best pickleball paddles | PickleballRx", f'''
 <section style="padding-bottom:0">
   <h1 class="page-title">Our top picks</h1>
   <p class="section-lead">Our favorite paddles by core type, picked by the Pickleball RX team after X-rays, microscope scans, spin tests and a lot of games. Tap any badge to see the lab results behind a pick.</p>
-  <div class="chips">{"".join(f'<a href="#{k}">{e(t)}</a>' for k, t, _, _ in TOP_PICKS)}<a href="#supa-senpai">Supasenpai's picks</a></div>
+  <div class="chips">{"".join(f'<a href="#{k}">{e(t)}</a>' for k, t, _, _ in TOP_PICKS)}<a href="#canadian">Canadian picks</a><a href="#supa-senpai">Supasenpai's picks</a></div>
 </section>
 {picks_html}
+<section id="canadian" style="padding-top:10px">
+  <h2>Top 5 Canadian paddles</h2>
+  <p class="section-lead">Our favorite paddles from Canadian brands. We haven't lab-tested these yet, so there are no X-ray, grit or spin results for them on the site.</p>
+  <div class="lb-grid">{canadian_html}</div>
+</section>
 <section id="supa-senpai" style="padding-top:10px">
   <h2>Supasenpai's top picks</h2>
   <p class="section-lead">Paddle picks from Supasenpai, one of <a href="index.html#reviewers">our favorite reviewers</a>. These are Supasenpai's choices, not ours, and we haven't lab-tested them yet. <a href="https://supasenpai.com/pickleball-senpai/" rel="noopener">See Supasenpai's reviews</a>.</p>
