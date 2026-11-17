@@ -531,7 +531,7 @@ senpai_html = "".join(
     + '</div></div>'
     for i, (b, m, n, l) in enumerate(SENPAI_PICKS, 1))
 
-# Siva's top 5 Canadian paddles (2026-11-17). Names checked against brand and Canadian retailer listings.
+# Supasenpai's top 5 Canadian paddles, relayed by Siva (2026-11-17). Names checked against brand and Canadian retailer listings.
 CANADIAN_PICKS = [
     ("GRUVN", "MUVN", "Comes in several shapes and thicknesses.", None),
     ("Combat", "Titan Foam Pro", "", None),
@@ -562,7 +562,7 @@ write("best.html", page("Best pickleball paddles | PickleballRx", f'''
 {picks_html}
 <section id="canadian" style="padding-top:10px">
   <h2>Top 5 Canadian paddles</h2>
-  <p class="section-lead">Our favorite paddles from Canadian brands. We haven't lab-tested these yet, so there are no X-ray, grit or spin results for them on the site.</p>
+  <p class="section-lead">We did not test these paddles. These picks come from our Canadian neighbor, reviewer <a href="https://supasenpai.com/pickleball-senpai/" rel="noopener">Supasenpai</a>, one of <a href="index.html#reviewers">our favorite reviewers</a>.</p>
   <div class="lb-grid">{canadian_html}</div>
 </section>
 <section id="supa-senpai" style="padding-top:10px">
