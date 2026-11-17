@@ -40,6 +40,9 @@ GRIT = [
  ("Bread & Butter LOCO 2", "Space Dust Grit"),
  ("Arronax Boost-1", "GritBite surface"),
  ("Volair CMD", "HexGrit (licensed from 11SIX24)"),
+ ("Arronax KVL 005", "T800 carbon, peel-ply texture"),
+ ("RPM Friction Pro V2", "CarbonBite surface"),
+ ("Li-Ning HyperPower 90S (14mm)", "Carbon fiber reinforced, micro-sanding finish"),
 ]
 
 WEAR = [
@@ -55,12 +58,16 @@ COMPARE = [
  ("Bread & Butter LOCO 2 (Space Dust) vs 11SIX24 HexGrit", "A close cousin of HexGrit, but with larger, more raised beads. L and M lenses, matched light."),
  ("Volair CMD vs 11SIX24 HexGrit", "The same kind of HexGrit surface. L and M lenses, matched light."),
  ("Evolv vs 11SIX24 HexGrit Power 2", "A used-paddle wear comparison."),
+ ("RPM Jade (SICmatrix) vs RPM Friction Pro V2 (CarbonBite)", "The same brand with two approaches. The Jade has fine grit in the coating, while the V2 gets its texture from the carbon face itself. L and M lenses, matched light."),
  ("Grit Pickleball E1 CW vs E1 TW", "The same tight plain carbon weave. The TW adds titanium strands woven through in a grid every few squares; the CW is a uniform dark weave under a thin glossy coat."),
 ]
 
 GRIT_NOTES = [
  ("Arronax Boost-1", "Green hexagonal flakes set into a frosted T700 carbon weave, with fine raised grit points between them. Arronax calls it a GRITBITE surface on the BOOST-1 QuickSand but doesn't say what GritBite is made of. The hex flakes look decorative; the weave texture and raised grit appear to do the gripping. That's a visual read and hasn't been spin-tested."),
  ("Volair CMD", "Volair licensed 11SIX24's HexGrit. Under matched light, a brand-new CMD shows the same kind of glassy, beaded layer with fine sparkle as the 11SIX24 HexGrit. The weave looked slightly crisper under the Volair's layer, which could be focus or the spot photographed."),
+ ("Arronax KVL 005", "Tight, even plain weave with a matte peel-ply texture over T800 carbon. This is not the durable-grit version. A published spec lists its roughness at 6.58 µm Ra."),
+ ("RPM Friction Pro V2", "Crisp plain carbon weave with a dark, glossy finish. The texture comes from the carbon surface itself, not added grit."),
+ ("Li-Ning HyperPower 90S (14mm)", "The paddle is labeled \"carbon fiber reinforced, micro-sanding finish.\" Under the microscope, frosted, finely scratched tows give the texture, with no grit particles on top."),
 ]
 
 SPIN = [

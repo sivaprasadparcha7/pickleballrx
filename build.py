@@ -53,7 +53,7 @@ def product_photo(slug):
 
 
 # Product photos keyed by the paddle name used in the lab data.
-NAME_PHOTO = {"Evolv Origin (CarbonSkyn)": "evolv-origin", "Luzz Cannon XPP": "luzz-cannon-xpp",
+NAME_PHOTO = {"RPM Friction Pro V2": "rpm-v2", "Evolv Origin (CarbonSkyn)": "evolv-origin", "Luzz Cannon XPP": "luzz-cannon-xpp",
               "Grit E2CF": "grit-e2-cf", "Grit E1 CW": "grit-e1-cw", "Grit E1 TW": "grit-e1-tw",
               "Holbrook Fuze": "holbrook-fuze", "Holbrook Fuze VantaGrit": "holbrook-fuze", "Mark Unmarked 2026": "mark-unmarked-2026",
               "MARK unMARKed 2026": "mark-unmarked-2026", "Luzz Inferno M2": "luzz-inferno-2", "Luzz Inferno2": "luzz-inferno-2",
@@ -926,10 +926,14 @@ def gallery(items, min_w=300):
     return f'<div class="lab-grid" style="grid-template-columns:repeat(auto-fill,minmax({min_w}px,1fr));margin-top:18px;align-items:start">{figs}</div>' if figs else ""
 
 
-collection_fig = card_fig("all-36-grit.jpg", "<strong>All 36 paddles</strong> &middot; same 4K microscope, M lens &middot; tap to open full size", "Grid of 36 paddle faces under the microscope")
+collection_fig = card_fig("all-39-grit.jpg", f"<strong>All {len(LABS['grit'])} paddles</strong> &middot; same 4K microscope, M lens &middot; tap to open full size", f"Grid of {len(LABS['grit'])} paddle faces under the microscope")
 new_gallery = gallery([
     ("card-arronax-boost-1.jpg", "<strong>Arronax Boost-1</strong> &middot; GritBite surface, M lens", "Arronax Boost-1 GritBite surface under the microscope"),
     ("card-volair-cmd.jpg", "<strong>Volair CMD</strong> &middot; HexGrit (licensed from 11SIX24)", "Volair CMD HexGrit surface under the microscope"),
+    ("card-arronax-kvl-005.jpg", "<strong>Arronax KVL 005</strong> &middot; T800 carbon, peel-ply texture", "Arronax KVL 005 peel-ply surface under the microscope"),
+    ("card-rpm-friction-pro-v2.jpg", "<strong>RPM Friction Pro V2</strong> &middot; CarbonBite surface, M lens", "RPM Friction Pro V2 CarbonBite surface under the microscope"),
+    ("card-rpm-friction-pro-v2-lm.jpg", "<strong>RPM Friction Pro V2</strong> &middot; CarbonBite surface, L and M lenses", "RPM Friction Pro V2 at the L and M lenses"),
+    ("card-li-ning-90s.jpg", "<strong>Li-Ning HyperPower 90S (14mm)</strong> &middot; micro-sanding finish", "Li-Ning HyperPower 90S surface under the microscope"),
     ("card-loco2-l.jpg", "<strong>Bread &amp; Butter LOCO 2</strong> &middot; Space Dust Grit, L lens", "Bread and Butter LOCO 2 at the L lens"),
     ("card-loco2-m.jpg", "<strong>Bread &amp; Butter LOCO 2</strong> &middot; Space Dust Grit, M lens", "Bread and Butter LOCO 2 at the M lens"),
 ], 260)
@@ -947,6 +951,7 @@ wear_gallery = gallery([
 cmp_gallery = gallery([
     ("cmp-loco2-vs-hexgrit.jpg", "<strong>LOCO 2 (Space Dust) vs 11SIX24 HexGrit</strong> &middot; L and M lenses", "LOCO 2 versus HexGrit comparison"),
     ("cmp-volair-vs-hexgrit.jpg", "<strong>Volair CMD vs 11SIX24 HexGrit</strong> &middot; L and M lenses", "Volair CMD versus HexGrit comparison"),
+    ("cmp-rpm-jade-vs-friction-pro-v2.jpg", "<strong>RPM Jade (SICmatrix) vs Friction Pro V2 (CarbonBite)</strong> &middot; L and M lenses", "RPM Jade versus RPM Friction Pro V2 comparison"),
     ("cmp-grit-e1-cw-vs-tw.jpg", f"<strong>Grit E1 CW vs E1 TW</strong> {NOT_USAP}", "Grit E1 CW versus E1 TW comparison"),
     ("card-grit-e1-cw.jpg", f'<img class="product-thumb" src="assets/paddles/product/grit-e1-cw.jpg" alt="Grit E1 CW" width="40" height="60" loading="lazy">' + f"<strong>Grit E1 CW</strong> &middot; L and M lenses {NOT_USAP}", "Grit E1 CW under the microscope"),
     ("card-grit-e1-tw.jpg", f'<img class="product-thumb" src="assets/paddles/product/grit-e1-tw.jpg" alt="Grit E1 TW" width="40" height="60" loading="lazy">' + f"<strong>Grit E1 TW</strong> &middot; L and M lenses {NOT_USAP}", "Grit E1 TW under the microscope"),

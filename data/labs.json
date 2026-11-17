@@ -143,6 +143,18 @@
   {
    "name": "Volair CMD",
    "surface": "HexGrit (licensed from 11SIX24)"
+  },
+  {
+   "name": "Arronax KVL 005",
+   "surface": "T800 carbon, peel-ply texture"
+  },
+  {
+   "name": "RPM Friction Pro V2",
+   "surface": "CarbonBite surface"
+  },
+  {
+   "name": "Li-Ning HyperPower 90S (14mm)",
+   "surface": "Carbon fiber reinforced, micro-sanding finish"
   }
  ],
  "wear": [
@@ -191,6 +203,10 @@
    "text": "A used-paddle wear comparison."
   },
   {
+   "title": "RPM Jade (SICmatrix) vs RPM Friction Pro V2 (CarbonBite)",
+   "text": "The same brand with two approaches. The Jade has fine grit in the coating, while the V2 gets its texture from the carbon face itself. L and M lenses, matched light."
+  },
+  {
    "title": "Grit Pickleball E1 CW vs E1 TW",
    "text": "The same tight plain carbon weave. The TW adds titanium strands woven through in a grid every few squares; the CW is a uniform dark weave under a thin glossy coat."
   }
@@ -203,6 +219,18 @@
   {
    "paddle": "Volair CMD",
    "text": "Volair licensed 11SIX24's HexGrit. Under matched light, a brand-new CMD shows the same kind of glassy, beaded layer with fine sparkle as the 11SIX24 HexGrit. The weave looked slightly crisper under the Volair's layer, which could be focus or the spot photographed."
+  },
+  {
+   "paddle": "Arronax KVL 005",
+   "text": "Tight, even plain weave with a matte peel-ply texture over T800 carbon. This is not the durable-grit version. A published spec lists its roughness at 6.58 µm Ra."
+  },
+  {
+   "paddle": "RPM Friction Pro V2",
+   "text": "Crisp plain carbon weave with a dark, glossy finish. The texture comes from the carbon surface itself, not added grit."
+  },
+  {
+   "paddle": "Li-Ning HyperPower 90S (14mm)",
+   "text": "The paddle is labeled \"carbon fiber reinforced, micro-sanding finish.\" Under the microscope, frosted, finely scratched tows give the texture, with no grit particles on top."
   }
  ],
  "spin": [
