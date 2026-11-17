@@ -60,7 +60,7 @@ NAME_PHOTO = {"Evolv Origin (CarbonSkyn)": "evolv-origin", "Luzz Cannon XPP": "l
               "CPX Hyper+": "cpx-hyper-plus", "E6 Ignis": "e6-ignis",
               "RPM Jade": "rpm-jade", "Mehau S5": "mehau-s5", "Proton Project Coyote": "proton-project-coyote",
               "VANWIN Alpha Control": "vanwin-alpha-control", "Luzz Glider 2026": "luzz-glider-2026",
-              "Selkirk LABS Project Boomstik": "selkirk-labs-project-boomstik"}
+              "Selkirk LABS Project Boomstik": "selkirk-labs-project-boomstik", "Zcebra Gazelle": "zcebra-gazelle"}
 # Extra colorways shown on a paddle's own page (assets/paddles/product/<slug>-<color>.jpg).
 COLORWAYS = {"grit-e2-cf": [("", "Green, Launch Edition"), ("pink", "Pink"), ("white", "White")]}
 
@@ -605,7 +605,7 @@ SENPAI_PICKS = [
     ("GRUVN", "MUVN-16HD", "", None),
 ]
 def _ext_card(i, b, m, n, l):
-    ph = product_photo(_slug(b + " " + m))
+    ph = product_photo(_slug(b + " " + m)) or (product_photo(l[1][5:-5]) if l and l[1].startswith("xray/") else "")
     img = f'<img class="lb-thumb" src="{ph}" alt="{e(b)} {e(m)}" loading="lazy" style="object-fit:contain">' if ph else ""
     return (f'<div class="lb-item"{"" if ph else " style=\'grid-template-columns:auto 1fr\'"}><div class="lb-rank">{i}</div>{img}<div style="min-width:0">'
             f'<div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">{e(b)}</div>'
