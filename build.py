@@ -537,7 +537,7 @@ CANADIAN_PICKS = [
     ("Combat", "Titan Foam Pro", "", None),
     ("Apollo", "MK47 Signature Pro", "", None),
     ("NextGen", "Hydra", "Comes in standard and elongated shapes.", None),
-    ("BOOMA", "Aerofoam", "", None),
+    ("BOOMA", "Aerofoam", "", ("BOOMA store", "https://boomastore.com/en/products/aerofoam-pickleball-paddle")),
 ]
 canadian_html = "".join(
     f'<div class="lb-item" style="grid-template-columns:auto 1fr"><div class="lb-rank">{i}</div><div style="min-width:0">'
