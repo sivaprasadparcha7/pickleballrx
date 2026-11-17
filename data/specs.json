@@ -1,0 +1,305 @@
+{
+  "brand": "Pickleball RX",
+  "updated": "2026-11-17",
+  "paddles": [
+    {
+      "card": 1,
+      "id": "rpm-jade",
+      "brand": "RPM",
+      "model": "Jade 16mm",
+      "shape": "Elongated",
+      "measured": {
+        "swingWeight": 118,
+        "twistWeight": 6.01,
+        "staticWeightOz": 7.76
+      },
+      "dimensions": {
+        "lengthIn": 16.5,
+        "widthIn": 7.5,
+        "thicknessMm": 16,
+        "handleIn": 5.5,
+        "measuredByPickleballRx": []
+      },
+      "photo": "images/rpm-jade.jpg",
+      "notes": [
+        "Swing weight measured with 3 g lead tape at the throat on each side.",
+        "Shape assumed elongated. The 16mm widebody version is 16 in × 8 in."
+      ],
+      "source": {
+        "name": "Pickleball Central",
+        "url": "https://pickleballcentral.com/rpm-jade-elongated-pickleball-paddle/"
+      },
+      "cardImage": "cards/01-rpm-jade-16mm.webp"
+    },
+    {
+      "card": 2,
+      "id": "luzz-cannon",
+      "brand": "Luzz",
+      "model": "Cannon XPP M1 16mm",
+      "shape": "Elongated",
+      "measured": {
+        "swingWeight": 124,
+        "twistWeight": 6.04,
+        "staticWeightOz": 8.01
+      },
+      "dimensions": {
+        "lengthIn": 16.54,
+        "widthIn": 7.48,
+        "thicknessMm": 16,
+        "handleIn": 5.52,
+        "measuredByPickleballRx": []
+      },
+      "photo": "images/luzz-cannon-xpp-m1.jpg",
+      "notes": [],
+      "source": {
+        "name": "Luzz Pickleball",
+        "url": "https://luzzpickleball.com/products/luzz-cannon-xpp-m1-paddle"
+      },
+      "cardImage": "cards/02-luzz-cannon-xpp-m1-16mm.webp"
+    },
+    {
+      "card": 3,
+      "id": "sypik-triton",
+      "brand": "Sypik",
+      "model": "Triton 5 Ultimate Pro 16mm",
+      "shape": "Elongated",
+      "measured": {
+        "swingWeight": 121,
+        "twistWeight": 6.28,
+        "staticWeightOz": 8.09
+      },
+      "dimensions": {
+        "lengthIn": 16.5,
+        "widthIn": 7.4,
+        "thicknessMm": 16,
+        "handleIn": 5.55,
+        "measuredByPickleballRx": []
+      },
+      "photo": "images/sypik-triton-5.jpg",
+      "notes": [],
+      "source": {
+        "name": "Vina Paddle",
+        "url": "https://vinapaddle.com/products/sypik-triton-5-ultimate-pro-16mm"
+      },
+      "cardImage": "cards/03-sypik-triton-5-ultimate-pro-16mm.webp"
+    },
+    {
+      "card": 4,
+      "id": "cpx-hyper",
+      "brand": "CPX",
+      "model": "Hyper+ 16mm",
+      "shape": "Elongated",
+      "measured": {
+        "swingWeight": 117,
+        "twistWeight": 6.34,
+        "staticWeightOz": 8.02
+      },
+      "dimensions": {
+        "lengthIn": 16.54,
+        "widthIn": 7.48,
+        "thicknessMm": 16,
+        "handleIn": 5.5,
+        "measuredByPickleballRx": []
+      },
+      "photo": "images/cpx-hyper-plus.jpg",
+      "notes": [],
+      "source": {
+        "name": "CPX Pickleball",
+        "url": "https://hyper.cpxpickleball.com/"
+      },
+      "cardImage": "cards/04-cpx-hyper-plus-16mm.webp"
+    },
+    {
+      "card": 5,
+      "id": "luzz-glider",
+      "brand": "Luzz",
+      "model": "Glider 2026 Hybrid 16mm",
+      "shape": "Hybrid",
+      "measured": {
+        "swingWeight": 110,
+        "twistWeight": 6.19,
+        "staticWeightOz": 7.95
+      },
+      "dimensions": {
+        "lengthIn": 16.34,
+        "widthIn": 7.68,
+        "thicknessMm": 16,
+        "handleIn": 5.31,
+        "measuredByPickleballRx": []
+      },
+      "photo": "images/luzz-glider-2026.jpg",
+      "notes": [],
+      "source": {
+        "name": "Luzz Pickleball",
+        "url": "https://luzzpickleball.com/products/luzz-glider-2026"
+      },
+      "cardImage": "cards/05-luzz-glider-2026-hybrid-16mm.webp"
+    },
+    {
+      "card": 6,
+      "id": "proton-coyote",
+      "brand": "Proton",
+      "model": "Project Coyote 15mm",
+      "shape": "Elongated",
+      "measured": {
+        "swingWeight": 119,
+        "twistWeight": 6.1,
+        "staticWeightOz": 7.7
+      },
+      "dimensions": {
+        "lengthIn": 16.5,
+        "widthIn": 7.5,
+        "thicknessMm": 15,
+        "handleIn": 5.5,
+        "measuredByPickleballRx": []
+      },
+      "photo": "images/proton-coyote.jpg",
+      "notes": [],
+      "source": {
+        "name": "Pickleball Warehouse",
+        "url": "https://www.pickleballwarehouse.com/Proton_Project_Coyote_Pickleball_Paddle/descpage-PRPCO.html"
+      },
+      "cardImage": "cards/06-proton-project-coyote-15mm.webp"
+    },
+    {
+      "card": 7,
+      "id": "gearbox-8m",
+      "brand": "Gearbox",
+      "model": "Pressure X 8M Hybrid 16mm",
+      "shape": "Hybrid",
+      "measured": {
+        "swingWeight": 111,
+        "twistWeight": 6.15,
+        "staticWeightOz": 7.7
+      },
+      "dimensions": {
+        "lengthIn": 16.2,
+        "widthIn": 7.8,
+        "thicknessMm": 16,
+        "handleIn": 5.65,
+        "measuredByPickleballRx": []
+      },
+      "photo": "images/gearbox-pressure-x-8m.jpg",
+      "notes": [],
+      "source": {
+        "name": "Gearbox",
+        "url": "https://gearboxsports.com/products/pressure-x-8m-hybrid-pickleball-paddle"
+      },
+      "cardImage": "cards/07-gearbox-pressure-x-8m-hybrid-16mm.webp"
+    },
+    {
+      "card": 8,
+      "id": "gearbox-8e",
+      "brand": "Gearbox",
+      "model": "Pressure X 8E Hybrid 16mm",
+      "shape": "Hybrid",
+      "measured": {
+        "swingWeight": 112,
+        "twistWeight": 6.18,
+        "staticWeightOz": 7.7
+      },
+      "dimensions": {
+        "lengthIn": 16.2,
+        "widthIn": 7.8,
+        "thicknessMm": 16,
+        "handleIn": 5.65,
+        "measuredByPickleballRx": []
+      },
+      "photo": "images/gearbox-pressure-x-8e.jpg",
+      "notes": [],
+      "source": {
+        "name": "Gearbox",
+        "url": "https://gearboxsports.com/products/pressure-x-8e-hybrid-pickleball-paddle"
+      },
+      "cardImage": "cards/08-gearbox-pressure-x-8e-hybrid-16mm.webp"
+    },
+    {
+      "card": 9,
+      "id": "pop-n-rush",
+      "brand": "Pickle Poppers",
+      "model": "Pop N Rush Elongated 16mm",
+      "shape": "Elongated",
+      "measured": {
+        "swingWeight": 118,
+        "twistWeight": 6.3,
+        "staticWeightOz": 8
+      },
+      "dimensions": {
+        "lengthIn": 16.45,
+        "widthIn": 7.48,
+        "thicknessMm": 16,
+        "handleIn": 5.7,
+        "measuredByPickleballRx": []
+      },
+      "photo": "images/pop-n-rush.jpg",
+      "notes": [],
+      "source": {
+        "name": "Pickle Poppers",
+        "url": "https://www.pickle-poppers.com/products/pre-orderpop-n-rush-paddleelongated"
+      },
+      "cardImage": "cards/09-pickle-poppers-pop-n-rush-elongated-16mm.webp"
+    },
+    {
+      "card": 10,
+      "id": "bnb-loco",
+      "brand": "Bread & Butter",
+      "model": "Loco Elongated 16mm",
+      "shape": "Elongated",
+      "measured": {
+        "swingWeight": 120,
+        "twistWeight": 6.21,
+        "staticWeightOz": 7.87
+      },
+      "dimensions": {
+        "lengthIn": 16.5,
+        "widthIn": 7.5,
+        "thicknessMm": 16,
+        "handleIn": 5.5,
+        "measuredByPickleballRx": [
+          "len",
+          "wid"
+        ]
+      },
+      "photo": "images/bnb-loco.jpg",
+      "notes": [
+        "Length and width measured by Pickleball RX. The published width is 7.375″."
+      ],
+      "source": {
+        "name": "Spinwave Pickleball",
+        "url": "https://spinwavepickleball.com/products/the-loco-16mm-pickleball-paddle-elongated"
+      },
+      "cardImage": "cards/10-bread-butter-loco-elongated-16mm.webp"
+    },
+    {
+      "card": 11,
+      "id": "arronax-boost-1",
+      "brand": "Arronax",
+      "model": "Boost-1 16mm Upgraded Grit",
+      "shape": "Elongated",
+      "measured": {
+        "swingWeight": 121,
+        "twistWeight": 6.24,
+        "staticWeightOz": 7.92
+      },
+      "dimensions": {
+        "lengthIn": 16.38,
+        "widthIn": 7.32,
+        "thicknessMm": 16,
+        "handleIn": 5.71,
+        "measuredByPickleballRx": [
+          "mm"
+        ]
+      },
+      "photo": "images/arronax-boost-1.jpg",
+      "notes": [
+        "Static weight is the 8.18 oz scale reading minus 0.26 oz.",
+        "Published as 416 × 186 mm with a 145 mm handle. Shape isn't stated by Arronax; elongated going by those proportions."
+      ],
+      "source": {
+        "name": "Arronax",
+        "url": "https://www.arronax.my/products/boost-1"
+      },
+      "cardImage": "cards/11-arronax-boost-1-16mm-upgraded-grit.webp"
+    }
+  ]
+}

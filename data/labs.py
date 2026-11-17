@@ -1,0 +1,129 @@
+# Grit Lab and Spin Lab data, from Siva's summaries dated 2026-11-16.
+# Edit here, then run: python3 data/labs.py && python3 build.py
+import json, os
+D = os.path.dirname(os.path.abspath(__file__))
+
+GRIT = [
+ ("Luzz Cannon XPP M1", "Green silicon carbide"),
+ ("RPM Jade", "SICmatrix surface"),
+ ("MARK unMARKed 2026", "VelosiGrit"),
+ ("11SIX24 HexGrit", "HexGrit"),
+ ("Facolos TrueGrit", "TrueGrit coating"),
+ ("Spartus Spitfire", "PermaGritNano"),
+ ("Zcebra Gazelle", "Frosted carbon"),
+ ("Luzz Inferno2", "Aero-Black silicon carbide"),
+ ("PACT Teflon Evolve", "Teflonix layer"),
+ ("VANWIN Alpha Power", "Embedded carborundum"),
+ ("VANWIN Alpha Control", "100% Kevlar face"),
+ ("Pickle Poppers Pop n Treasure", "EverGrit"),
+ ("Honolulu J6CR", "Crystal Blue Endurance grit"),
+ ("Evolv", "CarbonSkyn"),
+ ("E6 Ignis", "Embedded grit"),
+ ("Arronax Thunder 2", "Tacky surface"),
+ ("Grit Pickleball", "Resin-based peel-ply"),
+ ("Luzz Glider 2026", "984-Aero grit"),
+ ("Friday Aura Pro Tour (beta)", "Durable grit (unnamed)"),
+ ("Speed Up Tide", "±45° T700 carbon"),
+ ("Proton Project Coyote", "Roughness-enhanced surface"),
+ ("Sypik Triton 5", "Coarse peel-ply"),
+ ("Holbrook Fuze VantaGrit", "VantaGrit"),
+ ("Mehau E5", "3D carbon fiber"),
+ ("Mehau S5", "Fluid Surface"),
+ ("Mehau E4", "3D woven carbon"),
+ ("Selkirk LABS Project Boomstik", "InfiniGrit"),
+ ("Crush Covert", "Carbon Friction Surface"),
+ ("CPX Hyper+", "Raw T700 carbon"),
+ ("Dynasty Foam Legend", "Enduro MaXx Grit"),
+ ("Franklin unreleased paddle", "Carbon surface"),
+ ("Gearbox Pressure X 8E", "SpinLock silicon carbide"),
+ ("Pickle Poppers Pop N Rush", "MagmaGrit"),
+ ("Bread & Butter LOCO 2", "Space Dust Grit"),
+ ("Arronax Boost-1", "GritBite surface"),
+ ("Volair CMD", "HexGrit (licensed from 11SIX24)"),
+]
+
+WEAR = [
+ ("RPM Jade (SICmatrix)", "Played", "About 5–15% visible wear.",
+  "Both faces' centers look close to the throat: light polishing and scuffs, no chips, bald spots or missing grit. Fine grit sits inside the coating and polishes down slowly."),
+ ("PACT Teflon Evolve (Teflonix)", "Played", "About 5–10% visible wear at the center versus the throat.", "Shot under matched light."),
+ ("11SIX24 HexGrit Power 2", "About 4–5 months", "Center about 25–35% wear.", "The thick sparkle layer wore through to the carbon in the hitting zone."),
+ ("Honolulu J6CR (Crystal Blue)", "About 4 months", "Center about 15–25% wear.", ""),
+ ("Evolv (CarbonSkyn)", "New, 1 month, 6 months", "Same model photographed at three ages.", "Throat, center, top, and 1 inch above and below center, plus a comparison against the HexGrit Power 2."),
+]
+
+COMPARE = [
+ ("Bread & Butter LOCO 2 (Space Dust) vs 11SIX24 HexGrit", "A close cousin of HexGrit, but with larger, more raised beads. L and M lenses, matched light."),
+ ("Volair CMD vs 11SIX24 HexGrit", "The same kind of HexGrit surface. L and M lenses, matched light."),
+ ("Evolv vs 11SIX24 HexGrit Power 2", "A used-paddle wear comparison."),
+ ("Grit Pickleball E1 CW vs E1 TW", "The same tight plain carbon weave. The TW adds titanium strands woven through in a grid every few squares; the CW is a uniform dark weave under a thin glossy coat."),
+]
+
+GRIT_NOTES = [
+ ("Arronax Boost-1", "Green hexagonal flakes set into a frosted T700 carbon weave, with fine raised grit points between them. Arronax calls it a GRITBITE surface on the BOOST-1 QuickSand but doesn't say what GritBite is made of. The hex flakes look decorative; the weave texture and raised grit appear to do the gripping. That's a visual read and hasn't been spin-tested."),
+ ("Volair CMD", "Volair licensed 11SIX24's HexGrit. Under matched light, a brand-new CMD shows the same kind of glassy, beaded layer with fine sparkle as the 11SIX24 HexGrit. The weave looked slightly crisper under the Volair's layer, which could be focus or the spot photographed."),
+]
+
+SPIN = [
+ ("Grit E1 TW", "Not USAP approved", 2625, 2685, dict(usap=False, as_shot=True)),
+ ("Grit E1 CW", "Not USAP approved", 2595, 2615, dict(usap=False, as_shot=True)),
+ ("Luzz Cannon XPP", "Used 2–3 weeks", 2190, 2265, {}),
+ ("Gearbox Pressure XE", "New", 2190, 2245, {}),
+ ("Gearbox Pressure X M", "New", 2045, 2125, {}),
+ ("Pop N Rush", "New", 2025, 2095, {}),
+ ("Grit E2CF", "Used 2 weeks", 2020, 2145, dict(as_shot=True)),
+ ("Holbrook Fuze", "Used 2 weeks, demo paddle", 2020, 2055, {}),
+ ("Arronax Boost", "New", 1990, 2055, {}),
+ ("Jelly Bean Hurache 2", "Used 1 month+", 1980, 2230, {}),
+ ("Speed Up Tide", "New", 1935, 2070, {}),
+ ("Evolv Origin", "Used 1 month", 1875, 1980, {}),
+ ("11SIX24 Power 2", "Used 4 months", 1830, 2210, {}),
+ ("Spartus Spitfire", "Used 1 month", 1830, 1965, {}),
+ ("Mark Unmarked 2026", "Used 1 month", 1820, 1950, {}),
+ ("Friday Aura Pro Tour (Beta)", "New; pre-release beta, not the final version", 1810, 1895, {}),
+ ("Honolulu J6CR", "Used 4 months+", 1805, 1930, {}),
+ ("RPM Jade", "New", 1785, 1930, {}),
+ ("Bread & Butter Loco 2 Elongated", "Brand new", 1760, 1905, {}),
+ ("Luzz Inferno M2", "Used 1 month+", 1745, 1780, {}),
+]
+
+DURABILITY = [
+ dict(paddle="Evolv Origin (CarbonSkyn)", time="6 months, about 300+ games", result="2,270 new → 2,280 at six months (top spin)", verdict="Held: no measurable loss", good=True,
+      table=[["Paddle", "Top spin", "Best-3 average", "Conservative average", "Rebound speed"],
+             ["New", "2,270", "2,010", "1,545", "24.4 mph"], ["One month", "2,180", "2,095", "1,910", "23.6 mph"], ["Six months", "2,280", "2,205", "1,565", "24.1 mph"]],
+      notes=["Three separate paddles: new, about one month (50+ games) and about six months (300+ games).",
+             "No measurable loss of spin or power from new to six months.",
+             "Under a 4K microscope the six-month face showed light chipping at the edges of the texture with the weave intact. X-ray showed no visible core damage.",
+             "These are three different paddles and the gaps are the size of normal hit-location scatter, so this does not show the paddle gaining spin with age.",
+             "These top-spin figures pool several sessions. The main table's one-month Origin row (1,875 / 1,980) uses the single-session method used for every other paddle.",
+             "Disclosure: Evolv asked for this test and supplied the paddles. Testing and numbers are Pickleball RX's own."]),
+ dict(paddle="Luzz Cannon XPP", time="About 3 weeks, 50+ hours", result="2,190 → 2,135", verdict="Held: within test variation", good=True,
+      table=[["Test", "Spin, average", "Highest hit", "Rebound speed"],
+             ["Oct 23, brand new (earlier rig setup)", "1,950", "2,115", "18.2 mph"], ["Nov 4", "2,190", "2,265", "20.3 mph"], ["Nov 13, about 3 weeks and 50+ hours", "2,135", "2,220", "19.5 mph"]],
+      notes=["Nov 4 to Nov 13 is about 2.5% lower, inside normal variation. The spin held.",
+             "The Oct 23 test was on an earlier rig setup, so it is not a fair baseline. Compare Nov 4 with Nov 13."]),
+ dict(paddle="Grit E2CF", time="2 weeks, 50+ hours", result="About 2,020 on the used paddle", verdict="Held: no loss", good=True,
+      table=[], notes=["Used paddle (2 weeks, 50+ hours): about 2,020 RPM average, 2,145 highest.",
+                       "No loss compared with the new paddle. The new-paddle number isn't published here.",
+                       "Disclosure: both paddles were provided by the owner of Grit."]),
+ dict(paddle="RPM Jade", time="2–3 weeks", result="1,670 → 1,500 on middle-of-face hits", verdict="Down about 9–10%", good=False,
+      table=[["Test", "Spin, average", "Highest hit", "Rebound speed"],
+             ["Oct 30", "1,670", "1,750", "21.6 mph"], ["Nov 12", "1,635", "1,700", "21.0 mph"], ["Nov 13 (middle-of-face hits)", "1,500", "1,590", "22.3 mph"]],
+      notes=["About 9–10% lower on middle-of-the-face hits after two to three weeks. A small drop, not a collapse.",
+             "For fairness: three throat hits on Nov 13 still reached up to 2,120 RPM, and allowing for the slightly different impact angle narrows the gap to about 3–4%."]),
+ dict(paddle="PACT Teflon", time="1 month of use", result="1,785 → 1,525", verdict="Down about 15%", good=False,
+      table=[["Test", "Spin, average", "Highest hit", "Rebound speed"],
+             ["Earlier test", "1,785", "1,835", "21.7 mph"], ["After 1 month of use", "1,525", "1,665", "22.0 mph"]],
+      notes=["Average down about 15%, highest hit down about 9%. Rebound speed (power) unchanged."]),
+]
+
+json.dump(dict(grit=[dict(name=n, surface=s) for n, s in GRIT],
+               wear=[dict(paddle=a, use=b, result=c, notes=d) for a, b, c, d in WEAR],
+               compare=[dict(title=a, text=b) for a, b in COMPARE],
+               grit_notes=[dict(paddle=a, text=b) for a, b in GRIT_NOTES],
+               spin=[dict(paddle=a, condition=b, avg=c, top=d, **x) for a, b, c, d, x in SPIN],
+               spin_extra=[dict(paddle="Zcebra Gazelle", condition="Used 6 months", avg=1640, top=1705, note="Shot on a different day's setup; no new-paddle baseline, so no durability claim")],
+               spin_detail=[dict(paddle="Arronax Boost", condition="New", avg="1,990 (best 5)", top="2,055", rebound="19.8 mph", date="Nov 16", note="Shot about 2° steeper than the standard angle, which favors spin. At the standard angle the estimate is about 1,800–1,850."),
+                            dict(paddle="Bread & Butter Loco 2 Elongated", condition="Brand new", avg="1,760 (best 5)", top="1,905", rebound="20.6 mph", date="Nov 13", note="")],
+               durability=DURABILITY, updated="2026-11-16"),
+          open(os.path.join(D, "labs.json"), "w"), indent=1, ensure_ascii=False)
+print(len(GRIT), "grit,", len(SPIN), "spin")

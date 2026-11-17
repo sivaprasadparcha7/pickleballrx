@@ -1,0 +1,529 @@
+{
+ "grit": [
+  {
+   "name": "Luzz Cannon XPP M1",
+   "surface": "Green silicon carbide"
+  },
+  {
+   "name": "RPM Jade",
+   "surface": "SICmatrix surface"
+  },
+  {
+   "name": "MARK unMARKed 2026",
+   "surface": "VelosiGrit"
+  },
+  {
+   "name": "11SIX24 HexGrit",
+   "surface": "HexGrit"
+  },
+  {
+   "name": "Facolos TrueGrit",
+   "surface": "TrueGrit coating"
+  },
+  {
+   "name": "Spartus Spitfire",
+   "surface": "PermaGritNano"
+  },
+  {
+   "name": "Zcebra Gazelle",
+   "surface": "Frosted carbon"
+  },
+  {
+   "name": "Luzz Inferno2",
+   "surface": "Aero-Black silicon carbide"
+  },
+  {
+   "name": "PACT Teflon Evolve",
+   "surface": "Teflonix layer"
+  },
+  {
+   "name": "VANWIN Alpha Power",
+   "surface": "Embedded carborundum"
+  },
+  {
+   "name": "VANWIN Alpha Control",
+   "surface": "100% Kevlar face"
+  },
+  {
+   "name": "Pickle Poppers Pop n Treasure",
+   "surface": "EverGrit"
+  },
+  {
+   "name": "Honolulu J6CR",
+   "surface": "Crystal Blue Endurance grit"
+  },
+  {
+   "name": "Evolv",
+   "surface": "CarbonSkyn"
+  },
+  {
+   "name": "E6 Ignis",
+   "surface": "Embedded grit"
+  },
+  {
+   "name": "Arronax Thunder 2",
+   "surface": "Tacky surface"
+  },
+  {
+   "name": "Grit Pickleball",
+   "surface": "Resin-based peel-ply"
+  },
+  {
+   "name": "Luzz Glider 2026",
+   "surface": "984-Aero grit"
+  },
+  {
+   "name": "Friday Aura Pro Tour (beta)",
+   "surface": "Durable grit (unnamed)"
+  },
+  {
+   "name": "Speed Up Tide",
+   "surface": "±45° T700 carbon"
+  },
+  {
+   "name": "Proton Project Coyote",
+   "surface": "Roughness-enhanced surface"
+  },
+  {
+   "name": "Sypik Triton 5",
+   "surface": "Coarse peel-ply"
+  },
+  {
+   "name": "Holbrook Fuze VantaGrit",
+   "surface": "VantaGrit"
+  },
+  {
+   "name": "Mehau E5",
+   "surface": "3D carbon fiber"
+  },
+  {
+   "name": "Mehau S5",
+   "surface": "Fluid Surface"
+  },
+  {
+   "name": "Mehau E4",
+   "surface": "3D woven carbon"
+  },
+  {
+   "name": "Selkirk LABS Project Boomstik",
+   "surface": "InfiniGrit"
+  },
+  {
+   "name": "Crush Covert",
+   "surface": "Carbon Friction Surface"
+  },
+  {
+   "name": "CPX Hyper+",
+   "surface": "Raw T700 carbon"
+  },
+  {
+   "name": "Dynasty Foam Legend",
+   "surface": "Enduro MaXx Grit"
+  },
+  {
+   "name": "Franklin unreleased paddle",
+   "surface": "Carbon surface"
+  },
+  {
+   "name": "Gearbox Pressure X 8E",
+   "surface": "SpinLock silicon carbide"
+  },
+  {
+   "name": "Pickle Poppers Pop N Rush",
+   "surface": "MagmaGrit"
+  },
+  {
+   "name": "Bread & Butter LOCO 2",
+   "surface": "Space Dust Grit"
+  },
+  {
+   "name": "Arronax Boost-1",
+   "surface": "GritBite surface"
+  },
+  {
+   "name": "Volair CMD",
+   "surface": "HexGrit (licensed from 11SIX24)"
+  }
+ ],
+ "wear": [
+  {
+   "paddle": "RPM Jade (SICmatrix)",
+   "use": "Played",
+   "result": "About 5–15% visible wear.",
+   "notes": "Both faces' centers look close to the throat: light polishing and scuffs, no chips, bald spots or missing grit. Fine grit sits inside the coating and polishes down slowly."
+  },
+  {
+   "paddle": "PACT Teflon Evolve (Teflonix)",
+   "use": "Played",
+   "result": "About 5–10% visible wear at the center versus the throat.",
+   "notes": "Shot under matched light."
+  },
+  {
+   "paddle": "11SIX24 HexGrit Power 2",
+   "use": "About 4–5 months",
+   "result": "Center about 25–35% wear.",
+   "notes": "The thick sparkle layer wore through to the carbon in the hitting zone."
+  },
+  {
+   "paddle": "Honolulu J6CR (Crystal Blue)",
+   "use": "About 4 months",
+   "result": "Center about 15–25% wear.",
+   "notes": ""
+  },
+  {
+   "paddle": "Evolv (CarbonSkyn)",
+   "use": "New, 1 month, 6 months",
+   "result": "Same model photographed at three ages.",
+   "notes": "Throat, center, top, and 1 inch above and below center, plus a comparison against the HexGrit Power 2."
+  }
+ ],
+ "compare": [
+  {
+   "title": "Bread & Butter LOCO 2 (Space Dust) vs 11SIX24 HexGrit",
+   "text": "A close cousin of HexGrit, but with larger, more raised beads. L and M lenses, matched light."
+  },
+  {
+   "title": "Volair CMD vs 11SIX24 HexGrit",
+   "text": "The same kind of HexGrit surface. L and M lenses, matched light."
+  },
+  {
+   "title": "Evolv vs 11SIX24 HexGrit Power 2",
+   "text": "A used-paddle wear comparison."
+  },
+  {
+   "title": "Grit Pickleball E1 CW vs E1 TW",
+   "text": "The same tight plain carbon weave. The TW adds titanium strands woven through in a grid every few squares; the CW is a uniform dark weave under a thin glossy coat."
+  }
+ ],
+ "grit_notes": [
+  {
+   "paddle": "Arronax Boost-1",
+   "text": "Green hexagonal flakes set into a frosted T700 carbon weave, with fine raised grit points between them. Arronax calls it a GRITBITE surface on the BOOST-1 QuickSand but doesn't say what GritBite is made of. The hex flakes look decorative; the weave texture and raised grit appear to do the gripping. That's a visual read and hasn't been spin-tested."
+  },
+  {
+   "paddle": "Volair CMD",
+   "text": "Volair licensed 11SIX24's HexGrit. Under matched light, a brand-new CMD shows the same kind of glassy, beaded layer with fine sparkle as the 11SIX24 HexGrit. The weave looked slightly crisper under the Volair's layer, which could be focus or the spot photographed."
+  }
+ ],
+ "spin": [
+  {
+   "paddle": "Grit E1 TW",
+   "condition": "Not USAP approved",
+   "avg": 2625,
+   "top": 2685,
+   "usap": false,
+   "as_shot": true
+  },
+  {
+   "paddle": "Grit E1 CW",
+   "condition": "Not USAP approved",
+   "avg": 2595,
+   "top": 2615,
+   "usap": false,
+   "as_shot": true
+  },
+  {
+   "paddle": "Luzz Cannon XPP",
+   "condition": "Used 2–3 weeks",
+   "avg": 2190,
+   "top": 2265
+  },
+  {
+   "paddle": "Gearbox Pressure XE",
+   "condition": "New",
+   "avg": 2190,
+   "top": 2245
+  },
+  {
+   "paddle": "Gearbox Pressure X M",
+   "condition": "New",
+   "avg": 2045,
+   "top": 2125
+  },
+  {
+   "paddle": "Pop N Rush",
+   "condition": "New",
+   "avg": 2025,
+   "top": 2095
+  },
+  {
+   "paddle": "Grit E2CF",
+   "condition": "Used 2 weeks",
+   "avg": 2020,
+   "top": 2145,
+   "as_shot": true
+  },
+  {
+   "paddle": "Holbrook Fuze",
+   "condition": "Used 2 weeks, demo paddle",
+   "avg": 2020,
+   "top": 2055
+  },
+  {
+   "paddle": "Arronax Boost",
+   "condition": "New",
+   "avg": 1990,
+   "top": 2055
+  },
+  {
+   "paddle": "Jelly Bean Hurache 2",
+   "condition": "Used 1 month+",
+   "avg": 1980,
+   "top": 2230
+  },
+  {
+   "paddle": "Speed Up Tide",
+   "condition": "New",
+   "avg": 1935,
+   "top": 2070
+  },
+  {
+   "paddle": "Evolv Origin",
+   "condition": "Used 1 month",
+   "avg": 1875,
+   "top": 1980
+  },
+  {
+   "paddle": "11SIX24 Power 2",
+   "condition": "Used 4 months",
+   "avg": 1830,
+   "top": 2210
+  },
+  {
+   "paddle": "Spartus Spitfire",
+   "condition": "Used 1 month",
+   "avg": 1830,
+   "top": 1965
+  },
+  {
+   "paddle": "Mark Unmarked 2026",
+   "condition": "Used 1 month",
+   "avg": 1820,
+   "top": 1950
+  },
+  {
+   "paddle": "Friday Aura Pro Tour (Beta)",
+   "condition": "New; pre-release beta, not the final version",
+   "avg": 1810,
+   "top": 1895
+  },
+  {
+   "paddle": "Honolulu J6CR",
+   "condition": "Used 4 months+",
+   "avg": 1805,
+   "top": 1930
+  },
+  {
+   "paddle": "RPM Jade",
+   "condition": "New",
+   "avg": 1785,
+   "top": 1930
+  },
+  {
+   "paddle": "Bread & Butter Loco 2 Elongated",
+   "condition": "Brand new",
+   "avg": 1760,
+   "top": 1905
+  },
+  {
+   "paddle": "Luzz Inferno M2",
+   "condition": "Used 1 month+",
+   "avg": 1745,
+   "top": 1780
+  }
+ ],
+ "spin_extra": [
+  {
+   "paddle": "Zcebra Gazelle",
+   "condition": "Used 6 months",
+   "avg": 1640,
+   "top": 1705,
+   "note": "Shot on a different day's setup; no new-paddle baseline, so no durability claim"
+  }
+ ],
+ "spin_detail": [
+  {
+   "paddle": "Arronax Boost",
+   "condition": "New",
+   "avg": "1,990 (best 5)",
+   "top": "2,055",
+   "rebound": "19.8 mph",
+   "date": "Nov 16",
+   "note": "Shot about 2° steeper than the standard angle, which favors spin. At the standard angle the estimate is about 1,800–1,850."
+  },
+  {
+   "paddle": "Bread & Butter Loco 2 Elongated",
+   "condition": "Brand new",
+   "avg": "1,760 (best 5)",
+   "top": "1,905",
+   "rebound": "20.6 mph",
+   "date": "Nov 13",
+   "note": ""
+  }
+ ],
+ "durability": [
+  {
+   "paddle": "Evolv Origin (CarbonSkyn)",
+   "time": "6 months, about 300+ games",
+   "result": "2,270 new → 2,280 at six months (top spin)",
+   "verdict": "Held: no measurable loss",
+   "good": true,
+   "table": [
+    [
+     "Paddle",
+     "Top spin",
+     "Best-3 average",
+     "Conservative average",
+     "Rebound speed"
+    ],
+    [
+     "New",
+     "2,270",
+     "2,010",
+     "1,545",
+     "24.4 mph"
+    ],
+    [
+     "One month",
+     "2,180",
+     "2,095",
+     "1,910",
+     "23.6 mph"
+    ],
+    [
+     "Six months",
+     "2,280",
+     "2,205",
+     "1,565",
+     "24.1 mph"
+    ]
+   ],
+   "notes": [
+    "Three separate paddles: new, about one month (50+ games) and about six months (300+ games).",
+    "No measurable loss of spin or power from new to six months.",
+    "Under a 4K microscope the six-month face showed light chipping at the edges of the texture with the weave intact. X-ray showed no visible core damage.",
+    "These are three different paddles and the gaps are the size of normal hit-location scatter, so this does not show the paddle gaining spin with age.",
+    "These top-spin figures pool several sessions. The main table's one-month Origin row (1,875 / 1,980) uses the single-session method used for every other paddle.",
+    "Disclosure: Evolv asked for this test and supplied the paddles. Testing and numbers are Pickleball RX's own."
+   ]
+  },
+  {
+   "paddle": "Luzz Cannon XPP",
+   "time": "About 3 weeks, 50+ hours",
+   "result": "2,190 → 2,135",
+   "verdict": "Held: within test variation",
+   "good": true,
+   "table": [
+    [
+     "Test",
+     "Spin, average",
+     "Highest hit",
+     "Rebound speed"
+    ],
+    [
+     "Oct 23, brand new (earlier rig setup)",
+     "1,950",
+     "2,115",
+     "18.2 mph"
+    ],
+    [
+     "Nov 4",
+     "2,190",
+     "2,265",
+     "20.3 mph"
+    ],
+    [
+     "Nov 13, about 3 weeks and 50+ hours",
+     "2,135",
+     "2,220",
+     "19.5 mph"
+    ]
+   ],
+   "notes": [
+    "Nov 4 to Nov 13 is about 2.5% lower, inside normal variation. The spin held.",
+    "The Oct 23 test was on an earlier rig setup, so it is not a fair baseline. Compare Nov 4 with Nov 13."
+   ]
+  },
+  {
+   "paddle": "Grit E2CF",
+   "time": "2 weeks, 50+ hours",
+   "result": "About 2,020 on the used paddle",
+   "verdict": "Held: no loss",
+   "good": true,
+   "table": [],
+   "notes": [
+    "Used paddle (2 weeks, 50+ hours): about 2,020 RPM average, 2,145 highest.",
+    "No loss compared with the new paddle. The new-paddle number isn't published here.",
+    "Disclosure: both paddles were provided by the owner of Grit."
+   ]
+  },
+  {
+   "paddle": "RPM Jade",
+   "time": "2–3 weeks",
+   "result": "1,670 → 1,500 on middle-of-face hits",
+   "verdict": "Down about 9–10%",
+   "good": false,
+   "table": [
+    [
+     "Test",
+     "Spin, average",
+     "Highest hit",
+     "Rebound speed"
+    ],
+    [
+     "Oct 30",
+     "1,670",
+     "1,750",
+     "21.6 mph"
+    ],
+    [
+     "Nov 12",
+     "1,635",
+     "1,700",
+     "21.0 mph"
+    ],
+    [
+     "Nov 13 (middle-of-face hits)",
+     "1,500",
+     "1,590",
+     "22.3 mph"
+    ]
+   ],
+   "notes": [
+    "About 9–10% lower on middle-of-the-face hits after two to three weeks. A small drop, not a collapse.",
+    "For fairness: three throat hits on Nov 13 still reached up to 2,120 RPM, and allowing for the slightly different impact angle narrows the gap to about 3–4%."
+   ]
+  },
+  {
+   "paddle": "PACT Teflon",
+   "time": "1 month of use",
+   "result": "1,785 → 1,525",
+   "verdict": "Down about 15%",
+   "good": false,
+   "table": [
+    [
+     "Test",
+     "Spin, average",
+     "Highest hit",
+     "Rebound speed"
+    ],
+    [
+     "Earlier test",
+     "1,785",
+     "1,835",
+     "21.7 mph"
+    ],
+    [
+     "After 1 month of use",
+     "1,525",
+     "1,665",
+     "22.0 mph"
+    ]
+   ],
+   "notes": [
+    "Average down about 15%, highest hit down about 9%. Rebound speed (power) unchanged."
+   ]
+  }
+ ],
+ "updated": "2026-11-16"
+}

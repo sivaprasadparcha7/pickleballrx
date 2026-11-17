@@ -1,0 +1,65 @@
+{
+  "_note": "SAMPLE DATA. Every paddle below is a made-up placeholder. Replace with real paddles and your own measurements. Images go in site/assets/lab/, YouTube IDs are the part after watch?v=.",
+  "paddles": [
+    {
+      "slug": "sample-paddle-a", "name": "Sample Paddle A", "brand": "Sample Brand", "placeholder": true,
+      "style": "control", "level": "beginner", "shape": "Standard", "face": "Fiberglass", "core_mm": 16,
+      "weight_oz": 7.8, "swing_weight": 108, "twist_weight": 6.6, "length_in": 16.0, "width_in": 7.9, "grip_in": 5.25,
+      "price": 89, "power": 6.0, "spin": 7.0, "control": 9.0, "forgiveness": 9.0,
+      "quick": "Placeholder: a forgiving, control-first paddle for newer players.",
+      "pros": ["Placeholder pro", "Placeholder pro"], "cons": ["Placeholder con"],
+      "verdict": "Placeholder verdict: who should buy it, and who should look elsewhere.",
+      "video": "", "xray": "", "micro": "", "discount": ""
+    },
+    {
+      "slug": "sample-paddle-b", "name": "Sample Paddle B", "brand": "Sample Brand", "placeholder": true,
+      "style": "power", "level": "advanced", "shape": "Elongated", "face": "Carbon fiber", "core_mm": 13,
+      "weight_oz": 8.2, "swing_weight": 121, "twist_weight": 6.1, "length_in": 16.5, "width_in": 7.4, "grip_in": 5.5,
+      "price": 229, "power": 9.2, "spin": 8.4, "control": 6.4, "forgiveness": 5.5,
+      "quick": "Placeholder: an elongated, power-leaning paddle.",
+      "pros": ["Placeholder pro", "Placeholder pro"], "cons": ["Placeholder con", "Placeholder con"],
+      "verdict": "Placeholder verdict.",
+      "video": "", "xray": "", "micro": "", "discount": ""
+    },
+    {
+      "slug": "sample-paddle-c", "name": "Sample Paddle C", "brand": "Example Co", "placeholder": true,
+      "style": "all-court", "level": "intermediate", "shape": "Hybrid", "face": "Raw carbon", "core_mm": 14,
+      "weight_oz": 8.0, "swing_weight": 114, "twist_weight": 6.4, "length_in": 16.25, "width_in": 7.6, "grip_in": 5.25,
+      "price": 159, "power": 7.6, "spin": 9.0, "control": 8.0, "forgiveness": 7.2,
+      "quick": "Placeholder: a balanced hybrid with plenty of spin.",
+      "pros": ["Placeholder pro", "Placeholder pro"], "cons": ["Placeholder con"],
+      "verdict": "Placeholder verdict.",
+      "video": "", "xray": "", "micro": "", "discount": ""
+    },
+    {
+      "slug": "sample-paddle-d", "name": "Sample Paddle D", "brand": "Example Co", "placeholder": true,
+      "style": "control", "level": "beginner", "shape": "Wide body", "face": "Composite", "core_mm": 16,
+      "weight_oz": 7.5, "swing_weight": 102, "twist_weight": 6.9, "length_in": 15.75, "width_in": 8.1, "grip_in": 5.0,
+      "price": 59, "power": 5.2, "spin": 6.0, "control": 8.4, "forgiveness": 9.4,
+      "quick": "Placeholder: a budget starter paddle with a big sweet spot.",
+      "pros": ["Placeholder pro"], "cons": ["Placeholder con", "Placeholder con"],
+      "verdict": "Placeholder verdict.",
+      "video": "", "xray": "", "micro": "", "discount": ""
+    },
+    {
+      "slug": "sample-paddle-e", "name": "Sample Paddle E", "brand": "Demo Sports", "placeholder": true,
+      "style": "power", "level": "intermediate", "shape": "Hybrid", "face": "Carbon fiber", "core_mm": 14,
+      "weight_oz": 8.1, "swing_weight": 117, "twist_weight": 6.3, "length_in": 16.3, "width_in": 7.5, "grip_in": 5.4,
+      "price": 179, "power": 8.6, "spin": 8.0, "control": 7.0, "forgiveness": 6.6,
+      "quick": "Placeholder: a poppy hybrid for players who like to drive.",
+      "pros": ["Placeholder pro", "Placeholder pro"], "cons": ["Placeholder con"],
+      "verdict": "Placeholder verdict.",
+      "video": "", "xray": "", "micro": "", "discount": ""
+    },
+    {
+      "slug": "sample-paddle-f", "name": "Sample Paddle F", "brand": "Demo Sports", "placeholder": true,
+      "style": "spin", "level": "advanced", "shape": "Standard", "face": "Textured carbon", "core_mm": 16,
+      "weight_oz": 7.9, "swing_weight": 112, "twist_weight": 6.7, "length_in": 16.0, "width_in": 7.8, "grip_in": 5.25,
+      "price": 199, "power": 7.0, "spin": 9.5, "control": 8.8, "forgiveness": 8.0,
+      "quick": "Placeholder: a grippy, soft paddle built for spin.",
+      "pros": ["Placeholder pro", "Placeholder pro"], "cons": ["Placeholder con"],
+      "verdict": "Placeholder verdict.",
+      "video": "", "xray": "", "micro": "", "discount": ""
+    }
+  ]
+}

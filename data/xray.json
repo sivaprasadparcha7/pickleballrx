@@ -1,0 +1,2524 @@
+{
+ "paddles": [
+  {
+   "slug": "11six24-hurache-jelly-bean-2",
+   "name": "11SIX24 Hurache-X Jelly Bean 2",
+   "brand": "11SIX24",
+   "image": "11six24-hurache-jelly-bean-2-labeled.png",
+   "core": "EMA foam (full foam)",
+   "cell_size": "None in face (honeycomb in handle only)",
+   "ring": "Denser ring ≈ 7–8 mm, type not disclosed",
+   "thickness": "16 mm",
+   "face": "Toray T700 + fiberglass CFC, HexGrit",
+   "weight": "8.0–8.3 oz",
+   "size": "16.5\" x 7.5\" (Elongated)",
+   "specs": [
+    [
+     "Core type",
+     "EMA foam (full foam)"
+    ],
+    [
+     "Cell size",
+     "None in face (honeycomb in handle only)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Denser ring ≈ 7–8 mm, type not disclosed"
+    ],
+    [
+     "Face",
+     "Toray T700 + fiberglass CFC, HexGrit"
+    ],
+    [
+     "Weight",
+     "8.0–8.3 oz"
+    ],
+    [
+     "Size",
+     "16.5\" x 7.5\" (Elongated)"
+    ],
+    [
+     "Handle / grip",
+     "6\" / 4.125\""
+    ]
+   ],
+   "sources": "Specs: 11six24.com (Jelly Bean 2, Hurache-X) · thekitchenpickle.com review · thedinkpickleball.com launch notes",
+   "tags": [
+    "foam"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "arronax-kvl-005",
+   "name": "Arronax KVL-005",
+   "brand": "Arronax",
+   "image": "arronax-kvl-005-labeled.png",
+   "core": "Dual-density foam: PEBA + EVA",
+   "cell_size": "No honeycomb in face (full foam)",
+   "ring": "Dense ring ≈ 10 mm incl. edge wall",
+   "thickness": "16 mm",
+   "face": "Toray T800 carbon fiber",
+   "weight": "8.05 oz measured (225 ± 5 g listed)",
+   "size": "16.5\" × 7.5\" (419 × 190 mm), elongated",
+   "specs": [
+    [
+     "Core type",
+     "Dual-density foam: PEBA + EVA"
+    ],
+    [
+     "Cell size",
+     "No honeycomb in face (full foam)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Dense ring ≈ 10 mm incl. edge wall"
+    ],
+    [
+     "Face",
+     "Toray T800 carbon fiber"
+    ],
+    [
+     "Weight",
+     "8.05 oz measured (225 ± 5 g listed)"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.5\" (419 × 190 mm), elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.5–5.75\" / 4.0–4.1\""
+    ]
+   ],
+   "sources": "Specs: mattspickleball.com (KVL005 16mm, measured) · picklepaddlebrunei (retailer listing)",
+   "tags": [
+    "foam"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "cpx-hyper-plus",
+   "name": "CPX Hyper+",
+   "brand": "CPX",
+   "image": "cpx-hyper-plus-labeled.png",
+   "core": "Hyperfoam X, quad-density full foam",
+   "cell_size": "None, no honeycomb",
+   "ring": "Weighted ring ≈ 10 mm + wedges",
+   "thickness": "16 mm",
+   "face": "3-layer T700 raw carbon",
+   "weight": "225 g ± 5 g (7.9 oz)",
+   "size": "16.54\" × 7.48\" elongated",
+   "specs": [
+    [
+     "Core type",
+     "Hyperfoam X, quad-density full foam"
+    ],
+    [
+     "Cell size",
+     "None, no honeycomb"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Weighted ring ≈ 10 mm + wedges"
+    ],
+    [
+     "Face",
+     "3-layer T700 raw carbon"
+    ],
+    [
+     "Weight",
+     "225 g ± 5 g (7.9 oz)"
+    ],
+    [
+     "Size",
+     "16.54\" × 7.48\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.5\" / 4.25\""
+    ]
+   ],
+   "sources": "Specs: cpxpickleball.com · hyper.cpxpickleball.com · pickleballunion.com",
+   "tags": [
+    "foam"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "crush-covert",
+   "name": "Crush Covert Gen 4",
+   "brand": "Crush",
+   "image": "crush-covert-labeled.png",
+   "core": "Reinforced foam w/ power strip (type n/d)",
+   "cell_size": "n/a (no honeycomb)",
+   "ring": "≈ 12 mm ring, dense band ≈ 8 mm",
+   "thickness": "16 mm",
+   "face": "T700 raw carbon at 45°, peel-ply bite",
+   "weight": "≈ 8 oz (7.94 oz measured)",
+   "size": "16.5\" × 7.5\" elongated",
+   "specs": [
+    [
+     "Core type",
+     "Reinforced foam w/ power strip (type n/d)"
+    ],
+    [
+     "Cell size",
+     "n/a (no honeycomb)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "≈ 12 mm ring, dense band ≈ 8 mm"
+    ],
+    [
+     "Face",
+     "T700 raw carbon at 45°, peel-ply bite"
+    ],
+    [
+     "Weight",
+     "≈ 8 oz (7.94 oz measured)"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.5\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.25\" handle · 4.25\" grip"
+    ]
+   ],
+   "sources": "Specs: crushpickleball.com (Covert Gen 4), mattspickleball.com (Covert 16mm review). Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "e6-ignis",
+   "name": "E6 Ignis 16mm",
+   "brand": "E6",
+   "image": "e6-ignis-labeled.png",
+   "core": "MPP foam (proprietary) + EVA ring",
+   "cell_size": "None in face · handle honeycomb ≈ 10 mm",
+   "ring": "EVA ring ≈ 24–25 mm + 2 MOI weights",
+   "thickness": "16 mm",
+   "face": "T700 carbon fiber, embedded grit",
+   "weight": "7.75 oz / 220 g (static)",
+   "size": "16.5\" × 7.33\" (419 × 186 mm), elongated",
+   "specs": [
+    [
+     "Core type",
+     "MPP foam (proprietary) + EVA ring"
+    ],
+    [
+     "Cell size",
+     "None in face · handle honeycomb ≈ 10 mm"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "EVA ring ≈ 24–25 mm + 2 MOI weights"
+    ],
+    [
+     "Face",
+     "T700 carbon fiber, embedded grit"
+    ],
+    [
+     "Weight",
+     "7.75 oz / 220 g (static)"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.33\" (419 × 186 mm), elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.5\" / 4.25\" circumference"
+    ]
+   ],
+   "sources": "Specs: e6pickleball.com (Pro Series 16mm Ignis), mattspickleball.com (Ignis 16mm). Weight material not published. X-ray interpretation, not a cutaway.",
+   "tags": [
+    "foam",
+    "mpp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "evolv-origin",
+   "name": "Evolv Origin",
+   "brand": "Evolv",
+   "image": "evolv-origin-labeled.png",
+   "core": "EPP foam (full foam)",
+   "cell_size": "None visible",
+   "ring": "EVA band ≈ 16 mm",
+   "thickness": "",
+   "face": "Multi-layer carbon, CarbonSkyn",
+   "weight": "Not disclosed",
+   "size": "16.5\" (Elongated)",
+   "specs": [
+    [
+     "Core type",
+     "EPP foam (full foam)"
+    ],
+    [
+     "Honeycomb",
+     "None visible"
+    ],
+    [
+     "Perimeter",
+     "EVA band ≈ 16 mm"
+    ],
+    [
+     "Throat / handle",
+     "TPE reinforcement"
+    ],
+    [
+     "Face",
+     "Multi-layer carbon, CarbonSkyn"
+    ],
+    [
+     "Weight",
+     "Not disclosed"
+    ],
+    [
+     "Length",
+     "16.5\" (Elongated)"
+    ],
+    [
+     "Handle",
+     "5.5\""
+    ]
+   ],
+   "sources": "Specs: evolvpickleball.com (Evolv Origin) · Eric Huynh pre-launch notes",
+   "tags": [
+    "foam",
+    "epp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "facolos-elite-x",
+   "name": "Facolos Elite X (1st gen)",
+   "brand": "Facolos",
+   "image": "facolos-elite-x-labeled.png",
+   "core": "ElasticPP honeycomb + EVA edge wall",
+   "cell_size": "≈ 8 mm (measured)",
+   "ring": "EVA band ≈ 21 mm sides / 25 mm top",
+   "thickness": "16 mm (14 mm also sold)",
+   "face": "T700 raw carbon, peel-ply grit",
+   "weight": "8.2 oz (PPA Lab) · 7.99 oz (Matt's)",
+   "size": "16.5\" × 7.44\" elongated",
+   "specs": [
+    [
+     "Core type",
+     "ElasticPP honeycomb + EVA edge wall"
+    ],
+    [
+     "Cell size",
+     "≈ 8 mm (measured)"
+    ],
+    [
+     "Core thickness",
+     "16 mm (14 mm also sold)"
+    ],
+    [
+     "Perimeter",
+     "EVA band ≈ 21 mm sides / 25 mm top"
+    ],
+    [
+     "Face",
+     "T700 raw carbon, peel-ply grit"
+    ],
+    [
+     "Weight",
+     "8.2 oz (PPA Lab) · 7.99 oz (Matt's)"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.44\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.5\" / ≈ 4.25\" circ."
+    ]
+   ],
+   "sources": "Specs: ppatour.com Paddle Lab (Elite X 16mm) · mattspickleball.com · sportsshop.asia. Weight strips are inferred. X-ray interpretation, not a cutaway.",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "facolos-elite-x-2-0",
+   "name": "Facolos Elite X 2.0",
+   "brand": "Facolos",
+   "image": "facolos-elite-x-v2-labeled.png",
+   "core": "ElsFoam™ (Elastic Foam™) + AVF Tech",
+   "cell_size": "",
+   "ring": "Foam frame ≈ 26–28 mm",
+   "thickness": "16 mm",
+   "face": "Toray T700, 3-layer 45°, TrueGrit™",
+   "weight": "8.1 ± 0.2 oz",
+   "size": "16.46\" × 7.56\"",
+   "specs": [
+    [
+     "Core type",
+     "ElsFoam™ (Elastic Foam™) + AVF Tech"
+    ],
+    [
+     "Perimeter",
+     "Foam frame ≈ 26–28 mm"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Weight",
+     "8.1 ± 0.2 oz"
+    ],
+    [
+     "Face",
+     "Toray T700, 3-layer 45°, TrueGrit™"
+    ],
+    [
+     "Size",
+     "16.46\" × 7.56\""
+    ],
+    [
+     "Swing / twist",
+     "115 / 6.67"
+    ],
+    [
+     "Handle / grip",
+     "5.71\" / 4.13\" circ."
+    ]
+   ],
+   "sources": "Specs: Facolos Elite X V2.0 (Gabe Tardio) sale kit. Widths scaled to the 7.56\" width. Edge segments inferred. X-ray interpretation, not a cutaway.",
+   "tags": [
+    "foam"
+   ],
+   "reel": "Ep 06: Facolos Elite X 2.0 vs Gen 1",
+   "unreleased": false
+  },
+  {
+   "slug": "facolos-nexx",
+   "name": "Facolos Nexx 16mm",
+   "brand": "Facolos",
+   "image": "facolos-nexx-labeled.png",
+   "core": "ElasticPP (polypropylene) honeycomb",
+   "cell_size": "≈ 6.8 mm (measured from X-ray)",
+   "ring": "EVA edge wall ≈ 12 mm (cells from ≈ 23 mm)",
+   "thickness": "16 mm",
+   "face": "Multidirectional T700 raw carbon, grit",
+   "weight": "8.18 oz measured · 7.9–8.3 oz listed",
+   "size": "16.6\" × 7.25\" measured, elongated",
+   "specs": [
+    [
+     "Core type",
+     "ElasticPP (polypropylene) honeycomb"
+    ],
+    [
+     "Cell size",
+     "≈ 6.8 mm (measured from X-ray)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "EVA edge wall ≈ 12 mm (cells from ≈ 23 mm)"
+    ],
+    [
+     "Face",
+     "Multidirectional T700 raw carbon, grit"
+    ],
+    [
+     "Weight",
+     "8.18 oz measured · 7.9–8.3 oz listed"
+    ],
+    [
+     "Size",
+     "16.6\" × 7.25\" measured, elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.875\" / 4.125\" circ. (measured)"
+    ]
+   ],
+   "sources": "Specs: facolos.au (NEXX), thepickleballstore.co.uk (Facolos Nexx), mattspickleball.com (NEXX 16mm lab data). Cell size and widths are measured, not published. X-ray interpretation, not a cutaway.",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "franklin-dynasty-whip-16mm",
+   "name": "Franklin Dynasty Whip 16mm",
+   "brand": "Franklin",
+   "image": "franklin-dynasty-whip-16mm-labeled.png",
+   "core": "Full foam (inferred)",
+   "cell_size": "None, no honeycomb",
+   "ring": "Denser ring ≈ 8 mm (TPE/EVA?)",
+   "thickness": "16 mm",
+   "face": "Not published",
+   "weight": "Not published",
+   "size": "Elongated, not published",
+   "specs": [
+    [
+     "Core type",
+     "Full foam (inferred)"
+    ],
+    [
+     "Cell size",
+     "None, no honeycomb"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Denser ring ≈ 8 mm (TPE/EVA?)"
+    ],
+    [
+     "Face",
+     "Not published"
+    ],
+    [
+     "Weight",
+     "Not published"
+    ],
+    [
+     "Size",
+     "Elongated, not published"
+    ],
+    [
+     "Handle / grip",
+     "Not published"
+    ]
+   ],
+   "sources": "Unreleased paddle: no specs found online (only a 14 mm \"WHIP Dynasty\" listing on puprpaddles.com). Labels are an interpretation of the X-ray, not a cutaway.",
+   "tags": [
+    "foam"
+   ],
+   "reel": "",
+   "unreleased": true
+  },
+  {
+   "slug": "friday-aura-pro-tour",
+   "name": "Friday Aura Pro Tour",
+   "brand": "Friday",
+   "image": "friday-aura-pro-tour-labeled.png",
+   "core": "Floating EPP foam + EVA (full foam)",
+   "cell_size": "None: no honeycomb visible",
+   "ring": "EVA ≈ 20 mm (≈10 dense + ≈9 soft)",
+   "thickness": "16 mm",
+   "face": "T700 raw carbon fiber",
+   "weight": "7.9–8.0 oz (224–227 g)",
+   "size": "16.5\" × 7.5\" (elongated)",
+   "specs": [
+    [
+     "Core type",
+     "Floating EPP foam + EVA (full foam)"
+    ],
+    [
+     "Cell size",
+     "None: no honeycomb visible"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "EVA ≈ 20 mm (≈10 dense + ≈9 soft)"
+    ],
+    [
+     "Face",
+     "T700 raw carbon fiber"
+    ],
+    [
+     "Weight",
+     "7.9–8.0 oz (224–227 g)"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.5\" (elongated)"
+    ],
+    [
+     "Handle / grip",
+     "5.43\" / 4.25\" circumference"
+    ]
+   ],
+   "sources": "Specs: fridaypickle.com (Aura Pro Gen 4, 16 mm) · PPA Paddle Lab (Aura Pro Elongated 16 mm). Foam types beyond EPP/EVA not disclosed.",
+   "tags": [
+    "foam",
+    "epp",
+    "floating"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "gearbox-pressure-x-8e",
+   "name": "Gearbox Pressure X 8E",
+   "brand": "Gearbox",
+   "image": "gearbox-pressure-x-8e-labeled.png",
+   "core": "SST carbon ribs + EPP (XPOP) foam",
+   "cell_size": "≈ 12 × 56 mm, likely metal (inferred)",
+   "ring": "TPE band ≈ 7 mm, ring ≈ 25 mm",
+   "thickness": "16 mm, thermoformed",
+   "face": "UD tapered carbon, SpinLock grit",
+   "weight": "8.0 oz (SW ≈ 119.6, TW ≈ 6.2)",
+   "size": "16.5\" × 7.375\", 5.5\" handle",
+   "specs": [
+    [
+     "Core type",
+     "SST carbon ribs + EPP (XPOP) foam"
+    ],
+    [
+     "Rib spacing",
+     "≈ 14 mm (6 walls, measured)"
+    ],
+    [
+     "Core thickness",
+     "16 mm, thermoformed"
+    ],
+    [
+     "Perimeter",
+     "TPE band ≈ 7 mm, ring ≈ 25 mm"
+    ],
+    [
+     "Face",
+     "UD tapered carbon, SpinLock grit"
+    ],
+    [
+     "Weight",
+     "8.0 oz (SW ≈ 119.6, TW ≈ 6.2)"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.375\", 5.5\" handle"
+    ],
+    [
+     "Handle insert",
+     "≈ 12 × 56 mm, likely metal (inferred)"
+    ]
+   ],
+   "sources": "Specs: Gearbox via pickleballcentral.com, pickleball.com. Labels are an interpretation of the X-ray, not a cutaway; handle insert ID is inferred.",
+   "tags": [
+    "foam",
+    "epp"
+   ],
+   "reel": "Gearbox Pressure X 8E reel",
+   "unreleased": false
+  },
+  {
+   "slug": "gearbox-pressure-xm",
+   "name": "Gearbox Pressure X 8M",
+   "brand": "Gearbox",
+   "image": "gearbox-pressure-xm-labeled.png",
+   "core": "SST carbon ribs + MPP foam",
+   "cell_size": "",
+   "ring": "TPE band ≈ 7 mm, ring ≈ 25 mm",
+   "thickness": "16 mm, thermoformed",
+   "face": "UD tapered carbon, SpinLock grit",
+   "weight": "8.0 oz (SW ≈ 119, TW ≈ 6.2)",
+   "size": "16.5\" × 7.375\" Elongated+",
+   "specs": [
+    [
+     "Core type",
+     "SST carbon ribs + MPP foam"
+    ],
+    [
+     "Rib spacing",
+     "≈ 14 mm (6 walls, measured)"
+    ],
+    [
+     "Core thickness",
+     "16 mm, thermoformed"
+    ],
+    [
+     "Perimeter",
+     "TPE band ≈ 7 mm, ring ≈ 25 mm"
+    ],
+    [
+     "Face",
+     "UD tapered carbon, SpinLock grit"
+    ],
+    [
+     "Weight",
+     "8.0 oz (SW ≈ 119, TW ≈ 6.2)"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.375\" Elongated+"
+    ],
+    [
+     "Handle / grip",
+     "5.5\" / 4\" Gearbox Smooth Wrap"
+    ]
+   ],
+   "sources": "Specs: Gearbox via tennis-warehouse.com, pickleballcentral.com, pickleball.com. Labels are an interpretation of the X-ray, not a cutaway.",
+   "tags": [
+    "foam",
+    "mpp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "grit-e2-cf",
+   "name": "Grit E2-CF",
+   "brand": "Grit",
+   "image": "grit-e2-cf-labeled.png",
+   "core": "EPP foam, semi-floating (full foam)",
+   "cell_size": "n/a (no honeycomb)",
+   "ring": "Carbon fibre ring, band ≈ 10.5 mm",
+   "thickness": "16 mm",
+   "face": "T700 (V-3 Carbon), peel ply + Dura-Grit",
+   "weight": "7.6–8.0 oz (215–227 g)",
+   "size": "16.5\" × 7.5\" elongated",
+   "specs": [
+    [
+     "Core type",
+     "EPP foam, semi-floating (full foam)"
+    ],
+    [
+     "Cell size",
+     "n/a (no honeycomb)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Carbon fibre ring, band ≈ 10.5 mm"
+    ],
+    [
+     "Face",
+     "T700 (V-3 Carbon), peel ply + Dura-Grit"
+    ],
+    [
+     "Weight",
+     "7.6–8.0 oz (215–227 g)"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.5\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.6\" / 4.2\""
+    ]
+   ],
+   "sources": "Specs: grit-shop.com (E2-CF Flex-Foam), USA Pickleball approved list (EPP + EVA, T700). Face + weight per owner. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam",
+    "epp",
+    "floating"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "holbrook-fuze",
+   "name": "Holbrook Fuze",
+   "brand": "Holbrook",
+   "image": "holbrook-fuze-labeled.png",
+   "core": "Dual Density Foam, full foam (types n/d)",
+   "cell_size": "n/a in face · ≈ 8 mm hex in handle",
+   "ring": "≈ 22 mm ring, dense outer band ≈ 6 mm",
+   "thickness": "16 mm (Elongated also in 14 mm)",
+   "face": "Carbon fiber, textured peel ply",
+   "weight": "7.8–8.0 oz (avg 7.9 oz)",
+   "size": "16.5 × 7.5 in Elongated (shape assumed)",
+   "specs": [
+    [
+     "Core type",
+     "Dual Density Foam, full foam (types n/d)"
+    ],
+    [
+     "Cell size",
+     "n/a in face · ≈ 8 mm hex in handle"
+    ],
+    [
+     "Core thickness",
+     "16 mm (Elongated also in 14 mm)"
+    ],
+    [
+     "Perimeter",
+     "≈ 22 mm ring, dense outer band ≈ 6 mm"
+    ],
+    [
+     "Face",
+     "Carbon fiber, textured peel ply"
+    ],
+    [
+     "Weight",
+     "7.8–8.0 oz (avg 7.9 oz)"
+    ],
+    [
+     "Size",
+     "16.5 × 7.5 in Elongated (shape assumed)"
+    ],
+    [
+     "Handle / grip",
+     "5.5 in handle · 4.25 in grip"
+    ]
+   ],
+   "sources": "Specs: pickleballcentral.com, racquetpoint.com, PPA Paddle Lab, bepickleballer.com. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "honolulu-j6cr",
+   "name": "Honolulu J6CR",
+   "brand": "Honolulu",
+   "image": "honolulu-j6-cr-labeled.png",
+   "core": "Dual-density floating foam (EPP + EVA + expanding)",
+   "cell_size": "n/a (no honeycomb)",
+   "ring": "Foam frame ≈ 17–24 mm, ≈ 30 mm at notches",
+   "thickness": "16 mm",
+   "face": "Toray carbon fiber, thermoformed",
+   "weight": "8.0–8.2 oz",
+   "size": "16.46\" × 7.52\", elongated",
+   "specs": [
+    [
+     "Core type",
+     "Dual-density floating foam (EPP + EVA + expanding)"
+    ],
+    [
+     "Cell size",
+     "n/a (no honeycomb)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Foam frame ≈ 17–24 mm, ≈ 30 mm at notches"
+    ],
+    [
+     "Face",
+     "Toray carbon fiber, thermoformed"
+    ],
+    [
+     "Weight",
+     "8.0–8.2 oz"
+    ],
+    [
+     "Size",
+     "16.46\" × 7.52\", elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.8–6\" handle, 4.125\" grip"
+    ]
+   ],
+   "sources": "Specs: PPA Tour Paddle Lab, pickleballcentral.com, get2eleven.com, thekitchenpickle.com. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam",
+    "epp",
+    "floating"
+   ],
+   "reel": "Ep 02: Honolulu J6CR (floating core, notched frame)",
+   "unreleased": false
+  },
+  {
+   "slug": "kamito-alpha-x",
+   "name": "Kamito Alpha-X",
+   "brand": "Kamito",
+   "image": "kamito-alpha-x-labeled.png",
+   "core": "Triple Foam: 3-layer MPP + EVA",
+   "cell_size": "n/a in face · ≈ 8.6 mm hex in handle",
+   "ring": "≈ 9 mm frame + TPU edge guard; core ≈ 26 mm in",
+   "thickness": "16 mm (14 mm version also sold)",
+   "face": "Raw Toray carbon fiber",
+   "weight": "225 ± 5 g (≈ 7.9 oz)",
+   "size": "418 × 190 mm (16.46 × 7.48 in)",
+   "specs": [
+    [
+     "Core type",
+     "Triple Foam: 3-layer MPP + EVA"
+    ],
+    [
+     "Cell size",
+     "n/a in face · ≈ 8.6 mm hex in handle"
+    ],
+    [
+     "Core thickness",
+     "16 mm (14 mm version also sold)"
+    ],
+    [
+     "Perimeter",
+     "≈ 9 mm frame + TPU edge guard; core ≈ 26 mm in"
+    ],
+    [
+     "Face",
+     "Raw Toray carbon fiber"
+    ],
+    [
+     "Weight",
+     "225 ± 5 g (≈ 7.9 oz)"
+    ],
+    [
+     "Size",
+     "418 × 190 mm (16.46 × 7.48 in)"
+    ],
+    [
+     "Handle / grip",
+     "145 mm (5.71 in) · 103 mm (4.06 in) grip"
+    ]
+   ],
+   "sources": "Specs: pickleplay.vn, unlimitedpickleballzone.com. Source image looks digitally re-rendered; labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam",
+    "mpp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "kamito-dominus",
+   "name": "Kamito Dominus",
+   "brand": "Kamito",
+   "image": "kamito-dominus-labeled.png",
+   "core": "EPP + EVA foam, full foam",
+   "cell_size": "n/a (no honeycomb in the face)",
+   "ring": "≈ 7–8 mm ring incl. ≈ 3 mm chrome edge",
+   "thickness": "16 mm (14 mm also sold)",
+   "face": "3-layer Japanese Toray raw carbon",
+   "weight": "225 ± 5 g (≈ 7.9 oz)",
+   "size": "418 × 190 mm (16.46 × 7.48 in)",
+   "specs": [
+    [
+     "Core type",
+     "EPP + EVA foam, full foam"
+    ],
+    [
+     "Cell size",
+     "n/a (no honeycomb in the face)"
+    ],
+    [
+     "Core thickness",
+     "16 mm (14 mm also sold)"
+    ],
+    [
+     "Perimeter",
+     "≈ 7–8 mm ring incl. ≈ 3 mm chrome edge"
+    ],
+    [
+     "Face",
+     "3-layer Japanese Toray raw carbon"
+    ],
+    [
+     "Weight",
+     "225 ± 5 g (≈ 7.9 oz)"
+    ],
+    [
+     "Size",
+     "418 × 190 mm (16.46 × 7.48 in)"
+    ],
+    [
+     "Handle / grip",
+     "145 mm handle · 103 mm grip"
+    ]
+   ],
+   "sources": "Specs: pickleplayglobal.com, pickle-times.com, unlimitedpickleballzone.com. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam",
+    "epp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "li-ning-hyper-power-90s",
+   "name": "Li-Ning HyperPower 90S",
+   "brand": "Li-Ning",
+   "image": "lining-hyper-power-90s-labeled.png",
+   "core": "PP high-density honeycomb",
+   "cell_size": "not resolvable (fine cells)",
+   "ring": "≈ 10 mm frame band; panel ≈ 25 mm in",
+   "thickness": "14 mm (USAP: HP 90S 14MM)",
+   "face": "Carbon fiber, UV printed",
+   "weight": "223 g (≈ 7.9 oz)",
+   "size": "419 mm long (16.5 in) · width n/d",
+   "specs": [
+    [
+     "Core type",
+     "PP high-density honeycomb"
+    ],
+    [
+     "Cell size",
+     "not resolvable (fine cells)"
+    ],
+    [
+     "Core thickness",
+     "14 mm (USAP: HP 90S 14MM)"
+    ],
+    [
+     "Perimeter",
+     "≈ 10 mm frame band; panel ≈ 25 mm in"
+    ],
+    [
+     "Face",
+     "Carbon fiber, UV printed"
+    ],
+    [
+     "Weight",
+     "223 g (≈ 7.9 oz)"
+    ],
+    [
+     "Size",
+     "419 mm long (16.5 in) · width n/d"
+    ],
+    [
+     "Handle / grip",
+     "LG4 1/8 grip · medium balance"
+    ]
+   ],
+   "sources": "Specs: lining.com.vn (HyperPower 90S), USA Pickleball approved list. Width not published; labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "luzz-cannon-xpp",
+   "name": "Luzz Cannon XPP",
+   "brand": "Luzz",
+   "image": "luzz-cannon-xpp-labeled.png",
+   "core": "XPOP modified foam (no honeycomb)",
+   "cell_size": "None, no cells visible",
+   "ring": "Denser foam ring ≈ 25 mm",
+   "thickness": "16 mm",
+   "face": "Carbon fiber, green SiC grit",
+   "weight": "7.93 oz avg",
+   "size": "16.54\" × 7.48\"",
+   "specs": [
+    [
+     "Core type",
+     "XPOP modified foam (no honeycomb)"
+    ],
+    [
+     "Cell size",
+     "None, no cells visible"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Denser foam ring ≈ 25 mm"
+    ],
+    [
+     "Face",
+     "Carbon fiber, green SiC grit"
+    ],
+    [
+     "Weight",
+     "7.93 oz avg"
+    ],
+    [
+     "Size",
+     "16.54\" × 7.48\""
+    ],
+    [
+     "Handle / grip",
+     "5.52\" / 4.13\""
+    ]
+   ],
+   "sources": "Specs: luzzpickleball.com · pickleballwarehouse.com · paddlereviewhub.com",
+   "tags": [
+    "foam"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "luzz-glider-2026",
+   "name": "Luzz Glider 2026",
+   "brand": "Luzz",
+   "image": "luzz-glider-2026-labeled.png",
+   "core": "Polypropylene (PP) honeycomb",
+   "cell_size": "8 mm listed · ≈ 7.7 mm measured",
+   "ring": "Thin ring ≈ 13 mm, foam type n/d",
+   "thickness": "16 mm",
+   "face": "T700 carbon, 984-Aero grit",
+   "weight": "7.94 oz avg",
+   "size": "16.53\" × 7.48\" hybrid",
+   "specs": [
+    [
+     "Core type",
+     "Polypropylene (PP) honeycomb"
+    ],
+    [
+     "Cell size",
+     "8 mm listed · ≈ 7.7 mm measured"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Thin ring ≈ 13 mm, foam type n/d"
+    ],
+    [
+     "Face",
+     "T700 carbon, 984-Aero grit"
+    ],
+    [
+     "Weight",
+     "7.94 oz avg"
+    ],
+    [
+     "Size",
+     "16.53\" × 7.48\" hybrid"
+    ],
+    [
+     "Handle / grip",
+     "5.31\" / 4.13\""
+    ]
+   ],
+   "sources": "Specs: pickleballwarehouse.com · pickleplayglobal.com · spinwavepickleball.com",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "luzz-inferno",
+   "name": "Luzz Inferno (Pro 4)",
+   "brand": "Luzz",
+   "image": "luzz-inferno-labeled.png",
+   "core": "MPP foam (microporous polymer)",
+   "cell_size": "None in face · handle honeycomb ≈ 7 mm",
+   "ring": "Dual-Zone Power Ring ≈ 27 mm",
+   "thickness": "16 mm",
+   "face": "Carbon fiber, electroplated edge",
+   "weight": "7.93 ± 0.18 oz (≈ 225 g)",
+   "size": "16.54\" × 7.48\" (420 × 190 mm)",
+   "specs": [
+    [
+     "Core type",
+     "MPP foam (microporous polymer)"
+    ],
+    [
+     "Cell size",
+     "None in face · handle honeycomb ≈ 7 mm"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Dual-Zone Power Ring ≈ 27 mm"
+    ],
+    [
+     "Face",
+     "Carbon fiber, electroplated edge"
+    ],
+    [
+     "Weight",
+     "7.93 ± 0.18 oz (≈ 225 g)"
+    ],
+    [
+     "Size",
+     "16.54\" × 7.48\" (420 × 190 mm)"
+    ],
+    [
+     "Handle / grip",
+     "5.52\" / 4.25\" circumference"
+    ]
+   ],
+   "sources": "Specs: luzzpickleball.com (Pro 4 series, Inferno), tennis-warehouse.com (Luzz Inferno Blue Blaze). X-ray interpretation, not a cutaway.",
+   "tags": [
+    "foam",
+    "mpp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "luzz-inferno-2",
+   "name": "Luzz Inferno 2 M1",
+   "brand": "Luzz",
+   "image": "luzz-inferno-2-m1-labeled.png",
+   "core": "MPP2 foam (no honeycomb)",
+   "cell_size": "None, solid foam face",
+   "ring": "TPEE ring ≈ 27 mm",
+   "thickness": "16 mm",
+   "face": "Aero-Black integrated SiC grit",
+   "weight": "7.93 oz",
+   "size": "16.54\" × 7.48\"",
+   "specs": [
+    [
+     "Core type",
+     "MPP2 foam (no honeycomb)"
+    ],
+    [
+     "Cell size",
+     "None, solid foam face"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "TPEE ring ≈ 27 mm"
+    ],
+    [
+     "Face",
+     "Aero-Black integrated SiC grit"
+    ],
+    [
+     "Weight",
+     "7.93 oz"
+    ],
+    [
+     "Size",
+     "16.54\" × 7.48\""
+    ],
+    [
+     "Handle / grip",
+     "5.52\" / 4.13\""
+    ]
+   ],
+   "sources": "Specs: luzzpickleball.com · pickleplayglobal.com · pickleballeffect.com",
+   "tags": [
+    "foam",
+    "mpp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "mark-02r3",
+   "name": "MARK 02R3 (twoR3)",
+   "brand": "MARK",
+   "image": "mark-02r3-labeled.png",
+   "core": "Full foam: EVA floating core + EPP",
+   "cell_size": "None, no honeycomb (49 × 8 mm voids)",
+   "ring": "Ring ≈ 21 mm (EPP frame + edge guard)",
+   "thickness": "16 mm",
+   "face": "KevlaCarbon (Kevlar + carbon twill)",
+   "weight": "8.1 oz",
+   "size": "16.5\" × 7.5\" (elongated)",
+   "specs": [
+    [
+     "Core type",
+     "Full foam: EVA floating core + EPP"
+    ],
+    [
+     "Cell size",
+     "None, no honeycomb (49 × 8 mm voids)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Ring ≈ 21 mm (EPP frame + edge guard)"
+    ],
+    [
+     "Face",
+     "KevlaCarbon (Kevlar + carbon twill)"
+    ],
+    [
+     "Weight",
+     "8.1 oz"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.5\" (elongated)"
+    ],
+    [
+     "Handle / grip",
+     "5.5\" / 4.125\" (EPP handle)"
+    ]
+   ],
+   "sources": "Specs: MARK shop listing (reach.dog) · mattspickleball.com · thepickleballgang.com · pickleballsuperstore.ca  ·  Sources differ on which foam is in the centre  ·  X-ray interpretation, not a cutaway",
+   "tags": [
+    "foam",
+    "epp",
+    "floating",
+    "voids"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "mark-unmarked-2026",
+   "name": "MARK unMARKed 2026",
+   "brand": "MARK",
+   "image": "mark-unmarked-2026-v2-labeled.png",
+   "core": "EPP centre + EVA perimeter (foam)",
+   "cell_size": "None, no honeycomb (49 round voids)",
+   "ring": "EVA ring ≈ 24 mm",
+   "thickness": "16 mm",
+   "face": "T700 carbon + fiberglass, VelosiGrit",
+   "weight": "7.8–8.0 oz",
+   "size": "16.5\" × 7.5\"",
+   "specs": [
+    [
+     "Core type",
+     "EPP centre + EVA perimeter (foam)"
+    ],
+    [
+     "Cell size",
+     "None, no honeycomb (49 round voids)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "EVA ring ≈ 24 mm"
+    ],
+    [
+     "Face",
+     "T700 carbon + fiberglass, VelosiGrit"
+    ],
+    [
+     "Weight",
+     "7.8–8.0 oz"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.5\""
+    ],
+    [
+     "Handle / grip",
+     "5.75\" / 4.125\""
+    ]
+   ],
+   "sources": "Specs: markpickleball.com · pickld.com.au · pickleplayglobal.com  ·  X-ray interpretation, not a cutaway",
+   "tags": [
+    "foam",
+    "epp",
+    "voids"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "mehau-e4",
+   "name": "Mehau E4",
+   "brand": "Mehau",
+   "image": "mehau-e4-labeled.png",
+   "core": "EPP foam + EVA perimeter",
+   "cell_size": "None, solid foam",
+   "ring": "EVA ring ≈ 12 mm",
+   "thickness": "16 mm",
+   "face": "3D woven carbon fiber",
+   "weight": "230 g ± 5 g (8.1 oz)",
+   "size": "16.46\" × 7.36\" elongated",
+   "specs": [
+    [
+     "Core type",
+     "EPP foam + EVA perimeter"
+    ],
+    [
+     "Cell size",
+     "None, solid foam"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "EVA ring ≈ 12 mm"
+    ],
+    [
+     "Face",
+     "3D woven carbon fiber"
+    ],
+    [
+     "Weight",
+     "230 g ± 5 g (8.1 oz)"
+    ],
+    [
+     "Size",
+     "16.46\" × 7.36\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.71\" / 4.13–4.25\""
+    ]
+   ],
+   "sources": "Specs: mehaupickleball.com (Precise Series E4 & E5). X-ray interpretation, not a cutaway.",
+   "tags": [
+    "foam",
+    "epp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "mehau-e5",
+   "name": "Mehau E5",
+   "brand": "Mehau",
+   "image": "mehau-e5-labeled.png",
+   "core": "EPP foam + STPEV elastomer",
+   "cell_size": "None, solid foam",
+   "ring": "Denser ring ≈ 24 mm",
+   "thickness": "16 mm",
+   "face": "3D carbon fiber (raw)",
+   "weight": "230 g ± 5 g (8.1 oz)",
+   "size": "16.46\" × 7.36\" elongated",
+   "specs": [
+    [
+     "Core type",
+     "EPP foam + STPEV elastomer"
+    ],
+    [
+     "Cell size",
+     "None, solid foam"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Denser ring ≈ 24 mm"
+    ],
+    [
+     "Face",
+     "3D carbon fiber (raw)"
+    ],
+    [
+     "Weight",
+     "230 g ± 5 g (8.1 oz)"
+    ],
+    [
+     "Size",
+     "16.46\" × 7.36\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.71\" / 4.13–4.25\""
+    ]
+   ],
+   "sources": "Specs: mehaupickleball.com · forwrd.co",
+   "tags": [
+    "foam",
+    "epp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "mehau-s5",
+   "name": "Mehau S5 Airpoom",
+   "brand": "Mehau",
+   "image": "mehau-s5-labeled.png",
+   "core": "Polymer honeycomb + EVA",
+   "cell_size": "≈ 8 mm measured (not disclosed)",
+   "ring": "Carbon Airpoom frame ≈ 12 mm + EVA ≈ 12 mm",
+   "thickness": "16 mm",
+   "face": "4-layer carbon fiber, 15° texture",
+   "weight": "219 g ± 5 g (7.7 oz)",
+   "size": "16.46\" × 7.36\" elongated",
+   "specs": [
+    [
+     "Core type",
+     "Polymer honeycomb + EVA"
+    ],
+    [
+     "Cell size",
+     "≈ 8 mm measured (not disclosed)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Carbon Airpoom frame ≈ 12 mm + EVA ≈ 12 mm"
+    ],
+    [
+     "Face",
+     "4-layer carbon fiber, 15° texture"
+    ],
+    [
+     "Weight",
+     "219 g ± 5 g (7.7 oz)"
+    ],
+    [
+     "Size",
+     "16.46\" × 7.36\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.71\" / 4.09–4.17\""
+    ]
+   ],
+   "sources": "Specs: mehaupickleball.com (S5 Airpoom). Foam band identified as EVA from Mehau's core description; X-ray interpretation, not a cutaway.",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "pact-teflon",
+   "name": "PACT Teflon Evolve Te16",
+   "brand": "PACT",
+   "image": "pact-teflon-labeled.png",
+   "core": "Gen 3 PP honeycomb + EVA foam",
+   "cell_size": "≈ 8 mm (measured)",
+   "ring": "EVA band ≈ 14 mm incl. edge",
+   "thickness": "16 mm",
+   "face": "Toray T700 carbon + Teflonix",
+   "weight": "8.3–8.5 oz (235–241 g)",
+   "size": "16.4\" × 7.4\" (417 × 188 mm)",
+   "specs": [
+    [
+     "Core type",
+     "Gen 3 PP honeycomb + EVA foam"
+    ],
+    [
+     "Cell size",
+     "≈ 8 mm (measured)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "EVA band ≈ 14 mm incl. edge"
+    ],
+    [
+     "Face",
+     "Toray T700 carbon + Teflonix"
+    ],
+    [
+     "Weight",
+     "8.3–8.5 oz (235–241 g)"
+    ],
+    [
+     "Size",
+     "16.4\" × 7.4\" (417 × 188 mm)"
+    ],
+    [
+     "Handle / grip",
+     "5.5\" / 4.1–4.2\""
+    ]
+   ],
+   "sources": "Specs: pactpaddles.com (Pro Teflon series, Teflon Evolve Te16)",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "PACT Teflon Evolve review, and PACT vs Gen 3 comparison",
+   "unreleased": false
+  },
+  {
+   "slug": "pakle-fuse",
+   "name": "Pakle Fuse",
+   "brand": "Pakle",
+   "image": "pakle-fuse-labeled.png",
+   "core": "Full foam: MPP + TPU + EVA",
+   "cell_size": "No honeycomb in face (handle ≈ 6.5 mm)",
+   "ring": "TPU/EVA band ≈ 9 mm + foam ≈ 13 mm",
+   "thickness": "16 mm, thermoformed Gen 4",
+   "face": "T700 carbon, coarse peel ply",
+   "weight": "7.7–7.9 oz",
+   "size": "16.5\" × 7.44\" elongated",
+   "specs": [
+    [
+     "Core type",
+     "Full foam: MPP + TPU + EVA"
+    ],
+    [
+     "Cell size",
+     "No honeycomb in face (handle ≈ 6.5 mm)"
+    ],
+    [
+     "Core thickness",
+     "16 mm, thermoformed Gen 4"
+    ],
+    [
+     "Perimeter",
+     "TPU/EVA band ≈ 9 mm + foam ≈ 13 mm"
+    ],
+    [
+     "Face",
+     "T700 carbon, coarse peel ply"
+    ],
+    [
+     "Weight",
+     "7.7–7.9 oz"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.44\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.5\" / 4.125–4.25\""
+    ]
+   ],
+   "sources": "Specs: PPA Tour Paddle Lab · mattspickleball.com · pickleballeffect.com. X-ray interpretation, not a cutaway.",
+   "tags": [
+    "foam",
+    "mpp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "pakle-infinity",
+   "name": "Pakle Infinity",
+   "brand": "Pakle",
+   "image": "pakle-infinity-labeled.png",
+   "core": "Full foam, dual density (not named)",
+   "cell_size": "No honeycomb in face (handle only)",
+   "ring": "EVA foam ≈ 8 mm incl. edge wall",
+   "thickness": "16 mm",
+   "face": "Raw T700 carbon, infiniteGrit",
+   "weight": "7.9–8.2 oz",
+   "size": "16.25\" × 7.75\" hybrid",
+   "specs": [
+    [
+     "Core type",
+     "Full foam, dual density (not named)"
+    ],
+    [
+     "Cell size",
+     "No honeycomb in face (handle only)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "EVA foam ≈ 8 mm incl. edge wall"
+    ],
+    [
+     "Face",
+     "Raw T700 carbon, infiniteGrit"
+    ],
+    [
+     "Weight",
+     "7.9–8.2 oz"
+    ],
+    [
+     "Size",
+     "16.25\" × 7.75\" hybrid"
+    ],
+    [
+     "Handle / grip",
+     "5.5\" / 4.125\""
+    ]
+   ],
+   "sources": "Specs: paklepickleball.com (Infinity Gen4.5) · pickleplayglobal.com. X-ray interpretation, not a cutaway.",
+   "tags": [
+    "foam"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "pickle-poppers-pop-n-rush",
+   "name": "Pickle Poppers Pop N Rush",
+   "brand": "Pickle Poppers",
+   "image": "pickle-poppers-pop-n-rush-labeled.png",
+   "core": "MPPE foam (white density foam)",
+   "cell_size": "Honeycomb, ≈ 7.4 mm cells",
+   "ring": "TPE 11–22 mm (top ≈ 9.5) + EVA ≈ 11 mm",
+   "thickness": "16 mm, GEN4 dual density",
+   "face": "T700 carbon + MAGMAGRIT grit",
+   "weight": "7.9 oz (± 0.2)",
+   "size": "16.45\" × 7.48\" elongated",
+   "specs": [
+    [
+     "Centre core",
+     "MPPE foam (white density foam)"
+    ],
+    [
+     "Handle insert",
+     "Honeycomb, ≈ 7.4 mm cells"
+    ],
+    [
+     "Core thickness",
+     "16 mm, GEN4 dual density"
+    ],
+    [
+     "Perimeter",
+     "TPE 11–22 mm (top ≈ 9.5) + EVA ≈ 11 mm"
+    ],
+    [
+     "Face",
+     "T700 carbon + MAGMAGRIT grit"
+    ],
+    [
+     "Weight",
+     "7.9 oz (± 0.2)"
+    ],
+    [
+     "Size",
+     "16.45\" × 7.48\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.7\" / 4.125\""
+    ]
+   ],
+   "sources": "Specs: pickle-poppers.com (MPPE + TPE). EVA edge inferred from the matching Pop N Treasure layout. Zone labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "honeycomb",
+    "mpp"
+   ],
+   "reel": "Ep 04: Pop N Rush vs Pop N Treasure",
+   "unreleased": false
+  },
+  {
+   "slug": "pickle-poppers-pop-n-treasure",
+   "name": "Pickle Poppers Pop N Treasure",
+   "brand": "Pickle Poppers",
+   "image": "pickle-poppers-pop-n-treasure-labeled.png",
+   "core": "MPP foam (full foam)",
+   "cell_size": "Honeycomb, ≈ 7 mm cells",
+   "ring": "TPE 11–24 mm + EVA ≈ 11 mm",
+   "thickness": "16 mm",
+   "face": "Carbon fibre, coated peel-ply",
+   "weight": "8.0 oz",
+   "size": "16.54\" × 7.44\" elongated",
+   "specs": [
+    [
+     "Centre core",
+     "MPP foam (full foam)"
+    ],
+    [
+     "Handle insert",
+     "Honeycomb, ≈ 7 mm cells"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "TPE 11–24 mm + EVA ≈ 11 mm"
+    ],
+    [
+     "Face",
+     "Carbon fibre, coated peel-ply"
+    ],
+    [
+     "Weight",
+     "8.0 oz"
+    ],
+    [
+     "Size",
+     "16.54\" × 7.44\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.79\" / not published"
+    ]
+   ],
+   "sources": "Specs: PPA Tour Paddle Lab (ppatour.com). Zone order (MPP → TPE → EVA) per owner correction. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "honeycomb",
+    "mpp"
+   ],
+   "reel": "Ep 04: Pop N Rush vs Pop N Treasure",
+   "unreleased": false
+  },
+  {
+   "slug": "pisgah-ridge",
+   "name": "Pisgah Ridge",
+   "brand": "Pisgah",
+   "image": "pisgah-ridge-labeled.png",
+   "core": "EPP foam (published)",
+   "cell_size": "None (foam, no honeycomb)",
+   "ring": "Edge band ≈ 9–10 mm + slot ring ≈ 25 mm in",
+   "thickness": "16 mm",
+   "face": "Carbon fiber",
+   "weight": "≈ 8.1 oz / 230 g",
+   "size": "≈ 419 × 190 mm (16.5\" × 7.5\")",
+   "specs": [
+    [
+     "Core type",
+     "EPP foam (published)"
+    ],
+    [
+     "Cell size",
+     "None (foam, no honeycomb)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Edge band ≈ 9–10 mm + slot ring ≈ 25 mm in"
+    ],
+    [
+     "Face",
+     "Carbon fiber"
+    ],
+    [
+     "Weight",
+     "≈ 8.1 oz / 230 g"
+    ],
+    [
+     "Size",
+     "≈ 419 × 190 mm (16.5\" × 7.5\")"
+    ],
+    [
+     "Handle / grip",
+     "≈ 140 mm / 4.25\" circumference"
+    ]
+   ],
+   "sources": "Specs: pisgahpaddles.com (Ridge product page). Void and frame materials are not published. X-ray interpretation, not a cutaway.",
+   "tags": [
+    "foam",
+    "epp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "proton-project-coyote",
+   "name": "Proton Project Coyote",
+   "brand": "Proton",
+   "image": "proton-project-coyote-labeled.png",
+   "core": "Polypropylene (PP) honeycomb",
+   "cell_size": "≈ 8.3 mm (measured)",
+   "ring": "Foam-injected ≈ 20 mm, type n/d",
+   "thickness": "15 mm",
+   "face": "Aerospace carbon, roughened",
+   "weight": "7.7–7.78 oz",
+   "size": "16.5\" × 7.5\" elongated",
+   "specs": [
+    [
+     "Core type",
+     "Polypropylene (PP) honeycomb"
+    ],
+    [
+     "Cell size",
+     "≈ 8.3 mm (measured)"
+    ],
+    [
+     "Core thickness",
+     "15 mm"
+    ],
+    [
+     "Perimeter",
+     "Foam-injected ≈ 20 mm, type n/d"
+    ],
+    [
+     "Face",
+     "Aerospace carbon, roughened"
+    ],
+    [
+     "Weight",
+     "7.7–7.78 oz"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.5\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.5\" / 4.125\""
+    ]
+   ],
+   "sources": "Specs: protonsports.com · pickleballwarehouse.com · pickleplayglobal.com",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "proton-project-peacock",
+   "name": "Proton Project Peacock",
+   "brand": "Proton",
+   "image": "proton-peacock-labeled.png",
+   "core": "Full foam: EVA + high-density foam",
+   "cell_size": "n/a (no honeycomb)",
+   "ring": "Floating-core foam ring ≈ 21–24 mm",
+   "thickness": "15 mm (13 mm version also sold)",
+   "face": "Raw carbon fibre, texture-enhanced",
+   "weight": "≈ 8.0 oz (7.8–8.2 oz)",
+   "size": "16.5\" × 7.5\" elongated (assumed)",
+   "specs": [
+    [
+     "Core type",
+     "Full foam: EVA + high-density foam"
+    ],
+    [
+     "Cell size",
+     "n/a (no honeycomb)"
+    ],
+    [
+     "Core thickness",
+     "15 mm (13 mm version also sold)"
+    ],
+    [
+     "Perimeter",
+     "Floating-core foam ring ≈ 21–24 mm"
+    ],
+    [
+     "Face",
+     "Raw carbon fibre, texture-enhanced"
+    ],
+    [
+     "Weight",
+     "≈ 8.0 oz (7.8–8.2 oz)"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.5\" elongated (assumed)"
+    ],
+    [
+     "Handle / grip",
+     "5.375\" / 4.25\""
+    ]
+   ],
+   "sources": "Specs: pickleballcentral.com (Peacock 15mm Elongated; Flamingo vs Peacock review). Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "rpm-jade",
+   "name": "RPM Jade",
+   "brand": "RPM",
+   "image": "rpm-jade-labeled.png",
+   "core": "MPP full foam (no honeycomb)",
+   "cell_size": "None, solid foam",
+   "ring": "EVA ring ≈ 25 mm",
+   "thickness": "14 mm or 16 mm",
+   "face": "SICmatrix silicon carbide",
+   "weight": "7.7–7.8 oz",
+   "size": "16.5\"×7.5\" elong. / 16\"×8\" wide",
+   "specs": [
+    [
+     "Core type",
+     "MPP full foam (no honeycomb)"
+    ],
+    [
+     "Cell size",
+     "None, solid foam"
+    ],
+    [
+     "Core thickness",
+     "14 mm or 16 mm"
+    ],
+    [
+     "Perimeter",
+     "EVA ring ≈ 25 mm"
+    ],
+    [
+     "Face",
+     "SICmatrix silicon carbide"
+    ],
+    [
+     "Weight",
+     "7.7–7.8 oz"
+    ],
+    [
+     "Size",
+     "16.5\"×7.5\" elong. / 16\"×8\" wide"
+    ],
+    [
+     "Handle / grip",
+     "5.5\" / 4.125\""
+    ]
+   ],
+   "sources": "Specs: pickld.com.au · thekitchenpickle.com",
+   "tags": [
+    "foam",
+    "mpp"
+   ],
+   "reel": "Ep 05: The most hyped pickleball paddle of 2026. What's inside?",
+   "unreleased": false
+  },
+  {
+   "slug": "rpm-q2",
+   "name": "RPM Q2 Elongated",
+   "brand": "RPM",
+   "image": "rpm-q2-labeled.png",
+   "core": "Multi-Zone Hybrid EPP foam (full foam)",
+   "cell_size": "None (no honeycomb)",
+   "ring": "Frame ≈ 10 mm + TPU inserts at 3 & 9",
+   "thickness": "14 mm or 16 mm",
+   "face": "CarbonBite carbon fiber",
+   "weight": "7.7 oz avg (14 mm) · 7.8 oz avg (16 mm)",
+   "size": "16.5\" × 7.5\" elongated",
+   "specs": [
+    [
+     "Core type",
+     "Multi-Zone Hybrid EPP foam (full foam)"
+    ],
+    [
+     "Cell size",
+     "None (no honeycomb)"
+    ],
+    [
+     "Core thickness",
+     "14 mm or 16 mm"
+    ],
+    [
+     "Perimeter",
+     "Frame ≈ 10 mm + TPU inserts at 3 & 9"
+    ],
+    [
+     "Face",
+     "CarbonBite carbon fiber"
+    ],
+    [
+     "Weight",
+     "7.7 oz avg (14 mm) · 7.8 oz avg (16 mm)"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.5\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.5\" / 4.125\""
+    ]
+   ],
+   "sources": "Specs: pickleballcentral.com · rpmpb.com (RPM Q2). Elongated confirmed by X-ray proportions. X-ray interpretation, not a cutaway.",
+   "tags": [
+    "foam",
+    "epp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "rpm-v2",
+   "name": "RPM V2 (Friction Pro V2)",
+   "brand": "RPM",
+   "image": "rpm-v2-labeled.png",
+   "core": "Tri-Density: honeycomb + EVA ring",
+   "cell_size": "≈ 8 mm measured (not disclosed)",
+   "ring": "EVA foam ring ≈ 23 mm",
+   "thickness": "14 mm or 16 mm",
+   "face": "CarbonBite carbon fiber",
+   "weight": "7.8 oz avg (7.6–8.0)",
+   "size": "16.5\" × 7.5\" elongated",
+   "specs": [
+    [
+     "Core type",
+     "Tri-Density: honeycomb + EVA ring"
+    ],
+    [
+     "Cell size",
+     "≈ 8 mm measured (not disclosed)"
+    ],
+    [
+     "Core thickness",
+     "14 mm or 16 mm"
+    ],
+    [
+     "Perimeter",
+     "EVA foam ring ≈ 23 mm"
+    ],
+    [
+     "Face",
+     "CarbonBite carbon fiber"
+    ],
+    [
+     "Weight",
+     "7.8 oz avg (7.6–8.0)"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.5\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.5\" / 4.125\""
+    ]
+   ],
+   "sources": "Specs: rpmpb.com · pickleballcentral.com (Friction Pro V2). Elongated shape assumed from X-ray proportions. X-ray interpretation, not a cutaway.",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "spartus-spitfire",
+   "name": "Spartus Spitfire",
+   "brand": "Spartus",
+   "image": "spartus-spitfire-labeled.png",
+   "core": "Full foam: EPP + EVA + expanding foam",
+   "cell_size": "None (foam, no honeycomb)",
+   "ring": "Dense band ≈ 8 mm (foam not disclosed)",
+   "thickness": "16 mm",
+   "face": "Toray carbon fiber, grit peel ply",
+   "weight": "7.8 oz (two side inserts ≈ 9 × 17 mm)",
+   "size": "16.46\" × 7.40\" elongated",
+   "specs": [
+    [
+     "Core type",
+     "Full foam: EPP + EVA + expanding foam"
+    ],
+    [
+     "Cell size",
+     "None (foam, no honeycomb)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Dense band ≈ 8 mm (foam not disclosed)"
+    ],
+    [
+     "Face",
+     "Toray carbon fiber, grit peel ply"
+    ],
+    [
+     "Weight",
+     "7.8 oz (two side inserts ≈ 9 × 17 mm)"
+    ],
+    [
+     "Size",
+     "16.46\" × 7.40\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.5\" / 4.125\""
+    ]
+   ],
+   "sources": "Specs: PPA Tour Paddle Lab · pickleballeffect.com (Spitfire review). Insert material is not published. X-ray interpretation, not a cutaway.",
+   "tags": [
+    "foam",
+    "epp"
+   ],
+   "reel": "Ep 03: Spartus Spitfire",
+   "unreleased": false
+  },
+  {
+   "slug": "speedup-tide",
+   "name": "Speedup Tide Elongated (14L)",
+   "brand": "Speedup",
+   "image": "speedup-tide-elongated-labeled.png",
+   "core": "MPP full foam (PureFeel)",
+   "cell_size": "",
+   "ring": "TPE ≈ 13 mm + injection foam ≈ 10.5 mm",
+   "thickness": "14 mm",
+   "face": "FlexGrid 45° carbon fibre, peel ply",
+   "weight": "8.35 oz (static)",
+   "size": "16.55 x 7.45 in (measured), Elongated",
+   "specs": [
+    [
+     "Core type",
+     "MPP full foam (PureFeel)"
+    ],
+    [
+     "Core density",
+     "90 kg/m³"
+    ],
+    [
+     "Core thickness",
+     "14 mm"
+    ],
+    [
+     "Perimeter",
+     "TPE ≈ 13 mm + injection foam ≈ 10.5 mm"
+    ],
+    [
+     "Face",
+     "FlexGrid 45° carbon fibre, peel ply"
+    ],
+    [
+     "Weight",
+     "8.35 oz (static)"
+    ],
+    [
+     "Size",
+     "16.55 x 7.45 in (measured), Elongated"
+    ],
+    [
+     "Handle",
+     "5.7 in (measured), 4.125 in grip"
+    ]
+   ],
+   "sources": "Sources: Speedup (via Rackets & Runners), Matt's Pickleball (Tide 14L), PPA Paddle Lab. Size measured on the paddle; scale from 7.45\" width. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam",
+    "mpp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "standout-cf4",
+   "name": "Standout CF4 Power NXT Gen",
+   "brand": "Standout",
+   "image": "standout-cf4-labeled.png",
+   "core": "Pulse: narrow-cell PP honeycomb + foam",
+   "cell_size": "Narrow cell, not resolved (not disclosed)",
+   "ring": "Denser foam ring ≈ 10 mm (not disclosed)",
+   "thickness": "16 mm",
+   "face": "Japanese T700 carbon fiber",
+   "weight": "7.8–8.3 oz · SW 115–116 · TW 6.8",
+   "size": "16.5\" × 7.5\" elongated",
+   "specs": [
+    [
+     "Core type",
+     "Pulse: narrow-cell PP honeycomb + foam"
+    ],
+    [
+     "Cell size",
+     "Narrow cell, not resolved (not disclosed)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Denser foam ring ≈ 10 mm (not disclosed)"
+    ],
+    [
+     "Face",
+     "Japanese T700 carbon fiber"
+    ],
+    [
+     "Weight",
+     "7.8–8.3 oz · SW 115–116 · TW 6.8"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.5\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.5\" / 4.25\" leather"
+    ]
+   ],
+   "sources": "Specs: oribags.com · mypickleball.my · pickleballpaddlescanada.ca. Slot purpose is not published. X-ray interpretation, not a cutaway.",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "sypik-triton-5",
+   "name": "Sypik Triton 5",
+   "brand": "Sypik",
+   "image": "sypik-triton-5-labeled.png",
+   "core": "Polymer honeycomb (likely PP)",
+   "cell_size": "≈ 8.4 mm (measured)",
+   "ring": "Solid ring ≈ 23 mm, no cells",
+   "thickness": "16 mm",
+   "face": "T700 raw carbon, textured",
+   "weight": "8.0 oz avg",
+   "size": "16.5\" × 7.4\"",
+   "specs": [
+    [
+     "Core type",
+     "Polymer honeycomb (likely PP)"
+    ],
+    [
+     "Cell size",
+     "≈ 8.4 mm (measured)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Solid ring ≈ 23 mm, no cells"
+    ],
+    [
+     "Face",
+     "T700 raw carbon, textured"
+    ],
+    [
+     "Weight",
+     "8.0 oz avg"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.4\""
+    ],
+    [
+     "Handle / grip",
+     "5.55\" / 4.35\""
+    ]
+   ],
+   "sources": "Specs: sypikaustralia.com.au · topspinpickleball.co.nz · spinwavepickleball.com",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "vanwin-alpha-control",
+   "name": "Vanwin Alpha Control",
+   "brand": "Vanwin",
+   "image": "vanwin-alpha-control-labeled.png",
+   "core": "PP honeycomb, injection-molded",
+   "cell_size": "9.85 mm listed · ≈ 10 mm measured",
+   "ring": "EVA + injected foam ≈ 24–29 mm",
+   "thickness": "16 mm",
+   "face": "100% Kevlar aramid, textured",
+   "weight": "7.8–8.1 oz avg",
+   "size": "16.5\" × 7.45\" elongated",
+   "specs": [
+    [
+     "Core type",
+     "PP honeycomb, injection-molded"
+    ],
+    [
+     "Cell size",
+     "9.85 mm listed · ≈ 10 mm measured"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "EVA + injected foam ≈ 24–29 mm"
+    ],
+    [
+     "Face",
+     "100% Kevlar aramid, textured"
+    ],
+    [
+     "Weight",
+     "7.8–8.1 oz avg"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.45\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.7\" / 4.125\""
+    ]
+   ],
+   "sources": "Specs: vanwinsports.com (Alpha Control product page). X-ray interpretation, not a cutaway.",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "vanwin-alpha-power",
+   "name": "Vanwin Alpha Power",
+   "brand": "Vanwin",
+   "image": "vanwin-alpha-power-labeled.png",
+   "core": "Full foam, layered (type not disclosed)",
+   "cell_size": "None in face (honeycomb only in handle)",
+   "ring": "Foam ring ≈ 24 mm to inner seam",
+   "thickness": "16 mm",
+   "face": "Carborundum (silicon carbide) surface",
+   "weight": "8.12 oz static (7.8–8.12 avg)",
+   "size": "Elongated · L × W not published",
+   "specs": [
+    [
+     "Core type",
+     "Full foam, layered (type not disclosed)"
+    ],
+    [
+     "Cell size",
+     "None in face (honeycomb only in handle)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Foam ring ≈ 24 mm to inner seam"
+    ],
+    [
+     "Face",
+     "Carborundum (silicon carbide) surface"
+    ],
+    [
+     "Weight",
+     "8.12 oz static (7.8–8.12 avg)"
+    ],
+    [
+     "Size",
+     "Elongated · L × W not published"
+    ],
+    [
+     "Handle / grip",
+     "5.7\" · grip not published"
+    ]
+   ],
+   "sources": "Specs: vanwinsports.com (Alpha Power page), mypicklelist.com, theadventurousboomer.blog. Width assumed. X-ray interpretation, not a cutaway.",
+   "tags": [
+    "foam"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "zcebra-gazelle",
+   "name": "Zcebra Gazelle",
+   "brand": "Zcebra",
+   "image": "zcebra-gazelle-labeled.png",
+   "core": "Black Foam Core, full foam (not disclosed)",
+   "cell_size": "n/a (no honeycomb)",
+   "ring": "Two-zone ring ≈ 22–25 mm",
+   "thickness": "16 mm",
+   "face": "FT-700 Frosted Carbon, thermoformed",
+   "weight": "not disclosed",
+   "size": "Elongated (exact size not disclosed)",
+   "specs": [
+    [
+     "Core type",
+     "Black Foam Core, full foam (not disclosed)"
+    ],
+    [
+     "Cell size",
+     "n/a (no honeycomb)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Two-zone ring ≈ 22–25 mm"
+    ],
+    [
+     "Face",
+     "FT-700 Frosted Carbon, thermoformed"
+    ],
+    [
+     "Weight",
+     "not disclosed"
+    ],
+    [
+     "Size",
+     "Elongated (exact size not disclosed)"
+    ],
+    [
+     "Handle / grip",
+     "not disclosed"
+    ]
+   ],
+   "sources": "Specs: zcebra.com (Gazelle Black Foam), pickle-vending.com. USAPA approved per Zcebra. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "zocker-aspire",
+   "name": "Zocker Aspire",
+   "brand": "Zocker",
+   "image": "zocker-aspire-labeled.png",
+   "core": "Polymer honeycomb (hot-pressed)",
+   "cell_size": "≈ 8.3 mm measured (not disclosed)",
+   "ring": "Foam ring ≈ 27 mm + 2 side weight strips",
+   "thickness": "13.3 mm or 16 mm",
+   "face": "T700 carbon (Japan)",
+   "weight": "230 ± 5 g (≈ 8.1 oz)",
+   "size": "418 × 187 mm (16.5\" × 7.4\")",
+   "specs": [
+    [
+     "Core type",
+     "Polymer honeycomb (hot-pressed)"
+    ],
+    [
+     "Cell size",
+     "≈ 8.3 mm measured (not disclosed)"
+    ],
+    [
+     "Core thickness",
+     "13.3 mm or 16 mm"
+    ],
+    [
+     "Perimeter",
+     "Foam ring ≈ 27 mm + 2 side weight strips"
+    ],
+    [
+     "Face",
+     "T700 carbon (Japan)"
+    ],
+    [
+     "Weight",
+     "230 ± 5 g (≈ 8.1 oz)"
+    ],
+    [
+     "Size",
+     "418 × 187 mm (16.5\" × 7.4\")"
+    ],
+    [
+     "Handle",
+     "140 mm (5.5\"), NFC chip inside"
+    ]
+   ],
+   "sources": "Specs: meta.vn · mypickleball.my (Zocker Aspire). Weight strips and ring foam not disclosed by maker. X-ray interpretation, not a cutaway.",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  }
+ ]
+}

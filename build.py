@@ -1,0 +1,1048 @@
+#!/usr/bin/env python3
+"""Builds the PickleballRx static site.
+
+Usage:  python3 build.py            (writes into ./site next to this file)
+
+Edit data/paddles.json to add or change paddles, then run this and zip site/.
+Edit VIDEOS, LAB and CODES below for the Videos, Paddle lab and Discount codes pages.
+"""
+import json, os, html
+
+ROOT = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.join(ROOT, "site")
+DATA = json.load(open(os.path.join(ROOT, "data", "paddles.json")))
+PADDLES = DATA["paddles"]
+LABS = json.load(open(os.path.join(ROOT, "data", "labs.json")))
+SPECS = json.load(open(os.path.join(ROOT, "data", "specs.json")))["paddles"]
+XRAY = json.load(open(os.path.join(ROOT, "data", "xray.json")))["paddles"]
+
+YOUTUBE = "https://www.youtube.com/@picklebrx"
+INSTAGRAM = "https://www.instagram.com/picklebrx/"
+
+# YouTube videos for the Videos page. id = the part after watch?v=
+VIDEOS = [
+    # dict(id="XXXXXXXXXXX", title="Paddle name review", paddle="slug-of-paddle"),
+]
+
+# Lab images: put files in site/assets/lab/ and list them here.
+LAB = {
+    "xray": [],   # dict(src="assets/lab/name.jpg", paddle="Paddle name", caption="What it shows")
+    "micro": [],
+    "other": [],
+}
+
+# Discount codes. Leave empty until you have real codes from brands.
+CODES = [  # confirmed by Siva 2026-11-17
+    dict(brand="Arronax", code="PBRX", offer="15% off", url="https://arronaxpickleball.com/"),
+    dict(brand="Evolv", code="PBRX", offer="15% off", url="https://evolvpickleball.com/"),
+    dict(brand="Holbrook", code="PBRX", offer="15% off", url="https://holbrookpickleball.com/"),
+    dict(brand="Luzz", code="PBRX", offer="15% off", url="https://luzzpickleball.com/"),
+    dict(brand="RPM", code="PBRX", offer="15% off", url="https://rpmpb.com/"),
+    dict(brand="MARK", code="PBRX", offer="10% off", url="https://markpickleball.com/"),
+    dict(brand="Pakle", code="PBRX", offer="10% off", url="https://paklepickleball.com/"),
+]
+
+
+
+def product_photo(slug):
+    """Brand product photo supplied by Siva, keyed by X-ray slug (assets/paddles/product/<slug>.jpg)."""
+    rel = f"assets/paddles/product/{slug}.jpg"
+    return rel if slug and os.path.exists(os.path.join(OUT, rel)) else ""
+
+
+import hashlib
+def _asset_ver():
+    h = hashlib.md5()
+    for f in ("style.css", "app.js", "logo.svg", "logo-white.svg"):
+        fp = os.path.join(OUT, "assets", f)
+        if os.path.exists(fp): h.update(open(fp, "rb").read())
+    return h.hexdigest()[:8]
+ASSET_V = _asset_ver()  # cache-busting query string so browsers fetch new CSS/JS/logo after each change
+
+
+def code_box(brand, depth=0):
+    c = next((c for c in CODES if c["brand"].lower() == brand.lower() and c["code"]), None)
+    if not c:
+        return ""
+    r = "../" * depth
+    return (f'<div class="deal" style="text-align:left;margin:18px 0"><strong>Get {e(c["offer"])} at {e(c["brand"])}</strong> with code'
+            f'<code style="display:inline-block;margin:0 6px">{e(c["code"])}</code><a href="{e(c["url"])}" rel="sponsored noopener">Shop {e(c["brand"])} &rarr;</a>'
+            f'<div class="muted" style="font-size:.82rem;margin-top:4px">We earn a commission on code purchases. It never changes our results. <a href="{r}disclaimers.html">Disclaimers</a></div></div>')
+
+STYLES = [
+    ("power", "Power", "Drives, put-aways, pop"),
+    ("spin", "Spin", "Grit and dwell for heavy topspin"),
+    ("control", "Control", "Soft hands at the kitchen"),
+    ("all-court", "All-court", "A bit of everything"),
+    ("beginner", "Beginner", "Forgiving and affordable"),
+]
+
+e = html.escape
+
+
+def overall(p):
+    return round((p["power"] + p["spin"] + p["control"] + p["forgiveness"]) / 4, 1)
+
+
+def page(title, body, depth=0, current="", desc="Data-driven pickleball paddle reviews with X-rays, microscope images and on-court video."):
+    r = "../" * depth
+
+    def nav(href, label, key, cls=""):
+        cur = ' aria-current="page"' if key == current else ""
+        c = f' class="{cls}"' if cls else ""
+        return f'<a href="{r}{href}"{cur}{c}>{label}</a>'
+
+    return f'''<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{e(title)}</title>
+<meta name="description" content="{e(desc)}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="{r}assets/style.css?v={ASSET_V}">
+<link rel="icon" href="{r}assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="{r}assets/apple-touch-icon.png">
+</head>
+<body>
+<div class="placeholder-banner">Preview site. X-Ray, Grit and Spin Lab data is real. Paddles in the review database are sample placeholders for now.</div>
+<header class="site-header"><div class="wrap">
+  <a class="logo" href="{r}index.html"><img src="{r}assets/logo-white.svg?v={ASSET_V}" alt="Pickleball Rx" width="149" height="58"></a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span><span></span><span></span></button>
+  <nav class="nav" id="site-nav" aria-label="Main">
+    {nav("paddles.html", "Paddle database", "paddles")}
+    {nav("compare.html", "Compare", "compare")}
+    {nav("lab.html", "X-Ray Rx", "lab")}
+    {nav("grit.html", "Grit Lab", "grit")}
+    {nav("spin.html", "Spin Lab", "spin")}
+    {nav("specs.html", "Spec Lab", "specs")}
+    {nav("videos.html", "Videos", "videos")}
+    {nav("codes.html", "Black Friday deals", "codes")}
+    {nav("finder.html", "Get your paddle Rx", "finder", "nav-cta")}
+  </nav>
+</div></header>
+<main>
+{body}
+</main>
+<footer class="site-footer"><div class="wrap">
+  <div class="cols">
+    <div><img src="{r}assets/logo.svg?v={ASSET_V}" alt="Pickleball Rx" width="129" height="50" style="height:50px;width:auto;margin-bottom:10px">
+      <p style="margin:0">Paddle reviews that look inside the paddle: X-rays, microscope images, measured specs and on-court video.</p></div>
+    <div><h4>Tools</h4><ul><li><a href="{r}finder.html">Paddle finder</a></li><li><a href="{r}compare.html">Compare</a></li><li><a href="{r}paddles.html">Database</a></li></ul></div>
+    <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}best.html">Best paddles</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
+    <div><h4>Follow</h4><ul><li><a href="{YOUTUBE}" rel="noopener">YouTube</a></li><li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li><li><a href="{r}about.html#contact">Contact</a></li></ul></div>
+  </div>
+  <p class="legal">&copy; 2026 PickleballRx.org &middot; <a href="{r}disclaimers.html">Disclaimers</a> &middot; Pickleball RX earns commission on some discount codes. Brands have no input into results.</p>
+</div></footer>
+<script src="{r}assets/paddles.js?v={ASSET_V}"></script>
+<script src="{r}assets/app.js?v={ASSET_V}"></script>
+</body>
+</html>
+'''
+
+
+def badges(p):
+    b = []
+    if p.get("xray"): b.append('<span class="badge">X-ray</span>')
+    if p.get("micro"): b.append('<span class="badge">Microscope</span>')
+    if p.get("video"): b.append('<span class="badge">Video</span>')
+    if p.get("placeholder"): b.append('<span class="tag ph">Placeholder</span>')
+    return '<div class="badges">' + "".join(b) + "</div>"
+
+
+def card(p, depth):
+    r = "../" * depth
+    return f'''<article class="card">
+  <div class="paddle-art" aria-hidden="true">{e(p["name"][-1])}</div>
+  {badges(p)}
+  <h3><a href="{r}reviews/{p["slug"]}.html">{e(p["name"])}</a></h3>
+  <div class="meta">{e(p["brand"])} &middot; {e(p["shape"])} &middot; {p["core_mm"]} mm &middot; ${p["price"]}</div>
+  <div class="mini-scores">
+    <div><b>{p["power"]}</b><span>Power</span></div><div><b>{p["spin"]}</b><span>Spin</span></div>
+    <div><b>{p["control"]}</b><span>Control</span></div><div><b>{p["forgiveness"]}</b><span>Forgive</span></div>
+  </div>
+  <a class="more" href="{r}reviews/{p["slug"]}.html">Read review &rarr;</a>
+</article>'''
+
+
+def embed(vid, title):
+    return f'<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{e(vid)}" title="{e(title)}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
+
+
+def video_ph(label="Video coming soon"):
+    return f'<div class="video ph"><span>&#9654; {label}</span></div>'
+
+
+def lab_fig(src, alt, caption, ph_label):
+    if src:
+        return f'<figure class="lab-item"><a href="{src}"><img src="{src}" alt="{e(alt)}" loading="lazy"></a><figcaption>{caption}</figcaption></figure>'
+    return f'<figure class="lab-item"><div class="lab-ph">{ph_label} coming soon</div><figcaption>{caption}</figcaption></figure>'
+
+
+def write(path, text):
+    full = os.path.join(OUT, path)
+    os.makedirs(os.path.dirname(full), exist_ok=True)
+    with open(full, "w") as f:
+        f.write(text)
+
+
+# ---------- data for the browser ----------
+write("assets/paddles.js", "window.PADDLES = " + json.dumps(PADDLES, indent=1) + ";\n")
+
+# ---------- Leader Board (Siva's wall, top spot first) ----------
+import re as _re
+_slug = lambda t: _re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
+# (brand, model, X-ray slug, spin table name, grit collection name, spec card id, note)
+LEADERBOARD = [
+    ("Gearbox", "Pressure X 8E", "gearbox-pressure-x-8e", "Gearbox Pressure XE", "Gearbox Pressure X 8E", "gearbox-8e", ""),
+    ("Luzz", "Cannon XPP", "luzz-cannon-xpp", "Luzz Cannon XPP", "Luzz Cannon XPP M1", "luzz-cannon", ""),
+    ("Bread & Butter", "Loco 2 Elongated", None, "Bread & Butter Loco 2 Elongated", "Bread & Butter LOCO 2", "bnb-loco", ""),
+    ("Gearbox", "Pressure X 8M", "gearbox-pressure-xm", "Gearbox Pressure X M", None, "gearbox-8m", ""),
+    ("Facolos", "Elite X V2.0", "facolos-elite-x-2-0", None, None, None, ""),
+    ("Sypik", "Triton 5", "sypik-triton-5", None, "Sypik Triton 5", "sypik-triton", ""),
+    ("Speedup", "Tide 14 Hybrid", "speedup-tide", "Speed Up Tide", "Speed Up Tide", None, "X-ray is of the Tide Elongated"),
+    ("Grit", "E2-CF", "grit-e2-cf", "Grit E2CF", None, None, ""),
+    ("Evolv", "Origin Elongated", "evolv-origin", "Evolv Origin", "Evolv", None, ""),
+    ("Honolulu", "J6CR", "honolulu-j6cr", "Honolulu J6CR", "Honolulu J6CR", None, ""),
+    ("Spartus", "Spitfire", "spartus-spitfire", "Spartus Spitfire", "Spartus Spitfire", None, ""),
+    ("Arronax", "KVL 005", "arronax-kvl-005", None, None, None, ""),
+    ("Mehau", "E5", "mehau-e5", None, "Mehau E5", None, ""),
+    ("PACT", "Teflon Evolve TE16", "pact-teflon", None, "PACT Teflon Evolve", None, ""),
+    ("Zcebra", "Gazelle", "zcebra-gazelle", "Zcebra Gazelle", "Zcebra Gazelle", None, ""),
+]
+
+
+def lb_card(i, row):
+    brand, model, xs, sp, gr, sc, note = row
+    # Thumbnail: prefer a real paddle photo (assets/paddles/<brand-model>.jpg), else the X-ray, else the grit scan.
+    photo = product_photo(xs) or f"assets/paddles/{_slug(brand + ' ' + model)}.jpg"
+    if os.path.exists(os.path.join(OUT, photo)):
+        thumb, fit = photo, "contain"
+    elif xs and os.path.exists(os.path.join(OUT, f"assets/xray/{xs}-labeled.jpg")):
+        thumb, fit = f"assets/xray/{xs}-labeled.jpg", "cover"
+    else:
+        thumb, fit = (f"assets/grit/{_slug(gr)}.jpg" if gr else ""), "cover"
+    img = (f'<img class="lb-thumb" src="{thumb}" alt="{e(brand)} {e(model)}" loading="lazy" style="object-fit:{fit}">' if thumb
+           else '<div class="lb-thumb"></div>')
+    links = []
+    if xs: links.append(f'<a class="badge" href="xray/{xs}.html">X-ray</a>')
+    if sp:
+        r = next((x for x in LABS["spin"] + LABS["spin_extra"] if x["paddle"] == sp), None)
+        if r: links.append(f'<a class="badge" href="spin.html#{_slug(sp)}">{r["avg"]:,} RPM</a>')
+    if gr: links.append(f'<a class="badge" href="grit.html#{_slug(gr)}">Grit</a>')
+    if sc: links.append(f'<a class="badge" href="specs.html#{sc}">Specs</a>')
+    code = next((c for c in CODES if c["brand"].lower() == brand.lower() and c["code"]), None)
+    code_html = f'<div style="font-size:.82rem;margin-top:6px">Code <strong>{e(code["code"])}</strong> &middot; {e(code["offer"])} at <a href="{e(code["url"])}" rel="sponsored noopener">{e(brand)}</a></div>' if code else ""
+    top = i == 0
+    return (f'<div class="lb-item{" lb-top" if top else ""}"><div class="lb-rank">{"&#9733;" if top else i + 1}</div>{img}<div style="min-width:0">'
+            f'<div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">{e(brand)}{" &middot; top spot" if top else ""}</div>'
+            f'<div style="font-weight:800;font-size:1.05rem;line-height:1.25">{e(model)}</div>'
+            f'<div class="badges" style="margin-top:6px">{"".join(links)}</div>'
+            + (f'<div class="muted" style="font-size:.78rem;margin-top:4px">{e(note)}</div>' if note else "") + code_html + '</div></div>')
+
+
+lb_html = "".join(lb_card(i, r) for i, r in enumerate(LEADERBOARD))
+
+
+# ---------- home ----------
+n_x = len(XRAY)
+n_m = sum(1 for p in PADDLES if p.get("micro"))
+n_v = len({v["id"] for v in VIDEOS} | {p["video"] for p in PADDLES if p.get("video")})
+style_tiles = "".join(f'<a class="style-tile" href="best.html#{k}"><b>{l}</b><span>{d}</span></a>' for k, l, d in STYLES)
+style_tiles += '<a class="style-tile" href="codes.html"><b>Deals</b><span>Discount codes</span></a>'
+latest = "\n".join(card(p, 0) for p in PADDLES[:3])
+# ---------- Upcoming releases (public news only; mark unconfirmed items) ----------
+UPCOMING = [
+    dict(brand="Proton", name="Series One Project Bluejay", status="Not released yet",
+         when="Expected in the coming months; no date or price announced",
+         text="Proton's next paddle was in the hands of pros at the Pickleball World Championships in early November, including Meghan Dizon, Zane Ford and Naomi Nguyen. Proton hasn't published specs yet.",
+         links=[("X-ray: Project Coyote", "xray/proton-project-coyote.html"), ("X-ray: Project Peacock", "xray/proton-project-peacock.html"), ("Grit: Project Coyote", "grit.html#proton-project-coyote")],
+         sources=[("The Kitchen, Nov 6, 2026", "https://thekitchenpickle.com/blogs/gear/what-paddles-top-pickleball-pros-use-worlds-november-2026/"), ("Nico the Lefty release calendar", "https://www.nicothelefty.com/news")]),
+    dict(brand="Selkirk", name="Boomstik ST", status="Just released",
+         when="Released Nov 10, 2026 &middot; $350",
+         text="The next version of the LABS Project Boomstik. Selkirk says its new InfiniGrit Ultra surface has four times the spin friction and twice the grit durability of the original InfiniGrit. It adds a perimeter Sharktooth groove and hand-adjustable perimeter weights, and keeps the BoomCore foam core.",
+         links=[("Grit: original Project Boomstik", "grit.html#selkirk-labs-project-boomstik")],
+         sources=[("Selkirk press release, Nov 10, 2026", "https://www.selkirk.com/pages/press-releases/selkirk-sport-launches-boomstik-st-the-next-evolution-of-its-premier-power-paddle")]),
+]
+
+
+def upcoming_card(u):
+    links = "".join(f'<a class="badge" href="{e(h)}">{e(t)}</a>' for t, h in u["links"])
+    srcs = " &middot; ".join(f'<a href="{e(h)}" rel="noopener">{e(t)}</a>' for t, h in u["sources"])
+    return (f'<div class="card" style="padding:18px"><div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">{e(u["brand"])}</div>'
+            f'<h3 style="margin:4px 0 6px">{e(u["name"])}</h3><span class="tag" style="align-self:flex-start">{e(u["status"])}</span>'
+            f'<p class="muted" style="font-size:.88rem;margin:6px 0 8px">{u["when"]}</p><p style="font-size:.95rem">{e(u["text"])}</p>'
+            f'<div class="badges" style="margin-bottom:10px">{links}</div><div class="muted" style="font-size:.78rem">Sources: {srcs}</div></div>')
+
+
+upcoming_html = "".join(upcoming_card(u) for u in UPCOMING)
+
+# Latest reviews only show on the home page once at least one real (non-placeholder) review exists.
+_real = [p for p in PADDLES if not p.get("placeholder")]
+latest_section = (f'''<section>
+  <div class="section-head"><div><h2>Latest reviews</h2><p class="section-lead">Our newest full reviews.</p></div><a class="btn ghost" href="reviews/index.html">All reviews</a></div>
+  <div class="grid">{"".join(card(p, 0) for p in _real[:3])}</div>
+</section>
+''') if _real else ""
+write("index.html", page("PickleballRx | Pickleball paddle reviews, X-rays and data", f'''
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="tag">Paddle reviews, inside and out</span>
+    <h1>See what's <em>inside</em> your next pickleball paddle.</h1>
+    <p>We X-ray paddles, put their faces under a 4K microscope and measure spin at 960 frames per second. Then we play them, and test them again.</p>
+    <div class="btn-row"><a class="btn yellow" href="spin.html">See the spin results</a><a class="btn ghost" href="lab.html">Inside {n_x} paddles</a></div>
+  </div>
+  <figure class="hero-art"><a href="#leaderboard"><img src="assets/leaderboard.jpg" alt="The Pickleball RX Leader Board: 15 paddles on the wall, Gearbox Pressure X 8E in the top spot" style="border-radius:12px;width:100%;height:auto"></a><figcaption>The Pickleball RX Leader Board. <a href="#leaderboard" style="color:#fcb92d">See the paddles</a>.</figcaption></figure>
+</div></section>
+<div class="stats"><div class="wrap">
+  <div class="stat"><b>{n_x}</b><span>paddles X-rayed</span></div>
+  <div class="stat"><b>{len(LABS["grit"])}</b><span>paddle faces under the microscope</span></div>
+  <div class="stat"><b>{len(LABS["spin"]) + len(LABS["spin_extra"])}</b><span>paddles spin-tested at 960 fps</span></div>
+  <div class="stat"><b>{len(LABS["durability"])}</b><span>spin durability re-tests</span></div>
+</div></div>
+<div class="wrap">
+<section id="leaderboard">
+  <div class="section-head"><div><span class="tag">Rx top picks</span><h2 style="margin-top:8px">The Leader Board</h2>
+  <p class="section-lead">The paddles that earned a spot on our wall after X-rays, microscope scans, spin tests and a lot of games. One paddle holds the top spot. Tap any badge to see the lab results behind it.</p></div></div>
+  <div class="lb-grid">{lb_html}</div>
+</section>
+<section>
+  <h2>Shop by how you play</h2>
+  <p class="section-lead">Start with the thing you care about most.</p>
+  <div class="styles">{style_tiles}</div>
+</section>
+<section style="padding-top:0">
+  <div class="tools">
+    <a class="tool" href="finder.html"><div class="ico">Rx</div><h3>Paddle finder</h3><p>Answer four quick questions and get a short list of paddles that match your game.</p><span class="go">Get your Rx &rarr;</span></a>
+    <a class="tool" href="compare.html"><div class="ico">VS</div><h3>Compare paddles</h3><p>Put up to four paddles side by side: scores, measured specs and price.</p><span class="go">Compare &rarr;</span></a>
+    <a class="tool" href="paddles.html"><div class="ico">DB</div><h3>Paddle database</h3><p>Sort and filter every paddle we've tested by spin, power, swing weight and more.</p><span class="go">Open database &rarr;</span></a>
+    <a class="tool" href="lab.html"><div class="ico">X</div><h3>X-Ray Rx</h3><p>{n_x} paddles X-rayed and labeled: core, ring, inserts and handle.</p><span class="go">See inside &rarr;</span></a>
+  </div>
+</section>
+<section id="upcoming">
+  <div class="section-head"><div><span class="tag">On our radar</span><h2 style="margin-top:8px">Upcoming releases we're excited about</h2>
+  <p class="section-lead">New paddles we can't wait to get into the lab. Details come from public announcements and news, linked below each one. Anything a brand hasn't confirmed is marked.</p></div></div>
+  <div class="grid">{upcoming_html}</div>
+</section>
+{latest_section}
+<section>
+  <h2>The labs</h2>
+  <p class="section-lead">Most reviews stop at "it feels poppy." We look inside, zoom in and measure.</p>
+  <div class="tools">
+    <a class="tool" href="lab.html"><div class="ico">X</div><h3>X-Ray Rx</h3><p>Core, perimeter ring, inserts and handle, labeled from the X-ray for {n_x} paddles.</p><span class="go">See inside &rarr;</span></a>
+    <a class="tool" href="grit.html"><div class="ico">&micro;</div><h3>Grit Lab</h3><p>{len(LABS["grit"])} paddle faces under a 4K microscope, plus wear studies after months of play.</p><span class="go">See the grit &rarr;</span></a>
+    <a class="tool" href="spin.html"><div class="ico">RPM</div><h3>Spin Lab</h3><p>Same rig, same ball machine, 960 frames per second. Test, play, then test again.</p><span class="go">See spin results &rarr;</span></a>
+    <a class="tool" href="specs.html"><div class="ico">SW</div><h3>Spec Lab</h3><p>Swing weight, twist weight and static weight, measured ourselves for {len(SPECS)} paddles.</p><span class="go">See the specs &rarr;</span></a>
+  </div>
+</section>
+<section>
+  <div class="social-band"><div><h2>Watch the reviews</h2><p>Full video reviews on YouTube, and lab images and quick takes on Instagram.</p></div>
+  <div class="btn-row"><a class="btn yellow" href="{YOUTUBE}" rel="noopener">YouTube @picklebrx</a><a class="btn ghost" style="color:#fff;border-color:#3a5182" href="{INSTAGRAM}" rel="noopener">Instagram @picklebrx</a></div></div>
+</section>
+</div>''', 0, "home"))
+
+# ---------- database ----------
+write("paddles.html", page("Paddle database | PickleballRx", '''
+<div class="wrap"><section>
+  <h1 class="page-title">Paddle database</h1>
+  <p class="section-lead">Every paddle we've reviewed, with our scores and measured specs. Click a column to sort it. All entries are placeholders for now.</p>
+  <div class="filters" id="db-filters">
+    <label>Search<input type="search" id="f-q" placeholder="Paddle or brand"></label>
+    <label>Play style<select id="f-style"><option value="">Any</option><option value="power">Power</option><option value="spin">Spin</option><option value="control">Control</option><option value="all-court">All-court</option></select></label>
+    <label>Shape<select id="f-shape"><option value="">Any</option></select></label>
+    <label>Core<select id="f-core"><option value="">Any</option></select></label>
+    <label>Max price ($)<input type="number" id="f-price" min="0" step="10" placeholder="Any"></label>
+    <label class="check"><input type="checkbox" id="f-xray"> Has X-ray</label>
+    <label class="check"><input type="checkbox" id="f-video"> Has video</label>
+  </div>
+  <p class="count" id="db-count"></p>
+  <div class="table-wrap"><table class="db" id="db">
+    <thead><tr>
+      <th data-k="name"><button>Paddle</button></th>
+      <th data-k="overall"><button>Overall</button></th>
+      <th data-k="power"><button>Power</button></th>
+      <th data-k="spin"><button>Spin</button></th>
+      <th data-k="control"><button>Control</button></th>
+      <th data-k="forgiveness"><button>Forgiveness</button></th>
+      <th data-k="swing_weight"><button>Swing wt</button></th>
+      <th data-k="twist_weight"><button>Twist wt</button></th>
+      <th data-k="weight_oz"><button>Weight</button></th>
+      <th data-k="core_mm"><button>Core</button></th>
+      <th data-k="shape"><button>Shape</button></th>
+      <th data-k="price"><button>Price</button></th>
+      <th>Extras</th>
+    </tr></thead>
+    <tbody></tbody>
+  </table></div>
+</section></div>''', 0, "paddles", desc="Sortable database of pickleball paddles with scores and measured specs."))
+
+# ---------- compare ----------
+write("compare.html", page("Compare paddles | PickleballRx", '''
+<div class="wrap"><section>
+  <h1 class="page-title">Compare paddles</h1>
+  <p class="section-lead">Pick up to four paddles. The best value in each row is highlighted. Copy the page link to share your comparison.</p>
+  <div class="compare-pickers" id="cmp-pickers"></div>
+  <div class="table-wrap"><table class="cmp" id="cmp"></table></div>
+</section></div>''', 0, "compare", desc="Compare pickleball paddles side by side."))
+
+# ---------- finder ----------
+def q(name, legend, opts):
+    o = "".join(f'<label><input type="radio" name="{name}" value="{v}"{" checked" if i == 0 else ""}><b>{l}</b><span>{d}</span></label>' for i, (v, l, d) in enumerate(opts))
+    return f'<fieldset><legend>{legend}</legend><div class="options">{o}</div></fieldset>'
+
+write("finder.html", page("Paddle finder | PickleballRx", f'''
+<div class="wrap"><section class="finder">
+  <h1 class="page-title">Get your paddle Rx</h1>
+  <p class="section-lead">Four questions, about 30 seconds. We'll match you against every paddle in the database.</p>
+  <form class="rx-card" id="finder">
+    <div class="rx-mark" aria-hidden="true">Rx</div>
+    {q("level", "1. How long have you been playing?", [("beginner", "Under a year", "Still learning"), ("intermediate", "1 to 3 years", "Around 3.0 to 4.0"), ("advanced", "3+ years", "4.0 and up")])}
+    {q("style", "2. What do you want more of?", [("power", "Power", "Drives and put-aways"), ("spin", "Spin", "Topspin and slice"), ("control", "Control", "Dinks and resets"), ("all-court", "Balance", "A bit of everything")])}
+    {q("weight", "3. How should it feel in your hand?", [("light", "Light and quick", "Fast hands, easy on the arm"), ("mid", "In between", "No strong preference"), ("heavy", "Heavy and stable", "Plows through on drives")])}
+    {q("budget", "4. What's your budget?", [("100", "Under $100", "Value picks"), ("200", "Under $200", "Most mid-range paddles"), ("9999", "No limit", "Show me the best")])}
+    <button class="btn" type="submit">Show my matches</button>
+  </form>
+  <div id="finder-out" aria-live="polite" style="margin-top:24px"></div>
+</section></div>''', 0, "finder", desc="Find the right pickleball paddle in 30 seconds."))
+
+# ---------- best ----------
+sections = []
+for key, label, desc in STYLES:
+    if key == "beginner":
+        pool = [p for p in PADDLES if p["level"] == "beginner"] or PADDLES
+        top = sorted(pool, key=lambda p: -(p["forgiveness"] + p["control"]))[:3]
+    elif key == "all-court":
+        top = sorted(PADDLES, key=lambda p: -overall(p))[:3]
+    else:
+        top = sorted(PADDLES, key=lambda p: -p[key])[:3]
+    rows = "\n".join(card(p, 0) for p in top)
+    sections.append(f'<section id="{key}"><h2>Best {label.lower()} paddles</h2><p class="section-lead">{desc}. Ranked from our scores.</p><div class="grid">{rows}</div></section>')
+write("best.html", page("Best pickleball paddles | PickleballRx", f'''
+<div class="wrap">
+<section style="padding-bottom:0">
+  <h1 class="page-title">Best pickleball paddles</h1>
+  <p class="section-lead">Top picks in each category, ranked automatically from the scores in our database. These are placeholder paddles until real reviews are in.</p>
+  <div class="chips">{"".join(f'<a href="#{k}">{l}</a>' for k, l, _ in STYLES)}</div>
+</section>
+{"".join(sections)}
+</div>''', 0, "best"))
+
+# ---------- reviews index ----------
+write("reviews/index.html", page("All reviews | PickleballRx", f'''
+<div class="wrap"><section>
+  <h1 class="page-title">All paddle reviews</h1>
+  <p class="section-lead">Prefer a table? Use the <a href="../paddles.html">paddle database</a>.</p>
+  <div class="grid">{"".join(card(p, 1) for p in PADDLES)}</div>
+</section></div>''', 1, "paddles"))
+
+# ---------- review pages ----------
+for p in PADDLES:
+    ov = overall(p)
+    bars = "".join(f'<div class="score"><span>{k}</span><div class="bar"><i style="width:{p[k.lower()]*10}%"></i></div><b>{p[k.lower()]}</b></div>' for k in ["Power", "Spin", "Control", "Forgiveness"])
+    vid = p.get("video") or next((v["id"] for v in VIDEOS if v.get("paddle") == p["slug"]), "")
+    deal = f'<div class="deal">Discount code<code>{e(p["discount"])}</code></div>' if p.get("discount") else ""
+    others = [o for o in PADDLES if o["slug"] != p["slug"]]
+    rivals = sorted(others, key=lambda o: abs(o["power"] - p["power"]) + abs(o["control"] - p["control"]) + abs(o["spin"] - p["spin"]))[:2]
+    cmp_link = "../compare.html?p=" + ",".join([p["slug"]] + [o["slug"] for o in rivals])
+    ph_note = '<div class="note"><strong>Placeholder.</strong> This paddle, its specs and scores are made up to show the review layout. They are not real test results.</div>' if p.get("placeholder") else ""
+    write(f"reviews/{p['slug']}.html", page(f"{p['name']} review | PickleballRx", f'''
+<div class="review-hero"><div class="wrap">
+  <div>
+    <div class="crumbs"><a href="../paddles.html">Paddles</a> / {e(p["brand"])}</div>
+    <h1>{e(p["name"])} review</h1>
+    <p class="muted" style="margin:0 0 14px">{e(p["quick"])}</p>
+    {badges(p)}
+    <div class="btn-row" style="margin-top:16px"><a class="btn" href="#video">Watch the review</a><a class="btn ghost" href="{cmp_link}">Compare with similar</a></div>
+  </div>
+  <div class="scorecard">
+    <div class="overall"><b>{ov}</b><span>/ 10 overall</span></div>
+    {bars}
+  </div>
+</div></div>
+<div class="wrap review-body">
+  <article>
+    {ph_note}
+    <h2 id="verdict">Verdict</h2>
+    <p>{e(p["verdict"])}</p>
+    <div class="proscons">
+      <div><h3>What we liked</h3><ul>{"".join(f"<li>{e(x)}</li>" for x in p["pros"])}</ul></div>
+      <div><h3>What could be better</h3><ul>{"".join(f"<li>{e(x)}</li>" for x in p["cons"])}</ul></div>
+    </div>
+    <h2 id="video">Video review</h2>
+    {embed(vid, p["name"] + " review") if vid else video_ph("YouTube review will go here")}
+    <h2 id="inside">Inside the paddle</h2>
+    <p class="muted">What the X-ray and microscope show about how this paddle is built.</p>
+    <div class="lab-grid">
+      {lab_fig(("../" + p["xray"]) if p.get("xray") else "", p["name"] + " X-ray", "<strong>X-ray</strong> &middot; core, edge and weighting", "X-ray")}
+      {lab_fig(("../" + p["micro"]) if p.get("micro") else "", p["name"] + " face under microscope", "<strong>Microscope</strong> &middot; face grit and texture", "Microscope scan")}
+    </div>
+    <h2 id="specs">Measured specs</h2>
+    <table class="specs">
+      <tr><th>Weight</th><td>{p["weight_oz"]} oz</td></tr>
+      <tr><th>Swing weight</th><td>{p["swing_weight"]}</td></tr>
+      <tr><th>Twist weight</th><td>{p["twist_weight"]}</td></tr>
+      <tr><th>Core thickness</th><td>{p["core_mm"]} mm</td></tr>
+      <tr><th>Face</th><td>{e(p["face"])}</td></tr>
+      <tr><th>Shape</th><td>{e(p["shape"])}</td></tr>
+      <tr><th>Length x width</th><td>{p["length_in"]} x {p["width_in"]} in</td></tr>
+      <tr><th>Grip length</th><td>{p["grip_in"]} in</td></tr>
+      <tr><th>Price</th><td>${p["price"]}</td></tr>
+    </table>
+    <h2 id="similar">Similar paddles</h2>
+    <div class="grid">{"".join(card(o, 1) for o in rivals)}</div>
+  </article>
+  <aside class="toc">
+    <strong>On this page</strong>
+    <ol><li><a href="#verdict">Verdict</a></li><li><a href="#video">Video review</a></li><li><a href="#inside">Inside the paddle</a></li><li><a href="#specs">Measured specs</a></li><li><a href="#similar">Similar paddles</a></li></ol>
+    {deal}
+    <p style="margin:14px 0 0"><a class="btn yellow" style="display:block;text-align:center" href="#" aria-disabled="true" onclick="return false">Check price (link coming soon)</a></p>
+  </aside>
+</div>''', 1, "paddles", desc=f"{p['name']} pickleball paddle review with scores and specs."))
+
+# ---------- videos ----------
+vcards = "\n".join(f'<article class="card">{embed(v["id"], v["title"])}<h3>{e(v["title"])}</h3></article>' for v in VIDEOS) \
+    or "\n".join(f'<article class="card">{video_ph()}<span class="tag ph" style="align-self:flex-start">Placeholder</span><h3>Video title</h3></article>' for _ in range(3))
+write("videos.html", page("Video reviews | PickleballRx", f'''
+<div class="wrap"><section>
+  <h1 class="page-title">Video reviews</h1>
+  <p class="section-lead">Every paddle, played in real games. New videos land on YouTube first.</p>
+  <div class="btn-row" style="margin-bottom:24px"><a class="btn" href="{YOUTUBE}" rel="noopener">Subscribe on YouTube</a><a class="btn ghost" href="{INSTAGRAM}" rel="noopener">Follow @picklebrx</a></div>
+  <div class="grid">{vcards}</div>
+</section></div>''', 0, "videos", desc="PickleballRx YouTube paddle reviews."))
+
+# ---------- lab cross-links ----------
+LINKS = {  # X-ray slug -> (grit collection name, spin table name)
+    "11six24-hurache-jelly-bean-2": (None, "Jelly Bean Hurache 2"),
+    "crush-covert": ("Crush Covert", None), "cpx-hyper-plus": ("CPX Hyper+", None), "e6-ignis": ("E6 Ignis", None),
+    "evolv-origin": ("Evolv", "Evolv Origin"), "friday-aura-pro-tour": ("Friday Aura Pro Tour (beta)", "Friday Aura Pro Tour (Beta)"),
+    "gearbox-pressure-x-8e": ("Gearbox Pressure X 8E", "Gearbox Pressure XE"), "gearbox-pressure-xm": (None, "Gearbox Pressure X M"),
+    "grit-e2-cf": (None, "Grit E2CF"), "holbrook-fuze": ("Holbrook Fuze VantaGrit", "Holbrook Fuze"),
+    "honolulu-j6cr": ("Honolulu J6CR", "Honolulu J6CR"), "luzz-inferno-2": ("Luzz Inferno2", None),
+    "pickle-poppers-pop-n-treasure": ("Pickle Poppers Pop n Treasure", None), "pickle-poppers-pop-n-rush": ("Pickle Poppers Pop N Rush", "Pop N Rush"),
+    "pact-teflon": ("PACT Teflon Evolve", None), "rpm-jade": ("RPM Jade", "RPM Jade"), "mark-unmarked-2026": ("MARK unMARKed 2026", "Mark Unmarked 2026"),
+    "zcebra-gazelle": ("Zcebra Gazelle", "Zcebra Gazelle"),
+    "luzz-cannon-xpp": ("Luzz Cannon XPP M1", "Luzz Cannon XPP"), "luzz-glider-2026": ("Luzz Glider 2026", None),
+    "mehau-e5": ("Mehau E5", None), "mehau-s5": ("Mehau S5", None), "sypik-triton-5": ("Sypik Triton 5", None),
+    "vanwin-alpha-control": ("VANWIN Alpha Control", None), "proton-project-coyote": ("Proton Project Coyote", None), "spartus-spitfire": ("Spartus Spitfire", "Spartus Spitfire"),
+    "speedup-tide": ("Speed Up Tide", "Speed Up Tide"), "vanwin-alpha-power": ("VANWIN Alpha Power", None), "mehau-e4": ("Mehau E4", None),
+}
+
+
+def slugify(t):
+    import re
+    return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
+
+
+SPEC_LINKS = {  # spec card id -> (X-ray slug, spin table name, grit collection name)
+    "rpm-jade": ("rpm-jade", "RPM Jade", "RPM Jade"),
+    "luzz-cannon": ("luzz-cannon-xpp", "Luzz Cannon XPP", "Luzz Cannon XPP M1"),
+    "sypik-triton": ("sypik-triton-5", None, "Sypik Triton 5"),
+    "cpx-hyper": ("cpx-hyper-plus", None, "CPX Hyper+"),
+    "luzz-glider": ("luzz-glider-2026", None, "Luzz Glider 2026"),
+    "proton-coyote": ("proton-project-coyote", None, "Proton Project Coyote"),
+    "gearbox-8m": ("gearbox-pressure-xm", "Gearbox Pressure X M", None),
+    "gearbox-8e": ("gearbox-pressure-x-8e", "Gearbox Pressure XE", "Gearbox Pressure X 8E"),
+    "pop-n-rush": ("pickle-poppers-pop-n-rush", "Pop N Rush", "Pickle Poppers Pop N Rush"),
+    "bnb-loco": (None, "Bread & Butter Loco 2 Elongated", "Bread & Butter LOCO 2"),
+    "arronax-boost-1": (None, "Arronax Boost", "Arronax Boost-1"),
+}
+
+
+def lab_links(x):
+    g, sp = LINKS.get(x["slug"], (None, None))
+    out = []
+    sc = next((c for c in SPECS if SPEC_LINKS.get(c["id"], (None,))[0] == x["slug"]), None)
+    if sc:
+        m = sc["measured"]
+        out.append(f'<tr><th>Measured (Spec Lab)</th><td><a href="../specs.html#{sc["id"]}">Swing weight {m["swingWeight"]}, twist weight {m["twistWeight"]:.2f}, {m["staticWeightOz"]:.2f} oz</a></td></tr>')
+    if g:
+        gi = next((i for i in LABS["grit"] if i["name"] == g), None)
+        if gi: out.append(f'<tr><th>Face surface (Grit Lab)</th><td><a href="../grit.html#{slugify(g)}">{e(gi["surface"])}</a></td></tr>')
+    if sp:
+        si = next((i for i in LABS["spin"] + LABS["spin_extra"] if i["paddle"] == sp), None)
+        if si: out.append(f'<tr><th>Spin (Spin Lab)</th><td><a href="../spin.html#{slugify(sp)}">{si["avg"]:,} RPM average, {si["top"]:,} highest</a> <span class="muted">({e(si["condition"])})</span></td></tr>')
+    return "".join(out)
+
+
+# ---------- X-Ray Rx (lab) ----------
+XRAY_DISCLAIMER = "Labels are our read of the X-ray, not a cutaway. Measurements are approximate."
+VIEWS = [("clean", "Clean"), ("labeled", "Labeled"), ("density", "Density estimate")]
+
+
+def xray_img(slug, view):
+    for ext in ("jpg", "jpeg", "png", "webp"):
+        rel = f"assets/xray/{slug}-{view}.{ext}"
+        if os.path.exists(os.path.join(OUT, rel)):
+            return rel
+    return ""
+
+
+def xray_card(x, depth):
+    r = "../" * depth
+    img = xray_img(x["slug"], "labeled") or xray_img(x["slug"], "clean")
+    thumb = f'<img src="{r}{img}" alt="{e(x["name"])} X-ray" loading="lazy" style="aspect-ratio:4/3;object-fit:cover;border-radius:10px">' if img else '<div class="lab-ph" style="border-radius:10px">X-ray image coming soon</div>'
+    tags = "".join(f'<span class="badge">{e(t)}</span>' for t in x["tags"])
+    if x["unreleased"]: tags += '<span class="tag">Unreleased</span>'
+    if x["reel"]: tags += '<span class="badge">Reel</span>'
+    summary = e(x["core"]) if x["core"] else '<span class="muted">Findings coming soon</span>'
+    return f'''<article class="card xcard" data-tags="{" ".join(x["tags"])}" data-name="{e(x["name"].lower())} {e(x["brand"].lower())}">
+  <a href="{r}xray/{x["slug"]}.html">{thumb}</a>
+  <div class="badges">{tags}</div>
+  <h3><a href="{r}xray/{x["slug"]}.html">{e(x["name"])}</a></h3>
+  <p style="font-size:.93rem">{summary}</p>
+  <a class="more" href="{r}xray/{x["slug"]}.html">See inside &rarr;</a>
+</article>'''
+
+
+reels = [x for x in XRAY if x["reel"]]
+reel_items = "".join(f'<li><a href="xray/{x["slug"]}.html"><strong>{e(x["reel"].split(":")[0])}</strong></a>{(": " + e(x["reel"].split(":",1)[1].strip())) if ":" in x["reel"] else ""}</li>' for x in sorted(reels, key=lambda x: x["reel"]))
+write("lab.html", page("X-Ray Rx: pickleball paddle X-rays | PickleballRx", f'''
+<section class="hero" style="padding:44px 0"><div class="wrap" style="grid-template-columns:1fr">
+  <div>
+    <span class="tag">X-Ray Rx</span>
+    <h1>What's <em>inside</em> {len(XRAY)} pickleball paddles.</h1>
+    <p>We X-ray each paddle and label what's inside: core, perimeter ring, inserts and handle, alongside the published specs and where they came from.</p>
+    <p style="font-size:.95rem;margin:0">{XRAY_DISCLAIMER} <a href="disclaimers.html#xray">Disclaimers</a>.</p>
+  </div>
+</div></section>
+<div class="wrap">
+<section>
+  <div class="tools">
+    <div class="tool"><div class="ico">8</div><h3>Honeycomb cells are about 7 to 8.5 mm</h3><p>Nearly every honeycomb core we've measured falls in that range. The Vanwin Alpha Control, at about 10 mm, is the only large-cell paddle so far.</p></div>
+    <div class="tool"><div class="ico">F</div><h3>Foam has taken over</h3><p>{sum(1 for x in XRAY if "foam" in x["tags"])} of {len(XRAY)} paddles have no honeycomb in the face: full foam cores (EPP, MPP, EVA or dual-density), usually inside a denser perimeter ring.</p></div>
+    <div class="tool"><div class="ico">R</div><h3>Rings range from about 7 to 28 mm</h3><p>Perimeter rings vary a lot, from about 7 to 8 mm (Jelly Bean 2, Kamito Dominus) to 26 to 28 mm (Facolos Elite X 2.0, Luzz Inferno 2).</p></div>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="section-head"><div><h2>All X-rayed paddles</h2><p class="section-lead">Filter by core type, or search for a paddle.</p></div></div>
+  <div class="filters">
+    <label>Search<input type="search" id="x-q" placeholder="Paddle or brand"></label>
+  </div>
+  <div class="chips" id="x-chips">
+    <button aria-pressed="true" data-t="">All</button><button aria-pressed="false" data-t="honeycomb">Honeycomb</button><button aria-pressed="false" data-t="foam">Full foam</button><button aria-pressed="false" data-t="epp">EPP</button><button aria-pressed="false" data-t="mpp">MPP</button><button aria-pressed="false" data-t="floating">Floating core</button><button aria-pressed="false" data-t="voids">Voids</button>
+  </div>
+  <p class="count" id="x-count"></p>
+  <div class="grid" id="x-grid">{"".join(xray_card(x, 0) for x in XRAY)}</div>
+</section>
+<section>
+  <div class="social-band"><div><h2>The X-Ray Rx reel series</h2><p>Short vertical episodes on Instagram, one paddle at a time.</p>
+  <ul style="color:#c9d3ea;margin:12px 0 0;padding-left:18px">{reel_items.replace('<a ', '<a style="color:#fcb92d" ')}</ul></div>
+  <div class="btn-row"><a class="btn yellow" href="{INSTAGRAM}" rel="noopener">Watch on Instagram</a></div></div>
+</section>
+
+</div>''', 0, "lab", desc=f"X-rays of {len(XRAY)} pickleball paddles, labeled: core, ring, inserts and handle."))
+
+for x in XRAY:
+    lab_img = xray_img(x["slug"], "labeled")
+    main_fig = (f'<figure class="lab-item" style="margin-top:12px"><a href="../{lab_img}"><img src="../{lab_img}" alt="{e(x["name"])} labeled X-ray with spec panel" style="aspect-ratio:auto;object-fit:contain;background:#fff"></a><figcaption><strong>Labeled X-ray</strong> &middot; tap to open full size</figcaption></figure>'
+                if lab_img else '<div class="lab-ph" style="border-radius:14px;margin-top:12px">Labeled X-ray coming soon</div>')
+    extra = "".join(lab_fig(("../" + xray_img(x["slug"], v)) if xray_img(x["slug"], v) else "", f'{x["name"]} X-ray, {l.lower()}', f"<strong>{l}</strong>", l + " X-ray") for v, l in VIEWS if v != "labeled")
+    head_rows = [("Core", x["core"]), ("Cells", x["cell_size"]), ("Perimeter", x["ring"]), ("Thickness", x["thickness"])]
+    spec_rows = "".join(f'<tr><th>{e(k)}</th><td>{e(v) if v else "<span class=muted>Not listed</span>"}</td></tr>' for k, v in x["specs"])
+    review = next((p for p in PADDLES if p["name"].lower() == x["name"].lower()), None)
+    same_brand = [o for o in XRAY if o["brand"] == x["brand"] and o["slug"] != x["slug"]]
+    unrel = '<div class="note"><strong>Unreleased paddle.</strong> No maker specs are published yet, so some values are inferred from the X-ray.</div>' if x["unreleased"] else ""
+    ll = lab_links(x)
+    write(f"xray/{x['slug']}.html", page(f"{x['name']} X-ray: what's inside | PickleballRx", f'''
+<div class="review-hero"><div class="wrap">
+  <div>
+    {f'<img class="product-shot" src="../{product_photo(x["slug"])}" alt="{e(x["name"])}" width="120" height="180">' if product_photo(x["slug"]) else ""}
+    <div class="crumbs"><a href="../lab.html">X-Ray Rx</a> / {e(x["brand"])}</div>
+    <h1>{e(x["name"])} X-ray</h1>
+    <p class="muted" style="margin:0 0 14px">{e(x["core"])}. {e(x["ring"])}.</p>
+    <div class="badges">{"".join(f'<span class="badge">{e(t)}</span>' for t in x["tags"])}{'<span class="tag">Unreleased</span>' if x["unreleased"] else ""}</div>
+    <div class="btn-row" style="margin-top:16px"><a class="btn" href="#xray">See the X-ray</a>{f'<a class="btn ghost" href="../reviews/{review["slug"]}.html">Read the full review</a>' if review else ""}</div>
+  </div>
+  <div class="scorecard">
+    <div style="font-weight:800;color:#fcb92d;margin-bottom:6px">What's inside</div>
+    <table style="width:100%;border-collapse:collapse;font-size:.93rem">{"".join(f'<tr><td style="padding:6px 0;color:#c9d3ea;width:34%;vertical-align:top">{k}</td><td style="padding:6px 0">{e(v) if v else "&ndash;"}</td></tr>' for k, v in head_rows)}</table>
+  </div>
+</div></div>
+<div class="wrap" style="padding-top:30px;padding-bottom:20px">
+  {unrel}
+  {code_box(x["brand"], 1)}
+  <h2 id="xray">The X-ray</h2>
+  <p class="muted" style="margin:0">{XRAY_DISCLAIMER} <a href="../disclaimers.html#xray">Disclaimers</a>.</p>
+  {main_fig}
+  <h3 style="margin-top:26px">More views</h3>
+  <div class="lab-grid">{extra}</div>
+  <h2 style="margin-top:34px">Specs</h2>
+  <table class="specs">{spec_rows}</table>
+  <p class="muted" style="font-size:.85rem;margin-top:8px">{e(x["sources"])}. Ring widths are measured from the X-ray, so they are estimates (&asymp;).</p>
+  {('<h2 style="margin-top:34px">From our other labs</h2><table class="specs">' + ll + '</table>') if ll else ""}
+  {f'<h2 style="margin-top:34px">Watch the reel</h2><p>{e(x["reel"].rstrip("."))}{"" if x["reel"].endswith("?") else "."} <a href="{INSTAGRAM}" rel="noopener">See it on Instagram @picklebrx</a>.</p>' if x["reel"] else ""}
+  {f'<h2 style="margin-top:34px">More from {e(x["brand"])}</h2><div class="grid">' + "".join(xray_card(o, 1) for o in same_brand) + '</div>' if same_brand else ""}
+  <p style="margin-top:30px"><a href="../lab.html">&larr; All X-rayed paddles</a></p>
+</div>''', 1, "lab", desc=f"Labeled X-ray of the {x['name']} pickleball paddle: core, ring, cells and specs."))
+
+
+# ---------- Grit Lab ----------
+GRIT_DISCLAIMER = "Microscope images were taken on an Elikliv 4K digital microscope. Wear percentages are conservative visual estimates comparing each paddle's hitting zone with its own low-contact throat under matched zoom and lighting. They are not profilometer measurements, and results vary with play style, ball and court surface. Surface names are as published by each brand."
+
+
+def grit_img(name):
+    for ext in ("jpg", "jpeg", "png", "webp"):
+        rel = f"assets/grit/{slugify(name)}.{ext}"
+        if os.path.exists(os.path.join(OUT, rel)):
+            return rel
+    return ""
+
+
+grit_cards = "".join(
+    f'<figure class="lab-item" id="{slugify(g["name"])}">' +
+    (f'<a href="{grit_img(g["name"])}"><img src="{grit_img(g["name"])}" alt="{e(g["name"])} face under the microscope, M lens" loading="lazy"></a>' if grit_img(g["name"]) else '<div class="lab-ph">Microscope image coming soon</div>') +
+    f'<figcaption><span class="muted" style="font-size:.78rem">#{i + 1}</span> <strong style="color:var(--ink)">{e(g["name"])}</strong><br>{e(g["surface"])}</figcaption></figure>'
+    for i, g in enumerate(LABS["grit"]))
+wear_rows = "".join(f'<tr><td><strong>{e(w["paddle"])}</strong></td><td>{e(w["use"])}</td><td><strong>{e(w["result"])}</strong>{("<br><span class=muted>" + e(w["notes"]) + "</span>") if w["notes"] else ""}</td></tr>' for w in LABS["wear"])
+cmp_cards = "".join(f'<div class="tool"><h3>{e(c["title"])}</h3><p>{e(c["text"])}</p></div>' for c in LABS["compare"])
+note_cards = "".join(f'<div class="tool"><h3>{e(n["paddle"])}</h3><p>{e(n["text"])}</p></div>' for n in LABS["grit_notes"])
+
+
+def card_fig(name, caption, alt):
+    src = f"assets/grit/cards/{name}"
+    if not os.path.exists(os.path.join(OUT, src)):
+        return ""
+    return f'<figure class="lab-item"><a href="{src}"><img src="{src}" alt="{e(alt)}" loading="lazy" style="aspect-ratio:auto;object-fit:contain;background:#fff"></a><figcaption>{caption}</figcaption></figure>'
+
+
+def gallery(items, min_w=300):
+    figs = "".join(card_fig(*i) for i in items)
+    return f'<div class="lab-grid" style="grid-template-columns:repeat(auto-fill,minmax({min_w}px,1fr));margin-top:18px;align-items:start">{figs}</div>' if figs else ""
+
+
+NOT_USAP = '<span class="tag" style="background:#fde2e2;color:#8a1c1c">Not USAP approved</span>'
+collection_fig = card_fig("all-36-grit.jpg", "<strong>All 36 paddles</strong> &middot; same 4K microscope, M lens &middot; tap to open full size", "Grid of 36 paddle faces under the microscope")
+new_gallery = gallery([
+    ("card-arronax-boost-1.jpg", "<strong>Arronax Boost-1</strong> &middot; GritBite surface, M lens", "Arronax Boost-1 GritBite surface under the microscope"),
+    ("card-volair-cmd.jpg", "<strong>Volair CMD</strong> &middot; HexGrit (licensed from 11SIX24)", "Volair CMD HexGrit surface under the microscope"),
+    ("card-loco2-l.jpg", "<strong>Bread &amp; Butter LOCO 2</strong> &middot; Space Dust Grit, L lens", "Bread and Butter LOCO 2 at the L lens"),
+    ("card-loco2-m.jpg", "<strong>Bread &amp; Butter LOCO 2</strong> &middot; Space Dust Grit, M lens", "Bread and Butter LOCO 2 at the M lens"),
+], 260)
+ig_gallery = gallery([
+    ("ig-arronax-l-1.jpg", "Arronax Boost-1 &middot; L lens", "Arronax Boost-1 face, L lens"),
+    ("ig-arronax-l-2.jpg", "Arronax Boost-1 &middot; L lens", "Arronax Boost-1 face, L lens"),
+    ("ig-arronax-l-close-1.jpg", "Arronax Boost-1 &middot; L lens, close", "Arronax Boost-1 face, L lens close-up"),
+    ("ig-arronax-l-close-2.jpg", "Arronax Boost-1 &middot; L lens, close", "Arronax Boost-1 face, L lens close-up"),
+    ("ig-arronax-m-1.jpg", "Arronax Boost-1 &middot; M lens", "Arronax Boost-1 face, M lens"),
+], 180)
+wear_gallery = gallery([
+    ("wear-rpm-jade-throat-center.jpg", "<strong>RPM Jade (SICmatrix)</strong> &middot; throat vs center", "RPM Jade throat versus center wear"),
+    ("wear-rpm-jade-scan.jpg", "<strong>RPM Jade (SICmatrix)</strong> &middot; L lens scan summary", "RPM Jade L lens scan summary"),
+])
+cmp_gallery = gallery([
+    ("cmp-loco2-vs-hexgrit.jpg", "<strong>LOCO 2 (Space Dust) vs 11SIX24 HexGrit</strong> &middot; L and M lenses", "LOCO 2 versus HexGrit comparison"),
+    ("cmp-volair-vs-hexgrit.jpg", "<strong>Volair CMD vs 11SIX24 HexGrit</strong> &middot; L and M lenses", "Volair CMD versus HexGrit comparison"),
+    ("cmp-grit-e1-cw-vs-tw.jpg", f"<strong>Grit E1 CW vs E1 TW</strong> {NOT_USAP}", "Grit E1 CW versus E1 TW comparison"),
+    ("card-grit-e1-cw.jpg", f"<strong>Grit E1 CW</strong> &middot; L and M lenses {NOT_USAP}", "Grit E1 CW under the microscope"),
+    ("card-grit-e1-tw.jpg", f"<strong>Grit E1 TW</strong> &middot; L and M lenses {NOT_USAP}", "Grit E1 TW under the microscope"),
+])
+write("grit.html", page("Grit Lab: pickleball paddle grit under the microscope | PickleballRx", f"""
+<section class="hero" style="padding:44px 0"><div class="wrap" style="grid-template-columns:1fr"><div>
+  <span class="tag">Grit Lab</span>
+  <h1>{len(LABS["grit"])} paddle faces under a <em>4K microscope</em>.</h1>
+  <p>We photograph every paddle's surface up close, match it to the brand's own name for its grit, and track how it wears after real play.</p>
+</div></div></section>
+<div class="wrap">
+<section>
+  <h2>How we test</h2>
+  <div class="tools">
+    <div class="tool"><div class="ico">W</div><h3>Three lenses</h3><p>Elikliv 4K digital microscope. W: whole area. L: about 10 to 20 weave squares across. M: about 5 to 7 squares across, the standard lens for the collection.</p></div>
+    <div class="tool"><div class="ico">ID</div><h3>Surface ID</h3><p>Every surface is photographed, then matched to the brand's own published name for its grit, so labels reflect what the brand calls it.</p></div>
+    <div class="tool"><div class="ico">%</div><h3>Wear against the throat</h3><p>The throat barely touches the ball, so it shows what the grit looked like new. We compare hitting zones to it at the same zoom and light, and judge only sharp frames from a full-face video scan.</p></div>
+  </div>
+  <p class="section-lead" style="margin-top:20px"><strong>What we've noticed so far:</strong> larger, coarser grit tends to feel sticky, while finer grit tends to feel softer and plusher. Big raised crystals take every hit directly, so they dull and chip fastest. Fine grit set inside the coating wears by slow polishing instead.</p>
+</section>
+<section style="padding-top:0">
+  <div class="section-head"><div><h2>The grit collection</h2><p class="section-lead">{len(LABS["grit"])} paddles under the M lens. Surface names are as published by each brand.</p></div></div>
+  {('<div style="max-width:620px;margin:0 auto 26px">' + collection_fig + '</div>') if collection_fig else ""}
+  <h3>Each paddle up close</h3>
+  <div class="lab-grid">{grit_cards}</div>
+</section>
+<section>
+  <h2>Newest additions</h2>
+  <div class="tools">{note_cards}</div>
+  {new_gallery}
+  {('<h3 style="margin-top:26px">Arronax Boost-1, more angles</h3>' + ig_gallery) if ig_gallery else ""}
+</section>
+<section>
+  <h2>Wear studies</h2>
+  <p class="section-lead">Conservative visual estimates, about &plusmn;10 points. Each paddle is compared with its own throat under matched light.</p>
+  <div class="table-wrap"><table class="cmp" style="min-width:680px"><thead><tr><th>Paddle</th><th>Use</th><th>Result</th></tr></thead><tbody>{wear_rows}</tbody></table></div>
+  {wear_gallery}
+</section>
+<section>
+  <h2>Head-to-head surface comparisons</h2>
+  <div class="tools">{cmp_cards}</div>
+  {cmp_gallery}
+  <p class="muted" style="font-size:.9rem;margin-top:12px">Grit E1 CW and E1 TW are recreational-play paddles that are not USA Pickleball approved.</p>
+</section>
+<section style="padding-top:0"><div class="note">{GRIT_DISCLAIMER} <a href="disclaimers.html#grit">Disclaimers</a>.</div></section>
+</div>""", 0, "grit", desc=f"{len(LABS['grit'])} pickleball paddle faces under a 4K microscope, plus grit wear studies."))
+
+# ---------- Spin Lab ----------
+spin_all = LABS["spin"]
+smax = max(r["top"] for r in spin_all)
+def spin_row(i, r):
+    flags = ""
+    if r.get("usap") is False: flags += ' <span class="tag" style="background:#fde2e2;color:#8a1c1c">Not USAP approved</span>'
+    if r.get("as_shot"): flags += ' <span class="muted" title="Shown as shot at about 37 to 38 mph, not speed-adjusted">&dagger;</span>'
+    return (f'<tr id="{slugify(r["paddle"])}"><td class="num muted">{i}</td><td><strong>{e(r["paddle"])}</strong>{flags}<br><span class="muted" style="font-size:.82rem">{e(r["condition"])}</span></td>'
+            f'<td style="min-width:220px"><div style="display:flex;align-items:center;gap:8px"><span style="flex:1;height:12px;background:var(--line);border-radius:6px;overflow:hidden;display:block"><i style="display:block;height:100%;width:{r["avg"] / smax * 100:.1f}%;background:{"#c9ccd6" if r.get("usap") is False else "var(--yellow)"}"></i></span><b class="num">{r["avg"]:,}</b></div></td>'
+            f'<td class="num">{r["top"]:,}</td></tr>')
+spin_rows = "".join(spin_row(i + 1, r) for i, r in enumerate(spin_all))
+extra_rows = "".join(f'<tr id="{slugify(r["paddle"])}"><td><strong>{e(r["paddle"])}</strong></td><td>{e(r["condition"])}</td><td class="num">{r["avg"]:,}</td><td class="num">{r["top"]:,}</td><td class="muted">{e(r["note"])}</td></tr>' for r in LABS["spin_extra"])
+dur_summary = "".join(f'<tr><td><strong>{e(d["paddle"])}</strong></td><td>{e(d["time"])}</td><td>{e(d["result"])}</td><td><strong style="color:{"var(--good)" if d["good"] else "#b45309"}">{e(d["verdict"])}</strong></td></tr>' for d in LABS["durability"])
+DUR_PHOTO = {"Evolv Origin (CarbonSkyn)": "evolv-origin", "Luzz Cannon XPP": "luzz-cannon-xpp"}
+def dur_block(d):
+    t = ""
+    if d["table"]:
+        t = '<div class="table-wrap" style="margin:10px 0"><table class="cmp" style="min-width:520px"><thead><tr>' + "".join(f"<th>{e(c)}</th>" for c in d["table"][0]) + "</tr></thead><tbody>" + \
+            "".join("<tr>" + "".join(f"<td>{e(c)}</td>" for c in row) + "</tr>" for row in d["table"][1:]) + "</tbody></table></div>"
+    ph = product_photo(DUR_PHOTO.get(d["paddle"], ""))
+    img = f'<img class="product-shot" src="{ph}" alt="{e(d["paddle"])}" width="96" height="144" style="float:right;margin:0 0 10px 16px">' if ph else ""
+    return f'<div class="card" id="dur-{slugify(d["paddle"])}" style="display:block">{img}<h3>{e(d["paddle"])} <span style="color:{"var(--good)" if d["good"] else "#b45309"};font-size:.9rem">&middot; {e(d["verdict"])}</span></h3>{t}<ul style="margin:0;padding-left:20px">' + "".join(f"<li>{e(n)}</li>" for n in d["notes"]) + "</ul></div>"
+dur_blocks = "".join(dur_block(d) for d in LABS["durability"])
+detail_rows = "".join(f'<tr><td><strong>{e(r["paddle"])}</strong></td><td>{e(r["condition"])}</td><td>{e(r["avg"])}</td><td>{e(r["top"])}</td><td>{e(r["rebound"])}</td><td>{e(r["date"])}</td></tr>' + (f'<tr><td colspan="6" class="muted" style="font-size:.88rem">{e(r["note"])}</td></tr>' if r["note"] else "") for r in LABS["spin_detail"])
+write("spin.html", page("Spin Lab: pickleball paddle spin test results | PickleballRx", f"""
+<section class="hero" style="padding:44px 0"><div class="wrap" style="grid-template-columns:1fr"><div>
+  <span class="tag">Spin Lab</span>
+  <h1>Same rig, same ball machine, <em>960 frames per second</em>.</h1>
+  <p>We test a paddle, play it, then test it again. {len(spin_all) + len(LABS["spin_extra"])} paddles measured so far, and {len(LABS["durability"])} re-tested after weeks or months of play.</p>
+</div></div></section>
+<div class="wrap">
+<section>
+  <div class="section-head"><div><h2>Spin results, all paddles</h2><p class="section-lead">Spin average is the average of each paddle's best hits, scaled to a 37.5 mph incoming ball. Updated {LABS["updated"]}.</p></div></div>
+  <div class="table-wrap"><table class="db" style="min-width:600px"><thead><tr><th>#</th><th>Paddle</th><th>Spin, average (RPM)</th><th>Highest hit</th></tr></thead><tbody>{spin_rows}</tbody></table></div>
+  <ul class="muted" style="font-size:.9rem;margin-top:12px">
+    <li>Grit E1 TW and E1 CW are recreational-play paddles that are <strong>not USA Pickleball approved</strong>. They're shown for reference only, and are the highest spin recorded on this rig.</li>
+    <li>&dagger; Shown as shot at about 37 to 38 mph, not speed-adjusted.</li>
+    <li>USAP-approved paddles on this rig land between roughly 1,750 and 2,200 RPM.</li>
+    <li>A few other paddles are still in testing. Results will be published once we understand what is going on.</li>
+  </ul>
+  <h3 style="margin-top:24px">Also tested</h3>
+  <div class="table-wrap"><table class="cmp" style="min-width:640px"><thead><tr><th>Paddle</th><th>Condition</th><th>Spin, average</th><th>Highest hit</th><th>Note</th></tr></thead><tbody>{extra_rows}</tbody></table></div>
+</section>
+<section>
+  <h2>Does the spin last?</h2>
+  <p class="section-lead">The same paddles, re-tested after real play.</p>
+  <div class="table-wrap"><table class="cmp" style="min-width:680px"><thead><tr><th>Paddle</th><th>Time in play</th><th>Result</th><th>Verdict</th></tr></thead><tbody>{dur_summary}</tbody></table></div>
+  <div class="grid" style="grid-template-columns:minmax(0,1fr);margin-top:20px">{dur_blocks}</div>
+</section>
+<section>
+  <h2>Single-paddle results in detail</h2>
+  <div class="table-wrap"><table class="cmp" style="min-width:680px"><thead><tr><th>Paddle</th><th>Condition</th><th>Spin, average</th><th>Highest hit</th><th>Rebound speed</th><th>Test date</th></tr></thead><tbody>{detail_rows}</tbody></table></div>
+</section>
+<section id="method">
+  <h2>How the test works</h2>
+  <table class="specs">
+    <tr><th>Paddle</th><td>Clamped in a vise, tilted back about 30 to 35&deg; from vertical</td></tr>
+    <tr><th>Ball feed</th><td>Rallie ball machine, about 34 to 39 mph at the paddle</td></tr>
+    <tr><th>Camera</th><td>GoPro, 1080p at 960 frames per second</td></tr>
+    <tr><th>Ball</th><td>Marked with thick black lines so its rotation can be read</td></tr>
+    <tr><th>Spin</th><td>Worked out from how far the markings turn between frames</td></tr>
+    <tr><th>Speed adjustment</th><td>Every result is scaled to a 37.5 mph incoming ball (spin &times; 37.5 &divide; actual incoming speed)</td></tr>
+    <tr><th>Target impact angle</th><td>Ball meets the face at about 34&deg;</td></tr>
+    <tr><th>Hits counted</th><td>Face and throat hits; balls that hit the vise or miss are excluded</td></tr>
+  </table>
+  <h3 style="margin-top:24px">The three numbers we report</h3>
+  <ul><li><strong>Spin (average):</strong> the average of the paddle's best hits (best 3 or best 5; the two differ by about 20 RPM).</li><li><strong>Top spin (highest hit):</strong> the single highest hit.</li><li><strong>Rebound speed:</strong> average ball speed coming off the paddle, a simple indicator of power.</li></ul>
+  <h3 style="margin-top:24px">Limits</h3>
+  <ul>
+    <li>This is a static rig with no swing, so on-court spin will be higher and varies by player. It's a tool for comparing paddles with each other and with themselves over time.</li>
+    <li>It is not an official USA Pickleball test. <a href="disclaimers.html#spin">Disclaimers</a>.</li>
+    <li>One sample of each paddle was tested. Paddles were tested on different days and have different use histories.</li>
+    <li>Where the ball lands on the face changes the result: the lower-middle of the face spins the most, the tip the least.</li>
+    <li>Results are adjusted for ball speed but not for small differences in impact angle between sessions. The rig was re-set during October 2026, and numbers from different setups aren't directly comparable.</li>
+  </ul>
+</section>
+<section style="padding-top:0"><div class="note"><strong>Disclosures.</strong> Evolv requested the CarbonSkyn durability testing and provided the three Origin paddles. The Grit E2CF paddles were provided by the owner of Grit. Pickleball RX has discount codes with some brands (including Arronax, Evolv, Holbrook, Luzz, MARK, Pakle, RPM and Grit) and earns commission on code or link purchases. Brands have no input into the results. Static-rig numbers from one setup; not an official USA Pickleball test.</div></section>
+</div>""", 0, "spin", desc="Pickleball paddle spin test results at 960 fps, plus spin durability re-tests."))
+
+# ---------- Spec Lab ----------
+def spec_row(c):
+    m, d = c["measured"], c["dimensions"]
+    xs, sp, gr = SPEC_LINKS.get(c["id"], (None, None, None))
+    links = []
+    if xs: links.append(f'<a class="badge" href="xray/{xs}.html">X-ray</a>')
+    if sp: links.append(f'<a class="badge" href="spin.html#{slugify(sp)}">Spin</a>')
+    if gr: links.append(f'<a class="badge" href="grit.html#{slugify(gr)}">Grit</a>')
+    mine = d.get("measuredByPickleballRx", [])
+    star = lambda k: ' <span class="muted" title="Measured by Pickleball RX">*</span>' if k in mine else ""
+    return (f'<tr><td><a href="#{c["id"]}">{e(c["brand"])} {e(c["model"])}</a></td><td class="num" data-v="{m["swingWeight"]}"><b>{m["swingWeight"]}</b></td>'
+            f'<td class="num" data-v="{m["twistWeight"]}"><b>{m["twistWeight"]:.2f}</b></td><td class="num" data-v="{m["staticWeightOz"]}">{m["staticWeightOz"]:.2f} oz</td>'
+            f'<td class="num" data-v="{d["lengthIn"]}">{d["lengthIn"]}&Prime;{star("len")}</td><td class="num" data-v="{d["widthIn"]}">{d["widthIn"]}&Prime;{star("wid")}</td>'
+            f'<td class="num" data-v="{d["thicknessMm"]}">{d["thicknessMm"]} mm{star("mm")}</td><td class="num" data-v="{d["handleIn"]}">{d["handleIn"]}&Prime;</td>'
+            f'<td data-v="{e(c["shape"])}">{e(c["shape"])}</td><td>{" ".join(links) or "<span class=muted>&ndash;</span>"}</td></tr>')
+
+
+def spec_card(c):
+    img = "assets/specs/" + os.path.basename(c["cardImage"])
+    notes = "".join(f"<li>{e(n)}</li>" for n in c["notes"])
+    return (f'<figure class="lab-item" id="{c["id"]}" style="scroll-margin-top:90px"><a href="{img}"><img src="{img}" alt="{e(c["brand"])} {e(c["model"])} spec card: swing weight {c["measured"]["swingWeight"]}, twist weight {c["measured"]["twistWeight"]}, {c["measured"]["staticWeightOz"]} oz" loading="lazy" style="aspect-ratio:auto;object-fit:contain;background:#fff"></a>'
+            f'<figcaption><strong style="color:var(--ink)">{e(c["brand"])} {e(c["model"])}</strong> &middot; published specs: <a href="{e(c["source"]["url"])}" rel="noopener">{e(c["source"]["name"])}</a>'
+            + (f'<ul style="margin:6px 0 0;padding-left:18px">{notes}</ul>' if notes else "") + '</figcaption></figure>')
+
+
+spec_rows = "".join(spec_row(c) for c in sorted(SPECS, key=lambda c: -c["measured"]["swingWeight"]))
+spec_cards = "".join(spec_card(c) for c in sorted(SPECS, key=lambda c: c["card"]))
+sw = [c["measured"]["swingWeight"] for c in SPECS]; tw = [c["measured"]["twistWeight"] for c in SPECS]
+h2h = "assets/specs/proton-coyote-vs-sypik-triton-5.webp"
+write("specs.html", page("Spec Lab: measured swing weight and twist weight | PickleballRx", f"""
+<section class="hero" style="padding:44px 0"><div class="wrap" style="grid-template-columns:1fr"><div>
+  <span class="tag">Spec Lab</span>
+  <h1>Swing weight and twist weight, <em>measured by us</em>.</h1>
+  <p>Published specs tell you length and width. How heavy a paddle swings, and how stable it is on off-center hits, we measure ourselves. {len(SPECS)} paddles so far.</p>
+</div></div></section>
+<div class="wrap">
+<section>
+  <div class="tools">
+    <div class="tool"><div class="ico">SW</div><h3>Swing weight</h3><p>How heavy the paddle feels when you swing it. Higher means more plow-through and power, but slower hands. Ours range from {min(sw)} to {max(sw)}.</p></div>
+    <div class="tool"><div class="ico">TW</div><h3>Twist weight</h3><p>How much the paddle resists twisting on off-center hits. Higher means a bigger, more stable sweet spot. Ours range from {min(tw):.2f} to {max(tw):.2f}.</p></div>
+    <div class="tool"><div class="ico">oz</div><h3>Static weight</h3><p>What the paddle weighs on a scale. Two paddles with the same static weight can swing very differently.</p></div>
+  </div>
+</section>
+<section style="padding-top:0">
+  <div class="section-head"><div><h2>All measured paddles</h2><p class="section-lead">Swing, twist and static weight measured by Pickleball RX. Click a column to sort. Other specs are published by the brand or a retailer and may differ from your paddle; * marks ones we measured ourselves. <a href="disclaimers.html#specs">Disclaimers</a>.</p></div></div>
+  <div class="table-wrap"><table class="db sortable" id="spec-table" style="min-width:860px">
+    <thead><tr><th><button>Paddle</button></th><th aria-sort="descending"><button>Swing wt</button></th><th><button>Twist wt</button></th><th><button>Static wt</button></th><th><button>Length</button></th><th><button>Width</button></th><th><button>Core</button></th><th><button>Handle</button></th><th><button>Shape</button></th><th>Labs</th></tr></thead>
+    <tbody>{spec_rows}</tbody></table></div>
+</section>
+{f'<section style="padding-top:0"><h2>Head to head</h2><p class="section-lead">Proton Project Coyote vs Sypik Triton 5 Ultimate Pro.</p><div style="max-width:640px"><figure class="lab-item"><a href="{h2h}"><img src="{h2h}" alt="Proton Project Coyote vs Sypik Triton 5 spec comparison" loading="lazy" style="aspect-ratio:auto;object-fit:contain;background:#fff"></a><figcaption>Coyote: lighter with a crisper 15mm core, for quicker hands. Triton 5: heavier with a 16mm core, for more plow and stability.</figcaption></figure></div></section>' if os.path.exists(os.path.join(OUT, h2h)) else ""}
+<section style="padding-top:0">
+  <h2>Spec cards</h2>
+  <p class="section-lead">One card per paddle. Tap a card to open it full size.</p>
+  <div class="lab-grid" style="grid-template-columns:repeat(auto-fill,minmax(340px,1fr));align-items:start">{spec_cards}</div>
+</section>
+</div>""", 0, "specs", desc="Measured swing weight, twist weight and static weight for pickleball paddles."))
+
+# ---------- codes ----------
+ccards = "\n".join(
+    f'<div class="code-card"><h3>{e(c["brand"])}</h3><p class="muted" style="margin:0">{e(c["offer"])} with our code</p><code>{e(c["code"])}</code>'
+    f'<a href="{e(c["url"])}" rel="sponsored noopener">Shop {e(c["brand"])} &rarr;</a></div>' for c in CODES)
+# Black Friday deals: only deals seen on the brand's own site. Re-check before each upload.
+DEALS_CHECKED = "Nov 17, 2026"
+DEALS = [
+    dict(brand="Luzz", deal="Black Friday: 20% off select paddles and gear", code="", ends="Not stated", url="https://luzzpickleball.com/",
+         tested=[("Cannon XPP", "xray/luzz-cannon-xpp.html"), ("Glider 2026", "xray/luzz-glider-2026.html"), ("Inferno 2", "xray/luzz-inferno-2.html")]),
+    dict(brand="Friday", deal="Black Friday early access: 30% off Aura Pro, 2 Friday Originals for $89, 30% off bags and gear", code="", ends="Not stated", url="https://fridaypickle.com/products/aura-pro-paddle",
+         tested=[("Aura Pro Tour", "xray/friday-aura-pro-tour.html")]),
+    dict(brand="Holbrook", deal="Early Black Friday: $100 off Arma and Aero paddles", code="BFCM", ends="Not stated", url="https://holbrookpickleball.com/collections/arma-aero",
+         tested=[]),
+    dict(brand="11SIX24", deal="11/6 Sale: $50 off Power 2 paddles", code="", ends="Dec 4, 2026", url="https://11six24.com/pages/power-2",
+         tested=[]),
+    dict(brand="Grit", label="Sale price", deal="E2-CF $135 (was $175). E1-TW $110 (was $185); the E1 is not USA Pickleball approved.", code="", ends="Not stated", url="https://grit-shop.com/",
+         tested=[("E2-CF X-ray", "xray/grit-e2-cf.html"), ("E2-CF spin", "spin.html#grit-e2cf")]),
+    dict(brand="Vanwin", label="Sale price", deal="Alpha Power $109.99 (was $129.99)", code="", ends="Not stated", url="https://www.vanwinsports.com/",
+         tested=[("Alpha Power", "xray/vanwin-alpha-power.html")]),
+]
+
+
+def deal_card(d):
+    tested = " &middot; ".join(f'<a href="{u}">{e(n)}</a>' for n, u in d["tested"])
+    return (f'<div class="code-card"><span class="tag" style="align-self:flex-start">{e(d.get("label", "Black Friday"))}</span><h3>{e(d["brand"])}</h3><p style="margin:0">{e(d["deal"])}</p>'
+            + (f'<code>{e(d["code"])}</code>' if d["code"] else '<p class="muted" style="margin:0;font-size:.9rem">No code needed</p>')
+            + f'<p class="muted" style="margin:0;font-size:.85rem">Ends: {e(d["ends"])} &middot; checked {DEALS_CHECKED}</p>'
+            + (f'<p style="margin:0;font-size:.88rem">Our lab data: {tested}</p>' if tested else "")
+            + (f'<p style="margin:0;font-size:.88rem">Not on sale? Code <strong>PBRX</strong> gives {next(c["offer"] for c in CODES if c["brand"] == d["brand"])} at {e(d["brand"])}.</p>' if any(c["brand"] == d["brand"] for c in CODES) else "")
+            + f'<a href="{e(d["url"])}" rel="noopener">See the deal on {e(d["brand"])}&rsquo;s site &rarr;</a></div>')
+
+
+write("codes.html", page("Pickleball Black Friday deals and discount codes | PickleballRx", f'''
+<div class="wrap"><section>
+  <h1 class="page-title">Deals</h1>
+  <p class="section-lead">Pickleball RX has discount codes with some brands and earns commission on code or link purchases, at no extra cost to you. Brands have no input into our results. <a href="disclaimers.html">Disclaimers</a>.</p>
+</section>
+<section style="padding-top:0">
+  <h2>Black Friday 2026</h2>
+  <p class="section-lead">Black Friday and other sales we saw on each brand&rsquo;s own site on {DEALS_CHECKED}. Prices and dates change fast, so check the brand&rsquo;s page before you buy.</p>
+  <div class="codes">{"".join(deal_card(d) for d in DEALS)}</div>
+</section>
+<section style="padding-top:0">
+  <h2>Our discount codes</h2>
+  <p class="section-lead">Use code <strong>PBRX</strong> at checkout with these brands. Codes usually do not stack with sale prices, so check which gives the better deal. More brands coming soon.</p>
+  <div class="codes">{ccards}</div>
+</section></div>''', 0, "codes", desc="Black Friday pickleball paddle deals and Pickleball RX discount codes."))
+
+# ---------- guide ----------
+write("guide.html", page("How to choose a pickleball paddle | PickleballRx", '''
+<article class="article">
+  <span class="tag">Buying guide</span>
+  <h1>How to choose a pickleball paddle</h1>
+  <div class="byline">PickleballRx team</div>
+  <p>The best paddle is the one that matches how you play. Start with these questions, or let the <a href="finder.html">paddle finder</a> do it for you.</p>
+  <h2>1. How heavy should it be?</h2>
+  <p>Lighter paddles (roughly under 7.8 oz) are quicker at the kitchen line and easier on the arm. Heavier paddles (over about 8.2 oz) add stability and drive power but can tire you out. Swing weight matters even more than static weight: it measures how heavy the paddle feels when you swing it.</p>
+  <h2>2. What is twist weight?</h2>
+  <p>Twist weight measures how much a paddle resists twisting on off-center hits. Higher twist weight means a more forgiving, stable paddle.</p>
+  <h2>3. What core thickness?</h2>
+  <p>Thicker cores (around 16 mm) tend to feel softer and more controlled. Thinner cores (around 13 to 14 mm) usually feel crisper with more pop.</p>
+  <h2>4. Which shape?</h2>
+  <ul><li><strong>Standard / wide body:</strong> biggest sweet spot, most forgiving.</li><li><strong>Elongated:</strong> more reach and power, smaller sweet spot.</li><li><strong>Hybrid:</strong> a middle ground.</li></ul>
+  <h2>5. What face material?</h2>
+  <p>Fiberglass faces often feel springier. Carbon fiber faces usually give more control and, with a textured surface, more spin. Our <a href="lab.html#micro">microscope scans</a> show how much grit a face really has.</p>
+  <div class="note">Check your league's rules: sanctioned events require approved paddles, so look for an approval mark before you buy.</div>
+  <p><a class="btn" href="finder.html">Get your paddle Rx</a></p>
+</article>''', 0, "guide"))
+
+# ---------- about ----------
+write("about.html", page("About and how we test | PickleballRx", f'''
+<article class="article">
+  <h1>About PickleballRx</h1>
+  <p>Pickleball RX is run by Siva Parcha (<a href="{INSTAGRAM}">@picklebrx</a>). We review pickleball paddles from the inside out: X-rays, microscope grit scans and spin measured at 960 frames per second. <em>(Placeholder: add a few sentences about your playing background.)</em></p>
+  <h2 id="testing">How we test</h2>
+  <ol>
+    <li><strong>Play it.</strong> Every paddle gets drills and real games, and a video review on <a href="{YOUTUBE}">YouTube</a>.</li>
+    <li><strong>Measure it.</strong> Weight, swing weight, twist weight, dimensions and core thickness, measured ourselves.</li>
+    <li><strong>Look inside.</strong> <a href="lab.html">X-rays</a> show the core and ring. A <a href="grit.html">4K microscope</a> shows face grit and wear.</li>
+    <li><strong>Measure spin.</strong> A fixed <a href="spin.html">spin rig</a> filmed at 960 fps, then re-tested after real play.</li>
+    <li><strong>Score it.</strong> Power, spin, control and forgiveness on the same 10-point scale.</li>
+  </ol>
+  <h2 id="disclosure">Disclosures</h2>
+  <p>We earn commission on some discount codes, and brands have no input into our results. Some test paddles were supplied by brands, and we say so wherever it applies. Read the full <a href="disclaimers.html">disclaimers</a>.</p>
+  <h2 id="contact">Contact</h2>
+  <p>Message us on <a href="{INSTAGRAM}">Instagram @picklebrx</a>. <em>(Placeholder: add a contact email.)</em></p>
+</article>''', 0, "about"))
+
+write("disclaimers.html", page("Disclaimers | PickleballRx", f'''
+<article class="article">
+  <span class="tag">Disclaimers</span>
+  <h1>Disclaimers and disclosures</h1>
+  <p class="muted">Last updated {LABS["updated"]}. Here is how our results are made, who supplied what, and where the limits are.</p>
+
+  <h2 id="affiliate">Discount codes and commission</h2>
+  <p>Pickleball RX has discount codes with some brands, including Arronax, Evolv, Holbrook, Luzz, MARK, Pakle and RPM, and may earn a commission when you buy with a code or through some links. It costs you nothing extra. Deals and prices are checked on the brand's own site when we post them, but they can change or end at any time, so confirm the final price at checkout.</p>
+
+  <h2 id="independence">Brands have no input into results</h2>
+  <p>No brand sees, edits or approves our results before they are published. Having a code with a brand never changes a number, a score or a ranking, and a brand can't pay for a spot on the Leader Board.</p>
+
+  <h2 id="supplied">Paddles supplied by brands</h2>
+  <ul>
+    <li>Evolv requested the CarbonSkyn spin durability test and supplied the three Origin paddles used in it. The testing and the numbers are our own.</li>
+    <li>The Grit E2CF paddles were supplied by the owner of Grit.</li>
+    <li>Grit E1 CW and E1 TW are recreational-play paddles that are not USA Pickleball approved.</li>
+  </ul>
+
+  <h2 id="spin">Spin Lab</h2>
+  <p>Spin numbers come from our own static rig: the same ball machine and setup, filmed at 960 frames per second. It is not an official USA Pickleball test. Results depend on the ball, the impact angle and where the ball hits the face, so treat small gaps between paddles as a tie, and compare paddles within our table rather than against other testers' numbers.</p>
+
+  <h2 id="xray">X-Ray Rx</h2>
+  <p>X-ray labels (core, perimeter ring, inserts, handle) are our interpretation of the X-ray image. They are not a cutaway, and brands have not confirmed them. Ring widths and other measurements taken from an X-ray are estimates.</p>
+
+  <h2 id="grit">Grit Lab</h2>
+  <p>Microscope images were taken with a 4K digital microscope. Wear percentages are conservative visual estimates, about plus or minus 10 points, made by comparing each paddle's hitting zone with its own throat under matched light. They are not profilometer measurements, and grit wears at different rates depending on how much and how you play.</p>
+
+  <h2 id="specs">Specs</h2>
+  <p>Swing weight, twist weight and static weight marked as ours are measured by Pickleball RX. Other specs come from the sources listed with each paddle, usually the brand or a retailer. Paddles vary from unit to unit and brands update models, so your paddle can differ from what we list.</p>
+
+  <h2 id="advice">Not professional advice</h2>
+  <p>Everything on this site is our own testing and opinion, for general information only. It is not professional advice. Check specs, approval status and warranty terms with the brand before you buy, and check the current USA Pickleball approved list before using a paddle in sanctioned play.</p>
+
+  <h2 id="corrections">Questions or corrections</h2>
+  <p>If you think something here is wrong, message us on <a href="{INSTAGRAM}">Instagram @picklebrx</a> and we'll check it.</p>
+</article>''', 0, "disclaimers", desc="How Pickleball RX tests paddles, who supplied what, and the limits of our results."))
+
+write("404.html", page("Page not found | PickleballRx", '<article class="article"><h1>Page not found</h1><p>That page doesn\'t exist. <a href="/">Go to the home page</a>.</p></article>', 0))
+
+print("Built", len(PADDLES), "paddles into", OUT)

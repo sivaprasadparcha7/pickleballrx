@@ -1,0 +1,34 @@
+name: Check domain
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: DNS records
+        run: |
+          for h in pickleballrx.org www.pickleballrx.org; do
+            echo "== $h"; for t in A AAAA CNAME; do echo "$t: $(dig +short $t $h @8.8.8.8 | tr '\n' ' ')"; done
+          done
+          for r in 8.8.8.8 1.1.1.1 dns1.namecheaphosting.com; do echo "apex A via $r: $(dig +short A pickleballrx.org @$r | tr '\n' ' ')"; done
+          echo "CAA: $(dig +short CAA pickleballrx.org @dns1.namecheaphosting.com | tr '\n' ' ')"
+          echo "NS: $(dig +short NS pickleballrx.org @8.8.8.8 | tr '\n' ' ')"
+          echo "MX: $(dig +short MX pickleballrx.org @8.8.8.8 | tr '\n' ' ')"
+      - name: HTTP and HTTPS
+        run: |
+          for u in http://pickleballrx.org https://pickleballrx.org https://www.pickleballrx.org; do
+            echo "== $u"; curl -sS -o /dev/null -m 20 -w "status %{http_code}, redirect %{redirect_url}, server ip %{remote_ip}\n" "$u" || true
+          done
+          echo "== cert"; echo | openssl s_client -connect pickleballrx.org:443 -servername pickleballrx.org 2>/dev/null | openssl x509 -noout -issuer -subject -dates || true
+          echo "== content per IP"
+          for ip in $(dig +short A pickleballrx.org @dns1.namecheaphosting.com); do
+            lb=$(curl -s -m 20 --resolve pickleballrx.org:80:$ip http://pickleballrx.org/ | grep -c 'id="leaderboard"')
+            dc=$(curl -s -o /dev/null -w "%{http_code}" -m 20 --resolve pickleballrx.org:80:$ip http://pickleballrx.org/disclaimers.html)
+            sv=$(curl -sI -m 20 --resolve pickleballrx.org:80:$ip http://pickleballrx.org/ | grep -i '^server' | tr -d '\r')
+            echo "$ip: leaderboard=$lb disclaimers=$dc $sv"
+          done
