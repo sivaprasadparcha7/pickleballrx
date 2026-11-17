@@ -113,13 +113,14 @@ def page(title, body, depth=0, current="", desc="Data-driven pickleball paddle r
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span><span></span><span></span></button>
   <nav class="nav" id="site-nav" aria-label="Main">
     {nav("paddles.html", "Paddle database", "paddles")}
+    {nav("best.html", "Top picks", "best")}
     {nav("compare.html", "Compare", "compare")}
     {nav("lab.html", "X-Ray Rx", "lab")}
     {nav("grit.html", "Grit Lab", "grit")}
     {nav("spin.html", "Spin Lab", "spin")}
     {nav("specs.html", "Spec Lab", "specs")}
     {nav("videos.html", "Videos", "videos")}
-    {nav("codes.html", "Black Friday deals", "codes")}
+    {nav("codes.html", "Deals", "codes")}
     {nav("finder.html", "Get your paddle Rx", "finder", "nav-cta")}
   </nav>
 </div></header>
@@ -131,7 +132,7 @@ def page(title, body, depth=0, current="", desc="Data-driven pickleball paddle r
     <div><img src="{r}assets/logo.svg?v={ASSET_V}" alt="Pickleball Rx" width="129" height="50" style="height:50px;width:auto;margin-bottom:10px">
       <p style="margin:0">Paddle reviews that look inside the paddle: X-rays, microscope images, measured specs and on-court video.</p><p style="margin:8px 0 0">Started by Don, Beni and Siva.</p></div>
     <div><h4>Tools</h4><ul><li><a href="{r}finder.html">Paddle finder</a></li><li><a href="{r}compare.html">Compare</a></li><li><a href="{r}paddles.html">Database</a></li></ul></div>
-    <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}best.html">Best paddles</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
+    <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}best.html">Our top picks</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
     <div><h4>Follow</h4><ul><li><a href="{YOUTUBE}" rel="noopener">YouTube</a></li><li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li><li><a href="{r}about.html#contact">Contact</a></li></ul></div>
   </div>
   <p class="legal">&copy; 2026 PickleballRx.org &middot; <a href="{r}disclaimers.html">Disclaimers</a> &middot; Pickleball RX earns commission on some discount codes. Brands have no input into results.</p>
@@ -214,7 +215,7 @@ LEADERBOARD = [
 ]
 
 
-def lb_card(i, row):
+def lb_card(i, row, star=True):
     brand, model, xs, sp, gr, sc, note = row
     # Thumbnail: prefer a real paddle photo (assets/paddles/<brand-model>.jpg), else the X-ray, else the grit scan.
     photo = product_photo(xs) or f"assets/paddles/{_slug(brand + ' ' + model)}.jpg"
@@ -235,7 +236,7 @@ def lb_card(i, row):
     if sc: links.append(f'<a class="badge" href="specs.html#{sc}">Specs</a>')
     code = next((c for c in CODES if c["brand"].lower() == brand.lower() and c["code"]), None)
     code_html = f'<div style="font-size:.82rem;margin-top:6px">Code <strong>{e(code["code"])}</strong> &middot; {e(code["offer"])} at <a href="{e(code["url"])}" rel="sponsored noopener">{e(brand)}</a></div>' if code else ""
-    top = i == 0
+    top = star and i == 0
     return (f'<div class="lb-item{" lb-top" if top else ""}"><div class="lb-rank">{"&#9733;" if top else i + 1}</div>{img}<div style="min-width:0">'
             f'<div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">{e(brand)}{" &middot; top spot" if top else ""}</div>'
             f'<div style="font-weight:800;font-size:1.05rem;line-height:1.25">{e(model)}</div>'
@@ -305,7 +306,7 @@ write("index.html", page("PickleballRx | Pickleball paddle reviews, X-rays and d
 <div class="wrap">
 <section id="leaderboard">
   <div class="section-head"><div><span class="tag">Rx top picks</span><h2 style="margin-top:8px">The Leader Board</h2>
-  <p class="section-lead">The paddles that earned a spot on our wall after X-rays, microscope scans, spin tests and a lot of games. One paddle holds the top spot. Tap any badge to see the lab results behind it.</p></div></div>
+  <p class="section-lead">The paddles that earned a spot on our wall after X-rays, microscope scans, spin tests and a lot of games. One paddle holds the top spot. Tap any badge to see the lab results behind it. <a href="best.html">See our top picks by core type &rarr;</a></p></div></div>
   <div class="lb-grid">{lb_html}</div>
 </section>
 <section>
@@ -419,11 +420,47 @@ for key, label, desc in STYLES:
         top = sorted(PADDLES, key=lambda p: -p[key])[:3]
     rows = "\n".join(card(p, 0) for p in top)
     sections.append(f'<section id="{key}"><h2>Best {label.lower()} paddles</h2><p class="section-lead">{desc}. Ranked from our scores.</p><div class="grid">{rows}</div></section>')
+
+# ---------- Our top picks (chosen by Siva, 2026-11-17) ----------
+# Same row format as LEADERBOARD: (brand, model, X-ray slug, spin table name, grit name, spec id, note)
+TOP_PICKS = [
+    ("epp", "EPP foam", "Paddles with an EPP foam core.", [
+        ("Gearbox", "Pressure X 8E", "gearbox-pressure-x-8e", "Gearbox Pressure XE", "Gearbox Pressure X 8E", "gearbox-8e", ""),
+        ("Grit", "E2-CF", "grit-e2-cf", "Grit E2CF", None, None, ""),
+        ("Evolv", "Origin Elongated", "evolv-origin", "Evolv Origin", "Evolv", None, ""),
+        ("Honolulu", "J6CR", "honolulu-j6cr", "Honolulu J6CR", "Honolulu J6CR", None, ""),
+        ("Spartus", "Spitfire", "spartus-spitfire", "Spartus Spitfire", "Spartus Spitfire", None, ""),
+        ("Facolos", "Elite X V2.0", "facolos-elite-x-2-0", None, None, None, ""),
+    ]),
+    ("mpp", "MPP foam", "Paddles with an MPP foam core.", [
+        ("Gearbox", "Pressure X 8M", "gearbox-pressure-xm", "Gearbox Pressure X M", None, "gearbox-8m", ""),
+        ("Speedup", "Tide 14 Hybrid", "speedup-tide", "Speed Up Tide", "Speed Up Tide", None, "X-ray is of the Tide Elongated"),
+        ("RPM", "Jade", "rpm-jade", "RPM Jade", "RPM Jade", "rpm-jade", ""),
+        ("Luzz", "Inferno 2", "luzz-inferno-2", "Luzz Inferno M2", "Luzz Inferno2", None, ""),
+        ("E6", "Ignis", "e6-ignis", None, "E6 Ignis", None, ""),
+    ]),
+    ("gen3", "Gen 3", "Honeycomb core with a foam perimeter.", [
+        ("Sypik", "Triton 5", "sypik-triton-5", None, "Sypik Triton 5", "sypik-triton", ""),
+        ("PACT", "Teflon Evolve TE16", "pact-teflon", None, "PACT Teflon Evolve", None, ""),
+        ("Proton", "Project Coyote", "proton-project-coyote", None, "Proton Project Coyote", "proton-coyote", ""),
+        ("RPM", "V2", "rpm-v2", None, None, None, ""),
+        ("Zocker", "Aspire", "zocker-aspire", None, None, None, ""),
+    ]),
+]
+picks_html = "".join(
+    f'<section id="{k}" style="padding-top:10px"><h2>{e(t)}</h2><p class="section-lead">{e(d)}</p><div class="lb-grid">{"".join(lb_card(i, r, star=False) for i, r in enumerate(rows))}</div></section>'
+    for k, t, d, rows in TOP_PICKS)
+
 write("best.html", page("Best pickleball paddles | PickleballRx", f'''
 <div class="wrap">
 <section style="padding-bottom:0">
-  <h1 class="page-title">Best pickleball paddles</h1>
-  <p class="section-lead">Top picks in each category, ranked automatically from the scores in our database. These are placeholder paddles until real reviews are in.</p>
+  <h1 class="page-title">Our top picks</h1>
+  <p class="section-lead">Our favorite paddles by core type, picked by the Pickleball RX team after X-rays, microscope scans, spin tests and a lot of games. Tap any badge to see the lab results behind a pick.</p>
+  <div class="chips">{"".join(f'<a href="#{k}">{e(t)}</a>' for k, t, _, _ in TOP_PICKS)}</div>
+</section>
+{picks_html}
+<section style="padding-bottom:0"><h2>By playing style</h2>
+  <p class="section-lead">Ranked automatically from the scores in our review database. These are placeholder paddles until real reviews are in.</p>
   <div class="chips">{"".join(f'<a href="#{k}">{l}</a>' for k, l, _ in STYLES)}</div>
 </section>
 {"".join(sections)}
