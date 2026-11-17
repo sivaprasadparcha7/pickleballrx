@@ -285,7 +285,7 @@ REVIEWERS = [
     ("John Kew", "Johnkew Pickleball", "Detailed paddle reviews and spin testing, plus The KewCast podcast.",
      "https://www.johnkewpickleball.com/paddle-reviews", "Paddle reviews"),
     ("Pickleball Studio", "Chris Olson", "In-depth paddle reviews, a newsletter and the Pickleball Studio podcast.",
-     "https://www.youtube.com/results?search_query=Pickleball+Studio+paddle+review", "Find on YouTube"),
+     "https://www.youtube.com/@pickleballstudio", "YouTube"),
     ("Supa Senpai", "Pickleball Senpai", "Paddle reviews and pickleball videos.",
      "https://supasenpai.com/pickleball-senpai/", "Website"),
     ("Ed", "Pickleball Freak Show", "Paddle reviews and gear talk.",
