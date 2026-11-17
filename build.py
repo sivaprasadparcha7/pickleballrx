@@ -598,37 +598,32 @@ TOP_PICKS = [
 ]
 # Supasenpai's picks, as relayed by Siva (2026-11-17). Names checked against retailer listings.
 SENPAI_PICKS = [
-    ("Diadem", "Edge BluCore", "Comes in Pro and Hybrid shapes.", None),
+    ("Diadem", "Edge BluCore Pro 14", "", None),
     ("Crush", "Pro Force 5G", "", None),
-    ("Sypik", "Avatar", "Also sold as the Avatar Ultimate Pro Tour.", None),
+    ("Sypik", "Avatar Pro", "", None),
     ("Luzz", "Inferno (original)", "We've X-rayed this one.", ("Inferno X-ray", "xray/luzz-inferno.html")),
-    ("GRUVN", "MUVN", "Comes in several shapes and thicknesses.", None),
+    ("GRUVN", "MUVN-16HD", "", None),
 ]
-senpai_html = "".join(
-    f'<div class="lb-item" style="grid-template-columns:auto 1fr"><div class="lb-rank">{i}</div><div style="min-width:0">'
-    f'<div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">{e(b)}</div>'
-    f'<div style="font-weight:800;font-size:1.05rem;line-height:1.25">{e(m)}</div>'
-    + (f'<div class="muted" style="font-size:.82rem;margin-top:4px">{e(n)}</div>' if n else "")
-    + (f'<div class="badges" style="margin-top:6px"><a class="badge" href="{l[1]}">{e(l[0])}</a></div>' if l else "")
-    + '</div></div>'
-    for i, (b, m, n, l) in enumerate(SENPAI_PICKS, 1))
+def _ext_card(i, b, m, n, l):
+    ph = product_photo(_slug(b + " " + m))
+    img = f'<img class="lb-thumb" src="{ph}" alt="{e(b)} {e(m)}" loading="lazy" style="object-fit:contain">' if ph else ""
+    return (f'<div class="lb-item"{"" if ph else " style=\'grid-template-columns:auto 1fr\'"}><div class="lb-rank">{i}</div>{img}<div style="min-width:0">'
+            f'<div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">{e(b)}</div>'
+            f'<div style="font-weight:800;font-size:1.05rem;line-height:1.25">{e(m or b)}</div>'
+            + (f'<div class="muted" style="font-size:.82rem;margin-top:4px">{e(n)}</div>' if n else "")
+            + (f'<div class="badges" style="margin-top:6px"><a class="badge" href="{l[1]}">{e(l[0])}</a></div>' if l else "")
+            + '</div></div>')
+senpai_html = "".join(_ext_card(i, *r) for i, r in enumerate(SENPAI_PICKS, 1))
 
 # Supasenpai's top 5 Canadian paddles, relayed by Siva (2026-11-17). Names checked against brand and Canadian retailer listings.
 CANADIAN_PICKS = [
-    ("GRUVN", "MUVN", "Comes in several shapes and thicknesses.", None),
+    ("GRUVN", "MUVN-16HD", "", None),
     ("Combat", "Titan Foam Pro", "", None),
     ("Apollo", "MK47 Signature Pro", "", None),
     ("NextGen", "Hydra", "Comes in standard and elongated shapes.", None),
     ("BOOMA", "Aerofoam", "", ("BOOMA store", "https://boomastore.com/en/products/aerofoam-pickleball-paddle")),
 ]
-canadian_html = "".join(
-    f'<div class="lb-item" style="grid-template-columns:auto 1fr"><div class="lb-rank">{i}</div><div style="min-width:0">'
-    f'<div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">{e(b)}</div>'
-    f'<div style="font-weight:800;font-size:1.05rem;line-height:1.25">{e(m or b)}</div>'
-    + (f'<div class="muted" style="font-size:.82rem;margin-top:4px">{e(n)}</div>' if n else "")
-    + (f'<div class="badges" style="margin-top:6px"><a class="badge" href="{l[1]}">{e(l[0])}</a></div>' if l else "")
-    + '</div></div>'
-    for i, (b, m, n, l) in enumerate(CANADIAN_PICKS, 1))
+canadian_html = "".join(_ext_card(i, *r) for i, r in enumerate(CANADIAN_PICKS, 1))
 
 picks_html = "".join(
     f'<section id="{k}" style="padding-top:10px"><h2>{e(t)}</h2><p class="section-lead">{e(d)}</p><div class="lb-grid">{"".join(lb_card(i, r, star=False) for i, r in enumerate(rows))}</div></section>'
