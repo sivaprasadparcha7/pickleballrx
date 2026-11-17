@@ -438,6 +438,7 @@ TOP_PICKS = [
         ("RPM", "Jade", "rpm-jade", "RPM Jade", "RPM Jade", "rpm-jade", ""),
         ("Luzz", "Inferno 2", "luzz-inferno-2", "Luzz Inferno M2", "Luzz Inferno2", None, ""),
         ("E6", "Ignis", "e6-ignis", None, "E6 Ignis", None, ""),
+        ("Kamito", "Alpha X", "kamito-alpha-x", None, None, None, ""),
     ]),
     ("gen3", "Gen 3", "Honeycomb core with a foam perimeter.", [
         ("Sypik", "Triton 5", "sypik-triton-5", None, "Sypik Triton 5", "sypik-triton", ""),
@@ -446,6 +447,13 @@ TOP_PICKS = [
         ("RPM", "V2", "rpm-v2", None, None, None, ""),
         ("Mehau", "S5", "mehau-s5", None, "Mehau S5", None, ""),
         ("Zocker", "Aspire", "zocker-aspire", None, None, None, ""),
+    ]),
+    ("foreign", "Foreign picks", "Five more favorites from the team.", [
+        ("Zcebra", "Gazelle", "zcebra-gazelle", "Zcebra Gazelle", "Zcebra Gazelle", None, ""),
+        ("PACT", "Teflon Evolve TE16", "pact-teflon", None, "PACT Teflon Evolve", None, ""),
+        ("Standout", "CF4", "standout-cf4", None, None, None, ""),
+        ("Kamito", "Alpha X", "kamito-alpha-x", None, None, None, ""),
+        ("Sypik", "Triton 5", "sypik-triton-5", None, "Sypik Triton 5", "sypik-triton", ""),
     ]),
 ]
 picks_html = "".join(
