@@ -129,7 +129,7 @@ def page(title, body, depth=0, current="", desc="Data-driven pickleball paddle r
 <footer class="site-footer"><div class="wrap">
   <div class="cols">
     <div><img src="{r}assets/logo.svg?v={ASSET_V}" alt="Pickleball Rx" width="129" height="50" style="height:50px;width:auto;margin-bottom:10px">
-      <p style="margin:0">Paddle reviews that look inside the paddle: X-rays, microscope images, measured specs and on-court video.</p></div>
+      <p style="margin:0">Paddle reviews that look inside the paddle: X-rays, microscope images, measured specs and on-court video.</p><p style="margin:8px 0 0">Started by Don, Beni and Siva.</p></div>
     <div><h4>Tools</h4><ul><li><a href="{r}finder.html">Paddle finder</a></li><li><a href="{r}compare.html">Compare</a></li><li><a href="{r}paddles.html">Database</a></li></ul></div>
     <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}best.html">Best paddles</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
     <div><h4>Follow</h4><ul><li><a href="{YOUTUBE}" rel="noopener">YouTube</a></li><li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li><li><a href="{r}about.html#contact">Contact</a></li></ul></div>
@@ -990,7 +990,7 @@ write("guide.html", page("How to choose a pickleball paddle | PickleballRx", '''
 write("about.html", page("About and how we test | PickleballRx", f'''
 <article class="article">
   <h1>About PickleballRx</h1>
-  <p>Pickleball RX is run by Siva Parcha (<a href="{INSTAGRAM}">@picklebrx</a>). We review pickleball paddles from the inside out: X-rays, microscope grit scans and spin measured at 960 frames per second. <em>(Placeholder: add a few sentences about your playing background.)</em></p>
+  <p>Pickleball RX was started by Don, Beni and Siva (<a href="{INSTAGRAM}">@picklebrx</a>). We review pickleball paddles from the inside out: X-rays, microscope grit scans and spin measured at 960 frames per second. <em>(Placeholder: add a few sentences about your playing background.)</em></p>
   <h2 id="testing">How we test</h2>
   <ol>
     <li><strong>Play it.</strong> Every paddle gets drills and real games, and a video review on <a href="{YOUTUBE}">YouTube</a>.</li>
