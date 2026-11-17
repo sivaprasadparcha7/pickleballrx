@@ -277,3 +277,10 @@ legend { font-weight: 800; font-size: 1.05rem; margin-bottom: 10px; }
 
 .product-shot { display: block; height: 180px; width: auto; border-radius: 12px; background: #fff; margin-bottom: 14px; box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 8px 24px -16px rgba(17,34,64,.5); }
 .card .product-shot { height: 144px; }
+.product-thumb { float: right; height: 60px; width: auto; border-radius: 6px; margin: 0 0 4px 8px; background: #fff; }
+td .product-thumb { float: left; height: 42px; margin: 0 10px 0 0; }
+.colorways { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; margin: 10px 0 30px; }
+.colorways figure { margin: 0; text-align: center; }
+.colorways img { width: 100%; height: auto; border-radius: 12px; display: block; }
+.colorways figcaption { font-size: .88rem; color: var(--muted, #5b6478); margin-top: 6px; }
+.lab-item figcaption img.product-thumb { width: auto; height: 60px; aspect-ratio: auto; object-fit: contain; border: 0; padding: 0; }

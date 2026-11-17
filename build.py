@@ -50,6 +50,13 @@ def product_photo(slug):
     return rel if slug and os.path.exists(os.path.join(OUT, rel)) else ""
 
 
+# Product photos keyed by the paddle name used in the lab data.
+NAME_PHOTO = {"Evolv Origin (CarbonSkyn)": "evolv-origin", "Luzz Cannon XPP": "luzz-cannon-xpp",
+              "Grit E2CF": "grit-e2-cf", "Grit E1 CW": "grit-e1-cw", "Grit E1 TW": "grit-e1-tw"}
+# Extra colorways shown on a paddle's own page (assets/paddles/product/<slug>-<color>.jpg).
+COLORWAYS = {"grit-e2-cf": [("", "Green, Launch Edition"), ("pink", "Pink"), ("white", "White")]}
+
+
 import hashlib
 def _asset_ver():
     h = hashlib.md5()
@@ -735,6 +742,7 @@ for x in XRAY:
 <div class="wrap" style="padding-top:30px;padding-bottom:20px">
   {unrel}
   {code_box(x["brand"], 1)}
+  {('<h2>Colorways</h2><div class="colorways">' + "".join(f'<figure><img src="../assets/paddles/product/{x["slug"]}{"-" + c if c else ""}.jpg" alt="{e(x["name"])}, {e(lbl)}" width="200" height="300" loading="lazy"><figcaption>{e(lbl)}</figcaption></figure>' for c, lbl in COLORWAYS[x["slug"]]) + '</div>') if x["slug"] in COLORWAYS else ""}
   <h2 id="xray">The X-ray</h2>
   <p class="muted" style="margin:0">{XRAY_DISCLAIMER} <a href="../disclaimers.html#xray">Disclaimers</a>.</p>
   {main_fig}
@@ -762,10 +770,13 @@ def grit_img(name):
     return ""
 
 
+NOT_USAP = '<span class="tag" style="background:#fde2e2;color:#8a1c1c">Not USAP approved</span>'
 grit_cards = "".join(
     f'<figure class="lab-item" id="{slugify(g["name"])}">' +
     (f'<a href="{grit_img(g["name"])}"><img src="{grit_img(g["name"])}" alt="{e(g["name"])} face under the microscope, M lens" loading="lazy"></a>' if grit_img(g["name"]) else '<div class="lab-ph">Microscope image coming soon</div>') +
-    f'<figcaption><span class="muted" style="font-size:.78rem">#{i + 1}</span> <strong style="color:var(--ink)">{e(g["name"])}</strong><br>{e(g["surface"])}</figcaption></figure>'
+    f'<figcaption>' + (f'<img class="product-thumb" src="{product_photo(NAME_PHOTO[g["name"]])}" alt="{e(g["name"])}" width="40" height="60" loading="lazy">' if product_photo(NAME_PHOTO.get(g["name"], "")) else "") +
+    f'<span class="muted" style="font-size:.78rem">#{i + 1}</span> <strong style="color:var(--ink)">{e(g["name"])}</strong><br>{e(g["surface"])}' +
+    (f' {NOT_USAP}' if g["name"].startswith("Grit E1") else "") + '</figcaption></figure>'
     for i, g in enumerate(LABS["grit"]))
 wear_rows = "".join(f'<tr><td><strong>{e(w["paddle"])}</strong></td><td>{e(w["use"])}</td><td><strong>{e(w["result"])}</strong>{("<br><span class=muted>" + e(w["notes"]) + "</span>") if w["notes"] else ""}</td></tr>' for w in LABS["wear"])
 cmp_cards = "".join(f'<div class="tool"><h3>{e(c["title"])}</h3><p>{e(c["text"])}</p></div>' for c in LABS["compare"])
@@ -784,7 +795,6 @@ def gallery(items, min_w=300):
     return f'<div class="lab-grid" style="grid-template-columns:repeat(auto-fill,minmax({min_w}px,1fr));margin-top:18px;align-items:start">{figs}</div>' if figs else ""
 
 
-NOT_USAP = '<span class="tag" style="background:#fde2e2;color:#8a1c1c">Not USAP approved</span>'
 collection_fig = card_fig("all-36-grit.jpg", "<strong>All 36 paddles</strong> &middot; same 4K microscope, M lens &middot; tap to open full size", "Grid of 36 paddle faces under the microscope")
 new_gallery = gallery([
     ("card-arronax-boost-1.jpg", "<strong>Arronax Boost-1</strong> &middot; GritBite surface, M lens", "Arronax Boost-1 GritBite surface under the microscope"),
@@ -807,8 +817,8 @@ cmp_gallery = gallery([
     ("cmp-loco2-vs-hexgrit.jpg", "<strong>LOCO 2 (Space Dust) vs 11SIX24 HexGrit</strong> &middot; L and M lenses", "LOCO 2 versus HexGrit comparison"),
     ("cmp-volair-vs-hexgrit.jpg", "<strong>Volair CMD vs 11SIX24 HexGrit</strong> &middot; L and M lenses", "Volair CMD versus HexGrit comparison"),
     ("cmp-grit-e1-cw-vs-tw.jpg", f"<strong>Grit E1 CW vs E1 TW</strong> {NOT_USAP}", "Grit E1 CW versus E1 TW comparison"),
-    ("card-grit-e1-cw.jpg", f"<strong>Grit E1 CW</strong> &middot; L and M lenses {NOT_USAP}", "Grit E1 CW under the microscope"),
-    ("card-grit-e1-tw.jpg", f"<strong>Grit E1 TW</strong> &middot; L and M lenses {NOT_USAP}", "Grit E1 TW under the microscope"),
+    ("card-grit-e1-cw.jpg", f'<img class="product-thumb" src="assets/paddles/product/grit-e1-cw.jpg" alt="Grit E1 CW" width="40" height="60" loading="lazy">' + f"<strong>Grit E1 CW</strong> &middot; L and M lenses {NOT_USAP}", "Grit E1 CW under the microscope"),
+    ("card-grit-e1-tw.jpg", f'<img class="product-thumb" src="assets/paddles/product/grit-e1-tw.jpg" alt="Grit E1 TW" width="40" height="60" loading="lazy">' + f"<strong>Grit E1 TW</strong> &middot; L and M lenses {NOT_USAP}", "Grit E1 TW under the microscope"),
 ])
 write("grit.html", page("Grit Lab: pickleball paddle grit under the microscope | PickleballRx", f"""
 <section class="hero" style="padding:44px 0"><div class="wrap" style="grid-template-columns:1fr"><div>
@@ -856,23 +866,25 @@ write("grit.html", page("Grit Lab: pickleball paddle grit under the microscope |
 # ---------- Spin Lab ----------
 spin_all = LABS["spin"]
 smax = max(r["top"] for r in spin_all)
+def spin_thumb(name):
+    ph = product_photo(NAME_PHOTO.get(name, ""))
+    return f'<img class="product-thumb" src="{ph}" alt="" width="28" height="42" loading="lazy">' if ph else ""
 def spin_row(i, r):
     flags = ""
     if r.get("usap") is False: flags += ' <span class="tag" style="background:#fde2e2;color:#8a1c1c">Not USAP approved</span>'
     if r.get("as_shot"): flags += ' <span class="muted" title="Shown as shot at about 37 to 38 mph, not speed-adjusted">&dagger;</span>'
-    return (f'<tr id="{slugify(r["paddle"])}"><td class="num muted">{i}</td><td><strong>{e(r["paddle"])}</strong>{flags}<br><span class="muted" style="font-size:.82rem">{e(r["condition"])}</span></td>'
+    return (f'<tr id="{slugify(r["paddle"])}"><td class="num muted">{i}</td><td>{spin_thumb(r["paddle"])}<strong>{e(r["paddle"])}</strong>{flags}<br><span class="muted" style="font-size:.82rem">{e(r["condition"])}</span></td>'
             f'<td style="min-width:220px"><div style="display:flex;align-items:center;gap:8px"><span style="flex:1;height:12px;background:var(--line);border-radius:6px;overflow:hidden;display:block"><i style="display:block;height:100%;width:{r["avg"] / smax * 100:.1f}%;background:{"#c9ccd6" if r.get("usap") is False else "var(--yellow)"}"></i></span><b class="num">{r["avg"]:,}</b></div></td>'
             f'<td class="num">{r["top"]:,}</td></tr>')
 spin_rows = "".join(spin_row(i + 1, r) for i, r in enumerate(spin_all))
 extra_rows = "".join(f'<tr id="{slugify(r["paddle"])}"><td><strong>{e(r["paddle"])}</strong></td><td>{e(r["condition"])}</td><td class="num">{r["avg"]:,}</td><td class="num">{r["top"]:,}</td><td class="muted">{e(r["note"])}</td></tr>' for r in LABS["spin_extra"])
 dur_summary = "".join(f'<tr><td><strong>{e(d["paddle"])}</strong></td><td>{e(d["time"])}</td><td>{e(d["result"])}</td><td><strong style="color:{"var(--good)" if d["good"] else "#b45309"}">{e(d["verdict"])}</strong></td></tr>' for d in LABS["durability"])
-DUR_PHOTO = {"Evolv Origin (CarbonSkyn)": "evolv-origin", "Luzz Cannon XPP": "luzz-cannon-xpp"}
 def dur_block(d):
     t = ""
     if d["table"]:
         t = '<div class="table-wrap" style="margin:10px 0"><table class="cmp" style="min-width:520px"><thead><tr>' + "".join(f"<th>{e(c)}</th>" for c in d["table"][0]) + "</tr></thead><tbody>" + \
             "".join("<tr>" + "".join(f"<td>{e(c)}</td>" for c in row) + "</tr>" for row in d["table"][1:]) + "</tbody></table></div>"
-    ph = product_photo(DUR_PHOTO.get(d["paddle"], ""))
+    ph = product_photo(NAME_PHOTO.get(d["paddle"], ""))
     img = f'<img class="product-shot" src="{ph}" alt="{e(d["paddle"])}" width="96" height="144" style="float:right;margin:0 0 10px 16px">' if ph else ""
     return f'<div class="card" id="dur-{slugify(d["paddle"])}" style="display:block">{img}<h3>{e(d["paddle"])} <span style="color:{"var(--good)" if d["good"] else "#b45309"};font-size:.9rem">&middot; {e(d["verdict"])}</span></h3>{t}<ul style="margin:0;padding-left:20px">' + "".join(f"<li>{e(n)}</li>" for n in d["notes"]) + "</ul></div>"
 dur_blocks = "".join(dur_block(d) for d in LABS["durability"])
