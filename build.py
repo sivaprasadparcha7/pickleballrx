@@ -444,6 +444,7 @@ TOP_PICKS = [
         ("PACT", "Teflon Evolve TE16", "pact-teflon", None, "PACT Teflon Evolve", None, ""),
         ("Proton", "Project Coyote", "proton-project-coyote", None, "Proton Project Coyote", "proton-coyote", ""),
         ("RPM", "V2", "rpm-v2", None, None, None, ""),
+        ("Mehau", "S5", "mehau-s5", None, "Mehau S5", None, ""),
         ("Zocker", "Aspire", "zocker-aspire", None, None, None, ""),
     ]),
 ]
