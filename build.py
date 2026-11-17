@@ -292,8 +292,8 @@ REVIEWERS = [
      "https://www.youtube.com/@pickleballfreakshow", "YouTube"),
     ("PB on Call", "Pickleball On Call", "Paddle reviews and gear videos.",
      "https://www.youtube.com/@PickleballOnCall", "YouTube"),
-    ("Rally House", "Rally House Pickleball", "Pickleball club and community in Carlsbad, California.",
-     "https://rallyhousepbc.com/", "Website"),
+    ("Rally Haus", "Rally Haus Pickleball", "Paddle reviews and pickleball videos.",
+     "https://www.youtube.com/@rallyhauspickleball", "YouTube"),
 ]
 reviewers_html = "".join(
     f'<div class="card" style="padding:18px"><div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">#{i}</div>'
