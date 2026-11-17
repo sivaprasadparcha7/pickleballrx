@@ -308,7 +308,8 @@ REVIEWERS = [
 ]
 reviewers_html = "".join(
     f'<div class="card" style="padding:18px"><div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">#{i}</div>'
-    f'<h3 style="margin:4px 0 2px">{e(n)}</h3><div class="muted" style="font-size:.88rem;margin-bottom:8px">{e(sub)}</div>'
+    + (f'<div class="rev-head"><img class="rev-avatar" src="assets/reviewers/{_slug(n)}.jpg" alt="{e(n)}" width="64" height="64" loading="lazy"><div>' if os.path.exists(os.path.join(OUT, f"assets/reviewers/{_slug(n)}.jpg")) else "<div><div>")
+    + f'<h3 style="margin:4px 0 2px">{e(n)}</h3><div class="muted" style="font-size:.88rem;margin-bottom:8px">{e(sub)}</div></div></div>'
     f'<p style="font-size:.95rem">{e(d)}</p><a class="btn ghost" style="align-self:flex-start" href="{e(h)}" rel="noopener" target="_blank">{e(lbl)} &rarr;</a>'
     + (f'<a style="font-size:.88rem;margin-top:8px" href="best.html#supa-senpai">See Supasenpai\'s top picks &rarr;</a>' if n == "Supasenpai" else "") + '</div>'
     for i, (n, sub, d, h, lbl) in enumerate(REVIEWERS, 1))
@@ -561,12 +562,12 @@ write("best.html", page("Best pickleball paddles | PickleballRx", f'''
 </section>
 {picks_html}
 <section id="canadian" style="padding-top:10px">
-  <h2>Top 5 Canadian paddles</h2>
+  <div class="rev-head" style="margin-bottom:6px"><img class="rev-avatar" src="assets/reviewers/supasenpai.jpg" alt="Supasenpai" width="64" height="64" loading="lazy"><h2 style="margin:0">Top 5 Canadian paddles</h2></div>
   <p class="section-lead">We did not test these paddles. These picks come from our Canadian neighbor, reviewer <a href="https://supasenpai.com/pickleball-senpai/" rel="noopener">Supasenpai</a>, one of <a href="index.html#reviewers">our favorite reviewers</a>.</p>
   <div class="lb-grid">{canadian_html}</div>
 </section>
 <section id="supa-senpai" style="padding-top:10px">
-  <h2>Supasenpai's top picks</h2>
+  <div class="rev-head" style="margin-bottom:6px"><img class="rev-avatar" src="assets/reviewers/supasenpai.jpg" alt="Supasenpai" width="64" height="64" loading="lazy"><h2 style="margin:0">Supasenpai's top picks</h2></div>
   <p class="section-lead">Paddle picks from Supasenpai, one of <a href="index.html#reviewers">our favorite reviewers</a>. These are Supasenpai's choices, not ours, and we haven't lab-tested them yet. <a href="https://supasenpai.com/pickleball-senpai/" rel="noopener">See Supasenpai's reviews</a>.</p>
   <div class="lb-grid">{senpai_html}</div>
 </section>

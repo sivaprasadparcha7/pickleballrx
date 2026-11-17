@@ -297,3 +297,5 @@ td .product-thumb { float: left; height: 42px; margin: 0 10px 0 0; }
 .spot-stat b { font-size: 1.5rem; display: block; line-height: 1.1; }
 .spot-stat span { font-size: .8rem; color: var(--muted, #5b6478); }
 @media (max-width: 420px) { .spot-card { flex-direction: column; } }
+.rev-head { display: flex; align-items: center; gap: 12px; }
+.rev-avatar { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid var(--yellow); }
