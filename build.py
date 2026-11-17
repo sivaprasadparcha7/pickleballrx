@@ -280,6 +280,27 @@ def upcoming_card(u):
 
 upcoming_html = "".join(upcoming_card(u) for u in UPCOMING)
 
+# Reviewers we like and learn from. Links go to each reviewer's own public page.
+REVIEWERS = [
+    ("John Kew", "Johnkew Pickleball", "Detailed paddle reviews and spin testing, plus The KewCast podcast.",
+     "https://www.johnkewpickleball.com/paddle-reviews", "Paddle reviews"),
+    ("Pickleball Studio", "Chris Olson", "In-depth paddle reviews, a newsletter and the Pickleball Studio podcast.",
+     "https://www.youtube.com/results?search_query=Pickleball+Studio+paddle+review", "Find on YouTube"),
+    ("Supa Senpai", "Pickleball Senpai", "Paddle reviews and pickleball videos.",
+     "https://supasenpai.com/pickleball-senpai/", "Website"),
+    ("Ed", "Pickleball Freak Show", "Paddle reviews and gear talk.",
+     "https://www.youtube.com/results?search_query=Pickleball+Freak+Show", "Find on YouTube"),
+    ("PB on Call", "Pickleball On Call", "Paddle reviews and gear videos.",
+     "https://www.youtube.com/@PickleballOnCall", "YouTube"),
+    ("Rally House", "Rally House Pickleball", "Pickleball club and community in Carlsbad, California.",
+     "https://rallyhousepbc.com/", "Website"),
+]
+reviewers_html = "".join(
+    f'<div class="card" style="padding:18px"><div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">#{i}</div>'
+    f'<h3 style="margin:4px 0 2px">{e(n)}</h3><div class="muted" style="font-size:.88rem;margin-bottom:8px">{e(sub)}</div>'
+    f'<p style="font-size:.95rem">{e(d)}</p><a class="btn ghost" style="align-self:flex-start" href="{e(h)}" rel="noopener" target="_blank">{e(lbl)} &rarr;</a></div>'
+    for i, (n, sub, d, h, lbl) in enumerate(REVIEWERS, 1))
+
 # Latest reviews only show on the home page once at least one real (non-placeholder) review exists.
 _real = [p for p in PADDLES if not p.get("placeholder")]
 latest_section = (f'''<section>
@@ -326,6 +347,11 @@ write("index.html", page("PickleballRx | Pickleball paddle reviews, X-rays and d
   <div class="section-head"><div><span class="tag">On our radar</span><h2 style="margin-top:8px">Upcoming releases we're excited about</h2>
   <p class="section-lead">New paddles we can't wait to get into the lab. Details come from public announcements and news, linked below each one. Anything a brand hasn't confirmed is marked.</p></div></div>
   <div class="grid">{upcoming_html}</div>
+</section>
+<section id="reviewers">
+  <div class="section-head"><div><span class="tag">Worth watching</span><h2 style="margin-top:8px">Our favorite reviewers</h2>
+  <p class="section-lead">Other paddle reviewers we watch and learn from. We're not affiliated with them, and they don't endorse us.</p></div></div>
+  <div class="grid">{reviewers_html}</div>
 </section>
 {latest_section}
 <section>
