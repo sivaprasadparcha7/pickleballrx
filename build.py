@@ -508,14 +508,46 @@ def _spin_rows(n=10):
         if len(out) == n:
             break
     return out
-STYLE_PICKS = {}  # key -> rows, filled in once Siva confirms each list
+# Siva's lists (2026-11-17). Rows: (brand, model, X-ray slug, spin name, grit name, spec id, note)
+_GBX_E = ("Gearbox", "Pressure X 8E", "gearbox-pressure-x-8e", "Gearbox Pressure XE", "Gearbox Pressure X 8E", "gearbox-8e", "")
+_GBX_M = ("Gearbox", "Pressure X 8M", "gearbox-pressure-xm", "Gearbox Pressure X M", None, "gearbox-8m", "")
+_JADE = ("RPM", "Jade", "rpm-jade", "RPM Jade", "RPM Jade", "rpm-jade", "")
+_INF2 = ("Luzz", "Inferno 2", "luzz-inferno-2", "Luzz Inferno M2", "Luzz Inferno2", None, "")
+_GLIDER = ("Luzz", "Glider 2026", "luzz-glider-2026", None, "Luzz Glider 2026", "luzz-glider", "")
+_ORIGIN = ("Evolv", "Origin Elongated", "evolv-origin", "Evolv Origin", "Evolv", None, "")
+_E2CF = ("Grit", "E2-CF", "grit-e2-cf", "Grit E2CF", None, None, "")
+_SPITFIRE = ("Spartus", "Spitfire", "spartus-spitfire", "Spartus Spitfire", "Spartus Spitfire", None, "")
+STYLE_PICKS = {
+    "power": [
+        ("MARK", "unMARKed 2026", "mark-unmarked-2026", "Mark Unmarked 2026", "MARK unMARKed 2026", None, ""),
+        ("Pakle", "Fuse", "pakle-fuse", None, None, None, ""),
+        _GBX_M,
+        ("RPM", "Q2", "rpm-q2", None, None, None, ""),
+        ("Selkirk", "LABS Project Boomstik", None, None, "Selkirk LABS Project Boomstik", None, "The original Boomstik, not the new Boomstik ST."),
+        ("CPX", "Hyper+", "cpx-hyper-plus", None, "CPX Hyper+", "cpx-hyper", "Currently delisted by USA Pickleball (Nov 2026)."),
+        _SPITFIRE,
+    ],
+    "spin": [
+        ("Holbrook", "Fuze (VantaGrit)", "holbrook-fuze", "Holbrook Fuze", "Holbrook Fuze VantaGrit", None, ""),
+        ("Gearbox", "Pressure X 8M or 8E", "gearbox-pressure-x-8e", "Gearbox Pressure XE", "Gearbox Pressure X 8E", "gearbox-8e", "Either one. Badges show the 8E; see the 8M in the Spin Lab."),
+        ("Luzz", "Cannon XPP", "luzz-cannon-xpp", "Luzz Cannon XPP", "Luzz Cannon XPP M1", "luzz-cannon", ""),
+        _E2CF, _JADE, _SPITFIRE,
+    ],
+    "control": [
+        ("Sypik", "Triton 5", "sypik-triton-5", None, "Sypik Triton 5", "sypik-triton", ""),
+        ("Mehau", "S5", "mehau-s5", None, "Mehau S5", None, ""),
+        _GLIDER, _INF2, _JADE,
+    ],
+    "all-court": [_GBX_E, _INF2, _JADE, _ORIGIN, _E2CF],
+    "beginner": [_ORIGIN, _GLIDER, ("VANWIN", "Alpha Control", "vanwin-alpha-control", None, "VANWIN Alpha Control", None, "")],
+}
 sections = []
 for key, label, desc in STYLES:
-    if key == "spin":
+    if key == "spin" and not STYLE_PICKS.get(key):
         rows = _spin_rows()
         sections.append(f'<section id="spin"><h2>Spin paddles</h2><p class="section-lead">No scores yet. This list follows our measured <a href="spin.html">Spin Lab</a> results, highest average RPM first, USA Pickleball approved paddles only. Condition is shown under each paddle, since used paddles were tested as they were.</p><div class="lb-grid">{"".join(lb_card(i, r, star=False) for i, r in enumerate(rows))}</div></section>')
     elif STYLE_PICKS.get(key):
-        sections.append(f'<section id="{key}"><h2>{label} paddles</h2><p class="section-lead">{desc}.</p><div class="lb-grid">{"".join(lb_card(i, r, star=False) for i, r in enumerate(STYLE_PICKS[key]))}</div></section>')
+        sections.append(f'<section id="{key}"><h2>{label} paddles</h2><p class="section-lead">{desc}. Picked by the Pickleball RX team, no scores yet.{" More to come." if key == "beginner" else ""}</p><div class="lb-grid">{"".join(lb_card(i, r, star=False) for i, r in enumerate(STYLE_PICKS[key]))}</div></section>')
 _soon = [(k, l) for k, l, _ in STYLES if k != "spin" and not STYLE_PICKS.get(k)]
 if _soon:
     _names = [l.lower() for _, l in _soon]
@@ -615,7 +647,7 @@ write("best.html", page("Best pickleball paddles | PickleballRx", f'''
   <div class="lb-grid">{senpai_html}</div>
 </section>
 <section style="padding-bottom:0"><h2>By playing style</h2>
-  <p class="section-lead">Paddles only for now, with no scores. Spin follows our measured results; the other lists are coming soon.</p>
+  <p class="section-lead">Our picks for each playing style. Paddles only for now, with no scores. Tap any badge to see the lab results behind a pick.</p>
   <div class="chips">{"".join(f'<a href="#{k}">{l}</a>' for k, l, _ in STYLES)}</div>
 </section>
 {"".join(sections)}
