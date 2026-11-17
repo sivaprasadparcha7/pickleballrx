@@ -59,6 +59,23 @@ NAME_PHOTO = {"Evolv Origin (CarbonSkyn)": "evolv-origin", "Luzz Cannon XPP": "l
 COLORWAYS = {"grit-e2-cf": [("", "Green, Launch Edition"), ("pink", "Pink"), ("white", "White")]}
 
 
+LINKS = {  # X-ray slug -> (grit collection name, spin table name)
+    "11six24-hurache-jelly-bean-2": (None, "Jelly Bean Hurache 2"),
+    "crush-covert": ("Crush Covert", None), "cpx-hyper-plus": ("CPX Hyper+", None), "e6-ignis": ("E6 Ignis", None),
+    "evolv-origin": ("Evolv", "Evolv Origin"), "friday-aura-pro-tour": ("Friday Aura Pro Tour (beta)", "Friday Aura Pro Tour (Beta)"),
+    "gearbox-pressure-x-8e": ("Gearbox Pressure X 8E", "Gearbox Pressure XE"), "gearbox-pressure-xm": (None, "Gearbox Pressure X M"),
+    "grit-e2-cf": (None, "Grit E2CF"), "holbrook-fuze": ("Holbrook Fuze VantaGrit", "Holbrook Fuze"),
+    "honolulu-j6cr": ("Honolulu J6CR", "Honolulu J6CR"), "luzz-inferno-2": ("Luzz Inferno2", None),
+    "pickle-poppers-pop-n-treasure": ("Pickle Poppers Pop n Treasure", None), "pickle-poppers-pop-n-rush": ("Pickle Poppers Pop N Rush", "Pop N Rush"),
+    "pact-teflon": ("PACT Teflon Evolve", None), "rpm-jade": ("RPM Jade", "RPM Jade"), "mark-unmarked-2026": ("MARK unMARKed 2026", "Mark Unmarked 2026"),
+    "zcebra-gazelle": ("Zcebra Gazelle", "Zcebra Gazelle"),
+    "luzz-cannon-xpp": ("Luzz Cannon XPP M1", "Luzz Cannon XPP"), "luzz-glider-2026": ("Luzz Glider 2026", None),
+    "mehau-e5": ("Mehau E5", None), "mehau-s5": ("Mehau S5", None), "sypik-triton-5": ("Sypik Triton 5", None),
+    "vanwin-alpha-control": ("VANWIN Alpha Control", None), "proton-project-coyote": ("Proton Project Coyote", None), "spartus-spitfire": ("Spartus Spitfire", "Spartus Spitfire"),
+    "speedup-tide": ("Speed Up Tide", "Speed Up Tide"), "vanwin-alpha-power": ("VANWIN Alpha Power", None), "mehau-e4": ("Mehau E4", None),
+}
+
+
 import hashlib
 def _asset_ver():
     h = hashlib.md5()
@@ -468,17 +485,43 @@ write("finder.html", page("Paddle finder | PickleballRx", f'''
 </section></div>''', 0, "finder", desc="Find the right pickleball paddle in 30 seconds."))
 
 # ---------- best ----------
+# Playing-style lists. No scores yet (Siva, 2026-11-17): spin follows measured RPM; the others wait for Siva's picks.
+_NO_XRAY = {"Arronax Boost": ("Arronax", "Boost-1", None, "Arronax Boost", "Arronax Boost-1", "arronax-boost-1")}
+def _spin_rows(n=10):
+    inv = {sp: xs for xs, (g, sp) in LINKS.items() if sp}
+    xr = {x["slug"]: x for x in XRAY}
+    out = []
+    for r in sorted(LABS["spin"] + LABS["spin_extra"], key=lambda r: -r["avg"]):
+        if r.get("usap") is False:
+            continue
+        xs = inv.get(r["paddle"])
+        x = xr.get(xs)
+        if not x and r["paddle"] in _NO_XRAY:
+            out.append(_NO_XRAY[r["paddle"]] + (r["condition"],))
+            if len(out) == n:
+                break
+            continue
+        brand = x["brand"] if x else r["paddle"].split()[0]
+        model = x["name"][len(x["brand"]):].strip() if x and x["name"].startswith(x["brand"]) else (x["name"] if x else r["paddle"])
+        g = LINKS.get(xs, (None, None))[0] if xs else None
+        out.append((brand, model, xs, r["paddle"], g, None, r["condition"]))
+        if len(out) == n:
+            break
+    return out
+STYLE_PICKS = {}  # key -> rows, filled in once Siva confirms each list
 sections = []
 for key, label, desc in STYLES:
-    if key == "beginner":
-        pool = [p for p in PADDLES if p["level"] == "beginner"] or PADDLES
-        top = sorted(pool, key=lambda p: -(p["forgiveness"] + p["control"]))[:3]
-    elif key == "all-court":
-        top = sorted(PADDLES, key=lambda p: -overall(p))[:3]
-    else:
-        top = sorted(PADDLES, key=lambda p: -p[key])[:3]
-    rows = "\n".join(card(p, 0) for p in top)
-    sections.append(f'<section id="{key}"><h2>Best {label.lower()} paddles</h2><p class="section-lead">{desc}. Ranked from our scores.</p><div class="grid">{rows}</div></section>')
+    if key == "spin":
+        rows = _spin_rows()
+        sections.append(f'<section id="spin"><h2>Spin paddles</h2><p class="section-lead">No scores yet. This list follows our measured <a href="spin.html">Spin Lab</a> results, highest average RPM first, USA Pickleball approved paddles only. Condition is shown under each paddle, since used paddles were tested as they were.</p><div class="lb-grid">{"".join(lb_card(i, r, star=False) for i, r in enumerate(rows))}</div></section>')
+    elif STYLE_PICKS.get(key):
+        sections.append(f'<section id="{key}"><h2>{label} paddles</h2><p class="section-lead">{desc}.</p><div class="lb-grid">{"".join(lb_card(i, r, star=False) for i, r in enumerate(STYLE_PICKS[key]))}</div></section>')
+_soon = [(k, l) for k, l, _ in STYLES if k != "spin" and not STYLE_PICKS.get(k)]
+if _soon:
+    _names = [l.lower() for _, l in _soon]
+    sections.append('<section style="padding-top:0"><h2>More lists coming soon</h2>'
+                    + "".join(f'<span id="{k}"></span>' for k, _ in _soon)
+                    + '<p class="section-lead">' + (", ".join(_names[:-1]) + " and " + _names[-1] if len(_names) > 1 else _names[0]).capitalize() + ' paddle lists are on the way. Until then, see <a href="#epp">our top picks</a> and the <a href="lab.html">X-ray</a> and <a href="specs.html">Spec Lab</a> data.</p></section>')
 
 # ---------- Our top picks (chosen by Siva, 2026-11-17) ----------
 # Same row format as LEADERBOARD: (brand, model, X-ray slug, spin table name, grit name, spec id, note)
@@ -572,7 +615,7 @@ write("best.html", page("Best pickleball paddles | PickleballRx", f'''
   <div class="lb-grid">{senpai_html}</div>
 </section>
 <section style="padding-bottom:0"><h2>By playing style</h2>
-  <p class="section-lead">Ranked automatically from the scores in our review database. These are placeholder paddles until real reviews are in.</p>
+  <p class="section-lead">Paddles only for now, with no scores. Spin follows our measured results; the other lists are coming soon.</p>
   <div class="chips">{"".join(f'<a href="#{k}">{l}</a>' for k, l, _ in STYLES)}</div>
 </section>
 {"".join(sections)}
@@ -662,21 +705,6 @@ write("videos.html", page("Video reviews | PickleballRx", f'''
 </section></div>''', 0, "videos", desc="PickleballRx YouTube paddle reviews."))
 
 # ---------- lab cross-links ----------
-LINKS = {  # X-ray slug -> (grit collection name, spin table name)
-    "11six24-hurache-jelly-bean-2": (None, "Jelly Bean Hurache 2"),
-    "crush-covert": ("Crush Covert", None), "cpx-hyper-plus": ("CPX Hyper+", None), "e6-ignis": ("E6 Ignis", None),
-    "evolv-origin": ("Evolv", "Evolv Origin"), "friday-aura-pro-tour": ("Friday Aura Pro Tour (beta)", "Friday Aura Pro Tour (Beta)"),
-    "gearbox-pressure-x-8e": ("Gearbox Pressure X 8E", "Gearbox Pressure XE"), "gearbox-pressure-xm": (None, "Gearbox Pressure X M"),
-    "grit-e2-cf": (None, "Grit E2CF"), "holbrook-fuze": ("Holbrook Fuze VantaGrit", "Holbrook Fuze"),
-    "honolulu-j6cr": ("Honolulu J6CR", "Honolulu J6CR"), "luzz-inferno-2": ("Luzz Inferno2", None),
-    "pickle-poppers-pop-n-treasure": ("Pickle Poppers Pop n Treasure", None), "pickle-poppers-pop-n-rush": ("Pickle Poppers Pop N Rush", "Pop N Rush"),
-    "pact-teflon": ("PACT Teflon Evolve", None), "rpm-jade": ("RPM Jade", "RPM Jade"), "mark-unmarked-2026": ("MARK unMARKed 2026", "Mark Unmarked 2026"),
-    "zcebra-gazelle": ("Zcebra Gazelle", "Zcebra Gazelle"),
-    "luzz-cannon-xpp": ("Luzz Cannon XPP M1", "Luzz Cannon XPP"), "luzz-glider-2026": ("Luzz Glider 2026", None),
-    "mehau-e5": ("Mehau E5", None), "mehau-s5": ("Mehau S5", None), "sypik-triton-5": ("Sypik Triton 5", None),
-    "vanwin-alpha-control": ("VANWIN Alpha Control", None), "proton-project-coyote": ("Proton Project Coyote", None), "spartus-spitfire": ("Spartus Spitfire", "Spartus Spitfire"),
-    "speedup-tide": ("Speed Up Tide", "Speed Up Tide"), "vanwin-alpha-power": ("VANWIN Alpha Power", None), "mehau-e4": ("Mehau E4", None),
-}
 
 
 def slugify(t):
