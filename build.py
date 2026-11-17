@@ -1243,10 +1243,13 @@ write("grit-pickleball.html", page("Grit Pickleball: brand spotlight | Picklebal
   <div class="deal" style="text-align:left"><strong>Get 10% off at Grit</strong> with code <code style="display:inline-block;margin:0 6px">PBRX</code><a href="{GRIT_SHOP}" rel="noopener" target="_blank">Shop Grit &rarr;</a>
   <div class="muted" style="font-size:.82rem;margin-top:4px">Grit provided the E2-CF paddles we tested, and we say so wherever those results appear. Brands have no input into our results. <a href="disclaimers.html">Disclaimers</a></div></div>
 </section>
-<section>
+<section class="story-split">
+  <figure class="story-fig"><img src="assets/paddles/product/grit-lsu.jpg" alt="Jacob of Grit Pickleball with Ethan Martin, president of the LSU pickleball team" width="640" height="983" loading="lazy"><figcaption>Jacob of Grit Pickleball with Ethan Martin, president of the LSU pickleball team.</figcaption></figure>
+  <div>
   <h2>Their story</h2>
   <p class="section-lead">In Grit's own words, the brand "was born in Baton Rouge, Louisiana" and started with "a simple belief: that the players who grind the hardest, compete the smartest" deserve equipment built to match their drive. Their paddles are designed in Baton Rouge, and every one says "Made for more" on the face.</p>
   <p class="muted" style="font-size:.85rem">Source: <a href="https://www.grit-shop.com/pages/about-us" rel="noopener">Grit's About page</a>.</p>
+  </div>
 </section>
 <section style="padding-top:0">
   <h2>The paddles we've tested</h2>

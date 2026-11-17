@@ -299,3 +299,8 @@ td .product-thumb { float: left; height: 42px; margin: 0 10px 0 0; }
 @media (max-width: 420px) { .spot-card { flex-direction: column; } }
 .rev-head { display: flex; align-items: center; gap: 12px; }
 .rev-avatar { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid var(--yellow); }
+.story-split { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 28px; align-items: start; }
+.story-fig { margin: 0; }
+.story-fig img { width: 100%; height: auto; border-radius: 14px; display: block; }
+.story-fig figcaption { font-size: .85rem; color: var(--muted, #5b6478); margin-top: 8px; }
+@media (max-width: 720px) { .story-split { grid-template-columns: 1fr; } .story-fig { max-width: 360px; } }
