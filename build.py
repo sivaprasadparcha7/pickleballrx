@@ -512,7 +512,7 @@ SENPAI_PICKS = [
     ("Diadem", "Edge BluCore", "Comes in Pro and Hybrid shapes.", None),
     ("Crush", "Pro Force 5G", "", None),
     ("Sypik", "Avatar", "Also sold as the Avatar Ultimate Pro Tour.", None),
-    ("Luzz", "Inferno (original)", "The first Inferno. We've X-rayed its successor, the Inferno 2.", ("Inferno 2 X-ray", "xray/luzz-inferno-2.html")),
+    ("Luzz", "Inferno (original)", "We've X-rayed this one.", ("Inferno X-ray", "xray/luzz-inferno.html")),
     ("GRUVN", "MUVN", "Comes in several shapes and thicknesses.", None),
 ]
 senpai_html = "".join(
