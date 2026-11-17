@@ -620,7 +620,7 @@ CANADIAN_PICKS = [
     ("GRUVN", "MUVN-16HD", "", None),
     ("Combat", "Titan Foam Pro", "", None),
     ("Apollo", "MK47 Signature Pro", "", None),
-    ("NextGen", "Hydra", "Comes in standard and elongated shapes.", None),
+    ("NXTGEN", "Hydra", "Comes in standard and elongated shapes. The elongated Hydra E is pictured.", None),
     ("BOOMA", "Aerofoam", "", ("BOOMA store", "https://boomastore.com/en/products/aerofoam-pickleball-paddle")),
 ]
 canadian_html = "".join(_ext_card(i, *r) for i, r in enumerate(CANADIAN_PICKS, 1))
