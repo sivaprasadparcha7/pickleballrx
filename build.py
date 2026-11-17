@@ -40,6 +40,7 @@ CODES = [  # confirmed by Siva 2026-11-17
     dict(brand="RPM", code="PBRX", offer="15% off", url="https://rpmpb.com/"),
     dict(brand="MARK", code="PBRX", offer="10% off", url="https://markpickleball.com/"),
     dict(brand="Pakle", code="PBRX", offer="10% off", url="https://paklepickleball.com/"),
+    dict(brand="Speedup", code="PBRX", offer="10% off", url="https://speeduppickle.com/"),
     dict(brand="Grit", code="PBRX", offer="10% off", url="https://www.grit-shop.com/", no_disc=True),
 ]
 
@@ -140,7 +141,7 @@ def page(title, body, depth=0, current="", desc="Data-driven pickleball paddle r
     <div><img src="{r}assets/logo.svg?v={ASSET_V}" alt="Pickleball Rx" width="129" height="50" style="height:50px;width:auto;margin-bottom:10px">
       <p style="margin:0">Paddle reviews that look inside the paddle: X-rays, microscope images, measured specs and on-court video.</p><p style="margin:8px 0 0">Started by Don, Beni and Siva.</p></div>
     <div><h4>Tools</h4><ul><li><a href="{r}finder.html">Paddle finder</a></li><li><a href="{r}compare.html">Compare</a></li><li><a href="{r}paddles.html">Database</a></li></ul></div>
-    <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}best.html">Our top picks</a></li><li><a href="{r}grit-pickleball.html">Brand spotlight: Grit</a></li><li><a href="{r}evolv-pickleball.html">Brand spotlight: Evolv</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
+    <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}best.html">Our top picks</a></li><li><a href="{r}grit-pickleball.html">Brand spotlight: Grit</a></li><li><a href="{r}evolv-pickleball.html">Brand spotlight: Evolv</a></li><li><a href="{r}speedup-pickleball.html">Brand spotlight: Speedup</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
     <div><h4>Follow</h4><ul><li><a href="{YOUTUBE}" rel="noopener">YouTube</a></li><li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li><li><a href="{r}about.html#contact">Contact</a></li></ul></div>
   </div>
   <p class="legal">&copy; 2026 PickleballRx.org &middot; <a href="{r}disclaimers.html">Disclaimers</a> &middot; Pickleball RX earns commission on some discount codes. Brands have no input into results.</p>
@@ -244,7 +245,7 @@ def lb_card(i, row, star=True):
     if sc: links.append(f'<a class="badge" href="specs.html#{sc}">Specs</a>')
     code = next((c for c in CODES if c["brand"].lower() == brand.lower() and c["code"]), None)
     code_html = f'<div style="font-size:.82rem;margin-top:6px">Code <strong>{e(code["code"])}</strong> &middot; {e(code["offer"])} at <a href="{e(code["url"])}" rel="sponsored noopener">{e(brand)}</a></div>' if code else ""
-    if brand in ("Grit", "Evolv"):
+    if brand in ("Grit", "Evolv", "Speedup"):
         code_html += f'<div style="font-size:.82rem;margin-top:4px"><a href="{brand.lower()}-pickleball.html">Brand spotlight</a></div>'
     top = star and i == 0
     return (f'<div class="lb-item{" lb-top" if top else ""}"><div class="lb-rank">{"&#9733;" if top else i + 1}</div>{img}<div style="min-width:0">'
@@ -353,6 +354,12 @@ write("index.html", page("PickleballRx | Pickleball paddle reviews, X-rays and d
     <div><span class="tag">Brand spotlight</span><h2 style="margin:8px 0 6px">Evolv: the spin that doesn't fade</h2>
     <p>We tested three Evolv Origins at new, one month and six months of play. The CarbonSkyn face kept its spin with no measurable loss. Use code PBRX for 15% off.</p>
     <span class="go">Meet Evolv &rarr;</span></div>
+  </a>
+  <a class="spotlight-band" href="speedup-pickleball.html" style="margin-top:16px">
+    <img src="assets/paddles/speedup-tide-14-hybrid.jpg" alt="Speedup Tide" width="120" height="180" loading="lazy" style="background:#fff;object-fit:contain">
+    <div><span class="tag">Brand spotlight</span><h2 style="margin:8px 0 6px">Speedup: built from first principles</h2>
+    <p>Two engineers who play at a high level designing their own paddles. The Tide is on our Leader Board, and we've X-rayed, scoped and spin-tested it. Use code PBRX for 10% off.</p>
+    <span class="go">Meet Speedup &rarr;</span></div>
   </a>
 </section>
 <section>
@@ -1281,6 +1288,51 @@ write("evolv-pickleball.html", page("Evolv Pickleball: brand spotlight | Pickleb
   </div>
 </section>
 </div>""", 0, "", desc="Evolv Pickleball brand spotlight: the Origin's CarbonSkyn spin durability, X-ray and microscope results."))
+
+
+# ---------- Brand spotlight: Speedup ----------
+# Story quoted only from speeduppickle.com/pages/about-us.
+SPEEDUP_SHOP = "https://speeduppickle.com/"
+_su_spin = next((x for x in LABS["spin"] + LABS["spin_extra"] if x["paddle"] == "Speed Up Tide"), None)
+_su_x = next((x for x in XRAY if x["slug"] == "speedup-tide"), None)
+write("speedup-pickleball.html", page("Speedup Pickleball: brand spotlight | PickleballRx", f"""
+<section class="hero" style="padding:48px 0"><div class="wrap">
+  <div>
+    <span class="tag">Brand spotlight</span>
+    <h1>Built from <em>first principles</em>.</h1>
+    <p>Speedup is two engineers who also play competitive pickleball, designing paddles from scratch. The Tide earned a spot on our Leader Board, and we've X-rayed, scoped and spin-tested it.</p>
+    <div class="btn-row"><a class="btn yellow" href="{SPEEDUP_SHOP}" rel="sponsored noopener" target="_blank">Shop Speedup</a><a class="btn ghost" href="#lab">See our lab results</a></div>
+  </div>
+  <figure class="hero-art" style="margin:0;text-align:center"><img src="assets/paddles/speedup-tide-14-hybrid.jpg" alt="Speedup Tide on the Pickleball RX Leader Board" width="300" height="450" style="border-radius:14px;max-width:300px;width:100%;height:auto;background:#fff;object-fit:contain"></figure>
+</div></section>
+<div class="wrap">
+<section style="padding-bottom:0">
+  {code_box("Speedup")}
+</section>
+<section>
+  <h2>Their story</h2>
+  <p class="section-lead">In Speedup's own words: "We're Santhosh and Mac — founders, engineers, and competitive pickleball players." The brand "started with a simple goal: design high-performance paddles from first principles, not by copying what already exists." Santhosh is a professional player with international medals across Australia, Japan, India and Vietnam, and Mac is a 5.0-rated player and "a gear obsessive." Their aim is to build "paddles we would choose to play with — designed carefully, tested thoroughly, and priced responsibly."</p>
+  <p class="muted" style="font-size:.85rem">Source: <a href="https://speeduppickle.com/pages/about-us" rel="noopener">Speedup's Our Story page</a>.</p>
+</section>
+<section style="padding-top:0">
+  <h2>The paddle we've tested</h2>
+  <div class="spot-grid"><div class="card spot-card"><img src="assets/paddles/speedup-tide-14-hybrid.jpg" alt="Speedup Tide" width="200" height="300" loading="lazy" style="background:#fff;object-fit:contain">
+    <div><div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">Speedup</div>
+    <h3 style="margin:2px 0 6px">Tide</h3>
+    <p style="font-size:.95rem;margin:10px 0">{e(_su_x["core"]) if _su_x else "MPP full foam"} core, {e(_su_x["thickness"]) if _su_x else "14 mm"}, {e(_su_x["face"]) if _su_x else "carbon"} face. On our Leader Board as the Tide 14 Hybrid. The X-ray is of the Tide Elongated.</p>
+    {f'<div class="spot-stat"><b>{_su_spin["avg"]:,}</b><span>RPM spin average ({e(_su_spin["condition"].lower())})</span></div>' if _su_spin else ""}
+    <div class="badges" style="margin:10px 0"><a class="badge" href="xray/speedup-tide.html">X-ray</a><a class="badge" href="spin.html#speed-up-tide">Spin</a><a class="badge" href="grit.html#speed-up-tide">Microscope</a></div>
+    <a class="btn yellow" href="{SPEEDUP_SHOP}" rel="sponsored noopener" target="_blank">Buy at Speedup: code PBRX, 10% off &rarr;</a></div></div></div>
+</section>
+<section id="lab" style="padding-top:0">
+  <h2>What our labs found</h2>
+  <div class="tools">
+    <a class="tool" href="xray/speedup-tide.html"><div class="ico">X</div><h3>Tide X-ray</h3><p>{e(_su_x["core"]) if _su_x else "Full foam"} core with a {e(_su_x["ring"]) if _su_x else "TPE"} perimeter, labeled from the X-ray.</p><span class="go">See inside &rarr;</span></a>
+    <a class="tool" href="spin.html#speed-up-tide"><div class="ico">RPM</div><h3>Spin</h3><p>{f'{_su_spin["avg"]:,} RPM average and {_su_spin["top"]:,} highest hit, new, on our 960 fps rig.' if _su_spin else "Measured on our 960 fps rig."}</p><span class="go">See spin results &rarr;</span></a>
+    <a class="tool" href="grit.html#speed-up-tide"><div class="ico">&micro;</div><h3>Under the microscope</h3><p>The Tide's carbon face under a 4K microscope.</p><span class="go">See the grit &rarr;</span></a>
+  </div>
+</section>
+</div>""", 0, "", desc="Speedup Pickleball brand spotlight: the Tide's X-ray, microscope and spin results, plus code PBRX."))
 
 write("404.html", page("Page not found | PickleballRx", '<article class="article"><h1>Page not found</h1><p>That page doesn\'t exist. <a href="/">Go to the home page</a>.</p></article>', 0))
 
