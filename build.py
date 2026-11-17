@@ -289,7 +289,7 @@ REVIEWERS = [
     ("Supa Senpai", "Pickleball Senpai", "Paddle reviews and pickleball videos.",
      "https://supasenpai.com/pickleball-senpai/", "Website"),
     ("Ed", "Pickleball Freak Show", "Paddle reviews and gear talk.",
-     "https://www.youtube.com/results?search_query=Pickleball+Freak+Show", "Find on YouTube"),
+     "https://www.youtube.com/@pickleballfreakshow", "YouTube"),
     ("PB on Call", "Pickleball On Call", "Paddle reviews and gear videos.",
      "https://www.youtube.com/@PickleballOnCall", "YouTube"),
     ("Rally House", "Rally House Pickleball", "Pickleball club and community in Carlsbad, California.",
