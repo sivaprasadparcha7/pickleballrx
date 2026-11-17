@@ -50,7 +50,7 @@ NAMES = {
  "rpm-v2": ("rpm-v2", "RPM V2 (Friction Pro V2)", "RPM"),
  "spartus-spitfire": ("spartus-spitfire", "Spartus Spitfire", "Spartus"),
  "speedup-tide-elongated": ("speedup-tide", "Speedup Tide Elongated (14L)", "Speedup"),
- "standout-cf4": ("standout-cf4", "Standout CF4 Power NXT Gen", "Standout"),
+ "standout-cf4": ("standout-cf4", "Standout CF4 Absolute Black", "Standout"),
  "sypik-triton-5": ("sypik-triton-5", "Sypik Triton 5", "Sypik"),
  "vanwin-alpha-control": ("vanwin-alpha-control", "Vanwin Alpha Control", "Vanwin"),
  "vanwin-alpha-power": ("vanwin-alpha-power", "Vanwin Alpha Power", "Vanwin"),

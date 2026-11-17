@@ -591,7 +591,7 @@ TOP_PICKS = [
     ("foreign", "Foreign picks", "Five more favorites from the team.", [
         ("Zcebra", "Gazelle", "zcebra-gazelle", "Zcebra Gazelle", "Zcebra Gazelle", None, ""),
         ("PACT", "Teflon Evolve TE16", "pact-teflon", None, "PACT Teflon Evolve", None, ""),
-        ("Standout", "CF4", "standout-cf4", None, None, None, ""),
+        ("Standout", "CF4 Absolute Black", "standout-cf4", None, None, None, ""),
         ("Kamito", "Alpha X", "kamito-alpha-x", None, None, None, ""),
         ("Sypik", "Triton 5", "sypik-triton-5", None, "Sypik Triton 5", "sypik-triton", ""),
     ]),
