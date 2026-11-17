@@ -57,7 +57,10 @@ NAME_PHOTO = {"Evolv Origin (CarbonSkyn)": "evolv-origin", "Luzz Cannon XPP": "l
               "Grit E2CF": "grit-e2-cf", "Grit E1 CW": "grit-e1-cw", "Grit E1 TW": "grit-e1-tw",
               "Holbrook Fuze": "holbrook-fuze", "Holbrook Fuze VantaGrit": "holbrook-fuze", "Mark Unmarked 2026": "mark-unmarked-2026",
               "MARK unMARKed 2026": "mark-unmarked-2026", "Luzz Inferno M2": "luzz-inferno-2", "Luzz Inferno2": "luzz-inferno-2",
-              "CPX Hyper+": "cpx-hyper-plus", "E6 Ignis": "e6-ignis"}
+              "CPX Hyper+": "cpx-hyper-plus", "E6 Ignis": "e6-ignis",
+              "RPM Jade": "rpm-jade", "Mehau S5": "mehau-s5", "Proton Project Coyote": "proton-project-coyote",
+              "VANWIN Alpha Control": "vanwin-alpha-control", "Luzz Glider 2026": "luzz-glider-2026",
+              "Selkirk LABS Project Boomstik": "selkirk-labs-project-boomstik"}
 # Extra colorways shown on a paddle's own page (assets/paddles/product/<slug>-<color>.jpg).
 COLORWAYS = {"grit-e2-cf": [("", "Green, Launch Edition"), ("pink", "Pink"), ("white", "White")]}
 
@@ -247,7 +250,7 @@ LEADERBOARD = [
 def lb_card(i, row, star=True):
     brand, model, xs, sp, gr, sc, note = row
     # Thumbnail: prefer a real paddle photo (assets/paddles/<brand-model>.jpg), else the X-ray, else the grit scan.
-    photo = product_photo(xs) or f"assets/paddles/{_slug(brand + ' ' + model)}.jpg"
+    photo = product_photo(xs or _slug(brand + " " + model)) or f"assets/paddles/{_slug(brand + ' ' + model)}.jpg"
     if os.path.exists(os.path.join(OUT, photo)):
         thumb, fit = photo, "contain"
     elif xs and os.path.exists(os.path.join(OUT, f"assets/xray/{xs}-labeled.jpg")):
