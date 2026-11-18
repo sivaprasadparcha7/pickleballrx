@@ -1707,22 +1707,40 @@
   },
   {
    "brand": "Arronax",
-   "store": "https://arronaxpickleball.com/",
+   "store": "https://www.arronaxsport.com/collections/paddles",
    "complete": true,
-   "note": "Lineup from Arronax's Malaysian store. Their US store doesn't allow automated reading, so US prices aren't shown.",
    "paddles": [
     {
      "model": "KVL-005",
      "mm": "14 / 16",
+     "price": 249.99,
      "tested": "arronax-kvl-005",
-     "url": "https://www.arronax.my/products/arronax-kvl005-foam-core-carbon-fiber-pickleball-paddle-16mm",
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-kvl005",
      "core": "Foam",
      "face": "T800 carbon fiber"
     },
     {
+     "model": "KVL-005 Starry Series",
+     "mm": "14 / 16",
+     "price": 267.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-kvl005-starry-series",
+     "core": "Foam",
+     "face": "T800 carbon fiber",
+     "approval": "USAP, UPA-A"
+    },
+    {
+     "model": "KVL-004 Upgraded",
+     "price": 246.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-kvl004-upgraded",
+     "core": "Foam with EVA",
+     "face": "Kevlar",
+     "approval": "USAP, UPA-A"
+    },
+    {
      "model": "KVL-004",
+     "price": 235.99,
      "tested": "arronax-kvl-004",
-     "url": "https://www.arronax.my/products/arronax-kvl004-foam-core",
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-kvl004",
      "weight": "7.9oz (225g)",
      "core": "Foam (XOP) and EVA",
      "face": "Kevlar",
@@ -1734,13 +1752,44 @@
     {
      "model": "KVL-003",
      "mm": "16",
-     "url": "https://www.arronax.my/products/arronax-kvl003-upgraded-premium-kevlar-pickleball-paddle-16mm",
+     "price": 189.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/kvl003",
      "weight": "8.1oz",
      "core": "PP and EVA hybrid honeycomb",
      "face": "Kevlar",
      "size": "16.3\" x 7.5\"",
      "handle": "5.7\"",
      "grip": "4.13\""
+    },
+    {
+     "model": "Dettforec F1",
+     "price": 399.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-dettforec-f1",
+     "core": "EPP and EVA foam",
+     "face": "18K carbon fiber",
+     "approval": "USAP, UPA-A"
+    },
+    {
+     "model": "Lightning L1",
+     "price": 264.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-lightning-l1",
+     "face": "Kevlar and carbon weave",
+     "approval": "USAP"
+    },
+    {
+     "model": "Vortex V2",
+     "price": 190.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-vortex-v2"
+    },
+    {
+     "model": "T1",
+     "price": 190.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-t1"
+    },
+    {
+     "model": "Cyclone C2",
+     "price": 189.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-cyclone-c2"
     },
     {
      "model": "Thunder 10 Gen 4",
@@ -1754,16 +1803,40 @@
      "grip": "4.02\""
     },
     {
+     "model": "Thunder 10 Gen 2",
+     "price": 189.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-thunder-10-gen-2",
+     "core": "EPP and EVA foam",
+     "face": "T700 carbon fiber"
+    },
+    {
+     "model": "Thunder 10",
+     "price": 165.99,
+     "note": "From $165.99",
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-thunder-10"
+    },
+    {
+     "model": "Thunder (Gen 1)",
+     "tested": "arronax-thunder-gen-1"
+    },
+    {
      "model": "Boost-1",
      "mm": "16",
+     "price": 137.99,
      "tested": "grit:Arronax Boost-1",
-     "url": "https://www.arronax.my/products/boost-1",
+     "note": "From $137.99",
+     "url": "https://www.arronaxsport.com/collections/paddles/products/boost-1",
      "weight": "7.8oz (220g)",
      "core": "MPP and EVA foam",
      "face": "T700 carbon fiber",
      "size": "16.38\" x 7.32\"",
      "handle": "5.71\"",
      "grip": "4.02\""
+    },
+    {
+     "model": "Boost-1 Luminous Series",
+     "price": 162.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arroanx-boost-1-luminous-series"
     },
     {
      "model": "Boost-1 QuickSand",
@@ -1776,8 +1849,54 @@
      "handle": "5.71\""
     },
     {
-     "model": "Thunder (Gen 1)",
-     "tested": "arronax-thunder-gen-1"
+     "model": "Elite X4",
+     "price": 160.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-elite-x4"
+    },
+    {
+     "model": "TS3",
+     "price": 145.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-ts3"
+    },
+    {
+     "model": "Top1S",
+     "price": 130.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-top1s"
+    },
+    {
+     "model": "Speed X1",
+     "price": 119.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-speed-x1"
+    },
+    {
+     "model": "001",
+     "price": 119.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-001"
+    },
+    {
+     "model": "AO1",
+     "price": 109.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-ao1"
+    },
+    {
+     "model": "Aurora AX06",
+     "price": 108.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/aurora-ax06"
+    },
+    {
+     "model": "Warrior Top1",
+     "price": 100.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arroax-top1"
+    },
+    {
+     "model": "Elite X3",
+     "price": 92.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-elite-x3"
+    },
+    {
+     "model": "TS1",
+     "price": 79.99,
+     "url": "https://www.arronaxsport.com/collections/paddles/products/arronax-ts1"
     }
    ]
   },
