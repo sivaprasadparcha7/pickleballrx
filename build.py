@@ -53,7 +53,7 @@ def product_photo(slug):
 
 
 # Product photos keyed by the paddle name used in the lab data.
-NAME_PHOTO = {"RPM Friction Pro V2": "rpm-v2", "Evolv Origin (CarbonSkyn)": "evolv-origin", "Luzz Cannon XPP": "luzz-cannon-xpp",
+NAME_PHOTO = {"Gearbox Pressure XE": "gearbox-pressure-x-8e", "Gearbox Pressure X 8E": "gearbox-pressure-x-8e", "Gearbox Pressure X M": "gearbox-pressure-xm", "RPM Friction Pro V2": "rpm-v2", "Evolv Origin (CarbonSkyn)": "evolv-origin", "Luzz Cannon XPP": "luzz-cannon-xpp",
               "Grit E2CF": "grit-e2-cf", "Grit E1 CW": "grit-e1-cw", "Grit E1 TW": "grit-e1-tw",
               "Holbrook Fuze": "holbrook-fuze", "Holbrook Fuze VantaGrit": "holbrook-fuze", "Mark Unmarked 2026": "mark-unmarked-2026",
               "MARK unMARKed 2026": "mark-unmarked-2026", "Luzz Inferno M2": "luzz-inferno-2", "Luzz Inferno2": "luzz-inferno-2",
@@ -383,7 +383,7 @@ write("index.html", page("PickleballRx | Pickleball paddle reviews, X-rays and d
     <span class="go">Meet Evolv &rarr;</span></div>
   </a>
   <a class="spotlight-band" href="gearbox-pickleball.html" style="margin-top:16px">
-    <img src="assets/paddles/gearbox-pressure-x-8e.jpg" alt="Gearbox Pressure X 8E" width="120" height="180" loading="lazy" style="background:#fff;object-fit:contain">
+    <img src="assets/paddles/product/gearbox-pressure-x-8e.jpg" alt="Gearbox Pressure X 8E" width="120" height="180" loading="lazy" style="background:#fff;object-fit:contain">
     <div><span class="tag">Brand spotlight</span><h2 style="margin:8px 0 6px">Gearbox: passion, engineered</h2>
     <p>Founder Rafael Filippini is one of the most passionate people in the paddle business. He went from pro racquetball and the Marines to building paddles with his own patented carbon cores. His Pressure X 8E holds the top spot on our Leader Board.</p>
     <span class="go">Meet Gearbox &rarr;</span></div>
@@ -1410,7 +1410,7 @@ write("gearbox-pickleball.html", page("Gearbox Pickleball: brand spotlight | Pic
     <p>Rafael Filippini, Gearbox's founder and CEO, is one of the most passionate people in the paddle business. He went from pro racquetball and the Marines to building paddles in San Diego with his own patented carbon cores, and he calls his team "extremely passionate about what we do." His Pressure X 8E holds the top spot on our Leader Board.</p>
     <div class="btn-row"><a class="btn yellow" href="{GEARBOX_SHOP}" rel="noopener" target="_blank">Shop Gearbox</a><a class="btn ghost" href="#lab">See our lab results</a></div>
   </div>
-  <figure class="hero-art" style="margin:0;text-align:center"><img src="assets/paddles/gearbox-pressure-x-8e.jpg" alt="Gearbox Pressure X 8E on the Pickleball RX Leader Board" width="300" height="450" style="border-radius:14px;max-width:300px;width:100%;height:auto;background:#fff;object-fit:contain"></figure>
+  <figure class="hero-art" style="margin:0;text-align:center"><img src="assets/paddles/product/gearbox-pressure-x-8e.jpg" alt="Gearbox Pressure X 8E on the Pickleball RX Leader Board" width="300" height="450" style="border-radius:14px;max-width:300px;width:100%;height:auto;background:#fff;object-fit:contain"></figure>
 </div></section>
 <div class="wrap">
 <section>
@@ -1422,8 +1422,8 @@ write("gearbox-pickleball.html", page("Gearbox Pickleball: brand spotlight | Pic
 <section style="padding-top:0">
   <h2>The paddles we've tested</h2>
   <div class="spot-grid">
-    {_gb_card("Pressure X 8E", "assets/paddles/gearbox-pressure-x-8e.jpg", "gearbox-pressure-x-8e", _gb_e, "gearbox-pressure-xe", "gearbox-pressure-x-8e", "The top spot on our Leader Board.")}
-    {_gb_card("Pressure X 8M", "assets/paddles/gearbox-pressure-x-8m.jpg", "gearbox-pressure-xm", _gb_m, "gearbox-pressure-x-m", "", "The MPP-foam sibling of the 8E.")}
+    {_gb_card("Pressure X 8E", "assets/paddles/product/gearbox-pressure-x-8e.jpg", "gearbox-pressure-x-8e", _gb_e, "gearbox-pressure-xe", "gearbox-pressure-x-8e", "The top spot on our Leader Board.")}
+    {_gb_card("Pressure X 8M", "assets/paddles/product/gearbox-pressure-xm.jpg", "gearbox-pressure-xm", _gb_m, "gearbox-pressure-x-m", "", "The MPP-foam sibling of the 8E.")}
   </div>
 </section>
 <section id="lab" style="padding-top:0">
