@@ -782,14 +782,101 @@
   },
   {
    "brand": "PACT",
-   "store": "https://pactpickleball.com/",
-   "complete": false,
-   "note": "PACT's store doesn't allow automated reading, so only the paddle we've tested is here.",
+   "store": "https://pactpaddles.com/collections/all-paddles",
+   "complete": true,
+   "note": "PACT is an Australian brand, so prices are in Australian dollars from their own store.",
    "paddles": [
     {
      "model": "Teflon Evolve TE16",
      "mm": "16",
-     "tested": "pact-teflon"
+     "price": 290,
+     "tested": "pact-teflon",
+     "note": "Sold out",
+     "url": "https://pactpaddles.com/products/teflon-evolve-te16",
+     "weight": "8.3oz",
+     "face": "Teflon mesh over raw T700 carbon",
+     "cur": "A$"
+    },
+    {
+     "model": "Teflon Inova TI16",
+     "mm": "16",
+     "price": 290,
+     "url": "https://pactpaddles.com/products/te16",
+     "weight": "8.3oz",
+     "face": "Teflon mesh over raw T700 carbon",
+     "cur": "A$"
+    },
+    {
+     "model": "Concept Rafter CR16",
+     "mm": "16",
+     "price": 270,
+     "url": "https://pactpaddles.com/products/concept-rafter-cr16-paddle",
+     "weight": "8.1oz",
+     "face": "3K raw carbon fiber, blasted texture",
+     "cur": "A$"
+    },
+    {
+     "model": "Concept C16s",
+     "shape": "Square",
+     "mm": "16",
+     "price": 215.45,
+     "url": "https://pactpaddles.com/products/pact-c16s-paddle",
+     "weight": "7.6oz",
+     "face": "3K carbon fiber, blasted texture",
+     "cur": "A$"
+    },
+    {
+     "model": "Concept Kevlar CK16",
+     "shape": "Round",
+     "mm": "16",
+     "price": 235,
+     "url": "https://pactpaddles.com/products/pact-ck16-paddle",
+     "face": "Kevlar and 3K carbon blend",
+     "cur": "A$"
+    },
+    {
+     "model": "Concept Kevlar CK16s",
+     "shape": "Elongated square",
+     "mm": "16",
+     "price": 234,
+     "url": "https://pactpaddles.com/products/pact-ck16s-paddle",
+     "face": "Kevlar and raw carbon blend",
+     "cur": "A$"
+    },
+    {
+     "model": "Heritage H16",
+     "mm": "16",
+     "price": 199.95,
+     "url": "https://pactpaddles.com/products/heritage-h16-paddle",
+     "weight": "7.8oz",
+     "face": "Raw carbon fiber",
+     "cur": "A$"
+    },
+    {
+     "model": "Heritage H14",
+     "mm": "14",
+     "price": 199.95,
+     "url": "https://pactpaddles.com/products/heritage-h14-paddle",
+     "weight": "7.1oz",
+     "face": "Raw carbon fiber",
+     "cur": "A$"
+    },
+    {
+     "model": "AdaptV A16",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 178.55,
+     "url": "https://pactpaddles.com/products/adaptv-a16-paddle",
+     "weight": "7.8oz",
+     "cur": "A$"
+    },
+    {
+     "model": "AdaptV A14",
+     "shape": "Elongated",
+     "mm": "14",
+     "price": 178.55,
+     "url": "https://pactpaddles.com/products/adaptv-a14-paddle",
+     "cur": "A$"
     }
    ]
   },
@@ -893,28 +980,97 @@
   },
   {
    "brand": "Proton",
-   "store": "https://protonsports.co/",
+   "store": "https://protonsports.com/collections/pickleball-paddles",
    "complete": true,
-   "note": "Proton's own store doesn't allow automated reading, so this list comes from Just Paddles.",
    "paddles": [
+    {
+     "model": "Project Bluejay (Series One)",
+     "shape": "Elongated",
+     "mm": "15",
+     "price": 295,
+     "note": "Upcoming release, pre-order",
+     "url": "https://protonsports.com/products/project-bluejay",
+     "weight": "7.6oz",
+     "core": "Foam (Atomic)",
+     "face": "NanoTac",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "UPA-A"
+    },
+    {
+     "model": "Project Cardinal (Series One)",
+     "shape": "Elongated",
+     "mm": "15",
+     "price": 295,
+     "note": "Upcoming release, pre-order",
+     "url": "https://protonsports.com/products/project-cardinal",
+     "weight": "7.7oz",
+     "core": "MPP foam",
+     "face": "NanoTac",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP"
+    },
     {
      "model": "Project Coyote",
      "shape": "Elongated",
      "mm": "15",
      "price": 195,
-     "tested": "proton-project-coyote"
+     "tested": "proton-project-coyote",
+     "url": "https://protonsports.com/products/project-coyote",
+     "weight": "7.7oz",
+     "core": "Polypropylene honeycomb, foam perimeter",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP, UPA-A"
     },
     {
-     "model": "Project Peacock",
-     "shape": "Elongated / Widebody",
+     "model": "Project Peacock Elongated",
+     "shape": "Elongated",
+     "mm": "13 / 15",
+     "price": 180,
+     "was": 280,
+     "tested": "proton-project-peacock",
+     "url": "https://protonsports.com/products/project-peacock-elongated-15mm",
+     "weight": "8.0oz",
+     "core": "High-density foam (Atomic)",
+     "face": "Textured",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.375\"",
+     "grip": "4.25\"",
+     "approval": "USAP, UPA-A"
+    },
+    {
+     "model": "Project Peacock Wide Body",
+     "shape": "Wide body",
      "mm": "13 / 15",
      "price": 175,
      "was": 280,
-     "tested": "proton-project-peacock"
+     "url": "https://protonsports.com/products/project-peacock-wide-body-15mm",
+     "weight": "7.7oz",
+     "core": "High-density foam (Atomic)",
+     "face": "Textured",
+     "size": "15.75\" x 8.25\"",
+     "handle": "5.25\"",
+     "grip": "4.25\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "Series Four Project Roadrunner",
-     "price": 175
+     "shape": "Edgeless",
+     "mm": "15",
+     "price": 175,
+     "url": "https://protonsports.com/products/series-four-project-roadrunner",
+     "weight": "7.9oz",
+     "core": "Hybrid",
+     "face": "Woven carbon fiber and Kevlar",
+     "size": "16.5\" x 7.375\"",
+     "handle": "5.375\"",
+     "grip": "4.25\"",
+     "approval": "USAP, UPA-A"
     }
    ]
   },
@@ -1469,13 +1625,21 @@
   },
   {
    "brand": "Pisgah",
-   "store": "https://pisgahpickleball.com/",
-   "complete": false,
-   "note": "Pisgah's store didn't load for us, so only the paddle we've tested is here.",
+   "store": "https://pisgahpaddles.com/",
+   "complete": true,
    "paddles": [
     {
      "model": "Ridge",
      "tested": "pisgah-ridge"
+    },
+    {
+     "model": "Excalibur Special Edition",
+     "mm": "16",
+     "price": 179.99,
+     "note": "Pre-order, ships January 2027",
+     "url": "https://pisgahpaddles.com/products/excalibur-special-edition-pickleball-paddle",
+     "core": "Dual-density foam",
+     "face": "Textured grit surface"
     }
    ]
   },
@@ -2864,19 +3028,123 @@
   },
   {
    "brand": "Gherkin",
-   "store": "https://gherkinpickleball.com/",
-   "complete": false,
-   "note": "Gherkin's store doesn't allow automated reading, so these models come from retailer listings and may not be the full lineup.",
+   "store": "https://www.gherkinusa.com/collections/paddles",
+   "complete": true,
    "paddles": [
     {
-     "model": "Draco",
-     "shape": "Elongated / Widebody / Hybrid",
-     "mm": "16"
+     "model": "Draco OP",
+     "price": 189.99,
+     "note": "Pre-order",
+     "url": "https://www.gherkinusa.com/products/draco-op",
+     "core": "Foam (nanocellular polymer)",
+     "face": "Carbon fiber with friction coating"
+    },
+    {
+     "model": "Draco Hybrid",
+     "shape": "Hybrid",
+     "price": 179.99,
+     "url": "https://www.gherkinusa.com/products/draco",
+     "core": "Foam (nanocellular polymer)"
+    },
+    {
+     "model": "Draco Elongated",
+     "shape": "Elongated",
+     "price": 179.99,
+     "url": "https://www.gherkinusa.com/products/draco-e",
+     "core": "Foam (nanocellular polymer)"
+    },
+    {
+     "model": "Draco Widebody",
+     "shape": "Widebody",
+     "price": 179.99,
+     "url": "https://www.gherkinusa.com/products/draco-w",
+     "core": "Foam (nanocellular polymer)"
+    },
+    {
+     "model": "Wraith",
+     "mm": "16",
+     "price": 135,
+     "url": "https://www.gherkinusa.com/products/wraith",
+     "core": "Polypropylene honeycomb, foam perimeter",
+     "face": "Carbon-fiberglass-carbon layup"
     },
     {
      "model": "Nightshade",
-     "shape": "Elongated / Hybrid",
-     "mm": "14"
+     "mm": "14",
+     "price": 125,
+     "url": "https://www.gherkinusa.com/products/nightshade",
+     "core": "Polymer honeycomb",
+     "face": "Carbon-fiberglass-carbon layup"
+    },
+    {
+     "model": "Phantom",
+     "shape": "Wide",
+     "mm": "16",
+     "price": 125,
+     "url": "https://www.gherkinusa.com/products/phantom",
+     "core": "Polymer honeycomb",
+     "face": "12K raw carbon fiber"
+    },
+    {
+     "model": "Quantum",
+     "shape": "Hybrid",
+     "mm": "16",
+     "price": 125,
+     "url": "https://www.gherkinusa.com/products/quantum",
+     "core": "Polymer honeycomb",
+     "face": "12K raw carbon fiber"
+    },
+    {
+     "model": "Spectre",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 125,
+     "url": "https://www.gherkinusa.com/products/spectre",
+     "core": "Polymer honeycomb",
+     "face": "12K raw carbon fiber"
+    },
+    {
+     "model": "Aegis",
+     "shape": "Wide",
+     "mm": "16",
+     "price": 99.99,
+     "url": "https://www.gherkinusa.com/products/aegis",
+     "core": "Polymer honeycomb",
+     "face": "12K raw carbon fiber"
+    },
+    {
+     "model": "Solace",
+     "shape": "Hybrid",
+     "mm": "16",
+     "price": 99.99,
+     "url": "https://www.gherkinusa.com/products/solace",
+     "core": "Polymer honeycomb",
+     "face": "12K raw carbon fiber"
+    },
+    {
+     "model": "Aspire",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 99.99,
+     "url": "https://www.gherkinusa.com/products/aspire",
+     "core": "Polymer honeycomb",
+     "face": "12K raw carbon fiber"
+    },
+    {
+     "model": "G-Spot 2 Trainer",
+     "shape": "Trainer",
+     "price": 54.99,
+     "url": "https://www.gherkinusa.com/products/gspot2",
+     "core": "All-foam (nanocellular polymer)"
+    },
+    {
+     "model": "G-Spot Trainer",
+     "shape": "Trainer",
+     "mm": "16",
+     "price": 45,
+     "url": "https://www.gherkinusa.com/products/g-spot-trainer",
+     "core": "Polymer honeycomb",
+     "face": "Carbon-fiberglass-carbon layup"
     }
    ]
   },
@@ -3236,6 +3504,55 @@
      "approval": "USAP pending",
      "shape": "Elongated",
      "mm": "14"
+    }
+   ]
+  },
+  {
+   "brand": "Thrive",
+   "store": "https://thrivepb.com/",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "Ignite Foam Elongated",
+     "shape": "Elongated",
+     "mm": "15.5",
+     "price": 219.99,
+     "url": "https://thrivepb.com/products/ignite-foam-new-spiced-coral",
+     "weight": "7.8-8.0oz",
+     "core": "Foam",
+     "face": "T700 carbon fiber and fiberglass",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP"
+    },
+    {
+     "model": "Ignite Foam ARC Elongated",
+     "shape": "Elongated",
+     "mm": "15.5",
+     "price": 219.99,
+     "url": "https://thrivepb.com/products/ignite-foam-new-spiced-coral",
+     "weight": "7.8-8.0oz",
+     "core": "Foam",
+     "face": "T700 carbon fiber and fiberglass",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP"
+    },
+    {
+     "model": "Ignite Foam Hybrid",
+     "shape": "Hybrid",
+     "mm": "15.5",
+     "price": 219.99,
+     "url": "https://thrivepb.com/products/ignite-foam-new-spiced-coral",
+     "weight": "7.75-8.0oz",
+     "core": "Foam",
+     "face": "T700 carbon fiber and fiberglass",
+     "size": "16.3\" x 7.5-7.7\"",
+     "handle": "5.5\"",
+     "grip": "4.0\"",
+     "approval": "USAP"
     }
    ]
   }
