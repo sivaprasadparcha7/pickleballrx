@@ -864,7 +864,15 @@
      "price": 100,
      "was": 185,
      "note": "Not USAP approved",
-     "url": "https://www.grit-shop.com/products/r4-tw"
+     "url": "https://www.grit-shop.com/products/r4-tw",
+     "weight": "7.9-8.15oz",
+     "core": "Large-cell polypropylene with dual-density foam",
+     "face": "Unidirectional carbon fiber",
+     "size": "16.35\" x 7.55\"",
+     "handle": "5.4\"",
+     "grip": "4.25\"",
+     "approval": "Not USAP approved",
+     "mm": "16"
     },
     {
      "model": "S1-CW Standard",
@@ -1608,98 +1616,269 @@
     {
      "model": "J6CR Crystal Blue",
      "price": 195,
-     "url": "https://808pickle.com/products/j6cr-crystal-blue-endurance-surface%E2%84%A2-pre-order"
+     "url": "https://808pickle.com/products/j6cr-crystal-blue-endurance-surface%E2%84%A2-pre-order",
+     "weight": "8.0-8.2oz",
+     "core": "Multi-density foam",
+     "face": "Carbon fiber and fiberglass, gritted surface",
+     "size": "16.48\" x 7.52\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "UPA-A",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "J2CR Crystal Blue",
      "price": 195,
-     "url": "https://808pickle.com/products/j2cr-crystal-blue-endurance-surface%E2%84%A2-pre-order"
+     "url": "https://808pickle.com/products/j2cr-crystal-blue-endurance-surface%E2%84%A2-pre-order",
+     "weight": "8.0-8.3oz",
+     "core": "EPP foam with EVA perimeter",
+     "face": "Carbon fiber, gritted surface",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5-6\"",
+     "grip": "4.125\"",
+     "approval": "UPA-A",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J3CR Crystal Blue",
      "price": 195,
-     "url": "https://808pickle.com/products/j3cr-crystal-blue%E2%84%A2-endurance-surface%E2%84%A2"
+     "url": "https://808pickle.com/products/j3cr-crystal-blue%E2%84%A2-endurance-surface%E2%84%A2",
+     "weight": "7.9-8.3oz",
+     "core": "EPP foam with EVA perimeter",
+     "face": "Carbon fiber and fiberglass, gritted surface",
+     "size": "16\" x 8\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "UPA-A",
+     "shape": "Square",
+     "mm": "16"
     },
     {
      "model": "J6M+ Jam Paddle Crystal Blue",
      "price": 143,
-     "url": "https://808pickle.com/products/j6m-jam-paddle-crystal-blue%E2%84%A2-endurance-surface%E2%84%A2-pre-order"
+     "url": "https://808pickle.com/products/j6m-jam-paddle-crystal-blue%E2%84%A2-endurance-surface%E2%84%A2-pre-order",
+     "weight": "8.0-8.2oz",
+     "core": "MPP foam with EVA perimeter",
+     "face": "Carbon fiber, gritted surface",
+     "size": "16.48\" x 7.52\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP pending",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "J6CR",
      "price": 195,
      "tested": "honolulu-j6cr",
-     "url": "https://808pickle.com/products/j6cr"
+     "url": "https://808pickle.com/products/j6cr",
+     "weight": "8.0-8.2oz",
+     "core": "Multi-density foam",
+     "face": "Carbon fiber",
+     "size": "16.48\" x 7.52\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "J2CR",
      "price": 195,
-     "url": "https://808pickle.com/products/j6cr-pre-order-copy"
+     "url": "https://808pickle.com/products/j6cr-pre-order-copy",
+     "weight": "8.0-8.3oz",
+     "core": "EPP foam with EVA perimeter",
+     "face": "Carbon fiber",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5-6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J3CR",
      "price": 195,
-     "url": "https://808pickle.com/products/j2cr-pre-order-copy"
+     "url": "https://808pickle.com/products/j2cr-pre-order-copy",
+     "weight": "7.9-8.3oz",
+     "core": "EPP foam with EVA perimeter",
+     "face": "Carbon fiber and fiberglass",
+     "size": "16\" x 8\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Square",
+     "mm": "16"
     },
     {
      "model": "J6FC+",
      "price": 195,
-     "url": "https://808pickle.com/products/j6fc-pre-order"
+     "url": "https://808pickle.com/products/j6fc-pre-order",
+     "weight": "8.0-8.3oz",
+     "core": "Multi-density foam",
+     "face": "Carbon fiber",
+     "size": "16.48\" x 7.52\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "J6NF",
      "price": 195,
-     "url": "https://808pickle.com/products/j6nf-pre-order"
+     "url": "https://808pickle.com/products/j6nf-pre-order",
+     "weight": "8.0-8.3oz",
+     "core": "Multi-density foam",
+     "face": "Carbon fiber",
+     "size": "16.48\" x 7.52\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "J2NF",
      "price": 195,
-     "url": "https://808pickle.com/products/sword-shield-j2fc-beta-pre-order-copy"
+     "url": "https://808pickle.com/products/sword-shield-j2fc-beta-pre-order-copy",
+     "weight": "8.0-8.3oz",
+     "core": "EPP foam with EVA perimeter",
+     "face": "Carbon fiber",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5-6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J2NFT",
      "price": 195,
-     "url": "https://808pickle.com/products/sword-shield-j2nft-pre-order"
+     "url": "https://808pickle.com/products/sword-shield-j2nft-pre-order",
+     "weight": "8.0-8.3oz",
+     "core": "EPP foam with EVA perimeter",
+     "face": "Carbon fiber and titanium-plated fiber",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J2NFK",
      "price": 195,
-     "url": "https://808pickle.com/products/sword-shield-j2nfk-pre-order"
+     "url": "https://808pickle.com/products/sword-shield-j2nfk-pre-order",
+     "weight": "8.0-8.3oz",
+     "core": "Multi-density foam",
+     "face": "Aramid (Kevlar)",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J2FC+",
      "price": 195,
-     "url": "https://808pickle.com/products/sword-shield-j2fc-plus"
+     "url": "https://808pickle.com/products/sword-shield-j2fc-plus",
+     "weight": "8.0-8.3oz",
+     "core": "Multi-density foam",
+     "face": "Carbon fiber",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5-6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J3NF",
      "price": 195,
-     "url": "https://808pickle.com/products/sword-shield-j3nf-pre-order"
+     "url": "https://808pickle.com/products/sword-shield-j3nf-pre-order",
+     "weight": "7.9-8.3oz",
+     "core": "EPP foam with EVA perimeter",
+     "face": "Carbon fiber and fiberglass",
+     "size": "16\" x 8\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Square",
+     "mm": "16"
     },
     {
      "model": "J7NF",
      "price": 195,
-     "url": "https://808pickle.com/products/sword-shield-j7nf-pre-order"
+     "url": "https://808pickle.com/products/sword-shield-j7nf-pre-order",
+     "weight": "7.9-8.3oz",
+     "core": "EPP foam with EVA perimeter",
+     "face": "Carbon fiber",
+     "size": "16.6\" x 7.4\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "J2K+ (Gen 3)",
      "price": 170,
-     "url": "https://808pickle.com/products/sword-shield-j2k-1"
+     "url": "https://808pickle.com/products/sword-shield-j2k-1",
+     "weight": "8.0-8.4oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Aramid (Kevlar)",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J2TI+ (Gen 3)",
      "price": 170,
-     "url": "https://808pickle.com/products/sword-shield-j2ti-copy"
+     "url": "https://808pickle.com/products/sword-shield-j2ti-copy",
+     "weight": "8.0-8.4oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Carbon fiber and titanium-plated fiber",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J2H+ (Gen 3)",
      "price": 170,
-     "url": "https://808pickle.com/products/sword-shield-j2hplus"
+     "url": "https://808pickle.com/products/sword-shield-j2hplus",
+     "weight": "8.0-8.2oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Raw composite",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J2K (Gen 2)",
      "price": 155,
-     "url": "https://808pickle.com/products/sword-shield-j2k"
+     "url": "https://808pickle.com/products/sword-shield-j2k",
+     "weight": "8.0-8.4oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Aramid (Kevlar)",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J2K Pro (Gen 2)",
@@ -1820,20 +1999,41 @@
      "model": "Arma T Metallic 14mm",
      "mm": "14",
      "price": 199.99,
-     "url": "https://holbrookpickleball.com/products/arma-t-metallic-14mm"
+     "url": "https://holbrookpickleball.com/products/arma-t-metallic-14mm",
+     "weight": "8.0oz",
+     "core": "Dual-density foam",
+     "face": "Metallic carbon weave",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "approval": "USAP",
+     "shape": "T-shape"
     },
     {
      "model": "Arma X Metallic 14mm",
      "mm": "14",
      "price": 199.99,
-     "url": "https://holbrookpickleball.com/products/arma-x-14mm"
+     "url": "https://holbrookpickleball.com/products/arma-x-14mm",
+     "weight": "8.0oz",
+     "core": "Dual-density foam",
+     "face": "Metallic carbon weave",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.25\"",
+     "grip": "4.25\"",
+     "approval": "USAP"
     },
     {
      "model": "Pro Aero Metallic T",
      "mm": "14",
      "price": 169.99,
      "was": 199.99,
-     "url": "https://holbrookpickleball.com/products/aero-metallic-t"
+     "url": "https://holbrookpickleball.com/products/aero-metallic-t",
+     "weight": "7.7-8.0oz",
+     "face": "Metallic poly carbon weave",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "shape": "Edgeless"
     },
     {
      "model": "Pro Aero T Elongated",
@@ -1877,23 +2077,51 @@
     {
      "model": "Pro Power Pro E",
      "price": 149.99,
-     "url": "https://holbrookpickleball.com/products/power-pro-e"
+     "url": "https://holbrookpickleball.com/products/power-pro-e",
+     "weight": "7.7-8.0oz",
+     "core": "Foam-injected polypropylene",
+     "face": "Unidirectional T700 carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.25\"",
+     "grip": "4.25\"",
+     "approval": "USAP",
+     "shape": "Elongated",
+     "mm": "14 / 16"
     },
     {
      "model": "Mav",
      "mm": "16",
      "price": 99.99,
-     "url": "https://holbrookpickleball.com/products/mav-16mm"
+     "url": "https://holbrookpickleball.com/products/mav-16mm",
+     "weight": "8.0oz",
+     "core": "Polypropylene honeycomb",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.25\""
     },
     {
      "model": "Performance Centre Court",
      "price": 79.99,
-     "url": "https://holbrookpickleball.com/products/center-court-pickleball-paddle"
+     "url": "https://holbrookpickleball.com/products/center-court-pickleball-paddle",
+     "weight": "7.8oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Carbon fiber and graphite blend",
+     "size": "15.75\" x 7.8\"",
+     "handle": "5\"",
+     "approval": "USAP",
+     "mm": "14"
     },
     {
      "model": "Performance Day N' Night",
      "price": 79.99,
-     "url": "https://holbrookpickleball.com/products/the-holbrook"
+     "url": "https://holbrookpickleball.com/products/the-holbrook",
+     "weight": "7.8oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Carbon fiber and graphite blend",
+     "size": "15.75\" x 7.8\"",
+     "handle": "5\"",
+     "approval": "USAP",
+     "mm": "14"
     },
     {
      "model": "Performance Rewind",
@@ -1910,7 +2138,14 @@
     {
      "model": "Performance SoHo",
      "price": 79.99,
-     "url": "https://holbrookpickleball.com/products/soho"
+     "url": "https://holbrookpickleball.com/products/soho",
+     "weight": "7.8oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Carbon fiber and graphite blend",
+     "size": "15.75\" x 7.8\"",
+     "handle": "5\"",
+     "approval": "USAP",
+     "mm": "14"
     },
     {
      "model": "Sport Alta",
@@ -1927,18 +2162,39 @@
     {
      "model": "Sport Dune",
      "price": 59.99,
-     "url": "https://holbrookpickleball.com/products/dune-pickleball-paddle"
+     "url": "https://holbrookpickleball.com/products/dune-pickleball-paddle",
+     "weight": "7.7oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Fiberglass",
+     "size": "15.75\" x 7.8\"",
+     "handle": "5\"",
+     "approval": "USAP",
+     "mm": "14"
     },
     {
      "model": "Sport Midnight",
      "price": 59.99,
-     "url": "https://holbrookpickleball.com/products/holbrook"
+     "url": "https://holbrookpickleball.com/products/holbrook",
+     "weight": "7.8oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Fiberglass",
+     "size": "15.75\" x 7.8\"",
+     "handle": "5\"",
+     "approval": "USAP",
+     "mm": "14"
     },
     {
      "model": "Paddle Trainer",
      "shape": "Training paddle",
      "price": 49.99,
-     "url": "https://holbrookpickleball.com/products/paddle-trainer"
+     "url": "https://holbrookpickleball.com/products/paddle-trainer",
+     "weight": "7.6-7.9oz",
+     "core": "Foam-injected polypropylene",
+     "face": "Unidirectional T700 carbon fiber",
+     "size": "15\" x 5.25\"",
+     "handle": "7.25\"",
+     "grip": "4.25\"",
+     "mm": "16"
     }
    ]
   },
