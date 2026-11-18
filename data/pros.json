@@ -78,7 +78,7 @@
       {"rank": 1, "name": "Megan Fudge", "points": 6020, "brand": "Franklin", "paddle": "C45 Megan Fudge signature", "status": "signature", "src": "franklin_fudge"},
       {"rank": 2, "name": "Sofia Sewing", "points": 4450, "status": "unconfirmed"},
       {"rank": 3, "name": "Shelby Bates", "points": 4070, "status": "unconfirmed"},
-      {"rank": 4, "name": "Jillian Braverman", "points": 3920, "status": "unconfirmed", "note": "Signed a multi-year deal with GAMMA in 2024; current paddle not confirmed."},
+      {"rank": 4, "name": "Jillian Braverman", "points": 3920, "brand": "Thrive", "paddle": "Ignite", "status": "team"},
       {"rank": 5, "name": "Christine Maddox", "points": 3400, "brand": "Reload", "paddle": "(model not confirmed)", "status": "team"}
     ]}
   ]
