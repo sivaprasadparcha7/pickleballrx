@@ -381,7 +381,7 @@ write("index.html", page("PickleballRx | Pickleball paddle reviews, X-rays and d
   <a class="spotlight-band" href="evolv-pickleball.html" style="margin-top:16px">
     <img src="assets/paddles/product/evolv-origin.jpg" alt="Evolv Origin" width="120" height="180" loading="lazy">
     <div><span class="tag">Brand spotlight</span><h2 style="margin:8px 0 6px">Evolv: the spin that doesn't fade</h2>
-    <p>We tested three Evolv Origins at new, one month and six months of play. The CarbonSkyn face kept its spin with no measurable loss. Use code PBRX for 15% off.</p>
+    <p>Founder Joe Pham went from dismissing pickleball to building his own paddle. We tested three Evolv Origins at new, one month and six months of play. The CarbonSkyn face kept its spin with no measurable loss. Use code PBRX for 15% off.</p>
     <span class="go">Meet Evolv &rarr;</span></div>
   </a>
   <a class="spotlight-band" href="gearbox-pickleball.html" style="margin-top:16px">
@@ -1321,7 +1321,7 @@ write("grit-pickleball.html", page("Grit Pickleball: brand spotlight | Picklebal
 
 
 # ---------- Brand spotlight: Evolv ----------
-# Story quoted only from evolvpickleball.com/about.
+# Founder story text supplied by Siva (2026-11-18).
 EVOLV_SHOP = "https://evolvpickleball.com/"
 _ev_dur = next((d for d in LABS["durability"] if d["paddle"].startswith("Evolv Origin")), None)
 _ev_spin = next((x for x in LABS["spin"] + LABS["spin_extra"] if x["paddle"] == "Evolv Origin"), None)
@@ -1342,11 +1342,15 @@ write("evolv-pickleball.html", page("Evolv Pickleball: brand spotlight | Pickleb
   <p class="muted" style="font-size:.88rem">Evolv requested the CarbonSkyn durability testing and provided the three Origin paddles. Brands have no input into our results.</p>
 </section>
 <section class="story-split">
-  <figure class="story-fig"><img src="assets/paddles/product/evolv-owner.jpg" alt="The founder of Evolv Pickleball hitting a low shot with an Evolv paddle" width="640" height="960" loading="lazy"><figcaption>Evolv's founder on court with an Evolv paddle.</figcaption></figure>
+  <figure class="story-fig"><img src="assets/paddles/product/evolv-owner.jpg" alt="Joe Pham, founder of Evolv Pickleball, hitting a low shot with an Evolv paddle" width="640" height="960" loading="lazy"><figcaption>Evolv founder Joe Pham on court with an Evolv paddle.</figcaption></figure>
   <div>
-  <h2>Their story</h2>
-  <p class="section-lead">Evolv says it was "founded by a former tennis player who initially underestimated the game of pickleball." He gave the game another chance during the COVID pandemic and "was instantly hooked." Working with a manufacturing partner, he went through "dozens of prototype iterations," and "that pursuit became the EVOLV Origin." Their motto is "Mastery Through Progress."</p>
-  <p class="muted" style="font-size:.85rem">Source: <a href="https://www.evolvpickleball.com/about" rel="noopener">Evolv's About page</a>.</p>
+  <h2>Joe's story</h2>
+  <p class="section-lead"><strong>EVOLV was created by a player who refused to settle.</strong></p>
+  <p>Founder Joe Pham, a former tennis player, dismissed pickleball when he was introduced to it in 2018. Three years later, he gave it another chance. The game hooked him, but the community made him fall in love with it.</p>
+  <p>He soon became more involved, competing, leading local communities, organizing tournaments, and serving as an ambassador for several paddle brands. Along the way, his inner gear nerd took over. He was buying the latest paddle every few weeks and customizing it to fit his game.</p>
+  <p>That search became the starting point for EVOLV. Joe wanted to build a paddle he could trust in every part of his game. As an engineer with over 18 years of business experience in design, manufacturing, and distribution in the U.S. and overseas, he brought the expertise and manufacturing relationships to turn that idea into the EVOLV Origin.</p>
+  <p>That journey shaped EVOLV&rsquo;s philosophy: <strong>Mastery Through Progress.</strong> Lasting improvement takes dedication, discipline, and continual refinement. It&rsquo;s a belief that guides both his approach to the game and every paddle EVOLV creates.</p>
+  <p>Today, Joe is proud to share the EVOLV Origin paddle with the community that welcomed him and everyone who loves the game he once dismissed.</p>
   </div>
 </section>
 <section style="padding-top:0">
