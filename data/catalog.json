@@ -974,7 +974,15 @@
      "mm": "14",
      "price": 110,
      "was": 220,
-     "url": "https://us.sixzeropickleball.com/products/black-opal-14mm"
+     "url": "https://us.sixzeropickleball.com/products/black-opal-14mm",
+     "weight": "8.0-8.3oz",
+     "core": "Solid foam (G4 Aerospace)",
+     "face": "Raw carbon fiber",
+     "size": "16.3\" x 7.5-7.7\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP, UPA-A",
+     "shape": "Hybrid"
     },
     {
      "model": "Black Opal 14mm Elongated",
@@ -1167,14 +1175,23 @@
    "paddles": [
     {
      "model": "KVL-005",
-     "mm": "16",
+     "mm": "14 / 16",
      "tested": "arronax-kvl-005",
-     "url": "https://www.arronax.my/products/arronax-kvl005-foam-core-carbon-fiber-pickleball-paddle-16mm"
+     "url": "https://www.arronax.my/products/arronax-kvl005-foam-core-carbon-fiber-pickleball-paddle-16mm",
+     "core": "Foam",
+     "face": "T800 carbon fiber"
     },
     {
      "model": "KVL-004",
      "tested": "arronax-kvl-004",
-     "url": "https://www.arronax.my/products/arronax-kvl004-foam-core"
+     "url": "https://www.arronax.my/products/arronax-kvl004-foam-core",
+     "weight": "7.9oz (225g)",
+     "core": "Foam (XOP) and EVA",
+     "face": "Kevlar",
+     "size": "16.46\" x 7.48\"",
+     "handle": "5.83\"",
+     "grip": "4.13\"",
+     "mm": "16"
     },
     {
      "model": "KVL-003",
@@ -1184,13 +1201,25 @@
     {
      "model": "Thunder 10 Gen 4",
      "mm": "16",
-     "url": "https://www.arronax.my/products/thunder10"
+     "url": "https://www.arronax.my/products/thunder10",
+     "weight": "7.8oz (220g)",
+     "core": "EPP and EVA foam",
+     "face": "3D-weave carbon fiber",
+     "size": "16.38\" x 7.32\"",
+     "handle": "5.71\"",
+     "grip": "4.02\""
     },
     {
      "model": "Boost-1",
      "mm": "16",
      "tested": "grit:Arronax Boost-1",
-     "url": "https://www.arronax.my/products/boost-1"
+     "url": "https://www.arronax.my/products/boost-1",
+     "weight": "7.8oz (220g)",
+     "core": "MPP and EVA foam",
+     "face": "T700 carbon fiber",
+     "size": "16.38\" x 7.32\"",
+     "handle": "5.71\"",
+     "grip": "4.02\""
     },
     {
      "model": "Boost-1 QuickSand",
@@ -1291,26 +1320,57 @@
      "shape": "Elongated / Hybrid / Widebody",
      "price": 118.3,
      "was": 169,
-     "url": "https://fridaypickle.com/products/aura-pro-paddle"
+     "url": "https://fridaypickle.com/products/aura-pro-paddle",
+     "weight": "8.0oz",
+     "core": "Dual foam",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.5\" (Elongated)",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "approval": "USAP",
+     "mm": "16"
     },
     {
      "model": "Friday Original (Round Top)",
      "shape": "Round top",
      "price": 69,
-     "url": "https://fridaypickle.com/products/friday-paddle"
+     "url": "https://fridaypickle.com/products/friday-paddle",
+     "weight": "8.2oz",
+     "core": "Polypropylene honeycomb (8mm cells)",
+     "face": "Textured carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "approval": "USAP",
+     "mm": "16"
     },
     {
      "model": "Friday Original (Flat Top)",
      "shape": "Flat top",
      "price": 69,
-     "url": "https://fridaypickle.com/products/friday-paddle"
+     "url": "https://fridaypickle.com/products/friday-paddle",
+     "weight": "8.2oz",
+     "core": "Polypropylene honeycomb (8mm cells)",
+     "face": "Textured carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "approval": "USAP",
+     "mm": "16"
     },
     {
      "model": "Challenger",
      "shape": "Flat top",
      "mm": "16",
      "price": 89,
-     "url": "https://fridaypickle.com/products/friday-challenger-paddle"
+     "url": "https://fridaypickle.com/products/friday-challenger-paddle",
+     "weight": "8.0oz",
+     "core": "Polypropylene honeycomb (8mm cells)",
+     "face": "Double-layer T700 raw carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "approval": "USAP"
     },
     {
      "model": "Aura Pro Tour",
@@ -2200,13 +2260,28 @@
      "model": "Fuse Gen5",
      "price": 119,
      "tested": "pakle-fuse",
-     "url": "https://paklepickleball.com/products/fuse-new-gen5-pickleball-paddle"
+     "url": "https://paklepickleball.com/products/fuse-new-gen5-pickleball-paddle",
+     "weight": "7.8-8.1oz",
+     "core": "Foam (TriFusion core)",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.4\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "Fuse Hybrid-W Gen4.5",
      "shape": "Hybrid-W",
      "price": 119,
-     "url": "https://paklepickleball.com/products/fuse-hybrid-w-shape-new-gen4-5-pickleball-paddle"
+     "url": "https://paklepickleball.com/products/fuse-hybrid-w-shape-new-gen4-5-pickleball-paddle",
+     "weight": "7.8-8.1oz",
+     "core": "Foam (TriFusion core)",
+     "face": "T700 raw carbon fiber",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "mm": "16"
     },
     {
      "model": "Fuse Hybrid Gen4.5",
@@ -2218,13 +2293,27 @@
      "model": "Infinity Gen4.5",
      "price": 105,
      "tested": "pakle-infinity",
-     "url": "https://paklepickleball.com/products/infinity-new-gen4-5-pickleball-paddle"
+     "url": "https://paklepickleball.com/products/infinity-new-gen4-5-pickleball-paddle",
+     "weight": "7.9-8.2oz",
+     "core": "Foam (TriFusion core)",
+     "face": "T700 raw carbon fiber",
+     "size": "16.25\" x 7.75\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "Evolution 01 Reactive Gen3",
      "price": 139.99,
      "was": 169.99,
-     "url": "https://paklepickleball.com/products/evolution-01-reactive-new-gen3-pickleball-paddle"
+     "url": "https://paklepickleball.com/products/evolution-01-reactive-new-gen3-pickleball-paddle",
+     "weight": "7.9-8.1oz",
+     "core": "TPE",
+     "face": "Carbon fiber",
+     "approval": "USAP",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "Evolution 01 Gen3",
@@ -2234,21 +2323,44 @@
      "model": "Fuse+ Elongated 16mm",
      "shape": "Elongated",
      "mm": "16",
-     "url": "https://paklepickleball.com/products/fuse-new-gen4-5-pickleball-paddle"
+     "url": "https://paklepickleball.com/products/fuse-new-gen4-5-pickleball-paddle",
+     "weight": "7.8-8.1oz",
+     "core": "Foam (TriFusion core)",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.4\"",
+     "handle": "5.5\"",
+     "grip": "4.25\""
     },
     {
      "model": "Blade X Power 13mm",
      "mm": "13",
-     "url": "https://paklepickleball.com/products/blade-x-power-kevlar-pickleball-paddle"
+     "url": "https://paklepickleball.com/products/blade-x-power-kevlar-pickleball-paddle",
+     "weight": "8.0-8.2oz",
+     "core": "Polymer honeycomb",
+     "face": "Kevlar with T700 carbon fiber",
+     "approval": "USAP"
     },
     {
      "model": "Blade X Control 16mm",
      "mm": "16",
-     "url": "https://paklepickleball.com/products/blade-x-control-kevlar-pickleball-paddle"
+     "url": "https://paklepickleball.com/products/blade-x-control-kevlar-pickleball-paddle",
+     "weight": "8.1-8.4oz",
+     "core": "Polymer honeycomb",
+     "face": "Kevlar",
+     "approval": "USAP"
     },
     {
      "model": "Silence",
-     "url": "https://paklepickleball.com/products/silence-raw-t700-carbon-quiet-pickleball-paddle"
+     "url": "https://paklepickleball.com/products/silence-raw-t700-carbon-quiet-pickleball-paddle",
+     "weight": "7.9-8.1oz",
+     "core": "Carbon rib core (SCR-A)",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.375\"",
+     "handle": "6.0\"",
+     "grip": "4.125\"",
+     "approval": "USAP pending",
+     "shape": "Elongated",
+     "mm": "14"
     }
    ]
   }
