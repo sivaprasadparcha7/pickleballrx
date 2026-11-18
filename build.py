@@ -600,7 +600,7 @@ TOP_PICKS = [
 SENPAI_PICKS = [
     ("Diadem", "Edge BluCore Pro 14", "", None),
     ("Crush", "Pro Force 5G", "", None),
-    ("Sypik", "Avatar Pro", "", None),
+    ("Sypik", "Avatar Pro", "We've X-rayed this one.", ("Avatar Pro X-ray", "xray/sypik-avatar-pro.html")),
     ("Luzz", "Inferno (original)", "We've X-rayed this one.", ("Inferno X-ray", "xray/luzz-inferno.html")),
     ("GRUVN", "MUVN-16HD", "", None),
 ]
@@ -820,7 +820,7 @@ write("lab.html", page("X-Ray Rx: pickleball paddle X-rays | PickleballRx", f'''
 <div class="wrap">
 <section>
   <div class="tools">
-    <div class="tool"><div class="ico">8</div><h3>Honeycomb cells are about 7 to 8.5 mm</h3><p>Nearly every honeycomb core we've measured falls in that range. The Vanwin Alpha Control, at about 10 mm, is the only large-cell paddle so far.</p></div>
+    <div class="tool"><div class="ico">8</div><h3>Honeycomb cells are about 7 to 8.5 mm</h3><p>Nearly every honeycomb core we've measured falls in that range. The Vanwin Alpha Control and the 11SIX24 Hurache-X Alpha Pro Power, both at about 10 mm, are the only large-cell paddles so far.</p></div>
     <div class="tool"><div class="ico">F</div><h3>Foam has taken over</h3><p>{sum(1 for x in XRAY if "foam" in x["tags"])} of {len(XRAY)} paddles have no honeycomb in the face: full foam cores (EPP, MPP, EVA or dual-density), usually inside a denser perimeter ring.</p></div>
     <div class="tool"><div class="ico">R</div><h3>Rings range from about 7 to 28 mm</h3><p>Perimeter rings vary a lot, from about 7 to 8 mm (Jelly Bean 2, Kamito Dominus) to 26 to 28 mm (Facolos Elite X 2.0, Luzz Inferno 2).</p></div>
   </div>

@@ -56,6 +56,15 @@ NAMES = {
  "vanwin-alpha-power": ("vanwin-alpha-power", "Vanwin Alpha Power", "Vanwin"),
  "zcebra-gazelle": ("zcebra-gazelle", "Zcebra Gazelle", "Zcebra"),
  "zocker-aspire": ("zocker-aspire", "Zocker Aspire", "Zocker"),
+ "11six24-hurache-alpha-power-2": ("11six24-hurache-x-alpha-pro-power", "11SIX24 Hurache-X Alpha Pro Power", "11SIX24"),
+ "arronax-kvl-004": ("arronax-kvl-004", "Arronax KVL-004", "Arronax"),
+ "arronax-thunder-gen1": ("arronax-thunder-gen-1", "Arronax Thunder (Gen 1)", "Arronax"),
+ "bread-and-butter-loco-1": ("bread-butter-loco-1", "Bread & Butter LOCO 1", "Bread & Butter"),
+ "flik-f1": ("flik-f1", "FLiK F1 Elongated", "FLiK"),
+ "nox-jc6-16mm": ("nox-x-foam-jc6", "NOX X-Foam JC6 16mm", "NOX"),
+ "nox-jma": ("nox-x-foam-jma", "NOX X-Foam JMA 16mm", "NOX"),
+ "sypik-avatar-pro": ("sypik-avatar-pro", "Sypik Avatar Pro", "Sypik"),
+ "wika-air-1": ("wika-qd-air", "Wika QD Air (Air 1) 16mm", "Wika"),
 }
 
 REELS = {

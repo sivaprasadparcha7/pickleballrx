@@ -1,6 +1,59 @@
 {
  "paddles": [
   {
+   "slug": "11six24-hurache-x-alpha-pro-power",
+   "name": "11SIX24 Hurache-X Alpha Pro Power",
+   "brand": "11SIX24",
+   "image": "11six24-hurache-alpha-power-2-labeled.png",
+   "core": "PP honeycomb (ALPHA) + foam",
+   "cell_size": "≈ 10 mm measured (10 mm listed)",
+   "ring": "Foam frame ≈ 18–21 mm (±1.5 mm)",
+   "thickness": "16 mm",
+   "face": "FCC: carbon fibre + fiberglass",
+   "weight": "≈ 8.0 oz (static)",
+   "size": "16.5 × 7.5 in, Elongated (Hurache-X)",
+   "specs": [
+    [
+     "Core type",
+     "PP honeycomb (ALPHA) + foam"
+    ],
+    [
+     "Cell size",
+     "≈ 10 mm measured (10 mm listed)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Foam frame ≈ 18–21 mm (±1.5 mm)"
+    ],
+    [
+     "Face",
+     "FCC: carbon fibre + fiberglass"
+    ],
+    [
+     "Weight",
+     "≈ 8.0 oz (static)"
+    ],
+    [
+     "Size",
+     "16.5 × 7.5 in, Elongated (Hurache-X)"
+    ],
+    [
+     "Handle",
+     "6 in, 4.125 in grip"
+    ]
+   ],
+   "sources": "Sources: 11SIX24 (Hurache-X Alpha Pro Power), Matt's Pickleball. Scale from 7.5\" width. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
    "slug": "11six24-hurache-jelly-bean-2",
    "name": "11SIX24 Hurache-X Jelly Bean 2",
    "brand": "11SIX24",
@@ -54,6 +107,64 @@
    "unreleased": false
   },
   {
+   "slug": "arronax-kvl-004",
+   "name": "Arronax KVL-004",
+   "brand": "Arronax",
+   "image": "arronax-kvl-004-labeled.png",
+   "core": "Dual-density foam: EPP + EVA",
+   "cell_size": "No honeycomb in face (handle ≈ 9.5 mm)",
+   "ring": "≈ 27 mm (±1): 9.5 mm band + 17 mm frame",
+   "thickness": "16 mm",
+   "face": "DuPont Kevlar, coarse peel-ply texture",
+   "weight": "8.1 oz measured",
+   "size": "16.5 × 7.375 in (419 × 187 mm), Elongated",
+   "specs": [
+    [
+     "Core type",
+     "Dual-density foam: EPP + EVA"
+    ],
+    [
+     "Cell size",
+     "No honeycomb in face (handle ≈ 9.5 mm)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "≈ 27 mm (±1): 9.5 mm band + 17 mm frame"
+    ],
+    [
+     "Face",
+     "DuPont Kevlar, coarse peel-ply texture"
+    ],
+    [
+     "Weight",
+     "8.1 oz measured"
+    ],
+    [
+     "Size",
+     "16.5 × 7.375 in (419 × 187 mm), Elongated"
+    ],
+    [
+     "Handle",
+     "5.75 in, 4.125 in grip"
+    ],
+    [
+     "Inserts",
+     "3 core slots, side edge strips at 3 & 9, ≈ 22 mm disc in handle"
+    ]
+   ],
+   "sources": "Specs: Matt's Pickleball (Arronax KVL004 16mm, measured). Scale from 187 mm width. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam",
+    "epp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
    "slug": "arronax-kvl-005",
    "name": "Arronax KVL-005",
    "brand": "Arronax",
@@ -100,6 +211,121 @@
     ]
    ],
    "sources": "Specs: mattspickleball.com (KVL005 16mm, measured) · picklepaddlebrunei (retailer listing)",
+   "tags": [
+    "foam"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "arronax-thunder-gen-1",
+   "name": "Arronax Thunder (Gen 1)",
+   "brand": "Arronax",
+   "image": "arronax-thunder-gen1-labeled.png",
+   "core": "Dual-density foam: EPP + EVA",
+   "cell_size": "No honeycomb in face (full foam)",
+   "ring": "≈ 26 mm (±1): 9 mm band + 17 mm frame",
+   "thickness": "16 mm",
+   "face": "Carbon fibre, coarse peel-ply texture",
+   "weight": "7.75 oz measured (220 ± 5 g listed)",
+   "size": "16.5 × 7.375 in (416 × 186 mm), Elongated",
+   "specs": [
+    [
+     "Core type",
+     "Dual-density foam: EPP + EVA"
+    ],
+    [
+     "Cell size",
+     "No honeycomb in face (full foam)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "≈ 26 mm (±1): 9 mm band + 17 mm frame"
+    ],
+    [
+     "Face",
+     "Carbon fibre, coarse peel-ply texture"
+    ],
+    [
+     "Weight",
+     "7.75 oz measured (220 ± 5 g listed)"
+    ],
+    [
+     "Size",
+     "16.5 × 7.375 in (416 × 186 mm), Elongated"
+    ],
+    [
+     "Handle",
+     "5.75 in, 4.125 in grip"
+    ],
+    [
+     "Inserts",
+     "≈ 22 mm disc in the upper handle"
+    ]
+   ],
+   "sources": "Specs: Matt's Pickleball (Arronax Thunder10 16mm) · picklepaddlebrunei listing. Scale from 186 mm width. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam",
+    "epp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "bread-butter-loco-1",
+   "name": "Bread & Butter LOCO 1",
+   "brand": "Bread & Butter",
+   "image": "bread-and-butter-loco-1-labeled.png",
+   "core": "Full foam, high-density PP",
+   "cell_size": "No honeycomb in face (handle ≈ 7–7.5 mm)",
+   "ring": "Injected foam frame ≈ 25 mm (±1 mm)",
+   "thickness": "16 mm",
+   "face": "Nano T700 raw carbon, thermoformed",
+   "weight": "7.6–8.0 oz (static)",
+   "size": "16.3 × 7.5–7.7 in, Hybrid (assumed)",
+   "specs": [
+    [
+     "Core type",
+     "Full foam, high-density PP"
+    ],
+    [
+     "Cell size",
+     "No honeycomb in face (handle ≈ 7–7.5 mm)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Injected foam frame ≈ 25 mm (±1 mm)"
+    ],
+    [
+     "Face",
+     "Nano T700 raw carbon, thermoformed"
+    ],
+    [
+     "Weight",
+     "7.6–8.0 oz (static)"
+    ],
+    [
+     "Size",
+     "16.3 × 7.5–7.7 in, Hybrid (assumed)"
+    ],
+    [
+     "Handle",
+     "5.3 in grip, 4.25 in circumference"
+    ],
+    [
+     "Inserts",
+     "Metal-bright shoulder strips ≈ 48 mm (inferred)"
+    ]
+   ],
+   "sources": "Sources: Bread & Butter (The Loco 16mm), mypickleballconnect review. Scale from 7.6\" width (Hybrid). Labels interpret the X-ray, not a cutaway.",
    "tags": [
     "foam"
    ],
@@ -475,6 +701,64 @@
    "sources": "Specs: facolos.au (NEXX), thepickleballstore.co.uk (Facolos Nexx), mattspickleball.com (NEXX 16mm lab data). Cell size and widths are measured, not published. X-ray interpretation, not a cutaway.",
    "tags": [
     "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "flik-f1",
+   "name": "FLiK F1 Elongated",
+   "brand": "FLiK",
+   "image": "flik-f1-labeled.png",
+   "core": "EPP full foam, TerraCore XC (published)",
+   "cell_size": "None (foam) · 95 drilled holes ≈ 8 mm",
+   "ring": "Edge band ≈ 9 ± 1 mm incl. ≈ 3 mm guard",
+   "thickness": "16 mm",
+   "face": "4 layers raw T700 Toray carbon + fiberglass",
+   "weight": "≈ 7.9 oz / 224 g",
+   "size": "16.5\" × 7.5\" elongated",
+   "specs": [
+    [
+     "Core type",
+     "EPP full foam, TerraCore XC (published)"
+    ],
+    [
+     "Cell size",
+     "None (foam) · 95 drilled holes ≈ 8 mm"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Edge band ≈ 9 ± 1 mm incl. ≈ 3 mm guard"
+    ],
+    [
+     "Face",
+     "4 layers raw T700 Toray carbon + fiberglass"
+    ],
+    [
+     "Weight",
+     "≈ 7.9 oz / 224 g"
+    ],
+    [
+     "Size",
+     "16.5\" × 7.5\" elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.3\" solid PU / 4.13–4.15\""
+    ],
+    [
+     "Inserts",
+     "Metal side strips ≈ 49 mm at 3 & 9"
+    ]
+   ],
+   "sources": "Specs: flikpickleball.com (F1 Elongated), pickleballeffect.com review, The Dink (95 drilled holes). Widths scaled to the 190 mm width. X-ray interpretation, not a cutaway.",
+   "tags": [
+    "foam",
+    "epp"
    ],
    "reel": "",
    "unreleased": false
@@ -1506,6 +1790,121 @@
    "unreleased": false
   },
   {
+   "slug": "nox-x-foam-jc6",
+   "name": "NOX X-Foam JC6 16mm",
+   "brand": "NOX",
+   "image": "nox-jc6-16mm-labeled.png",
+   "core": "X-FOAM Gen 4 full foam (EPP + EVA)",
+   "cell_size": "None (full foam)",
+   "ring": "≈ 8.4 mm ring (±0.5), foam not disclosed",
+   "thickness": "16 mm",
+   "face": "Raw carbon fibre, coarse peel ply",
+   "weight": "8.1 oz avg (8.3 oz PPA Lab)",
+   "size": "16.38 × 7.56 in, Elongated",
+   "specs": [
+    [
+     "Core type",
+     "X-FOAM Gen 4 full foam (EPP + EVA)"
+    ],
+    [
+     "Cell size",
+     "None (full foam)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "≈ 8.4 mm ring (±0.5), foam not disclosed"
+    ],
+    [
+     "Face",
+     "Raw carbon fibre, coarse peel ply"
+    ],
+    [
+     "Weight",
+     "8.1 oz avg (8.3 oz PPA Lab)"
+    ],
+    [
+     "Size",
+     "16.38 × 7.56 in, Elongated"
+    ],
+    [
+     "Handle",
+     "5.47 in (PPA) / 5.65 in (retail)"
+    ],
+    [
+     "Inserts",
+     "Throat block; no MOI weights listed"
+    ]
+   ],
+   "sources": "Sources: Pickleball Central, PPA Paddle Lab (NOX X-FOAM JC6 16mm). Scale from 7.56\" width. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam",
+    "epp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "nox-x-foam-jma",
+   "name": "NOX X-Foam JMA 16mm",
+   "brand": "NOX",
+   "image": "nox-jma-labeled.png",
+   "core": "X-FOAM Gen 4 full foam (PP-based)",
+   "cell_size": "None (full foam)",
+   "ring": "≈ 7.3 mm ring (±0.5), foam not disclosed",
+   "thickness": "16 mm",
+   "face": "T700 raw carbon fibre, textured",
+   "weight": "8.1 oz avg (230 ± 5 g)",
+   "size": "16.25 × 7.75 in, Hybrid",
+   "specs": [
+    [
+     "Core type",
+     "X-FOAM Gen 4 full foam (PP-based)"
+    ],
+    [
+     "Cell size",
+     "None (full foam)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "≈ 7.3 mm ring (±0.5), foam not disclosed"
+    ],
+    [
+     "Face",
+     "T700 raw carbon fibre, textured"
+    ],
+    [
+     "Weight",
+     "8.1 oz avg (230 ± 5 g)"
+    ],
+    [
+     "Size",
+     "16.25 × 7.75 in, Hybrid"
+    ],
+    [
+     "Handle",
+     "5.25 in, 4.125 in grip"
+    ],
+    [
+     "Inserts",
+     "Throat strips; no MOI weights listed"
+    ]
+   ],
+   "sources": "Sources: Pickleball Central, Pickleball Warehouse, Racket Central (NOX X-FOAM JMA 16mm). Scale from 7.75\" width. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
    "slug": "pact-teflon",
    "name": "PACT Teflon Evolve Te16",
    "brand": "PACT",
@@ -1994,7 +2393,7 @@
    "image": "rpm-q2-labeled.png",
    "core": "Multi-Zone Hybrid EPP foam (full foam)",
    "cell_size": "None (no honeycomb)",
-   "ring": "Frame ≈ 10 mm + TPU inserts at 3 & 9",
+   "ring": "Frame ≈ 11 mm + TPU inserts at 3 & 9",
    "thickness": "14 mm or 16 mm",
    "face": "CarbonBite carbon fiber",
    "weight": "7.7 oz avg (14 mm) · 7.8 oz avg (16 mm)",
@@ -2014,7 +2413,7 @@
     ],
     [
      "Perimeter",
-     "Frame ≈ 10 mm + TPU inserts at 3 & 9"
+     "Frame ≈ 11 mm + TPU inserts at 3 & 9"
     ],
     [
      "Face",
@@ -2033,7 +2432,7 @@
      "5.5\" / 4.125\""
     ]
    ],
-   "sources": "Specs: pickleballcentral.com · rpmpb.com (RPM Q2). Elongated confirmed by X-ray proportions. X-ray interpretation, not a cutaway.",
+   "sources": "Specs: pickleballcentral.com · rpmpb.com (RPM Q2). Widths scaled to the published 7.5\" (190.5 mm) width. X-ray interpretation, not a cutaway.",
    "tags": [
     "foam",
     "epp"
@@ -2047,8 +2446,8 @@
    "brand": "RPM",
    "image": "rpm-v2-labeled.png",
    "core": "Tri-Density: honeycomb + EVA ring",
-   "cell_size": "≈ 8 mm measured (not disclosed)",
-   "ring": "EVA foam ring ≈ 23 mm",
+   "cell_size": "≈ 8.2 mm measured (not disclosed)",
+   "ring": "EVA foam ring ≈ 24 mm (±2)",
    "thickness": "14 mm or 16 mm",
    "face": "CarbonBite carbon fiber",
    "weight": "7.8 oz avg (7.6–8.0)",
@@ -2060,7 +2459,7 @@
     ],
     [
      "Cell size",
-     "≈ 8 mm measured (not disclosed)"
+     "≈ 8.2 mm measured (not disclosed)"
     ],
     [
      "Core thickness",
@@ -2068,7 +2467,7 @@
     ],
     [
      "Perimeter",
-     "EVA foam ring ≈ 23 mm"
+     "EVA foam ring ≈ 24 mm (±2)"
     ],
     [
      "Face",
@@ -2256,6 +2655,64 @@
    "unreleased": false
   },
   {
+   "slug": "sypik-avatar-pro",
+   "name": "Sypik Avatar Pro",
+   "brand": "Sypik",
+   "image": "sypik-avatar-pro-labeled.png",
+   "core": "EPP full foam (SYCORE)",
+   "cell_size": "No honeycomb in face (handle ≈ 6.5–7 mm)",
+   "ring": "Foam frame ≈ 23 mm (±1 mm)",
+   "thickness": "16 mm",
+   "face": "T700 raw carbon fibre (UltraSpinX)",
+   "weight": "≈ 8.3 oz (static)",
+   "size": "16.5 × 7.375 in, Elongated",
+   "specs": [
+    [
+     "Core type",
+     "EPP full foam (SYCORE)"
+    ],
+    [
+     "Cell size",
+     "No honeycomb in face (handle ≈ 6.5–7 mm)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "Foam frame ≈ 23 mm (±1 mm)"
+    ],
+    [
+     "Face",
+     "T700 raw carbon fibre (UltraSpinX)"
+    ],
+    [
+     "Weight",
+     "≈ 8.3 oz (static)"
+    ],
+    [
+     "Size",
+     "16.5 × 7.375 in, Elongated"
+    ],
+    [
+     "Handle",
+     "5.5–5.75 in, ≈ 4.125–4.35 in grip"
+    ],
+    [
+     "Inserts",
+     "≈ 22 mm disc inside the handle"
+    ]
+   ],
+   "sources": "Sources: Sypik (Avatar Ultimate Pro Tour 16mm), Matt's Pickleball, The Pickleball Gang. Scale from 7.375\" width. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam",
+    "epp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
    "slug": "sypik-triton-5",
    "name": "Sypik Triton 5",
    "brand": "Sypik",
@@ -2408,6 +2865,63 @@
     ]
    ],
    "sources": "Specs: vanwinsports.com (Alpha Power page), mypicklelist.com, theadventurousboomer.blog. Width assumed. X-ray interpretation, not a cutaway.",
+   "tags": [
+    "foam"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "wika-qd-air",
+   "name": "Wika QD Air (Air 1) 16mm",
+   "brand": "Wika",
+   "image": "wika-air-1-labeled.png",
+   "core": "AIRFOAM full foam (foam not disclosed)",
+   "cell_size": "None (full foam)",
+   "ring": "≈ 21 mm ring (±1): 7.7 mm frame + 13.5 mm band",
+   "thickness": "16 mm (14 mm also sold)",
+   "face": "Carbon Gen 5 X100, textured; fibreglass inner layer",
+   "weight": "230 ± 10 g (≈ 8.1 oz)",
+   "size": "417 × 188 mm (16.4 × 7.4 in)",
+   "specs": [
+    [
+     "Core type",
+     "AIRFOAM full foam (foam not disclosed)"
+    ],
+    [
+     "Cell size",
+     "None (full foam)"
+    ],
+    [
+     "Core thickness",
+     "16 mm (14 mm also sold)"
+    ],
+    [
+     "Perimeter",
+     "≈ 21 mm ring (±1): 7.7 mm frame + 13.5 mm band"
+    ],
+    [
+     "Face",
+     "Carbon Gen 5 X100, textured; fibreglass inner layer"
+    ],
+    [
+     "Weight",
+     "230 ± 10 g (≈ 8.1 oz)"
+    ],
+    [
+     "Size",
+     "417 × 188 mm (16.4 × 7.4 in)"
+    ],
+    [
+     "Handle",
+     "140 mm (5.5 in), 108 mm grip"
+    ],
+    [
+     "Inserts",
+     "Throat strips; no MOI weights listed"
+    ]
+   ],
+   "sources": "Sources: Wika Sports, PicklePlay VN, Pickleball News Asia (Wika QD Air). Model ID unconfirmed. Scale from 188 mm width. Labels interpret the X-ray, not a cutaway.",
    "tags": [
     "foam"
    ],
