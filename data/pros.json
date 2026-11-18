@@ -1,0 +1,85 @@
+{
+  "updated": "2026-11-18",
+  "note": "Reference list compiled from public sources. Not Pickleball RX testing. Paddle = what the player was seen using at the PPA World Championships (Nov 2026) unless status says otherwise.",
+  "sources": {
+    "ppa_rank": {"name": "PPA Tour World Pickleball Rankings", "url": "https://www.ppatour.com/rankings/", "checked": "2026-11-18"},
+    "app_rank": {"name": "APP Tour US Rankings", "url": "https://www.theapp.global/us-rankings", "asof": "2026-09-24"},
+    "worlds": {"name": "The Kitchen paddle tracker, PPA Worlds", "url": "https://thekitchenpickle.com/blogs/gear/what-paddles-top-pickleball-pros-use-worlds-november-2026/", "asof": "2026-11-06"},
+    "kitchen_deals": {"name": "The Kitchen: 2026 paddle deals", "url": "https://thekitchenpickle.com/blogs/news/pro-pickleball-players-new-paddle-apparel-equipment-deals-2026", "asof": "2026-05-04"},
+    "franklin_fudge": {"name": "Franklin: C45 Megan Fudge series", "url": "https://franklinsports.com/c45-megan-fudge-paddle-series"}
+  },
+  "ppa_men": [
+    {"rank": 1, "name": "Ben Johns", "points": 18210, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm"},
+    {"rank": 2, "name": "Gabriel Tardio", "points": 13803.8, "brand": "Facolos", "paddle": "Elite X V2.0", "xray": "facolos-elite-x-2-0"},
+    {"rank": 3, "name": "Hayden Patriquin", "points": 13145, "brand": "Franklin", "paddle": "C45 Dynasty 16mm (Hayden Patriquin edition)"},
+    {"rank": 4, "name": "Christian Alshon", "points": 12377.5, "brand": "Paddletek", "paddle": "Honeyfoam TKO-X"},
+    {"rank": 5, "name": "JW Johnson", "points": 11294.4, "brand": "Paddletek", "paddle": "Tempest Veyra Elongated"},
+    {"rank": 6, "name": "Federico Staksrud", "points": 10327.5, "brand": "JOOLA", "paddle": "Kosmos Pro V 16mm"},
+    {"rank": 7, "name": "Andrei Daescu", "points": 10310, "brand": "CRBN", "paddle": "CRBN1 TruFoam Barrage"},
+    {"rank": 8, "name": "Tama Shimabukuro", "points": 7740, "brand": "Luzz", "paddle": "Inferno2 M1", "xray": "luzz-inferno-2", "grit": "Luzz Inferno2"},
+    {"rank": 9, "name": "Eric Oncins", "points": 6318.8, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm"},
+    {"rank": 10, "name": "CJ Klinger", "points": 5566.3, "brand": "Adidas", "paddle": "AdiPower Pro EDT 16mm"},
+    {"rank": 11, "name": "Noe Khlif", "points": 5562.5, "brand": "Arronax", "paddle": "Thunder 10"},
+    {"rank": 12, "name": "Dylan Frazier", "points": 4651.3, "brand": "Volair", "paddle": "CMD HYB", "grit": "Volair CMD"},
+    {"rank": 13, "name": "Hunter Johnson", "points": 4391.3, "brand": "MEHAU", "paddle": "S5 Airpoom", "xray": "mehau-s5", "grit": "Mehau S5"},
+    {"rank": 14, "name": "Connor Garnett", "points": 4380, "brand": "Paddletek", "paddle": "Honeyfoam TKO-X"},
+    {"rank": 15, "name": "Jaume Martinez Vich", "points": 3568.8, "brand": "Adidas", "paddle": "AdiPower Pro EDT 16mm"},
+    {"rank": 16, "name": "Christopher Haworth", "points": 3516.3, "brand": "Luzz", "paddle": "Tornazo"},
+    {"rank": 17, "name": "Len Yang", "points": 3388.8, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm"},
+    {"rank": 18, "name": "Hong Kit Wong", "points": 3257.1, "status": "unconfirmed"},
+    {"rank": 19, "name": "Augustus Ge", "points": 3195, "brand": "11SIX24", "paddle": "Power 2 Ultre"},
+    {"rank": 20, "name": "Riley Newman", "points": 3143.8, "brand": "Paddletek", "paddle": "Honeyfoam TKO-X"}
+  ],
+  "ppa_women": [
+    {"rank": 1, "name": "Anna Leigh Waters", "points": 22160, "brand": "Franklin", "paddle": "Unreleased Franklin paddle"},
+    {"rank": 2, "name": "Anna Bright", "points": 17592.5, "brand": "JOOLA", "paddle": "Scorpeus Pro V 14mm"},
+    {"rank": 3, "name": "Jorja Johnson", "points": 11523.8, "brand": "Paddletek", "paddle": "Tempest Veyra Widebody"},
+    {"rank": 4, "name": "Tyra Hurricane Black", "points": 11287.5, "brand": "PIKKL", "paddle": "Hurricane Pro 14mm"},
+    {"rank": 5, "name": "Catherine Parenteau", "points": 9295, "brand": "Proton", "paddle": "Project Coyote", "xray": "proton-project-coyote", "grit": "Proton Project Coyote"},
+    {"rank": 6, "name": "Rachel Rohrabacher", "points": 9055, "brand": "Friday", "paddle": "Aura Pro Tour (custom \"Rohra\" version, unreleased)", "xray": "friday-aura-pro-tour"},
+    {"rank": 7, "name": "Kate Fahey", "points": 8835, "brand": "JOOLA", "paddle": "Agassi Pro V 14mm"},
+    {"rank": 8, "name": "Parris Todd", "points": 8627.5, "brand": "Franklin", "paddle": "Unreleased Franklin paddle"},
+    {"rank": 9, "name": "Tina Pisnik", "points": 6517.5, "brand": "Eleven Zero", "paddle": "EZ Speed E16"},
+    {"rank": 10, "name": "Kaitlyn Christian", "points": 5180, "brand": "Proton", "paddle": "Project Coyote", "xray": "proton-project-coyote", "grit": "Proton Project Coyote"},
+    {"rank": 11, "name": "Lacy Schneemann", "points": 4701.9, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm"},
+    {"rank": 12, "name": "Jessie Irvine", "points": 4472.5, "brand": "Engage", "paddle": "X2"},
+    {"rank": 13, "name": "Chao Yi Wang", "points": 4402.5, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm"},
+    {"rank": 14, "name": "Sahra Dennehy", "points": 4363.8, "brand": "Facolos", "paddle": "Elite X V2.0", "xray": "facolos-elite-x-2-0"},
+    {"rank": 15, "name": "Meghan Dizon", "points": 4100, "brand": "Proton", "paddle": "Project Bluejay (unreleased)"},
+    {"rank": 16, "name": "Alix Truong", "points": 3947.5, "brand": "Kamito", "paddle": "Dominus", "xray": "kamito-dominus"},
+    {"rank": 17, "name": "Lea Jansen", "points": 3865, "brand": "JOOLA", "paddle": "Hyperion Pro V (Lea Jansen Gradient)"},
+    {"rank": 18, "name": "Brooke Buckner", "points": 3713.8, "brand": "JOOLA", "paddle": "Agassi Pro V 14mm"},
+    {"rank": 19, "name": "Mari Humberg", "points": 3197, "brand": "Adidas", "paddle": "AdiPower Pro EDT 16mm"},
+    {"rank": 20, "name": "Ting Chieh Wei", "points": 3195, "status": "unconfirmed"}
+  ],
+  "app": [
+    {"division": "Men's singles", "players": [
+      {"rank": 1, "name": "Ronan Camron", "points": 3830, "status": "unconfirmed"},
+      {"rank": 2, "name": "Ammar Wazir", "points": 3040, "status": "unconfirmed"},
+      {"rank": 3, "name": "Dusty Boyer", "points": 2840, "status": "unconfirmed"},
+      {"rank": 4, "name": "Ryler DeHeart", "points": 2310, "status": "unconfirmed"},
+      {"rank": 5, "name": "Tristan Dussault", "points": 2164, "status": "unconfirmed"}
+    ]},
+    {"division": "Men's doubles", "players": [
+      {"rank": 1, "name": "Jack Munro", "points": 5680, "brand": "Owl", "paddle": "Model not confirmed", "status": "sponsor", "src": "kitchen_deals"},
+      {"rank": 2, "name": "Richard Livornese", "points": 5360, "status": "unconfirmed"},
+      {"rank": 3, "name": "Max Manthou", "points": 2680, "status": "unconfirmed"},
+      {"rank": 4, "name": "Etienne Blaszkewycz", "points": 2350, "status": "unconfirmed"},
+      {"rank": 5, "name": "Tanner Tomassi", "points": 2330, "status": "unconfirmed"}
+    ]},
+    {"division": "Women's singles", "players": [
+      {"rank": 1, "name": "Katerina Stewart", "points": 5180, "status": "unconfirmed"},
+      {"rank": 2, "name": "Sofia Sewing", "points": 3690, "status": "unconfirmed"},
+      {"rank": 3, "name": "Domenika Turkovic", "points": 3360, "status": "unconfirmed"},
+      {"rank": 4, "name": "Bobbi Oshiro", "points": 3100, "status": "unconfirmed"},
+      {"rank": 5, "name": "Seone Mendez", "points": 2860, "status": "unconfirmed"}
+    ]},
+    {"division": "Women's doubles", "players": [
+      {"rank": 1, "name": "Megan Fudge", "points": 6020, "brand": "Franklin", "paddle": "C45 Megan Fudge signature", "status": "signature", "src": "franklin_fudge"},
+      {"rank": 2, "name": "Sofia Sewing", "points": 4450, "status": "unconfirmed"},
+      {"rank": 3, "name": "Shelby Bates", "points": 4070, "status": "unconfirmed"},
+      {"rank": 4, "name": "Jillian Braverman", "points": 3920, "status": "unconfirmed", "note": "Signed a multi-year deal with GAMMA in 2024; current paddle not confirmed."},
+      {"rank": 5, "name": "Christine Maddox", "points": 3400, "status": "unconfirmed"}
+    ]}
+  ]
+}
