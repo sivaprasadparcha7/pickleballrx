@@ -1157,16 +1157,16 @@ DEALS = [
          tested=[]),
     dict(brand="Grit", label="Sale price", deal="E2-CF $135 (was $175). E1-TW $110 (was $185); the E1 is not USA Pickleball approved.", code="", ends="Not stated", url="https://grit-shop.com/",
          tested=[("E2-CF X-ray", "xray/grit-e2-cf.html"), ("E2-CF spin", "spin.html#grit-e2cf")]),
-    dict(brand="Vanwin", label="Sale price", deal="Alpha Power $109.99 (was $129.99)", code="", ends="Not stated", url="https://www.vanwinsports.com/",
-         tested=[("Alpha Power", "xray/vanwin-alpha-power.html")]),
+    dict(brand="Vanwin", label="Special deals", deal="Alpha Control $83.99 \u00b7 Alpha Power $83.99 \u00b7 Pro T7 $47.99 \u00b7 Pro T8 $63.99", code="", code_note="Prices from Vanwin Sports", ends="Not stated", url="https://www.vanwinsports.com/",
+         checked="Nov 18, 2026", tested=[("Alpha Control", "xray/vanwin-alpha-control.html"), ("Alpha Power", "xray/vanwin-alpha-power.html")]),
 ]
 
 
 def deal_card(d):
     tested = " &middot; ".join(f'<a href="{u}">{e(n)}</a>' for n, u in d["tested"])
     return (f'<div class="code-card"><span class="tag" style="align-self:flex-start">{e(d.get("label", "Black Friday"))}</span><h3>{e(d["brand"])}</h3><p style="margin:0">{e(d["deal"])}</p>'
-            + (f'<code>{e(d["code"])}</code>' if d["code"] else '<p class="muted" style="margin:0;font-size:.9rem">No code needed</p>')
-            + f'<p class="muted" style="margin:0;font-size:.85rem">Ends: {e(d["ends"])} &middot; checked {DEALS_CHECKED}</p>'
+            + (f'<code>{e(d["code"])}</code>' if d["code"] else f'<p class="muted" style="margin:0;font-size:.9rem">{e(d.get("code_note", "No code needed"))}</p>')
+            + f'<p class="muted" style="margin:0;font-size:.85rem">Ends: {e(d["ends"])} &middot; checked {d.get("checked", DEALS_CHECKED)}</p>'
             + (f'<p style="margin:0;font-size:.88rem">Our lab data: {tested}</p>' if tested else "")
             + (f'<p style="margin:0;font-size:.88rem">Not on sale? Code <strong>PBRX</strong> gives {next(c["offer"] for c in CODES if c["brand"] == d["brand"])} at {e(d["brand"])}.</p>' if any(c["brand"] == d["brand"] for c in CODES) else "")
             + f'<a href="{e(d["url"])}" rel="noopener">See the deal on {e(d["brand"])}&rsquo;s site &rarr;</a></div>')
