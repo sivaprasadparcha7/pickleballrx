@@ -9,82 +9,139 @@
    "paddles": [
     {
      "model": "Perseus Pro V",
-     "price": 299.95
+     "price": 299.95,
+     "url": "https://joola.com/products/joola-perseus-pro-v-pickleball-paddle-1",
+     "weight": "7.9-8.1oz",
+     "grip": "4.125-4.25\"",
+     "shape": "Elongated",
+     "mm": "14 / 16"
     },
     {
      "model": "Kosmos Pro V",
-     "price": 299.95
+     "price": 299.95,
+     "url": "https://joola.com/products/kosmos-pro-v-pickleball-paddle",
+     "weight": "7.9-8.1oz",
+     "grip": "4.125-4.25\"",
+     "shape": "Hybrid",
+     "mm": "14 / 16"
     },
     {
      "model": "Scorpeus Pro V",
-     "price": 299.95
+     "price": 299.95,
+     "url": "https://joola.com/products/scorpeus-pro-v-pickleball-paddle",
+     "weight": "8.0-8.2oz",
+     "grip": "4.125-4.25\"",
+     "shape": "Wide",
+     "mm": "14 / 16"
     },
     {
      "model": "Hyperion Pro V",
-     "price": 299.95
+     "price": 299.95,
+     "url": "https://joola.com/products/joola-hyperion-pro-v-pickleball-paddle",
+     "weight": "7.9-8.1oz",
+     "grip": "4.125-4.25\"",
+     "shape": "Elongated (curved)",
+     "mm": "14 / 16"
     },
     {
      "model": "Agassi Pro V",
-     "price": 299.95
+     "price": 299.95,
+     "url": "https://joola.com/products/joola-agassi-pro-v-pickleball-paddle-1",
+     "weight": "7.9-8.1oz",
+     "mm": "14 / 16"
     },
     {
      "model": "Graf Pro V",
-     "price": 299.95
+     "price": 299.95,
+     "url": "https://joola.com/products/joola-graf-pro-v-pickleball-paddle-1",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "Perseus Power FX",
-     "price": 179.95
+     "price": 179.95,
+     "url": "https://joola.com/products/perseus-power-fx-pickleball-paddle",
+     "core": "EPP foam",
+     "face": "Gritted surface",
+     "shape": "Elongated"
     },
     {
      "model": "Perseus Pro IV 14mm",
      "mm": "14",
      "price": 149.95,
-     "was": 249.95
+     "was": 249.95,
+     "url": "https://joola.com/products/joola-perseus-iv-14mm-pickleball-paddle-1"
     },
     {
      "model": "Hyperion Pro IV 14mm",
      "mm": "14",
      "price": 149.95,
-     "was": 229.95
+     "was": 229.95,
+     "url": "https://joola.com/products/joola-hyperion-iv-14mm-pickleball-paddle"
     },
     {
      "model": "Scorpeus Pro IV",
      "mm": "14 / 16",
      "price": 149.95,
-     "was": 229.95
+     "was": 229.95,
+     "url": "https://joola.com/products/joola-scorpeus-iv-16mm-pickleball-paddle",
+     "core": "Polymer honeycomb",
+     "face": "Textured carbon fiber",
+     "approval": "USAP, UPA-A",
+     "shape": "Wide"
     },
     {
      "model": "Magnus Pro IV",
      "mm": "14 / 16",
      "price": 149.95,
-     "was": 229.95
+     "was": 229.95,
+     "url": "https://joola.com/products/joola-magnus-iv-16mm-pickleball-paddle",
+     "approval": "USAP, UPA-A",
+     "shape": "Elongated"
     },
     {
      "model": "Agassi Pro",
      "mm": "14 / 16",
      "price": 149.95,
-     "was": 229.95
+     "was": 229.95,
+     "url": "https://joola.com/products/joola-agassi-pro-16mm-pickleball-paddle",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "Graf Pro 16mm",
      "mm": "16",
      "price": 149.95,
-     "was": 229.95
+     "was": 229.95,
+     "url": "https://joola.com/products/joola-graf-pro-16mm-pickleball-paddle"
     },
     {
      "model": "Magnus 3S 14mm",
      "mm": "14",
-     "price": 99.95
+     "price": 99.95,
+     "url": "https://joola.com/products/tyson-mcguffin-magnus-3s-14mm-pickleball-paddle",
+     "core": "Polymer honeycomb",
+     "face": "Carbon fiber",
+     "approval": "UPA-A",
+     "shape": "Elongated"
     },
     {
      "model": "Perseus 3S Dual",
      "mm": "14 / 16",
-     "price": 199.95
+     "price": 199.95,
+     "url": "https://joola.com/products/joola-perseus-3s-dual-16mm-pickleball-paddle",
+     "core": "Polymer honeycomb",
+     "face": "Textured carbon fiber",
+     "approval": "USAP, UPA-A",
+     "shape": "Elongated"
     },
     {
      "model": "Scorpeus 3S Dual 14mm",
      "mm": "14",
-     "price": 199.95
+     "price": 199.95,
+     "url": "https://joola.com/products/joola-scorpeus-3s-dual-14mm-pickleball-paddle",
+     "face": "Textured carbon fiber",
+     "approval": "USAP, UPA-A",
+     "shape": "Wide"
     },
     {
      "model": "Hyperion 3S Dual 16mm",
@@ -128,39 +185,69 @@
     },
     {
      "model": "Perseus Heat Vision",
-     "price": 99.95
+     "price": 99.95,
+     "url": "https://joola.com/products/joola-perseus-heat-vision-pickleball-paddle",
+     "weight": "7.8oz",
+     "face": "Textured carbon fiber",
+     "approval": "USAP",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "Scorpeus Heat Vision",
-     "price": 99.95
+     "price": 99.95,
+     "url": "https://joola.com/products/joola-scorpeus-heat-vision-pickleball-paddle",
+     "weight": "7.8oz",
+     "face": "Textured carbon fiber",
+     "approval": "USAP",
+     "shape": "Wide",
+     "mm": "16"
     },
     {
      "model": "Agassi Edge Heat Vision",
-     "price": 99.95
+     "price": 99.95,
+     "url": "https://joola.com/products/joola-agassi-edge-heat-vision-pickleball-paddle",
+     "weight": "7.8oz",
+     "face": "Textured carbon fiber",
+     "approval": "USAP",
+     "mm": "16"
     },
     {
      "model": "Agassi Edge 16mm",
      "mm": "16",
-     "price": 59.95,
-     "was": 99.95
+     "price": 49.95,
+     "was": 99.95,
+     "url": "https://joola.com/products/agassi-edge-16mm-pickleball-paddle",
+     "core": "Polymer honeycomb",
+     "face": "Carbon fiber",
+     "approval": "Not USAP-eligible from May 2026"
     },
     {
      "model": "Graf Edge 16mm",
      "mm": "16",
-     "price": 59.95,
-     "was": 99.95
+     "price": 49.95,
+     "was": 99.95,
+     "url": "https://joola.com/products/graf-edge-16mm-pickleball-paddle",
+     "core": "Polymer honeycomb",
+     "face": "Raw carbon fiber",
+     "approval": "Not USAP-eligible from May 2026"
     },
     {
      "model": "Agassi Champion 12mm",
      "mm": "12",
-     "price": 39.95,
-     "was": 59.95
+     "price": 29.95,
+     "was": 59.95,
+     "url": "https://joola.com/products/agassi-champion-12mm-pickleball-paddle",
+     "face": "Sand-blasted",
+     "approval": "Not USAP-eligible from May 2026"
     },
     {
      "model": "Graf Champion 12mm",
      "mm": "12",
-     "price": 39.95,
-     "was": 59.95
+     "price": 29.95,
+     "was": 59.95,
+     "url": "https://joola.com/products/graf-champion-12mm-pickleball-paddle",
+     "approval": "Not USAP-eligible from May 2026"
     },
     {
      "model": "Da Hammer",
@@ -168,10 +255,17 @@
     },
     {
      "model": "Astral",
-     "price": 79.95
+     "price": 79.95,
+     "url": "https://joola.com/products/astral-pickleball-paddle",
+     "face": "Sand-blasted carbon fiber",
+     "shape": "Elongated"
     },
     {
-     "model": "Essentials Dash"
+     "model": "Essentials Dash",
+     "mm": "10",
+     "price": 49.95,
+     "url": "https://joola.com/products/joola-dash-pickleball-paddle",
+     "face": "Sand-blasted fiberglass"
     }
    ]
   },
@@ -3817,6 +3911,91 @@
      "handle": "4.625\"",
      "grip": "4.25\"",
      "approval": "USAP (Quiet category)"
+    }
+   ]
+  },
+  {
+   "brand": "Aireo",
+   "store": "https://www.aireo-sports.com/collections/paddles",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "Cyclone Hybrid NanoGraph",
+     "shape": "Hybrid",
+     "mm": "16",
+     "price": 199,
+     "note": "Many colorways, some $209",
+     "url": "https://www.aireo-sports.com/products/aireo-cyclone-hot-pink-hybrid-nanograph",
+     "weight": "7.7oz",
+     "core": "Foam (MPPE)",
+     "face": "Raw T700 carbon fiber, textured",
+     "size": "16.1\" x 7.8\"",
+     "handle": "5.6\"",
+     "grip": "4.05\"",
+     "approval": "USAP"
+    },
+    {
+     "model": "Cyclone Elongated NanoGraph",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 199,
+     "note": "Many colorways, some $209",
+     "url": "https://www.aireo-sports.com/products/aireo-cyclone-guardian-elongated-nanograph",
+     "weight": "7.6oz",
+     "core": "Foam (MPPE)",
+     "face": "Raw T700 carbon fiber, textured",
+     "approval": "USAP"
+    },
+    {
+     "model": "Cyclone Blackout Elongated",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 189,
+     "url": "https://www.aireo-sports.com/products/blackout-upa-a-approved-aireo-cyclone-16mm-pickleball-paddle-pulsefoam\u2122-power-core-for-pro-level-performance",
+     "weight": "7.6oz",
+     "core": "Foam (MPPE)",
+     "approval": "UPA-A"
+    },
+    {
+     "model": "Titan Hawk-L16 Gen 3",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 219,
+     "url": "https://www.aireo-sports.com/products/tatian-hawk-l16-gen-3",
+     "weight": "8.0oz"
+    },
+    {
+     "model": "Titan Hawk-L14 Gen 3",
+     "shape": "Elongated",
+     "mm": "14",
+     "price": 219,
+     "url": "https://www.aireo-sports.com/products/titan-hawk-l14-gen-3"
+    },
+    {
+     "model": "Falcon Pro-L16",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 79,
+     "url": "https://www.aireo-sports.com/products/falcon-pro-l16-1"
+    },
+    {
+     "model": "Harpy Eagle-L13",
+     "shape": "Elongated",
+     "mm": "13",
+     "price": 103.2,
+     "url": "https://www.aireo-sports.com/products/harpy-eagle-l13-1"
+    },
+    {
+     "model": "Harpy Eagle-M16",
+     "mm": "16",
+     "price": 103.2,
+     "url": "https://www.aireo-sports.com/products/harpy-eagle-m16-1"
+    },
+    {
+     "model": "Harpy Eagle-K16",
+     "mm": "16",
+     "price": 103.2,
+     "url": "https://www.aireo-sports.com/products/harpy-eagle-k16-1"
     }
    ]
   }
