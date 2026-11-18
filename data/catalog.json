@@ -2544,13 +2544,109 @@
   },
   {
    "brand": "Zcebra",
-   "store": "https://zcebrapickleball.com/",
-   "complete": false,
-   "note": "Zcebra's store doesn't allow automated reading, so only the paddle we've tested is here.",
+   "store": "https://zcebra.com/en/categoria-producto/palas/",
+   "complete": true,
+   "note": "Zcebra is a Spanish brand, so prices are in euros from their own store.",
    "paddles": [
     {
-     "model": "Gazelle",
-     "tested": "zcebra-gazelle"
+     "model": "Gazelle Black Foam",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 230,
+     "tested": "zcebra-gazelle",
+     "url": "https://zcebra.com/en/producto/zcebra-gazelle-gris/",
+     "core": "Foam",
+     "face": "Frosted T700 carbon fiber",
+     "approval": "USAP",
+     "cur": "\u20ac"
+    },
+    {
+     "model": "Osprey ShotCore",
+     "mm": "16",
+     "price": 230,
+     "url": "https://zcebra.com/en/producto/zcebra-osprey-shotcore-azul/",
+     "core": "Foam (ShotCore)",
+     "face": "Carbon and aramid blend",
+     "approval": "USAP",
+     "cur": "\u20ac"
+    },
+    {
+     "model": "The Queen",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 125,
+     "url": "https://zcebra.com/en/producto/zcebra-the-queen-black/",
+     "core": "Polypropylene honeycomb",
+     "face": "T700 carbon fiber",
+     "approval": "USAP",
+     "cur": "\u20ac"
+    },
+    {
+     "model": "Black Mamba",
+     "mm": "16",
+     "price": 185,
+     "note": "Zcebra lists it as being updated",
+     "url": "https://zcebra.com/en/producto/zcebra-black-mamba/",
+     "core": "High-density honeycomb",
+     "face": "Raw T700 carbon fiber",
+     "approval": "USAP",
+     "cur": "\u20ac"
+    },
+    {
+     "model": "Gorilla Wide Body",
+     "shape": "Wide body",
+     "price": 105,
+     "url": "https://zcebra.com/en/producto/zcebra-gorilla-pro-series-rainbow/",
+     "face": "Frosted carbon fiber",
+     "approval": "USAP",
+     "cur": "\u20ac"
+    },
+    {
+     "model": "Gorilla Silverback",
+     "shape": "Wide body",
+     "price": 105,
+     "url": "https://zcebra.com/en/producto/zcebra-gorilla-espalda-plateada/",
+     "face": "Frosted carbon fiber",
+     "approval": "USAP",
+     "cur": "\u20ac"
+    },
+    {
+     "model": "Totem Trinom",
+     "shape": "Elongated",
+     "mm": "19",
+     "price": 155,
+     "url": "https://zcebra.com/en/producto/zcebra-totem-trinom/",
+     "weight": "8.1-8.3oz",
+     "core": "Polypropylene and Nomex layered core",
+     "face": "Frosted T700 carbon fiber",
+     "size": "16.1\" x 7.5\"",
+     "handle": "4.9\"",
+     "approval": "USAP",
+     "cur": "\u20ac"
+    },
+    {
+     "model": "Graphite Gecko Edition",
+     "shape": "Standard",
+     "mm": "14",
+     "price": 75,
+     "url": "https://zcebra.com/en/producto/zcebra-zgecko-evolution-blanca/",
+     "weight": "7.8oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Carbon fiber and graphite",
+     "size": "15.4\" x 7.9\"",
+     "handle": "4.5\"",
+     "approval": "USAP",
+     "cur": "\u20ac"
+    },
+    {
+     "model": "Tribal Set",
+     "price": 53.9,
+     "note": "Set of 2 paddles, 4 balls and a backpack",
+     "url": "https://zcebra.com/en/producto/set-tribal/",
+     "core": "Honeycomb",
+     "face": "Fiberglass",
+     "approval": "USAP",
+     "cur": "\u20ac"
     }
    ]
   },
