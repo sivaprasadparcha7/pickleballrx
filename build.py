@@ -1356,10 +1356,13 @@ write("evolv-pickleball.html", page("Evolv Pickleball: brand spotlight | Pickleb
   {code_box("Evolv")}
   <p class="muted" style="font-size:.88rem">Evolv requested the CarbonSkyn durability testing and provided the three Origin paddles. Brands have no input into our results.</p>
 </section>
-<section>
+<section class="story-split">
+  <figure class="story-fig"><img src="assets/paddles/product/evolv-owner.jpg" alt="The founder of Evolv Pickleball hitting a low shot with an Evolv paddle" width="640" height="960" loading="lazy"><figcaption>Evolv's founder on court with an Evolv paddle.</figcaption></figure>
+  <div>
   <h2>Their story</h2>
   <p class="section-lead">Evolv says it was "founded by a former tennis player who initially underestimated the game of pickleball." He gave the game another chance during the COVID pandemic and "was instantly hooked." Working with a manufacturing partner, he went through "dozens of prototype iterations," and "that pursuit became the EVOLV Origin." Their motto is "Mastery Through Progress."</p>
   <p class="muted" style="font-size:.85rem">Source: <a href="https://www.evolvpickleball.com/about" rel="noopener">Evolv's About page</a>.</p>
+  </div>
 </section>
 <section style="padding-top:0">
   <h2>The paddle we've tested</h2>
