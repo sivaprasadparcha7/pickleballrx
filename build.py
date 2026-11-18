@@ -1147,14 +1147,24 @@ ccards = "\n".join(
 # Black Friday deals: only deals seen on the brand's own site. Re-check before each upload.
 DEALS_CHECKED = "Nov 17, 2026"
 DEALS = [
-    dict(brand="Luzz", deal="Black Friday: 20% off select paddles and gear", code="", ends="Not stated", url="https://luzzpickleball.com/",
+    dict(brand="Luzz", deal="Black Friday: 20% off select paddles and gear", code="", ends="Dec 1, 2026", url="https://luzzpickleball.com/",
          tested=[("Cannon XPP", "xray/luzz-cannon-xpp.html"), ("Glider 2026", "xray/luzz-glider-2026.html"), ("Inferno 2", "xray/luzz-inferno-2.html")]),
-    dict(brand="Friday", deal="Black Friday early access: 30% off Aura Pro, 2 Friday Originals for $89, 30% off bags and gear", code="", ends="Not stated", url="https://fridaypickle.com/products/aura-pro-paddle",
+    dict(brand="Friday", deal="Black Friday early access: 30% off Aura Pro, 2 Friday Originals for $89, 30% off bags and gear", code="", ends="Nov 22, 2026", url="https://fridaypickle.com/products/aura-pro-paddle",
          tested=[("Aura Pro Tour", "xray/friday-aura-pro-tour.html")]),
-    dict(brand="Holbrook", deal="Early Black Friday: $100 off Arma and Aero paddles", code="BFCM", ends="Not stated", url="https://holbrookpickleball.com/collections/arma-aero",
+    dict(brand="Holbrook", deal="Early Black Friday: $100 off Arma and Aero paddles", code="BFCM", ends="Nov 24, 2026", url="https://holbrookpickleball.com/collections/arma-aero",
          tested=[]),
     dict(brand="11SIX24", deal="11/6 Sale: $50 off Power 2 paddles", code="", ends="Dec 4, 2026", url="https://11six24.com/pages/power-2",
          tested=[]),
+    dict(brand="RPM", deal="Black Friday: 25% off apparel", code="", ends="Not stated", url="https://rpmpb.com/", checked="The Kitchen\u2019s tracker, Nov 16",
+         tested=[("Jade X-ray", "xray/rpm-jade.html"), ("Q2 X-ray", "xray/rpm-q2.html"), ("V2 X-ray", "xray/rpm-v2.html")]),
+    dict(brand="Selkirk", deal="Black Friday: up to 60% off paddles, 50% off apparel", code="", ends="Not stated", url="https://selkirk.com/paddles", checked="The Kitchen\u2019s tracker, Nov 16",
+         tested=[("Project Boomstik grit", "grit.html#selkirk-labs-project-boomstik")]),
+    dict(brand="Diadem", deal="Black Friday: up to 58% off paddles", code="", ends="Not stated", url="https://diademsports.com/", checked="The Kitchen\u2019s tracker, Nov 16",
+         tested=[]),
+    dict(brand="FLiK", deal="Black Friday: 2 paddles for $140", code="", ends="Nov 20, 2026", url="https://flikpickleball.com/", checked="The Kitchen\u2019s tracker, Nov 16",
+         tested=[("F1 X-ray", "xray/flik-f1.html")]),
+    dict(brand="MARK", label="Starts Nov 20", deal="Black Friday sale starts Nov 20. Details not announced yet.", code="", code_note="Details to come", ends="Not stated", url="https://markpickleball.com/", checked="The Kitchen\u2019s tracker, Nov 16",
+         tested=[("unMARKed 2026 X-ray", "xray/mark-unmarked-2026.html")]),
     dict(brand="Grit", label="Sale price", deal="E2-CF $135 (was $175). E1-TW $110 (was $185); the E1 is not USA Pickleball approved.", code="", ends="Not stated", url="https://grit-shop.com/",
          tested=[("E2-CF X-ray", "xray/grit-e2-cf.html"), ("E2-CF spin", "spin.html#grit-e2cf")]),
     dict(brand="Vanwin", label="Black Friday", deal="Alpha Control $83.99 \u00b7 Alpha Power $83.99 \u00b7 Pro T7 $47.99 \u00b7 Pro T8 $63.99", code="", code_note="Goes live Nov 18 at 12:00 AM PST", ends="Not stated", url="https://www.vanwinsports.com/",
@@ -1168,7 +1178,7 @@ def deal_card(d):
             + (f'<code>{e(d["code"])}</code>' if d["code"] else f'<p class="muted" style="margin:0;font-size:.9rem">{e(d.get("code_note", "No code needed"))}</p>')
             + f'<p class="muted" style="margin:0;font-size:.85rem">Ends: {e(d["ends"])} &middot; checked {d.get("checked", DEALS_CHECKED)}</p>'
             + (f'<p style="margin:0;font-size:.88rem">Our lab data: {tested}</p>' if tested else "")
-            + (f'<p style="margin:0;font-size:.88rem">Not on sale? Code <strong>PBRX</strong> gives {next(c["offer"] for c in CODES if c["brand"] == d["brand"])} at {e(d["brand"])}.</p>' if any(c["brand"] == d["brand"] for c in CODES) else "")
+            + (f'<p style="margin:0;font-size:.88rem"><span class="tag" style="background:#e6f4ea;color:#1e6b35">PBRX works here</span> {next(c["offer"] for c in CODES if c["brand"] == d["brand"])} with code <strong>PBRX</strong>. Check at checkout whether it stacks with the sale.</p>' if any(c["brand"] == d["brand"] for c in CODES) else "")
             + f'<a href="{e(d["url"])}" rel="noopener">See the deal on {e(d["brand"])}&rsquo;s site &rarr;</a></div>')
 
 
@@ -1179,8 +1189,10 @@ write("codes.html", page("Pickleball Black Friday deals and discount codes | Pic
 </section>
 <section style="padding-top:0">
   <h2>Black Friday 2026</h2>
-  <p class="section-lead">Black Friday and other sales we saw on each brand&rsquo;s own site on {DEALS_CHECKED}. Prices and dates change fast, so check the brand&rsquo;s page before you buy.</p>
-  <div class="codes">{"".join(deal_card(d) for d in DEALS)}</div>
+  <p class="section-lead">Black Friday and other paddle sales. Each card says where we found it: on the brand&rsquo;s own site, from the brand directly, or from The Kitchen&rsquo;s Black Friday tracker. Every link goes to the brand&rsquo;s own store. Prices and dates change fast, so check the brand&rsquo;s page before you buy.</p>
+  <p class="section-lead">Look for the green <strong>PBRX works here</strong> tag: our code works at those brands (Holbrook, RPM, Luzz, Evolv, Arronax, MARK, Pakle, Grit and Speedup). Codes usually don&rsquo;t stack with sale prices, so check at checkout which is better.</p>
+  <div class="codes">{"".join(deal_card(d) for d in sorted(DEALS, key=lambda d: not any(c["brand"] == d["brand"] for c in CODES)))}</div>
+  <p class="muted" style="font-size:.9rem;margin-top:16px">Also on sale now, per <a href="https://thekitchenpickle.com/pickleball-black-friday-deals/" rel="noopener">The Kitchen&rsquo;s Black Friday tracker</a> (updated Nov 16): Six Zero up to 65% off paddles (ends Nov 30), Warping Point 20% off Neon, Sophon and Nightblade (ends Nov 30), Thrive 25% off sitewide, and Dominator 15% off sitewide (ends Nov 30). We haven&rsquo;t checked these on the brands&rsquo; own sites.</p>
 </section>
 <section style="padding-top:0">
   <h2>Our discount codes</h2>
