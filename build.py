@@ -1464,6 +1464,8 @@ def _pro_paddle(p):
     out = f'<strong>{e(p["brand"])}</strong> {e(p["paddle"])}'
     if p.get("status") == "sponsor":
         out += ' <span class="muted" style="font-size:.82rem">(paddle sponsor)</span>'
+    elif p.get("status") == "team":
+        out += ' <span class="muted" style="font-size:.82rem">(seen by the Pickleball RX team)</span>'
     return out
 
 
@@ -1511,7 +1513,7 @@ write("pros.html", page("What paddles do the pros use? PPA and APP top players |
 </section>
 <section style="padding-top:0" id="ppa-men">
   <h2>PPA Tour: top 20 men</h2>
-  <p class="section-lead">Ranking: {_s("ppa_rank")} (checked {_fmt_date(_PSRC["ppa_rank"]["checked"])}). These rankings combine doubles, mixed and singles. Paddles as seen at the PPA World Championships, per {_s("worlds")} ({_fmt_date(_PSRC["worlds"]["asof"])}).</p>
+  <p class="section-lead">Ranking: {_s("ppa_rank")} (checked {_fmt_date(_PSRC["ppa_rank"]["checked"])}). These rankings combine doubles, mixed and singles. Paddles as seen at the PPA World Championships, per {_s("worlds")} ({_fmt_date(_PSRC["worlds"]["asof"])}), except where marked as seen by the Pickleball RX team.</p>
   {_pro_table(PROS["ppa_men"], "ppa-men-table")}
 </section>
 <section style="padding-top:0" id="ppa-women">

@@ -26,7 +26,7 @@
     {"rank": 15, "name": "Jaume Martinez Vich", "points": 3568.8, "brand": "Adidas", "paddle": "AdiPower Pro EDT 16mm"},
     {"rank": 16, "name": "Christopher Haworth", "points": 3516.3, "brand": "Luzz", "paddle": "Tornazo"},
     {"rank": 17, "name": "Len Yang", "points": 3388.8, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm"},
-    {"rank": 18, "name": "Hong Kit Wong", "points": 3257.1, "status": "unconfirmed"},
+    {"rank": 18, "name": "Hong Kit Wong", "points": 3257.1, "brand": "Arronax", "paddle": "KVL-005", "status": "team", "xray": "arronax-kvl-005", "grit": "Arronax KVL 005"},
     {"rank": 19, "name": "Augustus Ge", "points": 3195, "brand": "11SIX24", "paddle": "Power 2 Ultre"},
     {"rank": 20, "name": "Riley Newman", "points": 3143.8, "brand": "Paddletek", "paddle": "Honeyfoam TKO-X"}
   ],
@@ -50,7 +50,7 @@
     {"rank": 17, "name": "Lea Jansen", "points": 3865, "brand": "JOOLA", "paddle": "Hyperion Pro V (Lea Jansen Gradient)"},
     {"rank": 18, "name": "Brooke Buckner", "points": 3713.8, "brand": "JOOLA", "paddle": "Agassi Pro V 14mm"},
     {"rank": 19, "name": "Mari Humberg", "points": 3197, "brand": "Adidas", "paddle": "AdiPower Pro EDT 16mm"},
-    {"rank": 20, "name": "Ting Chieh Wei", "points": 3195, "status": "unconfirmed"}
+    {"rank": 20, "name": "Ting Chieh Wei", "points": 3195, "brand": "CRBN", "paddle": "CRBN1 TruFoam Barrage", "status": "team"}
   ],
   "app": [
     {"division": "Men's singles", "players": [
