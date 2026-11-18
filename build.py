@@ -85,7 +85,7 @@ LINKS = {  # X-ray slug -> (grit collection name, spin table name)
 import hashlib
 def _asset_ver():
     h = hashlib.md5()
-    for f in ("style.css", "app.js", "logo.svg", "logo-white.svg"):
+    for f in ("style.css", "app.js", "rx.js", "logo.svg", "logo-white.svg"):
         fp = os.path.join(OUT, "assets", f)
         if os.path.exists(fp): h.update(open(fp, "rb").read())
     return h.hexdigest()[:8]
@@ -483,24 +483,7 @@ write("compare.html", page("Compare paddles | PickleballRx", '''
 </section></div>''', 0, "compare", desc="Compare pickleball paddles side by side."))
 
 # ---------- finder ----------
-def q(name, legend, opts):
-    o = "".join(f'<label><input type="radio" name="{name}" value="{v}"{" checked" if i == 0 else ""}><b>{l}</b><span>{d}</span></label>' for i, (v, l, d) in enumerate(opts))
-    return f'<fieldset><legend>{legend}</legend><div class="options">{o}</div></fieldset>'
-
-write("finder.html", page("Paddle finder | PickleballRx", f'''
-<div class="wrap"><section class="finder">
-  <h1 class="page-title">Get your paddle Rx</h1>
-  <p class="section-lead">Four questions, about 30 seconds. We'll match you against every paddle in the database.</p>
-  <form class="rx-card" id="finder">
-    <div class="rx-mark" aria-hidden="true">Rx</div>
-    {q("level", "1. How long have you been playing?", [("beginner", "Under a year", "Still learning"), ("intermediate", "1 to 3 years", "Around 3.0 to 4.0"), ("advanced", "3+ years", "4.0 and up")])}
-    {q("style", "2. What do you want more of?", [("power", "Power", "Drives and put-aways"), ("spin", "Spin", "Topspin and slice"), ("control", "Control", "Dinks and resets"), ("all-court", "Balance", "A bit of everything")])}
-    {q("weight", "3. How should it feel in your hand?", [("light", "Light and quick", "Fast hands, easy on the arm"), ("mid", "In between", "No strong preference"), ("heavy", "Heavy and stable", "Plows through on drives")])}
-    {q("budget", "4. What's your budget?", [("100", "Under $100", "Value picks"), ("200", "Under $200", "Most mid-range paddles"), ("9999", "No limit", "Show me the best")])}
-    <button class="btn" type="submit">Show my matches</button>
-  </form>
-  <div id="finder-out" aria-live="polite" style="margin-top:24px"></div>
-</section></div>''', 0, "finder", desc="Find the right pickleball paddle in 30 seconds."))
+# finder.html is built by rx_page.py (the Rx algorithm), run near the end of this file.
 
 # ---------- best ----------
 # Playing-style lists. No scores yet (Siva, 2026-11-17): spin follows measured RPM; the others wait for Siva's picks.
@@ -1537,6 +1520,7 @@ write("pros.html", page("What paddles do the pros use? PPA and APP top players |
 </div>""", 0, "pros", desc="The paddles used by the top-ranked PPA Tour and APP Tour pickleball pros, by ranking, with sources and dates."))
 
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "catalog_page.py")).read())
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "rx_page.py")).read())
 
 write("404.html", page("Page not found | PickleballRx", '<article class="article"><h1>Page not found</h1><p>That page doesn\'t exist. <a href="/">Go to the home page</a>.</p></article>', 0))
 
