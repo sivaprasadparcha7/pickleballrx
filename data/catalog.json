@@ -1883,88 +1883,256 @@
     {
      "model": "J2K Pro (Gen 2)",
      "price": 165,
-     "url": "https://808pickle.com/products/sword-shield-j2k-pro-pre-order"
+     "url": "https://808pickle.com/products/sword-shield-j2k-pro-pre-order",
+     "weight": "7.9-8.2oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Aramid (Kevlar)",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J2K 14mm (Gen 2)",
      "mm": "14",
      "price": 155,
-     "url": "https://808pickle.com/products/sword-shield-j2k-copy"
+     "url": "https://808pickle.com/products/sword-shield-j2k-copy",
+     "weight": "7.9-8.3oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Aramid (Kevlar)",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid"
     },
     {
      "model": "J2K 14mm Pro (Gen 2)",
      "mm": "14",
      "price": 165,
-     "url": "https://808pickle.com/products/sword-shield-j2k-pro-copy"
+     "url": "https://808pickle.com/products/sword-shield-j2k-pro-copy",
+     "weight": "7.9-8.2oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Aramid (Kevlar)",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid"
     },
     {
      "model": "J2TI (Gen 2)",
      "price": 155,
-     "url": "https://808pickle.com/products/sword-shield-j2ti"
+     "url": "https://808pickle.com/products/sword-shield-j2ti",
+     "weight": "8.0-8.4oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Carbon fiber and titanium-plated fiber",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J3K (Gen 2)",
      "price": 155,
-     "url": "https://808pickle.com/products/sword-shield-j3k-pre-order"
+     "url": "https://808pickle.com/products/sword-shield-j3k-pre-order",
+     "weight": "7.9-8.4oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Aramid (Kevlar)",
+     "size": "16\" x 8\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Square",
+     "mm": "16"
     },
     {
      "model": "J3K Pro (Gen 2)",
      "price": 165,
-     "url": "https://808pickle.com/products/sword-shield-j3k-pro-pre-order"
+     "url": "https://808pickle.com/products/sword-shield-j3k-pro-pre-order",
+     "weight": "7.9-8.3oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Aramid (Kevlar)",
+     "size": "16\" x 8\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Square",
+     "mm": "16"
     },
     {
      "model": "J7K (Gen 2)",
      "price": 155,
-     "url": "https://808pickle.com/products/copy-of-sword-shield-j7k-pre-order"
+     "url": "https://808pickle.com/products/copy-of-sword-shield-j7k-pre-order",
+     "weight": "8.0-8.4oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Aramid (Kevlar)",
+     "size": "16.6\" x 7.4\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "J7K Pro (Gen 2)",
      "price": 165,
-     "url": "https://808pickle.com/products/sword-shield-j7k-pro-pre-order"
+     "url": "https://808pickle.com/products/sword-shield-j7k-pro-pre-order",
+     "weight": "7.9-8.3oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Aramid (Kevlar)",
+     "size": "16.6\" x 7.4\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "J4K (Gen 2)",
-     "url": "https://808pickle.com/products/sword-shield-j4k-pro-copy"
+     "url": "https://808pickle.com/products/sword-shield-j4k-pro-copy",
+     "weight": "8.1-8.4oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Aramid (Kevlar)",
+     "size": "15.6\" x 8.4\"",
+     "handle": "5.625\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Wide body",
+     "mm": "16"
     },
     {
      "model": "J4K Pro (Gen 2)",
-     "url": "https://808pickle.com/products/sword-shield-j3k-pro-copy"
+     "url": "https://808pickle.com/products/sword-shield-j3k-pro-copy",
+     "weight": "7.9-8.3oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Aramid (Kevlar)",
+     "size": "15.6\" x 8.4\"",
+     "handle": "5.625\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Wide body",
+     "mm": "16"
     },
     {
      "model": "J2XK (Gen 2)",
-     "url": "https://808pickle.com/products/sword-shield-j2k-copy-1"
+     "url": "https://808pickle.com/products/sword-shield-j2k-copy-1",
+     "weight": "8.0-8.3oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Aramid (Kevlar)",
+     "size": "16.2\" x 7.8\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J2XK Pro (Gen 2)",
-     "url": "https://808pickle.com/products/sword-shield-j2xk-copy"
+     "url": "https://808pickle.com/products/sword-shield-j2xk-copy",
+     "weight": "7.9-8.2oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Aramid (Kevlar)",
+     "size": "16.2\" x 7.8\"",
+     "handle": "6.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J3TI",
-     "url": "https://808pickle.com/products/sword-shield-j3ti"
+     "url": "https://808pickle.com/products/sword-shield-j3ti",
+     "weight": "8.0-8.3oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Carbon fiber and titanium-plated fiber",
+     "size": "16\" x 8\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Square",
+     "mm": "16"
     },
     {
      "model": "J1",
-     "url": "https://808pickle.com/products/sword-and-shield-j1"
+     "url": "https://808pickle.com/products/sword-and-shield-j1",
+     "weight": "8.7-8.9oz (with guard)",
+     "core": "Polypropylene honeycomb",
+     "face": "Raw T700 carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.75\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "J1H",
-     "url": "https://808pickle.com/products/sword-shield-j1h"
+     "url": "https://808pickle.com/products/sword-shield-j1h",
+     "weight": "8.1-8.3oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Raw composite",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.75\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "J2",
-     "url": "https://808pickle.com/products/sword-shield-j2"
+     "url": "https://808pickle.com/products/sword-shield-j2",
+     "weight": "7.9-8.1oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Raw T700 carbon fiber",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J2H",
-     "url": "https://808pickle.com/products/sword-shield-j2h"
+     "url": "https://808pickle.com/products/sword-shield-j2h",
+     "weight": "8.0-8.2oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Raw composite",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     },
     {
      "model": "J3",
-     "url": "https://808pickle.com/products/sword-shield-j3"
+     "url": "https://808pickle.com/products/sword-shield-j3",
+     "weight": "7.9-8.3oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Raw T700 carbon fiber",
+     "size": "16\" x 8\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Square",
+     "mm": "16"
     },
     {
      "model": "J5",
-     "url": "https://808pickle.com/products/sword-shield-j5"
+     "url": "https://808pickle.com/products/sword-shield-j5",
+     "weight": "8.4-8.6oz (with guard)",
+     "core": "Polypropylene honeycomb",
+     "face": "Raw composite",
+     "size": "17\" x 7\"",
+     "handle": "5.75\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Extra elongated",
+     "mm": "16"
     }
    ]
   },
