@@ -70,7 +70,7 @@
     {"division": "Women's singles", "players": [
       {"rank": 1, "name": "Katerina Stewart", "points": 5180, "brand": "RPM", "paddle": "V2 (Friction Pro V2)", "status": "team", "xray": "rpm-v2", "grit": "RPM Friction Pro V2"},
       {"rank": 2, "name": "Sofia Sewing", "points": 3690, "brand": "Franklin", "paddle": "C45", "status": "team"},
-      {"rank": 3, "name": "Domenika Turkovic", "points": 3360, "status": "unconfirmed"},
+      {"rank": 3, "name": "Domenika Turkovic", "points": 3360, "brand": "RPM", "paddle": "V2 (Friction Pro V2)", "status": "team", "xray": "rpm-v2", "grit": "RPM Friction Pro V2"},
       {"rank": 4, "name": "Bobbi Oshiro", "points": 3100, "status": "unconfirmed"},
       {"rank": 5, "name": "Seone Mendez", "points": 2860, "status": "unconfirmed"}
     ]},
