@@ -58,7 +58,7 @@
       {"rank": 2, "name": "Ammar Wazir", "points": 3040, "brand": "Luzz", "paddle": "Cannon", "status": "team", "xray": "luzz-cannon-xpp", "grit": "Luzz Cannon XPP M1"},
       {"rank": 3, "name": "Dusty Boyer", "points": 2840, "brand": "Luzz", "paddle": "Inferno", "status": "team", "xray": "luzz-inferno"},
       {"rank": 4, "name": "Ryler DeHeart", "points": 2310, "brand": "Franklin", "paddle": "C45", "status": "team"},
-      {"rank": 5, "name": "Tristan Dussault", "points": 2164, "status": "unconfirmed"}
+      {"rank": 5, "name": "Tristan Dussault", "points": 2164, "brand": "JOOLA", "paddle": "Perseus Pro IV", "status": "team"}
     ]},
     {"division": "Men's doubles", "players": [
       {"rank": 1, "name": "Jack Munro", "points": 5680, "brand": "Owl", "paddle": "Model not confirmed", "status": "sponsor", "src": "kitchen_deals"},
