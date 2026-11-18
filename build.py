@@ -331,8 +331,6 @@ REVIEWERS = [
      "https://www.youtube.com/@pickleballfreakshow", "YouTube"),
     ("PB on Call", "Pickleball On Call", "Paddle reviews and gear videos.",
      "https://www.youtube.com/@PickleballOnCall", "YouTube"),
-    ("Rally Haus", "Rally Haus Pickleball", "Paddle reviews and pickleball videos.",
-     "https://www.youtube.com/@rallyhauspickleball", "YouTube"),
 ]
 # Supasenpai's links, supplied by Siva (2026-11-18). Shown wherever Supasenpai appears.
 SENPAI_LINKS = [
