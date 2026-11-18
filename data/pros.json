@@ -54,7 +54,7 @@
   ],
   "app": [
     {"division": "Men's singles", "players": [
-      {"rank": 1, "name": "Ronan Camron", "points": 3830, "status": "unconfirmed"},
+      {"rank": 1, "name": "Ronan Camron", "points": 3830, "brand": "Adidas", "paddle": "AdiPower", "status": "team"},
       {"rank": 2, "name": "Ammar Wazir", "points": 3040, "status": "unconfirmed"},
       {"rank": 3, "name": "Dusty Boyer", "points": 2840, "status": "unconfirmed"},
       {"rank": 4, "name": "Ryler DeHeart", "points": 2310, "status": "unconfirmed"},
