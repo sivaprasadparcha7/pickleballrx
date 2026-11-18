@@ -146,6 +146,7 @@ def page(title, body, depth=0, current="", desc="Data-driven pickleball paddle r
   <nav class="nav" id="site-nav" aria-label="Main">
     {nav("paddles.html", "Paddle database", "paddles")}
     {nav("best.html", "Top picks", "best")}
+    {nav("pros.html", "Pro paddles", "pros")}
     {nav("compare.html", "Compare", "compare")}
     {nav("lab.html", "X-Ray Rx", "lab")}
     {nav("grit.html", "Grit Lab", "grit")}
@@ -164,7 +165,7 @@ def page(title, body, depth=0, current="", desc="Data-driven pickleball paddle r
     <div><img src="{r}assets/logo.svg?v={ASSET_V}" alt="Pickleball Rx" width="129" height="50" style="height:50px;width:auto;margin-bottom:10px">
       <p style="margin:0">Paddle reviews that look inside the paddle: X-rays, microscope images, measured specs and on-court video.</p><p style="margin:8px 0 0">Started by Don, Beni and Siva.</p></div>
     <div><h4>Tools</h4><ul><li><a href="{r}finder.html">Paddle finder</a></li><li><a href="{r}compare.html">Compare</a></li><li><a href="{r}paddles.html">Database</a></li><li><a href="{r}all-paddles.html">All paddles by brand</a></li></ul></div>
-    <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}best.html">Our top picks</a></li><li><a href="{r}grit-pickleball.html">Brand spotlight: Grit</a></li><li><a href="{r}evolv-pickleball.html">Brand spotlight: Evolv</a></li><li><a href="{r}gearbox-pickleball.html">Brand spotlight: Gearbox</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
+    <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}best.html">Our top picks</a></li><li><a href="{r}pros.html">What the pros play</a></li><li><a href="{r}grit-pickleball.html">Brand spotlight: Grit</a></li><li><a href="{r}evolv-pickleball.html">Brand spotlight: Evolv</a></li><li><a href="{r}gearbox-pickleball.html">Brand spotlight: Gearbox</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
     <div><h4>Follow</h4><ul><li><a href="{YOUTUBE}" rel="noopener">YouTube</a></li><li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li><li><a href="{r}about.html#contact">Contact</a></li></ul></div>
   </div>
   <p class="legal">&copy; 2026 PickleballRx.org &middot; <a href="{r}disclaimers.html">Disclaimers</a> &middot; Pickleball RX earns commission on some discount codes. Brands have no input into results.</p>
@@ -287,6 +288,7 @@ n_m = sum(1 for p in PADDLES if p.get("micro"))
 n_v = len({v["id"] for v in VIDEOS} | {p["video"] for p in PADDLES if p.get("video")})
 style_tiles = "".join(f'<a class="style-tile" href="best.html#{k}"><b>{l}</b><span>{d}</span></a>' for k, l, d in STYLES)
 style_tiles += '<a class="style-tile" href="codes.html"><b>Deals</b><span>Discount codes</span></a>'
+style_tiles += '<a class="style-tile" href="pros.html"><b>Pro paddles</b><span>What the top pros play</span></a>'
 latest = "\n".join(card(p, 0) for p in PADDLES[:3])
 # ---------- Upcoming releases (public news only; mark unconfirmed items) ----------
 UPCOMING = [
@@ -1447,6 +1449,85 @@ write("gearbox-pickleball.html", page("Gearbox Pickleball: brand spotlight | Pic
   </div>
 </section>
 </div>""", 0, "", desc="Gearbox Pickleball brand spotlight: founder Rafael Filippini's story and our X-ray, microscope and spin results for the Pressure X 8E and 8M."))
+
+# ---------- Pro paddles (reference list from public sources; not our testing) ----------
+PROS = json.load(open(os.path.join(ROOT, "data", "pros.json")))
+_PSRC = PROS["sources"]
+_xray_slugs = {x["slug"] for x in XRAY}
+_grit_names = {g["name"] for g in LABS["grit"]}
+
+
+def _pro_paddle(p):
+    if p.get("status") == "unconfirmed" and not p.get("brand"):
+        note = f'<br><span class="muted" style="font-size:.82rem">{e(p["note"])}</span>' if p.get("note") else ""
+        return f'<span class="muted">Unconfirmed</span>{note}'
+    out = f'<strong>{e(p["brand"])}</strong> {e(p["paddle"])}'
+    if p.get("status") == "sponsor":
+        out += ' <span class="muted" style="font-size:.82rem">(paddle sponsor)</span>'
+    elif p.get("status") == "team":
+        out += ' <span class="muted" style="font-size:.82rem">(seen by the Pickleball RX team)</span>'
+    return out
+
+
+def _pro_labs(p):
+    links = []
+    if p.get("xray") in _xray_slugs: links.append(f'<a class="badge" href="xray/{p["xray"]}.html">X-ray</a>')
+    if p.get("grit") in _grit_names: links.append(f'<a class="badge" href="grit.html#{slugify(p["grit"])}">Grit</a>')
+    return " ".join(links) or '<span class="muted">&ndash;</span>'
+
+
+def _pro_table(rows, tid):
+    body = "".join(
+        f'<tr><td class="num">{p["rank"]}</td><td style="white-space:normal"><strong>{e(p["name"])}</strong></td>'
+        f'<td style="white-space:normal">{_pro_paddle(p)}</td><td>{_pro_labs(p)}</td></tr>' for p in rows)
+    return (f'<div class="table-wrap"><table class="db" id="{tid}" style="min-width:560px"><thead><tr><th>Rank</th><th>Player</th><th>Paddle</th><th>Our labs</th></tr></thead>'
+            f'<tbody>{body}</tbody></table></div>')
+
+
+def _fmt_date(s):
+    import datetime
+    d = datetime.date.fromisoformat(s)
+    return f'{d.strftime("%B")} {d.day}, {d.year}'
+
+
+_ppa_all = PROS["ppa_men"] + PROS["ppa_women"]
+_brand_n = {}
+for p in _ppa_all:
+    if p.get("brand"): _brand_n[p["brand"]] = _brand_n.get(p["brand"], 0) + 1
+_top_brands = sorted(_brand_n.items(), key=lambda kv: (-kv[1], kv[0]))[:6]
+_brand_tiles = "".join(f'<div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px"><b style="font-size:1.5rem">{n}</b> <span style="font-weight:700">{e(b)}</span></div>' for b, n in _top_brands)
+_app_html = "".join(f'<h3 style="margin-top:22px">APP {e(d["division"].lower())}</h3>{_pro_table(d["players"], "app-" + slugify(d["division"]))}' for d in PROS["app"])
+_s = lambda k: f'<a href="{e(_PSRC[k]["url"])}" rel="noopener">{e(_PSRC[k]["name"])}</a>'
+
+write("pros.html", page("What paddles do the pros use? PPA and APP top players | PickleballRx", f"""
+<section class="hero" style="padding:44px 0"><div class="wrap" style="grid-template-columns:1fr"><div>
+  <span class="tag">Pro paddles</span>
+  <h1>What the <em>top-ranked pros</em> play.</h1>
+  <p>The paddle each top PPA and APP player is using, ordered by current tour ranking. A reference list from public sources, updated {_fmt_date(PROS["updated"])}. This is not Pickleball RX testing.</p>
+</div></div></section>
+<div class="wrap">
+<section>
+  <h2>Most-used brands</h2>
+  <p class="section-lead">Count of players in the PPA top 20 men and top 20 women using each brand.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px">{_brand_tiles}</div>
+</section>
+<section style="padding-top:0" id="ppa-men">
+  <h2>PPA Tour: top 20 men</h2>
+  <p class="section-lead">Ranking: {_s("ppa_rank")} (checked {_fmt_date(_PSRC["ppa_rank"]["checked"])}). These rankings combine doubles, mixed and singles. Paddles as seen at the PPA World Championships, per {_s("worlds")} ({_fmt_date(_PSRC["worlds"]["asof"])}), except where marked as seen by the Pickleball RX team.</p>
+  {_pro_table(PROS["ppa_men"], "ppa-men-table")}
+</section>
+<section style="padding-top:0" id="ppa-women">
+  <h2>PPA Tour: top 20 women</h2>
+  <p class="section-lead">Same ranking and paddle sources as the men&rsquo;s list.</p>
+  {_pro_table(PROS["ppa_women"], "ppa-women-table")}
+</section>
+<section style="padding-top:0" id="app">
+  <h2>APP Tour: top 5 by division</h2>
+  <p class="section-lead">Ranking: {_s("app_rank")} (updated {_fmt_date(_PSRC["app_rank"]["asof"])}). APP players&rsquo; paddles are rarely tracked publicly, so most are unconfirmed for now. Jack Munro&rsquo;s sponsor is from {_s("kitchen_deals")}; Megan Fudge&rsquo;s signature paddle is from {_s("franklin_fudge")}.</p>
+  {_app_html}
+</section>
+<section style="padding-top:0"><div class="note"><strong>About this list.</strong> Rankings and paddle deals change often, and pros sometimes play unreleased or custom paddles. &ldquo;Unconfirmed&rdquo; means we couldn&rsquo;t find a reliable current source, so we didn&rsquo;t guess. The <strong>Our labs</strong> column links to our own X-ray or Grit Lab results where we have them for that paddle model; a pro&rsquo;s paddle may be a custom build. Know a pro&rsquo;s current paddle? <a href="about.html#contact">Tell us</a>.</div></section>
+</div>""", 0, "pros", desc="The paddles used by the top-ranked PPA Tour and APP Tour pickleball pros, by ranking, with sources and dates."))
 
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "catalog_page.py")).read())
 
