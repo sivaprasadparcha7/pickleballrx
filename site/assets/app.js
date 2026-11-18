@@ -92,35 +92,7 @@
     draw();
   }
 
-  /* ---------- finder ---------- */
-  var finder = $('#finder');
-  if (finder) {
-    finder.addEventListener('submit', function (ev) {
-      ev.preventDefault();
-      var f = new FormData(finder), level = f.get('level'), style = f.get('style'), weight = f.get('weight'), budget = +f.get('budget');
-      var lv = { beginner: 0, intermediate: 1, advanced: 2 };
-      var scored = P.map(function (p) {
-        var s = 0;
-        if (style === 'all-court') s += (p.power + p.spin + p.control) / 3 * 4; else s += p[style] * 4;
-        s += (level === 'beginner' ? p.forgiveness * 2 : level === 'intermediate' ? (p.forgiveness + p.control) : p.power + p.spin);
-        s -= Math.abs(lv[p.level] - lv[level]) * 3;
-        var target = { light: 7.6, mid: 8.0, heavy: 8.3 }[weight];
-        s -= Math.abs(p.weight_oz - target) * 8;
-        if (p.price > budget) s -= 20 + (p.price - budget) / 10;
-        return { p: p, s: s };
-      }).sort(function (a, b) { return b.s - a.s; });
-      var top = scored.slice(0, 3), max = scored[0].s, min = scored[scored.length - 1].s;
-      var out = '<h2>Your paddle prescription</h2><p class="section-lead">Best matches from our database, based on your answers.</p><div class="results">' +
-        top.map(function (r) {
-          var pct = Math.round(70 + 29 * (r.s - min) / ((max - min) || 1));
-          return '<a class="result" href="reviews/' + r.p.slug + '.html" style="text-decoration:none;color:inherit"><div class="paddle-art">' + esc(r.p.name.slice(-1)) + '</div>' +
-            '<div><h3>' + esc(r.p.name) + '</h3><div class="muted" style="font-size:.9rem">' + esc(r.p.shape) + ' &middot; ' + r.p.weight_oz + ' oz &middot; $' + r.p.price + '</div></div>' +
-            '<div class="match">' + pct + '%<div class="muted" style="font-size:.75rem;font-weight:600">match</div></div></a>';
-        }).join('') + '</div><p style="margin-top:16px"><a class="btn ghost" href="compare.html?p=' + top.map(function (r) { return r.p.slug; }).join(',') + '">Compare these three</a></p>';
-      $('#finder-out').innerHTML = out;
-      $('#finder-out').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  }
+  /* finder: see rx.js */
 
   /* ---------- X-Ray Rx filter ---------- */
   var xg = $('#x-grid');

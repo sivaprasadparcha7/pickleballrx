@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Paddle finder | PickleballRx</title>
-<meta name="description" content="Find the right pickleball paddle in 30 seconds.">
+<title>Paddle finder: get your paddle Rx | PickleballRx</title>
+<meta name="description" content="Get your pickleball paddle Rx: answer questions on country, level, budget, core, foam, shape and priority, and our algorithm ranks paddles using our own lab testing.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=1cf983db">
+<link rel="stylesheet" href="assets/style.css?v=d3dc68b2">
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 </head>
 <body>
 <div class="placeholder-banner">Preview site. X-Ray, Grit and Spin Lab data is real. Paddles in the review database are sample placeholders for now.</div>
 <header class="site-header"><div class="wrap">
-  <a class="logo" href="index.html"><img src="assets/logo-white.svg?v=1cf983db" alt="Pickleball Rx" width="149" height="58"></a>
+  <a class="logo" href="index.html"><img src="assets/logo-white.svg?v=d3dc68b2" alt="Pickleball Rx" width="149" height="58"></a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span><span></span><span></span></button>
   <nav class="nav" id="site-nav" aria-label="Main">
     <a href="paddles.html">Paddle database</a>
@@ -35,21 +35,51 @@
 
 <div class="wrap"><section class="finder">
   <h1 class="page-title">Get your paddle Rx</h1>
-  <p class="section-lead">Four questions, about 30 seconds. We'll match you against every paddle in the database.</p>
+  <p class="section-lead">Answer a few questions and our Rx algorithm ranks 400 paddles for you, using our own X-ray, spin and swing-weight testing where we have it.</p>
   <form class="rx-card" id="finder">
     <div class="rx-mark" aria-hidden="true">Rx</div>
-    <fieldset><legend>1. How long have you been playing?</legend><div class="options"><label><input type="radio" name="level" value="beginner" checked><b>Under a year</b><span>Still learning</span></label><label><input type="radio" name="level" value="intermediate"><b>1 to 3 years</b><span>Around 3.0 to 4.0</span></label><label><input type="radio" name="level" value="advanced"><b>3+ years</b><span>4.0 and up</span></label></div></fieldset>
-    <fieldset><legend>2. What do you want more of?</legend><div class="options"><label><input type="radio" name="style" value="power" checked><b>Power</b><span>Drives and put-aways</span></label><label><input type="radio" name="style" value="spin"><b>Spin</b><span>Topspin and slice</span></label><label><input type="radio" name="style" value="control"><b>Control</b><span>Dinks and resets</span></label><label><input type="radio" name="style" value="all-court"><b>Balance</b><span>A bit of everything</span></label></div></fieldset>
-    <fieldset><legend>3. How should it feel in your hand?</legend><div class="options"><label><input type="radio" name="weight" value="light" checked><b>Light and quick</b><span>Fast hands, easy on the arm</span></label><label><input type="radio" name="weight" value="mid"><b>In between</b><span>No strong preference</span></label><label><input type="radio" name="weight" value="heavy"><b>Heavy and stable</b><span>Plows through on drives</span></label></div></fieldset>
-    <fieldset><legend>4. What's your budget?</legend><div class="options"><label><input type="radio" name="budget" value="100" checked><b>Under $100</b><span>Value picks</span></label><label><input type="radio" name="budget" value="200"><b>Under $200</b><span>Most mid-range paddles</span></label><label><input type="radio" name="budget" value="9999"><b>No limit</b><span>Show me the best</span></label></div></fieldset>
-    <button class="btn" type="submit">Show my matches</button>
+    <fieldset id="q-country"><legend>1. Where do you play?</legend>
+      <p class="muted rx-hint">Your country changes the local picks, price notes and which brands we nudge up.</p>
+      <select name="country" id="rx-country" class="rx-select"><option value="us">United States</option><option value="ca">Canada</option><option value="au">Australia</option><option value="uk">United Kingdom</option><option value="my">Malaysia</option><option value="vn">Vietnam</option><option value="ph">Philippines</option><option value="es">Spain</option><option value="in">India</option><option value="mx">Mexico</option><option value="other">Somewhere else</option></select></fieldset>
+    <fieldset id="q-level"><legend>2. How long have you been playing?</legend><div class="options"><label><input type="radio" name="level" value="beginner" checked><b>Beginner</b><span>Under a year, still learning</span></label><label><input type="radio" name="level" value="intermediate"><b>Intermediate</b><span>1 to 3 years, about 3.0 to 4.0</span></label><label><input type="radio" name="level" value="advanced"><b>Advanced</b><span>3+ years, 4.0 and up</span></label></div></fieldset>
+    <fieldset id="q-budget"><legend>3. What's your budget?</legend><p class="muted rx-hint">In US dollars. Paddles that cost less than your range still count, just ranked a little lower.</p><div class="options"><label><input type="radio" name="budget" value="100" checked><b>Under $100</b><span>Value picks</span></label><label><input type="radio" name="budget" value="200"><b>$100 to $200</b><span>Most mid-range paddles</span></label><label><input type="radio" name="budget" value="300"><b>$200 to $300</b><span>Premium paddles</span></label><label><input type="radio" name="budget" value="any"><b>Budget is no problem</b><span>Show me the best</span></label></div></fieldset>
+    <fieldset id="q-build"><legend>4. Core construction</legend><div class="options"><label><input type="radio" name="build" value="gen3"><b>Gen 3</b><span>Honeycomb core, usually with a foam perimeter</span></label><label><input type="radio" name="build" value="foam"><b>Full foam</b><span>Foam core, no honeycomb</span></label><label><input type="radio" name="build" value="any" checked><b>Not sure</b><span>Show both</span></label></div></fieldset>
+    <fieldset id="q-foam" hidden><legend>4b. Which foam?</legend><div class="options"><label><input type="radio" name="foam" value="epp"><b>EPP foam</b><span>Tends to feel firmer and poppier</span></label><label><input type="radio" name="foam" value="mpp"><b>MPP foam</b><span>Tends to feel softer, more dwell</span></label><label><input type="radio" name="foam" value="any" checked><b>Either one</b><span>Any full foam</span></label></div></fieldset>
+    <fieldset id="q-shape"><legend>5. Paddle shape</legend><div class="options"><label><input type="radio" name="shape" value="e"><b>Elongated</b><span>More reach and power, smaller sweet spot</span></label><label><input type="radio" name="shape" value="h"><b>Hybrid</b><span>In between</span></label><label><input type="radio" name="shape" value="w"><b>Standard / wide body</b><span>Biggest sweet spot, fastest hands</span></label><label><input type="radio" name="shape" value="any" checked><b>Not sure</b><span>Show all shapes</span></label></div></fieldset>
+    <fieldset id="q-top" hidden><legend>5b. Which hybrid?</legend><p class="muted rx-hint">Few brands say which top their hybrid has, so most hybrids are &ldquo;not confirmed&rdquo;. We show confirmed matches first.</p><div class="options"><label><input type="radio" name="top" value="flat"><b>Flat top hybrid</b><span>Squarer head, more face up top</span></label><label><input type="radio" name="top" value="round"><b>Round top hybrid</b><span>Rounded head</span></label><label><input type="radio" name="top" value="any" checked><b>Either one</b><span>Any hybrid</span></label></div></fieldset>
+    <label class="rx-check"><input type="checkbox" name="codes" value="1"> Only show brands we partner with (discount code brands)</label>
+    <fieldset id="q-priority"><legend>6. What matters most?</legend><div class="options"><label><input type="radio" name="priority" value="power" checked><b>Power</b><span>Drives and put-aways</span></label><label><input type="radio" name="priority" value="spin"><b>Spin</b><span>Topspin and slice</span></label><label><input type="radio" name="priority" value="control"><b>Defense</b><span>Blocks, resets and dinks</span></label><label><input type="radio" name="priority" value="allcourt"><b>All-court control</b><span>A bit of everything</span></label></div></fieldset>
+    <button class="btn" type="submit">Get my Rx</button>
   </form>
   <div id="finder-out" aria-live="polite" style="margin-top:24px"></div>
+
+  <section id="how" class="rx-how">
+    <h2>How our Rx algorithm works</h2>
+    <p>Every paddle gets four ratings from 0 to 10: <b>power</b>, <b>spin</b>, <b>defense</b> (control and fast hands) and <b>forgiveness</b> (sweet spot). Where we've tested a paddle, our numbers win:</p>
+    <ul>
+      <li><b>Spin</b> comes from our <a href="spin.html">Spin Lab</a> average RPM when we've tested it. Otherwise it starts at 6 and rises if another reviewer ranks it highly for spin.</li>
+      <li><b>Power</b> rises for full foam (a little more for EPP), elongated shapes, 14 mm cores and a higher measured swing weight from our <a href="specs.html">Spec Lab</a>.</li>
+      <li><b>Defense</b> rises for Gen 3 honeycomb, 16 mm cores, wider shapes, a lighter measured swing weight and a higher twist weight.</li>
+      <li><b>Forgiveness</b> rises for wide and hybrid shapes, 16 mm cores and a higher measured twist weight.</li>
+      <li>Our own picks (the <a href="index.html#leaderboard">Leader Board</a> and <a href="best.html">top picks</a>) nudge the matching rating up.</li>
+    </ul>
+    <p>Then your answers turn into a match score out of 100:</p>
+    <ul>
+      <li><b>Up to 55 points</b> for your priority rating. All-court uses the average of power, spin and defense, minus a little for a lopsided paddle.</li>
+      <li><b>Up to 20 points</b> for your level. Beginners get forgiveness and defense, intermediates get a balance, advanced players get power and spin.</li>
+      <li><b>Up to 15 points</b> for evidence: our X-ray, Spin Lab or Spec Lab data, our own picks, and public picks from John Kew, Matt's Pickleball, Pickleball Effect, Supasenpai and The Kitchen.</li>
+      <li><b>Up to 10 points</b> for fit: in your budget range, a confirmed hybrid top style, and brands with a local presence in your country.</li>
+    </ul>
+    <p>Budget, construction, foam type and shape are filters: a paddle has to match them to be ranked. If too few paddles match, we loosen the least important filter and tell you which one. Discount codes never change the ranking. Tick &ldquo;Only show brands we partner with&rdquo; to limit the list to our partner brands; where we have a code it shows on the paddle.</p>
+    <p class="muted" style="font-size:.88rem">Specs and prices come from each brand's store (checked Nov 2026) and can change. Where a brand doesn't say the foam type or hybrid top style, we mark it unknown rather than guess. 61 of the 400 paddles have our own lab data; 84 appear on another reviewer's public list; 9 of 78 hybrids have a confirmed top style. Other reviewers' lists are credited and linked, not copied. <a href="disclaimers.html">Disclaimers</a>.</p>
+  </section>
 </section></div>
+<script src="assets/rx-data.js?v=d3dc68b2"></script>
+<script src="assets/rx.js?v=d3dc68b2"></script>
 </main>
 <footer class="site-footer"><div class="wrap">
   <div class="cols">
-    <div><img src="assets/logo.svg?v=1cf983db" alt="Pickleball Rx" width="129" height="50" style="height:50px;width:auto;margin-bottom:10px">
+    <div><img src="assets/logo.svg?v=d3dc68b2" alt="Pickleball Rx" width="129" height="50" style="height:50px;width:auto;margin-bottom:10px">
       <p style="margin:0">Paddle reviews that look inside the paddle: X-rays, microscope images, measured specs and on-court video.</p><p style="margin:8px 0 0">Started by Don, Beni and Siva.</p></div>
     <div><h4>Tools</h4><ul><li><a href="finder.html">Paddle finder</a></li><li><a href="compare.html">Compare</a></li><li><a href="paddles.html">Database</a></li></ul></div>
     <div><h4>Learn</h4><ul><li><a href="guide.html">Buying guide</a></li><li><a href="lab.html">X-Ray Rx</a></li><li><a href="grit.html">Grit Lab</a></li><li><a href="spin.html">Spin Lab</a></li><li><a href="specs.html">Spec Lab</a></li><li><a href="best.html">Our top picks</a></li><li><a href="pros.html">What the pros play</a></li><li><a href="grit-pickleball.html">Brand spotlight: Grit</a></li><li><a href="evolv-pickleball.html">Brand spotlight: Evolv</a></li><li><a href="gearbox-pickleball.html">Brand spotlight: Gearbox</a></li><li><a href="about.html">How we test</a></li><li><a href="disclaimers.html">Disclaimers</a></li></ul></div>
@@ -57,7 +87,7 @@
   </div>
   <p class="legal">&copy; 2026 PickleballRx.org &middot; <a href="disclaimers.html">Disclaimers</a> &middot; Pickleball RX earns commission on some discount codes. Brands have no input into results.</p>
 </div></footer>
-<script src="assets/paddles.js?v=1cf983db"></script>
-<script src="assets/app.js?v=1cf983db"></script>
+<script src="assets/paddles.js?v=d3dc68b2"></script>
+<script src="assets/app.js?v=d3dc68b2"></script>
 </body>
 </html>
