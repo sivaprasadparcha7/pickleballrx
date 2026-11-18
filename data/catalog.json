@@ -1143,53 +1143,181 @@
    "brand": "Franklin",
    "store": "https://franklinsports.com/sports/pickleball/paddles",
    "complete": true,
-   "note": "Franklin's own store only let us read a few paddles, so most of this list and its prices come from Just Paddles.",
    "paddles": [
     {
      "model": "Anna Leigh Waters C45 Aurelius",
+     "shape": "Standard",
      "mm": "12.7 / 14 / 16",
-     "price": 229.99
+     "price": 229.99,
+     "url": "https://franklinsports.com/anna-leigh-waters-c45-paddle-series",
+     "weight": "7.2-8.0oz",
+     "core": "Polymer honeycomb with foam layer",
+     "face": "T700 carbon fiber",
+     "size": "15.7\" x 7.9\"",
+     "handle": "5.1\"",
+     "grip": "3.9\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "C45 Hayden Patriquin",
+     "shape": "Elongated",
      "mm": "14 / 16",
-     "price": 229.99
+     "note": "Out of stock on Franklin's site",
+     "url": "https://franklinsports.com/c45-hayden-paddle-series",
+     "weight": "7.5-8.0oz",
+     "core": "Polymer honeycomb with foam layer",
+     "face": "T700 carbon fiber",
+     "size": "16.4\" x 7.6\"",
+     "handle": "5.6\"",
+     "grip": "4.15\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "C45 Parris Todd Edition",
-     "price": 229.99
+     "shape": "Elongated",
+     "mm": "13.25",
+     "price": 229.99,
+     "url": "https://franklinsports.com/parris-todd-c45-series",
+     "weight": "7.6-7.9oz",
+     "core": "Polymer honeycomb",
+     "face": "T700 carbon fiber",
+     "size": "16.3\" x 7.5\"",
+     "handle": "5.7\"",
+     "grip": "4.15\"",
+     "approval": "USAP, UPA-A"
+    },
+    {
+     "model": "C45 Megan Fudge",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 229.99,
+     "url": "https://franklinsports.com/c45-megan-fudge-paddle-series",
+     "weight": "7.6-8.0oz",
+     "core": "Polymer honeycomb",
+     "face": "T700 carbon fiber",
+     "size": "16.4\" x 7.6\"",
+     "handle": "5.6\"",
+     "grip": "4.15\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "C45 Dynasty",
+     "shape": "Elongated",
      "mm": "14 / 16",
-     "price": 229.99
+     "price": 229.99,
+     "url": "https://franklinsports.com/c45-carbon-fiber-paddle-series",
+     "weight": "7.5-8.0oz",
+     "core": "Polymer honeycomb with foam layer",
+     "face": "T700 carbon fiber",
+     "size": "16.4\" x 7.6\"",
+     "handle": "5.6\"",
+     "grip": "4.3\"",
+     "approval": "USAP, UPA-A"
+    },
+    {
+     "model": "C45 Tempo",
+     "shape": "Standard",
+     "mm": "14 / 16",
+     "price": 229.99,
+     "url": "https://franklinsports.com/c45-carbon-fiber-paddle-series",
+     "weight": "7.5-8.0oz",
+     "core": "Polymer honeycomb with foam layer",
+     "face": "T700 carbon fiber",
+     "size": "15.7\" x 7.9\"",
+     "handle": "5.1\"",
+     "grip": "4.3\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "C45 Hybrid",
      "shape": "Hybrid",
-     "price": 229.99
+     "mm": "14",
+     "price": 229.99,
+     "url": "https://franklinsports.com/c45-carbon-fiber-paddle-series",
+     "weight": "7.6-7.9oz",
+     "core": "Polymer honeycomb with foam layer",
+     "face": "T700 carbon fiber",
+     "size": "16.3\" x 7.6\"",
+     "handle": "5.7\"",
+     "grip": "4.3\"",
+     "approval": "USAP, UPA-A"
+    },
+    {
+     "model": "Will Howells Signature C45",
+     "mm": "14",
+     "url": "https://franklinsports.com/will-howells-signature-c45-paddle-14mm-gold"
     },
     {
      "model": "FS Tour Dynasty",
+     "shape": "Elongated",
      "mm": "14 / 16",
-     "price": 89.95,
-     "was": 149.99
+     "price": 149.99,
+     "url": "https://franklinsports.com/fs-tour-paddle-series",
+     "weight": "8.0-8.8oz",
+     "core": "Polymer honeycomb",
+     "face": "Raw T700 carbon fiber",
+     "handle": "5.6\"",
+     "grip": "4.3\"",
+     "approval": "USAP"
     },
     {
      "model": "FS Tour Tempo",
+     "shape": "Standard",
      "mm": "14 / 16",
-     "price": 69.95,
-     "was": 149.99
+     "price": 149.99,
+     "url": "https://franklinsports.com/fs-tour-paddle-series",
+     "weight": "8.2-8.9oz",
+     "core": "Polymer honeycomb",
+     "face": "Raw T700 carbon fiber",
+     "handle": "5\"",
+     "grip": "4.3\"",
+     "approval": "USAP"
+    },
+    {
+     "model": "FS Tour Featherweight",
+     "shape": "Elongated / Standard",
+     "mm": "12",
+     "price": 149.99,
+     "url": "https://franklinsports.com/fs-tour-featherweight-series",
+     "weight": "7.3-7.6oz",
+     "core": "Polymer honeycomb",
+     "face": "Raw T700 carbon fiber",
+     "grip": "4.3\"",
+     "approval": "USAP"
+    },
+    {
+     "model": "Signature Carbon Series",
+     "mm": "13",
+     "price": 99.99,
+     "url": "https://franklinsports.com/signature-carbon-series-pickleball-paddle",
+     "weight": "7.5-8.0oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Raw T700 carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.6\"",
+     "grip": "4.25\"",
+     "approval": "USAP"
+    },
+    {
+     "model": "Christine McGrath Signature",
+     "mm": "13 / 16",
+     "price": 25.99,
+     "was": 49.99,
+     "url": "https://franklinsports.com/christine-mcgrath-paddle",
+     "weight": "7.6-8.3oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Fiberglass, gritted",
+     "size": "15.9\" x 8\"",
+     "handle": "5\"",
+     "grip": "4.25\"",
+     "approval": "USAP"
     },
     {
      "model": "Signature Composite",
      "mm": "13 / 16",
      "price": 59.95,
-     "was": 99.99
-    },
-    {
-     "model": "Signature Carbon Series",
-     "price": 99.99
+     "was": 99.99,
+     "note": "Price from Just Paddles"
     },
     {
      "model": "Dynasty Whip 16mm",
