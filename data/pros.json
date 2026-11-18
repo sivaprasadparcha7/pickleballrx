@@ -79,7 +79,7 @@
       {"rank": 2, "name": "Sofia Sewing", "points": 4450, "brand": "Franklin", "paddle": "C45", "status": "team"},
       {"rank": 3, "name": "Shelby Bates", "points": 4070, "brand": "RPM", "paddle": "V2 Hybrid Edition (pink)", "status": "team"},
       {"rank": 4, "name": "Jillian Braverman", "points": 3920, "brand": "Thrive", "paddle": "Ignite", "status": "team"},
-      {"rank": 5, "name": "Christine Maddox", "points": 3400, "brand": "Reload", "paddle": "(model not confirmed)", "status": "team"}
+      {"rank": 5, "name": "Christine Maddox", "points": 3400, "brand": "Reload", "paddle": "RLD-1", "status": "team"}
     ]}
   ]
 }
