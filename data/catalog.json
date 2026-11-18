@@ -3998,6 +3998,124 @@
      "url": "https://www.aireo-sports.com/products/harpy-eagle-k16-1"
     }
    ]
+  },
+  {
+   "brand": "Engage",
+   "store": "https://engagepickleball.com/collections/allpaddles",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "X3 Pro",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 229.99,
+     "url": "https://engagepickleball.com/products/engage-pickleball-paddle-x3-pro",
+     "core": "Foam (quad-density)",
+     "face": "Gritted carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "approval": "UPA-A (not USAP)"
+    },
+    {
+     "model": "X2 Elongated",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 199.99,
+     "was": 259.99,
+     "url": "https://engagepickleball.com/products/engage-x2-pickleball-paddle",
+     "core": "Foam (quad-density)",
+     "face": "Woven carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "approval": "USAP, UPA-A"
+    },
+    {
+     "model": "X2 Widebody",
+     "shape": "Widebody",
+     "mm": "16",
+     "price": 199.99,
+     "was": 259.99,
+     "url": "https://engagepickleball.com/products/engage-x2-widebody-pickleball-paddle",
+     "core": "Foam (quad-density)",
+     "face": "Woven carbon fiber"
+    },
+    {
+     "model": "Axiom Elongated",
+     "shape": "Elongated",
+     "price": 199.99,
+     "url": "https://engagepickleball.com/products/engage-axiom-elongated-pickleball-paddle",
+     "face": "Gritted surface"
+    },
+    {
+     "model": "Axiom Widebody",
+     "shape": "Widebody",
+     "price": 199.99,
+     "url": "https://engagepickleball.com/products/engage-axiom-widebody-pickleball-paddle",
+     "face": "Gritted surface"
+    },
+    {
+     "model": "Pursuit Pro2 Elongated 16mm",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 129.99,
+     "url": "https://engagepickleball.com/products/engage-pursuit-pro2-elongated-16mm-pickleball-paddle"
+    },
+    {
+     "model": "Pursuit Pro2 Widebody 16mm",
+     "shape": "Widebody",
+     "mm": "16",
+     "price": 129.99,
+     "url": "https://engagepickleball.com/products/engage-pursuit-pro2-widebody-16mm-pickleball-paddle"
+    },
+    {
+     "model": "Pursuit Pro1 Innovation",
+     "mm": "12.7 / 15.2",
+     "price": 129.99,
+     "url": "https://engagepickleball.com/products/pro1-innovation-152"
+    },
+    {
+     "model": "Pursuit Pro1 Elongated Power Series",
+     "shape": "Elongated",
+     "mm": "12.7 / 15.2",
+     "price": 129.99,
+     "url": "https://engagepickleball.com/products/new-graphic-pursuit-pro1-elongated-15-2-power-series-raw-t700-carbon-fiber",
+     "face": "Raw T700 carbon fiber"
+    },
+    {
+     "model": "Pursuit Pro MX",
+     "mm": "12.7 / 15.2",
+     "price": 129.99,
+     "url": "https://engagepickleball.com/products/new-graphic-pursuit-pro-mx-15-2-raw-t700-carbon-fiber",
+     "face": "Raw T700 carbon fiber"
+    },
+    {
+     "model": "Pursuit Pro EX",
+     "mm": "12.7 / 15.2",
+     "price": 129.99,
+     "url": "https://engagepickleball.com/products/new-graphic-pursuit-pro-ex-15-2-raw-t700-carbon-fiber",
+     "face": "Raw T700 carbon fiber"
+    },
+    {
+     "model": "Pursuit V2.0",
+     "shape": "Hybrid",
+     "price": 79.99,
+     "url": "https://engagepickleball.com/products/pursuitv2"
+    },
+    {
+     "model": "Encore Pro",
+     "price": 79.99,
+     "url": "https://engagepickleball.com/products/engage-encore-pro-pickleball-paddle",
+     "face": "Carbon fiber"
+    },
+    {
+     "model": "Encore 16mm",
+     "mm": "16",
+     "price": 59.99,
+     "url": "https://engagepickleball.com/products/engage-encore-pickleball-paddle"
+    }
+   ]
   }
  ]
 }
