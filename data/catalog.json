@@ -461,7 +461,14 @@
      "mm": "16",
      "price": 54.99,
      "was": 149.99,
-     "url": "https://gearboxsports.com/products/g3-elongated"
+     "url": "https://gearboxsports.com/products/g3-elongated",
+     "weight": "8.0oz",
+     "core": "Polyethylene honeycomb",
+     "face": "Carbon and glass fiber",
+     "size": "16.5\" x 7.375\"",
+     "handle": "5.5\"",
+     "grip": "4\"",
+     "approval": "USAP"
     },
     {
      "model": "G2 Elongated 14mm",
@@ -929,7 +936,14 @@
      "mm": "16",
      "price": 194.65,
      "was": 229,
-     "url": "https://us.sixzeropickleball.com/products/coral-pro-16mm-lightweight"
+     "url": "https://us.sixzeropickleball.com/products/coral-pro-16mm-lightweight",
+     "weight": "7.7oz",
+     "core": "Foam (Tectonic core)",
+     "face": "Raw carbon fiber",
+     "size": "16.3\" x 7.5-7.7\"",
+     "handle": "5.5\"",
+     "grip": "4.0-4.13\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "Coral 16mm",
@@ -952,7 +966,14 @@
      "mm": "16",
      "price": 150,
      "was": 200,
-     "url": "https://us.sixzeropickleball.com/products/coral-16mm-lightweight"
+     "url": "https://us.sixzeropickleball.com/products/coral-16mm-lightweight",
+     "weight": "7.6-8.0oz",
+     "core": "Foam (Tectonic core)",
+     "face": "Raw carbon fiber",
+     "size": "16.3\" x 7.3-7.5\" (Hybrid)",
+     "handle": "5.5\"",
+     "grip": "4.1\"",
+     "approval": "USAP"
     },
     {
      "model": "Boulder Opal 14mm",
@@ -990,56 +1011,123 @@
      "mm": "14",
      "price": 90,
      "was": 180,
-     "url": "https://us.sixzeropickleball.com/products/black-opal-14mm-elongated"
+     "url": "https://us.sixzeropickleball.com/products/black-opal-14mm-elongated",
+     "weight": "8.0-8.3oz",
+     "core": "Solid foam",
+     "face": "Raw carbon fiber",
+     "size": "16.5\" x 7.3-7.5\"",
+     "handle": "5.75\"",
+     "grip": "4.125\"",
+     "approval": "USAP"
     },
     {
      "model": "Ruby Pro 14mm",
      "mm": "14",
-     "url": "https://us.sixzeropickleball.com/products/ruby-pro-14mm"
+     "url": "https://us.sixzeropickleball.com/products/ruby-pro-14mm",
+     "weight": "8.0-8.3oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Aramid fiber",
+     "size": "16.3\" x 7.5-7.7\"",
+     "handle": "5.5\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "Ruby",
-     "url": "https://us.sixzeropickleball.com/products/ruby"
+     "url": "https://us.sixzeropickleball.com/products/ruby",
+     "weight": "8.2oz",
+     "core": "Polymer honeycomb",
+     "face": "Aramid fiber",
+     "size": "16.3\" x 7.5-7.7\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Flared",
+     "mm": "14 / 16"
     },
     {
      "model": "Double Black Diamond Control 16mm",
      "mm": "16",
      "price": 63,
      "was": 189.99,
-     "url": "https://us.sixzeropickleball.com/products/double-black-diamond"
+     "url": "https://us.sixzeropickleball.com/products/double-black-diamond",
+     "weight": "8.0-8.2oz",
+     "core": "Polymer honeycomb",
+     "face": "T700 raw carbon fiber",
+     "size": "16.3\" x 7.5-7.7\"",
+     "handle": "5.5\"",
+     "grip": "4.1\"",
+     "approval": "USAP"
     },
     {
      "model": "Black Diamond Power",
      "shape": "Standard",
      "price": 63,
      "was": 180,
-     "url": "https://us.sixzeropickleball.com/products/black-diamond-power"
+     "url": "https://us.sixzeropickleball.com/products/black-diamond-power",
+     "weight": "8.1oz",
+     "core": "Polymer honeycomb",
+     "face": "Raw carbon composite",
+     "size": "16.3\" x 7.5-7.7\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "mm": "14 / 16"
     },
     {
      "model": "Infinity Edgeless Double Black Diamond 16mm",
      "shape": "Edgeless",
      "mm": "16",
-     "url": "https://us.sixzeropickleball.com/products/infinity-edgeless-series"
+     "url": "https://us.sixzeropickleball.com/products/infinity-edgeless-series",
+     "weight": "8.2oz",
+     "core": "Polymer honeycomb",
+     "face": "Raw T700 carbon fiber",
+     "size": "16.3\" x 7.5-7.7\"",
+     "handle": "5.5\"",
+     "grip": "4.125-4.25\"",
+     "approval": "USAP"
     },
     {
      "model": "Infinity Edgeless Black Diamond Power 16mm",
      "shape": "Edgeless",
      "mm": "16",
-     "url": "https://us.sixzeropickleball.com/products/infinity-edgless-black-diamond-power"
+     "url": "https://us.sixzeropickleball.com/products/infinity-edgless-black-diamond-power",
+     "weight": "8.2oz",
+     "core": "Polymer honeycomb",
+     "face": "Raw carbon composite",
+     "size": "16.3\" x 7.5-7.7\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP"
     },
     {
      "model": "Quartz 15mm",
      "mm": "15",
      "price": 75,
      "was": 89.99,
-     "url": "https://us.sixzeropickleball.com/products/quartz"
+     "url": "https://us.sixzeropickleball.com/products/quartz",
+     "weight": "7.9oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Raw carbon (T300)",
+     "size": "16.0\" x 7.9\"",
+     "handle": "5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Square"
     },
     {
      "model": "Sapphire 13mm",
      "mm": "13",
      "price": 49,
      "was": 139.99,
-     "url": "https://us.sixzeropickleball.com/products/sapphire"
+     "url": "https://us.sixzeropickleball.com/products/sapphire",
+     "weight": "7.9oz",
+     "core": "Polymer honeycomb",
+     "face": "T300 carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Elongated"
     }
    ]
   },
@@ -1196,7 +1284,13 @@
     {
      "model": "KVL-003",
      "mm": "16",
-     "url": "https://www.arronax.my/products/arronax-kvl003-upgraded-premium-kevlar-pickleball-paddle-16mm"
+     "url": "https://www.arronax.my/products/arronax-kvl003-upgraded-premium-kevlar-pickleball-paddle-16mm",
+     "weight": "8.1oz",
+     "core": "PP and EVA hybrid honeycomb",
+     "face": "Kevlar",
+     "size": "16.3\" x 7.5\"",
+     "handle": "5.7\"",
+     "grip": "4.13\""
     },
     {
      "model": "Thunder 10 Gen 4",
@@ -1224,7 +1318,12 @@
     {
      "model": "Boost-1 QuickSand",
      "mm": "16",
-     "url": "https://www.arronax.my/products/arronax-boost-1-quicksand-16mm-carbon-fiber-pickleball-paddle-gritbite"
+     "url": "https://www.arronax.my/products/arronax-boost-1-quicksand-16mm-carbon-fiber-pickleball-paddle-gritbite",
+     "weight": "7.9oz",
+     "core": "EVA composite",
+     "face": "Carbon fiber, gritted coating",
+     "size": "16.38\" x 7.32\"",
+     "handle": "5.71\""
     },
     {
      "model": "Thunder (Gen 1)",
@@ -1414,7 +1513,14 @@
      "model": "MPP Turbo with ArmorGrit",
      "shape": "Elongated / Hybrid / Widebody",
      "price": 119.99,
-     "url": "https://enhancepickleball.com/products/mpp-turbo-armorgrit"
+     "url": "https://enhancepickleball.com/products/mpp-turbo-armorgrit",
+     "weight": "7.8-8.1oz",
+     "core": "MPP foam with EVA perimeter",
+     "face": "T700 carbon fiber",
+     "size": "16-16.5\" x 7.5-8\"",
+     "handle": "5.3-5.7\"",
+     "grip": "4.1\"",
+     "mm": "16"
     },
     {
      "model": "MPP Turbo",
@@ -1435,26 +1541,55 @@
      "shape": "Elongated / Hybrid / Widebody",
      "price": 109.99,
      "was": 119.99,
-     "url": "https://enhancepickleball.com/products/epp-turbo"
+     "url": "https://enhancepickleball.com/products/epp-turbo",
+     "weight": "7.8-8.0oz",
+     "core": "EPP foam with EVA perimeter",
+     "face": "Raw T700 carbon fiber",
+     "size": "16-16.5\" x 7.5-8\"",
+     "handle": "5.3-5.9\"",
+     "grip": "4.1\"",
+     "mm": "16"
     },
     {
      "model": "The Banger",
      "shape": "Edgeless",
      "price": 89.99,
      "was": 159.99,
-     "url": "https://enhancepickleball.com/products/the-banger"
+     "url": "https://enhancepickleball.com/products/the-banger",
+     "weight": "7.9-8.1oz",
+     "core": "Polypropylene honeycomb",
+     "face": "3-layer T700 carbon fiber",
+     "size": "16.3\" x 7.4\"",
+     "handle": "5.4\"",
+     "grip": "4.1\"",
+     "mm": "14"
     },
     {
      "model": "SweetSpot Pro",
      "price": 79.99,
      "was": 139.99,
-     "url": "https://enhancepickleball.com/products/sweetspot-pro"
+     "url": "https://enhancepickleball.com/products/sweetspot-pro",
+     "weight": "7.9-8.1oz",
+     "core": "Polypropylene honeycomb",
+     "face": "T700 carbon fiber",
+     "size": "16.5\" x 7.3\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "SweetSpot Team",
      "price": 69.99,
      "was": 99.99,
-     "url": "https://enhancepickleball.com/products/sweetspot-team"
+     "url": "https://enhancepickleball.com/products/sweetspot-team",
+     "weight": "7.9-8.1oz",
+     "core": "Polypropylene honeycomb",
+     "face": "T700 carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.75\"",
+     "grip": "4.125\"",
+     "mm": "16"
     },
     {
      "model": "Bullseye Trainer",
@@ -1847,7 +1982,15 @@
      "mm": "16",
      "price": 65,
      "was": 129.99,
-     "url": "https://speeduppickle.com/products/speedup-cryo-16mm"
+     "url": "https://speeduppickle.com/products/speedup-cryo-16mm",
+     "weight": "8.0oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Kevlar",
+     "size": "16.5\" x 7.5\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Elongated"
     },
     {
      "model": "Ice 16mm",
@@ -1869,13 +2012,29 @@
      "mm": "14",
      "price": 59.99,
      "was": 119.99,
-     "url": "https://speeduppickle.com/products/speedup-fire-14mm"
+     "url": "https://speeduppickle.com/products/speedup-fire-14mm",
+     "weight": "7.9oz",
+     "core": "Polypropylene honeycomb",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid"
     },
     {
      "model": "Fire 14 Purple Jesus Edition",
      "mm": "14",
      "price": 129.99,
-     "url": "https://speeduppickle.com/products/speedup-fire-14-purple-jesus-edition"
+     "url": "https://speeduppickle.com/products/speedup-fire-14-purple-jesus-edition",
+     "weight": "7.9oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Raw T700 carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid"
     }
    ]
   },
@@ -1996,7 +2155,15 @@
      "model": "Spitfire Standard / Widebody",
      "shape": "Standard / Widebody",
      "price": 109.99,
-     "url": "https://gospartus.com/products/spitfire-standard"
+     "url": "https://gospartus.com/products/spitfire-standard",
+     "weight": "7.9oz",
+     "core": "Foam",
+     "face": "Multi-fiber",
+     "size": "16\" x 8\"",
+     "handle": "5.3\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "mm": "16"
     },
     {
      "model": "P1 with PermaGrit",
@@ -2133,17 +2300,43 @@
      "model": "02",
      "price": 99.99,
      "was": 159.99,
-     "url": "https://markpickleball.com/products/mark-02"
+     "url": "https://markpickleball.com/products/mark-02",
+     "weight": "8.1oz",
+     "core": "Polymer honeycomb",
+     "face": "Kevlar and carbon fiber blend",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Elongated",
+     "mm": "16"
     },
     {
      "model": "01",
      "price": 159.99,
-     "url": "https://markpickleball.com/products/mark-01"
+     "url": "https://markpickleball.com/products/mark-01",
+     "weight": "8.1oz",
+     "core": "Polymer honeycomb",
+     "face": "Kevlar and carbon fiber blend",
+     "size": "16.25\" x 7.7-7.75\"",
+     "handle": "5.3\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "mm": "16"
     },
     {
      "model": "01X",
      "price": 159.99,
-     "url": "https://markpickleball.com/products/mark-01x"
+     "url": "https://markpickleball.com/products/mark-01x",
+     "weight": "8.1oz",
+     "core": "Polymer honeycomb",
+     "face": "Kevlar and carbon fiber blend",
+     "size": "16.25\" x 7.75\"",
+     "handle": "5.75\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "16"
     }
    ]
   },
@@ -2215,20 +2408,40 @@
      "shape": "Hybrid",
      "mm": "16",
      "price": 109,
-     "url": "https://luzzpickleball.com/products/luzzpickleball-glider-hybrid-paddle-t700-carbon-friction-surface-thermoformed"
+     "url": "https://luzzpickleball.com/products/luzzpickleball-glider-hybrid-paddle-t700-carbon-friction-surface-thermoformed",
+     "weight": "7.93oz",
+     "core": "Polymer (suspended)",
+     "face": "T700 carbon fiber",
+     "size": "16.34\" x 7.48\"",
+     "handle": "5.31\"",
+     "grip": "4.13\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "Cannon",
      "mm": "16",
      "price": 109,
-     "url": "https://luzzpickleball.com/products/luzzpickleball-cannon-paddle-t700-carbon-friction-surface-thermoformed"
+     "url": "https://luzzpickleball.com/products/luzzpickleball-cannon-paddle-t700-carbon-friction-surface-thermoformed",
+     "weight": "7.93oz",
+     "core": "Carbon fiber matrix (U-shaped)",
+     "face": "T700 carbon fiber",
+     "size": "16.54\" x 7.48\"",
+     "handle": "5.52\"",
+     "grip": "4.13\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "Pro 4 Inferno",
      "mm": "16",
      "price": 189,
      "tested": "luzz-inferno",
-     "url": "https://luzzpickleball.com/products/luzzpickleball-pro-4-inferno-mpp-pickleball-paddle-large-sweet-spot-durable-core"
+     "url": "https://luzzpickleball.com/products/luzzpickleball-pro-4-inferno-mpp-pickleball-paddle-large-sweet-spot-durable-core",
+     "weight": "7.93oz",
+     "core": "MPP foam",
+     "size": "16.54\" x 7.48\"",
+     "handle": "5.52\"",
+     "grip": "4.13\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "ProBladz 2",
@@ -2247,7 +2460,14 @@
      "model": "Pro 4 Tornazo",
      "mm": "16",
      "price": 229,
-     "url": "https://luzzpickleball.com/products/luzzpickleball-pro-4-tornazo-carbon-fiber-pickleball-paddle-dual-layer-core"
+     "url": "https://luzzpickleball.com/products/luzzpickleball-pro-4-tornazo-carbon-fiber-pickleball-paddle-dual-layer-core",
+     "weight": "7.93oz",
+     "core": "Foam (PEBAZ)",
+     "face": "Grooved carbon fiber",
+     "size": "16.54\" x 7.48\"",
+     "handle": "5.52\"",
+     "grip": "4.13\"",
+     "approval": "USAP, UPA-A"
     }
    ]
   },
@@ -2287,7 +2507,14 @@
      "model": "Fuse Hybrid Gen4.5",
      "shape": "Hybrid",
      "price": 109,
-     "url": "https://paklepickleball.com/products/fuse-hybrid-shape-new-gen4-5-pickleball-paddle"
+     "url": "https://paklepickleball.com/products/fuse-hybrid-shape-new-gen4-5-pickleball-paddle",
+     "weight": "7.7-7.9oz",
+     "core": "Foam hybrid core",
+     "face": "Raw T700 carbon fiber",
+     "size": "16.3\" x 7.6\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "mm": "16"
     },
     {
      "model": "Infinity Gen4.5",
