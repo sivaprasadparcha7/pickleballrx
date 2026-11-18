@@ -6,10 +6,10 @@ _codes = {c["brand"]: c for c in CODES}
 
 def _cat_lab(t):
     if not t:
-        return '<span class="tag nt">Not tested</span>'
+        return ''
     if t.startswith("grit:"):
-        return f'<a class="badge" href="grit.html#{slugify(t[5:])}">Tested: Grit Lab</a>'
-    return f'<a class="badge" href="xray/{t}.html">Tested: X-ray</a>'
+        return f'<a class="badge" href="grit.html#{slugify(t[5:])}">Tested by us: Grit Lab</a>'
+    return f'<a class="badge" href="xray/{t}.html">Tested by us: X-ray</a>'
 
 
 def _price(p):
@@ -46,8 +46,8 @@ _checked = CAT["checked"]
 write("all-paddles.html", page("All pickleball paddles by brand | PickleballRx", f'''
 <div class="wrap"><section>
   <h1 class="page-title">All paddles</h1>
-  <p class="section-lead">{_n} paddles from {len(CAT["brands"])} brands, listed from each brand's own store. <b>Most of these we have not tested.</b> The ones we have tested ({_nt}) link to our lab results. For every other paddle, the shape, core thickness and price are what the brand lists, not our measurements, and we haven't rated it.</p>
-  <p class="muted" style="font-size:.88rem">Prices checked {_checked} and change often, especially around sales. Blank cells mean the brand's store didn't state it. Want only lab-tested paddles with scores? Use the <a href="paddles.html">paddle database</a>.</p>
+  <p class="section-lead">{_n} paddles from {len(CAT["brands"])} brands, with the shape, core thickness and price each brand lists. The {_nt} paddles marked <b>Tested by us</b> link to our X-ray and Grit Lab results.</p>
+  <p class="muted" style="font-size:.88rem">Prices checked {_checked} and change often, especially around sales. Blank cells mean the listing didn't state it. Most lineups come from the brands' own stores; where a store couldn't be read, we used retailer listings (noted below). Want only lab-tested paddles with scores? Use the <a href="paddles.html">paddle database</a>.</p>
   <div class="filters" id="cat-filters">
     <label>Search<input type="search" id="c-q" placeholder="Paddle or brand"></label>
     <label>Brand<select id="c-b"><option value="">Any</option>{_bopts}</select></label>
@@ -65,9 +65,9 @@ write("all-paddles.html", page("All pickleball paddles by brand | PickleballRx",
 <section style="padding-top:0">
   <h2>About this list</h2>
   <ul class="section-lead">{"".join(_cov)}</ul>
-  <p class="muted" style="font-size:.85rem">Brand specs and prices are as listed by each brand. Discount codes may earn us a commission; see <a href="disclaimers.html">Disclaimers</a>.</p>
+  <p class="muted" style="font-size:.85rem">Specs and prices are as listed by the brand or retailer, not our measurements. Discount codes may earn us a commission; see <a href="disclaimers.html">Disclaimers</a>.</p>
 </section></div>
-<style>.tag.nt{{background:#eef1f6;color:#4a5876;border-radius:999px;padding:2px 9px;font-size:.75rem;font-weight:600}} #cat th[scope=row]{{white-space:normal;min-width:180px;text-transform:none;letter-spacing:0;font-size:.9rem;color:var(--ink);background:none}}</style>
+<style>#cat th[scope=row]{{white-space:normal;min-width:180px;text-transform:none;letter-spacing:0;font-size:.9rem;color:var(--ink);background:none}}</style>
 <script>
 (function(){{
   var $=function(i){{return document.getElementById(i)}}, rows=[].slice.call(document.querySelectorAll('#cat tbody tr'));
@@ -84,4 +84,4 @@ write("all-paddles.html", page("All pickleball paddles by brand | PickleballRx",
   var u=new URLSearchParams(location.search); if(u.get('brand')){{$('c-b').value=u.get('brand')}}
   go();
 }})();
-</script>''', 0, "paddles", desc="Every current paddle from 26 brands, from JOOLA and Selkirk to Grit and Gearbox, with brand-listed shape, core and price. Clearly marked: most are not tested by Pickleball Rx."))
+</script>''', 0, "paddles", desc="Every current paddle from 26 brands, from JOOLA and Selkirk to Grit and Gearbox, with brand-listed shape, core and price. Paddles we've tested link to our lab results."))

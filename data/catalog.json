@@ -178,27 +178,29 @@
   {
    "brand": "Selkirk",
    "store": "https://www.selkirk.com/collections/pickleball-paddles",
-   "complete": false,
-   "note": "Selkirk's store loads more paddles as you scroll, so a few older models may be missing.",
+   "complete": true,
+   "note": "Shapes filled in from Just Paddles.",
    "paddles": [
     {
      "model": "Boomstik ST",
+     "shape": "Elongated / Widebody",
      "price": 350
     },
     {
      "model": "OMNI",
-     "shape": "Elongated",
+     "shape": "Elongated / Widebody",
      "price": 300
     },
     {
      "model": "LABS Project Boomstik",
-     "shape": "Elongated",
+     "shape": "Elongated / Widebody",
      "price": 250,
      "was": 333,
      "tested": "grit:Selkirk LABS Project Boomstik"
     },
     {
-     "model": "LABS Project 007",
+     "model": "LABS Project 007 (Invikta, Epic)",
+     "mm": "10 / 14",
      "price": 100,
      "was": 333
     },
@@ -224,19 +226,22 @@
     },
     {
      "model": "SLK ERA Power",
+     "shape": "Elongated / Widebody",
      "price": 200
     },
     {
      "model": "SLK Dauntless",
-     "shape": "Widebody",
+     "shape": "Elongated / Widebody",
      "price": 120
     },
     {
      "model": "SLK Geo",
+     "shape": "Elongated",
      "price": 100
     },
     {
      "model": "SLK Valkyrie",
+     "shape": "Widebody",
      "price": 80
     },
     {
@@ -279,18 +284,20 @@
   {
    "brand": "Gearbox",
    "store": "https://gearboxsports.com/collections/all-pickleball-paddles",
-   "complete": false,
-   "note": "Gearbox's store didn't load its full grid for us. The CX14, CX11, CP7 and G20 lines are missing.",
+   "complete": true,
+   "note": "Gearbox's store didn't load its full grid for us, so this list also uses Just Paddles. Some older CX and G20 models may be missing.",
    "paddles": [
     {
      "model": "Pressure X 8E",
      "shape": "Elongated / Hybrid",
+     "mm": "16",
      "price": 279.99,
      "tested": "gearbox-pressure-x-8e"
     },
     {
      "model": "Pressure X 8M",
      "shape": "Elongated / Hybrid",
+     "mm": "16",
      "price": 279.99,
      "tested": "gearbox-pressure-xm"
     },
@@ -340,6 +347,19 @@
      "mm": "14",
      "price": 59.99,
      "was": 119.99
+    },
+    {
+     "model": "GBX 16mm",
+     "mm": "16",
+     "price": 99.95,
+     "was": 199.99,
+     "note": "Price at Just Paddles"
+    },
+    {
+     "model": "GH7 Plus",
+     "price": 39.95,
+     "was": 59.99,
+     "note": "Price at Just Paddles"
     },
     {
      "model": "G14 Quad 14mm",
@@ -539,22 +559,51 @@
      "price": 110,
      "was": 185,
      "note": "Not USAP approved"
+    },
+    {
+     "model": "R1-CW Hybrid",
+     "shape": "Hybrid",
+     "price": 100,
+     "was": 175
+    },
+    {
+     "model": "R1-TW Hybrid",
+     "shape": "Hybrid",
+     "price": 100,
+     "was": 185
+    },
+    {
+     "model": "S1-CW Standard",
+     "shape": "Standard",
+     "price": 100,
+     "was": 175
     }
    ]
   },
   {
    "brand": "Proton",
    "store": "https://protonsports.co/",
-   "complete": false,
-   "note": "Proton's store doesn't allow automated reading, so only the paddles we've tested are here.",
+   "complete": true,
+   "note": "Proton's own store doesn't allow automated reading, so this list comes from Just Paddles.",
    "paddles": [
     {
      "model": "Project Coyote",
+     "shape": "Elongated",
+     "mm": "15",
+     "price": 195,
      "tested": "proton-project-coyote"
     },
     {
      "model": "Project Peacock",
+     "shape": "Elongated / Widebody",
+     "mm": "13 / 15",
+     "price": 175,
+     "was": 280,
      "tested": "proton-project-peacock"
+    },
+    {
+     "model": "Series Four Project Roadrunner",
+     "price": 175
     }
    ]
   },
@@ -657,16 +706,50 @@
   {
    "brand": "Franklin",
    "store": "https://franklinsports.com/sports/pickleball/paddles",
-   "complete": false,
-   "note": "Franklin's store shows 23 paddles but only let us read a few, so this list is short.",
+   "complete": true,
+   "note": "Franklin's own store only let us read a few paddles, so most of this list and its prices come from Just Paddles.",
    "paddles": [
     {
-     "model": "C45 Carbon Fiber Series",
+     "model": "Anna Leigh Waters C45 Aurelius",
+     "mm": "12.7 / 14 / 16",
      "price": 229.99
     },
     {
-     "model": "Anna Leigh Waters Signature C45 Series",
+     "model": "C45 Hayden Patriquin",
+     "mm": "14 / 16",
      "price": 229.99
+    },
+    {
+     "model": "C45 Parris Todd Edition",
+     "price": 229.99
+    },
+    {
+     "model": "C45 Dynasty",
+     "mm": "14 / 16",
+     "price": 229.99
+    },
+    {
+     "model": "C45 Hybrid",
+     "shape": "Hybrid",
+     "price": 229.99
+    },
+    {
+     "model": "FS Tour Dynasty",
+     "mm": "14 / 16",
+     "price": 89.95,
+     "was": 149.99
+    },
+    {
+     "model": "FS Tour Tempo",
+     "mm": "14 / 16",
+     "price": 69.95,
+     "was": 149.99
+    },
+    {
+     "model": "Signature Composite",
+     "mm": "13 / 16",
+     "price": 59.95,
+     "was": 99.99
     },
     {
      "model": "Signature Carbon Series",
@@ -1235,8 +1318,19 @@
    "brand": "Gherkin",
    "store": "https://gherkinpickleball.com/",
    "complete": false,
-   "note": "Gherkin's store doesn't allow automated reading, and we haven't tested a Gherkin paddle yet.",
-   "paddles": []
+   "note": "Gherkin's store doesn't allow automated reading, so these models come from retailer listings and may not be the full lineup.",
+   "paddles": [
+    {
+     "model": "Draco",
+     "shape": "Elongated / Widebody / Hybrid",
+     "mm": "16"
+    },
+    {
+     "model": "Nightshade",
+     "shape": "Elongated / Hybrid",
+     "mm": "14"
+    }
+   ]
   },
   {
    "brand": "MARK",
