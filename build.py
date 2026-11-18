@@ -290,13 +290,15 @@ style_tiles += '<a class="style-tile" href="codes.html"><b>Deals</b><span>Discou
 latest = "\n".join(card(p, 0) for p in PADDLES[:3])
 # ---------- Upcoming releases (public news only; mark unconfirmed items) ----------
 UPCOMING = [
-    dict(brand="Proton", name="Series One Project Bluejay", status="Not released yet",
-         when="Expected in the coming months; no date or price announced",
-         text="Proton's next paddle was in the hands of pros at the Pickleball World Championships in early November, including Meghan Dizon, Zane Ford and Naomi Nguyen. Proton hasn't published specs yet.",
+    dict(brand="Proton", name="Series One: Project Bluejay and Project Cardinal", status="Pre-order",
+         when="Elongated, 15 mm &middot; $295 pre-order price",
+         photos=[("assets/paddles/product/proton-project-bluejay.jpg", "Proton Project Bluejay"), ("assets/paddles/product/proton-project-cardinal.jpg", "Proton Project Cardinal")],
+         text="Proton's next paddles come in two colorways, Bluejay and Cardinal, both elongated at 15 mm. The new paddle was in the hands of pros at the Pickleball World Championships in early November, including Meghan Dizon, Zane Ford and Naomi Nguyen. Proton hasn't published full specs yet.",
          links=[("X-ray: Project Coyote", "xray/proton-project-coyote.html"), ("X-ray: Project Peacock", "xray/proton-project-peacock.html"), ("Grit: Project Coyote", "grit.html#proton-project-coyote")],
          sources=[("The Kitchen, Nov 6, 2026", "https://thekitchenpickle.com/blogs/gear/what-paddles-top-pickleball-pros-use-worlds-november-2026/"), ("Nico the Lefty release calendar", "https://www.nicothelefty.com/news")]),
-    dict(brand="Selkirk", name="Boomstik ST", status="Just released",
+    dict(brand="Selkirk", name="Boomstik ST with Sharktooth Groove Technology", status="Just released",
          when="Released Nov 10, 2026 &middot; $350",
+         photos=[("assets/paddles/product/selkirk-boomstik-st.jpg", "Selkirk Boomstik ST")],
          text="The next version of the LABS Project Boomstik. Selkirk says its new InfiniGrit Ultra surface has four times the spin friction and twice the grit durability of the original InfiniGrit. It adds a perimeter Sharktooth groove and hand-adjustable perimeter weights, and keeps the BoomCore foam core.",
          links=[("Grit: original Project Boomstik", "grit.html#selkirk-labs-project-boomstik")],
          sources=[("Selkirk press release, Nov 10, 2026", "https://www.selkirk.com/pages/press-releases/selkirk-sport-launches-boomstik-st-the-next-evolution-of-its-premier-power-paddle")]),
@@ -307,7 +309,8 @@ def upcoming_card(u):
     links = "".join(f'<a class="badge" href="{e(h)}">{e(t)}</a>' for t, h in u["links"])
     srcs = " &middot; ".join(f'<a href="{e(h)}" rel="noopener">{e(t)}</a>' for t, h in u["sources"])
     return (f'<div class="card" style="padding:18px"><div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">{e(u["brand"])}</div>'
-            f'<h3 style="margin:4px 0 6px">{e(u["name"])}</h3><span class="tag" style="align-self:flex-start">{e(u["status"])}</span>'
+            + ('<div style="display:flex;gap:10px;margin:8px 0">' + "".join(f'<img src="{s}" alt="{e(a)}" width="80" height="120" loading="lazy" style="border-radius:8px;background:#fff;object-fit:contain">' for s, a in u["photos"]) + '</div>' if u.get("photos") else "")
+            + f'<h3 style="margin:4px 0 6px">{e(u["name"])}</h3><span class="tag" style="align-self:flex-start">{e(u["status"])}</span>'
             f'<p class="muted" style="font-size:.88rem;margin:6px 0 8px">{u["when"]}</p><p style="font-size:.95rem">{e(u["text"])}</p>'
             f'<div class="badges" style="margin-bottom:10px">{links}</div><div class="muted" style="font-size:.78rem">Sources: {srcs}</div></div>')
 
