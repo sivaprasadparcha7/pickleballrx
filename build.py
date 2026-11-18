@@ -1432,8 +1432,6 @@ def _pro_paddle(p):
     out = f'<strong>{e(p["brand"])}</strong> {e(p["paddle"])}'
     if p.get("status") == "sponsor":
         out += ' <span class="muted" style="font-size:.82rem">(paddle sponsor)</span>'
-    elif p.get("status") == "team":
-        out += ' <span class="muted" style="font-size:.82rem">(seen by the Pickleball RX team)</span>'
     return out
 
 
@@ -1481,7 +1479,7 @@ write("pros.html", page("What paddles do the pros use? PPA and APP top players |
 </section>
 <section style="padding-top:0" id="ppa-men">
   <h2>PPA Tour: top 20 men</h2>
-  <p class="section-lead">Ranking: {_s("ppa_rank")} (checked {_fmt_date(_PSRC["ppa_rank"]["checked"])}). These rankings combine doubles, mixed and singles. Paddles as seen at the PPA World Championships, per {_s("worlds")} ({_fmt_date(_PSRC["worlds"]["asof"])}), except where marked as seen by the Pickleball RX team.</p>
+  <p class="section-lead">Ranking: {_s("ppa_rank")} (checked {_fmt_date(_PSRC["ppa_rank"]["checked"])}). These rankings combine doubles, mixed and singles. Paddles as seen at the PPA World Championships, per {_s("worlds")} ({_fmt_date(_PSRC["worlds"]["asof"])}).</p>
   {_pro_table(PROS["ppa_men"], "ppa-men-table")}
 </section>
 <section style="padding-top:0" id="ppa-women">
@@ -1491,7 +1489,7 @@ write("pros.html", page("What paddles do the pros use? PPA and APP top players |
 </section>
 <section style="padding-top:0" id="app">
   <h2>APP Tour: top 5 by division</h2>
-  <p class="section-lead">Ranking: {_s("app_rank")} (updated {_fmt_date(_PSRC["app_rank"]["asof"])}). APP players&rsquo; paddles are rarely tracked publicly, so most of these were seen by the Pickleball RX team. Jack Munro&rsquo;s sponsor is from {_s("kitchen_deals")}; Megan Fudge&rsquo;s signature paddle is from {_s("franklin_fudge")}.</p>
+  <p class="section-lead">Ranking: {_s("app_rank")} (updated {_fmt_date(_PSRC["app_rank"]["asof"])}). Jack Munro&rsquo;s sponsor is from {_s("kitchen_deals")}; Megan Fudge&rsquo;s signature paddle is from {_s("franklin_fudge")}.</p>
   {_app_html}
 </section>
 <section style="padding-top:0"><div class="note"><strong>About this list.</strong> Rankings and paddle deals change often, and pros sometimes play unreleased or custom paddles. &ldquo;Unconfirmed&rdquo; means we couldn&rsquo;t find a reliable current source, so we didn&rsquo;t guess. The <strong>Our labs</strong> column links to our own X-ray or Grit Lab results where we have them for that paddle model; a pro&rsquo;s paddle may be a custom build. Know a pro&rsquo;s current paddle? <a href="about.html#contact">Tell us</a>.</div></section>
