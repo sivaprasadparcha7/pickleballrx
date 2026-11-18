@@ -360,7 +360,14 @@ ONCALL_LINKS = [
     ("Discount codes", "https://linktr.ee/pickleballoncall"),
     ("Instagram", "https://www.instagram.com/pboncall"),
 ]
-REVIEWER_LINKS = {"John Kew": KEW_LINKS, "PB on Call": ONCALL_LINKS, "Supasenpai": SENPAI_LINKS, "Pickleball Studio": STUDIO_LINKS}
+# Pickleball Freak Show's links, from their Instagram profile (Siva, 2026-11-18).
+FREAKSHOW_LINKS = [
+    ("YouTube", "https://www.youtube.com/@pickleballfreakshow"),
+    ("Website", "https://www.freakshow.com/"),
+    ("Instagram", "https://www.instagram.com/pickleballfreakshow"),
+    ("Facebook", "https://www.facebook.com/pickleballfreakshow"),
+]
+REVIEWER_LINKS = {"John Kew": KEW_LINKS, "Ed": FREAKSHOW_LINKS, "PB on Call": ONCALL_LINKS, "Supasenpai": SENPAI_LINKS, "Pickleball Studio": STUDIO_LINKS}
 
 def _link_row(links, skip=()):
     return ('<div class="badges" style="margin:8px 0 4px">'
