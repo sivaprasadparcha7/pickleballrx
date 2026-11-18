@@ -2227,67 +2227,6 @@
    "unreleased": false
   },
   {
-   "slug": "proton-project-bluejay",
-   "name": "Proton Project Bluejay Elongated 15mm",
-   "brand": "Proton",
-   "image": "proton-project-bluejay-labeled.png",
-   "core": "Full foam, type not identified",
-   "cell_size": "No honeycomb in face; handle ≈ 5–6 mm",
-   "ring": "≈ 27 mm (±2): 12 mm band + 15 mm frame",
-   "thickness": "15 mm",
-   "face": "Not yet published",
-   "weight": "Not yet published",
-   "size": "Elongated (widths scaled from an assumed 7.5 in / 190 mm)",
-   "specs": [
-    [
-     "Core type",
-     "Full foam, type not identified"
-    ],
-    [
-     "Cell size",
-     "No honeycomb in face; handle ≈ 5–6 mm"
-    ],
-    [
-     "Core thickness",
-     "15 mm"
-    ],
-    [
-     "Perimeter",
-     "≈ 27 mm (±2): 12 mm band + 15 mm frame"
-    ],
-    [
-     "Face",
-     "Not yet published"
-    ],
-    [
-     "Weight",
-     "Not yet published"
-    ],
-    [
-     "Size",
-     "Elongated (widths scaled from an assumed 7.5 in / 190 mm)"
-    ],
-    [
-     "Handle",
-     "Honeycomb insert, throat collar"
-    ],
-    [
-     "Inserts",
-     "4 side weight strips + 2 shoulder strips (likely tungsten / lead tape)"
-    ],
-    [
-     "Price",
-     "$295 pre-order (Nov 2026)"
-    ]
-   ],
-   "sources": "Name, thickness and pre-order price as of Nov 2026; full specs not yet published. Widths scaled from an assumed 190 mm width. Labels interpret the X-ray, not a cutaway.",
-   "tags": [
-    "foam"
-   ],
-   "reel": "",
-   "unreleased": false
-  },
-  {
    "slug": "proton-project-coyote",
    "name": "Proton Project Coyote",
    "brand": "Proton",
