@@ -4116,6 +4116,40 @@
      "url": "https://engagepickleball.com/products/engage-encore-pickleball-paddle"
     }
    ]
+  },
+  {
+   "brand": "Reload",
+   "store": "https://www.reloadpickleball.com/",
+   "complete": true,
+   "note": "Reload's store doesn't allow automated reading, so specs and list prices come from the PPA Tour paddle lab.",
+   "paddles": [
+    {
+     "model": "RLD 1-16",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 200,
+     "note": "Replaceable face sheets",
+     "weight": "8.3oz",
+     "core": "Polypropylene honeycomb with expanding foam",
+     "face": "T700 carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "approval": "USAP"
+    },
+    {
+     "model": "RLD 1-14",
+     "shape": "Elongated",
+     "mm": "14",
+     "price": 200,
+     "note": "Replaceable face sheets",
+     "weight": "7.9oz",
+     "core": "Polypropylene honeycomb with expanding foam",
+     "face": "Carbon fiber",
+     "size": "16.42\" x 7.48\"",
+     "handle": "5.51\"",
+     "approval": "USAP"
+    }
+   ]
   }
  ]
 }
