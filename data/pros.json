@@ -64,7 +64,7 @@
       {"rank": 1, "name": "Jack Munro", "points": 5680, "brand": "Owl", "paddle": "Model not confirmed", "status": "sponsor", "src": "kitchen_deals"},
       {"rank": 2, "name": "Richard Livornese", "points": 5360, "brand": "Engage", "paddle": "Axiom", "status": "team"},
       {"rank": 3, "name": "Max Manthou", "points": 2680, "brand": "Speedup", "paddle": "Tide Elongated", "status": "team", "xray": "speedup-tide", "grit": "Speed Up Tide"},
-      {"rank": 4, "name": "Etienne Blaszkewycz", "points": 2350, "status": "unconfirmed"},
+      {"rank": 4, "name": "Etienne Blaszkewycz", "points": 2350, "brand": "JOOLA", "paddle": "Perseus Pro IV", "status": "team"},
       {"rank": 5, "name": "Tanner Tomassi", "points": 2330, "brand": "CRBN", "paddle": "CRBN1 TruFoam Barrage", "status": "team"}
     ]},
     {"division": "Women's singles", "players": [
