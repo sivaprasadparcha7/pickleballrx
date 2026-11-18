@@ -164,7 +164,7 @@ def page(title, body, depth=0, current="", desc="Data-driven pickleball paddle r
   <div class="cols">
     <div><img src="{r}assets/logo.svg?v={ASSET_V}" alt="Pickleball Rx" width="129" height="50" style="height:50px;width:auto;margin-bottom:10px">
       <p style="margin:0">Paddle reviews that look inside the paddle: X-rays, microscope images, measured specs and on-court video.</p><p style="margin:8px 0 0">Started by Don, Beni and Siva.</p></div>
-    <div><h4>Tools</h4><ul><li><a href="{r}finder.html">Paddle finder</a></li><li><a href="{r}compare.html">Compare</a></li><li><a href="{r}paddles.html">Database</a></li></ul></div>
+    <div><h4>Tools</h4><ul><li><a href="{r}finder.html">Paddle finder</a></li><li><a href="{r}compare.html">Compare</a></li><li><a href="{r}paddles.html">Database</a></li><li><a href="{r}all-paddles.html">All paddles by brand</a></li></ul></div>
     <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}best.html">Our top picks</a></li><li><a href="{r}pros.html">What the pros play</a></li><li><a href="{r}grit-pickleball.html">Brand spotlight: Grit</a></li><li><a href="{r}evolv-pickleball.html">Brand spotlight: Evolv</a></li><li><a href="{r}gearbox-pickleball.html">Brand spotlight: Gearbox</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
     <div><h4>Follow</h4><ul><li><a href="{YOUTUBE}" rel="noopener">YouTube</a></li><li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li><li><a href="{r}about.html#contact">Contact</a></li></ul></div>
   </div>
@@ -435,7 +435,7 @@ write("index.html", page("PickleballRx | Pickleball paddle reviews, X-rays and d
 write("paddles.html", page("Paddle database | PickleballRx", '''
 <div class="wrap"><section>
   <h1 class="page-title">Paddle database</h1>
-  <p class="section-lead">Every paddle we've reviewed, with our scores and measured specs. Click a column to sort it. All entries are placeholders for now.</p>
+  <p class="section-lead">Every paddle we've reviewed, with our scores and measured specs. Click a column to sort it. All entries are placeholders for now. Looking for a paddle we haven't tested? See <a href="all-paddles.html">all paddles by brand</a>.</p>
   <div class="filters" id="db-filters">
     <label>Search<input type="search" id="f-q" placeholder="Paddle or brand"></label>
     <label>Play style<select id="f-style"><option value="">Any</option><option value="power">Power</option><option value="spin">Spin</option><option value="control">Control</option><option value="all-court">All-court</option></select></label>
@@ -1528,6 +1528,8 @@ write("pros.html", page("What paddles do the pros use? PPA and APP top players |
 </section>
 <section style="padding-top:0"><div class="note"><strong>About this list.</strong> Rankings and paddle deals change often, and pros sometimes play unreleased or custom paddles. &ldquo;Unconfirmed&rdquo; means we couldn&rsquo;t find a reliable current source, so we didn&rsquo;t guess. The <strong>Our labs</strong> column links to our own X-ray or Grit Lab results where we have them for that paddle model; a pro&rsquo;s paddle may be a custom build. Know a pro&rsquo;s current paddle? <a href="about.html#contact">Tell us</a>.</div></section>
 </div>""", 0, "pros", desc="The paddles used by the top-ranked PPA Tour and APP Tour pickleball pros, by ranking, with sources and dates."))
+
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "catalog_page.py")).read())
 
 write("404.html", page("Page not found | PickleballRx", '<article class="article"><h1>Page not found</h1><p>That page doesn\'t exist. <a href="/">Go to the home page</a>.</p></article>', 0))
 
