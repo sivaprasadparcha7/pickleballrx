@@ -326,7 +326,7 @@ REVIEWERS = [
     ("Pickleball Studio", "Chris Olson", "In-depth paddle reviews, a newsletter and the Pickleball Studio podcast.",
      "https://www.youtube.com/@pickleballstudio", "YouTube"),
     ("Supasenpai", "Pickleball Senpai", "Paddle reviews and pickleball videos.",
-     "https://supasenpai.com/pickleball-senpai/", "Website"),
+     "https://supasenpai.com/", "Website"),
     ("Ed", "Pickleball Freak Show", "Paddle reviews and gear talk.",
      "https://www.youtube.com/@pickleballfreakshow", "YouTube"),
     ("PB on Call", "Pickleball On Call", "Paddle reviews and gear videos.",
@@ -334,12 +334,26 @@ REVIEWERS = [
     ("Rally Haus", "Rally Haus Pickleball", "Paddle reviews and pickleball videos.",
      "https://www.youtube.com/@rallyhauspickleball", "YouTube"),
 ]
+# Supasenpai's links, supplied by Siva (2026-11-18). Shown wherever Supasenpai appears.
+SENPAI_LINKS = [
+    ("Website", "https://supasenpai.com/"),
+    ("Paddle discounts", "https://supasenpai.com/pickleball-paddle-discount-codes"),
+    ("Submit a paddle to review", "https://pickleballsenpai.com/"),
+    ("YouTube", "https://www.youtube.com/@SupaSenpai"),
+    ("Instagram", "https://www.instagram.com/supasenpaiofficial"),
+    ("Facebook", "https://www.facebook.com/SupaSenpai"),
+]
+def _senpai_links(skip=()):
+    return ('<div class="badges" style="margin:8px 0 4px">'
+        + "".join(f'<a class="badge" href="{e(h)}" target="_blank" rel="noopener">{e(t)}</a>' for t, h in SENPAI_LINKS if t not in skip) + '</div>')
+senpai_links_html = _senpai_links()
+
 reviewers_html = "".join(
     f'<div class="card" style="padding:18px"><div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">#{i}</div>'
     + (f'<div class="rev-head"><img class="rev-avatar" src="assets/reviewers/{_slug(n)}.jpg" alt="{e(n)}" width="64" height="64" loading="lazy"><div>' if os.path.exists(os.path.join(OUT, f"assets/reviewers/{_slug(n)}.jpg")) else "<div><div>")
     + f'<h3 style="margin:4px 0 2px">{e(n)}</h3><div class="muted" style="font-size:.88rem;margin-bottom:8px">{e(sub)}</div></div></div>'
     f'<p style="font-size:.95rem">{e(d)}</p><a class="btn ghost" style="align-self:flex-start" href="{e(h)}" rel="noopener" target="_blank">{e(lbl)} &rarr;</a>'
-    + (f'<a style="font-size:.88rem;margin-top:8px" href="best.html#supa-senpai">See Supasenpai\'s top picks &rarr;</a>' if n == "Supasenpai" else "") + '</div>'
+    + (_senpai_links(skip=("Website",)) + f'<a style="font-size:.88rem;margin-top:8px" href="best.html#supa-senpai">See Supasenpai\'s top picks &rarr;</a>' if n == "Supasenpai" else "") + '</div>'
     for i, (n, sub, d, h, lbl) in enumerate(REVIEWERS, 1))
 
 # Latest reviews only show on the home page once at least one real (non-placeholder) review exists.
@@ -612,12 +626,14 @@ write("best.html", page("Best pickleball paddles | PickleballRx", f'''
 {picks_html}
 <section id="canadian" style="padding-top:10px">
   <div class="rev-head" style="margin-bottom:6px"><img class="rev-avatar" src="assets/reviewers/supasenpai.jpg" alt="Supasenpai" width="64" height="64" loading="lazy"><h2 style="margin:0">Top 5 Canadian paddles</h2></div>
-  <p class="section-lead">We did not test these paddles. These picks come from our Canadian neighbor, reviewer <a href="https://supasenpai.com/pickleball-senpai/" rel="noopener">Supasenpai</a>, one of <a href="index.html#reviewers">our favorite reviewers</a>.</p>
+  <p class="section-lead">We did not test these paddles. These picks come from our Canadian neighbor, reviewer <a href="https://supasenpai.com/" target="_blank" rel="noopener">Supasenpai</a>, one of <a href="index.html#reviewers">our favorite reviewers</a>.</p>
+  {senpai_links_html}
   <div class="lb-grid">{canadian_html}</div>
 </section>
 <section id="supa-senpai" style="padding-top:10px">
   <div class="rev-head" style="margin-bottom:6px"><img class="rev-avatar" src="assets/reviewers/supasenpai.jpg" alt="Supasenpai" width="64" height="64" loading="lazy"><h2 style="margin:0">Supasenpai's top picks</h2></div>
-  <p class="section-lead">Paddle picks from Supasenpai, one of <a href="index.html#reviewers">our favorite reviewers</a>. These are Supasenpai's choices, not ours, and we haven't lab-tested them yet. <a href="https://supasenpai.com/pickleball-senpai/" rel="noopener">See Supasenpai's reviews</a>.</p>
+  <p class="section-lead">Paddle picks from Supasenpai, one of <a href="index.html#reviewers">our favorite reviewers</a>. These are Supasenpai's choices, not ours, and we haven't lab-tested them yet.</p>
+  {senpai_links_html}
   <div class="lb-grid">{senpai_html}</div>
 </section>
 <section style="padding-bottom:0"><h2>By playing style</h2>
