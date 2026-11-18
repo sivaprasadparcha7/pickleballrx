@@ -55,7 +55,7 @@
   "app": [
     {"division": "Men's singles", "players": [
       {"rank": 1, "name": "Ronan Camron", "points": 3830, "brand": "Adidas", "paddle": "AdiPower", "status": "team"},
-      {"rank": 2, "name": "Ammar Wazir", "points": 3040, "status": "unconfirmed"},
+      {"rank": 2, "name": "Ammar Wazir", "points": 3040, "brand": "Luzz", "paddle": "Cannon", "status": "team", "xray": "luzz-cannon-xpp", "grit": "Luzz Cannon XPP M1"},
       {"rank": 3, "name": "Dusty Boyer", "points": 2840, "status": "unconfirmed"},
       {"rank": 4, "name": "Ryler DeHeart", "points": 2310, "status": "unconfirmed"},
       {"rank": 5, "name": "Tristan Dussault", "points": 2164, "status": "unconfirmed"}
