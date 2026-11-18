@@ -184,14 +184,30 @@
     {
      "model": "Boomstik ST",
      "shape": "Elongated / Widebody",
+     "mm": "16",
      "price": 350,
-     "url": "https://www.selkirk.com/products/boomstik-st"
+     "url": "https://www.selkirk.com/products/boomstik-st",
+     "weight": "8.0-8.2oz",
+     "core": "PureFoam",
+     "face": "Multi-layer T700 carbon fiber",
+     "size": "16.5\" x 7.45\" (Elong.), 15.95\" x 8\" (Wide)",
+     "handle": "5.8\" / 5.6\"",
+     "grip": "4.25\"",
+     "approval": "USAP (InfiniGrit Ultra surface)"
     },
     {
      "model": "OMNI",
      "shape": "Elongated / Widebody",
+     "mm": "16",
      "price": 300,
-     "url": "https://www.selkirk.com/products/selkirk-omni-pickleball-paddle"
+     "url": "https://www.selkirk.com/products/selkirk-omni-pickleball-paddle",
+     "weight": "7.9-8.2oz",
+     "core": "PureFoam",
+     "face": "Multistrata T700 carbon fiber",
+     "size": "16.5\" x 7.45\" (Elong.), 15.95\" x 8\" (Wide)",
+     "handle": "5.8\" / 5.6\"",
+     "grip": "4.25\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "LABS Project Boomstik",
@@ -199,26 +215,58 @@
      "price": 250,
      "was": 333,
      "tested": "grit:Selkirk LABS Project Boomstik",
-     "url": "https://www.selkirk.com/products/selkirk-labs-project-boomstik"
+     "url": "https://www.selkirk.com/products/selkirk-labs-project-boomstik",
+     "weight": "8.0-8.4oz",
+     "core": "BoomCore",
+     "face": "Multistrata T700 carbon fiber",
+     "size": "16.5\" x 7.45\" (Elong.), 15.95\" x 8\" (Wide)",
+     "handle": "5.8\" / 5.6\"",
+     "grip": "4.25\"",
+     "approval": "UPA-A (Elongated without MOI)",
+     "mm": "16"
     },
     {
      "model": "LABS Project 007 (Invikta, Epic)",
      "mm": "10 / 14",
      "price": 100,
      "was": 333,
-     "url": "https://www.selkirk.com/products/selkirk-labs-project-007"
+     "url": "https://www.selkirk.com/products/selkirk-labs-project-007",
+     "weight": "7.7-8.1oz",
+     "core": "Polypropylene honeycomb with titanium mesh",
+     "face": "Florek carbon fiber",
+     "size": "16.4\" x 7.5\" (Invikta)",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "shape": "Invikta"
     },
     {
      "model": "LUXX Control Air",
+     "shape": "Epic",
+     "mm": "19",
      "price": 200,
      "was": 280,
-     "url": "https://www.selkirk.com/products/luxx-control-air-with-infinigrit"
+     "url": "https://www.selkirk.com/products/luxx-control-air-with-infinigrit",
+     "weight": "7.9-8.3oz",
+     "core": "Polypropylene honeycomb (X7 Thickset)",
+     "face": "Florek carbon fiber",
+     "size": "15.85\" x 7.85\"",
+     "handle": "5.25\"",
+     "grip": "4.25\""
     },
     {
      "model": "AMPED Pro Air (Invikta, Epic)",
      "price": 80,
      "was": 200,
-     "url": "https://www.selkirk.com/products/amped-pro-air-invikta-pickleball-paddle"
+     "url": "https://www.selkirk.com/products/amped-pro-air-invikta-pickleball-paddle",
+     "weight": "7.8-8.2oz",
+     "core": "Polypropylene honeycomb (X5+)",
+     "face": "Fiberglass (FiberFlex+)",
+     "size": "16.5\" x 7.45\" (Invikta)",
+     "handle": "5.25\"",
+     "grip": "4.25\"",
+     "approval": "USAP",
+     "shape": "Invikta",
+     "mm": "16"
     },
     {
      "model": "AMPED Control (Epic, Invikta, S2)",
@@ -234,38 +282,81 @@
      "model": "SLK ERA Power",
      "shape": "Elongated / Widebody",
      "price": 200,
-     "url": "https://www.selkirk.com/products/slk-era-power"
+     "url": "https://www.selkirk.com/products/slk-era-power",
+     "weight": "8.0-8.3oz",
+     "core": "Polypropylene honeycomb with EVA foam",
+     "face": "Fiberglass and T700 raw carbon fiber",
+     "size": "15.95\" x 8\"",
+     "handle": "5.6\"",
+     "grip": "4.25\"",
+     "mm": "16"
     },
     {
      "model": "SLK Dauntless",
      "shape": "Elongated / Widebody",
      "price": 120,
-     "url": "https://www.selkirk.com/products/slk-dauntless"
+     "url": "https://www.selkirk.com/products/slk-dauntless",
+     "weight": "7.7-8.1oz",
+     "core": "PureFoam (SoloCore)",
+     "face": "T700 raw carbon fiber",
+     "size": "15.95\" x 8\"",
+     "handle": "5.6\"",
+     "grip": "4.25\"",
+     "mm": "16"
     },
     {
      "model": "SLK Geo",
      "shape": "Elongated",
      "price": 100,
-     "url": "https://www.selkirk.com/products/slk-geo"
+     "url": "https://www.selkirk.com/products/slk-geo",
+     "weight": "7.8-8.1oz",
+     "core": "Polypropylene honeycomb",
+     "face": "T700 raw carbon fiber",
+     "size": "15.95\" x 8\" (Wide), 16.5\" x 7.45\" (Elong.)",
+     "handle": "5.6\" / 5.8\"",
+     "grip": "4.25\"",
+     "mm": "14"
     },
     {
      "model": "SLK Valkyrie",
      "shape": "Widebody",
      "price": 80,
-     "url": "https://www.selkirk.com/products/slk-valkyrie"
+     "url": "https://www.selkirk.com/products/slk-valkyrie",
+     "weight": "7.9-8.1oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Fiberglass (FiberFlex)",
+     "size": "15.95\" x 8\"",
+     "handle": "5.6\"",
+     "grip": "4.25\"",
+     "mm": "16"
     },
     {
      "model": "SLK HALO Power",
      "price": 70,
      "was": 150,
-     "url": "https://www.selkirk.com/products/slk-halo-power-pickleball-paddle"
+     "url": "https://www.selkirk.com/products/slk-halo-power-pickleball-paddle",
+     "weight": "7.7-8.0oz",
+     "core": "Polymer honeycomb (Rev-Control)",
+     "face": "18K carbon fiber (UltraWeave)",
+     "size": "16\" x 7.85\"",
+     "handle": "4.85\"",
+     "grip": "4.25\"",
+     "shape": "Max",
+     "mm": "16"
     },
     {
      "model": "SLK OMEGA Hybrid Air (Max, XL)",
      "shape": "Hybrid",
      "price": 60,
      "was": 120,
-     "url": "https://www.selkirk.com/products/slk-omega-hybrid-air-max"
+     "url": "https://www.selkirk.com/products/slk-omega-hybrid-air-max",
+     "weight": "7.7-8.1oz",
+     "core": "Polymer honeycomb (Rev-Control)",
+     "face": "12K carbon fiber (UltraWeave)",
+     "size": "16\" x 7.85\" (Max)",
+     "handle": "4.85\"",
+     "grip": "4.25\"",
+     "mm": "16"
     },
     {
      "model": "SLK Atlas (Max, XL)",
@@ -285,7 +376,16 @@
      "model": "SLK Latitude Max",
      "price": 50,
      "was": 70,
-     "url": "https://www.selkirk.com/products/slk-latitude"
+     "url": "https://www.selkirk.com/products/slk-latitude",
+     "weight": "7.6-8.0oz",
+     "core": "Polymer honeycomb (SX4)",
+     "face": "Graphite",
+     "size": "16\" x 7.85\"",
+     "handle": "4.85\"",
+     "grip": "4.25\"",
+     "approval": "USAP",
+     "shape": "Max",
+     "mm": "13"
     },
     {
      "model": "SLK x Dude Perfect Trickshot",
@@ -436,7 +536,8 @@
      "shape": "Elongated",
      "price": 249.99,
      "url": "https://www.paddletek.com/products/reserve-001",
-     "core": "Multi-foam floating core"
+     "core": "Multi-foam floating core",
+     "mm": "14 / 16"
     },
     {
      "model": "Honeyfoam ESQ",
@@ -619,7 +720,8 @@
      "url": "https://www.paddletek.com/products/phoenix-pro",
      "weight": "7.8-8.2oz",
      "size": "16\" x 8\"",
-     "handle": "5\""
+     "handle": "5\"",
+     "mm": "14.3"
     },
     {
      "model": "Phoenix Genesis",
@@ -630,7 +732,8 @@
      "core": "Polymer",
      "face": "Epoxy",
      "size": "16\" x 8\"",
-     "handle": "5\""
+     "handle": "5\"",
+     "mm": "12.7"
     },
     {
      "model": "Phoenix G6",
@@ -640,7 +743,8 @@
      "weight": "7.7-8.1oz",
      "core": "Polymer",
      "size": "16\" x 8\"",
-     "handle": "5\""
+     "handle": "5\"",
+     "mm": "14.3"
     },
     {
      "model": "Phoenix Genesis II",
@@ -651,7 +755,8 @@
      "core": "Polypropylene honeycomb",
      "face": "Fiberglass composite",
      "size": "16\" x 8\"",
-     "handle": "5.25\""
+     "handle": "5.25\"",
+     "mm": "14"
     }
    ]
   },
@@ -688,10 +793,18 @@
    "paddles": [
     {
      "model": "E2-CF",
+     "shape": "Elongated",
      "price": 135,
      "was": 175,
      "tested": "grit-e2-cf",
-     "url": "https://www.grit-shop.com/products/e2-cf-pink"
+     "url": "https://www.grit-shop.com/products/e2-cf-pink",
+     "weight": "7.85-8.15oz",
+     "core": "Dual foam (EPP) with carbon fiber ring",
+     "face": "Applied grit (Dura-Grit)",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.6\"",
+     "grip": "4.2\"",
+     "approval": "USAP"
     },
     {
      "model": "E1-CW Elongated",
@@ -699,7 +812,14 @@
      "price": 140,
      "was": 175,
      "note": "Not USAP approved",
-     "url": "https://www.grit-shop.com/products/ex4-cw"
+     "url": "https://www.grit-shop.com/products/ex4-cw",
+     "weight": "7.9-8.15oz",
+     "core": "Polypropylene with dual-density foam",
+     "face": "3K carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.6\"",
+     "grip": "4.25\"",
+     "mm": "16"
     },
     {
      "model": "E1-TW Elongated",
@@ -770,7 +890,14 @@
      "mm": "16",
      "price": 176,
      "was": 229,
-     "url": "https://us.sixzeropickleball.com/products/coral-pro"
+     "url": "https://us.sixzeropickleball.com/products/coral-pro",
+     "weight": "8.0-8.3oz",
+     "core": "Foam (Tectonic core with ProPulsion foam)",
+     "face": "Raw carbon fiber",
+     "size": "16.3\" x 7.5-7.7\"",
+     "handle": "5.5\"",
+     "grip": "4.0-4.13\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "Coral Pro 16mm Lightweight",
@@ -782,11 +909,18 @@
     },
     {
      "model": "Coral 16mm",
-     "shape": "Hybrid",
+     "shape": "Hybrid / Elongated / Widebody",
      "mm": "16",
      "price": 150,
      "was": 200,
-     "url": "https://us.sixzeropickleball.com/products/coral-16mm"
+     "url": "https://us.sixzeropickleball.com/products/coral-16mm",
+     "weight": "8.0-8.3oz",
+     "core": "Foam (Tectonic core with ProPulsion foam)",
+     "face": "Raw carbon fiber",
+     "size": "16.3\" x 7.5-7.7\" (Hybrid)",
+     "handle": "5.5\"",
+     "grip": "4.0-4.13\"",
+     "approval": "USAP"
     },
     {
      "model": "Coral 16mm Lightweight",
@@ -802,7 +936,14 @@
      "mm": "14",
      "price": 165,
      "was": 220,
-     "url": "https://us.sixzeropickleball.com/products/boulder-opal"
+     "url": "https://us.sixzeropickleball.com/products/boulder-opal",
+     "weight": "8.0-8.3oz",
+     "core": "Solid foam (G4 Aerospace)",
+     "face": "Carbon fiber (SharkSkin)",
+     "size": "16.3\" x 7.5-7.7\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "Black Opal C 14mm",
@@ -1062,7 +1203,14 @@
      "price": 109.99,
      "was": 129.99,
      "tested": "vanwin-alpha-power",
-     "url": "https://vanwinsports.com/products/alpha-power-carbon-fiber-pickleball-paddle"
+     "url": "https://vanwinsports.com/products/alpha-power-carbon-fiber-pickleball-paddle",
+     "weight": "7.8-8.1oz",
+     "core": "EPP + EVA foam",
+     "face": "Raw carbon fiber with carborundum grit",
+     "size": "16.49\" x 7.45\"",
+     "handle": "5.7\"",
+     "grip": "4.125\"",
+     "approval": "USAP"
     },
     {
      "model": "Alpha Control",
@@ -1390,7 +1538,8 @@
      "url": "https://holbrookpickleball.com/products/fuze",
      "core": "Dual-density foam",
      "face": "Carbon-aramid-carbon",
-     "shape": "Elongated / Hybrid / Widebody"
+     "shape": "Elongated / Hybrid / Widebody",
+     "mm": "14 / 16"
     },
     {
      "model": "Arma T 14mm",
@@ -1429,17 +1578,38 @@
      "mm": "16",
      "price": 169.99,
      "was": 199.99,
-     "url": "https://holbrookpickleball.com/products/aero-t"
+     "url": "https://holbrookpickleball.com/products/aero-t",
+     "weight": "7.7-8.0oz",
+     "core": "Foam-injected polypropylene",
+     "face": "T700 unidirectional carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "approval": "USAP"
     },
     {
      "model": "Zone Power",
      "price": 149.99,
-     "url": "https://holbrookpickleball.com/products/zone-power"
+     "url": "https://holbrookpickleball.com/products/zone-power",
+     "weight": "8.0oz",
+     "face": "Carbon-fiberglass-carbon",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "mm": "16"
     },
     {
      "model": "Pro Power Pro",
      "price": 149.99,
-     "url": "https://holbrookpickleball.com/products/power-pro"
+     "url": "https://holbrookpickleball.com/products/power-pro",
+     "weight": "7.7-8.0oz",
+     "core": "Foam-injected polypropylene",
+     "face": "T700 unidirectional carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "approval": "USAP",
+     "mm": "14 / 16"
     },
     {
      "model": "Pro Power Pro E",
@@ -1465,7 +1635,14 @@
     {
      "model": "Performance Rewind",
      "price": 79.99,
-     "url": "https://holbrookpickleball.com/products/rewind"
+     "url": "https://holbrookpickleball.com/products/rewind",
+     "weight": "7.8oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Carbon fiber and graphite blend",
+     "size": "15.75\" x 7.8\"",
+     "handle": "5\"",
+     "approval": "USAP",
+     "mm": "14"
     },
     {
      "model": "Performance SoHo",
@@ -1481,7 +1658,8 @@
      "face": "Fiberglass",
      "size": "15.75\" x 7.8\"",
      "handle": "5\"",
-     "approval": "USAP"
+     "approval": "USAP",
+     "mm": "14"
     },
     {
      "model": "Sport Dune",
@@ -1733,14 +1911,29 @@
      "mm": "16",
      "price": 179,
      "tested": "luzz-cannon-xpp",
-     "url": "https://luzzpickleball.com/products/luzz-cannon-xpp-m1-paddle"
+     "url": "https://luzzpickleball.com/products/luzz-cannon-xpp-m1-paddle",
+     "weight": "7.93oz",
+     "core": "Foam (XPOP)",
+     "face": "Carbon fiber with SiC grit",
+     "size": "16.54\" x 7.48\"",
+     "handle": "5.52\"",
+     "grip": "4.13\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "Inferno2 M1",
      "mm": "16",
      "price": 239,
      "tested": "luzz-inferno-2",
-     "url": "https://luzzpickleball.com/products/luzz-inferno2-m1"
+     "url": "https://luzzpickleball.com/products/luzz-inferno2-m1",
+     "weight": "7.93oz",
+     "core": "MPP foam (MPP2)",
+     "face": "Silicon carbide surface (Aero-Black)",
+     "size": "16.54\" x 7.48\"",
+     "handle": "5.52\"",
+     "grip": "4.13\"",
+     "approval": "UPA-A",
+     "shape": "Elongated"
     },
     {
      "model": "Glider 2026 Hybrid",
@@ -1748,14 +1941,28 @@
      "mm": "16",
      "price": 119,
      "tested": "luzz-glider-2026",
-     "url": "https://luzzpickleball.com/products/luzz-glider-2026"
+     "url": "https://luzzpickleball.com/products/luzz-glider-2026",
+     "weight": "7.94oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Carbon fiber",
+     "size": "16.34\" x 7.68\"",
+     "handle": "5.31\"",
+     "grip": "4.13\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "Inferno Frozen",
      "mm": "16",
      "price": 219,
      "was": 249,
-     "url": "https://luzzpickleball.com/products/luzz-pro-4-frozen-inferno"
+     "url": "https://luzzpickleball.com/products/luzz-pro-4-frozen-inferno",
+     "weight": "7.94oz",
+     "core": "MPP foam (MPP-Z)",
+     "face": "EP-12 surface",
+     "size": "16.54\" x 7.48\"",
+     "handle": "5.52\"",
+     "grip": "4.17\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "Glider 2024 Hybrid",
@@ -1781,7 +1988,14 @@
      "model": "ProBladz 2",
      "mm": "14",
      "price": 169,
-     "url": "https://luzzpickleball.com/products/luzz-pro-blade2-paddle"
+     "url": "https://luzzpickleball.com/products/luzz-pro-blade2-paddle",
+     "weight": "7.94oz",
+     "core": "MPP foam",
+     "face": "T700 carbon fiber",
+     "size": "16.54\" x 7.48\"",
+     "handle": "5.52\"",
+     "grip": "4.13\"",
+     "approval": "USAP, UPA-A"
     },
     {
      "model": "Pro 4 Tornazo",
