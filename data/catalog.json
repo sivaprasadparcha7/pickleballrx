@@ -827,20 +827,36 @@
      "price": 110,
      "was": 185,
      "note": "Not USAP approved",
-     "url": "https://www.grit-shop.com/products/ex4-tw"
+     "url": "https://www.grit-shop.com/products/ex4-tw",
+     "weight": "7.9-8.15oz",
+     "core": "Polypropylene with dual-density foam",
+     "face": "Carbon fiber and PET weave",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.6\"",
+     "grip": "4.25\"",
+     "mm": "16"
     },
     {
      "model": "R1-CW Hybrid",
      "shape": "Hybrid",
      "price": 100,
      "was": 175,
-     "url": "https://www.grit-shop.com/products/r4-cw"
+     "note": "Not USAP approved",
+     "url": "https://www.grit-shop.com/products/r4-cw",
+     "weight": "7.9-8.15oz",
+     "core": "Polypropylene with dual-density foam",
+     "face": "3K carbon fiber",
+     "size": "16.35\" x 7.55\"",
+     "handle": "5.35\"",
+     "grip": "4.25\"",
+     "mm": "16"
     },
     {
      "model": "R1-TW Hybrid",
      "shape": "Hybrid",
      "price": 100,
      "was": 185,
+     "note": "Not USAP approved",
      "url": "https://www.grit-shop.com/products/r4-tw"
     },
     {
@@ -848,7 +864,15 @@
      "shape": "Standard",
      "price": 100,
      "was": 175,
-     "url": "https://www.grit-shop.com/products/s4-cw"
+     "note": "Not USAP approved",
+     "url": "https://www.grit-shop.com/products/s4-cw",
+     "weight": "7.9-8.15oz",
+     "core": "Polypropylene with dual-density foam",
+     "face": "3K carbon fiber",
+     "size": "16.2\" x 7.8\"",
+     "handle": "5.2\"",
+     "grip": "4.25\"",
+     "mm": "16"
     }
    ]
   },
@@ -1218,19 +1242,42 @@
      "mm": "16",
      "price": 109.99,
      "tested": "vanwin-alpha-control",
-     "url": "https://vanwinsports.com/products/alpha-control-pickleball-paddle"
+     "url": "https://vanwinsports.com/products/alpha-control-pickleball-paddle",
+     "weight": "7.8-8.1oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Kevlar (aramid)",
+     "size": "16.5\" x 7.45\"",
+     "handle": "5.7\"",
+     "grip": "4.125\"",
+     "approval": "USAP pending"
     },
     {
      "model": "Pro T8",
      "mm": "16",
      "price": 89.99,
-     "url": "https://vanwinsports.com/products/pro-t8-t800-raw-carbon-fiber-pickleball-paddle"
+     "url": "https://vanwinsports.com/products/pro-t8-t800-raw-carbon-fiber-pickleball-paddle",
+     "weight": "7.8-8.05oz",
+     "core": "Polypropylene honeycomb and EVA foam",
+     "face": "T800 raw carbon fiber",
+     "size": "16.45\" x 7.45\"",
+     "handle": "5.7\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Elongated"
     },
     {
      "model": "Pro T7",
      "mm": "16",
      "price": 69.99,
-     "url": "https://vanwinsports.com/products/pro-t7-t700-raw-carbon-fiber-pickleball-paddle"
+     "url": "https://vanwinsports.com/products/pro-t7-t700-raw-carbon-fiber-pickleball-paddle",
+     "weight": "7.8-8.1oz",
+     "core": "Polypropylene honeycomb",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.45\"",
+     "handle": "5.7\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Elongated"
     }
    ]
   },
@@ -1278,33 +1325,54 @@
    "paddles": [
     {
      "model": "Echo",
-     "shape": "Elongated",
+     "shape": "Elongated / Hybrid / Widebody",
+     "mm": "16",
      "price": 222,
-     "url": "https://enhancepickleball.com/products/echo"
+     "url": "https://enhancepickleball.com/products/echo",
+     "weight": "7.9-8.1oz",
+     "core": "Floating MPP foam with EVA perimeter",
+     "face": "Carbon-fiberglass-carbon (ArmorGrit+)",
+     "size": "16.5\" x 7.5\" / 16.3\" x 7.7\" / 16\" x 8\"",
+     "handle": "5.7\" / 5.5\" / 5.5\""
     },
     {
      "model": "DUO",
-     "shape": "3 shapes",
+     "shape": "Elongated / Hybrid / Widebody",
+     "mm": "16",
      "price": 159.99,
      "was": 199.99,
-     "url": "https://enhancepickleball.com/products/duo"
+     "url": "https://enhancepickleball.com/products/duo",
+     "weight": "8.0-8.2oz",
+     "core": "EPP/EVA foam",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.5\" (Elongated)",
+     "handle": "5.7\"",
+     "grip": "4.1\"",
+     "approval": "USAP"
     },
     {
      "model": "MPP Turbo with ArmorGrit",
-     "shape": "3 shapes",
+     "shape": "Elongated / Hybrid / Widebody",
      "price": 119.99,
      "url": "https://enhancepickleball.com/products/mpp-turbo-armorgrit"
     },
     {
      "model": "MPP Turbo",
-     "shape": "3 shapes",
+     "shape": "Elongated / Hybrid / Widebody",
      "price": 109.99,
      "was": 119.99,
-     "url": "https://enhancepickleball.com/products/mpp-turbo"
+     "url": "https://enhancepickleball.com/products/mpp-turbo",
+     "weight": "7.8-8.0oz",
+     "core": "MPP foam with EVA perimeter",
+     "face": "Carbon-fiberglass-carbon (T700)",
+     "size": "16.5\" x 7.5\" (Elongated)",
+     "handle": "5.7\"",
+     "grip": "4.1\"",
+     "mm": "16"
     },
     {
      "model": "EPP Turbo",
-     "shape": "3 shapes",
+     "shape": "Elongated / Hybrid / Widebody",
      "price": 109.99,
      "was": 119.99,
      "url": "https://enhancepickleball.com/products/epp-turbo"
@@ -1690,14 +1758,29 @@
      "mm": "14",
      "price": 169.99,
      "tested": "speedup-tide",
-     "url": "https://speeduppickle.com/products/speedup-tide-14mm-all-shapes"
+     "url": "https://speeduppickle.com/products/speedup-tide-14mm-all-shapes",
+     "weight": "8.0oz",
+     "core": "MPP foam with TPE outer ring",
+     "face": "3-layer T700 carbon fiber",
+     "size": "16.55\" x 7.45\" (14L), 16.4\" x 7.5\" (14H), 15.8\" x 8.1\" (14S)",
+     "handle": "5.7\" (14L), 5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP"
     },
     {
      "model": "Pyro 16mm",
      "mm": "16",
      "price": 65,
      "was": 129.99,
-     "url": "https://speeduppickle.com/products/speedup-pyro-16mm"
+     "url": "https://speeduppickle.com/products/speedup-pyro-16mm",
+     "weight": "8.0oz",
+     "core": "Polypropylene honeycomb (8mm cells)",
+     "face": "Carbon fiber, fiberglass and Kevlar",
+     "size": "16.5\" x 7.5\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid"
     },
     {
      "model": "Cryo 16mm",
@@ -1711,7 +1794,15 @@
      "mm": "16",
      "price": 59.99,
      "was": 119.99,
-     "url": "https://speeduppickle.com/products/speedup-ice-16mm"
+     "url": "https://speeduppickle.com/products/speedup-ice-16mm",
+     "weight": "7.9oz",
+     "core": "Polypropylene honeycomb",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "6\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Standard"
     },
     {
      "model": "Fire 14mm",
@@ -1738,33 +1829,73 @@
      "shape": "Elongated",
      "price": 299,
      "tested": "mehau-s5",
-     "url": "https://mehaupickleball.com/products/mehau-s5-airpoom-aerodynamic-pickleball-paddle"
+     "url": "https://mehaupickleball.com/products/mehau-s5-airpoom-aerodynamic-pickleball-paddle",
+     "weight": "7.68oz",
+     "core": "EVA and honeycomb with aerodynamic frame",
+     "face": "Carbon fiber",
+     "size": "16.46\" x 7.36\"",
+     "handle": "5.7\"",
+     "grip": "4.1-4.2\"",
+     "approval": "USAP, UPA-A",
+     "mm": "16"
     },
     {
      "model": "E5 Precise Series",
      "shape": "Elongated",
      "price": 259,
      "tested": "mehau-e5",
-     "url": "https://mehaupickleball.com/products/mehau-e5-precise-series-pickleball-paddle"
+     "url": "https://mehaupickleball.com/products/mehau-e5-precise-series-pickleball-paddle",
+     "weight": "8.1oz (230g)",
+     "core": "Elastomer and EPP foam",
+     "face": "Carbon fiber",
+     "size": "16.46\" x 7.36\"",
+     "handle": "5.7\"",
+     "grip": "4.1\"",
+     "approval": "UPA-A",
+     "mm": "16"
     },
     {
      "model": "E4 Precise Series",
      "shape": "Elongated",
      "price": 219,
      "tested": "mehau-e4",
-     "url": "https://mehaupickleball.com/products/mehau-e4-precise-series-pickleball-paddle"
+     "url": "https://mehaupickleball.com/products/mehau-e4-precise-series-pickleball-paddle",
+     "weight": "8.1oz (230g)",
+     "core": "EVA and foam",
+     "face": "Carbon fiber",
+     "size": "16.46\" x 7.36\"",
+     "handle": "5.7\"",
+     "grip": "4.1\"",
+     "approval": "UPA-A",
+     "mm": "16"
     },
     {
      "model": "X4 / X5 Power Series",
      "shape": "Elongated",
      "price": 139,
-     "url": "https://mehaupickleball.com/products/mehau-x4-x5-precise-series-pickleball-paddle"
+     "url": "https://mehaupickleball.com/products/mehau-x4-x5-precise-series-pickleball-paddle",
+     "weight": "8.1oz (230g)",
+     "core": "EVA or elastomer with honeycomb",
+     "face": "Carbon fiber",
+     "size": "16.46\" x 7.36\"",
+     "handle": "5.7\"",
+     "grip": "4.1\"",
+     "approval": "UPA-A",
+     "mm": "16"
     },
     {
      "model": "B2 Bingo Series",
      "shape": "Elongated",
      "price": 99,
-     "url": "https://mehaupickleball.com/products/mehau-b2-bingo-series-pickleball-paddle"
+     "url": "https://mehaupickleball.com/products/mehau-b2-bingo-series-pickleball-paddle",
+     "weight": "8.1oz (230g)",
+     "core": "Polypropylene honeycomb",
+     "face": "T700 carbon fiber",
+     "size": "16.46\" x 7.36\"",
+     "handle": "5.7\"",
+     "grip": "4.1\"",
+     "approval": "USAP, UPA-A",
+     "mm": "16"
     }
    ]
   },
@@ -1791,7 +1922,15 @@
      "price": 99.99,
      "was": 109.99,
      "tested": "spartus-spitfire",
-     "url": "https://gospartus.com/products/spitfire-elongated"
+     "url": "https://gospartus.com/products/spitfire-elongated",
+     "weight": "7.85oz",
+     "core": "Foam (Gen 4 Turbo Foam)",
+     "face": "QuadFiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "mm": "16"
     },
     {
      "model": "Spitfire Standard / Widebody",
@@ -1804,12 +1943,29 @@
      "shape": "Hybrid / Elongated / Standard",
      "price": 159.99,
      "was": 219.99,
-     "url": "https://gospartus.com/products/p1-hybrid"
+     "url": "https://gospartus.com/products/p1-hybrid",
+     "weight": "8.1-8.5oz",
+     "core": "Dual-density floating foam (EPP/EVA)",
+     "face": "T700 carbon fiber and fiberglass",
+     "size": "16.25\" x 7.7\" (Hybrid)",
+     "handle": "5.3\"",
+     "grip": "4.25\"",
+     "approval": "USAP",
+     "mm": "16"
     },
     {
      "model": "Olympus",
      "price": 199.99,
-     "url": "https://gospartus.com/products/olympus"
+     "url": "https://gospartus.com/products/olympus",
+     "weight": "8.0oz",
+     "core": "Ascension Core",
+     "face": "T700 carbon fiber and fiberglass",
+     "size": "16.35\" x 7.65\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "approval": "USAP",
+     "shape": "Hybrid",
+     "mm": "14"
     },
     {
      "model": "Apollo",
@@ -1859,7 +2015,15 @@
      "mm": "16",
      "price": 189.99,
      "tested": "mark-unmarked-2026",
-     "url": "https://markpickleball.com/products/unmarked-2026"
+     "url": "https://markpickleball.com/products/unmarked-2026",
+     "weight": "7.8-8.0oz",
+     "core": "Dual foam (EVA perimeter, EPP center)",
+     "face": "T700 carbon with fiberglass mid-layer",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.75\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Elongated"
     },
     {
      "model": "02R3",
@@ -1867,21 +2031,43 @@
      "price": 174.99,
      "was": 189.99,
      "tested": "mark-02r3",
-     "url": "https://markpickleball.com/products/mark-02r3"
+     "url": "https://markpickleball.com/products/mark-02r3",
+     "weight": "8.0oz",
+     "core": "EVA foam with EPP layer",
+     "face": "Kevlar and carbon fiber blend",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.6\"",
+     "grip": "4.125\"",
+     "approval": "USAP"
     },
     {
      "model": "01XR2",
      "mm": "16",
      "price": 139.99,
      "was": 174.99,
-     "url": "https://markpickleball.com/products/mark-01xr2"
+     "url": "https://markpickleball.com/products/mark-01xr2",
+     "weight": "7.8-8.2oz",
+     "core": "Polymer honeycomb (10mm cells)",
+     "face": "T700 carbon fiber and fiberglass",
+     "size": "16.25\" x 7.75\"",
+     "handle": "5.75\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "shape": "Hybrid"
     },
     {
      "model": "02R2",
      "mm": "16",
      "price": 139.99,
      "was": 174.99,
-     "url": "https://markpickleball.com/products/mark-02r2"
+     "url": "https://markpickleball.com/products/mark-02r2",
+     "weight": "8.0-8.2oz",
+     "core": "Polymer honeycomb (10mm cells)",
+     "face": "T700 carbon fiber and fiberglass",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.6\"",
+     "grip": "4.125\"",
+     "approval": "USAP"
     },
     {
      "model": "02",
