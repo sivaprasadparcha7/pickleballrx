@@ -1491,7 +1491,7 @@ write("pros.html", page("What paddles do the pros use? PPA and APP top players |
 </section>
 <section style="padding-top:0" id="app">
   <h2>APP Tour: top 5 by division</h2>
-  <p class="section-lead">Ranking: {_s("app_rank")} (updated {_fmt_date(_PSRC["app_rank"]["asof"])}). APP players&rsquo; paddles are rarely tracked publicly, so most are unconfirmed for now. Jack Munro&rsquo;s sponsor is from {_s("kitchen_deals")}; Megan Fudge&rsquo;s signature paddle is from {_s("franklin_fudge")}.</p>
+  <p class="section-lead">Ranking: {_s("app_rank")} (updated {_fmt_date(_PSRC["app_rank"]["asof"])}). APP players&rsquo; paddles are rarely tracked publicly, so most of these were seen by the Pickleball RX team. Jack Munro&rsquo;s sponsor is from {_s("kitchen_deals")}; Megan Fudge&rsquo;s signature paddle is from {_s("franklin_fudge")}.</p>
   {_app_html}
 </section>
 <section style="padding-top:0"><div class="note"><strong>About this list.</strong> Rankings and paddle deals change often, and pros sometimes play unreleased or custom paddles. &ldquo;Unconfirmed&rdquo; means we couldn&rsquo;t find a reliable current source, so we didn&rsquo;t guess. The <strong>Our labs</strong> column links to our own X-ray or Grit Lab results where we have them for that paddle model; a pro&rsquo;s paddle may be a custom build. Know a pro&rsquo;s current paddle? <a href="about.html#contact">Tell us</a>.</div></section>
