@@ -1157,7 +1157,7 @@ DEALS = [
          tested=[]),
     dict(brand="Grit", label="Sale price", deal="E2-CF $135 (was $175). E1-TW $110 (was $185); the E1 is not USA Pickleball approved.", code="", ends="Not stated", url="https://grit-shop.com/",
          tested=[("E2-CF X-ray", "xray/grit-e2-cf.html"), ("E2-CF spin", "spin.html#grit-e2cf")]),
-    dict(brand="Vanwin", label="Special deals", deal="Alpha Control $83.99 \u00b7 Alpha Power $83.99 \u00b7 Pro T7 $47.99 \u00b7 Pro T8 $63.99", code="", code_note="Prices from Vanwin Sports", ends="Not stated", url="https://www.vanwinsports.com/",
+    dict(brand="Vanwin", label="Black Friday", deal="Alpha Control $83.99 \u00b7 Alpha Power $83.99 \u00b7 Pro T7 $47.99 \u00b7 Pro T8 $63.99", code="", code_note="Goes live Nov 18 at 12:00 AM PST", ends="Not stated", url="https://www.vanwinsports.com/",
          checked="Nov 18, 2026", tested=[("Alpha Control", "xray/vanwin-alpha-control.html"), ("Alpha Power", "xray/vanwin-alpha-power.html")]),
 ]
 
