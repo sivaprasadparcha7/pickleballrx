@@ -1,0 +1,1378 @@
+{
+ "_note": "Brand lineups read from each brand's own store on 2026-11-18. NOT tested by Pickleball Rx unless 'tested' is set. Prices change often.",
+ "checked": "2026-11-18",
+ "brands": [
+  {
+   "brand": "JOOLA",
+   "store": "https://joola.com/collections/pickleball-paddles",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "Perseus Pro V",
+     "price": 299.95
+    },
+    {
+     "model": "Kosmos Pro V",
+     "price": 299.95
+    },
+    {
+     "model": "Scorpeus Pro V",
+     "price": 299.95
+    },
+    {
+     "model": "Hyperion Pro V",
+     "price": 299.95
+    },
+    {
+     "model": "Agassi Pro V",
+     "price": 299.95
+    },
+    {
+     "model": "Graf Pro V",
+     "price": 299.95
+    },
+    {
+     "model": "Perseus Power FX",
+     "price": 179.95
+    },
+    {
+     "model": "Perseus Pro IV 14mm",
+     "mm": "14",
+     "price": 149.95,
+     "was": 249.95
+    },
+    {
+     "model": "Hyperion Pro IV 14mm",
+     "mm": "14",
+     "price": 149.95,
+     "was": 229.95
+    },
+    {
+     "model": "Scorpeus Pro IV",
+     "mm": "14 / 16",
+     "price": 149.95,
+     "was": 229.95
+    },
+    {
+     "model": "Magnus Pro IV",
+     "mm": "14 / 16",
+     "price": 149.95,
+     "was": 229.95
+    },
+    {
+     "model": "Agassi Pro",
+     "mm": "14 / 16",
+     "price": 149.95,
+     "was": 229.95
+    },
+    {
+     "model": "Graf Pro 16mm",
+     "mm": "16",
+     "price": 149.95,
+     "was": 229.95
+    },
+    {
+     "model": "Magnus 3S 14mm",
+     "mm": "14",
+     "price": 99.95
+    },
+    {
+     "model": "Perseus 3S Dual",
+     "mm": "14 / 16",
+     "price": 199.95
+    },
+    {
+     "model": "Scorpeus 3S Dual 14mm",
+     "mm": "14",
+     "price": 199.95
+    },
+    {
+     "model": "Hyperion 3S Dual 16mm",
+     "mm": "16",
+     "price": 199.95
+    },
+    {
+     "model": "Magnus 3S Dual 14mm",
+     "mm": "14",
+     "price": 199.95
+    },
+    {
+     "model": "Hyperion CFS 16mm",
+     "mm": "16",
+     "price": 159.95
+    },
+    {
+     "model": "Perseus CFS",
+     "price": 159.95
+    },
+    {
+     "model": "Hyperion CAS 16mm",
+     "mm": "16",
+     "price": 119.95
+    },
+    {
+     "model": "Hyperion Vision",
+     "price": 89.95
+    },
+    {
+     "model": "Hyperion Double Vision",
+     "price": 119.95
+    },
+    {
+     "model": "Perseus Double Vision",
+     "price": 119.95
+    },
+    {
+     "model": "Scorpeus Double Vision",
+     "price": 119.95
+    },
+    {
+     "model": "Perseus Heat Vision",
+     "price": 99.95
+    },
+    {
+     "model": "Scorpeus Heat Vision",
+     "price": 99.95
+    },
+    {
+     "model": "Agassi Edge Heat Vision",
+     "price": 99.95
+    },
+    {
+     "model": "Agassi Edge 16mm",
+     "mm": "16",
+     "price": 59.95,
+     "was": 99.95
+    },
+    {
+     "model": "Graf Edge 16mm",
+     "mm": "16",
+     "price": 59.95,
+     "was": 99.95
+    },
+    {
+     "model": "Agassi Champion 12mm",
+     "mm": "12",
+     "price": 39.95,
+     "was": 59.95
+    },
+    {
+     "model": "Graf Champion 12mm",
+     "mm": "12",
+     "price": 39.95,
+     "was": 59.95
+    },
+    {
+     "model": "Da Hammer",
+     "price": 99.95
+    },
+    {
+     "model": "Astral",
+     "price": 79.95
+    },
+    {
+     "model": "Essentials Dash"
+    }
+   ]
+  },
+  {
+   "brand": "Selkirk",
+   "store": "https://www.selkirk.com/collections/pickleball-paddles",
+   "complete": false,
+   "note": "Selkirk's store loads more paddles as you scroll, so a few older models may be missing.",
+   "paddles": [
+    {
+     "model": "Boomstik ST",
+     "price": 350
+    },
+    {
+     "model": "OMNI",
+     "shape": "Elongated",
+     "price": 300
+    },
+    {
+     "model": "LABS Project Boomstik",
+     "shape": "Elongated",
+     "price": 250,
+     "was": 333,
+     "tested": "grit:Selkirk LABS Project Boomstik"
+    },
+    {
+     "model": "LABS Project 007",
+     "price": 100,
+     "was": 333
+    },
+    {
+     "model": "LUXX Control Air",
+     "price": 200,
+     "was": 280
+    },
+    {
+     "model": "AMPED Pro Air (Invikta, Epic)",
+     "price": 80,
+     "was": 200
+    },
+    {
+     "model": "AMPED Control (Epic, Invikta, S2)",
+     "price": 80,
+     "was": 160
+    },
+    {
+     "model": "VANGUARD Power Air S2",
+     "price": 100.99,
+     "was": 250
+    },
+    {
+     "model": "SLK ERA Power",
+     "price": 200
+    },
+    {
+     "model": "SLK Dauntless",
+     "shape": "Widebody",
+     "price": 120
+    },
+    {
+     "model": "SLK Geo",
+     "price": 100
+    },
+    {
+     "model": "SLK Valkyrie",
+     "price": 80
+    },
+    {
+     "model": "SLK HALO Power",
+     "price": 70,
+     "was": 150
+    },
+    {
+     "model": "SLK OMEGA Hybrid Air (Max, XL)",
+     "shape": "Hybrid",
+     "price": 60,
+     "was": 120
+    },
+    {
+     "model": "SLK Atlas (Max, XL)",
+     "price": 60,
+     "was": 80
+    },
+    {
+     "model": "SLK EVO Control (Max, XL)",
+     "price": 50,
+     "was": 100
+    },
+    {
+     "model": "SLK Nexus Max",
+     "price": 50
+    },
+    {
+     "model": "SLK Latitude Max",
+     "price": 50,
+     "was": 70
+    },
+    {
+     "model": "SLK x Dude Perfect Trickshot",
+     "price": 10,
+     "was": 60
+    }
+   ]
+  },
+  {
+   "brand": "Gearbox",
+   "store": "https://gearboxsports.com/collections/all-pickleball-paddles",
+   "complete": false,
+   "note": "Gearbox's store didn't load its full grid for us. The CX14, CX11, CP7 and G20 lines are missing.",
+   "paddles": [
+    {
+     "model": "Pressure X 8E",
+     "shape": "Elongated / Hybrid",
+     "price": 279.99,
+     "tested": "gearbox-pressure-x-8e"
+    },
+    {
+     "model": "Pressure X 8M",
+     "shape": "Elongated / Hybrid",
+     "price": 279.99,
+     "tested": "gearbox-pressure-xm"
+    },
+    {
+     "model": "GX2 Power",
+     "shape": "Elongated / Hybrid",
+     "price": 279.99
+    },
+    {
+     "model": "Pro Ultimate Power Elongated 14mm",
+     "shape": "Elongated",
+     "mm": "14",
+     "price": 274.99
+    },
+    {
+     "model": "Pro Ultimate Elongated 16mm",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 274.99
+    },
+    {
+     "model": "Pro Ultimate Hyper 16mm",
+     "mm": "16",
+     "price": 274.99
+    },
+    {
+     "model": "Pro Control Integra 14mm",
+     "mm": "14",
+     "price": 99.99,
+     "was": 274.99
+    },
+    {
+     "model": "GBX Power Gen-3 Honeycomb",
+     "shape": "Elongated / Hybrid",
+     "price": 179.99
+    },
+    {
+     "model": "G3 Elongated 16mm",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 54.99,
+     "was": 149.99
+    },
+    {
+     "model": "G2 Elongated 14mm",
+     "shape": "Elongated",
+     "mm": "14",
+     "price": 59.99,
+     "was": 119.99
+    },
+    {
+     "model": "G14 Quad 14mm",
+     "shape": "Quad",
+     "mm": "14",
+     "price": 49.99,
+     "was": 129.99
+    },
+    {
+     "model": "G12 Quad 12mm",
+     "shape": "Quad",
+     "mm": "12",
+     "price": 29.99,
+     "was": 59.99
+    }
+   ]
+  },
+  {
+   "brand": "Paddletek",
+   "store": "https://www.paddletek.com/collections/all-paddles",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "Bantam Jolt",
+     "shape": "Elongated / Widebody",
+     "mm": "16",
+     "price": 224.99
+    },
+    {
+     "model": "Tempest Veyra",
+     "shape": "Elongated / Widebody",
+     "mm": "16",
+     "price": 179.99
+    },
+    {
+     "model": "The Reserve Honeyfoam",
+     "shape": "Elongated",
+     "price": 249.99
+    },
+    {
+     "model": "Honeyfoam ESQ",
+     "shape": "Widebody",
+     "mm": "14",
+     "price": 249.99
+    },
+    {
+     "model": "Honeyfoam TKO-X",
+     "shape": "Elongated",
+     "mm": "14",
+     "price": 249.99
+    },
+    {
+     "model": "Bantam EXL-C",
+     "shape": "Widebody",
+     "mm": "12.7",
+     "price": 199.99
+    },
+    {
+     "model": "Bantam GTO-C",
+     "shape": "Hybrid",
+     "mm": "12.7",
+     "price": 99.99,
+     "was": 199.99
+    },
+    {
+     "model": "Bantam TKO-CX",
+     "shape": "Elongated",
+     "mm": "12.7",
+     "price": 199.99
+    },
+    {
+     "model": "Bantam TKO-C",
+     "shape": "Elongated",
+     "mm": "12.7",
+     "price": 199.99
+    },
+    {
+     "model": "Bantam ESQ-C",
+     "shape": "Widebody",
+     "mm": "12.7",
+     "price": 139.99,
+     "was": 199.99
+    },
+    {
+     "model": "Tempest Wave Pro-C",
+     "shape": "Widebody",
+     "mm": "14.3",
+     "price": 149.99
+    },
+    {
+     "model": "Tempest TKO-C",
+     "shape": "Elongated",
+     "mm": "14.3",
+     "price": 149.99
+    },
+    {
+     "model": "Trae Young Signature Tempest Wave Pro-C",
+     "shape": "Widebody",
+     "mm": "12.7",
+     "price": 149.99
+    },
+    {
+     "model": "Phoenix Firestorm",
+     "shape": "Elongated",
+     "mm": "14",
+     "price": 79.99,
+     "was": 99.99
+    },
+    {
+     "model": "Phoenix Talon",
+     "shape": "Widebody",
+     "mm": "14",
+     "price": 79.99,
+     "was": 99.99
+    },
+    {
+     "model": "Phoenix Sabre Carbon",
+     "shape": "Elongated",
+     "mm": "14",
+     "price": 69.99
+    },
+    {
+     "model": "Phoenix Genesis Carbon",
+     "shape": "Widebody",
+     "mm": "14",
+     "price": 69.99
+    },
+    {
+     "model": "Phoenix Genesis Pro",
+     "shape": "Widebody",
+     "price": 89.99
+    },
+    {
+     "model": "Phoenix Genesis",
+     "shape": "Widebody",
+     "price": 79.99
+    },
+    {
+     "model": "Phoenix G6",
+     "shape": "Widebody",
+     "price": 69.99
+    },
+    {
+     "model": "Phoenix Genesis II",
+     "shape": "Widebody",
+     "price": 59.99
+    }
+   ]
+  },
+  {
+   "brand": "Evolv",
+   "store": "https://evolvpickleball.com/",
+   "complete": false,
+   "note": "Evolv's store didn't list its paddles for us, so only the paddle we've tested is here.",
+   "paddles": [
+    {
+     "model": "Origin",
+     "shape": "Elongated",
+     "tested": "evolv-origin"
+    }
+   ]
+  },
+  {
+   "brand": "PACT",
+   "store": "https://pactpickleball.com/",
+   "complete": false,
+   "note": "PACT's store doesn't allow automated reading, so only the paddle we've tested is here.",
+   "paddles": [
+    {
+     "model": "Teflon Evolve TE16",
+     "mm": "16",
+     "tested": "pact-teflon"
+    }
+   ]
+  },
+  {
+   "brand": "Grit",
+   "store": "https://www.grit-shop.com/collections/paddles",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "E2-CF",
+     "price": 135,
+     "was": 175,
+     "tested": "grit-e2-cf"
+    },
+    {
+     "model": "E1-CW Elongated",
+     "shape": "Elongated",
+     "price": 140,
+     "was": 175,
+     "note": "Not USAP approved"
+    },
+    {
+     "model": "E1-TW Elongated",
+     "shape": "Elongated",
+     "price": 110,
+     "was": 185,
+     "note": "Not USAP approved"
+    }
+   ]
+  },
+  {
+   "brand": "Proton",
+   "store": "https://protonsports.co/",
+   "complete": false,
+   "note": "Proton's store doesn't allow automated reading, so only the paddles we've tested are here.",
+   "paddles": [
+    {
+     "model": "Project Coyote",
+     "tested": "proton-project-coyote"
+    },
+    {
+     "model": "Project Peacock",
+     "tested": "proton-project-peacock"
+    }
+   ]
+  },
+  {
+   "brand": "Six Zero",
+   "store": "https://us.sixzeropickleball.com/collections/paddles",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "Coral Pro 16mm",
+     "shape": "Hybrid",
+     "mm": "16",
+     "price": 176,
+     "was": 229
+    },
+    {
+     "model": "Coral Pro 16mm Lightweight",
+     "shape": "Hybrid",
+     "mm": "16",
+     "price": 194.65,
+     "was": 229
+    },
+    {
+     "model": "Coral 16mm",
+     "shape": "Hybrid",
+     "mm": "16",
+     "price": 150,
+     "was": 200
+    },
+    {
+     "model": "Coral 16mm Lightweight",
+     "shape": "Hybrid",
+     "mm": "16",
+     "price": 150,
+     "was": 200
+    },
+    {
+     "model": "Boulder Opal 14mm",
+     "shape": "Hybrid",
+     "mm": "14",
+     "price": 165,
+     "was": 220
+    },
+    {
+     "model": "Black Opal C 14mm",
+     "mm": "14",
+     "price": 110,
+     "was": 220
+    },
+    {
+     "model": "Black Opal 14mm Elongated",
+     "shape": "Elongated",
+     "mm": "14",
+     "price": 90,
+     "was": 180
+    },
+    {
+     "model": "Ruby Pro 14mm",
+     "mm": "14"
+    },
+    {
+     "model": "Ruby"
+    },
+    {
+     "model": "Double Black Diamond Control 16mm",
+     "mm": "16",
+     "price": 63,
+     "was": 189.99
+    },
+    {
+     "model": "Black Diamond Power",
+     "shape": "Standard",
+     "price": 63,
+     "was": 180
+    },
+    {
+     "model": "Infinity Edgeless Double Black Diamond 16mm",
+     "shape": "Edgeless",
+     "mm": "16"
+    },
+    {
+     "model": "Infinity Edgeless Black Diamond Power 16mm",
+     "shape": "Edgeless",
+     "mm": "16"
+    },
+    {
+     "model": "Quartz 15mm",
+     "mm": "15",
+     "price": 75,
+     "was": 89.99
+    },
+    {
+     "model": "Sapphire 13mm",
+     "mm": "13",
+     "price": 49,
+     "was": 139.99
+    }
+   ]
+  },
+  {
+   "brand": "Franklin",
+   "store": "https://franklinsports.com/sports/pickleball/paddles",
+   "complete": false,
+   "note": "Franklin's store shows 23 paddles but only let us read a few, so this list is short.",
+   "paddles": [
+    {
+     "model": "C45 Carbon Fiber Series",
+     "price": 229.99
+    },
+    {
+     "model": "Anna Leigh Waters Signature C45 Series",
+     "price": 229.99
+    },
+    {
+     "model": "Signature Carbon Series",
+     "price": 99.99
+    },
+    {
+     "model": "Dynasty Whip 16mm",
+     "mm": "16",
+     "tested": "franklin-dynasty-whip-16mm"
+    }
+   ]
+  },
+  {
+   "brand": "RPM",
+   "store": "https://rpmpb.com/collections/all",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "Jade",
+     "shape": "Elongated / Widebody",
+     "mm": "14 / 16",
+     "price": 269.99,
+     "tested": "rpm-jade"
+    },
+    {
+     "model": "Q2",
+     "shape": "Elongated / Widebody",
+     "mm": "14 / 16",
+     "price": 249.99,
+     "tested": "rpm-q2"
+    },
+    {
+     "model": "Friction Pro V2 Miami",
+     "shape": "Elongated",
+     "mm": "14 / 16",
+     "price": 249.99,
+     "tested": "rpm-v2"
+    },
+    {
+     "model": "Friction Pro",
+     "shape": "Elongated / Widebody",
+     "mm": "14 / 16",
+     "price": 249.99
+    }
+   ]
+  },
+  {
+   "brand": "Arronax",
+   "store": "https://arronaxpickleball.com/",
+   "complete": true,
+   "note": "Lineup from Arronax's Malaysian store. Their US store doesn't allow automated reading, so US prices aren't shown.",
+   "paddles": [
+    {
+     "model": "KVL-005",
+     "mm": "16",
+     "tested": "arronax-kvl-005"
+    },
+    {
+     "model": "KVL-004",
+     "tested": "arronax-kvl-004"
+    },
+    {
+     "model": "KVL-003",
+     "mm": "16"
+    },
+    {
+     "model": "Thunder 10 Gen 4",
+     "mm": "16"
+    },
+    {
+     "model": "Boost-1",
+     "mm": "16",
+     "tested": "grit:Arronax Boost-1"
+    },
+    {
+     "model": "Boost-1 QuickSand",
+     "mm": "16"
+    },
+    {
+     "model": "Thunder (Gen 1)",
+     "tested": "arronax-thunder-gen-1"
+    }
+   ]
+  },
+  {
+   "brand": "Pisgah",
+   "store": "https://pisgahpickleball.com/",
+   "complete": false,
+   "note": "Pisgah's store didn't load for us, so only the paddle we've tested is here.",
+   "paddles": [
+    {
+     "model": "Ridge",
+     "tested": "pisgah-ridge"
+    }
+   ]
+  },
+  {
+   "brand": "Vanwin",
+   "store": "https://vanwinsports.com/collections/pickleball-paddles",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "Alpha Power",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 109.99,
+     "was": 129.99,
+     "tested": "vanwin-alpha-power"
+    },
+    {
+     "model": "Alpha Control",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 109.99,
+     "tested": "vanwin-alpha-control"
+    },
+    {
+     "model": "Pro T8",
+     "mm": "16",
+     "price": 89.99
+    },
+    {
+     "model": "Pro T7",
+     "mm": "16",
+     "price": 69.99
+    }
+   ]
+  },
+  {
+   "brand": "Friday",
+   "store": "https://fridaypickle.com/collections/shop-paddles",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "Aura Pro",
+     "shape": "Elongated / Hybrid / Widebody",
+     "price": 118.3,
+     "was": 169
+    },
+    {
+     "model": "Friday Original (Round Top)",
+     "shape": "Round top",
+     "price": 69
+    },
+    {
+     "model": "Friday Original (Flat Top)",
+     "shape": "Flat top",
+     "price": 69
+    },
+    {
+     "model": "Challenger",
+     "shape": "Flat top",
+     "mm": "16",
+     "price": 89
+    },
+    {
+     "model": "Aura Pro Tour",
+     "tested": "friday-aura-pro-tour"
+    }
+   ]
+  },
+  {
+   "brand": "Enhance",
+   "store": "https://enhancepickleball.com/collections/paddles",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "Echo",
+     "shape": "Elongated",
+     "price": 222
+    },
+    {
+     "model": "DUO",
+     "shape": "3 shapes",
+     "price": 159.99,
+     "was": 199.99
+    },
+    {
+     "model": "MPP Turbo with ArmorGrit",
+     "shape": "3 shapes",
+     "price": 119.99
+    },
+    {
+     "model": "MPP Turbo",
+     "shape": "3 shapes",
+     "price": 109.99,
+     "was": 119.99
+    },
+    {
+     "model": "EPP Turbo",
+     "shape": "3 shapes",
+     "price": 109.99,
+     "was": 119.99
+    },
+    {
+     "model": "The Banger",
+     "shape": "Edgeless",
+     "price": 89.99,
+     "was": 159.99
+    },
+    {
+     "model": "SweetSpot Pro",
+     "price": 79.99,
+     "was": 139.99
+    },
+    {
+     "model": "SweetSpot Team",
+     "price": 69.99,
+     "was": 99.99
+    },
+    {
+     "model": "Bullseye Trainer",
+     "shape": "Training paddle",
+     "price": 49.99,
+     "was": 59.99
+    }
+   ]
+  },
+  {
+   "brand": "Honolulu",
+   "store": "https://808pickle.com/collections/all-products",
+   "complete": true,
+   "note": "Honolulu's Sword & Shield paddles are sold at 808pickle.com. Several Crystal Blue models are pre-order; M105 versions are also offered.",
+   "paddles": [
+    {
+     "model": "J6CR Crystal Blue",
+     "price": 195
+    },
+    {
+     "model": "J2CR Crystal Blue",
+     "price": 195
+    },
+    {
+     "model": "J3CR Crystal Blue",
+     "price": 195
+    },
+    {
+     "model": "J6M+ Jam Paddle Crystal Blue",
+     "price": 143
+    },
+    {
+     "model": "J6CR",
+     "price": 195,
+     "tested": "honolulu-j6cr"
+    },
+    {
+     "model": "J2CR",
+     "price": 195
+    },
+    {
+     "model": "J3CR",
+     "price": 195
+    },
+    {
+     "model": "J6FC+",
+     "price": 195
+    },
+    {
+     "model": "J6NF",
+     "price": 195
+    },
+    {
+     "model": "J2NF",
+     "price": 195
+    },
+    {
+     "model": "J2NFT",
+     "price": 195
+    },
+    {
+     "model": "J2NFK",
+     "price": 195
+    },
+    {
+     "model": "J2FC+",
+     "price": 195
+    },
+    {
+     "model": "J3NF",
+     "price": 195
+    },
+    {
+     "model": "J7NF",
+     "price": 195
+    },
+    {
+     "model": "J2K+ (Gen 3)",
+     "price": 170
+    },
+    {
+     "model": "J2TI+ (Gen 3)",
+     "price": 170
+    },
+    {
+     "model": "J2H+ (Gen 3)",
+     "price": 170
+    },
+    {
+     "model": "J2K (Gen 2)",
+     "price": 155
+    },
+    {
+     "model": "J2K Pro (Gen 2)",
+     "price": 165
+    },
+    {
+     "model": "J2K 14mm (Gen 2)",
+     "mm": "14",
+     "price": 155
+    },
+    {
+     "model": "J2K 14mm Pro (Gen 2)",
+     "mm": "14",
+     "price": 165
+    },
+    {
+     "model": "J2TI (Gen 2)",
+     "price": 155
+    },
+    {
+     "model": "J3K (Gen 2)",
+     "price": 155
+    },
+    {
+     "model": "J3K Pro (Gen 2)",
+     "price": 165
+    },
+    {
+     "model": "J7K (Gen 2)",
+     "price": 155
+    },
+    {
+     "model": "J7K Pro (Gen 2)",
+     "price": 165
+    }
+   ]
+  },
+  {
+   "brand": "Holbrook",
+   "store": "https://holbrookpickleball.com/collections/paddles-1",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "Fuze VantaGrit",
+     "price": 199.99,
+     "tested": "holbrook-fuze"
+    },
+    {
+     "model": "Arma T 14mm",
+     "mm": "14",
+     "price": 199.99
+    },
+    {
+     "model": "Arma T Metallic 14mm",
+     "mm": "14",
+     "price": 199.99
+    },
+    {
+     "model": "Arma X Metallic 14mm",
+     "mm": "14",
+     "price": 199.99
+    },
+    {
+     "model": "Pro Aero Metallic T",
+     "mm": "14",
+     "price": 169.99,
+     "was": 199.99
+    },
+    {
+     "model": "Pro Aero T Elongated",
+     "shape": "Elongated",
+     "mm": "16",
+     "price": 169.99,
+     "was": 199.99
+    },
+    {
+     "model": "Zone Power",
+     "price": 149.99
+    },
+    {
+     "model": "Pro Power Pro",
+     "price": 149.99
+    },
+    {
+     "model": "Pro Power Pro E",
+     "price": 149.99
+    },
+    {
+     "model": "Mav",
+     "mm": "16",
+     "price": 99.99
+    },
+    {
+     "model": "Performance Centre Court",
+     "price": 79.99
+    },
+    {
+     "model": "Performance Day N' Night",
+     "price": 79.99
+    },
+    {
+     "model": "Performance Rewind",
+     "price": 79.99
+    },
+    {
+     "model": "Performance SoHo",
+     "price": 79.99
+    },
+    {
+     "model": "Sport Alta",
+     "price": 59.99
+    },
+    {
+     "model": "Sport Dune",
+     "price": 59.99
+    },
+    {
+     "model": "Sport Midnight",
+     "price": 59.99
+    },
+    {
+     "model": "Paddle Trainer",
+     "shape": "Training paddle",
+     "price": 49.99
+    }
+   ]
+  },
+  {
+   "brand": "Speedup",
+   "store": "https://speeduppickle.com/collections/shop",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "Tide 14mm (14L, 14H, 14S)",
+     "shape": "Elongated / Hybrid / Standard",
+     "mm": "14",
+     "price": 169.99,
+     "tested": "speedup-tide"
+    },
+    {
+     "model": "Pyro 16mm",
+     "mm": "16",
+     "price": 65,
+     "was": 129.99
+    },
+    {
+     "model": "Cryo 16mm",
+     "mm": "16",
+     "price": 65,
+     "was": 129.99
+    },
+    {
+     "model": "Ice 16mm",
+     "mm": "16",
+     "price": 59.99,
+     "was": 119.99
+    },
+    {
+     "model": "Fire 14mm",
+     "mm": "14",
+     "price": 59.99,
+     "was": 119.99
+    },
+    {
+     "model": "Fire 14 Purple Jesus Edition",
+     "mm": "14",
+     "price": 129.99
+    }
+   ]
+  },
+  {
+   "brand": "Mehau",
+   "store": "https://mehaupickleball.com/collections/paddles",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "S5 Airpoom",
+     "shape": "Elongated",
+     "price": 299,
+     "tested": "mehau-s5"
+    },
+    {
+     "model": "E5 Precise Series",
+     "shape": "Elongated",
+     "price": 259,
+     "tested": "mehau-e5"
+    },
+    {
+     "model": "E4 Precise Series",
+     "shape": "Elongated",
+     "price": 219,
+     "tested": "mehau-e4"
+    },
+    {
+     "model": "X4 / X5 Power Series",
+     "shape": "Elongated",
+     "price": 139
+    },
+    {
+     "model": "B2 Bingo Series",
+     "shape": "Elongated",
+     "price": 99
+    }
+   ]
+  },
+  {
+   "brand": "Zcebra",
+   "store": "https://zcebrapickleball.com/",
+   "complete": false,
+   "note": "Zcebra's store doesn't allow automated reading, so only the paddle we've tested is here.",
+   "paddles": [
+    {
+     "model": "Gazelle",
+     "tested": "zcebra-gazelle"
+    }
+   ]
+  },
+  {
+   "brand": "Spartus",
+   "store": "https://gospartus.com/collections/paddles",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "Spitfire Elongated",
+     "shape": "Elongated",
+     "price": 99.99,
+     "was": 109.99,
+     "tested": "spartus-spitfire"
+    },
+    {
+     "model": "Spitfire Standard / Widebody",
+     "shape": "Standard / Widebody",
+     "price": 109.99
+    },
+    {
+     "model": "P1 with PermaGrit",
+     "shape": "Hybrid / Elongated / Standard",
+     "price": 159.99,
+     "was": 219.99
+    },
+    {
+     "model": "Olympus",
+     "price": 199.99
+    },
+    {
+     "model": "Apollo",
+     "price": 129.99
+    },
+    {
+     "model": "Oracle APEX",
+     "price": 69.99
+    },
+    {
+     "model": "Odyssey APEX",
+     "price": 50,
+     "was": 69.99
+    },
+    {
+     "model": "Orion APEX",
+     "price": 50,
+     "was": 69.99
+    }
+   ]
+  },
+  {
+   "brand": "Gherkin",
+   "store": "https://gherkinpickleball.com/",
+   "complete": false,
+   "note": "Gherkin's store doesn't allow automated reading, and we haven't tested a Gherkin paddle yet.",
+   "paddles": []
+  },
+  {
+   "brand": "MARK",
+   "store": "https://markpickleball.com/collections/paddles",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "unMARKed 2026",
+     "mm": "16",
+     "price": 189.99,
+     "tested": "mark-unmarked-2026"
+    },
+    {
+     "model": "02R3",
+     "mm": "16",
+     "price": 174.99,
+     "was": 189.99,
+     "tested": "mark-02r3"
+    },
+    {
+     "model": "01XR2",
+     "mm": "16",
+     "price": 139.99,
+     "was": 174.99
+    },
+    {
+     "model": "02R2",
+     "mm": "16",
+     "price": 139.99,
+     "was": 174.99
+    },
+    {
+     "model": "02",
+     "price": 99.99,
+     "was": 159.99
+    },
+    {
+     "model": "01",
+     "price": 159.99
+    },
+    {
+     "model": "01X",
+     "price": 159.99
+    }
+   ]
+  },
+  {
+   "brand": "Luzz",
+   "store": "https://luzzpickleball.com/collections/paddle-on-sale",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "Cannon XPP M1",
+     "mm": "16",
+     "price": 179,
+     "tested": "luzz-cannon-xpp"
+    },
+    {
+     "model": "Inferno2 M1",
+     "mm": "16",
+     "price": 239,
+     "tested": "luzz-inferno-2"
+    },
+    {
+     "model": "Glider 2026 Hybrid",
+     "shape": "Hybrid",
+     "mm": "16",
+     "price": 119,
+     "tested": "luzz-glider-2026"
+    },
+    {
+     "model": "Inferno Frozen",
+     "mm": "16",
+     "price": 219,
+     "was": 249
+    },
+    {
+     "model": "Glider 2024 Hybrid",
+     "shape": "Hybrid",
+     "mm": "16",
+     "price": 109
+    },
+    {
+     "model": "Cannon",
+     "mm": "16",
+     "price": 109
+    },
+    {
+     "model": "Pro 4 Inferno",
+     "mm": "16",
+     "price": 189,
+     "tested": "luzz-inferno"
+    },
+    {
+     "model": "ProBladz 2",
+     "mm": "14",
+     "price": 169
+    },
+    {
+     "model": "Pro 4 Tornazo",
+     "mm": "16",
+     "price": 229
+    }
+   ]
+  },
+  {
+   "brand": "Pakle",
+   "store": "https://paklepickleball.com/collections/paddle",
+   "complete": true,
+   "paddles": [
+    {
+     "model": "Fuse Gen5",
+     "price": 119,
+     "tested": "pakle-fuse"
+    },
+    {
+     "model": "Fuse Hybrid-W Gen4.5",
+     "shape": "Hybrid-W",
+     "price": 119
+    },
+    {
+     "model": "Fuse Hybrid Gen4.5",
+     "shape": "Hybrid",
+     "price": 109
+    },
+    {
+     "model": "Infinity Gen4.5",
+     "price": 105,
+     "tested": "pakle-infinity"
+    },
+    {
+     "model": "Evolution 01 Reactive Gen3",
+     "price": 139.99,
+     "was": 169.99
+    }
+   ]
+  }
+ ]
+}
