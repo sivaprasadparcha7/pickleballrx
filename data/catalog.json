@@ -184,35 +184,41 @@
     {
      "model": "Boomstik ST",
      "shape": "Elongated / Widebody",
-     "price": 350
+     "price": 350,
+     "url": "https://www.selkirk.com/products/boomstik-st"
     },
     {
      "model": "OMNI",
      "shape": "Elongated / Widebody",
-     "price": 300
+     "price": 300,
+     "url": "https://www.selkirk.com/products/selkirk-omni-pickleball-paddle"
     },
     {
      "model": "LABS Project Boomstik",
      "shape": "Elongated / Widebody",
      "price": 250,
      "was": 333,
-     "tested": "grit:Selkirk LABS Project Boomstik"
+     "tested": "grit:Selkirk LABS Project Boomstik",
+     "url": "https://www.selkirk.com/products/selkirk-labs-project-boomstik"
     },
     {
      "model": "LABS Project 007 (Invikta, Epic)",
      "mm": "10 / 14",
      "price": 100,
-     "was": 333
+     "was": 333,
+     "url": "https://www.selkirk.com/products/selkirk-labs-project-007"
     },
     {
      "model": "LUXX Control Air",
      "price": 200,
-     "was": 280
+     "was": 280,
+     "url": "https://www.selkirk.com/products/luxx-control-air-with-infinigrit"
     },
     {
      "model": "AMPED Pro Air (Invikta, Epic)",
      "price": 80,
-     "was": 200
+     "was": 200,
+     "url": "https://www.selkirk.com/products/amped-pro-air-invikta-pickleball-paddle"
     },
     {
      "model": "AMPED Control (Epic, Invikta, S2)",
@@ -227,33 +233,39 @@
     {
      "model": "SLK ERA Power",
      "shape": "Elongated / Widebody",
-     "price": 200
+     "price": 200,
+     "url": "https://www.selkirk.com/products/slk-era-power"
     },
     {
      "model": "SLK Dauntless",
      "shape": "Elongated / Widebody",
-     "price": 120
+     "price": 120,
+     "url": "https://www.selkirk.com/products/slk-dauntless"
     },
     {
      "model": "SLK Geo",
      "shape": "Elongated",
-     "price": 100
+     "price": 100,
+     "url": "https://www.selkirk.com/products/slk-geo"
     },
     {
      "model": "SLK Valkyrie",
      "shape": "Widebody",
-     "price": 80
+     "price": 80,
+     "url": "https://www.selkirk.com/products/slk-valkyrie"
     },
     {
      "model": "SLK HALO Power",
      "price": 70,
-     "was": 150
+     "was": 150,
+     "url": "https://www.selkirk.com/products/slk-halo-power-pickleball-paddle"
     },
     {
      "model": "SLK OMEGA Hybrid Air (Max, XL)",
      "shape": "Hybrid",
      "price": 60,
-     "was": 120
+     "was": 120,
+     "url": "https://www.selkirk.com/products/slk-omega-hybrid-air-max"
     },
     {
      "model": "SLK Atlas (Max, XL)",
@@ -272,7 +284,8 @@
     {
      "model": "SLK Latitude Max",
      "price": 50,
-     "was": 70
+     "was": 70,
+     "url": "https://www.selkirk.com/products/slk-latitude"
     },
     {
      "model": "SLK x Dude Perfect Trickshot",
@@ -292,61 +305,71 @@
      "shape": "Elongated / Hybrid",
      "mm": "16",
      "price": 279.99,
-     "tested": "gearbox-pressure-x-8e"
+     "tested": "gearbox-pressure-x-8e",
+     "url": "https://gearboxsports.com/pages/pressure-x-series"
     },
     {
      "model": "Pressure X 8M",
      "shape": "Elongated / Hybrid",
      "mm": "16",
      "price": 279.99,
-     "tested": "gearbox-pressure-xm"
+     "tested": "gearbox-pressure-xm",
+     "url": "https://gearboxsports.com/pages/pressure-x-series"
     },
     {
      "model": "GX2 Power",
      "shape": "Elongated / Hybrid",
-     "price": 279.99
+     "price": 279.99,
+     "url": "https://gearboxsports.com/pages/gx2-power-series"
     },
     {
      "model": "Pro Ultimate Power Elongated 14mm",
      "shape": "Elongated",
      "mm": "14",
-     "price": 274.99
+     "price": 274.99,
+     "url": "https://gearboxsports.com/pages/pro-ultimate"
     },
     {
      "model": "Pro Ultimate Elongated 16mm",
      "shape": "Elongated",
      "mm": "16",
-     "price": 274.99
+     "price": 274.99,
+     "url": "https://gearboxsports.com/pages/pro-ultimate"
     },
     {
      "model": "Pro Ultimate Hyper 16mm",
      "mm": "16",
-     "price": 274.99
+     "price": 274.99,
+     "url": "https://gearboxsports.com/pages/pro-ultimate"
     },
     {
      "model": "Pro Control Integra 14mm",
      "mm": "14",
      "price": 99.99,
-     "was": 274.99
+     "was": 274.99,
+     "url": "https://gearboxsports.com/pages/pro-series"
     },
     {
      "model": "GBX Power Gen-3 Honeycomb",
      "shape": "Elongated / Hybrid",
-     "price": 179.99
+     "price": 179.99,
+     "url": "https://gearboxsports.com/collections/gbx-power"
     },
     {
      "model": "G3 Elongated 16mm",
      "shape": "Elongated",
      "mm": "16",
      "price": 54.99,
-     "was": 149.99
+     "was": 149.99,
+     "url": "https://gearboxsports.com/products/g3-elongated"
     },
     {
      "model": "G2 Elongated 14mm",
      "shape": "Elongated",
      "mm": "14",
      "price": 59.99,
-     "was": 119.99
+     "was": 119.99,
+     "url": "https://gearboxsports.com/pages/g2-series"
     },
     {
      "model": "GBX 16mm",
@@ -366,14 +389,16 @@
      "shape": "Quad",
      "mm": "14",
      "price": 49.99,
-     "was": 129.99
+     "was": 129.99,
+     "url": "https://gearboxsports.com/pages/g-series"
     },
     {
      "model": "G12 Quad 12mm",
      "shape": "Quad",
      "mm": "12",
      "price": 29.99,
-     "was": 59.99
+     "was": 59.99,
+     "url": "https://gearboxsports.com/pages/g-series"
     }
    ]
   },
@@ -386,126 +411,247 @@
      "model": "Bantam Jolt",
      "shape": "Elongated / Widebody",
      "mm": "16",
-     "price": 224.99
+     "price": 224.99,
+     "url": "https://www.paddletek.com/products/bantam-jolt-elongated",
+     "weight": "8.0oz",
+     "core": "EPP grid foam with EVA foam perimeter",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.75\""
     },
     {
      "model": "Tempest Veyra",
      "shape": "Elongated / Widebody",
      "mm": "16",
-     "price": 179.99
+     "price": 179.99,
+     "url": "https://www.paddletek.com/products/tempest-veyra-elongated",
+     "weight": "7.7oz",
+     "core": "EPP foam",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.75\""
     },
     {
      "model": "The Reserve Honeyfoam",
      "shape": "Elongated",
-     "price": 249.99
+     "price": 249.99,
+     "url": "https://www.paddletek.com/products/reserve-001",
+     "core": "Multi-foam floating core"
     },
     {
      "model": "Honeyfoam ESQ",
      "shape": "Widebody",
      "mm": "14",
-     "price": 249.99
+     "price": 249.99,
+     "url": "https://www.paddletek.com/products/honeyfoam-esq",
+     "weight": "8.0oz",
+     "core": "EPP foam with EVA wrap and foam perimeter ring",
+     "face": "T700 raw carbon fiber",
+     "size": "16\" x 8\"",
+     "handle": "5.5\"",
+     "approval": "UPA-A"
     },
     {
      "model": "Honeyfoam TKO-X",
      "shape": "Elongated",
      "mm": "14",
-     "price": 249.99
+     "price": 249.99,
+     "url": "https://www.paddletek.com/products/honeyfoam-tko-x",
+     "weight": "8.0oz",
+     "core": "EPP foam with EVA wrap",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.75\"",
+     "approval": "UPA-A (14mm)"
     },
     {
      "model": "Bantam EXL-C",
      "shape": "Widebody",
      "mm": "12.7",
-     "price": 199.99
+     "price": 199.99,
+     "url": "https://www.paddletek.com/products/bantam-exl-c",
+     "weight": "7.6-8.0oz",
+     "core": "Polymer (Bantam QRT)",
+     "face": "T700 raw carbon fiber",
+     "size": "15.625\" x 7.75\"",
+     "handle": "5.25\""
     },
     {
      "model": "Bantam GTO-C",
      "shape": "Hybrid",
      "mm": "12.7",
      "price": 99.99,
-     "was": 199.99
+     "was": 199.99,
+     "url": "https://www.paddletek.com/products/bantam-gto-c",
+     "weight": "7.7-8.1oz",
+     "core": "Polymer (QRT)",
+     "face": "T700 raw carbon fiber",
+     "size": "16.25\" x 7.75\"",
+     "handle": "5.5\""
     },
     {
      "model": "Bantam TKO-CX",
      "shape": "Elongated",
      "mm": "12.7",
-     "price": 199.99
+     "price": 199.99,
+     "url": "https://www.paddletek.com/products/bantam-tko-cx",
+     "weight": "7.7-8.1oz",
+     "core": "Polymer (Bantam QRT)",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.75\""
     },
     {
      "model": "Bantam TKO-C",
      "shape": "Elongated",
      "mm": "12.7",
-     "price": 199.99
+     "price": 199.99,
+     "url": "https://www.paddletek.com/products/bantam-tko-c",
+     "weight": "7.7-8.1oz",
+     "core": "Polymer (Bantam QRT)",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.25\""
     },
     {
      "model": "Bantam ESQ-C",
      "shape": "Widebody",
      "mm": "12.7",
      "price": 139.99,
-     "was": 199.99
+     "was": 199.99,
+     "url": "https://www.paddletek.com/products/bantam-esq-c",
+     "weight": "7.5-7.8oz",
+     "core": "Polymer (Bantam QRT)",
+     "face": "T700 raw carbon fiber",
+     "size": "16\" x 8\"",
+     "handle": "5.5\""
     },
     {
      "model": "Tempest Wave Pro-C",
      "shape": "Widebody",
      "mm": "14.3",
-     "price": 149.99
+     "price": 149.99,
+     "url": "https://www.paddletek.com/products/tempest-wave-pro-c",
+     "weight": "7.8-8.2oz",
+     "core": "Polymer (SRT)",
+     "face": "T700 raw carbon fiber",
+     "size": "16\" x 8\"",
+     "handle": "5.25\""
     },
     {
      "model": "Tempest TKO-C",
      "shape": "Elongated",
      "mm": "14.3",
-     "price": 149.99
+     "price": 149.99,
+     "url": "https://www.paddletek.com/products/tempest-tko-c-14-3",
+     "weight": "7.8-8.2oz",
+     "core": "Polymer (SRT)",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.25\""
     },
     {
      "model": "Trae Young Signature Tempest Wave Pro-C",
      "shape": "Widebody",
      "mm": "12.7",
-     "price": 149.99
+     "price": 149.99,
+     "url": "https://www.paddletek.com/products/trae-young",
+     "weight": "7.8-8.2oz",
+     "core": "Polymer (SRT)",
+     "face": "T700 raw carbon fiber",
+     "size": "16\" x 8\"",
+     "handle": "5.25\""
     },
     {
      "model": "Phoenix Firestorm",
      "shape": "Elongated",
      "mm": "14",
      "price": 79.99,
-     "was": 99.99
+     "was": 99.99,
+     "url": "https://www.paddletek.com/products/phoenix-firestorm",
+     "weight": "7.9oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Raw carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\""
     },
     {
      "model": "Phoenix Talon",
      "shape": "Widebody",
      "mm": "14",
      "price": 79.99,
-     "was": 99.99
+     "was": 99.99,
+     "url": "https://www.paddletek.com/products/phoenix-talon",
+     "weight": "7.9oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Raw carbon fiber",
+     "size": "16\" x 8\"",
+     "handle": "5.25\""
     },
     {
      "model": "Phoenix Sabre Carbon",
      "shape": "Elongated",
      "mm": "14",
-     "price": 69.99
+     "price": 69.99,
+     "url": "https://www.paddletek.com/products/phoenix-sabre-carbon",
+     "weight": "7.9oz",
+     "core": "Polypropylene honeycomb",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\""
     },
     {
      "model": "Phoenix Genesis Carbon",
      "shape": "Widebody",
      "mm": "14",
-     "price": 69.99
+     "price": 69.99,
+     "url": "https://www.paddletek.com/products/phoenix-genesis-carbon",
+     "weight": "7.9oz",
+     "core": "Polypropylene honeycomb",
+     "face": "T700 raw carbon fiber",
+     "size": "16\" x 8\"",
+     "handle": "5.25\""
     },
     {
      "model": "Phoenix Genesis Pro",
      "shape": "Widebody",
-     "price": 89.99
+     "price": 89.99,
+     "url": "https://www.paddletek.com/products/phoenix-pro",
+     "weight": "7.8-8.2oz",
+     "size": "16\" x 8\"",
+     "handle": "5\""
     },
     {
      "model": "Phoenix Genesis",
      "shape": "Widebody",
-     "price": 79.99
+     "price": 79.99,
+     "url": "https://www.paddletek.com/products/phoenix-genesis",
+     "weight": "7.4-7.8oz",
+     "core": "Polymer",
+     "face": "Epoxy",
+     "size": "16\" x 8\"",
+     "handle": "5\""
     },
     {
      "model": "Phoenix G6",
      "shape": "Widebody",
-     "price": 69.99
+     "price": 69.99,
+     "url": "https://www.paddletek.com/products/phoenix-g6",
+     "weight": "7.7-8.1oz",
+     "core": "Polymer",
+     "size": "16\" x 8\"",
+     "handle": "5\""
     },
     {
      "model": "Phoenix Genesis II",
      "shape": "Widebody",
-     "price": 59.99
+     "price": 59.99,
+     "url": "https://www.paddletek.com/products/phoenix-genesis-ii",
+     "weight": "7.9oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Fiberglass composite",
+     "size": "16\" x 8\"",
+     "handle": "5.25\""
     }
    ]
   },
@@ -544,39 +690,45 @@
      "model": "E2-CF",
      "price": 135,
      "was": 175,
-     "tested": "grit-e2-cf"
+     "tested": "grit-e2-cf",
+     "url": "https://www.grit-shop.com/products/e2-cf-pink"
     },
     {
      "model": "E1-CW Elongated",
      "shape": "Elongated",
      "price": 140,
      "was": 175,
-     "note": "Not USAP approved"
+     "note": "Not USAP approved",
+     "url": "https://www.grit-shop.com/products/ex4-cw"
     },
     {
      "model": "E1-TW Elongated",
      "shape": "Elongated",
      "price": 110,
      "was": 185,
-     "note": "Not USAP approved"
+     "note": "Not USAP approved",
+     "url": "https://www.grit-shop.com/products/ex4-tw"
     },
     {
      "model": "R1-CW Hybrid",
      "shape": "Hybrid",
      "price": 100,
-     "was": 175
+     "was": 175,
+     "url": "https://www.grit-shop.com/products/r4-cw"
     },
     {
      "model": "R1-TW Hybrid",
      "shape": "Hybrid",
      "price": 100,
-     "was": 185
+     "was": 185,
+     "url": "https://www.grit-shop.com/products/r4-tw"
     },
     {
      "model": "S1-CW Standard",
      "shape": "Standard",
      "price": 100,
-     "was": 175
+     "was": 175,
+     "url": "https://www.grit-shop.com/products/s4-cw"
     }
    ]
   },
@@ -617,89 +769,104 @@
      "shape": "Hybrid",
      "mm": "16",
      "price": 176,
-     "was": 229
+     "was": 229,
+     "url": "https://us.sixzeropickleball.com/products/coral-pro"
     },
     {
      "model": "Coral Pro 16mm Lightweight",
      "shape": "Hybrid",
      "mm": "16",
      "price": 194.65,
-     "was": 229
+     "was": 229,
+     "url": "https://us.sixzeropickleball.com/products/coral-pro-16mm-lightweight"
     },
     {
      "model": "Coral 16mm",
      "shape": "Hybrid",
      "mm": "16",
      "price": 150,
-     "was": 200
+     "was": 200,
+     "url": "https://us.sixzeropickleball.com/products/coral-16mm"
     },
     {
      "model": "Coral 16mm Lightweight",
      "shape": "Hybrid",
      "mm": "16",
      "price": 150,
-     "was": 200
+     "was": 200,
+     "url": "https://us.sixzeropickleball.com/products/coral-16mm-lightweight"
     },
     {
      "model": "Boulder Opal 14mm",
      "shape": "Hybrid",
      "mm": "14",
      "price": 165,
-     "was": 220
+     "was": 220,
+     "url": "https://us.sixzeropickleball.com/products/boulder-opal"
     },
     {
      "model": "Black Opal C 14mm",
      "mm": "14",
      "price": 110,
-     "was": 220
+     "was": 220,
+     "url": "https://us.sixzeropickleball.com/products/black-opal-14mm"
     },
     {
      "model": "Black Opal 14mm Elongated",
      "shape": "Elongated",
      "mm": "14",
      "price": 90,
-     "was": 180
+     "was": 180,
+     "url": "https://us.sixzeropickleball.com/products/black-opal-14mm-elongated"
     },
     {
      "model": "Ruby Pro 14mm",
-     "mm": "14"
+     "mm": "14",
+     "url": "https://us.sixzeropickleball.com/products/ruby-pro-14mm"
     },
     {
-     "model": "Ruby"
+     "model": "Ruby",
+     "url": "https://us.sixzeropickleball.com/products/ruby"
     },
     {
      "model": "Double Black Diamond Control 16mm",
      "mm": "16",
      "price": 63,
-     "was": 189.99
+     "was": 189.99,
+     "url": "https://us.sixzeropickleball.com/products/double-black-diamond"
     },
     {
      "model": "Black Diamond Power",
      "shape": "Standard",
      "price": 63,
-     "was": 180
+     "was": 180,
+     "url": "https://us.sixzeropickleball.com/products/black-diamond-power"
     },
     {
      "model": "Infinity Edgeless Double Black Diamond 16mm",
      "shape": "Edgeless",
-     "mm": "16"
+     "mm": "16",
+     "url": "https://us.sixzeropickleball.com/products/infinity-edgeless-series"
     },
     {
      "model": "Infinity Edgeless Black Diamond Power 16mm",
      "shape": "Edgeless",
-     "mm": "16"
+     "mm": "16",
+     "url": "https://us.sixzeropickleball.com/products/infinity-edgless-black-diamond-power"
     },
     {
      "model": "Quartz 15mm",
      "mm": "15",
      "price": 75,
-     "was": 89.99
+     "was": 89.99,
+     "url": "https://us.sixzeropickleball.com/products/quartz"
     },
     {
      "model": "Sapphire 13mm",
      "mm": "13",
      "price": 49,
-     "was": 139.99
+     "was": 139.99,
+     "url": "https://us.sixzeropickleball.com/products/sapphire"
     }
    ]
   },
@@ -772,27 +939,58 @@
      "shape": "Elongated / Widebody",
      "mm": "14 / 16",
      "price": 269.99,
-     "tested": "rpm-jade"
+     "tested": "rpm-jade",
+     "url": "https://rpmpb.com/products/rpm-jade-16mm-elongated-pickleball-paddle",
+     "weight": "7.8oz",
+     "core": "MPP floating core",
+     "face": "SICmatrix surface",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP"
     },
     {
      "model": "Q2",
      "shape": "Elongated / Widebody",
      "mm": "14 / 16",
      "price": 249.99,
-     "tested": "rpm-q2"
+     "tested": "rpm-q2",
+     "url": "https://rpmpb.com/products/rpm-q2-16mm-elongated-pickleball-paddle",
+     "weight": "7.8oz",
+     "core": "EPP foam",
+     "face": "Carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP"
     },
     {
      "model": "Friction Pro V2 Miami",
      "shape": "Elongated",
      "mm": "14 / 16",
      "price": 249.99,
-     "tested": "rpm-v2"
+     "tested": "rpm-v2",
+     "url": "https://rpmpb.com/products/rpm-friction-pro-v2-miami-16mm-elongated-pickleball-paddle",
+     "weight": "7.9oz",
+     "face": "Carbon fiber",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP"
     },
     {
      "model": "Friction Pro",
      "shape": "Elongated / Widebody",
      "mm": "14 / 16",
-     "price": 249.99
+     "price": 249.99,
+     "url": "https://rpmpb.com/products/rpm-friction-pro-14mm-pickleball-paddle",
+     "weight": "7.8oz",
+     "core": "Tri-density core",
+     "face": "Carbon fiber (CarbonBite surface)",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.125\"",
+     "approval": "USAP"
     }
    ]
   },
@@ -805,28 +1003,34 @@
     {
      "model": "KVL-005",
      "mm": "16",
-     "tested": "arronax-kvl-005"
+     "tested": "arronax-kvl-005",
+     "url": "https://www.arronax.my/products/arronax-kvl005-foam-core-carbon-fiber-pickleball-paddle-16mm"
     },
     {
      "model": "KVL-004",
-     "tested": "arronax-kvl-004"
+     "tested": "arronax-kvl-004",
+     "url": "https://www.arronax.my/products/arronax-kvl004-foam-core"
     },
     {
      "model": "KVL-003",
-     "mm": "16"
+     "mm": "16",
+     "url": "https://www.arronax.my/products/arronax-kvl003-upgraded-premium-kevlar-pickleball-paddle-16mm"
     },
     {
      "model": "Thunder 10 Gen 4",
-     "mm": "16"
+     "mm": "16",
+     "url": "https://www.arronax.my/products/thunder10"
     },
     {
      "model": "Boost-1",
      "mm": "16",
-     "tested": "grit:Arronax Boost-1"
+     "tested": "grit:Arronax Boost-1",
+     "url": "https://www.arronax.my/products/boost-1"
     },
     {
      "model": "Boost-1 QuickSand",
-     "mm": "16"
+     "mm": "16",
+     "url": "https://www.arronax.my/products/arronax-boost-1-quicksand-16mm-carbon-fiber-pickleball-paddle-gritbite"
     },
     {
      "model": "Thunder (Gen 1)",
@@ -857,24 +1061,28 @@
      "mm": "16",
      "price": 109.99,
      "was": 129.99,
-     "tested": "vanwin-alpha-power"
+     "tested": "vanwin-alpha-power",
+     "url": "https://vanwinsports.com/products/alpha-power-carbon-fiber-pickleball-paddle"
     },
     {
      "model": "Alpha Control",
      "shape": "Elongated",
      "mm": "16",
      "price": 109.99,
-     "tested": "vanwin-alpha-control"
+     "tested": "vanwin-alpha-control",
+     "url": "https://vanwinsports.com/products/alpha-control-pickleball-paddle"
     },
     {
      "model": "Pro T8",
      "mm": "16",
-     "price": 89.99
+     "price": 89.99,
+     "url": "https://vanwinsports.com/products/pro-t8-t800-raw-carbon-fiber-pickleball-paddle"
     },
     {
      "model": "Pro T7",
      "mm": "16",
-     "price": 69.99
+     "price": 69.99,
+     "url": "https://vanwinsports.com/products/pro-t7-t700-raw-carbon-fiber-pickleball-paddle"
     }
    ]
   },
@@ -887,23 +1095,27 @@
      "model": "Aura Pro",
      "shape": "Elongated / Hybrid / Widebody",
      "price": 118.3,
-     "was": 169
+     "was": 169,
+     "url": "https://fridaypickle.com/products/aura-pro-paddle"
     },
     {
      "model": "Friday Original (Round Top)",
      "shape": "Round top",
-     "price": 69
+     "price": 69,
+     "url": "https://fridaypickle.com/products/friday-paddle"
     },
     {
      "model": "Friday Original (Flat Top)",
      "shape": "Flat top",
-     "price": 69
+     "price": 69,
+     "url": "https://fridaypickle.com/products/friday-paddle"
     },
     {
      "model": "Challenger",
      "shape": "Flat top",
      "mm": "16",
-     "price": 89
+     "price": 89,
+     "url": "https://fridaypickle.com/products/friday-challenger-paddle"
     },
     {
      "model": "Aura Pro Tour",
@@ -919,46 +1131,54 @@
     {
      "model": "Echo",
      "shape": "Elongated",
-     "price": 222
+     "price": 222,
+     "url": "https://enhancepickleball.com/products/echo"
     },
     {
      "model": "DUO",
      "shape": "3 shapes",
      "price": 159.99,
-     "was": 199.99
+     "was": 199.99,
+     "url": "https://enhancepickleball.com/products/duo"
     },
     {
      "model": "MPP Turbo with ArmorGrit",
      "shape": "3 shapes",
-     "price": 119.99
+     "price": 119.99,
+     "url": "https://enhancepickleball.com/products/mpp-turbo-armorgrit"
     },
     {
      "model": "MPP Turbo",
      "shape": "3 shapes",
      "price": 109.99,
-     "was": 119.99
+     "was": 119.99,
+     "url": "https://enhancepickleball.com/products/mpp-turbo"
     },
     {
      "model": "EPP Turbo",
      "shape": "3 shapes",
      "price": 109.99,
-     "was": 119.99
+     "was": 119.99,
+     "url": "https://enhancepickleball.com/products/epp-turbo"
     },
     {
      "model": "The Banger",
      "shape": "Edgeless",
      "price": 89.99,
-     "was": 159.99
+     "was": 159.99,
+     "url": "https://enhancepickleball.com/products/the-banger"
     },
     {
      "model": "SweetSpot Pro",
      "price": 79.99,
-     "was": 139.99
+     "was": 139.99,
+     "url": "https://enhancepickleball.com/products/sweetspot-pro"
     },
     {
      "model": "SweetSpot Team",
      "price": 69.99,
-     "was": 99.99
+     "was": 99.99,
+     "url": "https://enhancepickleball.com/products/sweetspot-team"
     },
     {
      "model": "Bullseye Trainer",
@@ -976,114 +1196,185 @@
    "paddles": [
     {
      "model": "J6CR Crystal Blue",
-     "price": 195
+     "price": 195,
+     "url": "https://808pickle.com/products/j6cr-crystal-blue-endurance-surface%E2%84%A2-pre-order"
     },
     {
      "model": "J2CR Crystal Blue",
-     "price": 195
+     "price": 195,
+     "url": "https://808pickle.com/products/j2cr-crystal-blue-endurance-surface%E2%84%A2-pre-order"
     },
     {
      "model": "J3CR Crystal Blue",
-     "price": 195
+     "price": 195,
+     "url": "https://808pickle.com/products/j3cr-crystal-blue%E2%84%A2-endurance-surface%E2%84%A2"
     },
     {
      "model": "J6M+ Jam Paddle Crystal Blue",
-     "price": 143
+     "price": 143,
+     "url": "https://808pickle.com/products/j6m-jam-paddle-crystal-blue%E2%84%A2-endurance-surface%E2%84%A2-pre-order"
     },
     {
      "model": "J6CR",
      "price": 195,
-     "tested": "honolulu-j6cr"
+     "tested": "honolulu-j6cr",
+     "url": "https://808pickle.com/products/j6cr"
     },
     {
      "model": "J2CR",
-     "price": 195
+     "price": 195,
+     "url": "https://808pickle.com/products/j6cr-pre-order-copy"
     },
     {
      "model": "J3CR",
-     "price": 195
+     "price": 195,
+     "url": "https://808pickle.com/products/j2cr-pre-order-copy"
     },
     {
      "model": "J6FC+",
-     "price": 195
+     "price": 195,
+     "url": "https://808pickle.com/products/j6fc-pre-order"
     },
     {
      "model": "J6NF",
-     "price": 195
+     "price": 195,
+     "url": "https://808pickle.com/products/j6nf-pre-order"
     },
     {
      "model": "J2NF",
-     "price": 195
+     "price": 195,
+     "url": "https://808pickle.com/products/sword-shield-j2fc-beta-pre-order-copy"
     },
     {
      "model": "J2NFT",
-     "price": 195
+     "price": 195,
+     "url": "https://808pickle.com/products/sword-shield-j2nft-pre-order"
     },
     {
      "model": "J2NFK",
-     "price": 195
+     "price": 195,
+     "url": "https://808pickle.com/products/sword-shield-j2nfk-pre-order"
     },
     {
      "model": "J2FC+",
-     "price": 195
+     "price": 195,
+     "url": "https://808pickle.com/products/sword-shield-j2fc-plus"
     },
     {
      "model": "J3NF",
-     "price": 195
+     "price": 195,
+     "url": "https://808pickle.com/products/sword-shield-j3nf-pre-order"
     },
     {
      "model": "J7NF",
-     "price": 195
+     "price": 195,
+     "url": "https://808pickle.com/products/sword-shield-j7nf-pre-order"
     },
     {
      "model": "J2K+ (Gen 3)",
-     "price": 170
+     "price": 170,
+     "url": "https://808pickle.com/products/sword-shield-j2k-1"
     },
     {
      "model": "J2TI+ (Gen 3)",
-     "price": 170
+     "price": 170,
+     "url": "https://808pickle.com/products/sword-shield-j2ti-copy"
     },
     {
      "model": "J2H+ (Gen 3)",
-     "price": 170
+     "price": 170,
+     "url": "https://808pickle.com/products/sword-shield-j2hplus"
     },
     {
      "model": "J2K (Gen 2)",
-     "price": 155
+     "price": 155,
+     "url": "https://808pickle.com/products/sword-shield-j2k"
     },
     {
      "model": "J2K Pro (Gen 2)",
-     "price": 165
+     "price": 165,
+     "url": "https://808pickle.com/products/sword-shield-j2k-pro-pre-order"
     },
     {
      "model": "J2K 14mm (Gen 2)",
      "mm": "14",
-     "price": 155
+     "price": 155,
+     "url": "https://808pickle.com/products/sword-shield-j2k-copy"
     },
     {
      "model": "J2K 14mm Pro (Gen 2)",
      "mm": "14",
-     "price": 165
+     "price": 165,
+     "url": "https://808pickle.com/products/sword-shield-j2k-pro-copy"
     },
     {
      "model": "J2TI (Gen 2)",
-     "price": 155
+     "price": 155,
+     "url": "https://808pickle.com/products/sword-shield-j2ti"
     },
     {
      "model": "J3K (Gen 2)",
-     "price": 155
+     "price": 155,
+     "url": "https://808pickle.com/products/sword-shield-j3k-pre-order"
     },
     {
      "model": "J3K Pro (Gen 2)",
-     "price": 165
+     "price": 165,
+     "url": "https://808pickle.com/products/sword-shield-j3k-pro-pre-order"
     },
     {
      "model": "J7K (Gen 2)",
-     "price": 155
+     "price": 155,
+     "url": "https://808pickle.com/products/copy-of-sword-shield-j7k-pre-order"
     },
     {
      "model": "J7K Pro (Gen 2)",
-     "price": 165
+     "price": 165,
+     "url": "https://808pickle.com/products/sword-shield-j7k-pro-pre-order"
+    },
+    {
+     "model": "J4K (Gen 2)",
+     "url": "https://808pickle.com/products/sword-shield-j4k-pro-copy"
+    },
+    {
+     "model": "J4K Pro (Gen 2)",
+     "url": "https://808pickle.com/products/sword-shield-j3k-pro-copy"
+    },
+    {
+     "model": "J2XK (Gen 2)",
+     "url": "https://808pickle.com/products/sword-shield-j2k-copy-1"
+    },
+    {
+     "model": "J2XK Pro (Gen 2)",
+     "url": "https://808pickle.com/products/sword-shield-j2xk-copy"
+    },
+    {
+     "model": "J3TI",
+     "url": "https://808pickle.com/products/sword-shield-j3ti"
+    },
+    {
+     "model": "J1",
+     "url": "https://808pickle.com/products/sword-and-shield-j1"
+    },
+    {
+     "model": "J1H",
+     "url": "https://808pickle.com/products/sword-shield-j1h"
+    },
+    {
+     "model": "J2",
+     "url": "https://808pickle.com/products/sword-shield-j2"
+    },
+    {
+     "model": "J2H",
+     "url": "https://808pickle.com/products/sword-shield-j2h"
+    },
+    {
+     "model": "J3",
+     "url": "https://808pickle.com/products/sword-shield-j3"
+    },
+    {
+     "model": "J5",
+     "url": "https://808pickle.com/products/sword-shield-j5"
     }
    ]
   },
@@ -1095,85 +1386,118 @@
     {
      "model": "Fuze VantaGrit",
      "price": 199.99,
-     "tested": "holbrook-fuze"
+     "tested": "holbrook-fuze",
+     "url": "https://holbrookpickleball.com/products/fuze",
+     "core": "Dual-density foam",
+     "face": "Carbon-aramid-carbon",
+     "shape": "Elongated / Hybrid / Widebody"
     },
     {
      "model": "Arma T 14mm",
      "mm": "14",
-     "price": 199.99
+     "price": 199.99,
+     "url": "https://holbrookpickleball.com/products/arma-t-carbon",
+     "weight": "8.0oz",
+     "core": "Dual-density core with foam",
+     "size": "16.5\" x 7.5\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "approval": "USAP"
     },
     {
      "model": "Arma T Metallic 14mm",
      "mm": "14",
-     "price": 199.99
+     "price": 199.99,
+     "url": "https://holbrookpickleball.com/products/arma-t-metallic-14mm"
     },
     {
      "model": "Arma X Metallic 14mm",
      "mm": "14",
-     "price": 199.99
+     "price": 199.99,
+     "url": "https://holbrookpickleball.com/products/arma-x-14mm"
     },
     {
      "model": "Pro Aero Metallic T",
      "mm": "14",
      "price": 169.99,
-     "was": 199.99
+     "was": 199.99,
+     "url": "https://holbrookpickleball.com/products/aero-metallic-t"
     },
     {
      "model": "Pro Aero T Elongated",
      "shape": "Elongated",
      "mm": "16",
      "price": 169.99,
-     "was": 199.99
+     "was": 199.99,
+     "url": "https://holbrookpickleball.com/products/aero-t"
     },
     {
      "model": "Zone Power",
-     "price": 149.99
+     "price": 149.99,
+     "url": "https://holbrookpickleball.com/products/zone-power"
     },
     {
      "model": "Pro Power Pro",
-     "price": 149.99
+     "price": 149.99,
+     "url": "https://holbrookpickleball.com/products/power-pro"
     },
     {
      "model": "Pro Power Pro E",
-     "price": 149.99
+     "price": 149.99,
+     "url": "https://holbrookpickleball.com/products/power-pro-e"
     },
     {
      "model": "Mav",
      "mm": "16",
-     "price": 99.99
+     "price": 99.99,
+     "url": "https://holbrookpickleball.com/products/mav-16mm"
     },
     {
      "model": "Performance Centre Court",
-     "price": 79.99
+     "price": 79.99,
+     "url": "https://holbrookpickleball.com/products/center-court-pickleball-paddle"
     },
     {
      "model": "Performance Day N' Night",
-     "price": 79.99
+     "price": 79.99,
+     "url": "https://holbrookpickleball.com/products/the-holbrook"
     },
     {
      "model": "Performance Rewind",
-     "price": 79.99
+     "price": 79.99,
+     "url": "https://holbrookpickleball.com/products/rewind"
     },
     {
      "model": "Performance SoHo",
-     "price": 79.99
+     "price": 79.99,
+     "url": "https://holbrookpickleball.com/products/soho"
     },
     {
      "model": "Sport Alta",
-     "price": 59.99
+     "price": 59.99,
+     "url": "https://holbrookpickleball.com/products/alta-pickleball-paddle",
+     "weight": "7.6oz",
+     "core": "Polypropylene honeycomb",
+     "face": "Fiberglass",
+     "size": "15.75\" x 7.8\"",
+     "handle": "5\"",
+     "approval": "USAP"
     },
     {
      "model": "Sport Dune",
-     "price": 59.99
+     "price": 59.99,
+     "url": "https://holbrookpickleball.com/products/dune-pickleball-paddle"
     },
     {
      "model": "Sport Midnight",
-     "price": 59.99
+     "price": 59.99,
+     "url": "https://holbrookpickleball.com/products/holbrook"
     },
     {
      "model": "Paddle Trainer",
      "shape": "Training paddle",
-     "price": 49.99
+     "price": 49.99,
+     "url": "https://holbrookpickleball.com/products/paddle-trainer"
     }
    ]
   },
@@ -1187,36 +1511,42 @@
      "shape": "Elongated / Hybrid / Standard",
      "mm": "14",
      "price": 169.99,
-     "tested": "speedup-tide"
+     "tested": "speedup-tide",
+     "url": "https://speeduppickle.com/products/speedup-tide-14mm-all-shapes"
     },
     {
      "model": "Pyro 16mm",
      "mm": "16",
      "price": 65,
-     "was": 129.99
+     "was": 129.99,
+     "url": "https://speeduppickle.com/products/speedup-pyro-16mm"
     },
     {
      "model": "Cryo 16mm",
      "mm": "16",
      "price": 65,
-     "was": 129.99
+     "was": 129.99,
+     "url": "https://speeduppickle.com/products/speedup-cryo-16mm"
     },
     {
      "model": "Ice 16mm",
      "mm": "16",
      "price": 59.99,
-     "was": 119.99
+     "was": 119.99,
+     "url": "https://speeduppickle.com/products/speedup-ice-16mm"
     },
     {
      "model": "Fire 14mm",
      "mm": "14",
      "price": 59.99,
-     "was": 119.99
+     "was": 119.99,
+     "url": "https://speeduppickle.com/products/speedup-fire-14mm"
     },
     {
      "model": "Fire 14 Purple Jesus Edition",
      "mm": "14",
-     "price": 129.99
+     "price": 129.99,
+     "url": "https://speeduppickle.com/products/speedup-fire-14-purple-jesus-edition"
     }
    ]
   },
@@ -1229,29 +1559,34 @@
      "model": "S5 Airpoom",
      "shape": "Elongated",
      "price": 299,
-     "tested": "mehau-s5"
+     "tested": "mehau-s5",
+     "url": "https://mehaupickleball.com/products/mehau-s5-airpoom-aerodynamic-pickleball-paddle"
     },
     {
      "model": "E5 Precise Series",
      "shape": "Elongated",
      "price": 259,
-     "tested": "mehau-e5"
+     "tested": "mehau-e5",
+     "url": "https://mehaupickleball.com/products/mehau-e5-precise-series-pickleball-paddle"
     },
     {
      "model": "E4 Precise Series",
      "shape": "Elongated",
      "price": 219,
-     "tested": "mehau-e4"
+     "tested": "mehau-e4",
+     "url": "https://mehaupickleball.com/products/mehau-e4-precise-series-pickleball-paddle"
     },
     {
      "model": "X4 / X5 Power Series",
      "shape": "Elongated",
-     "price": 139
+     "price": 139,
+     "url": "https://mehaupickleball.com/products/mehau-x4-x5-precise-series-pickleball-paddle"
     },
     {
      "model": "B2 Bingo Series",
      "shape": "Elongated",
-     "price": 99
+     "price": 99,
+     "url": "https://mehaupickleball.com/products/mehau-b2-bingo-series-pickleball-paddle"
     }
    ]
   },
@@ -1277,22 +1612,26 @@
      "shape": "Elongated",
      "price": 99.99,
      "was": 109.99,
-     "tested": "spartus-spitfire"
+     "tested": "spartus-spitfire",
+     "url": "https://gospartus.com/products/spitfire-elongated"
     },
     {
      "model": "Spitfire Standard / Widebody",
      "shape": "Standard / Widebody",
-     "price": 109.99
+     "price": 109.99,
+     "url": "https://gospartus.com/products/spitfire-standard"
     },
     {
      "model": "P1 with PermaGrit",
      "shape": "Hybrid / Elongated / Standard",
      "price": 159.99,
-     "was": 219.99
+     "was": 219.99,
+     "url": "https://gospartus.com/products/p1-hybrid"
     },
     {
      "model": "Olympus",
-     "price": 199.99
+     "price": 199.99,
+     "url": "https://gospartus.com/products/olympus"
     },
     {
      "model": "Apollo",
@@ -1341,39 +1680,46 @@
      "model": "unMARKed 2026",
      "mm": "16",
      "price": 189.99,
-     "tested": "mark-unmarked-2026"
+     "tested": "mark-unmarked-2026",
+     "url": "https://markpickleball.com/products/unmarked-2026"
     },
     {
      "model": "02R3",
      "mm": "16",
      "price": 174.99,
      "was": 189.99,
-     "tested": "mark-02r3"
+     "tested": "mark-02r3",
+     "url": "https://markpickleball.com/products/mark-02r3"
     },
     {
      "model": "01XR2",
      "mm": "16",
      "price": 139.99,
-     "was": 174.99
+     "was": 174.99,
+     "url": "https://markpickleball.com/products/mark-01xr2"
     },
     {
      "model": "02R2",
      "mm": "16",
      "price": 139.99,
-     "was": 174.99
+     "was": 174.99,
+     "url": "https://markpickleball.com/products/mark-02r2"
     },
     {
      "model": "02",
      "price": 99.99,
-     "was": 159.99
+     "was": 159.99,
+     "url": "https://markpickleball.com/products/mark-02"
     },
     {
      "model": "01",
-     "price": 159.99
+     "price": 159.99,
+     "url": "https://markpickleball.com/products/mark-01"
     },
     {
      "model": "01X",
-     "price": 159.99
+     "price": 159.99,
+     "url": "https://markpickleball.com/products/mark-01x"
     }
    ]
   },
@@ -1386,53 +1732,62 @@
      "model": "Cannon XPP M1",
      "mm": "16",
      "price": 179,
-     "tested": "luzz-cannon-xpp"
+     "tested": "luzz-cannon-xpp",
+     "url": "https://luzzpickleball.com/products/luzz-cannon-xpp-m1-paddle"
     },
     {
      "model": "Inferno2 M1",
      "mm": "16",
      "price": 239,
-     "tested": "luzz-inferno-2"
+     "tested": "luzz-inferno-2",
+     "url": "https://luzzpickleball.com/products/luzz-inferno2-m1"
     },
     {
      "model": "Glider 2026 Hybrid",
      "shape": "Hybrid",
      "mm": "16",
      "price": 119,
-     "tested": "luzz-glider-2026"
+     "tested": "luzz-glider-2026",
+     "url": "https://luzzpickleball.com/products/luzz-glider-2026"
     },
     {
      "model": "Inferno Frozen",
      "mm": "16",
      "price": 219,
-     "was": 249
+     "was": 249,
+     "url": "https://luzzpickleball.com/products/luzz-pro-4-frozen-inferno"
     },
     {
      "model": "Glider 2024 Hybrid",
      "shape": "Hybrid",
      "mm": "16",
-     "price": 109
+     "price": 109,
+     "url": "https://luzzpickleball.com/products/luzzpickleball-glider-hybrid-paddle-t700-carbon-friction-surface-thermoformed"
     },
     {
      "model": "Cannon",
      "mm": "16",
-     "price": 109
+     "price": 109,
+     "url": "https://luzzpickleball.com/products/luzzpickleball-cannon-paddle-t700-carbon-friction-surface-thermoformed"
     },
     {
      "model": "Pro 4 Inferno",
      "mm": "16",
      "price": 189,
-     "tested": "luzz-inferno"
+     "tested": "luzz-inferno",
+     "url": "https://luzzpickleball.com/products/luzzpickleball-pro-4-inferno-mpp-pickleball-paddle-large-sweet-spot-durable-core"
     },
     {
      "model": "ProBladz 2",
      "mm": "14",
-     "price": 169
+     "price": 169,
+     "url": "https://luzzpickleball.com/products/luzz-pro-blade2-paddle"
     },
     {
      "model": "Pro 4 Tornazo",
      "mm": "16",
-     "price": 229
+     "price": 229,
+     "url": "https://luzzpickleball.com/products/luzzpickleball-pro-4-tornazo-carbon-fiber-pickleball-paddle-dual-layer-core"
     }
    ]
   },
@@ -1444,27 +1799,56 @@
     {
      "model": "Fuse Gen5",
      "price": 119,
-     "tested": "pakle-fuse"
+     "tested": "pakle-fuse",
+     "url": "https://paklepickleball.com/products/fuse-new-gen5-pickleball-paddle"
     },
     {
      "model": "Fuse Hybrid-W Gen4.5",
      "shape": "Hybrid-W",
-     "price": 119
+     "price": 119,
+     "url": "https://paklepickleball.com/products/fuse-hybrid-w-shape-new-gen4-5-pickleball-paddle"
     },
     {
      "model": "Fuse Hybrid Gen4.5",
      "shape": "Hybrid",
-     "price": 109
+     "price": 109,
+     "url": "https://paklepickleball.com/products/fuse-hybrid-shape-new-gen4-5-pickleball-paddle"
     },
     {
      "model": "Infinity Gen4.5",
      "price": 105,
-     "tested": "pakle-infinity"
+     "tested": "pakle-infinity",
+     "url": "https://paklepickleball.com/products/infinity-new-gen4-5-pickleball-paddle"
     },
     {
      "model": "Evolution 01 Reactive Gen3",
      "price": 139.99,
-     "was": 169.99
+     "was": 169.99,
+     "url": "https://paklepickleball.com/products/evolution-01-reactive-new-gen3-pickleball-paddle"
+    },
+    {
+     "model": "Evolution 01 Gen3",
+     "url": "https://paklepickleball.com/products/evolution-01-new-gen3-pickleball-paddle"
+    },
+    {
+     "model": "Fuse+ Elongated 16mm",
+     "shape": "Elongated",
+     "mm": "16",
+     "url": "https://paklepickleball.com/products/fuse-new-gen4-5-pickleball-paddle"
+    },
+    {
+     "model": "Blade X Power 13mm",
+     "mm": "13",
+     "url": "https://paklepickleball.com/products/blade-x-power-kevlar-pickleball-paddle"
+    },
+    {
+     "model": "Blade X Control 16mm",
+     "mm": "16",
+     "url": "https://paklepickleball.com/products/blade-x-control-kevlar-pickleball-paddle"
+    },
+    {
+     "model": "Silence",
+     "url": "https://paklepickleball.com/products/silence-raw-t700-carbon-quiet-pickleball-paddle"
     }
    ]
   }
