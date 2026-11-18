@@ -349,7 +349,12 @@ STUDIO_LINKS = [
     ("YouTube", "https://www.youtube.com/@PickleballStudio"),
     ("Instagram", "https://www.instagram.com/thepickleballstudio"),
 ]
-REVIEWER_LINKS = {"Supasenpai": SENPAI_LINKS, "Pickleball Studio": STUDIO_LINKS}
+# Johnkew Pickleball's links, from their YouTube channel page (Siva, 2026-11-18).
+KEW_LINKS = [
+    ("Website", "https://www.johnkewpickleball.com/"),
+    ("YouTube", "https://www.youtube.com/@johnkewpickleball"),
+]
+REVIEWER_LINKS = {"John Kew": KEW_LINKS, "Supasenpai": SENPAI_LINKS, "Pickleball Studio": STUDIO_LINKS}
 
 def _link_row(links, skip=()):
     return ('<div class="badges" style="margin:8px 0 4px">'
