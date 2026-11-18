@@ -64,6 +64,7 @@ NAMES = {
  "nox-jc6-16mm": ("nox-x-foam-jc6", "NOX X-Foam JC6 16mm", "NOX"),
  "nox-jma": ("nox-x-foam-jma", "NOX X-Foam JMA 16mm", "NOX"),
  "sypik-avatar-pro": ("sypik-avatar-pro", "Sypik Avatar Pro", "Sypik"),
+ "proton-project-bluejay": ("proton-project-bluejay", "Proton Project Bluejay Elongated 15mm", "Proton"),
  "wika-air-1": ("wika-qd-air", "Wika QD Air (Air 1) 16mm", "Wika"),
 }
 
