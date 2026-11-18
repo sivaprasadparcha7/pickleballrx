@@ -17,9 +17,10 @@ def _cat_lab(t):
 def _price(p):
     if p.get("price") is None:
         return '<td data-v="" class="muted">See store</td>'
-    s = f'${p["price"]:,.2f}'.replace(".00", "")
+    c = p.get("cur", "$")
+    s = f'{c}{p["price"]:,.2f}'.replace(".00", "")
     if p.get("was"):
-        s += f' <s class="muted">${p["was"]:,.2f}</s>'.replace(".00", "")
+        s += f' <s class="muted">{c}{p["was"]:,.2f}</s>'.replace(".00", "")
     return f'<td data-v="{p["price"]}">{s}</td>'
 
 
