@@ -116,8 +116,59 @@ def overall(p):
     return round((p["power"] + p["spin"] + p["control"] + p["forgiveness"]) / 4, 1)
 
 
-def page(title, body, depth=0, current="", desc="Data-driven pickleball paddle reviews with X-rays, microscope images and on-court video."):
+SITE_URL = "https://pickleballrx.org"
+SITE_NAME = "Pickleball Rx"
+TAGLINE = "The Wikipedia of Pickleball Paddles. X-rays, Ratings, and Honest Reviews"
+SITE_DESC = TAGLINE + ". Pickleball paddle reviews backed by X-ray, microscope, spin and swing weight tests."
+OG_IMAGE = "assets/og-image.jpg"  # 1200x630 share card
+SITEMAP = []  # filled by write() with every indexable page
+
+
+def _abs(src):
+    """Absolute URL for an asset path like '../assets/x.jpg' or 'assets/x.jpg'."""
+    if src.startswith("http"):
+        return src
+    while src.startswith("../"):
+        src = src[3:]
+    return f"{SITE_URL}/{src.lstrip('/')}"
+
+
+def _ld(obj):
+    return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + "</script>"
+
+
+def page(title, body, depth=0, current="", desc=SITE_DESC, image=None, image_alt=None, schema=None, noindex=False, og_type="website", crumbs=None):
     r = "../" * depth
+    img = _abs(image or OG_IMAGE)
+    img_alt = image_alt or ("Pickleball Rx: " + TAGLINE)
+    img_dims = '' if image else '\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">'
+    graph = [{"@type": "WebPage", "@id": "__PAGE_URL__#webpage", "url": "__PAGE_URL__", "name": title, "description": desc,
+              "isPartOf": {"@id": f"{SITE_URL}/#website"}, "publisher": {"@id": f"{SITE_URL}/#organization"},
+              "primaryImageOfPage": {"@type": "ImageObject", "url": img}, "inLanguage": "en"}]
+    if crumbs:  # [(name, path-from-root or None for this page)]
+        graph.append({"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": n, "item": (f"{SITE_URL}/{u}" if u is not None else "__PAGE_URL__")}
+            for i, (n, u) in enumerate([("Home", "")] + crumbs)]})
+        graph[0]["breadcrumb"] = {"@id": "__PAGE_URL__#breadcrumb"}
+        graph[-1]["@id"] = "__PAGE_URL__#breadcrumb"
+    graph += schema or []
+    seo = f'''<link rel="canonical" href="__PAGE_URL__">
+{'<meta name="robots" content="noindex, follow">' if noindex else '<meta name="robots" content="index, follow, max-image-preview:large">'}
+<meta name="theme-color" content="#112240">
+<meta property="og:site_name" content="{SITE_NAME}">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="{og_type}">
+<meta property="og:title" content="{e(title)}">
+<meta property="og:description" content="{e(desc)}">
+<meta property="og:url" content="__PAGE_URL__">
+<meta property="og:image" content="{e(img)}">{img_dims}
+<meta property="og:image:alt" content="{e(img_alt)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{e(title)}">
+<meta name="twitter:description" content="{e(desc)}">
+<meta name="twitter:image" content="{e(img)}">
+<meta name="twitter:image:alt" content="{e(img_alt)}">
+{_ld({"@context": "https://schema.org", "@graph": graph})}'''
 
     def nav(href, label, key, cls=""):
         cur = ' aria-current="page"' if key == current else ""
@@ -131,6 +182,7 @@ def page(title, body, depth=0, current="", desc="Data-driven pickleball paddle r
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
+{seo}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
@@ -163,7 +215,7 @@ def page(title, body, depth=0, current="", desc="Data-driven pickleball paddle r
 <footer class="site-footer"><div class="wrap">
   <div class="cols">
     <div><img src="{r}assets/logo.svg?v={ASSET_V}" alt="Pickleball Rx" width="129" height="50" style="height:50px;width:auto;margin-bottom:10px">
-      <p style="margin:0">Paddle reviews that look inside the paddle: X-rays, microscope images, measured specs and on-court video.</p><p style="margin:8px 0 0">Started by Don, Beni and Siva.</p></div>
+      <p style="margin:0"><strong>{e(TAGLINE)}.</strong> Paddle reviews that look inside the paddle: X-rays, microscope images, measured specs and on-court video.</p><p style="margin:8px 0 0">Started by Don, Beni and Siva.</p></div>
     <div><h4>Tools</h4><ul><li><a href="{r}finder.html">Paddle finder</a></li><li><a href="{r}compare.html">Compare</a></li><li><a href="{r}paddles.html">Database</a></li></ul></div>
     <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}best.html">Our top picks</a></li><li><a href="{r}pros.html">What the pros play</a></li><li><a href="{r}grit-pickleball.html">Brand spotlight: Grit</a></li><li><a href="{r}evolv-pickleball.html">Brand spotlight: Evolv</a></li><li><a href="{r}gearbox-pickleball.html">Brand spotlight: Gearbox</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
     <div><h4>Follow</h4><ul><li><a href="{YOUTUBE}" rel="noopener">YouTube</a></li><li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li><li><a href="{r}about.html#contact">Contact</a></li></ul></div>
@@ -215,7 +267,44 @@ def lab_fig(src, alt, caption, ph_label):
     return f'<figure class="lab-item"><div class="lab-ph">{ph_label} coming soon</div><figcaption>{caption}</figcaption></figure>'
 
 
+import re as _re_seo
+
+
+def _lazy_imgs(text):
+    """Lazy-load every content image except the first one in <main> (likely the largest visible image)."""
+    head, sep, rest = text.partition("<main>")
+    if not sep:
+        return text
+    seen = [0]
+
+    def fix(m):
+        tag = m.group(0)
+        # Paddle photos: say what they are ("RPM Jade" -> "RPM Jade pickleball paddle") for image search.
+        if "assets/paddles/" in tag:
+            tag = _re_seo.sub(r'alt="([^"]+)"', lambda a: a.group(0) if "paddle" in a.group(1).lower() else f'alt="{a.group(1)} pickleball paddle"', tag, count=1)
+        if "loading=" in tag:
+            return tag
+        seen[0] += 1
+        if seen[0] == 1:
+            return tag.replace("<img ", '<img fetchpriority="high" ', 1)
+        return tag.replace("<img ", '<img loading="lazy" decoding="async" ', 1)
+    main, sep2, tail = rest.partition("</main>")
+    return head + sep + _re_seo.sub(r"<img\b[^>]*>", fix, main) + sep2 + tail
+
+
+def page_url(path):
+    if path == "index.html":
+        return SITE_URL + "/"
+    if path.endswith("/index.html"):
+        return f"{SITE_URL}/{path[:-len('index.html')]}"
+    return f"{SITE_URL}/{path}"
+
+
 def write(path, text):
+    if path.endswith(".html") and "__PAGE_URL__" in text:
+        text = _lazy_imgs(text.replace("__PAGE_URL__", page_url(path)))
+        if 'content="noindex' not in text and path not in SITEMAP:
+            SITEMAP.append(path)
     full = os.path.join(OUT, path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     with open(full, "w") as f:
@@ -374,7 +463,7 @@ senpai_links_html = _link_row(SENPAI_LINKS)
 
 reviewers_html = "".join(
     f'<div class="card" style="padding:18px"><div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">#{i}</div>'
-    + (f'<div class="rev-head"><img class="rev-avatar" src="assets/reviewers/{_slug(n)}.jpg" alt="{e(n)}" width="64" height="64" loading="lazy"><div>' if os.path.exists(os.path.join(OUT, f"assets/reviewers/{_slug(n)}.jpg")) else "<div><div>")
+    + (f'<div class="rev-head"><img class="rev-avatar" src="assets/reviewers/{_slug(n)}.jpg" alt="{e(n if n == sub else n + ", " + sub)}, pickleball paddle reviewer" width="64" height="64" loading="lazy"><div>' if os.path.exists(os.path.join(OUT, f"assets/reviewers/{_slug(n)}.jpg")) else "<div><div>")
     + f'<h3 style="margin:4px 0 2px">{e(n)}</h3><div class="muted" style="font-size:.88rem;margin-bottom:8px">{e(sub)}</div></div></div>'
     f'<p style="font-size:.95rem">{e(d)}</p><a class="btn ghost" style="align-self:flex-start" href="{e(h)}" rel="noopener" target="_blank">{e(lbl)} &rarr;</a>'
     + (_link_row(REVIEWER_LINKS[n], skip=(lbl,)) if n in REVIEWER_LINKS else "")
@@ -388,12 +477,12 @@ latest_section = (f'''<section>
   <div class="grid">{"".join(card(p, 0) for p in _real[:3])}</div>
 </section>
 ''') if _real else ""
-write("index.html", page("PickleballRx | Pickleball paddle reviews, X-rays and data", f'''
+write("index.html", page("Pickleball Rx | The Wikipedia of Pickleball Paddles", f'''
 <section class="hero"><div class="wrap">
   <div>
-    <span class="tag">Paddle reviews, inside and out</span>
+    <span class="tag">The Wikipedia of Pickleball Paddles</span>
     <h1>See what's <em>inside</em> your next pickleball paddle.</h1>
-    <p>We X-ray paddles, put their faces under a 4K microscope and measure spin at 960 frames per second. Then we play them, and test them again.</p>
+    <p><strong>X-rays, Ratings, and Honest Reviews.</strong> We X-ray paddles, put their faces under a 4K microscope and measure spin at 960 frames per second. Then we play them, and test them again.</p>
     <div class="btn-row"><a class="btn yellow" href="spin.html">See the spin results</a><a class="btn ghost" href="lab.html">Inside {n_x} paddles</a></div>
   </div>
   <figure class="hero-art"><a href="#leaderboard"><img src="assets/leaderboard.jpg" alt="The Pickleball RX Leader Board: 15 paddles on the wall, Gearbox Pressure X 8E in the top spot" style="border-radius:12px;width:100%;height:auto"></a><figcaption>The Pickleball RX Leader Board. <a href="#leaderboard" style="color:#fcb92d">See the paddles</a>.</figcaption></figure>
@@ -468,7 +557,14 @@ write("index.html", page("PickleballRx | Pickleball paddle reviews, X-rays and d
   <div class="social-band"><div><h2>Watch the reviews</h2><p>Full video reviews on YouTube, and lab images and quick takes on Instagram.</p></div>
   <div class="btn-row"><a class="btn yellow" href="{YOUTUBE}" rel="noopener">YouTube @picklebrx</a><a class="btn ghost" style="color:#fff;border-color:#3a5182" href="{INSTAGRAM}" rel="noopener">Instagram @picklebrx</a></div></div>
 </section>
-</div>''', 0, "home"))
+</div>''', 0, "home", image_alt="The Pickleball Rx Leader Board wall of top-rated pickleball paddles", schema=[
+    {"@type": "WebSite", "@id": f"{SITE_URL}/#website", "url": SITE_URL + "/", "name": SITE_NAME, "alternateName": ["PickleballRx", "Pickleball RX", "PickleballRx.org"],
+     "description": SITE_DESC, "slogan": TAGLINE, "inLanguage": "en", "publisher": {"@id": f"{SITE_URL}/#organization"}},
+    {"@type": "Organization", "@id": f"{SITE_URL}/#organization", "name": SITE_NAME, "alternateName": "PickleballRx", "url": SITE_URL + "/",
+     "logo": {"@type": "ImageObject", "url": f"{SITE_URL}/assets/logo.png", "width": 851, "height": 316}, "image": _abs(OG_IMAGE),
+     "slogan": TAGLINE, "description": SITE_DESC, "sameAs": [YOUTUBE, INSTAGRAM],
+     "founder": [{"@type": "Person", "name": n} for n in ("Don", "Beni", "Siva")]},
+]))
 
 # ---------- database ----------
 # paddles.html is built by catalog_page.py (every paddle by brand).
@@ -480,7 +576,7 @@ write("compare.html", page("Compare paddles | PickleballRx", '''
   <p class="section-lead">Pick up to four paddles. The best value in each row is highlighted. Copy the page link to share your comparison.</p>
   <div class="compare-pickers" id="cmp-pickers"></div>
   <div class="table-wrap"><table class="cmp" id="cmp"></table></div>
-</section></div>''', 0, "compare", desc="Compare pickleball paddles side by side."))
+</section></div>''', 0, "compare", desc="Compare pickleball paddles side by side: power, spin, control, forgiveness and specs, from Pickleball Rx, the Wikipedia of pickleball paddles.", crumbs=[("Compare", None)]))
 
 # ---------- finder ----------
 # finder.html is built by rx_page.py (the Rx algorithm), run near the end of this file.
@@ -633,13 +729,13 @@ write("best.html", page("Best pickleball paddles | PickleballRx", f'''
 </section>
 {picks_html}
 <section id="canadian" style="padding-top:10px">
-  <div class="rev-head" style="margin-bottom:6px"><img class="rev-avatar" src="assets/reviewers/supasenpai.jpg" alt="Supasenpai" width="64" height="64" loading="lazy"><h2 style="margin:0">Top 5 Canadian paddles</h2></div>
+  <div class="rev-head" style="margin-bottom:6px"><img class="rev-avatar" src="assets/reviewers/supasenpai.jpg" alt="Supasenpai, pickleball paddle reviewer" width="64" height="64" loading="lazy"><h2 style="margin:0">Top 5 Canadian paddles</h2></div>
   <p class="section-lead">We did not test these paddles. These picks come from our Canadian neighbor, reviewer <a href="https://supasenpai.com/" target="_blank" rel="noopener">Supasenpai</a>, one of <a href="index.html#reviewers">our favorite reviewers</a>.</p>
   {senpai_links_html}
   <div class="lb-grid">{canadian_html}</div>
 </section>
 <section id="supa-senpai" style="padding-top:10px">
-  <div class="rev-head" style="margin-bottom:6px"><img class="rev-avatar" src="assets/reviewers/supasenpai.jpg" alt="Supasenpai" width="64" height="64" loading="lazy"><h2 style="margin:0">Supasenpai's top picks</h2></div>
+  <div class="rev-head" style="margin-bottom:6px"><img class="rev-avatar" src="assets/reviewers/supasenpai.jpg" alt="Supasenpai, pickleball paddle reviewer" width="64" height="64" loading="lazy"><h2 style="margin:0">Supasenpai's top picks</h2></div>
   <p class="section-lead">Paddle picks from Supasenpai, one of <a href="index.html#reviewers">our favorite reviewers</a>. These are Supasenpai's choices, not ours, and we haven't lab-tested them yet.</p>
   {senpai_links_html}
   <div class="lb-grid">{senpai_html}</div>
@@ -649,7 +745,7 @@ write("best.html", page("Best pickleball paddles | PickleballRx", f'''
   <div class="chips">{"".join(f'<a href="#{k}">{l}</a>' for k, l, _ in STYLES)}</div>
 </section>
 {"".join(sections)}
-</div>''', 0, "best"))
+</div>''', 0, "best", desc="The best pickleball paddles of 2026, picked from our X-ray, grit microscope, spin and swing weight lab tests, plus top picks from reviewers we trust.", crumbs=[("Top picks", None)]))
 
 # ---------- reviews index ----------
 write("reviews/index.html", page("All reviews | PickleballRx", f'''
@@ -657,7 +753,7 @@ write("reviews/index.html", page("All reviews | PickleballRx", f'''
   <h1 class="page-title">All paddle reviews</h1>
   <p class="section-lead">Prefer a table? Use the <a href="../paddles.html">paddle database</a>.</p>
   <div class="grid">{"".join(card(p, 1) for p in PADDLES)}</div>
-</section></div>''', 1, "paddles"))
+</section></div>''', 1, "paddles", desc="All Pickleball Rx paddle reviews.", noindex=not _real, crumbs=[("Reviews", None)]))
 
 # ---------- review pages ----------
 for p in PADDLES:
@@ -721,7 +817,7 @@ for p in PADDLES:
     {deal}
     <p style="margin:14px 0 0"><a class="btn yellow" style="display:block;text-align:center" href="#" aria-disabled="true" onclick="return false">Check price (link coming soon)</a></p>
   </aside>
-</div>''', 1, "paddles", desc=f"{p['name']} pickleball paddle review with scores and specs."))
+</div>''', 1, "paddles", desc=f"{p['name']} pickleball paddle review with scores and specs.", noindex=bool(p.get("placeholder")), crumbs=[("Reviews", "reviews/"), (p["name"], None)]))
 
 # ---------- videos ----------
 vcards = "\n".join(f'<article class="card">{embed(v["id"], v["title"])}<h3>{e(v["title"])}</h3></article>' for v in VIDEOS) \
@@ -732,7 +828,7 @@ write("videos.html", page("Video reviews | PickleballRx", f'''
   <p class="section-lead">Every paddle, played in real games. New videos land on YouTube first.</p>
   <div class="btn-row" style="margin-bottom:24px"><a class="btn" href="{YOUTUBE}" rel="noopener">Subscribe on YouTube</a><a class="btn ghost" href="{INSTAGRAM}" rel="noopener">Follow @picklebrx</a></div>
   <div class="grid">{vcards}</div>
-</section></div>''', 0, "videos", desc="PickleballRx YouTube paddle reviews."))
+</section></div>''', 0, "videos", desc="Pickleball paddle video reviews from the Pickleball Rx YouTube channel and Instagram: on-court play, X-ray breakdowns and spin tests.", crumbs=[("Videos", None)]))
 
 # ---------- lab cross-links ----------
 
@@ -839,7 +935,7 @@ write("lab.html", page("X-Ray Rx: pickleball paddle X-rays | PickleballRx", f'''
   <div class="btn-row"><a class="btn yellow" href="{INSTAGRAM}" rel="noopener">Watch on Instagram</a></div></div>
 </section>
 
-</div>''', 0, "lab", desc=f"X-rays of {len(XRAY)} pickleball paddles, labeled: core, ring, inserts and handle."))
+</div>''', 0, "lab", desc=f"X-rays of {len(XRAY)} pickleball paddles, labeled: core, edge ring, foam, inserts and handle. See what's inside your paddle before you buy.", crumbs=[("X-Ray Rx", None)]))
 
 for x in XRAY:
     lab_img = xray_img(x["slug"], "labeled")
@@ -883,7 +979,7 @@ for x in XRAY:
   {f'<h2 style="margin-top:34px">Watch the reel</h2><p>{e(x["reel"].rstrip("."))}{"" if x["reel"].endswith("?") else "."} <a href="{INSTAGRAM}" rel="noopener">See it on Instagram @picklebrx</a>.</p>' if x["reel"] else ""}
   {f'<h2 style="margin-top:34px">More from {e(x["brand"])}</h2><div class="grid">' + "".join(xray_card(o, 1) for o in same_brand) + '</div>' if same_brand else ""}
   <p style="margin-top:30px"><a href="../lab.html">&larr; All X-rayed paddles</a></p>
-</div>''', 1, "lab", desc=f"Labeled X-ray of the {x['name']} pickleball paddle: core, ring, cells and specs."))
+</div>''', 1, "lab", desc=f"{x['name']} X-ray: see what's inside this pickleball paddle. Labeled core, edge ring, foam, inserts and handle, plus specs and our lab results.", og_type="article", image=(xray_img(x['slug'], 'labeled') or xray_img(x['slug'], 'clean') or product_photo(x['slug']) or None), image_alt=f"{x['name']} pickleball paddle X-ray", crumbs=[("X-Ray Rx", "lab.html"), (x['name'], None)], schema=[{"@type": "Article", "headline": f"{x['name']} X-ray: what's inside", "about": {"@type": "Product", "name": x['name'], "brand": {"@type": "Brand", "name": x['brand']}, "category": "Pickleball paddle"}, "author": {"@id": f"{SITE_URL}/#organization"}, "publisher": {"@id": f"{SITE_URL}/#organization"}, "mainEntityOfPage": {"@id": "__PAGE_URL__#webpage"}, "image": _abs(xray_img(x['slug'], 'labeled') or xray_img(x['slug'], 'clean') or OG_IMAGE)}]))
 
 
 # ---------- Grit Lab ----------
@@ -953,7 +1049,7 @@ cmp_gallery = gallery([
     ("card-grit-e1-cw.jpg", f'<img class="product-thumb" src="assets/paddles/product/grit-e1-cw.jpg" alt="Grit E1 CW" width="40" height="60" loading="lazy">' + f"<strong>Grit E1 CW</strong> &middot; L and M lenses {NOT_USAP}", "Grit E1 CW under the microscope"),
     ("card-grit-e1-tw.jpg", f'<img class="product-thumb" src="assets/paddles/product/grit-e1-tw.jpg" alt="Grit E1 TW" width="40" height="60" loading="lazy">' + f"<strong>Grit E1 TW</strong> &middot; L and M lenses {NOT_USAP}", "Grit E1 TW under the microscope"),
 ])
-write("grit.html", page("Grit Lab: pickleball paddle grit under the microscope | PickleballRx", f"""
+write("grit.html", page("Grit Lab: pickleball paddle grit under a microscope | PickleballRx", f"""
 <section class="hero" style="padding:44px 0"><div class="wrap" style="grid-template-columns:1fr"><div>
   <span class="tag">Grit Lab</span>
   <h1>{len(LABS["grit"])} paddle faces under a <em>4K microscope</em>.</h1>
@@ -994,7 +1090,7 @@ write("grit.html", page("Grit Lab: pickleball paddle grit under the microscope |
   <p id="grit-e1" class="muted" style="font-size:.9rem;margin-top:12px">Grit E1 CW and E1 TW are recreational-play paddles that are not USA Pickleball approved.</p>
 </section>
 <section style="padding-top:0"><div class="note">{GRIT_DISCLAIMER} <a href="disclaimers.html#grit">Disclaimers</a>.</div></section>
-</div>""", 0, "grit", desc=f"{len(LABS['grit'])} pickleball paddle faces under a 4K microscope, plus grit wear studies."))
+</div>""", 0, "grit", desc=f"{len(LABS['grit'])} pickleball paddle faces under a 4K microscope: compare grit, texture and face materials, plus grit wear studies after real play.", image="assets/grit/cards/all-39-grit.jpg", image_alt="Pickleball paddle faces under a 4K microscope", crumbs=[("Grit Lab", None)]))
 
 # ---------- Spin Lab ----------
 spin_all = LABS["spin"]
@@ -1075,7 +1171,7 @@ write("spin.html", page("Spin Lab: pickleball paddle spin test results | Pickleb
   </ul>
 </section>
 <section style="padding-top:0"><div class="note"><strong>Disclosures.</strong> Evolv requested the CarbonSkyn durability testing and provided the three Origin paddles. The Grit E2CF paddles were provided by the owner of Grit. Pickleball RX has discount codes with some brands (including Arronax, Evolv, Holbrook, Luzz, MARK, Pakle and RPM) and earns commission on code or link purchases. Brands have no input into the results. Static-rig numbers from one setup; not an official USA Pickleball test.</div></section>
-</div>""", 0, "spin", desc="Pickleball paddle spin test results at 960 fps, plus spin durability re-tests."))
+</div>""", 0, "spin", desc="Pickleball paddle spin test results: RPM measured at 960 fps on the same rig and ball machine, plus spin durability re-tests after weeks of play.", crumbs=[("Spin Lab", None)]))
 
 # ---------- Spec Lab ----------
 def spec_row(c):
@@ -1132,7 +1228,7 @@ write("specs.html", page("Spec Lab: measured swing weight and twist weight | Pic
   <p class="section-lead">One card per paddle. Tap a card to open it full size.</p>
   <div class="lab-grid" style="grid-template-columns:repeat(auto-fill,minmax(340px,1fr));align-items:start">{spec_cards}</div>
 </section>
-</div>""", 0, "specs", desc="Measured swing weight, twist weight and static weight for pickleball paddles."))
+</div>""", 0, "specs", desc="Measured swing weight, twist weight and static weight for pickleball paddles, tested by us, so you can compare how paddles really feel in hand.", crumbs=[("Spec Lab", None)]))
 
 # ---------- codes ----------
 ccards = "\n".join(
@@ -1192,7 +1288,7 @@ write("codes.html", page("Pickleball Black Friday deals and discount codes | Pic
   <h2>Our discount codes</h2>
   <p class="section-lead">Use code <strong>PBRX</strong> at checkout with these brands. Codes usually do not stack with sale prices, so check which gives the better deal. More brands coming soon.</p>
   <div class="codes">{ccards}</div>
-</section></div>''', 0, "codes", desc="Black Friday pickleball paddle deals and Pickleball RX discount codes."))
+</section></div>''', 0, "codes", desc="Black Friday 2026 pickleball paddle deals and Pickleball Rx discount codes (use code PBRX) for Holbrook, RPM, Luzz, Evolv, Arronax, Grit and more.", crumbs=[("Deals", None)]))
 
 # ---------- guide ----------
 write("guide.html", page("How to choose a pickleball paddle | PickleballRx", '''
@@ -1213,7 +1309,7 @@ write("guide.html", page("How to choose a pickleball paddle | PickleballRx", '''
   <p>Fiberglass faces often feel springier. Carbon fiber faces usually give more control and, with a textured surface, more spin. Our <a href="lab.html#micro">microscope scans</a> show how much grit a face really has.</p>
   <div class="note">Check your league's rules: sanctioned events require approved paddles, so look for an approval mark before you buy.</div>
   <p><a class="btn" href="finder.html">Get your paddle Rx</a></p>
-</article>''', 0, "guide"))
+</article>''', 0, "guide", desc="How to choose a pickleball paddle: core thickness, shape, weight, swing weight, face material and grit, explained with real X-ray and lab data.", og_type="article", crumbs=[("Buying guide", None)]))
 
 # ---------- about ----------
 write("about.html", page("About and how we test | PickleballRx", f'''
@@ -1232,7 +1328,7 @@ write("about.html", page("About and how we test | PickleballRx", f'''
   <p>We earn commission on some discount codes, and brands have no input into our results. Some test paddles were supplied by brands, and we say so wherever it applies. Read the full <a href="disclaimers.html">disclaimers</a>.</p>
   <h2 id="contact">Contact</h2>
   <p>Message us on <a href="{INSTAGRAM}">Instagram @picklebrx</a>. <em>(Placeholder: add a contact email.)</em></p>
-</article>''', 0, "about"))
+</article>''', 0, "about", desc="About Pickleball Rx, started by Don, Beni and Siva, and how we test pickleball paddles: X-rays, a 4K microscope, a 960 fps spin rig and measured swing weight.", crumbs=[("About", None)]))
 
 write("disclaimers.html", page("Disclaimers | PickleballRx", f'''
 <article class="article">
@@ -1270,7 +1366,7 @@ write("disclaimers.html", page("Disclaimers | PickleballRx", f'''
 
   <h2 id="corrections">Questions or corrections</h2>
   <p>If you think something here is wrong, message us on <a href="{INSTAGRAM}">Instagram @picklebrx</a> and we'll check it.</p>
-</article>''', 0, "disclaimers", desc="How Pickleball RX tests paddles, who supplied what, and the limits of our results."))
+</article>''', 0, "disclaimers", desc="How Pickleball RX tests paddles, who supplied what, and the limits of our results.", crumbs=[("Disclaimers", None)]))
 
 
 # ---------- Brand spotlight: Grit ----------
@@ -1306,7 +1402,7 @@ _dur = next((d for d in LABS["durability"] if d["paddle"] == "Grit E2CF"), None)
 write("grit-pickleball.html", page("Grit Pickleball: brand spotlight | PickleballRx", f"""
 <section class="hero" style="padding:48px 0"><div class="wrap">
   <div>
-    <span class="tag">Brand spotlight</span>
+    <span class="tag">Brand spotlight: Grit Pickleball</span>
     <h1>The most passionate owners in <em>pickleball</em>.</h1>
     <p>That's our take on GRIT. PICKLEBALL, a paddle brand born in Baton Rouge, Louisiana. We've X-rayed, scoped and spin-tested their paddles, and the numbers hold up.</p>
     <div class="btn-row"><a class="btn yellow" href="{GRIT_SHOP}" rel="noopener" target="_blank">Shop Grit</a><a class="btn ghost" href="#lab">See our lab results</a></div>
@@ -1341,7 +1437,7 @@ write("grit-pickleball.html", page("Grit Pickleball: brand spotlight | Picklebal
     <a class="tool" href="grit.html#grit-e1"><div class="ico">&micro;</div><h3>Under the microscope</h3><p>E1-CW versus E1-TW at the L and M lenses: plain carbon weave versus a titanium grid.</p><span class="go">See the grit &rarr;</span></a>
   </div>
 </section>
-</div>""", 0, "", desc="Grit Pickleball brand spotlight: a Baton Rouge paddle brand, with Pickleball RX X-ray, microscope and spin results."))
+</div>""", 0, "", desc="Grit Pickleball brand spotlight: a Baton Rouge paddle brand, with Pickleball RX X-ray, microscope and spin results.", image="assets/paddles/product/grit-e2-cf.jpg", image_alt="Grit E2-CF pickleball paddle", crumbs=[("Grit Pickleball", None)]))
 
 
 # ---------- Brand spotlight: Evolv ----------
@@ -1353,7 +1449,7 @@ _ev_x = next((x for x in XRAY if x["slug"] == "evolv-origin"), None)
 write("evolv-pickleball.html", page("Evolv Pickleball: brand spotlight | PickleballRx", f"""
 <section class="hero" style="padding:48px 0"><div class="wrap">
   <div>
-    <span class="tag">Brand spotlight</span>
+    <span class="tag">Brand spotlight: Evolv Pickleball</span>
     <h1>The spin that <em>doesn't fade</em>.</h1>
     <p>That's what we found when we tested Evolv. We re-tested the Origin's CarbonSkyn face at new, one month and six months of play, and the spin held.</p>
     <div class="btn-row"><a class="btn yellow" href="{EVOLV_SHOP}" rel="sponsored noopener" target="_blank">Shop Evolv</a><a class="btn ghost" href="#lab">See our lab results</a></div>
@@ -1391,7 +1487,7 @@ write("evolv-pickleball.html", page("Evolv Pickleball: brand spotlight | Pickleb
     <a class="tool" href="xray/evolv-origin.html"><div class="ico">X</div><h3>Origin X-ray</h3><p>See inside the Origin: {e(_ev_x["core"]) if _ev_x else "full foam"} core, perimeter band and handle, labeled from the X-ray.</p><span class="go">See inside &rarr;</span></a>
   </div>
 </section>
-</div>""", 0, "", desc="Evolv Pickleball brand spotlight: the Origin's CarbonSkyn spin durability, X-ray and microscope results."))
+</div>""", 0, "", desc="Evolv Pickleball brand spotlight: the Origin's CarbonSkyn spin durability, X-ray and microscope results.", image="assets/paddles/product/evolv-origin.jpg", image_alt="Evolv Origin pickleball paddle", crumbs=[("Evolv Pickleball", None)]))
 
 
 # ---------- Brand spotlight: Gearbox (replaced Speedup, per Siva 2026-11-17) ----------
@@ -1411,7 +1507,7 @@ def _gb_card(model, photo, xs, spin, spin_anchor, grit_anchor, blurb):
 write("gearbox-pickleball.html", page("Gearbox Pickleball: brand spotlight | PickleballRx", f"""
 <section class="hero" style="padding:48px 0"><div class="wrap">
   <div>
-    <span class="tag">Brand spotlight</span>
+    <span class="tag">Brand spotlight: Gearbox Pickleball</span>
     <h1>Passion, <em>engineered</em>.</h1>
     <p>Rafael Filippini, Gearbox's founder and CEO, is one of the most passionate people in the paddle business. He went from pro racquetball and the Marines to building paddles in San Diego with his own patented carbon cores, and he calls his team "extremely passionate about what we do." His Pressure X 8E holds the top spot on our Leader Board.</p>
     <div class="btn-row"><a class="btn yellow" href="{GEARBOX_SHOP}" rel="noopener" target="_blank">Shop Gearbox</a><a class="btn ghost" href="#lab">See our lab results</a></div>
@@ -1440,7 +1536,7 @@ write("gearbox-pickleball.html", page("Gearbox Pickleball: brand spotlight | Pic
     <a class="tool" href="grit.html#gearbox-pressure-x-8e"><div class="ico">&micro;</div><h3>Under the microscope</h3><p>The 8E's SpinLock silicon carbide grit under a 4K microscope.</p><span class="go">See the grit &rarr;</span></a>
   </div>
 </section>
-</div>""", 0, "", desc="Gearbox Pickleball brand spotlight: founder Rafael Filippini's story and our X-ray, microscope and spin results for the Pressure X 8E and 8M."))
+</div>""", 0, "", desc="Gearbox Pickleball brand spotlight: founder Rafael Filippini's story and our X-ray, microscope and spin results for the Pressure X 8E and 8M.", image="assets/paddles/product/gearbox-pressure-x-8e.jpg", image_alt="Gearbox Pressure X 8E pickleball paddle", crumbs=[("Gearbox Pickleball", None)]))
 
 # ---------- Pro paddles (reference list from public sources; not our testing) ----------
 PROS = json.load(open(os.path.join(ROOT, "data", "pros.json")))
@@ -1489,7 +1585,7 @@ _brand_tiles = "".join(f'<div style="background:var(--surface);border:1px solid 
 _app_html = "".join(f'<h3 style="margin-top:22px">APP {e(d["division"].lower())}</h3>{_pro_table(d["players"], "app-" + slugify(d["division"]))}' for d in PROS["app"])
 _s = lambda k: f'<a href="{e(_PSRC[k]["url"])}" rel="noopener">{e(_PSRC[k]["name"])}</a>'
 
-write("pros.html", page("What paddles do the pros use? PPA and APP top players | PickleballRx", f"""
+write("pros.html", page("What paddles do the pros use? PPA and APP | PickleballRx", f"""
 <section class="hero" style="padding:44px 0"><div class="wrap" style="grid-template-columns:1fr"><div>
   <span class="tag">Pro paddles</span>
   <h1>What the <em>top-ranked pros</em> play.</h1>
@@ -1517,11 +1613,20 @@ write("pros.html", page("What paddles do the pros use? PPA and APP top players |
   {_app_html}
 </section>
 <section style="padding-top:0"><div class="note"><strong>About this list.</strong> Rankings and paddle deals change often, and pros sometimes play unreleased or custom paddles. &ldquo;Unconfirmed&rdquo; means we couldn&rsquo;t find a reliable current source, so we didn&rsquo;t guess. The <strong>Our labs</strong> column links to our own X-ray or Grit Lab results where we have them for that paddle model; a pro&rsquo;s paddle may be a custom build. Know a pro&rsquo;s current paddle? <a href="about.html#contact">Tell us</a>.</div></section>
-</div>""", 0, "pros", desc="The paddles used by the top-ranked PPA Tour and APP Tour pickleball pros, by ranking, with sources and dates."))
+</div>""", 0, "pros", desc="The paddles used by the top-ranked PPA Tour and APP Tour pickleball pros, by ranking, with sources and dates.", crumbs=[("Pro paddles", None)]))
 
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "catalog_page.py")).read())
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "rx_page.py")).read())
 
-write("404.html", page("Page not found | PickleballRx", '<article class="article"><h1>Page not found</h1><p>That page doesn\'t exist. <a href="/">Go to the home page</a>.</p></article>', 0))
+write("404.html", page("Page not found | PickleballRx", '<article class="article"><h1>Page not found</h1><p>That page doesn\'t exist. <a href="/">Go to the home page</a>.</p></article>', 0, desc="That page doesn't exist on Pickleball Rx.", noindex=True))
+
+
+# ---------- sitemap.xml and robots.txt (every indexable page; noindex pages are left out) ----------
+_prio = {"index.html": "1.0", "paddles.html": "0.9", "lab.html": "0.9", "best.html": "0.9", "finder.html": "0.9",
+         "grit.html": "0.8", "spin.html": "0.8", "specs.html": "0.8", "pros.html": "0.8", "codes.html": "0.8"}
+write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
+    f"  <url><loc>{e(page_url(pth))}</loc><priority>{_prio.get(pth, '0.7' if '/' not in pth else '0.6')}</priority></url>\n"
+    for pth in sorted(SITEMAP, key=lambda q: (q != "index.html", "/" in q, q))) + "</urlset>\n")
+write("robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
 
 print("Built", len(PADDLES), "paddles into", OUT)
