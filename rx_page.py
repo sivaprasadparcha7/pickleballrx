@@ -432,4 +432,4 @@ write("finder.html", page("Paddle finder: get your paddle Rx | PickleballRx", f'
   </section>
 </section></div>
 <script src="assets/rx-data.js?v={ASSET_V}"></script>
-<script src="assets/rx.js?v={ASSET_V}"></script>''', 0, "finder", desc="Get your pickleball paddle Rx: answer questions on country, level, budget, core, foam, shape and priority, and our algorithm ranks paddles using our own lab testing."))
+<script src="assets/rx.js?v={ASSET_V}"></script>''', 0, "finder", desc="Get your pickleball paddle Rx: answer a few questions on level, budget, core, shape and priority, and we rank paddles using our own lab testing.", crumbs=[("Paddle finder", None)]))
