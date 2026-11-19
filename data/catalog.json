@@ -4052,7 +4052,8 @@
      "size": "16.1\" x 7.8\"",
      "handle": "5.6\"",
      "grip": "4.05\"",
-     "approval": "USAP"
+     "approval": "USAP",
+     "tested": "aireo-cyclone"
     },
     {
      "model": "Cyclone Elongated NanoGraph",
@@ -4064,7 +4065,8 @@
      "weight": "7.6oz",
      "core": "Foam (MPPE)",
      "face": "Raw T700 carbon fiber, textured",
-     "approval": "USAP"
+     "approval": "USAP",
+     "tested": "aireo-cyclone"
     },
     {
      "model": "Cyclone Blackout Elongated",
@@ -4074,7 +4076,8 @@
      "url": "https://www.aireo-sports.com/products/blackout-upa-a-approved-aireo-cyclone-16mm-pickleball-paddle-pulsefoam\u2122-power-core-for-pro-level-performance",
      "weight": "7.6oz",
      "core": "Foam (MPPE)",
-     "approval": "UPA-A"
+     "approval": "UPA-A",
+     "tested": "aireo-cyclone"
     },
     {
      "model": "Titan Hawk-L16 Gen 3",
