@@ -515,7 +515,8 @@ reviewers_html = "".join(
     + f'<h3 style="margin:4px 0 2px">{e(n)}</h3><div class="muted" style="font-size:.88rem;margin-bottom:8px">{e(sub)}</div></div></div>'
     f'<p style="font-size:.95rem">{e(d)}</p><a class="btn ghost" style="align-self:flex-start" href="{e(h)}" rel="noopener" target="_blank">{e(lbl)} &rarr;</a>'
     + (_link_row(REVIEWER_LINKS[n], skip=(lbl,)) if n in REVIEWER_LINKS else "")
-    + (f'<a style="font-size:.88rem;margin-top:8px" href="best.html#supa-senpai">See Supasenpai\'s top picks &rarr;</a>' if n == "Supasenpai" else "") + '</div>'
+    + (f'<a style="font-size:.88rem;margin-top:8px" href="best.html#supa-senpai">See Supasenpai\'s top picks &rarr;</a>' if n == "Supasenpai" else "")
+    + (f'<a style="font-size:.88rem;margin-top:8px" href="best.html#pb-on-call">See PB on Call\'s favorite picks &rarr;</a>' if n == "PB on Call" else "") + '</div>'
     for i, (n, sub, d, h, lbl) in enumerate(REVIEWERS, 1))
 
 # Latest reviews only show on the home page once at least one real (non-placeholder) review exists.
@@ -767,6 +768,24 @@ def _ext_card(i, b, m, n, l):
             + '</div></div>')
 senpai_html = "".join(_ext_card(i, *r) for i, r in enumerate(SENPAI_PICKS, 1))
 
+# PB on Call's favorite picks, relayed by Siva (2026-11-19), in their order. Shapes are as PB on Call named them.
+ONCALL_PICKS = [
+    ("E6", "Ignis (Flat-Top Hybrid)", "We've X-rayed the Ignis Elongated. Photo is the Elongated.", ("Ignis X-ray", "xray/e6-ignis.html")),
+    ("Pickleball Apes", "Zen (S+)", "", None),
+    ("Gherkin", "Draco OP (Hybrid)", "", ("Gherkin store", "https://www.gherkinusa.com/products/draco-op")),
+    ("Spartus", "P1 (Standard)", "", ("Spartus store", "https://gospartus.com/products/p1-hybrid")),
+    ("11SIX24", "Jelly Bean 2 (Pegasus)", "We've X-rayed the Hurache-X Jelly Bean 2.", ("Jelly Bean 2 X-ray", "xray/11six24-hurache-jelly-bean-2.html")),
+]
+def _oncall_card(i, b, m, n, l):
+    html = _ext_card(i, b, m, n, l)
+    if "<img" in html:
+        return html
+    # No photo yet: a placeholder tile, never another paddle's photo.
+    html = html.replace(" style='grid-template-columns:auto 1fr'", "", 1)
+    return html.replace('</div><div style="min-width:0">', '</div><div class="lb-thumb" style="display:flex;align-items:center;justify-content:center;font-size:.7rem;color:#777;text-align:center">Photo soon</div><div style="min-width:0">', 1)
+oncall_html = "".join(_oncall_card(i, *r) for i, r in enumerate(ONCALL_PICKS, 1))
+oncall_links_html = _link_row(ONCALL_LINKS)
+
 # Supasenpai's top 5 Canadian paddles, relayed by Siva (2026-11-17). Names checked against brand and Canadian retailer listings.
 CANADIAN_PICKS = [
     ("GRUVN", "MUVN-16HD", "", None),
@@ -786,7 +805,7 @@ write("best.html", page("Best pickleball paddles | PickleballRx", f'''
 <section style="padding-bottom:0">
   <h1 class="page-title">Our top picks</h1>
   <p class="section-lead">Our favorite paddles by core type, picked by the Pickleball RX team after X-rays, microscope scans, spin tests and a lot of games. Tap any badge to see the lab results behind a pick.</p>
-  <div class="chips">{"".join(f'<a href="#{k}">{e(t)}</a>' for k, t, _, _ in TOP_PICKS)}<a href="#canadian">Canadian picks</a><a href="#supa-senpai">Supasenpai's picks</a></div>
+  <div class="chips">{"".join(f'<a href="#{k}">{e(t)}</a>' for k, t, _, _ in TOP_PICKS)}<a href="#canadian">Canadian picks</a><a href="#supa-senpai">Supasenpai's picks</a><a href="#pb-on-call">PB on Call's picks</a></div>
 </section>
 {picks_html}
 <section id="canadian" style="padding-top:10px">
@@ -800,6 +819,12 @@ write("best.html", page("Best pickleball paddles | PickleballRx", f'''
   <p class="section-lead">Paddle picks from Supasenpai, one of <a href="index.html#reviewers">our favorite reviewers</a>. These are Supasenpai's choices, not ours, and we haven't lab-tested them yet.</p>
   {senpai_links_html}
   <div class="lb-grid">{senpai_html}</div>
+</section>
+<section id="pb-on-call" style="padding-top:10px">
+  <div class="rev-head" style="margin-bottom:6px"><img class="rev-avatar" src="assets/reviewers/pb-on-call.jpg" alt="PB on Call, pickleball paddle reviewer" width="64" height="64" loading="lazy"><h2 style="margin:0">PB on Call's favorite picks</h2></div>
+  <p class="section-lead">Favorite paddles from <a href="https://www.youtube.com/@PickleballOnCall" target="_blank" rel="noopener">PB on Call</a>, one of <a href="index.html#reviewers">our favorite reviewers</a>. These are PB on Call's choices, not ours, and we haven't lab-tested most of them yet. PB on Call's own discount codes are on their linktree.</p>
+  {oncall_links_html}
+  <div class="lb-grid">{oncall_html}</div>
 </section>
 <section style="padding-bottom:0"><h2>By playing style</h2>
   <p class="section-lead">Our picks for each playing style. Paddles only for now, with no scores. Tap any badge to see the lab results behind a pick.</p>
