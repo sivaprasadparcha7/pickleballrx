@@ -12,6 +12,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "site")
 DATA = json.load(open(os.path.join(ROOT, "data", "paddles.json")))
 PADDLES = DATA["paddles"]
+HAS_REAL = any(not p.get("placeholder") for p in PADDLES)  # Compare only runs on full reviews
 LABS = json.load(open(os.path.join(ROOT, "data", "labs.json")))
 SPECS = json.load(open(os.path.join(ROOT, "data", "specs.json")))["paddles"]
 XRAY = json.load(open(os.path.join(ROOT, "data", "xray.json")))["paddles"]
@@ -191,7 +192,6 @@ def page(title, body, depth=0, current="", desc=SITE_DESC, image=None, image_alt
 <link rel="apple-touch-icon" href="{r}assets/apple-touch-icon.png">
 </head>
 <body>
-<div class="placeholder-banner">Preview site. X-Ray, Grit and Spin Lab data is real. Paddles in the review database are sample placeholders for now.</div>
 <header class="site-header"><div class="wrap">
   <a class="logo" href="{r}index.html"><img src="{r}assets/logo-white.svg?v={ASSET_V}" alt="Pickleball Rx" width="149" height="58"></a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -199,7 +199,7 @@ def page(title, body, depth=0, current="", desc=SITE_DESC, image=None, image_alt
     {nav("paddles.html", "Paddle database", "paddles")}
     {nav("best.html", "Top picks", "best")}
     {nav("pros.html", "Pro paddles", "pros")}
-    {nav("compare.html", "Compare", "compare")}
+    {nav("compare.html", "Compare", "compare") if HAS_REAL else ""}
     {nav("lab.html", "X-Ray Rx", "lab")}
     {nav("grit.html", "Grit Lab", "grit")}
     {nav("spin.html", "Spin Lab", "spin")}
@@ -216,7 +216,7 @@ def page(title, body, depth=0, current="", desc=SITE_DESC, image=None, image_alt
   <div class="cols">
     <div><img src="{r}assets/logo.svg?v={ASSET_V}" alt="Pickleball Rx" width="129" height="50" style="height:50px;width:auto;margin-bottom:10px">
       <p style="margin:0"><strong>{e(TAGLINE)}.</strong> Paddle reviews that look inside the paddle: X-rays, microscope images, measured specs and on-court video.</p><p style="margin:8px 0 0">Started by Don, Beni and Siva.</p></div>
-    <div><h4>Tools</h4><ul><li><a href="{r}finder.html">Paddle finder</a></li><li><a href="{r}compare.html">Compare</a></li><li><a href="{r}paddles.html">Database</a></li></ul></div>
+    <div><h4>Tools</h4><ul><li><a href="{r}finder.html">Paddle finder</a></li>{f'<li><a href="{r}compare.html">Compare</a></li>' if HAS_REAL else ""}<li><a href="{r}paddles.html">Database</a></li></ul></div>
     <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}best.html">Our top picks</a></li><li><a href="{r}pros.html">What the pros play</a></li><li><a href="{r}grit-pickleball.html">Brand spotlight: Grit</a></li><li><a href="{r}evolv-pickleball.html">Brand spotlight: Evolv</a></li><li><a href="{r}gearbox-pickleball.html">Brand spotlight: Gearbox</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
     <div><h4>Follow</h4><ul><li><a href="{YOUTUBE}" rel="noopener">YouTube</a></li><li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li><li><a href="{r}about.html#contact">Contact</a></li></ul></div>
   </div>
@@ -408,6 +408,7 @@ lb_html = "".join(lb_card(i, r) for i, r in enumerate(LEADERBOARD))
 
 # ---------- home ----------
 n_x = len(XRAY)
+COMPARE_TILE = '<a class="tool" href="compare.html"><div class="ico">VS</div><h3>Compare paddles</h3><p>Put up to four paddles side by side: scores, measured specs and price.</p><span class="go">Compare &rarr;</span></a>' if HAS_REAL else ""
 n_m = sum(1 for p in PADDLES if p.get("micro"))
 n_v = len({v["id"] for v in VIDEOS} | {p["video"] for p in PADDLES if p.get("video")})
 style_tiles = "".join(f'<a class="style-tile" href="best.html#{k}"><b>{l}</b><span>{d}</span></a>' for k, l, d in STYLES)
@@ -574,7 +575,7 @@ write("index.html", page("Pickleball Rx | The Wikipedia of Pickleball Paddles", 
 <section style="padding-top:0">
   <div class="tools">
     <a class="tool" href="finder.html"><div class="ico">Rx</div><h3>Paddle finder</h3><p>Answer four quick questions and get a short list of paddles that match your game.</p><span class="go">Get your Rx &rarr;</span></a>
-    <a class="tool" href="compare.html"><div class="ico">VS</div><h3>Compare paddles</h3><p>Put up to four paddles side by side: scores, measured specs and price.</p><span class="go">Compare &rarr;</span></a>
+    {COMPARE_TILE}
     <a class="tool" href="paddles.html"><div class="ico">DB</div><h3>Paddle database</h3><p>Every paddle from 32 brands, with key specs, prices and links to each model. Filter by brand, shape, thickness and price.</p><span class="go">Open database &rarr;</span></a>
     <a class="tool" href="lab.html"><div class="ico">X</div><h3>X-Ray Rx</h3><p>{n_x} paddles X-rayed and labeled: core, ring, inserts and handle.</p><span class="go">See inside &rarr;</span></a>
   </div>
@@ -621,9 +622,10 @@ write("compare.html", page("Compare paddles | PickleballRx", '''
 <div class="wrap"><section>
   <h1 class="page-title">Compare paddles</h1>
   <p class="section-lead">Pick up to four paddles. The best value in each row is highlighted. Copy the page link to share your comparison.</p>
+''' + ('' if HAS_REAL else '<div class="note"><strong>Sample data.</strong> Compare runs on our full paddle reviews, which are on the way. The paddles below are made-up examples, not test results.</div>') + '''
   <div class="compare-pickers" id="cmp-pickers"></div>
   <div class="table-wrap"><table class="cmp" id="cmp"></table></div>
-</section></div>''', 0, "compare", desc="Compare pickleball paddles side by side: power, spin, control, forgiveness and specs, from Pickleball Rx, the Wikipedia of pickleball paddles.", crumbs=[("Compare", None)]))
+</section></div>''', 0, "compare", desc="Compare pickleball paddles side by side: power, spin, control, forgiveness and specs, from Pickleball Rx, the Wikipedia of pickleball paddles.", noindex=not HAS_REAL, crumbs=[("Compare", None)]))
 
 # ---------- finder ----------
 # finder.html is built by rx_page.py (the Rx algorithm), run near the end of this file.
@@ -1377,7 +1379,7 @@ write("guide.html", page("How to choose a pickleball paddle | PickleballRx", '''
 write("about.html", page("About and how we test | PickleballRx", f'''
 <article class="article">
   <h1>About PickleballRx</h1>
-  <p>Pickleball RX was started by Don, Beni and Siva (<a href="{INSTAGRAM}">@picklebrx</a>). We review pickleball paddles from the inside out: X-rays, microscope grit scans and spin measured at 960 frames per second. <em>(Placeholder: add a few sentences about your playing background.)</em></p>
+  <p>Pickleball RX was started by Don, Beni and Siva (<a href="{INSTAGRAM}">@picklebrx</a>). We review pickleball paddles from the inside out: X-rays, microscope grit scans and spin measured at 960 frames per second.</p>
   <h2 id="testing">How we test</h2>
   <ol>
     <li><strong>Play it.</strong> Every paddle gets drills and real games, and a video review on <a href="{YOUTUBE}">YouTube</a>.</li>
@@ -1389,7 +1391,7 @@ write("about.html", page("About and how we test | PickleballRx", f'''
   <h2 id="disclosure">Disclosures</h2>
   <p>We earn commission on some discount codes, and brands have no input into our results. Some test paddles were supplied by brands, and we say so wherever it applies. Read the full <a href="disclaimers.html">disclaimers</a>.</p>
   <h2 id="contact">Contact</h2>
-  <p>Message us on <a href="{INSTAGRAM}">Instagram @picklebrx</a>. <em>(Placeholder: add a contact email.)</em></p>
+  <p>Message us on <a href="{INSTAGRAM}">Instagram @picklebrx</a>.</p>
 </article>''', 0, "about", desc="About Pickleball Rx, started by Don, Beni and Siva, and how we test pickleball paddles: X-rays, a 4K microscope, a 960 fps spin rig and measured swing weight.", crumbs=[("About", None)]))
 
 write("disclaimers.html", page("Disclaimers | PickleballRx", f'''
