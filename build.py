@@ -450,6 +450,8 @@ REVIEWERS = [
      "https://www.johnkewpickleball.com/paddle-reviews", "Paddle reviews"),
     ("Pickleball Studio", "Chris Olson", "In-depth paddle reviews, a newsletter and the Pickleball Studio podcast.",
      "https://www.youtube.com/@PickleballStudio", "YouTube"),
+    ("Pickleball Pursuit", "Louis Kobetz", "Independent paddle reviews, a paddle finder, a swing weight tool and the Pickleball Pursuit Podcast.",
+     "https://www.pbpursuit.com/", "Website"),
     ("Supasenpai", "Pickleball Senpai", "Paddle reviews and pickleball videos.",
      "https://supasenpai.com/", "Website"),
     ("Ed", "Pickleball Freak Show", "Paddle reviews and gear talk.",
@@ -490,7 +492,17 @@ FREAKSHOW_LINKS = [
     ("Instagram", "https://www.instagram.com/pickleballfreakshow"),
     ("Facebook", "https://www.facebook.com/pickleballfreakshow"),
 ]
-REVIEWER_LINKS = {"John Kew": KEW_LINKS, "Ed": FREAKSHOW_LINKS, "PB on Call": ONCALL_LINKS, "Supasenpai": SENPAI_LINKS, "Pickleball Studio": STUDIO_LINKS}
+# Pickleball Pursuit's links: website and YouTube from Siva (2026-11-19), the rest from pbpursuit.com.
+PURSUIT_LINKS = [
+    ("Website", "https://www.pbpursuit.com/"),
+    ("Paddle reviews", "https://www.pbpursuit.com/paddle-reviews"),
+    ("Discount codes", "https://www.pbpursuit.com/discount-codes"),
+    ("Paddle finder", "https://www.pbpursuit.com/paddle-finder"),
+    ("Swing weight tool", "https://www.pbpursuit.com/swing-weight-tool"),
+    ("YouTube", "https://www.youtube.com/@pickleballpursuit"),
+    ("Instagram", "https://www.instagram.com/pickleballpursuit"),
+]
+REVIEWER_LINKS = {"Pickleball Pursuit": PURSUIT_LINKS, "John Kew": KEW_LINKS, "Ed": FREAKSHOW_LINKS, "PB on Call": ONCALL_LINKS, "Supasenpai": SENPAI_LINKS, "Pickleball Studio": STUDIO_LINKS}
 
 def _link_row(links, skip=()):
     return ('<div class="badges" style="margin:8px 0 4px">'
