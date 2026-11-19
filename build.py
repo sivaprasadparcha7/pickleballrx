@@ -43,7 +43,7 @@ CODES = [  # confirmed by Siva 2026-11-17
     dict(brand="Pakle", code="PBRX", offer="10% off", url="https://paklepickleball.com/"),
     dict(brand="Speedup", code="PBRX", offer="10% off", url="https://speeduppickle.com/"),
     dict(brand="Grit", code="PBRX", offer="10% off", url="https://www.grit-shop.com/", no_disc=True),
-    dict(brand="Pickle Poppers", code="PBRX", offer="a discount", url="https://www.pickle-poppers.com/", no_disc=True),  # Siva 2026-11-19, % not given
+    dict(brand="Pickle Poppers", code="PBRX", offer="10% off", url="https://www.pickle-poppers.com/", no_disc=True),  # Siva 2026-11-19
 ]
 
 
