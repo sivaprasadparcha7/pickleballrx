@@ -141,3 +141,19 @@
     });
   });
 })();
+
+/* ---------- YouTube: tap thumbnail to play ---------- */
+(function () {
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest && ev.target.closest('a.video.yt[data-yt]');
+    if (!a || ev.ctrlKey || ev.metaKey || ev.shiftKey) return;
+    ev.preventDefault();
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(a.dataset.yt) + '?autoplay=1&rel=0';
+    f.title = a.getAttribute('aria-label') || 'YouTube video';
+    f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+    f.allowFullscreen = true;
+    var d = document.createElement('div'); d.className = a.className.replace(' yt', ''); d.appendChild(f);
+    a.parentNode.replaceChild(d, a);
+  });
+})();

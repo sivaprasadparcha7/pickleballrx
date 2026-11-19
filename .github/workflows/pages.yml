@@ -4,6 +4,9 @@ on:
   push:
     branches: [main, claude/project-thread-l02a4h]
   workflow_dispatch:
+  schedule:
+    # Every 3 hours: pull the newest YouTube videos and Instagram posts, rebuild, publish.
+    - cron: "17 */3 * * *"
 
 permissions:
   contents: read
@@ -24,6 +27,7 @@ jobs:
           python-version: "3.12"
       - name: Build data and pages
         run: |
+          python3 data/fetch_feeds.py
           python3 data/labs.py
           python3 data/xray.py > /dev/null
           python3 build.py
