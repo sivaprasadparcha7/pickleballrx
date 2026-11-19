@@ -205,6 +205,41 @@ def embed(vid, title):
     return f'<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{e(vid)}" title="{e(title)}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
 
 
+def _fmt_date(s):
+    import datetime
+    d = datetime.date.fromisoformat(s)
+    return f'{d.strftime("%B")} {d.day}, {d.year}'
+
+
+def _feed(name, key):
+    try:
+        return json.load(open(os.path.join(ROOT, "data", name))).get(key, [])
+    except (OSError, ValueError):
+        return []
+
+
+# Filled in automatically by data/fetch_feeds.py (runs every few hours on GitHub).
+YT_FEED = _feed("youtube.json", "videos")
+IG_FEED = _feed("instagram.json", "posts")
+
+
+def yt_card(v):
+    """Thumbnail that turns into the YouTube player when tapped (fast pages, no 15 iframes)."""
+    vid = v["id"]
+    url = f"https://www.youtube.com/{'shorts/' + vid if v.get('short') else 'watch?v=' + vid}"
+    date = f'<span class="meta">{_fmt_date(v["published"])}</span>' if v.get("published") else ""
+    return (f'<article class="card"><a class="video yt" href="{e(url)}" data-yt="{e(vid)}" rel="noopener" aria-label="Play {e(v["title"])}">'
+            f'<img src="https://i.ytimg.com/vi/{e(vid)}/hqdefault.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></a>'
+            f'<h3><a href="{e(url)}" rel="noopener">{e(v["title"])}</a></h3>{date}</article>')
+
+
+def ig_grid(posts):
+    return '<div class="ig-grid">' + "".join(
+        f'<a href="{e(p["link"])}" rel="noopener" title="{e(p.get("caption", "")[:120])}">'
+        f'<img src="{e(p["image"])}" alt="{e(p.get("caption", "")[:120] or "Instagram post by @picklebrx")}" loading="lazy">'
+        f'{"<span class=play aria-hidden=true></span>" if p.get("video") else ""}</a>' for p in posts) + '</div>'
+
+
 def video_ph(label="Video coming soon"):
     return f'<div class="video ph"><span>&#9654; {label}</span></div>'
 
@@ -388,6 +423,18 @@ latest_section = (f'''<section>
   <div class="grid">{"".join(card(p, 0) for p in _real[:3])}</div>
 </section>
 ''') if _real else ""
+_long = [v for v in YT_FEED if not v.get("short")] or YT_FEED
+home_videos = (f'''<section id="latest-videos">
+  <div class="section-head"><div><span class="tag">New on YouTube</span><h2 style="margin-top:8px">Latest videos</h2>
+  <p class="section-lead">Our newest videos from <a href="{YOUTUBE}" rel="noopener">YouTube @picklebrx</a>. This updates on its own when we post.</p></div><a class="btn ghost" href="videos.html">All videos</a></div>
+  <div class="grid">{"".join(yt_card(v) for v in _long[:3])}</div>
+</section>
+''') if YT_FEED else ""
+home_ig = (f'''<section id="instagram" style="padding-top:0">
+  <div class="section-head"><div><span class="tag">On Instagram</span><h2 style="margin-top:8px">Latest from @picklebrx</h2></div><a class="btn ghost" href="{INSTAGRAM}" rel="noopener">Follow on Instagram</a></div>
+  {ig_grid(IG_FEED[:6])}
+</section>
+''') if IG_FEED else ""
 write("index.html", page("PickleballRx | Pickleball paddle reviews, X-rays and data", f'''
 <section class="hero"><div class="wrap">
   <div>
@@ -464,7 +511,7 @@ write("index.html", page("PickleballRx | Pickleball paddle reviews, X-rays and d
     <a class="tool" href="specs.html"><div class="ico">SW</div><h3>Spec Lab</h3><p>Swing weight, twist weight and static weight, measured ourselves for {len(SPECS)} paddles.</p><span class="go">See the specs &rarr;</span></a>
   </div>
 </section>
-<section>
+{home_videos}{home_ig}<section>
   <div class="social-band"><div><h2>Watch the reviews</h2><p>Full video reviews on YouTube, and lab images and quick takes on Instagram.</p></div>
   <div class="btn-row"><a class="btn yellow" href="{YOUTUBE}" rel="noopener">YouTube @picklebrx</a><a class="btn ghost" style="color:#fff;border-color:#3a5182" href="{INSTAGRAM}" rel="noopener">Instagram @picklebrx</a></div></div>
 </section>
@@ -724,15 +771,30 @@ for p in PADDLES:
 </div>''', 1, "paddles", desc=f"{p['name']} pickleball paddle review with scores and specs."))
 
 # ---------- videos ----------
-vcards = "\n".join(f'<article class="card">{embed(v["id"], v["title"])}<h3>{e(v["title"])}</h3></article>' for v in VIDEOS) \
-    or "\n".join(f'<article class="card">{video_ph()}<span class="tag ph" style="align-self:flex-start">Placeholder</span><h3>Video title</h3></article>' for _ in range(3))
-write("videos.html", page("Video reviews | PickleballRx", f'''
+# Videos come from the YouTube feed automatically; VIDEOS (top of file) can add extra ones by hand.
+_seen = {v["id"] for v in YT_FEED}
+_all_v = YT_FEED + [dict(id=v["id"], title=v["title"]) for v in VIDEOS if v["id"] not in _seen]
+_reg = [v for v in _all_v if not v.get("short")]
+_shorts = [v for v in _all_v if v.get("short")]
+if _all_v:
+    vbody = (f'<div class="grid">{"".join(yt_card(v) for v in _reg)}</div>' if _reg else "") + \
+        (f'<h2 style="margin-top:34px">Shorts</h2><div class="grid shorts">{"".join(yt_card(v) for v in _shorts)}</div>' if _shorts else "") + \
+        f'<p style="margin-top:22px">These are our newest {len(_all_v)} videos. <a href="{YOUTUBE}/videos" rel="noopener">See every video on YouTube &rarr;</a></p>'
+else:
+    vbody = f'<div class="note">Our latest YouTube videos will show here. <a href="{YOUTUBE}" rel="noopener">Watch them on YouTube @picklebrx</a> for now.</div>'
+igbody = ig_grid(IG_FEED[:12]) if IG_FEED else \
+    f'<div class="note">Lab images, X-rays and quick takes. <a href="{INSTAGRAM}" rel="noopener">See them on Instagram @picklebrx</a>.</div>'
+write("videos.html", page("Videos | PickleballRx", f'''
 <div class="wrap"><section>
-  <h1 class="page-title">Video reviews</h1>
-  <p class="section-lead">Every paddle, played in real games. New videos land on YouTube first.</p>
-  <div class="btn-row" style="margin-bottom:24px"><a class="btn" href="{YOUTUBE}" rel="noopener">Subscribe on YouTube</a><a class="btn ghost" href="{INSTAGRAM}" rel="noopener">Follow @picklebrx</a></div>
-  <div class="grid">{vcards}</div>
-</section></div>''', 0, "videos", desc="PickleballRx YouTube paddle reviews."))
+  <h1 class="page-title">Videos</h1>
+  <p class="section-lead">Paddle reviews, lab tests and on-court play. New videos show up here on their own a few hours after we post them.</p>
+  <div class="btn-row" style="margin-bottom:24px"><a class="btn" href="{YOUTUBE}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a><a class="btn ghost" href="{INSTAGRAM}" rel="noopener">Follow @picklebrx</a></div>
+  {vbody}
+</section>
+<section id="instagram" style="padding-top:0">
+  <div class="section-head"><div><h2>Instagram</h2><p class="section-lead">Our latest posts from <a href="{INSTAGRAM}" rel="noopener">@picklebrx</a>.</p></div></div>
+  {igbody}
+</section></div>''', 0, "videos", desc="PickleballRx YouTube paddle reviews and Instagram posts."))
 
 # ---------- lab cross-links ----------
 
@@ -1472,12 +1534,6 @@ def _pro_table(rows, tid):
         f'<td style="white-space:normal">{_pro_paddle(p)}</td><td>{_pro_labs(p)}</td></tr>' for p in rows)
     return (f'<div class="table-wrap"><table class="db" id="{tid}" style="min-width:560px"><thead><tr><th>Rank</th><th>Player</th><th>Paddle</th><th>Our labs</th></tr></thead>'
             f'<tbody>{body}</tbody></table></div>')
-
-
-def _fmt_date(s):
-    import datetime
-    d = datetime.date.fromisoformat(s)
-    return f'{d.strftime("%B")} {d.day}, {d.year}'
 
 
 _ppa_all = PROS["ppa_men"] + PROS["ppa_women"]
