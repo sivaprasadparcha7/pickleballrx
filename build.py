@@ -43,6 +43,7 @@ CODES = [  # confirmed by Siva 2026-11-17
     dict(brand="Pakle", code="PBRX", offer="10% off", url="https://paklepickleball.com/"),
     dict(brand="Speedup", code="PBRX", offer="10% off", url="https://speeduppickle.com/"),
     dict(brand="Grit", code="PBRX", offer="10% off", url="https://www.grit-shop.com/", no_disc=True),
+    dict(brand="Pickle Poppers", code="PBRX", offer="a discount", url="https://www.pickle-poppers.com/", no_disc=True),  # Siva 2026-11-19, % not given
 ]
 
 
@@ -1333,7 +1334,7 @@ write("specs.html", page("Spec Lab: measured swing weight and twist weight | Pic
 
 # ---------- codes ----------
 ccards = "\n".join(
-    f'<div class="code-card"><h3>{e(c["brand"])}</h3><p class="muted" style="margin:0">{e(c["offer"])} with our code</p><code>{e(c["code"])}</code>'
+    f'<div class="code-card"><h3>{e(c["brand"])}</h3><p class="muted" style="margin:0">{e(c["offer"][:1].upper() + c["offer"][1:])} with our code</p><code>{e(c["code"])}</code>'
     f'<a href="{e(c["url"])}" rel="sponsored noopener">Shop {e(c["brand"])} &rarr;</a></div>' for c in CODES)
 # Black Friday deals: only deals seen on the brand's own site. Re-check before each upload.
 DEALS_CHECKED = "Nov 17, 2026"
@@ -1381,7 +1382,7 @@ write("codes.html", page("Pickleball Black Friday deals and discount codes | Pic
 <section style="padding-top:0">
   <h2>Black Friday 2026</h2>
   <p class="section-lead">Black Friday and other paddle sales. Each card says where we found it: on the brand&rsquo;s own site, from the brand directly, or from The Kitchen&rsquo;s Black Friday tracker. Every link goes to the brand&rsquo;s own store. Prices and dates change fast, so check the brand&rsquo;s page before you buy.</p>
-  <p class="section-lead">Look for the green <strong>PBRX works here</strong> tag: our code works at those brands (Holbrook, RPM, Luzz, Evolv, Arronax, MARK, Pakle, Grit and Speedup). Codes usually don&rsquo;t stack with sale prices, so check at checkout which is better.</p>
+  <p class="section-lead">Look for the green <strong>PBRX works here</strong> tag: our code works at those brands (Holbrook, RPM, Luzz, Evolv, Arronax, MARK, Pakle, Grit, Speedup and Pickle Poppers). Codes usually don&rsquo;t stack with sale prices, so check at checkout which is better.</p>
   <div class="codes">{"".join(deal_card(d) for d in sorted(DEALS, key=lambda d: not any(c["brand"] == d["brand"] for c in CODES)))}</div>
   <p class="muted" style="font-size:.9rem;margin-top:16px">Also on sale now, per <a href="https://thekitchenpickle.com/pickleball-black-friday-deals/" rel="noopener">The Kitchen&rsquo;s Black Friday tracker</a> (updated Nov 16): Six Zero up to 65% off paddles (ends Nov 30), Warping Point 20% off Neon, Sophon and Nightblade (ends Nov 30), Thrive 25% off sitewide, and Dominator 15% off sitewide (ends Nov 30). We haven&rsquo;t checked these on the brands&rsquo; own sites.</p>
 </section>
