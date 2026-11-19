@@ -14,7 +14,7 @@ import xml.etree.ElementTree as ET
 HERE = os.path.dirname(os.path.abspath(__file__))
 YT_HANDLE = "picklebrx"
 YT_CHANNEL_ID = ""          # filled in automatically if empty (looked up from the handle)
-INSTAGRAM_FEED_ID = ""      # Behold feed ID, e.g. "AbC123xYz" (from behold.so > your feed > JSON)
+INSTAGRAM_FEED_ID = "HKCsNYibzzhqQyeDCWxn"  # Behold feed for @picklebrx (public, read-only)
 UA = {"User-Agent": "Mozilla/5.0 (compatible; pickleballrx-site-builder)", "Accept-Language": "en-US,en;q=0.9"}
 
 
