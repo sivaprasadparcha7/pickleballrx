@@ -113,7 +113,7 @@
       (p.warn ? '<div class="rx-warn">' + esc(p.warn) + '</div>' : '') +
       '<h4>Why this paddle</h4><ul class="rx-why">' + reasons(p, a).map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>' +
       '<div class="badges">' + links.join('') + '</div>' +
-      (p.code ? '<div class="rx-code"><span class="code-tag">Code PBRX</span> ' + esc(p.code) + ' at ' + esc(p.b) + ' &middot; <a href="codes.html">All codes</a></div>' : '') +
+      (p.code ? '<div class="rx-code"><span class="code-tag">Code PBRX</span> ' + (p.code === 'PBRX' ? 'at ' + esc(p.b) : esc(p.code) + ' at ' + esc(p.b) + ' &middot; <a href="codes.html">All codes</a>') + '</div>' : '') +
       '</div><div class="rx-score"><b>' + s + '</b><span>Rx score</span></div></article>';
   };
 

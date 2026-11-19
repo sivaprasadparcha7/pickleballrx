@@ -105,7 +105,7 @@ XRAY_PRICE = {}  # slug -> (US price, source)
 CAT_SPIN = {("Grit", "E1-CW Elongated"): "Grit E1 CW", ("Grit", "E1-TW Elongated"): "Grit E1 TW", ("Arronax", "Boost-1"): "Arronax Boost"}
 
 # Brands Siva wants featured in the finder (2026-11-18). Codes come only from CODES in build.py;
-# a brand here without a confirmed code shows no code until Siva confirms one.
+# Siva confirmed (2026-11-19) the code is PBRX at all of them; brands not in CODES show the code without a percentage.
 CODE_BRANDS = ["Arronax", "Bread & Butter", "11SIX24", "Aireo", "RPM", "Holbrook", "Luzz", "PACT", "Speedup", "Pickle Poppers",
                "Evolv", "E6", "Grit", "Mehau", "Honolulu", "FLiK", "CPX", "Vanwin"]
 _CB = {b.lower() for b in CODE_BRANDS}
@@ -280,6 +280,7 @@ def _rx_entry(brand, model, price, cur, core, shape_txt, mm_txt, approval, url, 
     code = next((cc for cc in CODES if cc["brand"].lower() == brand.lower()), None)
     if code: d["code"] = code["offer"]
     if brand.lower() in _CB or code: d["cb"] = 1
+    if brand.lower() in _CB and not code: d["code"] = "PBRX"  # Siva 2026-11-19: PBRX works at every partner brand; discount not stated
     _traits(d)
     return d
 
