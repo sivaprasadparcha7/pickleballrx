@@ -775,7 +775,6 @@ def lab_links(x):
 
 # ---------- X-Ray Rx (lab) ----------
 XRAY_DISCLAIMER = "Labels are our read of the X-ray, not a cutaway. Measurements are approximate."
-VIEWS = [("clean", "Clean"), ("labeled", "Labeled"), ("density", "Density estimate")]
 
 
 def xray_img(slug, view):
@@ -845,7 +844,10 @@ for x in XRAY:
     lab_img = xray_img(x["slug"], "labeled")
     main_fig = (f'<figure class="lab-item" style="margin-top:12px"><a href="../{lab_img}"><img src="../{lab_img}" alt="{e(x["name"])} labeled X-ray with spec panel" style="aspect-ratio:auto;object-fit:contain;background:#fff"></a><figcaption><strong>Labeled X-ray</strong> &middot; tap to open full size</figcaption></figure>'
                 if lab_img else '<div class="lab-ph" style="border-radius:14px;margin-top:12px">Labeled X-ray coming soon</div>')
-    extra = "".join(lab_fig(("../" + xray_img(x["slug"], v)) if xray_img(x["slug"], v) else "", f'{x["name"]} X-ray, {l.lower()}', f"<strong>{l}</strong>", l + " X-ray") for v, l in VIEWS if v != "labeled")
+    clean_img = xray_img(x["slug"], "clean")
+    clean_fig = (f'<h3 style="margin-top:26px">Clean X-ray</h3><p class="muted" style="margin:0">The same X-ray with no labels, so you can read it yourself.</p>'
+                 f'<figure class="lab-item" style="margin-top:12px;max-width:520px"><a href="../{clean_img}"><img src="../{clean_img}" alt="{e(x["name"])} clean X-ray, no labels" loading="lazy" style="aspect-ratio:auto;object-fit:contain;background:#000"></a><figcaption><strong>Clean X-ray</strong> &middot; tap to open full size</figcaption></figure>'
+                 if clean_img else "")
     head_rows = [("Core", x["core"]), ("Cells", x["cell_size"]), ("Perimeter", x["ring"]), ("Thickness", x["thickness"])]
     spec_rows = "".join(f'<tr><th>{e(k)}</th><td>{e(v) if v else "<span class=muted>Not listed</span>"}</td></tr>' for k, v in x["specs"])
     review = next((p for p in PADDLES if p["name"].lower() == x["name"].lower()), None)
@@ -874,8 +876,7 @@ for x in XRAY:
   <h2 id="xray">The X-ray</h2>
   <p class="muted" style="margin:0">{XRAY_DISCLAIMER} <a href="../disclaimers.html#xray">Disclaimers</a>.</p>
   {main_fig}
-  <h3 style="margin-top:26px">More views</h3>
-  <div class="lab-grid">{extra}</div>
+  {clean_fig}
   <h2 style="margin-top:34px">Specs</h2>
   <table class="specs">{spec_rows}</table>
   <p class="muted" style="font-size:.85rem;margin-top:8px">{e(x["sources"])}. Ring widths are measured from the X-ray, so they are estimates (&asymp;).</p>
