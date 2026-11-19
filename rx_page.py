@@ -273,8 +273,8 @@ def _rx_entry(brand, model, price, cur, core, shape_txt, mm_txt, approval, url, 
     elif approval and re.search(r"not usap|not usa", approval, re.I): d["warn"] = "Not USA Pickleball approved" if re.fullmatch(r"(?i)not usap approved", approval.strip()) else approval
     if xs == "cpx-hyper-plus": d["warn"] = "Currently delisted by USA Pickleball (Nov 2026)"
     d["slug"] = xs or slugify(name)
-    ph = (product_photo(xs) if xs else "") or product_photo(slugify(name))
-    for cand in [slugify(name)] + _CROP.get(xs, []) + ([extra["crop"]] if extra.get("crop") else []):
+    ph = (product_photo(xs) if xs else "") or product_photo(slugify(name)) or product_photo(slugify(re.sub(r"(?i)\s+(elongated|hybrid|standard)$", "", name)))
+    for cand in [slugify(name), slugify(re.sub(r"(?i)\s+(elongated|hybrid|standard)$", "", name))] + _CROP.get(xs, []) + ([extra["crop"]] if extra.get("crop") else []):
         if not ph and os.path.exists(os.path.join(OUT, f"assets/paddles/{cand}.jpg")): ph = f"assets/paddles/{cand}.jpg"
     if ph: d["ph"] = ph
     code = next((cc for cc in CODES if cc["brand"].lower() == brand.lower()), None)
@@ -433,4 +433,4 @@ write("finder.html", page("Paddle finder: get your paddle Rx | PickleballRx", f'
   </section>
 </section></div>
 <script src="assets/rx-data.js?v={ASSET_V}"></script>
-<script src="assets/rx.js?v={ASSET_V}"></script>''', 0, "finder", desc="Get your pickleball paddle Rx: answer questions on country, level, budget, core, foam, shape and priority, and our algorithm ranks paddles using our own lab testing."))
+<script src="assets/rx.js?v={ASSET_V}"></script>''', 0, "finder", desc="Get your pickleball paddle Rx: answer a few questions on level, budget, core, shape and priority, and we rank paddles using our own lab testing.", crumbs=[("Paddle finder", None)]))

@@ -117,6 +117,6 @@ write("paddles.html", page("Paddle database: every paddle by brand | PickleballR
   var u=new URLSearchParams(location.search); if(u.get('brand')){{$('c-b').value=u.get('brand')}}
   go();
 }})();
-</script>''', 0, "paddles", desc=f"Pickleball paddle database: {_n} paddles from {_nb} brands, with brand-listed shape, thickness, weight, core, face, size and price, plus links to our lab results."))
+</script>''', 0, "paddles", desc=f"Pickleball paddle database: {_n} paddles from {_nb} brands, with brand-listed shape, thickness, weight, core, face, size and price, plus links to our lab results.", crumbs=[("Paddle database", None)]))
 
 write("all-paddles.html", '<!doctype html><meta charset="utf-8"><title>Paddle database | PickleballRx</title><meta http-equiv="refresh" content="0; url=paddles.html"><link rel="canonical" href="https://pickleballrx.org/paddles.html"><a href="paddles.html">Paddle database</a>')
