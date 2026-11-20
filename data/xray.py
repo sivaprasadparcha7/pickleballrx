@@ -66,6 +66,20 @@ NAMES = {
  "sypik-avatar-pro": ("sypik-avatar-pro", "Sypik Avatar Pro", "Sypik"),
  "wika-air-1": ("wika-qd-air", "Wika QD Air (Air 1) 16mm", "Wika"),
  "aireo-cyclone": ("aireo-cyclone", "Aireo Cyclone 16mm", "Aireo"),
+ "arronax-boost": ("arronax-boost-1", "Arronax Boost-1", "Arronax"),
+ "gearbox-gx2": ("gearbox-gx2", "Gearbox GX2", "Gearbox"),
+ "joola-perseus-3s": ("joola-perseus-3s", "JOOLA Perseus 3S", "JOOLA"),
+ "joola-perseus-v": ("joola-perseus-pro-v", "JOOLA Perseus Pro V", "JOOLA"),
+ "joola-scorpeus-iv": ("joola-scorpeus-pro-iv", "JOOLA Scorpeus Pro IV", "JOOLA"),
+ "li-ning-hyperpower-90s-gen3": ("li-ning-hyperpower-90s-gen-3", "Li-Ning HyperPower 90S Gen 3", "Li-Ning"),
+ "luzz-cannon": ("luzz-cannon", "Luzz Pro Cannon (original)", "Luzz"),
+ "mehau-x4": ("mehau-x4", "Mehau X4 Power Series", "Mehau"),
+ "mehau-x5": ("mehau-x5", "Mehau X5 Power Series", "Mehau"),
+ "soxter-impact-pro": ("soxter-impact-pro", "Soxter Impact Pro 16mm", "Soxter"),
+ "wika-bao-fire-2": ("wika-bao-fire-evolution-2", "Wika Bao Fire Evolution 2 16mm", "Wika"),
+ "wika-next-x": ("wika-next-x", "Wika Next-X 16mm", "Wika"),
+ "wika-predator": ("wika-predator", "Wika Predator 16mm", "Wika"),
+ "wika-qd-fire-2": ("wika-qd-fire-2", "Wika QD Fire 2", "Wika"),
 }
 
 REELS = {

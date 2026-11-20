@@ -80,6 +80,7 @@ LINKS = {  # X-ray slug -> (grit collection name, spin table name)
     "luzz-cannon-xpp": ("Luzz Cannon XPP M1", "Luzz Cannon XPP"), "luzz-glider-2026": ("Luzz Glider 2026", None),
     "mehau-e5": ("Mehau E5", None), "mehau-s5": ("Mehau S5", None), "sypik-triton-5": ("Sypik Triton 5", None),
     "vanwin-alpha-control": ("VANWIN Alpha Control", None), "proton-project-coyote": ("Proton Project Coyote", None), "spartus-spitfire": ("Spartus Spitfire", "Spartus Spitfire"),
+    "arronax-boost-1": ("Arronax Boost-1", "Arronax Boost"),
     "speedup-tide": ("Speed Up Tide", "Speed Up Tide"), "vanwin-alpha-power": ("VANWIN Alpha Power", None), "mehau-e4": ("Mehau E4", None),
 }
 
@@ -951,7 +952,7 @@ SPEC_LINKS = {  # spec card id -> (X-ray slug, spin table name, grit collection 
     "gearbox-8e": ("gearbox-pressure-x-8e", "Gearbox Pressure XE", "Gearbox Pressure X 8E"),
     "pop-n-rush": ("pickle-poppers-pop-n-rush", "Pop N Rush", "Pickle Poppers Pop N Rush"),
     "bnb-loco": (None, "Bread & Butter Loco 2 Elongated", "Bread & Butter LOCO 2"),
-    "arronax-boost-1": (None, "Arronax Boost", "Arronax Boost-1"),
+    "arronax-boost-1": ("arronax-boost-1", "Arronax Boost", "Arronax Boost-1"),
 }
 
 
