@@ -67,7 +67,8 @@ NAME_PHOTO = {"Gearbox Pressure XE": "gearbox-pressure-x-8e", "Gearbox Pressure 
               "CPX Hyper+": "cpx-hyper-plus", "E6 Ignis": "e6-ignis",
               "RPM Jade": "rpm-jade", "Mehau S5": "mehau-s5", "Proton Project Coyote": "proton-project-coyote",
               "VANWIN Alpha Control": "vanwin-alpha-control", "Luzz Glider 2026": "luzz-glider-2026",
-              "Selkirk LABS Project Boomstik": "selkirk-labs-project-boomstik", "Zcebra Gazelle": "zcebra-gazelle"}
+              "Selkirk LABS Project Boomstik": "selkirk-labs-project-boomstik", "Zcebra Gazelle": "zcebra-gazelle",
+              "Diadem Edge BluCore": "diadem-edge-blucore-pro-14"}
 # Extra colorways shown on a paddle's own page (assets/paddles/product/<slug>-<color>.jpg).
 COLORWAYS = {"grit-e2-cf": [("", "Green, Launch Edition"), ("pink", "Pink"), ("white", "White")]}
 
@@ -1147,8 +1148,11 @@ def gallery(items, min_w=300):
     return f'<div class="lab-grid" style="grid-template-columns:repeat(auto-fill,minmax({min_w}px,1fr));margin-top:18px;align-items:start">{figs}</div>' if figs else ""
 
 
-collection_fig = card_fig("all-39-grit.jpg", f"<strong>All {len(LABS['grit'])} paddles</strong> &middot; same 4K microscope, M lens &middot; tap to open full size", f"Grid of {len(LABS['grit'])} paddle faces under the microscope")
+GRID_IMG = f"all-{len(LABS['grit'])}-grit.jpg"  # rename the grid file when the collection grows
+collection_fig = card_fig(GRID_IMG, f"<strong>All {len(LABS['grit'])} paddles</strong> &middot; same 4K microscope, M lens &middot; tap to open full size", f"Grid of {len(LABS['grit'])} paddle faces under the microscope")
 new_gallery = gallery([
+    ("card-diadem-edge-blucore.jpg", "<strong>Diadem Edge BluCore</strong> &middot; Triaxial 3D 18K carbon, M lens", "Diadem Edge BluCore triaxial carbon surface under the microscope"),
+    ("card-diadem-edge-blucore-lm.jpg", "<strong>Diadem Edge BluCore</strong> &middot; L and M lenses", "Diadem Edge BluCore at the L and M lenses"),
     ("card-arronax-boost-1.jpg", "<strong>Arronax Boost-1</strong> &middot; GritBite surface, M lens", "Arronax Boost-1 GritBite surface under the microscope"),
     ("card-volair-cmd.jpg", "<strong>Volair CMD</strong> &middot; HexGrit (licensed from 11SIX24)", "Volair CMD HexGrit surface under the microscope"),
     ("card-arronax-kvl-005.jpg", "<strong>Arronax KVL 005</strong> &middot; T800 carbon, peel-ply texture", "Arronax KVL 005 peel-ply surface under the microscope"),
@@ -1218,7 +1222,7 @@ write("grit.html", page("Grit Lab: pickleball paddle grit under a microscope | P
   <p id="grit-e1" class="muted" style="font-size:.9rem;margin-top:12px">Grit E1 CW and E1 TW are recreational-play paddles that are not USA Pickleball approved.</p>
 </section>
 <section style="padding-top:0"><div class="note">{GRIT_DISCLAIMER} <a href="disclaimers.html#grit">Disclaimers</a>.</div></section>
-</div>""", 0, "grit", desc=f"{len(LABS['grit'])} pickleball paddle faces under a 4K microscope: compare grit, texture and face materials, plus grit wear studies after real play.", image="assets/grit/cards/all-39-grit.jpg", image_alt="Pickleball paddle faces under a 4K microscope", crumbs=[("Grit Lab", None)]))
+</div>""", 0, "grit", desc=f"{len(LABS['grit'])} pickleball paddle faces under a 4K microscope: compare grit, texture and face materials, plus grit wear studies after real play.", image=f"assets/grit/cards/{GRID_IMG}", image_alt="Pickleball paddle faces under a 4K microscope", crumbs=[("Grit Lab", None)]))
 
 # ---------- Spin Lab ----------
 spin_all = LABS["spin"]
