@@ -981,7 +981,7 @@
   },
   {
    "slug": "gearbox-gx2",
-   "name": "Gearbox GX2",
+   "name": "Gearbox GX2 Power",
    "brand": "Gearbox",
    "image": "gearbox-gx2-labeled.png",
    "core": "SST 2.0 CarbonRibCore (T700 carbon)",
@@ -3027,7 +3027,7 @@
   },
   {
    "slug": "soxter-impact-pro",
-   "name": "Soxter Impact Pro 16mm",
+   "name": "Soxter Impact Pro 3.0 16mm",
    "brand": "Soxter",
    "image": "soxter-impact-pro-labeled.png",
    "core": "Full foam seen (retailers: PP honeycomb)",

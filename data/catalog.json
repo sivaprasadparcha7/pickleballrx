@@ -516,7 +516,8 @@
      "model": "GX2 Power",
      "shape": "Elongated / Hybrid",
      "price": 279.99,
-     "url": "https://gearboxsports.com/products/gx2-power-hybrid"
+     "url": "https://gearboxsports.com/products/gx2-power-hybrid",
+     "tested": "gearbox-gx2"
     },
     {
      "model": "GX2 Integra XL",
