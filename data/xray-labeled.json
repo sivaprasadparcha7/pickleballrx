@@ -3515,7 +3515,7 @@
   "core": "PP honeycomb (Propulsion) + Hyperfoam wall",
   "cell_size": "≈ 8.0 mm measured (not disclosed)",
   "perimeter_ring": "≈ 23–25 mm foam edge wall",
-  "thickness": "16 mm (spec; 14 mm also sold)",
+  "thickness": "16 mm",
   "face": "Textured carbon fiber, thermoformed",
   "weight": "≈ 8.0 oz avg (spec)",
   "size": "16.5 x 7.5 in, elongated",
@@ -3531,7 +3531,7 @@
    ],
    [
     "Core thickness",
-    "16 mm (spec; 14 mm also sold)"
+    "16 mm"
    ],
    [
     "Perimeter",
@@ -3563,8 +3563,8 @@
   "cell_size": "≈ 8.3 mm measured (not disclosed)",
   "perimeter_ring": "≈ 10 mm cell-free edge band",
   "thickness": "20 mm (spec)",
-  "face": "Carbon, rough finish (18K on Pro Series SE)",
-  "weight": "225 g Fiesta / 235 g Pro Series SE (spec)",
+  "face": "18K carbon, rough finish",
+  "weight": "235 g (spec)",
   "size": "40.4 x 20.4 cm (15.9 x 8.0 in)",
   "source_file": "nordic-dots-labeled.png",
   "specs": [
@@ -3586,11 +3586,11 @@
    ],
    [
     "Face",
-    "Carbon, rough finish (18K on Pro Series SE)"
+    "18K carbon, rough finish"
    ],
    [
     "Weight",
-    "225 g Fiesta / 235 g Pro Series SE (spec)"
+    "235 g (spec)"
    ],
    [
     "Size",

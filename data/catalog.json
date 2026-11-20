@@ -71,7 +71,12 @@
      "mm": "14",
      "price": 149.95,
      "was": 249.95,
-     "url": "https://joola.com/products/joola-perseus-iv-14mm-pickleball-paddle-1",
+     "url": "https://joola.com/products/joola-perseus-iv-14mm-pickleball-paddle-1"
+    },
+    {
+     "model": "Perseus Pro IV 16mm",
+     "mm": "16",
+     "shape": "Elongated",
      "tested": "joola-perseus-pro-iv"
     },
     {
