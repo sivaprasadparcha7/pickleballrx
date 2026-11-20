@@ -48,8 +48,13 @@ CODES = [  # confirmed by Siva 2026-11-17
 
 
 
+# Paddle names whose photo is filed under a shorter slug.
+PHOTO_ALIAS = {"spartus-p1-with-permagrit": "spartus-p1"}
+
+
 def product_photo(slug):
     """Brand product photo supplied by Siva, keyed by X-ray slug (assets/paddles/product/<slug>.jpg)."""
+    slug = PHOTO_ALIAS.get(slug, slug)
     rel = f"assets/paddles/product/{slug}.jpg"
     return rel if slug and os.path.exists(os.path.join(OUT, rel)) else ""
 
@@ -762,7 +767,7 @@ SENPAI_PICKS = [
 ]
 def _ext_card(i, b, m, n, l):
     xs = l[1][5:-5] if l and l[1].startswith("xray/") else ""
-    ph = product_photo(_slug(b + " " + m)) or product_photo(xs) or (f"assets/paddles/{xs}.jpg" if xs and os.path.exists(os.path.join(OUT, f"assets/paddles/{xs}.jpg")) else "")
+    ph = product_photo(_slug(b + " " + m)) or product_photo(_slug(b + " " + _re.sub(r"\s*\(.*?\)", "", m))) or product_photo(xs) or (f"assets/paddles/{xs}.jpg" if xs and os.path.exists(os.path.join(OUT, f"assets/paddles/{xs}.jpg")) else "")
     img = f'<img class="lb-thumb" src="{ph}" alt="{e(b)} {e(m)}" loading="lazy" style="object-fit:contain">' if ph else ""
     return (f'<div class="lb-item"{"" if ph else " style=\'grid-template-columns:auto 1fr\'"}><div class="lb-rank">{i}</div>{img}<div style="min-width:0">'
             f'<div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">{e(b)}</div>'
@@ -772,12 +777,12 @@ def _ext_card(i, b, m, n, l):
             + '</div></div>')
 senpai_html = "".join(_ext_card(i, *r) for i, r in enumerate(SENPAI_PICKS, 1))
 
-# PB on Call's favorite picks, relayed by Siva (2026-11-19), in their order. Shapes are as PB on Call named them.
+# PB on Call's favorite picks, relayed by Siva (2026-11-19), in their order. Photos supplied by Siva (2026-11-20). Shapes are as PB on Call named them.
 ONCALL_PICKS = [
     ("E6", "Ignis (Flat-Top Hybrid)", "We've X-rayed the Ignis Elongated. Photo is the Elongated.", ("Ignis X-ray", "xray/e6-ignis.html")),
     ("Pickleball Apes", "Zen (S+)", "", None),
     ("Gherkin", "Draco OP (Hybrid)", "", ("Gherkin store", "https://www.gherkinusa.com/products/draco-op")),
-    ("Spartus", "P1 (Standard)", "", ("Spartus store", "https://gospartus.com/products/p1-hybrid")),
+    ("Spartus", "P1 (Standard)", "Photo is the P1 Hybrid.", ("Spartus store", "https://gospartus.com/products/p1-hybrid")),
     ("11SIX24", "Jelly Bean 2 (Pegasus)", "We've X-rayed the Hurache-X Jelly Bean 2.", ("Jelly Bean 2 X-ray", "xray/11six24-hurache-jelly-bean-2.html")),
 ]
 def _oncall_card(i, b, m, n, l):
