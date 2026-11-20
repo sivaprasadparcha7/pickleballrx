@@ -107,6 +107,60 @@
    "unreleased": false
   },
   {
+   "slug": "aireo-cyclone",
+   "name": "Aireo Cyclone 16mm",
+   "brand": "Aireo",
+   "image": "aireo-cyclone-labeled.png",
+   "core": "PulseFoam: microcellular PP (MPP)",
+   "cell_size": "No honeycomb in face; handle ≈ 5–6 mm",
+   "ring": "≈ 27 mm (±2): 12 mm band + 15 mm frame",
+   "thickness": "16 mm",
+   "face": "T700 raw carbon fibre",
+   "weight": "7.7 oz avg listed (7.57 oz measured)",
+   "size": "16.46 x 7.51 in (418 x 191 mm), Elongated",
+   "specs": [
+    [
+     "Core type",
+     "PulseFoam: microcellular PP (MPP)"
+    ],
+    [
+     "Cell size",
+     "No honeycomb in face; handle ≈ 5–6 mm"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "≈ 27 mm (±2): 12 mm band + 15 mm frame"
+    ],
+    [
+     "Face",
+     "T700 raw carbon fibre"
+    ],
+    [
+     "Weight",
+     "7.7 oz avg listed (7.57 oz measured)"
+    ],
+    [
+     "Size",
+     "16.46 x 7.51 in (418 x 191 mm), Elongated"
+    ],
+    [
+     "Handle",
+     "5.7 in, 4.13 in grip"
+    ]
+   ],
+   "sources": "Specs: Spinwave / Aireo (Cyclone 16mm listing), Matt's Pickleball (measured weight). Scale from 191 mm width. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam",
+    "mpp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
    "slug": "arronax-kvl-004",
    "name": "Arronax KVL-004",
    "brand": "Arronax",
