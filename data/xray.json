@@ -107,6 +107,114 @@
    "unreleased": false
   },
   {
+   "slug": "aireo-cyclone",
+   "name": "Aireo Cyclone 16mm",
+   "brand": "Aireo",
+   "image": "aireo-cyclone-labeled.png",
+   "core": "PulseFoam: microcellular PP (MPP)",
+   "cell_size": "No honeycomb in face; handle ≈ 5–6 mm",
+   "ring": "≈ 27 mm (±2): 12 mm band + 15 mm frame",
+   "thickness": "16 mm",
+   "face": "T700 raw carbon fibre",
+   "weight": "7.7 oz avg listed (7.57 oz measured)",
+   "size": "16.46 x 7.51 in (418 x 191 mm), Elongated",
+   "specs": [
+    [
+     "Core type",
+     "PulseFoam: microcellular PP (MPP)"
+    ],
+    [
+     "Cell size",
+     "No honeycomb in face; handle ≈ 5–6 mm"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "≈ 27 mm (±2): 12 mm band + 15 mm frame"
+    ],
+    [
+     "Face",
+     "T700 raw carbon fibre"
+    ],
+    [
+     "Weight",
+     "7.7 oz avg listed (7.57 oz measured)"
+    ],
+    [
+     "Size",
+     "16.46 x 7.51 in (418 x 191 mm), Elongated"
+    ],
+    [
+     "Handle",
+     "5.7 in, 4.13 in grip"
+    ]
+   ],
+   "sources": "Specs: Spinwave / Aireo (Cyclone 16mm listing), Matt's Pickleball (measured weight). Scale from 191 mm width. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "foam",
+    "mpp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "arronax-boost-1",
+   "name": "Arronax Boost-1",
+   "brand": "Arronax",
+   "image": "arronax-boost-labeled.png",
+   "core": "Full foam: MPP + EVA double layer",
+   "cell_size": "No honeycomb in face (handle ≈ 9 mm)",
+   "ring": "≈ 27 mm (±1): 8.5 mm band + 18.5 mm frame",
+   "thickness": "16 mm",
+   "face": "Toray T700 carbon, frosted texture",
+   "weight": "220 ± 5 g (≈ 7.8 oz) listed",
+   "size": "416 x 186 mm (16.4 x 7.3 in)",
+   "specs": [
+    [
+     "Core type",
+     "Full foam: MPP + EVA double layer"
+    ],
+    [
+     "Cell size",
+     "No honeycomb in face (handle ≈ 9 mm)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "≈ 27 mm (±1): 8.5 mm band + 18.5 mm frame"
+    ],
+    [
+     "Face",
+     "Toray T700 carbon, frosted texture"
+    ],
+    [
+     "Weight",
+     "220 ± 5 g (≈ 7.8 oz) listed"
+    ],
+    [
+     "Size",
+     "416 x 186 mm (16.4 x 7.3 in)"
+    ],
+    [
+     "Handle",
+     "145 mm (5.7 in), 102 mm grip"
+    ]
+   ],
+   "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
+   "tags": [
+    "foam",
+    "mpp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
    "slug": "arronax-kvl-004",
    "name": "Arronax KVL-004",
    "brand": "Arronax",
@@ -872,6 +980,59 @@
    "unreleased": false
   },
   {
+   "slug": "gearbox-gx2",
+   "name": "Gearbox GX2 Power",
+   "brand": "Gearbox",
+   "image": "gearbox-gx2-labeled.png",
+   "core": "SST 2.0 CarbonRibCore (T700 carbon)",
+   "cell_size": "≈ 6.6 mm walls, ≈ 19 mm rows (measured)",
+   "ring": "≈ 24–25 mm ring (±1.5), top ≈ 21 mm",
+   "thickness": "",
+   "face": "3K woven raw carbon fibre",
+   "weight": "8.0 oz avg (7.9–8.1)",
+   "size": "16.5 x 7.375 in, 16 mm (Elongated, assumed)",
+   "specs": [
+    [
+     "Core type",
+     "SST 2.0 CarbonRibCore (T700 carbon)"
+    ],
+    [
+     "Rib spacing",
+     "≈ 6.6 mm walls, ≈ 19 mm rows (measured)"
+    ],
+    [
+     "Perimeter",
+     "≈ 24–25 mm ring (±1.5), top ≈ 21 mm"
+    ],
+    [
+     "Face",
+     "3K woven raw carbon fibre"
+    ],
+    [
+     "Weight",
+     "8.0 oz avg (7.9–8.1)"
+    ],
+    [
+     "Size",
+     "16.5 x 7.375 in, 16 mm (Elongated, assumed)"
+    ],
+    [
+     "Handle",
+     "5.5 in, stepped insert ≈ 18 x 80 mm"
+    ],
+    [
+     "Inserts",
+     "4 corner weight blocks + 2 shoulder strips"
+    ]
+   ],
+   "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
    "slug": "gearbox-pressure-x-8e",
    "name": "Gearbox Pressure X 8E",
    "brand": "Gearbox",
@@ -1143,6 +1304,165 @@
    "unreleased": false
   },
   {
+   "slug": "joola-perseus-3s",
+   "name": "JOOLA Perseus 3S",
+   "brand": "JOOLA",
+   "image": "joola-perseus-3s-labeled.png",
+   "core": "PP honeycomb (Propulsion Core) + foam",
+   "cell_size": "≈ 8.1 mm measured (not disclosed)",
+   "ring": "≈ 21–25 mm upper, ≈ 10–12 mm lower",
+   "thickness": "16 mm (spec; 14 mm also sold)",
+   "face": "Charged Carbon (carbon friction surface)",
+   "weight": "≈ 8.0 oz avg (7.8–8.2 oz)",
+   "size": "16.5 x 7.5 in, elongated (Perseus)",
+   "specs": [
+    [
+     "Core type",
+     "PP honeycomb (Propulsion Core) + foam"
+    ],
+    [
+     "Cell size",
+     "≈ 8.1 mm measured (not disclosed)"
+    ],
+    [
+     "Core thickness",
+     "16 mm (spec; 14 mm also sold)"
+    ],
+    [
+     "Perimeter",
+     "≈ 21–25 mm upper, ≈ 10–12 mm lower"
+    ],
+    [
+     "Face",
+     "Charged Carbon (carbon friction surface)"
+    ],
+    [
+     "Weight",
+     "≈ 8.0 oz avg (7.8–8.2 oz)"
+    ],
+    [
+     "Size",
+     "16.5 x 7.5 in, elongated (Perseus)"
+    ],
+    [
+     "Handle",
+     "5.5 in, 4.25 in grip"
+    ]
+   ],
+   "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "joola-perseus-pro-v",
+   "name": "JOOLA Perseus Pro V",
+   "brand": "JOOLA",
+   "image": "joola-perseus-v-labeled.png",
+   "core": "PP honeycomb (Propulsion Core) + foam edge",
+   "cell_size": "≈ 8.3 mm measured (not disclosed)",
+   "ring": "≈ 21–24 mm upper, edge-only lower",
+   "thickness": "16 mm (spec; 14 mm also sold)",
+   "face": "Textured carbon friction surface",
+   "weight": "≈ 8.1 oz avg (7.9–8.3 oz)",
+   "size": "16.5 x 7.5 in, elongated (Perseus)",
+   "specs": [
+    [
+     "Core type",
+     "PP honeycomb (Propulsion Core) + foam edge"
+    ],
+    [
+     "Cell size",
+     "≈ 8.3 mm measured (not disclosed)"
+    ],
+    [
+     "Core thickness",
+     "16 mm (spec; 14 mm also sold)"
+    ],
+    [
+     "Perimeter",
+     "≈ 21–24 mm upper, edge-only lower"
+    ],
+    [
+     "Face",
+     "Textured carbon friction surface"
+    ],
+    [
+     "Weight",
+     "≈ 8.1 oz avg (7.9–8.3 oz)"
+    ],
+    [
+     "Size",
+     "16.5 x 7.5 in, elongated (Perseus)"
+    ],
+    [
+     "Handle",
+     "5.5 in, 4.25 in grip"
+    ]
+   ],
+   "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "joola-scorpeus-pro-iv",
+   "name": "JOOLA Scorpeus Pro IV",
+   "brand": "JOOLA",
+   "image": "joola-scorpeus-iv-labeled.png",
+   "core": "PP honeycomb (Propulsion) + EVA foam wall",
+   "cell_size": "≈ 8.2 mm measured (not disclosed)",
+   "ring": "≈ 23–26 mm foam-filled ring",
+   "thickness": "16 mm (spec; 14 mm also sold)",
+   "face": "Textured carbon fiber",
+   "weight": "≈ 8.1–8.2 oz avg (8.0–8.4 oz)",
+   "size": "16 x 8 in, wide body (Scorpeus)",
+   "specs": [
+    [
+     "Core type",
+     "PP honeycomb (Propulsion) + EVA foam wall"
+    ],
+    [
+     "Cell size",
+     "≈ 8.2 mm measured (not disclosed)"
+    ],
+    [
+     "Core thickness",
+     "16 mm (spec; 14 mm also sold)"
+    ],
+    [
+     "Perimeter",
+     "≈ 23–26 mm foam-filled ring"
+    ],
+    [
+     "Face",
+     "Textured carbon fiber"
+    ],
+    [
+     "Weight",
+     "≈ 8.1–8.2 oz avg (8.0–8.4 oz)"
+    ],
+    [
+     "Size",
+     "16 x 8 in, wide body (Scorpeus)"
+    ],
+    [
+     "Handle",
+     "5.25 in, 4.25 in grip"
+    ]
+   ],
+   "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
    "slug": "kamito-alpha-x",
    "name": "Kamito Alpha-X",
    "brand": "Kamito",
@@ -1297,6 +1617,59 @@
     ]
    ],
    "sources": "Specs: lining.com.vn (HyperPower 90S), USA Pickleball approved list. Width not published; labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "li-ning-hyperpower-90s-gen-3",
+   "name": "Li-Ning HyperPower 90S Gen 3",
+   "brand": "Li-Ning",
+   "image": "li-ning-hyperpower-90s-gen3-labeled.png",
+   "core": "PP high-density honeycomb",
+   "cell_size": "≈ 8.2 mm (±0.3, measured)",
+   "ring": "≈ 26 mm ring (±1): 12 mm band + 14 mm foam",
+   "thickness": "14 or 16 mm (not shown on X-ray)",
+   "face": "Carbon fiber",
+   "weight": "223 g (14 mm) · 228 g (16 mm)",
+   "size": "419 mm long (16.5 in) · width n/d",
+   "specs": [
+    [
+     "Core type",
+     "PP high-density honeycomb"
+    ],
+    [
+     "Cell size",
+     "≈ 8.2 mm (±0.3, measured)"
+    ],
+    [
+     "Perimeter",
+     "≈ 26 mm ring (±1): 12 mm band + 14 mm foam"
+    ],
+    [
+     "Face",
+     "Carbon fiber"
+    ],
+    [
+     "Weight",
+     "223 g (14 mm) · 228 g (16 mm)"
+    ],
+    [
+     "Size",
+     "419 mm long (16.5 in) · width n/d"
+    ],
+    [
+     "Thickness",
+     "14 or 16 mm (not shown on X-ray)"
+    ],
+    [
+     "Grip",
+     "LG4 1/8 · medium balance"
+    ]
+   ],
+   "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
    "tags": [
     "honeycomb"
    ],
@@ -1513,6 +1886,59 @@
    "tags": [
     "foam",
     "mpp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "luzz-cannon",
+   "name": "Luzz Pro Cannon (original)",
+   "brand": "Luzz",
+   "image": "luzz-cannon-labeled.png",
+   "core": "PP honeycomb + EVA / expanding foam",
+   "cell_size": "≈ 8.5 mm measured (8 mm listed)",
+   "ring": "≈ 25 mm (±1.5): 11 mm band + 15 mm foam",
+   "thickness": "16 mm",
+   "face": "T700 raw carbon, peel-ply texture",
+   "weight": "7.93 oz avg (7.73–8.13)",
+   "size": "16.54 x 7.48 in (420 x 190 mm), Elongated",
+   "specs": [
+    [
+     "Core type",
+     "PP honeycomb + EVA / expanding foam"
+    ],
+    [
+     "Cell size",
+     "≈ 8.5 mm measured (8 mm listed)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "≈ 25 mm (±1.5): 11 mm band + 15 mm foam"
+    ],
+    [
+     "Face",
+     "T700 raw carbon, peel-ply texture"
+    ],
+    [
+     "Weight",
+     "7.93 oz avg (7.73–8.13)"
+    ],
+    [
+     "Size",
+     "16.54 x 7.48 in (420 x 190 mm), Elongated"
+    ],
+    [
+     "Handle",
+     "5.52 in, 4.13 in grip"
+    ]
+   ],
+   "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
+   "tags": [
+    "honeycomb"
    ],
    "reel": "",
    "unreleased": false
@@ -1783,6 +2209,112 @@
     ]
    ],
    "sources": "Specs: mehaupickleball.com (S5 Airpoom). Foam band identified as EVA from Mehau's core description; X-ray interpretation, not a cutaway.",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "mehau-x4",
+   "name": "Mehau X4 Power Series",
+   "brand": "Mehau",
+   "image": "mehau-x4-labeled.png",
+   "core": "PP honeycomb + EVA (X4 spec)",
+   "cell_size": "≈ 8.3 mm measured (not disclosed)",
+   "ring": "≈ 28 mm ring (±2): 13 + 15 mm bands",
+   "thickness": "16 mm",
+   "face": "Carbon fiber, 3D carbon weave surface",
+   "weight": "230 g ± 5 g (≈ 8.1 oz)",
+   "size": "16.46\" × 7.36\" (418 × 187 mm), elongated",
+   "specs": [
+    [
+     "Core type",
+     "PP honeycomb + EVA (X4 spec)"
+    ],
+    [
+     "Cell size",
+     "≈ 8.3 mm measured (not disclosed)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "≈ 28 mm ring (±2): 13 + 15 mm bands"
+    ],
+    [
+     "Face",
+     "Carbon fiber, 3D carbon weave surface"
+    ],
+    [
+     "Weight",
+     "230 g ± 5 g (≈ 8.1 oz)"
+    ],
+    [
+     "Size",
+     "16.46\" × 7.36\" (418 × 187 mm), elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.71\" / 4.13–4.25\""
+    ]
+   ],
+   "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "mehau-x5",
+   "name": "Mehau X5 Power Series",
+   "brand": "Mehau",
+   "image": "mehau-x5-labeled.png",
+   "core": "STPEV elastomer + PP honeycomb",
+   "cell_size": "≈ 8.2 mm measured (not disclosed)",
+   "ring": "≈ 26 mm ring (±1.5): 12.5 + 13.5 mm bands",
+   "thickness": "16 mm",
+   "face": "Carbon fiber, 3D carbon weave surface",
+   "weight": "230 g ± 5 g (≈ 8.1 oz)",
+   "size": "16.46\" × 7.36\" (418 × 187 mm), elongated",
+   "specs": [
+    [
+     "Core type",
+     "STPEV elastomer + PP honeycomb"
+    ],
+    [
+     "Cell size",
+     "≈ 8.2 mm measured (not disclosed)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "≈ 26 mm ring (±1.5): 12.5 + 13.5 mm bands"
+    ],
+    [
+     "Face",
+     "Carbon fiber, 3D carbon weave surface"
+    ],
+    [
+     "Weight",
+     "230 g ± 5 g (≈ 8.1 oz)"
+    ],
+    [
+     "Size",
+     "16.46\" × 7.36\" (418 × 187 mm), elongated"
+    ],
+    [
+     "Handle / grip",
+     "5.71\" / 4.13–4.25\""
+    ]
+   ],
+   "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
    "tags": [
     "honeycomb"
    ],
@@ -2494,6 +3026,59 @@
    "unreleased": false
   },
   {
+   "slug": "soxter-impact-pro",
+   "name": "Soxter Impact Pro 3.0 16mm",
+   "brand": "Soxter",
+   "image": "soxter-impact-pro-labeled.png",
+   "core": "Full foam seen (retailers: PP honeycomb)",
+   "cell_size": "None in face; handle ≈ 7 mm",
+   "ring": "≈ 21–22 mm ring (±1.5), edge guard ≈ 4 mm",
+   "thickness": "",
+   "face": "Kevlar composite (Impact Pro listing)",
+   "weight": "220 ± 5 g (≈ 7.8 oz)",
+   "size": "400 x 200 mm (15.7 x 7.9 in), 16 mm",
+   "specs": [
+    [
+     "Core type",
+     "Full foam seen (retailers: PP honeycomb)"
+    ],
+    [
+     "Cell size",
+     "None in face; handle ≈ 7 mm"
+    ],
+    [
+     "Perimeter",
+     "≈ 21–22 mm ring (±1.5), edge guard ≈ 4 mm"
+    ],
+    [
+     "Face",
+     "Kevlar composite (Impact Pro listing)"
+    ],
+    [
+     "Weight",
+     "220 ± 5 g (≈ 7.8 oz)"
+    ],
+    [
+     "Size",
+     "400 x 200 mm (15.7 x 7.9 in), 16 mm"
+    ],
+    [
+     "Handle",
+     "140 mm (5.5 in)"
+    ],
+    [
+     "Inserts",
+     "2 shoulder strips (likely weights)"
+    ]
+   ],
+   "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
    "slug": "spartus-spitfire",
    "name": "Spartus Spitfire",
    "brand": "Spartus",
@@ -2872,6 +3457,167 @@
    "unreleased": false
   },
   {
+   "slug": "wika-bao-fire-evolution-2",
+   "name": "Wika Bao Fire Evolution 2 16mm",
+   "brand": "Wika",
+   "image": "wika-bao-fire-2-labeled.png",
+   "core": "EPP foam (Gen 4 full foam)",
+   "cell_size": "",
+   "ring": "≈ 25 mm ring (±1): 9 mm frame + 16 mm band",
+   "thickness": "16 mm",
+   "face": "Thermoformed carbon fibre, peel-ply texture",
+   "weight": "7.81 oz (≈ 221 g), measured",
+   "size": "16.5 x 7.5 in (419 x 190 mm), elongated",
+   "specs": [
+    [
+     "Core type",
+     "EPP foam (Gen 4 full foam)"
+    ],
+    [
+     "Core thickness",
+     "16 mm"
+    ],
+    [
+     "Perimeter",
+     "≈ 25 mm ring (±1): 9 mm frame + 16 mm band"
+    ],
+    [
+     "Face",
+     "Thermoformed carbon fibre, peel-ply texture"
+    ],
+    [
+     "Weight",
+     "7.81 oz (≈ 221 g), measured"
+    ],
+    [
+     "Size",
+     "16.5 x 7.5 in (419 x 190 mm), elongated"
+    ],
+    [
+     "Handle",
+     "5.75 in (146 mm), 4.125 in grip"
+    ],
+    [
+     "Inserts",
+     "Throat wedges + handle block; no MOI weights listed"
+    ]
+   ],
+   "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
+   "tags": [
+    "foam",
+    "epp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "wika-next-x",
+   "name": "Wika Next-X 16mm",
+   "brand": "Wika",
+   "image": "wika-next-x-labeled.png",
+   "core": "NEXT-CORE PP honeycomb + silicone",
+   "cell_size": "≈ 8.1 mm (measured; handle ≈ 8.4 mm)",
+   "ring": "≈ 26 mm ring (±1): 8.5 mm band + 17 mm foam",
+   "thickness": "",
+   "face": "W-S|GRIT carbon, glass-particle texture",
+   "weight": "225 ± 5 g (≈ 7.9 oz)",
+   "size": "419 x 190 mm (16.5 x 7.5 in), 16 mm",
+   "specs": [
+    [
+     "Core type",
+     "NEXT-CORE PP honeycomb + silicone"
+    ],
+    [
+     "Cell size",
+     "≈ 8.1 mm (measured; handle ≈ 8.4 mm)"
+    ],
+    [
+     "Perimeter",
+     "≈ 26 mm ring (±1): 8.5 mm band + 17 mm foam"
+    ],
+    [
+     "Face",
+     "W-S|GRIT carbon, glass-particle texture"
+    ],
+    [
+     "Weight",
+     "225 ± 5 g (≈ 7.9 oz)"
+    ],
+    [
+     "Size",
+     "419 x 190 mm (16.5 x 7.5 in), 16 mm"
+    ],
+    [
+     "Handle",
+     "140 mm (5.5 in)"
+    ],
+    [
+     "Inserts",
+     "4 lead sheets (2 per side)"
+    ]
+   ],
+   "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "wika-predator",
+   "name": "Wika Predator 16mm",
+   "brand": "Wika",
+   "image": "wika-predator-labeled.png",
+   "core": "Hybrid Core: honeycomb star + EPP foam",
+   "cell_size": "≈ 8.2 mm (measured; handle ≈ 8.4 mm)",
+   "ring": "≈ 28 mm ring (±1): 9 mm frame + 19 mm foam",
+   "thickness": "",
+   "face": "XK119 carbon, high-grit",
+   "weight": "230 ± 5 g (≈ 8.1 oz)",
+   "size": "419 x 188 mm (16.5 x 7.4 in), 16 mm",
+   "specs": [
+    [
+     "Core type",
+     "Hybrid Core: honeycomb star + EPP foam"
+    ],
+    [
+     "Cell size",
+     "≈ 8.2 mm (measured; handle ≈ 8.4 mm)"
+    ],
+    [
+     "Perimeter",
+     "≈ 28 mm ring (±1): 9 mm frame + 19 mm foam"
+    ],
+    [
+     "Face",
+     "XK119 carbon, high-grit"
+    ],
+    [
+     "Weight",
+     "230 ± 5 g (≈ 8.1 oz)"
+    ],
+    [
+     "Size",
+     "419 x 188 mm (16.5 x 7.4 in), 16 mm"
+    ],
+    [
+     "Handle",
+     "140 mm (5.5 in), grip 108 mm around"
+    ],
+    [
+     "Throat",
+     "2 MPP diamonds (maker)"
+    ]
+   ],
+   "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
+   "tags": [
+    "honeycomb",
+    "epp"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
    "slug": "wika-qd-air",
    "name": "Wika QD Air (Air 1) 16mm",
    "brand": "Wika",
@@ -2924,6 +3670,60 @@
    "sources": "Sources: Wika Sports, PicklePlay VN, Pickleball News Asia (Wika QD Air). Model ID unconfirmed. Scale from 188 mm width. Labels interpret the X-ray, not a cutaway.",
    "tags": [
     "foam"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "wika-qd-fire-2",
+   "name": "Wika QD Fire 2",
+   "brand": "Wika",
+   "image": "wika-qd-fire-2-labeled.png",
+   "core": "Hybrid 2.0: 6 mm honeycomb + EPP wrap",
+   "cell_size": "",
+   "ring": "≈ 20.5 mm ring (±1): 9.5 mm band + 11 mm",
+   "thickness": "16 mm (14 mm also sold)",
+   "face": "Carbon XK100, very rough texture",
+   "weight": "225 ± 5 g (≈ 7.9 oz)",
+   "size": "419 x 190 mm (16.5 x 7.5 in)",
+   "specs": [
+    [
+     "Core type",
+     "Hybrid 2.0: 6 mm honeycomb + EPP wrap"
+    ],
+    [
+     "Core thickness",
+     "16 mm (14 mm also sold)"
+    ],
+    [
+     "Perimeter",
+     "≈ 20.5 mm ring (±1): 9.5 mm band + 11 mm"
+    ],
+    [
+     "Face",
+     "Carbon XK100, very rough texture"
+    ],
+    [
+     "Weight",
+     "225 ± 5 g (≈ 7.9 oz)"
+    ],
+    [
+     "Size",
+     "419 x 190 mm (16.5 x 7.5 in)"
+    ],
+    [
+     "Handle",
+     "140 mm long, 108 mm circumference"
+    ],
+    [
+     "Inserts",
+     "Side strips + handle block; no MOI weights listed"
+    ]
+   ],
+   "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
+   "tags": [
+    "honeycomb",
+    "epp"
    ],
    "reel": "",
    "unreleased": false

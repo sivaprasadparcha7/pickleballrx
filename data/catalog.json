@@ -14,7 +14,8 @@
      "weight": "7.9-8.1oz",
      "grip": "4.125-4.25\"",
      "shape": "Elongated",
-     "mm": "14 / 16"
+     "mm": "14 / 16",
+     "tested": "joola-perseus-pro-v"
     },
     {
      "model": "Kosmos Pro V",
@@ -88,7 +89,8 @@
      "core": "Polymer honeycomb",
      "face": "Textured carbon fiber",
      "approval": "USAP, UPA-A",
-     "shape": "Wide"
+     "shape": "Wide",
+     "tested": "joola-scorpeus-pro-iv"
     },
     {
      "model": "Magnus Pro IV",
@@ -132,7 +134,8 @@
      "core": "Polymer honeycomb",
      "face": "Textured carbon fiber",
      "approval": "USAP, UPA-A",
-     "shape": "Elongated"
+     "shape": "Elongated",
+     "tested": "joola-perseus-3s"
     },
     {
      "model": "Scorpeus 3S Dual 14mm",
@@ -513,7 +516,8 @@
      "model": "GX2 Power",
      "shape": "Elongated / Hybrid",
      "price": 279.99,
-     "url": "https://gearboxsports.com/products/gx2-power-hybrid"
+     "url": "https://gearboxsports.com/products/gx2-power-hybrid",
+     "tested": "gearbox-gx2"
     },
     {
      "model": "GX2 Integra XL",
@@ -1824,7 +1828,7 @@
      "model": "Boost-1",
      "mm": "16",
      "price": 137.99,
-     "tested": "grit:Arronax Boost-1",
+     "tested": "arronax-boost-1",
      "note": "From $137.99",
      "url": "https://www.arronaxsport.com/collections/paddles/products/boost-1",
      "weight": "7.8oz (220g)",
@@ -3128,7 +3132,7 @@
      "core": "Foam",
      "face": "Frosted T700 carbon fiber",
      "approval": "USAP",
-     "cur": "\u20ac"
+     "cur": "€"
     },
     {
      "model": "Osprey ShotCore",
@@ -3138,7 +3142,7 @@
      "core": "Foam (ShotCore)",
      "face": "Carbon and aramid blend",
      "approval": "USAP",
-     "cur": "\u20ac"
+     "cur": "€"
     },
     {
      "model": "The Queen",
@@ -3149,7 +3153,7 @@
      "core": "Polypropylene honeycomb",
      "face": "T700 carbon fiber",
      "approval": "USAP",
-     "cur": "\u20ac"
+     "cur": "€"
     },
     {
      "model": "Black Mamba",
@@ -3160,7 +3164,7 @@
      "core": "High-density honeycomb",
      "face": "Raw T700 carbon fiber",
      "approval": "USAP",
-     "cur": "\u20ac"
+     "cur": "€"
     },
     {
      "model": "Gorilla Wide Body",
@@ -3169,7 +3173,7 @@
      "url": "https://zcebra.com/en/producto/zcebra-gorilla-pro-series-rainbow/",
      "face": "Frosted carbon fiber",
      "approval": "USAP",
-     "cur": "\u20ac"
+     "cur": "€"
     },
     {
      "model": "Gorilla Silverback",
@@ -3178,7 +3182,7 @@
      "url": "https://zcebra.com/en/producto/zcebra-gorilla-espalda-plateada/",
      "face": "Frosted carbon fiber",
      "approval": "USAP",
-     "cur": "\u20ac"
+     "cur": "€"
     },
     {
      "model": "Totem Trinom",
@@ -3192,7 +3196,7 @@
      "size": "16.1\" x 7.5\"",
      "handle": "4.9\"",
      "approval": "USAP",
-     "cur": "\u20ac"
+     "cur": "€"
     },
     {
      "model": "Graphite Gecko Edition",
@@ -3206,7 +3210,7 @@
      "size": "15.4\" x 7.9\"",
      "handle": "4.5\"",
      "approval": "USAP",
-     "cur": "\u20ac"
+     "cur": "€"
     },
     {
      "model": "Tribal Set",
@@ -3216,7 +3220,7 @@
      "core": "Honeycomb",
      "face": "Fiberglass",
      "approval": "USAP",
-     "cur": "\u20ac"
+     "cur": "€"
     }
    ]
   },
@@ -3622,7 +3626,8 @@
      "size": "16.54\" x 7.48\"",
      "handle": "5.52\"",
      "grip": "4.13\"",
-     "approval": "USAP, UPA-A"
+     "approval": "USAP, UPA-A",
+     "tested": "luzz-cannon"
     },
     {
      "model": "Pro 4 Inferno",
@@ -4052,7 +4057,8 @@
      "size": "16.1\" x 7.8\"",
      "handle": "5.6\"",
      "grip": "4.05\"",
-     "approval": "USAP"
+     "approval": "USAP",
+     "tested": "aireo-cyclone"
     },
     {
      "model": "Cyclone Elongated NanoGraph",
@@ -4064,17 +4070,19 @@
      "weight": "7.6oz",
      "core": "Foam (MPPE)",
      "face": "Raw T700 carbon fiber, textured",
-     "approval": "USAP"
+     "approval": "USAP",
+     "tested": "aireo-cyclone"
     },
     {
      "model": "Cyclone Blackout Elongated",
      "shape": "Elongated",
      "mm": "16",
      "price": 189,
-     "url": "https://www.aireo-sports.com/products/blackout-upa-a-approved-aireo-cyclone-16mm-pickleball-paddle-pulsefoam\u2122-power-core-for-pro-level-performance",
+     "url": "https://www.aireo-sports.com/products/blackout-upa-a-approved-aireo-cyclone-16mm-pickleball-paddle-pulsefoam™-power-core-for-pro-level-performance",
      "weight": "7.6oz",
      "core": "Foam (MPPE)",
-     "approval": "UPA-A"
+     "approval": "UPA-A",
+     "tested": "aireo-cyclone"
     },
     {
      "model": "Titan Hawk-L16 Gen 3",

@@ -80,6 +80,7 @@ LINKS = {  # X-ray slug -> (grit collection name, spin table name)
     "luzz-cannon-xpp": ("Luzz Cannon XPP M1", "Luzz Cannon XPP"), "luzz-glider-2026": ("Luzz Glider 2026", None),
     "mehau-e5": ("Mehau E5", None), "mehau-s5": ("Mehau S5", None), "sypik-triton-5": ("Sypik Triton 5", None),
     "vanwin-alpha-control": ("VANWIN Alpha Control", None), "proton-project-coyote": ("Proton Project Coyote", None), "spartus-spitfire": ("Spartus Spitfire", "Spartus Spitfire"),
+    "arronax-boost-1": ("Arronax Boost-1", "Arronax Boost"),
     "speedup-tide": ("Speed Up Tide", "Speed Up Tide"), "vanwin-alpha-power": ("VANWIN Alpha Power", None), "mehau-e4": ("Mehau E4", None),
 }
 
@@ -951,7 +952,7 @@ SPEC_LINKS = {  # spec card id -> (X-ray slug, spin table name, grit collection 
     "gearbox-8e": ("gearbox-pressure-x-8e", "Gearbox Pressure XE", "Gearbox Pressure X 8E"),
     "pop-n-rush": ("pickle-poppers-pop-n-rush", "Pop N Rush", "Pickle Poppers Pop N Rush"),
     "bnb-loco": (None, "Bread & Butter Loco 2 Elongated", "Bread & Butter LOCO 2"),
-    "arronax-boost-1": (None, "Arronax Boost", "Arronax Boost-1"),
+    "arronax-boost-1": ("arronax-boost-1", "Arronax Boost", "Arronax Boost-1"),
 }
 
 
@@ -973,7 +974,6 @@ def lab_links(x):
 
 # ---------- X-Ray Rx (lab) ----------
 XRAY_DISCLAIMER = "Labels are our read of the X-ray, not a cutaway. Measurements are approximate."
-VIEWS = [("clean", "Clean"), ("labeled", "Labeled"), ("density", "Density estimate")]
 
 
 def xray_img(slug, view):
@@ -1043,7 +1043,10 @@ for x in XRAY:
     lab_img = xray_img(x["slug"], "labeled")
     main_fig = (f'<figure class="lab-item" style="margin-top:12px"><a href="../{lab_img}"><img src="../{lab_img}" alt="{e(x["name"])} labeled X-ray with spec panel" style="aspect-ratio:auto;object-fit:contain;background:#fff"></a><figcaption><strong>Labeled X-ray</strong> &middot; tap to open full size</figcaption></figure>'
                 if lab_img else '<div class="lab-ph" style="border-radius:14px;margin-top:12px">Labeled X-ray coming soon</div>')
-    extra = "".join(lab_fig(("../" + xray_img(x["slug"], v)) if xray_img(x["slug"], v) else "", f'{x["name"]} X-ray, {l.lower()}', f"<strong>{l}</strong>", l + " X-ray") for v, l in VIEWS if v != "labeled")
+    clean_img = xray_img(x["slug"], "clean")
+    clean_fig = (f'<h3 style="margin-top:26px">Clean X-ray</h3><p class="muted" style="margin:0">The same X-ray with no labels, so you can read it yourself.</p>'
+                 f'<figure class="lab-item" style="margin-top:12px;max-width:520px"><a href="../{clean_img}"><img src="../{clean_img}" alt="{e(x["name"])} clean X-ray, no labels" loading="lazy" style="aspect-ratio:auto;object-fit:contain;background:#000"></a><figcaption><strong>Clean X-ray</strong> &middot; tap to open full size</figcaption></figure>'
+                 if clean_img else "")
     head_rows = [("Core", x["core"]), ("Cells", x["cell_size"]), ("Perimeter", x["ring"]), ("Thickness", x["thickness"])]
     spec_rows = "".join(f'<tr><th>{e(k)}</th><td>{e(v) if v else "<span class=muted>Not listed</span>"}</td></tr>' for k, v in x["specs"])
     review = next((p for p in PADDLES if p["name"].lower() == x["name"].lower()), None)
@@ -1072,8 +1075,7 @@ for x in XRAY:
   <h2 id="xray">The X-ray</h2>
   <p class="muted" style="margin:0">{XRAY_DISCLAIMER} <a href="../disclaimers.html#xray">Disclaimers</a>.</p>
   {main_fig}
-  <h3 style="margin-top:26px">More views</h3>
-  <div class="lab-grid">{extra}</div>
+  {clean_fig}
   <h2 style="margin-top:34px">Specs</h2>
   <table class="specs">{spec_rows}</table>
   <p class="muted" style="font-size:.85rem;margin-top:8px">{e(x["sources"])}. Ring widths are measured from the X-ray, so they are estimates (&asymp;).</p>

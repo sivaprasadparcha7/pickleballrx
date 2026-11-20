@@ -9,7 +9,7 @@
     "franklin_fudge": {"name": "Franklin: C45 Megan Fudge series", "url": "https://franklinsports.com/c45-megan-fudge-paddle-series"}
   },
   "ppa_men": [
-    {"rank": 1, "name": "Ben Johns", "points": 18210, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm"},
+    {"rank": 1, "name": "Ben Johns", "points": 18210, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm", "xray": "joola-perseus-pro-v"},
     {"rank": 2, "name": "Gabriel Tardio", "points": 13803.8, "brand": "Facolos", "paddle": "Elite X V2.0", "xray": "facolos-elite-x-2-0"},
     {"rank": 3, "name": "Hayden Patriquin", "points": 13145, "brand": "Franklin", "paddle": "C45 Dynasty 16mm (Hayden Patriquin edition)"},
     {"rank": 4, "name": "Christian Alshon", "points": 12377.5, "brand": "Paddletek", "paddle": "Honeyfoam TKO-X"},
@@ -17,7 +17,7 @@
     {"rank": 6, "name": "Federico Staksrud", "points": 10327.5, "brand": "JOOLA", "paddle": "Kosmos Pro V 16mm"},
     {"rank": 7, "name": "Andrei Daescu", "points": 10310, "brand": "CRBN", "paddle": "CRBN1 TruFoam Barrage"},
     {"rank": 8, "name": "Tama Shimabukuro", "points": 7740, "brand": "Luzz", "paddle": "Inferno2 M1", "xray": "luzz-inferno-2", "grit": "Luzz Inferno2"},
-    {"rank": 9, "name": "Eric Oncins", "points": 6318.8, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm"},
+    {"rank": 9, "name": "Eric Oncins", "points": 6318.8, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm", "xray": "joola-perseus-pro-v"},
     {"rank": 10, "name": "CJ Klinger", "points": 5566.3, "brand": "Adidas", "paddle": "AdiPower Pro EDT 16mm"},
     {"rank": 11, "name": "Noe Khlif", "points": 5562.5, "brand": "Arronax", "paddle": "KVL-005", "status": "team", "xray": "arronax-kvl-005", "grit": "Arronax KVL 005"},
     {"rank": 12, "name": "Dylan Frazier", "points": 4651.3, "brand": "Volair", "paddle": "CMD HYB", "grit": "Volair CMD"},
@@ -25,7 +25,7 @@
     {"rank": 14, "name": "Connor Garnett", "points": 4380, "brand": "Paddletek", "paddle": "Honeyfoam TKO-X"},
     {"rank": 15, "name": "Jaume Martinez Vich", "points": 3568.8, "brand": "Adidas", "paddle": "AdiPower Pro EDT 16mm"},
     {"rank": 16, "name": "Christopher Haworth", "points": 3516.3, "brand": "Luzz", "paddle": "Tornazo"},
-    {"rank": 17, "name": "Len Yang", "points": 3388.8, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm"},
+    {"rank": 17, "name": "Len Yang", "points": 3388.8, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm", "xray": "joola-perseus-pro-v"},
     {"rank": 18, "name": "Hong Kit Wong", "points": 3257.1, "brand": "Arronax", "paddle": "KVL-005", "status": "team", "xray": "arronax-kvl-005", "grit": "Arronax KVL 005"},
     {"rank": 19, "name": "Augustus Ge", "points": 3195, "brand": "11SIX24", "paddle": "Power 2 Ultre"},
     {"rank": 20, "name": "Riley Newman", "points": 3143.8, "brand": "Paddletek", "paddle": "Honeyfoam TKO-X"}
@@ -41,9 +41,9 @@
     {"rank": 8, "name": "Parris Todd", "points": 8627.5, "brand": "Franklin", "paddle": "Unreleased Franklin paddle"},
     {"rank": 9, "name": "Tina Pisnik", "points": 6517.5, "brand": "Eleven Zero", "paddle": "EZ Speed E16"},
     {"rank": 10, "name": "Kaitlyn Christian", "points": 5180, "brand": "Proton", "paddle": "Project Coyote", "xray": "proton-project-coyote", "grit": "Proton Project Coyote"},
-    {"rank": 11, "name": "Lacy Schneemann", "points": 4701.9, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm"},
+    {"rank": 11, "name": "Lacy Schneemann", "points": 4701.9, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm", "xray": "joola-perseus-pro-v"},
     {"rank": 12, "name": "Jessie Irvine", "points": 4472.5, "brand": "Engage", "paddle": "X2"},
-    {"rank": 13, "name": "Chao Yi Wang", "points": 4402.5, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm"},
+    {"rank": 13, "name": "Chao Yi Wang", "points": 4402.5, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm", "xray": "joola-perseus-pro-v"},
     {"rank": 14, "name": "Sahra Dennehy", "points": 4363.8, "brand": "Facolos", "paddle": "Elite X V2.0", "xray": "facolos-elite-x-2-0"},
     {"rank": 15, "name": "Meghan Dizon", "points": 4100, "brand": "Proton", "paddle": "Project Bluejay (unreleased)"},
     {"rank": 16, "name": "Alix Truong", "points": 3947.5, "brand": "Kamito", "paddle": "Dominus", "xray": "kamito-dominus"},
