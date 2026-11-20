@@ -523,7 +523,8 @@ reviewers_html = "".join(
     f'<p style="font-size:.95rem">{e(d)}</p><a class="btn ghost" style="align-self:flex-start" href="{e(h)}" rel="noopener" target="_blank">{e(lbl)} &rarr;</a>'
     + (_link_row(REVIEWER_LINKS[n], skip=(lbl,)) if n in REVIEWER_LINKS else "")
     + (f'<a style="font-size:.88rem;margin-top:8px" href="best.html#supa-senpai">See Supasenpai\'s top picks &rarr;</a>' if n == "Supasenpai" else "")
-    + (f'<a style="font-size:.88rem;margin-top:8px" href="best.html#pb-on-call">See PB on Call\'s favorite picks &rarr;</a>' if n == "PB on Call" else "") + '</div>'
+    + (f'<a style="font-size:.88rem;margin-top:8px" href="best.html#pb-on-call">See PB on Call\'s favorite picks &rarr;</a>' if n == "PB on Call" else "")
+    + (f'<a style="font-size:.88rem;margin-top:8px" href="best.html#ed">See Ed\'s favorite picks &rarr;</a>' if n == "Ed" else "") + '</div>'
     for i, (n, sub, d, h, lbl) in enumerate(REVIEWERS, 1))
 
 # Latest reviews only show on the home page once at least one real (non-placeholder) review exists.
@@ -765,7 +766,8 @@ SENPAI_PICKS = [
     ("GRUVN", "MUVN-16HD", "", None),
 ]
 def _ext_card(i, b, m, n, l):
-    ph = product_photo(_slug(b + " " + m)) or product_photo(_slug(b + " " + _re.sub(r"\s*\(.*?\)", "", m))) or (product_photo(l[1][5:-5]) if l and l[1].startswith("xray/") else "")
+    xs = l[1][5:-5] if l and l[1].startswith("xray/") else ""
+    ph = product_photo(_slug(b + " " + m)) or product_photo(_slug(b + " " + _re.sub(r"\s*\(.*?\)", "", m))) or product_photo(xs) or (f"assets/paddles/{xs}.jpg" if xs and os.path.exists(os.path.join(OUT, f"assets/paddles/{xs}.jpg")) else "")
     img = f'<img class="lb-thumb" src="{ph}" alt="{e(b)} {e(m)}" loading="lazy" style="object-fit:contain">' if ph else ""
     return (f'<div class="lb-item"{"" if ph else " style=\'grid-template-columns:auto 1fr\'"}><div class="lb-rank">{i}</div>{img}<div style="min-width:0">'
             f'<div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">{e(b)}</div>'
@@ -793,6 +795,17 @@ def _oncall_card(i, b, m, n, l):
 oncall_html = "".join(_oncall_card(i, *r) for i, r in enumerate(ONCALL_PICKS, 1))
 oncall_links_html = _link_row(ONCALL_LINKS)
 
+# Ed's (Pickleball Freak Show) favorite picks, relayed by Siva (2026-11-20), in Ed's order. We've X-rayed all five.
+ED_PICKS = [
+    ("Holbrook", "Fuze (Hybrid)", "We've X-rayed the Fuze.", ("Fuze X-ray", "xray/holbrook-fuze.html")),
+    ("Kamito", "Alpha X", "We've X-rayed this one.", ("Alpha X X-ray", "xray/kamito-alpha-x.html")),
+    ("Proton", "Project Coyote", "We've X-rayed this one.", ("Coyote X-ray", "xray/proton-project-coyote.html")),
+    ("Honolulu", "J6CR M105", "We've X-rayed the J6CR. Photo is the J6CR we tested.", ("J6CR X-ray", "xray/honolulu-j6cr.html")),
+    ("Sypik", "Triton", "We've X-rayed the Triton 5. Photo is the Triton 5 we tested.", ("Triton 5 X-ray", "xray/sypik-triton-5.html")),
+]
+ed_html = "".join(_oncall_card(i, *r) for i, r in enumerate(ED_PICKS, 1))
+ed_links_html = _link_row(FREAKSHOW_LINKS)
+
 # Supasenpai's top 5 Canadian paddles, relayed by Siva (2026-11-17). Names checked against brand and Canadian retailer listings.
 CANADIAN_PICKS = [
     ("GRUVN", "MUVN-16HD", "", None),
@@ -812,7 +825,7 @@ write("best.html", page("Best pickleball paddles | PickleballRx", f'''
 <section style="padding-bottom:0">
   <h1 class="page-title">Our top picks</h1>
   <p class="section-lead">Our favorite paddles by core type, picked by the Pickleball RX team after X-rays, microscope scans, spin tests and a lot of games. Tap any badge to see the lab results behind a pick.</p>
-  <div class="chips">{"".join(f'<a href="#{k}">{e(t)}</a>' for k, t, _, _ in TOP_PICKS)}<a href="#canadian">Canadian picks</a><a href="#supa-senpai">Supasenpai's picks</a><a href="#pb-on-call">PB on Call's picks</a></div>
+  <div class="chips">{"".join(f'<a href="#{k}">{e(t)}</a>' for k, t, _, _ in TOP_PICKS)}<a href="#canadian">Canadian picks</a><a href="#supa-senpai">Supasenpai's picks</a><a href="#pb-on-call">PB on Call's picks</a><a href="#ed">Ed's picks</a></div>
 </section>
 {picks_html}
 <section id="canadian" style="padding-top:10px">
@@ -832,6 +845,12 @@ write("best.html", page("Best pickleball paddles | PickleballRx", f'''
   <p class="section-lead">Favorite paddles from <a href="https://www.youtube.com/@PickleballOnCall" target="_blank" rel="noopener">PB on Call</a>, one of <a href="index.html#reviewers">our favorite reviewers</a>. These are PB on Call's choices, not ours, and we haven't lab-tested most of them yet. PB on Call's own discount codes are on their linktree.</p>
   {oncall_links_html}
   <div class="lb-grid">{oncall_html}</div>
+</section>
+<section id="ed" style="padding-top:10px">
+  <div class="rev-head" style="margin-bottom:6px"><img class="rev-avatar" src="assets/reviewers/ed.jpg" alt="Ed, Pickleball Freak Show, pickleball paddle reviewer" width="64" height="64" loading="lazy"><h2 style="margin:0">Ed's favorite picks</h2></div>
+  <p class="section-lead">Favorite paddles from Ed of <a href="https://www.youtube.com/@pickleballfreakshow" target="_blank" rel="noopener">Pickleball Freak Show</a>, one of <a href="index.html#reviewers">our favorite reviewers</a>. These are Ed's choices, not ours. We've X-rayed all five, so tap a badge to see inside.</p>
+  {ed_links_html}
+  <div class="lb-grid">{ed_html}</div>
 </section>
 <section style="padding-bottom:0"><h2>By playing style</h2>
   <p class="section-lead">Our picks for each playing style. Paddles only for now, with no scores. Tap any badge to see the lab results behind a pick.</p>

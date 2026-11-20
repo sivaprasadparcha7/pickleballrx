@@ -2105,6 +2105,59 @@
    "unreleased": false
   },
   {
+   "slug": "mark-02r2",
+   "name": "MARK 02R2 (twoR2) 16mm",
+   "brand": "MARK",
+   "image": "mark-02r2-labeled.png",
+   "core": "Polymer honeycomb, 10 mm wide-cell",
+   "cell_size": "≈ 10.4 mm measured (10 mm spec)",
+   "ring": "≈ 10 mm solid frame (≈ 12 mm at tip)",
+   "thickness": "16 mm (15.5 mm polymer frame)",
+   "face": "Hybrid T700 carbon + fiberglass",
+   "weight": "8.0–8.2 oz (spec)",
+   "size": "16.5 x 7.5 in",
+   "specs": [
+    [
+     "Core type",
+     "Polymer honeycomb, 10 mm wide-cell"
+    ],
+    [
+     "Cell size",
+     "≈ 10.4 mm measured (10 mm spec)"
+    ],
+    [
+     "Core thickness",
+     "16 mm (15.5 mm polymer frame)"
+    ],
+    [
+     "Perimeter",
+     "≈ 10 mm solid frame (≈ 12 mm at tip)"
+    ],
+    [
+     "Face",
+     "Hybrid T700 carbon + fiberglass"
+    ],
+    [
+     "Weight",
+     "8.0–8.2 oz (spec)"
+    ],
+    [
+     "Size",
+     "16.5 x 7.5 in"
+    ],
+    [
+     "Handle",
+     "5.6 in grip length, 4.125 in grip"
+    ]
+   ],
+   "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
+   "tags": [
+    "honeycomb"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
    "slug": "mark-02r3",
    "name": "MARK 02R3 (twoR3)",
    "brand": "MARK",
