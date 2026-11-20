@@ -80,6 +80,12 @@ NAMES = {
  "wika-next-x": ("wika-next-x", "Wika Next-X 16mm", "Wika"),
  "wika-predator": ("wika-predator", "Wika Predator 16mm", "Wika"),
  "wika-qd-fire-2": ("wika-qd-fire-2", "Wika QD Fire 2", "Wika"),
+ "friday-aura-pro": ("friday-aura-pro", "Friday Aura Pro", "Friday"),
+ "joola-perseus-iv": ("joola-perseus-pro-iv", "JOOLA Perseus Pro IV", "JOOLA"),
+ "nordic-dots": ("nordic-dots", "Nordic Dots", "Nordic"),
+ "pakle-evo-1": ("pakle-evolution-01", "Pakle Evolution 01 (Evo-1)", "Pakle"),
+ "selkirk-boomstik": ("selkirk-labs-project-boomstik", "Selkirk LABS Project Boomstik", "Selkirk"),
+ "boomstick-clone-alibaba": ("boomstik-clone-alibaba", "Boomstik clone (Alibaba)", "Unbranded"),
 }
 
 REELS = {

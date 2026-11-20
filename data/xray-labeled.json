@@ -3414,5 +3414,287 @@
    ]
   ],
   "specs_sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway"
+ },
+ {
+  "paddle": "BOOMSTIK CLONE (ALIBABA)",
+  "file": "boomstick-clone-alibaba-labeled.png",
+  "core": "Full foam face (type not disclosed)",
+  "cell_size": "Face: none · throat ≈ 8 mm · handle ≈ 6.5–7 mm",
+  "perimeter_ring": "≈ 18.5–19 mm sides (±1), top ≈ 15 mm",
+  "thickness": "Not disclosed",
+  "face": "Not disclosed (Alibaba listing)",
+  "weight": "Not disclosed",
+  "size": "Scaled as 16.5 x 7.45 in (assumed = genuine)",
+  "source_file": "boomstick-clone-alibaba-labeled.png",
+  "specs": [
+   [
+    "Core type",
+    "Full foam face (type not disclosed)"
+   ],
+   [
+    "Cell size",
+    "Face: none · throat ≈ 8 mm · handle ≈ 6.5–7 mm"
+   ],
+   [
+    "Core thickness",
+    "Not disclosed"
+   ],
+   [
+    "Perimeter",
+    "≈ 18.5–19 mm sides (±1), top ≈ 15 mm"
+   ],
+   [
+    "Face",
+    "Not disclosed (Alibaba listing)"
+   ],
+   [
+    "Weight",
+    "Not disclosed"
+   ],
+   [
+    "Size",
+    "Scaled as 16.5 x 7.45 in (assumed = genuine)"
+   ],
+   [
+    "Handle",
+    "Honeycomb insert + ≈ 10 metal pieces"
+   ]
+  ],
+  "specs_sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway"
+ },
+ {
+  "paddle": "FRIDAY AURA PRO",
+  "file": "friday-aura-pro-labeled.png",
+  "core": "Floating EPP foam + EVA (full foam)",
+  "cell_size": "None: no honeycomb in the face",
+  "perimeter_ring": "≈ 20 mm ±1 (≈ 12 outer + ≈ 8 inner)",
+  "thickness": "16 mm",
+  "face": "Carbon fiber, Gen 4 double thermoformed",
+  "weight": "8.0 oz avg (7.8–8.2 oz)",
+  "size": "16.5 x 7.5 in, elongated",
+  "source_file": "friday-aura-pro-labeled.png",
+  "specs": [
+   [
+    "Core type",
+    "Floating EPP foam + EVA (full foam)"
+   ],
+   [
+    "Cell size",
+    "None: no honeycomb in the face"
+   ],
+   [
+    "Core thickness",
+    "16 mm"
+   ],
+   [
+    "Perimeter",
+    "≈ 20 mm ±1 (≈ 12 outer + ≈ 8 inner)"
+   ],
+   [
+    "Face",
+    "Carbon fiber, Gen 4 double thermoformed"
+   ],
+   [
+    "Weight",
+    "8.0 oz avg (7.8–8.2 oz)"
+   ],
+   [
+    "Size",
+    "16.5 x 7.5 in, elongated"
+   ],
+   [
+    "Handle",
+    "5.5 in, 4.25 in grip"
+   ]
+  ],
+  "specs_sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway"
+ },
+ {
+  "paddle": "JOOLA PERSEUS PRO IV",
+  "file": "joola-perseus-iv-labeled.png",
+  "core": "PP honeycomb (Propulsion) + Hyperfoam wall",
+  "cell_size": "≈ 8.0 mm measured (not disclosed)",
+  "perimeter_ring": "≈ 23–25 mm foam edge wall",
+  "thickness": "16 mm (spec; 14 mm also sold)",
+  "face": "Textured carbon fiber, thermoformed",
+  "weight": "≈ 8.0 oz avg (spec)",
+  "size": "16.5 x 7.5 in, elongated",
+  "source_file": "joola-perseus-iv-labeled.png",
+  "specs": [
+   [
+    "Core type",
+    "PP honeycomb (Propulsion) + Hyperfoam wall"
+   ],
+   [
+    "Cell size",
+    "≈ 8.0 mm measured (not disclosed)"
+   ],
+   [
+    "Core thickness",
+    "16 mm (spec; 14 mm also sold)"
+   ],
+   [
+    "Perimeter",
+    "≈ 23–25 mm foam edge wall"
+   ],
+   [
+    "Face",
+    "Textured carbon fiber, thermoformed"
+   ],
+   [
+    "Weight",
+    "≈ 8.0 oz avg (spec)"
+   ],
+   [
+    "Size",
+    "16.5 x 7.5 in, elongated"
+   ],
+   [
+    "Handle",
+    "5.5 in, 4.25 in grip"
+   ]
+  ],
+  "specs_sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway"
+ },
+ {
+  "paddle": "NORDIC DOTS PICKLEBALL PADDLE",
+  "file": "nordic-dots-labeled.png",
+  "core": "Polypropylene honeycomb",
+  "cell_size": "≈ 8.3 mm measured (not disclosed)",
+  "perimeter_ring": "≈ 10 mm cell-free edge band",
+  "thickness": "20 mm (spec)",
+  "face": "Carbon, rough finish (18K on Pro Series SE)",
+  "weight": "225 g Fiesta / 235 g Pro Series SE (spec)",
+  "size": "40.4 x 20.4 cm (15.9 x 8.0 in)",
+  "source_file": "nordic-dots-labeled.png",
+  "specs": [
+   [
+    "Core type",
+    "Polypropylene honeycomb"
+   ],
+   [
+    "Cell size",
+    "≈ 8.3 mm measured (not disclosed)"
+   ],
+   [
+    "Core thickness",
+    "20 mm (spec)"
+   ],
+   [
+    "Perimeter",
+    "≈ 10 mm cell-free edge band"
+   ],
+   [
+    "Face",
+    "Carbon, rough finish (18K on Pro Series SE)"
+   ],
+   [
+    "Weight",
+    "225 g Fiesta / 235 g Pro Series SE (spec)"
+   ],
+   [
+    "Size",
+    "40.4 x 20.4 cm (15.9 x 8.0 in)"
+   ],
+   [
+    "Handle",
+    "not disclosed"
+   ]
+  ],
+  "specs_sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway"
+ },
+ {
+  "paddle": "PAKLE EVOLUTION 01 (EVO-1)",
+  "file": "pakle-evo-1-labeled.png",
+  "core": "PP honeycomb + TPE \"Vortex\" elastic (Gen 3)",
+  "cell_size": "≈ 9.0 mm measured (not disclosed)",
+  "perimeter_ring": "≈ 17 mm sides, ≈ 20 mm top",
+  "thickness": "16 mm",
+  "face": "Triple unidirectional carbon fiber",
+  "weight": "8.1–8.3 oz (Reactive 7.9–8.1 oz)",
+  "size": "Elongated, ≈ 16.5 x 7.44 in (assumed)",
+  "source_file": "pakle-evo-1-labeled.png",
+  "specs": [
+   [
+    "Core type",
+    "PP honeycomb + TPE \"Vortex\" elastic (Gen 3)"
+   ],
+   [
+    "Cell size",
+    "≈ 9.0 mm measured (not disclosed)"
+   ],
+   [
+    "Core thickness",
+    "16 mm"
+   ],
+   [
+    "Perimeter",
+    "≈ 17 mm sides, ≈ 20 mm top"
+   ],
+   [
+    "Face",
+    "Triple unidirectional carbon fiber"
+   ],
+   [
+    "Weight",
+    "8.1–8.3 oz (Reactive 7.9–8.1 oz)"
+   ],
+   [
+    "Size",
+    "Elongated, ≈ 16.5 x 7.44 in (assumed)"
+   ],
+   [
+    "Handle",
+    "≈ 5.5 in (not published, assumed)"
+   ]
+  ],
+  "specs_sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway"
+ },
+ {
+  "paddle": "SELKIRK LABS PROJECT BOOMSTIK",
+  "file": "selkirk-boomstik-labeled.png",
+  "core": "Full foam: BoomCore (PureFoam + EVA ring)",
+  "cell_size": "None, no honeycomb",
+  "perimeter_ring": "≈ 17–18 mm EVA Power Ring (top ≈ 40)",
+  "thickness": "16 mm",
+  "face": "Multistrata T700 carbon, 3 layers",
+  "weight": "8.1–8.4 oz avg; MOI Tuning System",
+  "size": "16.5 x 7.45 in, elongated (assumed)",
+  "source_file": "selkirk-boomstik-labeled.png",
+  "specs": [
+   [
+    "Core type",
+    "Full foam: BoomCore (PureFoam + EVA ring)"
+   ],
+   [
+    "Cell size",
+    "None, no honeycomb"
+   ],
+   [
+    "Core thickness",
+    "16 mm"
+   ],
+   [
+    "Perimeter",
+    "≈ 17–18 mm EVA Power Ring (top ≈ 40)"
+   ],
+   [
+    "Face",
+    "Multistrata T700 carbon, 3 layers"
+   ],
+   [
+    "Weight",
+    "8.1–8.4 oz avg; MOI Tuning System"
+   ],
+   [
+    "Size",
+    "16.5 x 7.45 in, elongated (assumed)"
+   ],
+   [
+    "Handle",
+    "5.8 in, 4.25 in grip"
+   ]
+  ],
+  "specs_sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway"
  }
 ]
