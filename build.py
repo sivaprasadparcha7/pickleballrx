@@ -80,7 +80,7 @@ LINKS = {  # X-ray slug -> (grit collection name, spin table name)
     "luzz-cannon-xpp": ("Luzz Cannon XPP M1", "Luzz Cannon XPP"), "luzz-glider-2026": ("Luzz Glider 2026", None),
     "mehau-e5": ("Mehau E5", None), "mehau-s5": ("Mehau S5", None), "sypik-triton-5": ("Sypik Triton 5", None),
     "vanwin-alpha-control": ("VANWIN Alpha Control", None), "proton-project-coyote": ("Proton Project Coyote", None), "spartus-spitfire": ("Spartus Spitfire", "Spartus Spitfire"),
-    "arronax-boost-1": ("Arronax Boost-1", "Arronax Boost"),
+    "arronax-boost-1": ("Arronax Boost-1", "Arronax Boost"), "selkirk-labs-project-boomstik": ("Selkirk LABS Project Boomstik", None),
     "speedup-tide": ("Speed Up Tide", "Speed Up Tide"), "vanwin-alpha-power": ("VANWIN Alpha Power", None), "mehau-e4": ("Mehau E4", None),
 }
 
@@ -429,7 +429,7 @@ UPCOMING = [
          when="Released Nov 10, 2026 &middot; $350",
          photos=[("assets/paddles/product/selkirk-boomstik-st.jpg", "Selkirk Boomstik ST")],
          text="The next version of the LABS Project Boomstik. Selkirk says its new InfiniGrit Ultra surface has four times the spin friction and twice the grit durability of the original InfiniGrit. It adds a perimeter Sharktooth groove and hand-adjustable perimeter weights, and keeps the BoomCore foam core.",
-         links=[("Grit: original Project Boomstik", "grit.html#selkirk-labs-project-boomstik")],
+         links=[("X-ray: original Project Boomstik", "xray/selkirk-labs-project-boomstik.html"), ("Grit: original Project Boomstik", "grit.html#selkirk-labs-project-boomstik")],
          sources=[("Selkirk press release, Nov 10, 2026", "https://www.selkirk.com/pages/press-releases/selkirk-sport-launches-boomstik-st-the-next-evolution-of-its-premier-power-paddle")]),
 ]
 
@@ -684,7 +684,7 @@ STYLE_PICKS = {
         ("Pakle", "Fuse", "pakle-fuse", None, None, None, ""),
         _GBX_M,
         ("RPM", "Q2", "rpm-q2", None, None, None, ""),
-        ("Selkirk", "LABS Project Boomstik", None, None, "Selkirk LABS Project Boomstik", None, "The original Boomstik, not the new Boomstik ST."),
+        ("Selkirk", "LABS Project Boomstik", "selkirk-labs-project-boomstik", None, "Selkirk LABS Project Boomstik", None, "The original Boomstik, not the new Boomstik ST."),
         ("CPX", "Hyper+", "cpx-hyper-plus", None, "CPX Hyper+", "cpx-hyper", "Currently delisted by USA Pickleball (Nov 2026)."),
         _SPITFIRE,
     ],
@@ -1344,7 +1344,7 @@ DEALS = [
     dict(brand="Luzz", deal="Black Friday: 20% off select paddles and gear", code="", ends="Dec 1, 2026", url="https://luzzpickleball.com/",
          tested=[("Cannon XPP", "xray/luzz-cannon-xpp.html"), ("Glider 2026", "xray/luzz-glider-2026.html"), ("Inferno 2", "xray/luzz-inferno-2.html")]),
     dict(brand="Friday", deal="Black Friday early access: 30% off Aura Pro, 2 Friday Originals for $89, 30% off bags and gear", code="", ends="Nov 22, 2026", url="https://fridaypickle.com/products/aura-pro-paddle",
-         tested=[("Aura Pro Tour", "xray/friday-aura-pro-tour.html")]),
+         tested=[("Aura Pro", "xray/friday-aura-pro.html"), ("Aura Pro Tour", "xray/friday-aura-pro-tour.html")]),
     dict(brand="Holbrook", deal="Early Black Friday: $100 off Arma and Aero paddles", code="BFCM", ends="Nov 24, 2026", url="https://holbrookpickleball.com/collections/arma-aero",
          tested=[]),
     dict(brand="11SIX24", deal="11/6 Sale: $50 off Power 2 paddles", code="", ends="Dec 4, 2026", url="https://11six24.com/pages/power-2",
@@ -1352,7 +1352,7 @@ DEALS = [
     dict(brand="RPM", deal="Black Friday: 25% off apparel", code="", ends="Not stated", url="https://rpmpb.com/", checked="The Kitchen\u2019s tracker, Nov 16",
          tested=[("Jade X-ray", "xray/rpm-jade.html"), ("Q2 X-ray", "xray/rpm-q2.html"), ("V2 X-ray", "xray/rpm-v2.html")]),
     dict(brand="Selkirk", deal="Black Friday: up to 60% off paddles, 50% off apparel", code="", ends="Not stated", url="https://selkirk.com/paddles", checked="The Kitchen\u2019s tracker, Nov 16",
-         tested=[("Project Boomstik grit", "grit.html#selkirk-labs-project-boomstik")]),
+         tested=[("Project Boomstik X-ray", "xray/selkirk-labs-project-boomstik.html"), ("Project Boomstik grit", "grit.html#selkirk-labs-project-boomstik")]),
     dict(brand="Diadem", deal="Black Friday: up to 58% off paddles", code="", ends="Not stated", url="https://diademsports.com/", checked="The Kitchen\u2019s tracker, Nov 16",
          tested=[]),
     dict(brand="FLiK", deal="Black Friday: 2 paddles for $140", code="", ends="Nov 20, 2026", url="https://flikpickleball.com/", checked="The Kitchen\u2019s tracker, Nov 16",

@@ -348,8 +348,9 @@ for _r in RX_EXTRA:
     if d:
         RX.append(d)
         if d.get("x") and d["x"] not in ("rpm-v2", "rpm-q2"): _seen_x.add(d["x"])
+FINDER_SKIP = {"boomstik-clone-alibaba"}  # X-rayed for comparison only, not a paddle we recommend
 for _x in XRAY:
-    if _x["slug"] in _seen_x or _x.get("unreleased") or _excluded(_x["name"]):
+    if _x["slug"] in _seen_x or _x["slug"] in FINDER_SKIP or _x.get("unreleased") or _excluded(_x["name"]):
         continue
     model = _x["name"][len(_x["brand"]):].strip() if _x["name"].startswith(_x["brand"]) else _x["name"]
     pr, ps = XRAY_PRICE.get(_x["slug"], (None, ""))

@@ -74,6 +74,12 @@
      "url": "https://joola.com/products/joola-perseus-iv-14mm-pickleball-paddle-1"
     },
     {
+     "model": "Perseus Pro IV 16mm",
+     "mm": "16",
+     "shape": "Elongated",
+     "tested": "joola-perseus-pro-iv"
+    },
+    {
      "model": "Hyperion Pro IV 14mm",
      "mm": "14",
      "price": 149.95,
@@ -311,7 +317,7 @@
      "shape": "Elongated / Widebody",
      "price": 250,
      "was": 333,
-     "tested": "grit:Selkirk LABS Project Boomstik",
+     "tested": "selkirk-labs-project-boomstik",
      "url": "https://www.selkirk.com/products/selkirk-labs-project-boomstik",
      "weight": "8.0-8.4oz",
      "core": "BoomCore",
@@ -2009,7 +2015,8 @@
      "handle": "5.5\"",
      "grip": "4.25\"",
      "approval": "USAP",
-     "mm": "16"
+     "mm": "16",
+     "tested": "friday-aura-pro"
     },
     {
      "model": "Friday Original (Round Top)",
@@ -3743,7 +3750,8 @@
     },
     {
      "model": "Evolution 01 Gen3",
-     "url": "https://paklepickleball.com/products/evolution-01-new-gen3-pickleball-paddle"
+     "url": "https://paklepickleball.com/products/evolution-01-new-gen3-pickleball-paddle",
+     "tested": "pakle-evolution-01"
     },
     {
      "model": "Fuse+ Elongated 16mm",
