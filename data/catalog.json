@@ -4270,6 +4270,103 @@
      "approval": "USAP"
     }
    ]
+  },
+  {
+   "brand": "Pickle Poppers",
+   "store": "https://www.pickle-poppers.com/collections/all",
+   "complete": true,
+   "note": "All six paddles from Pickle Poppers' own store, read 2026-11-19.",
+   "paddles": [
+    {
+     "model": "POP N Rush (Elongated) MagmaGrit",
+     "shape": "Elongated",
+     "price": 189.99,
+     "url": "https://www.pickle-poppers.com/products/pre-orderpop-n-rush-paddleelongated",
+     "weight": "7.7-8.1oz",
+     "mm": "16",
+     "core": "16mm dual density foam (MPPE + TPE)",
+     "face": "T700 carbon fiber + MagmaGrit surface",
+     "size": "16.45\" x 7.48\"",
+     "handle": "5.7\"",
+     "grip": "4.125\"",
+     "approval": "USAP",
+     "tested": "pickle-poppers-pop-n-rush",
+     "note": "Pre-order"
+    },
+    {
+     "model": "POP N Treasure (Elongated) EverGrit",
+     "shape": "Elongated",
+     "price": 179.99,
+     "url": "https://www.pickle-poppers.com/products/pre-order-pop-n-treasure-paddle-set",
+     "weight": "7.9-8.2oz",
+     "mm": "16",
+     "core": "16mm dual density foam (MPPE + TPE)",
+     "face": "T700 carbon fiber + EverGrit surface",
+     "size": "16.5\" x 7.36\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "approval": "USAP",
+     "tested": "pickle-poppers-pop-n-treasure"
+    },
+    {
+     "model": "POP N Treasure (Widebody) EverGrit",
+     "shape": "Widebody",
+     "price": 179.99,
+     "url": "https://www.pickle-poppers.com/products/pre-order-pop-n-treasure-paddle-set-standard",
+     "weight": "7.9-8.2oz",
+     "mm": "16",
+     "core": "16mm dual density foam (MPPE + TPE)",
+     "face": "T700 carbon fiber + EverGrit surface",
+     "size": "15.9\" x 7.95\"",
+     "handle": "5.3\"",
+     "grip": "4.25\"",
+     "approval": "USAP"
+    },
+    {
+     "model": "POP N Pink (Petite) EverGrit",
+     "shape": "Petite",
+     "price": 179.99,
+     "url": "https://www.pickle-poppers.com/products/pop-n-pink-paddle-set",
+     "weight": "7.5-7.8oz",
+     "mm": "16",
+     "core": "16mm dual density foam (MPPE + TPE)",
+     "face": "T700 carbon fiber + EverGrit surface",
+     "size": "15.6\" x 7.8\"",
+     "handle": "5.26\"",
+     "grip": "4.02\" (slim)",
+     "approval": "USAP",
+     "note": "Designed for women; comes with a cover and 2 stickers"
+    },
+    {
+     "model": "POP N Tango (Widebody)",
+     "shape": "Widebody",
+     "price": 159.99,
+     "url": "https://www.pickle-poppers.com/products/pop-n-tango",
+     "weight": "8.0-8.3oz",
+     "mm": "16",
+     "core": "High-density polypropylene honeycomb",
+     "face": "T700 carbon fiber + aramid weave",
+     "size": "15.9\" x 7.95\"",
+     "handle": "5.3\"",
+     "grip": "4.25\"",
+     "approval": "USAP"
+    },
+    {
+     "model": "POP N Frost (Elongated)",
+     "shape": "Elongated",
+     "price": 139.99,
+     "url": "https://www.pickle-poppers.com/products/pop-n-frost",
+     "weight": "8.0-8.3oz",
+     "mm": "16",
+     "core": "High-density polypropylene honeycomb",
+     "face": "T700 raw carbon fiber",
+     "size": "16.5\" x 7.36\"",
+     "handle": "5.5\"",
+     "grip": "4.25\"",
+     "approval": "USAP",
+     "note": "Sold out on 2026-11-19"
+    }
+   ]
   }
  ]
 }
