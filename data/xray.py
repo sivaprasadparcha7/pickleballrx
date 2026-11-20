@@ -32,6 +32,7 @@ NAMES = {
  "luzz-glider-2026": ("luzz-glider-2026", "Luzz Glider 2026", "Luzz"),
  "luzz-inferno-2-m1": ("luzz-inferno-2", "Luzz Inferno 2 M1", "Luzz"),
  "luzz-inferno": ("luzz-inferno", "Luzz Inferno (Pro 4)", "Luzz"),
+ "mark-02r2": ("mark-02r2", "MARK 02R2 (twoR2) 16mm", "MARK"),
  "mark-02r3": ("mark-02r3", "MARK 02R3 (twoR3)", "MARK"),
  "mark-unmarked-2026-v2": ("mark-unmarked-2026", "MARK unMARKed 2026", "MARK"),
  "mehau-e4": ("mehau-e4", "Mehau E4", "Mehau"),
