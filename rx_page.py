@@ -92,7 +92,7 @@ RX_EXTRA = [
     dict(b="Ronbus", m="Quanta R4 16mm", p=120, c=None, f=None, sh="h", mm="16", usap=None, src="Matt's Pickleball"),
     dict(b="Friday", m="Fever 16mm Standard", p=99, c=None, f=None, sh="w", mm="16", usap=None, src="Matt's Pickleball"),
     dict(b="Pickleball Apes", m="Zen S+", p=199, c=None, f=None, sh="", mm="", usap=None, src="Pickleball Effect"),
-    dict(b="Bread & Butter", m="Loco 2", p=220, c="foam", f=None, sh="eh", mm="16", usap=None, spin="Bread & Butter Loco 2 Elongated", spec="bnb-loco", crop="bread-butter-loco-2-elongated", src="The Kitchen"),
+    dict(b="Bread & Butter", m="Loco 2", p=220, c="foam", f=None, sh="eh", mm="16", usap=None, spin="Bread & Butter Loco 2 Elongated", spec="bnb-loco", x="bread-butter-loco-2", crop="bread-butter-loco-2-elongated", src="The Kitchen"),
     dict(b="Facolos", m="Elite X (1st gen)", p=139.99, c="gen3", f=None, sh="e", mm="16", usap=None, x="facolos-elite-x", src="Matt's Pickleball"),
     dict(b="Selkirk", m="Boomstik ST (original Project Boomstik line)", p=None, skip=True),  # placeholder, never shown
 ]

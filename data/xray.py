@@ -61,6 +61,7 @@ NAMES = {
  "arronax-kvl-004": ("arronax-kvl-004", "Arronax KVL-004", "Arronax"),
  "arronax-thunder-gen1": ("arronax-thunder-gen-1", "Arronax Thunder (Gen 1)", "Arronax"),
  "bread-and-butter-loco-1": ("bread-butter-loco-1", "Bread & Butter LOCO 1", "Bread & Butter"),
+ "bread-and-butter-loco-2": ("bread-butter-loco-2", "Bread & Butter LOCO 2", "Bread & Butter"),
  "flik-f1": ("flik-f1", "FLiK F1 Elongated", "FLiK"),
  "nox-jc6-16mm": ("nox-x-foam-jc6", "NOX X-Foam JC6 16mm", "NOX"),
  "nox-jma": ("nox-x-foam-jma", "NOX X-Foam JMA 16mm", "NOX"),

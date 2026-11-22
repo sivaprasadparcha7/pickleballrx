@@ -3884,5 +3884,52 @@
    ]
   ],
   "specs_sources": "Specs: Pickleball Central, Pickleball Effect, Matt's Pickleball. X-ray interpretation, not a cutaway"
+ },
+ {
+  "paddle": "BREAD & BUTTER LOCO 2",
+  "file": "bread-and-butter-loco-2-labeled.png",
+  "core": "Full foam, dual-density EPP + EVA",
+  "cell_size": "",
+  "perimeter_ring": "foam ring ≈ 24 mm sides, ≈ 30 mm top",
+  "thickness": "16 mm",
+  "face": "T700 raw carbon + fiberglass, thermoformed",
+  "weight": "7.9–8.2 oz (static)",
+  "size": "16.5 x 7.375 in, Elongated",
+  "source_file": "bread-and-butter-loco-2-labeled.png",
+  "specs": [
+   [
+    "Core type",
+    "Full foam, dual-density EPP + EVA"
+   ],
+   [
+    "Core density",
+    "not disclosed"
+   ],
+   [
+    "Core thickness",
+    "16 mm"
+   ],
+   [
+    "Perimeter",
+    "foam ring ≈ 24 mm sides, ≈ 30 mm top"
+   ],
+   [
+    "Face",
+    "T700 raw carbon + fiberglass, thermoformed"
+   ],
+   [
+    "Weight",
+    "7.9–8.2 oz (static)"
+   ],
+   [
+    "Size",
+    "16.5 x 7.375 in, Elongated"
+   ],
+   [
+    "Handle",
+    "5.5 in grip, 4.25 in circumference"
+   ]
+  ],
+  "specs_sources": "Sources: Pickleheads, Pickleball Effect, Matt's Pickleball (Loco 2). Scale from 7.375\" width (Elongated). Labels interpret the X-ray, not a cutaway."
  }
 ]

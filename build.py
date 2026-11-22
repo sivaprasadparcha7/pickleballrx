@@ -367,7 +367,7 @@ _slug = lambda t: _re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
 LEADERBOARD = [
     ("Gearbox", "Pressure X 8E", "gearbox-pressure-x-8e", "Gearbox Pressure XE", "Gearbox Pressure X 8E", "gearbox-8e", ""),
     ("Luzz", "Cannon XPP", "luzz-cannon-xpp", "Luzz Cannon XPP", "Luzz Cannon XPP M1", "luzz-cannon", ""),
-    ("Bread & Butter", "Loco 2 Elongated", None, "Bread & Butter Loco 2 Elongated", "Bread & Butter LOCO 2", "bnb-loco", ""),
+    ("Bread & Butter", "Loco 2 Elongated", "bread-butter-loco-2", "Bread & Butter Loco 2 Elongated", "Bread & Butter LOCO 2", "bnb-loco", ""),
     ("Gearbox", "Pressure X 8M", "gearbox-pressure-xm", "Gearbox Pressure X M", None, "gearbox-8m", ""),
     ("Facolos", "Elite X V2.0", "facolos-elite-x-2-0", None, None, None, ""),
     ("Sypik", "Triton 5", "sypik-triton-5", None, "Sypik Triton 5", "sypik-triton", ""),
@@ -988,7 +988,7 @@ SPEC_LINKS = {  # spec card id -> (X-ray slug, spin table name, grit collection 
     "gearbox-8m": ("gearbox-pressure-xm", "Gearbox Pressure X M", None),
     "gearbox-8e": ("gearbox-pressure-x-8e", "Gearbox Pressure XE", "Gearbox Pressure X 8E"),
     "pop-n-rush": ("pickle-poppers-pop-n-rush", "Pop N Rush", "Pickle Poppers Pop N Rush"),
-    "bnb-loco": (None, "Bread & Butter Loco 2 Elongated", "Bread & Butter LOCO 2"),
+    "bnb-loco": ("bread-butter-loco-2", "Bread & Butter Loco 2 Elongated", "Bread & Butter LOCO 2"),
     "arronax-boost-1": ("arronax-boost-1", "Arronax Boost", "Arronax Boost-1"),
 }
 
