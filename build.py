@@ -223,7 +223,7 @@ def page(title, body, depth=0, current="", desc=SITE_DESC, image=None, image_alt
 <footer class="site-footer"><div class="wrap">
   <div class="cols">
     <div><img src="{r}assets/logo.svg?v={ASSET_V}" alt="Pickleball Rx" width="129" height="50" style="height:50px;width:auto;margin-bottom:10px">
-      <p style="margin:0"><strong>{e(TAGLINE)}.</strong> Paddle reviews that look inside the paddle: X-rays, microscope images, measured specs and on-court video.</p><p style="margin:8px 0 0">Started by Don, Beni and Siva.</p></div>
+      <p style="margin:0"><strong>{e(TAGLINE)}.</strong> Paddle reviews that look inside the paddle: X-rays, microscope images, measured specs and on-court video.</p><p style="margin:8px 0 0">Built by Siva.</p></div>
     <div><h4>Tools</h4><ul><li><a href="{r}finder.html">Paddle finder</a></li>{f'<li><a href="{r}compare.html">Compare</a></li>' if HAS_REAL else ""}<li><a href="{r}paddles.html">Database</a></li></ul></div>
     <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}best.html">Our top picks</a></li><li><a href="{r}pros.html">What the pros play</a></li><li><a href="{r}grit-pickleball.html">Brand spotlight: Grit</a></li><li><a href="{r}evolv-pickleball.html">Brand spotlight: Evolv</a></li><li><a href="{r}gearbox-pickleball.html">Brand spotlight: Gearbox</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
     <div><h4>Follow</h4><ul><li><a href="{YOUTUBE}" rel="noopener">YouTube</a></li><li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li><li><a href="{r}about.html#contact">Contact</a></li></ul></div>
@@ -633,7 +633,7 @@ write("index.html", page("Pickleball Rx | The Wikipedia of Pickleball Paddles", 
     {"@type": "Organization", "@id": f"{SITE_URL}/#organization", "name": SITE_NAME, "alternateName": "PickleballRx", "url": SITE_URL + "/",
      "logo": {"@type": "ImageObject", "url": f"{SITE_URL}/assets/logo.png", "width": 851, "height": 316}, "image": _abs(OG_IMAGE),
      "slogan": TAGLINE, "description": SITE_DESC, "sameAs": [YOUTUBE, INSTAGRAM],
-     "founder": [{"@type": "Person", "name": n} for n in ("Don", "Beni", "Siva")]},
+     "founder": [{"@type": "Person", "name": n} for n in ("Siva",)]},
 ]))
 
 # ---------- database ----------
@@ -1447,7 +1447,7 @@ write("guide.html", page("How to choose a pickleball paddle | PickleballRx", '''
 write("about.html", page("About and how we test | PickleballRx", f'''
 <article class="article">
   <h1>About PickleballRx</h1>
-  <p>Pickleball RX was started by Don, Beni and Siva (<a href="{INSTAGRAM}">@picklebrx</a>). We review pickleball paddles from the inside out: X-rays, microscope grit scans and spin measured at 960 frames per second.</p>
+  <p>Pickleball RX was built by Siva (<a href="{INSTAGRAM}">@picklebrx</a>). We review pickleball paddles from the inside out: X-rays, microscope grit scans and spin measured at 960 frames per second.</p>
   <h2 id="testing">How we test</h2>
   <ol>
     <li><strong>Play it.</strong> Every paddle gets drills and real games, and a video review on <a href="{YOUTUBE}">YouTube</a>.</li>
@@ -1460,7 +1460,7 @@ write("about.html", page("About and how we test | PickleballRx", f'''
   <p>We earn commission on some discount codes, and brands have no input into our results. Some test paddles were supplied by brands, and we say so wherever it applies. Read the full <a href="disclaimers.html">disclaimers</a>.</p>
   <h2 id="contact">Contact</h2>
   <p>Message us on <a href="{INSTAGRAM}">Instagram @picklebrx</a>.</p>
-</article>''', 0, "about", desc="About Pickleball Rx, started by Don, Beni and Siva, and how we test pickleball paddles: X-rays, a 4K microscope, a 960 fps spin rig and measured swing weight.", crumbs=[("About", None)]))
+</article>''', 0, "about", desc="About Pickleball Rx, built by Siva, and how we test pickleball paddles: X-rays, a 4K microscope, a 960 fps spin rig and measured swing weight.", crumbs=[("About", None)]))
 
 write("disclaimers.html", page("Disclaimers | PickleballRx", f'''
 <article class="article">
