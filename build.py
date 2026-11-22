@@ -44,6 +44,7 @@ CODES = [  # confirmed by Siva 2026-11-17
     dict(brand="Speedup", code="PBRX", offer="10% off", url="https://speeduppickle.com/"),
     dict(brand="Grit", code="PBRX", offer="10% off", url="https://www.grit-shop.com/", no_disc=True),
     dict(brand="Pickle Poppers", code="PBRX", offer="10% off", url="https://www.pickle-poppers.com/", no_disc=True),  # Siva 2026-11-19
+    dict(brand="Mehau", code="PBRX", offer="15% off", url="", via="Fermiha"),  # Siva 2026-11-22; store link to come
 ]
 
 
@@ -107,7 +108,7 @@ def code_box(brand, depth=0):
         return ""
     r = "../" * depth
     return (f'<div class="deal" style="text-align:left;margin:18px 0"><strong>Get {e(c["offer"])} at {e(c["brand"])}</strong> with code'
-            f'<code style="display:inline-block;margin:0 6px">{e(c["code"])}</code><a href="{e(c["url"])}" rel="sponsored noopener">Shop {e(c["brand"])} &rarr;</a>'
+            f'<code style="display:inline-block;margin:0 6px">{e(c["code"])}</code>{f"(via {e(c['via'])}) " if c.get("via") else ""}{f'<a href="{e(c["url"])}" rel="sponsored noopener">Shop {e(c["brand"])} &rarr;</a>' if c["url"] else ""}'
             f'<div class="muted" style="font-size:.82rem;margin-top:4px">{"Brands have no input into our results." if c.get("no_disc") else "We earn a commission on code purchases. It never changes our results."} <a href="{r}disclaimers.html">Disclaimers</a></div></div>')
 
 STYLES = [
@@ -400,7 +401,7 @@ def lb_card(i, row, star=True):
     if gr: links.append(f'<a class="badge" href="grit.html#{_slug(gr)}">Grit</a>')
     if sc: links.append(f'<a class="badge" href="specs.html#{sc}">Specs</a>')
     code = next((c for c in CODES if c["brand"].lower() == brand.lower() and c["code"]), None)
-    code_html = f'<div style="font-size:.82rem;margin-top:6px">Code <strong>{e(code["code"])}</strong> &middot; {e(code["offer"])} at <a href="{e(code["url"])}" rel="sponsored noopener">{e(brand)}</a></div>' if code else ""
+    code_html = f'<div style="font-size:.82rem;margin-top:6px">Code <strong>{e(code["code"])}</strong> &middot; {e(code["offer"])} at {f'<a href="{e(code["url"])}" rel="sponsored noopener">{e(brand)}</a>' if code["url"] else e(brand)}</div>' if code else ""
     if brand in ("Grit", "Evolv", "Gearbox"):
         code_html += f'<div style="font-size:.82rem;margin-top:4px"><a href="{brand.lower()}-pickleball.html">Brand spotlight</a></div>'
     top = star and i == 0
@@ -1373,7 +1374,8 @@ write("specs.html", page("Spec Lab: measured swing weight and twist weight | Pic
 # ---------- codes ----------
 ccards = "\n".join(
     f'<div class="code-card"><h3>{e(c["brand"])}</h3><p class="muted" style="margin:0">{e(c["offer"][:1].upper() + c["offer"][1:])} with our code</p><code>{e(c["code"])}</code>'
-    f'<a href="{e(c["url"])}" rel="sponsored noopener">Shop {e(c["brand"])} &rarr;</a></div>' for c in CODES)
+    + (f'<p class="muted" style="margin:0;font-size:.85rem">Via {e(c["via"])}</p>' if c.get("via") else "")
+    + (f'<a href="{e(c["url"])}" rel="sponsored noopener">Shop {e(c["brand"])} &rarr;</a>' if c["url"] else "") + '</div>' for c in CODES)
 # Black Friday deals: only deals seen on the brand's own site. Re-check before each upload.
 DEALS_CHECKED = "Nov 17, 2026"
 DEALS = [
