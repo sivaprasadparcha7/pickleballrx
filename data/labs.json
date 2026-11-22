@@ -399,6 +399,43 @@
  ],
  "durability": [
   {
+   "paddle": "Gearbox Pressure X M",
+   "time": "40+ hours of play",
+   "result": "2,045 new → 2,115 after 40+ hours (spin average)",
+   "verdict": "Held: no loss of spin",
+   "good": true,
+   "image": "assets/spin/gearbox-pressure-xm-durability.jpg",
+   "table": [
+    [
+     "Test",
+     "Spin (average of best 3)",
+     "Top spin (highest hit)"
+    ],
+    [
+     "New, first test",
+     "2,045 RPM",
+     "2,125 RPM"
+    ],
+    [
+     "Nov 21 re-test, 40+ hours of play",
+     "2,115 RPM",
+     "2,230 RPM"
+    ],
+    [
+     "Change",
+     "+3%",
+     "+5%"
+    ]
+   ],
+   "notes": [
+    "No loss of spin after 40+ hours of play.",
+    "A change of a few percent either way is within normal test variation, so this reads as no loss, not a gain.",
+    "The re-test ball arrived slower (about 34 mph) and shallower (about 31°) than standard, so its values are adjusted to a 37.5 mph ball and a 34° impact angle. As measured, it read 1,720 RPM average.",
+    "Spin is the average of the 3 best hits; top spin is the single highest hit. Vise hits and misses are excluded.",
+    "One paddle on one rig; not an official USA Pickleball test."
+   ]
+  },
+  {
    "paddle": "Evolv Origin (CarbonSkyn)",
    "time": "6 months, about 300+ games",
    "result": "2,270 new → 2,280 at six months (top spin)",
