@@ -20,7 +20,7 @@
     {"rank": 9, "name": "Eric Oncins", "points": 6318.8, "brand": "JOOLA", "paddle": "Perseus Pro V 16mm", "xray": "joola-perseus-pro-v"},
     {"rank": 10, "name": "CJ Klinger", "points": 5566.3, "brand": "Adidas", "paddle": "AdiPower Pro EDT 16mm"},
     {"rank": 11, "name": "Noe Khlif", "points": 5562.5, "brand": "Arronax", "paddle": "KVL-005", "status": "team", "xray": "arronax-kvl-005", "grit": "Arronax KVL 005"},
-    {"rank": 12, "name": "Dylan Frazier", "points": 4651.3, "brand": "Volair", "paddle": "CMD HYB", "grit": "Volair CMD"},
+    {"rank": 12, "name": "Dylan Frazier", "points": 4651.3, "brand": "Volair", "paddle": "CMD HYB", "xray": "volair-cmd-hybrid", "grit": "Volair CMD"},
     {"rank": 13, "name": "Hunter Johnson", "points": 4391.3, "brand": "MEHAU", "paddle": "S5 Airpoom", "xray": "mehau-s5", "grit": "Mehau S5"},
     {"rank": 14, "name": "Connor Garnett", "points": 4380, "brand": "Paddletek", "paddle": "Honeyfoam TKO-X"},
     {"rank": 15, "name": "Jaume Martinez Vich", "points": 3568.8, "brand": "Adidas", "paddle": "AdiPower Pro EDT 16mm"},

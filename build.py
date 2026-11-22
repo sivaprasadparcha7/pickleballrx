@@ -1017,7 +1017,7 @@ def xray_card(x, depth):
     if x["unreleased"]: tags += '<span class="tag">Unreleased</span>'
     if x["reel"]: tags += '<span class="badge">Reel</span>'
     summary = e(x["core"]) if x["core"] else '<span class="muted">Findings coming soon</span>'
-    return f'''<article class="card xcard" data-tags="{" ".join(x["tags"])}" data-name="{e(x["name"].lower())} {e(x["brand"].lower())}">
+    return f'''<article class="card xcard" data-tags="{" ".join(x["tags"])}" data-name="{e(x["name"].lower())} {e(x["brand"].lower())} {e(x["slug"].replace("-", " "))}" data-title="{e(x["name"])}" data-core="{e(x["core"])}" data-href="{r}xray/{x["slug"]}.html">
   <a href="{r}xray/{x["slug"]}.html">{thumb}</a>
   <div class="badges">{tags}</div>
   <h3><a href="{r}xray/{x["slug"]}.html">{e(x["name"])}</a></h3>
@@ -1034,6 +1034,13 @@ write("lab.html", page("X-Ray Rx: pickleball paddle X-rays | PickleballRx", f'''
     <span class="tag">X-Ray Rx</span>
     <h1>What's <em>inside</em> {len(XRAY)} pickleball paddles.</h1>
     <p>We X-ray each paddle and label what's inside: core, perimeter ring, inserts and handle, alongside the published specs and where they came from.</p>
+    <div class="xfind" role="search">
+      <label for="x-q">Find a paddle's X-ray</label>
+      <div class="xfind-box">
+        <input type="search" id="x-q" placeholder="Type a paddle or brand, like Jade or Perseus" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="x-sugg">
+        <ul id="x-sugg" class="xfind-list" role="listbox" hidden></ul>
+      </div>
+    </div>
     <p style="font-size:.95rem;margin:0">{XRAY_DISCLAIMER} <a href="disclaimers.html#xray">Disclaimers</a>.</p>
   </div>
 </div></section>
@@ -1046,10 +1053,7 @@ write("lab.html", page("X-Ray Rx: pickleball paddle X-rays | PickleballRx", f'''
   </div>
 </section>
 <section style="padding-top:0">
-  <div class="section-head"><div><h2>All X-rayed paddles</h2><p class="section-lead">Filter by core type, or search for a paddle.</p></div></div>
-  <div class="filters">
-    <label>Search<input type="search" id="x-q" placeholder="Paddle or brand"></label>
-  </div>
+  <div class="section-head" id="all-xrays"><div><h2>All X-rayed paddles</h2><p class="section-lead">Filter by core type, or use the search at the top of the page.</p></div></div>
   <div class="chips" id="x-chips">
     <button aria-pressed="true" data-t="">All</button><button aria-pressed="false" data-t="honeycomb">Honeycomb</button><button aria-pressed="false" data-t="foam">Full foam</button><button aria-pressed="false" data-t="epp">EPP</button><button aria-pressed="false" data-t="mpp">MPP</button><button aria-pressed="false" data-t="floating">Floating core</button><button aria-pressed="false" data-t="voids">Voids</button>
   </div>

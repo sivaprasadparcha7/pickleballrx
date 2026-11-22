@@ -87,6 +87,9 @@ NAMES = {
  "pakle-evo-1": ("pakle-evolution-01", "Pakle Evolution 01 (Evo-1)", "Pakle"),
  "selkirk-boomstik": ("selkirk-labs-project-boomstik", "Selkirk LABS Project Boomstik", "Selkirk"),
  "boomstick-clone-alibaba": ("boomstik-clone-alibaba", "Boomstik clone (Alibaba)", "Unbranded"),
+ "arronax-boost-1-luminous": ("arronax-boost-1-luminous", "Arronax Boost-1 Luminous", "Arronax"),
+ "rpm-v2-ella-oh-14mm": ("rpm-v2-ella-oh-14mm", "RPM V2 Ella Oh 14mm (Friction Pro V2)", "RPM"),
+ "volair-cmd-hybrid": ("volair-cmd-hybrid", "Volair CMD Hybrid 16mm", "Volair"),
 }
 
 REELS = {
