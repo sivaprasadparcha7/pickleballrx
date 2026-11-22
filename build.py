@@ -1017,7 +1017,7 @@ def xray_card(x, depth):
     if x["unreleased"]: tags += '<span class="tag">Unreleased</span>'
     if x["reel"]: tags += '<span class="badge">Reel</span>'
     summary = e(x["core"]) if x["core"] else '<span class="muted">Findings coming soon</span>'
-    return f'''<article class="card xcard" data-tags="{" ".join(x["tags"])}" data-name="{e(x["name"].lower())} {e(x["brand"].lower())}">
+    return f'''<article class="card xcard" data-tags="{" ".join(x["tags"])}" data-name="{e(x["name"].lower())} {e(x["brand"].lower())} {e(x["slug"].replace("-", " "))}" data-title="{e(x["name"])}" data-core="{e(x["core"])}" data-href="{r}xray/{x["slug"]}.html">
   <a href="{r}xray/{x["slug"]}.html">{thumb}</a>
   <div class="badges">{tags}</div>
   <h3><a href="{r}xray/{x["slug"]}.html">{e(x["name"])}</a></h3>
@@ -1034,6 +1034,13 @@ write("lab.html", page("X-Ray Rx: pickleball paddle X-rays | PickleballRx", f'''
     <span class="tag">X-Ray Rx</span>
     <h1>What's <em>inside</em> {len(XRAY)} pickleball paddles.</h1>
     <p>We X-ray each paddle and label what's inside: core, perimeter ring, inserts and handle, alongside the published specs and where they came from.</p>
+    <div class="xfind" role="search">
+      <label for="x-q">Find a paddle's X-ray</label>
+      <div class="xfind-box">
+        <input type="search" id="x-q" placeholder="Type a paddle or brand, like Jade or Perseus" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="x-sugg">
+        <ul id="x-sugg" class="xfind-list" role="listbox" hidden></ul>
+      </div>
+    </div>
     <p style="font-size:.95rem;margin:0">{XRAY_DISCLAIMER} <a href="disclaimers.html#xray">Disclaimers</a>.</p>
   </div>
 </div></section>
@@ -1046,10 +1053,7 @@ write("lab.html", page("X-Ray Rx: pickleball paddle X-rays | PickleballRx", f'''
   </div>
 </section>
 <section style="padding-top:0">
-  <div class="section-head"><div><h2>All X-rayed paddles</h2><p class="section-lead">Filter by core type, or search for a paddle.</p></div></div>
-  <div class="filters">
-    <label>Search<input type="search" id="x-q" placeholder="Paddle or brand"></label>
-  </div>
+  <div class="section-head" id="all-xrays"><div><h2>All X-rayed paddles</h2><p class="section-lead">Filter by core type, or use the search at the top of the page.</p></div></div>
   <div class="chips" id="x-chips">
     <button aria-pressed="true" data-t="">All</button><button aria-pressed="false" data-t="honeycomb">Honeycomb</button><button aria-pressed="false" data-t="foam">Full foam</button><button aria-pressed="false" data-t="epp">EPP</button><button aria-pressed="false" data-t="mpp">MPP</button><button aria-pressed="false" data-t="floating">Floating core</button><button aria-pressed="false" data-t="voids">Voids</button>
   </div>
@@ -1247,7 +1251,11 @@ def dur_block(d):
             "".join("<tr>" + "".join(f"<td>{e(c)}</td>" for c in row) + "</tr>" for row in d["table"][1:]) + "</tbody></table></div>"
     ph = product_photo(NAME_PHOTO.get(d["paddle"], ""))
     img = f'<img class="product-shot" src="{ph}" alt="{e(d["paddle"])}" width="96" height="144" style="float:right;margin:0 0 10px 16px">' if ph else ""
-    return f'<div class="card" id="dur-{slugify(d["paddle"])}" style="display:block">{img}<h3>{e(d["paddle"])} <span style="color:{"var(--good)" if d["good"] else "#b45309"};font-size:.9rem">&middot; {e(d["verdict"])}</span></h3>{t}<ul style="margin:0;padding-left:20px">' + "".join(f"<li>{e(n)}</li>" for n in d["notes"]) + "</ul></div>"
+    fig = ""
+    if d.get("image"):
+        fig = (f'<figure style="clear:both;margin:16px 0 0;max-width:760px"><a href="{d["image"]}"><img src="{d["image"]}" alt="{e(d["paddle"])} spin durability test results card" width="1200" height="928" loading="lazy" style="width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff"></a>'
+               f'<figcaption class="muted" style="font-size:.85rem;margin-top:6px">The results card as posted by Pickleball RX. Tap to enlarge.</figcaption></figure>')
+    return f'<div class="card" id="dur-{slugify(d["paddle"])}" style="display:block">{img}<h3>{e(d["paddle"])} <span style="color:{"var(--good)" if d["good"] else "#b45309"};font-size:.9rem">&middot; {e(d["verdict"])}</span></h3>{t}<ul style="margin:0;padding-left:20px">' + "".join(f"<li>{e(n)}</li>" for n in d["notes"]) + f"</ul>{fig}</div>"
 dur_blocks = "".join(dur_block(d) for d in LABS["durability"])
 detail_rows = "".join(f'<tr><td><strong>{e(r["paddle"])}</strong></td><td>{e(r["condition"])}</td><td>{e(r["avg"])}</td><td>{e(r["top"])}</td><td>{e(r["rebound"])}</td><td>{e(r["date"])}</td></tr>' + (f'<tr><td colspan="6" class="muted" style="font-size:.88rem">{e(r["note"])}</td></tr>' if r["note"] else "") for r in LABS["spin_detail"])
 write("spin.html", page("Spin Lab: pickleball paddle spin test results | PickleballRx", f"""
@@ -1628,6 +1636,7 @@ GEARBOX_SHOP = "https://gearboxsports.com/"
 _gb_spin = {x["paddle"]: x for x in LABS["spin"]}
 _gb_e, _gb_m = _gb_spin.get("Gearbox Pressure XE"), _gb_spin.get("Gearbox Pressure X M")
 _gb_x = {x["slug"]: x for x in XRAY}
+_gb_mdur = next((d for d in LABS["durability"] if d["paddle"] == "Gearbox Pressure X M"), None)
 def _gb_card(model, photo, xs, spin, spin_anchor, grit_anchor, blurb):
     x = _gb_x.get(xs)
     return (f'<div class="card spot-card"><img src="{photo}" alt="Gearbox {e(model)}" width="200" height="300" loading="lazy" style="background:#fff;object-fit:contain">'
@@ -1635,6 +1644,7 @@ def _gb_card(model, photo, xs, spin, spin_anchor, grit_anchor, blurb):
             f'<p style="font-size:.95rem;margin:10px 0">{blurb} {e(x["core"]) if x else ""} core, {e(x["thickness"]) if x else ""}, {e(x["face"]) if x else ""} face.</p>'
             + (f'<div class="spot-stat"><b>{spin["avg"]:,}</b><span>RPM spin average ({e(spin["condition"].lower())})</span></div>' if spin else "")
             + f'<div class="badges" style="margin:10px 0"><a class="badge" href="xray/{xs}.html">X-ray</a><a class="badge" href="spin.html#{spin_anchor}">Spin</a>'
+            + (f'<a class="badge" href="spin.html#dur-{slugify(spin["paddle"])}">Spin durability</a>' if spin and any(dd["paddle"] == spin["paddle"] for dd in LABS["durability"]) else "")
             + (f'<a class="badge" href="grit.html#{grit_anchor}">Microscope</a>' if grit_anchor else "") + '</div></div></div>')
 write("gearbox-pickleball.html", page("Gearbox Pickleball: brand spotlight | PickleballRx", f"""
 <section class="hero" style="padding:48px 0"><div class="wrap">
@@ -1665,6 +1675,7 @@ write("gearbox-pickleball.html", page("Gearbox Pickleball: brand spotlight | Pic
   <div class="tools">
     <a class="tool" href="xray/gearbox-pressure-x-8e.html"><div class="ico">X</div><h3>Inside the core</h3><p>Both paddles show Gearbox's SST carbon ribs running through the foam core, with a TPE perimeter band.</p><span class="go">See the X-ray &rarr;</span></a>
     <a class="tool" href="spin.html#gearbox-pressure-xe"><div class="ico">RPM</div><h3>Spin</h3><p>{f'The 8E averaged {_gb_e["avg"]:,} RPM new, tied for the highest of any USAP-approved paddle on our 960 fps rig.' if _gb_e else "Measured on our 960 fps rig."}</p><span class="go">See spin results &rarr;</span></a>
+    {('<a class="tool" href="spin.html#dur-gearbox-pressure-x-m"><div class="ico">&#8635;</div><h3>Spin that lasts</h3><p>We re-tested the 8M after 40+ hours of play. It averaged 2,045 RPM new and 2,115 RPM after. Verdict: no loss of spin.</p><span class="go">See durability &rarr;</span></a>') if _gb_mdur else ""}
     <a class="tool" href="grit.html#gearbox-pressure-x-8e"><div class="ico">&micro;</div><h3>Under the microscope</h3><p>The 8E's SpinLock silicon carbide grit under a 4K microscope.</p><span class="go">See the grit &rarr;</span></a>
   </div>
 </section>

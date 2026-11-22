@@ -360,3 +360,18 @@ td .product-thumb { float: left; height: 42px; margin: 0 10px 0 0; }
 .ig-grid a:hover img { transform: scale(1.04); }
 .ig-grid .play { width: 40px; height: 28px; margin: -14px 0 0 -20px; border-radius: 8px; }
 .ig-grid .play::after { left: 15px; top: 7px; border-width: 7px 0 7px 11px; }
+
+/* X-Ray Rx search (lab.html) */
+.xfind { margin: 4px 0 22px; max-width: 560px; }
+.xfind label { display: block; font-weight: 800; color: var(--yellow); margin-bottom: 8px; }
+.xfind-box { position: relative; }
+.xfind input { width: 100%; box-sizing: border-box; font: inherit; font-size: 1.05rem; padding: 13px 16px; border-radius: 12px; border: 2px solid #3a5182; background: #fff; color: #112240; }
+.xfind input:focus { outline: none; border-color: var(--yellow); box-shadow: 0 0 0 3px rgba(252,185,45,.35); }
+.xfind-list { position: absolute; z-index: 30; left: 0; right: 0; top: calc(100% + 6px); margin: 0; padding: 6px; list-style: none; background: #fff; color: #112240; border-radius: 12px; box-shadow: 0 14px 40px rgba(0,0,0,.35); max-height: min(60vh, 440px); overflow-y: auto; }
+.xfind-list li a { display: block; padding: 9px 12px; border-radius: 8px; color: #112240; text-decoration: none; }
+.xfind-list li a span { display: block; font-size: .85rem; color: #5b6b8a; margin-top: 2px; }
+.xfind-list li[aria-selected="true"] a, .xfind-list li a:hover { background: #fff4d9; }
+.xfind-list li.more a { font-weight: 700; font-size: .92rem; }
+.xfind-list li.none { padding: 10px 12px; font-size: .95rem; }
+.xfind-list li.none a { color: #112240; font-weight: 700; }
+.linkish { background: none; border: 0; padding: 0; margin-left: 6px; font: inherit; color: var(--brand); text-decoration: underline; cursor: pointer; }
