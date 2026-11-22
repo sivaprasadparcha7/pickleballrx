@@ -15,6 +15,7 @@ PADDLES = DATA["paddles"]
 HAS_REAL = any(not p.get("placeholder") for p in PADDLES)  # Compare only runs on full reviews
 LABS = json.load(open(os.path.join(ROOT, "data", "labs.json")))
 SPECS = json.load(open(os.path.join(ROOT, "data", "specs.json")))["paddles"]
+VIB = json.load(open(os.path.join(ROOT, "data", "vibration.json")))
 XRAY = json.load(open(os.path.join(ROOT, "data", "xray.json")))["paddles"]
 
 YOUTUBE = "https://www.youtube.com/@picklebrx"
@@ -213,6 +214,7 @@ def page(title, body, depth=0, current="", desc=SITE_DESC, image=None, image_alt
     {nav("grit.html", "Grit Lab", "grit")}
     {nav("spin.html", "Spin Lab", "spin")}
     {nav("specs.html", "Spec Lab", "specs")}
+    {nav("arm-score.html", "Arm Score", "arm")}
     {nav("videos.html", "Videos", "videos")}
     {nav("codes.html", "Deals", "codes")}
     {nav("finder.html", "Get your paddle Rx", "finder", "nav-cta")}
@@ -226,7 +228,7 @@ def page(title, body, depth=0, current="", desc=SITE_DESC, image=None, image_alt
     <div><img src="{r}assets/logo.svg?v={ASSET_V}" alt="Pickleball Rx" width="129" height="50" style="height:50px;width:auto;margin-bottom:10px">
       <p style="margin:0"><strong>{e(TAGLINE)}.</strong> Paddle reviews that look inside the paddle: X-rays, microscope images, measured specs and on-court video.</p><p style="margin:8px 0 0">Built by Siva.</p></div>
     <div><h4>Tools</h4><ul><li><a href="{r}finder.html">Paddle finder</a></li>{f'<li><a href="{r}compare.html">Compare</a></li>' if HAS_REAL else ""}<li><a href="{r}paddles.html">Database</a></li></ul></div>
-    <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}best.html">Our top picks</a></li><li><a href="{r}pros.html">What the pros play</a></li><li><a href="{r}grit-pickleball.html">Brand spotlight: Grit</a></li><li><a href="{r}evolv-pickleball.html">Brand spotlight: Evolv</a></li><li><a href="{r}gearbox-pickleball.html">Brand spotlight: Gearbox</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
+    <div><h4>Learn</h4><ul><li><a href="{r}guide.html">Buying guide</a></li><li><a href="{r}lab.html">X-Ray Rx</a></li><li><a href="{r}grit.html">Grit Lab</a></li><li><a href="{r}spin.html">Spin Lab</a></li><li><a href="{r}specs.html">Spec Lab</a></li><li><a href="{r}arm-score.html">Arm Score (vibration)</a></li><li><a href="{r}best.html">Our top picks</a></li><li><a href="{r}pros.html">What the pros play</a></li><li><a href="{r}grit-pickleball.html">Brand spotlight: Grit</a></li><li><a href="{r}evolv-pickleball.html">Brand spotlight: Evolv</a></li><li><a href="{r}gearbox-pickleball.html">Brand spotlight: Gearbox</a></li><li><a href="{r}about.html">How we test</a></li><li><a href="{r}disclaimers.html">Disclaimers</a></li></ul></div>
     <div><h4>Follow</h4><ul><li><a href="{YOUTUBE}" rel="noopener">YouTube</a></li><li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li><li><a href="{r}about.html#contact">Contact</a></li></ul></div>
   </div>
   <p class="legal">&copy; 2026 PickleballRx.org &middot; <a href="{r}disclaimers.html">Disclaimers</a> &middot; Pickleball RX earns commission on some discount codes. Brands have no input into results.</p>
@@ -570,6 +572,14 @@ write("index.html", page("Pickleball Rx | The Wikipedia of Pickleball Paddles", 
   <p class="section-lead">The paddles that earned a spot on our wall after X-rays, microscope scans, spin tests and a lot of games. One paddle holds the top spot. Tap any badge to see the lab results behind it. <a href="best.html">See our top picks by core type &rarr;</a></p></div></div>
   <div class="lb-grid">{lb_html}</div>
 </section>
+<section id="arm-feature" style="padding-top:0">
+  <a class="spotlight-band arm-band" href="arm-score.html">
+    <div class="arm-band-score"><b>{max(p["score"] for p in VIB["arm"])}</b><span>top Arm Score</span></div>
+    <div><span class="tag">New lab &middot; Arm Score</span><h2 style="margin:8px 0 6px">Which paddles are easiest on your arm?</h2>
+    <p>We measured the shock, buzz and twist that reach the wrist on {len(VIB["arm"])} paddles, all with the factory grip and no added weight. {e(VIB["headline"].split(";")[0])}.</p>
+    <span class="go">See the Arm Scores &rarr;</span></div>
+  </a>
+</section>
 <section id="spotlight" style="padding-top:0">
   <a class="spotlight-band" href="grit-pickleball.html">
     <img src="assets/paddles/product/grit-e2-cf.jpg" alt="Grit E2-CF Launch Edition" width="120" height="180" loading="lazy">
@@ -622,6 +632,7 @@ write("index.html", page("Pickleball Rx | The Wikipedia of Pickleball Paddles", 
     <a class="tool" href="grit.html"><div class="ico">&micro;</div><h3>Grit Lab</h3><p>{len(LABS["grit"])} paddle faces under a 4K microscope, plus wear studies after months of play.</p><span class="go">See the grit &rarr;</span></a>
     <a class="tool" href="spin.html"><div class="ico">RPM</div><h3>Spin Lab</h3><p>Same rig, same ball machine, 960 frames per second. Test, play, then test again.</p><span class="go">See spin results &rarr;</span></a>
     <a class="tool" href="specs.html"><div class="ico">SW</div><h3>Spec Lab</h3><p>Swing weight, twist weight and static weight, measured ourselves for {len(SPECS)} paddles.</p><span class="go">See the specs &rarr;</span></a>
+    <a class="tool" href="arm-score.html"><div class="ico">ARM</div><h3>Arm Score <span class="tag" style="vertical-align:middle">New</span></h3><p>Sensors on the handle and wrist measure the shock and buzz that reach your arm. {len(VIB["arm"])} paddles scored so far.</p><span class="go">See the Arm Scores &rarr;</span></a>
   </div>
 </section>
 {home_videos}{home_ig}<section>
@@ -1371,6 +1382,128 @@ write("specs.html", page("Spec Lab: measured swing weight and twist weight | Pic
 </section>
 </div>""", 0, "specs", desc="Measured swing weight, twist weight and static weight for pickleball paddles, tested by us, so you can compare how paddles really feel in hand.", crumbs=[("Spec Lab", None)]))
 
+# ---------- Arm Lab: vibration test results / Arm Score (data in data/vibration.json) ----------
+def arm_tier(s):
+    if s >= 120: return ("top", "Most arm-friendly")
+    if s >= 105: return ("mid", "Arm-friendly")
+    return ("firm", "Firmer")
+
+
+def arm_thumb(p):
+    if p.get("photo") and os.path.exists(os.path.join(OUT, "assets/paddles/product", p["photo"])):
+        return f'<img class="arm-thumb" src="assets/paddles/product/{p["photo"]}" alt="" width="40" height="60" loading="lazy">'
+    return f'<span class="arm-thumb arm-mono" aria-hidden="true">{e(p["paddle"][:1])}</span>'
+
+
+_arm = sorted(VIB["arm"], key=lambda p: -p["score"])
+_arm_max = 150
+arm_ladder = "".join(
+    f'<li class="arm-row tier-{arm_tier(p["score"])[0]}"><span class="arm-rank">{i}</span>{arm_thumb(p)}'
+    f'<div class="arm-main"><div class="arm-name">{e(p["paddle"])}'
+    + (' <span class="arm-chip ref">Reference</span>' if p.get("reference") else "")
+    + (' <span class="arm-chip used">Used paddle</span>' if p.get("used") else "")
+    + f'</div><div class="arm-track"><span class="arm-fill" style="width:{p["score"] / _arm_max * 100:.1f}%"></span><span class="arm-ref" style="left:{100 / _arm_max * 100:.1f}%" title="Reference = 100"></span></div></div>'
+    f'<div class="arm-score"><b>{p["score"]}</b><span>{arm_tier(p["score"])[1]}</span></div></li>'
+    for i, p in enumerate(_arm, 1))
+arm_rows = "".join(
+    f'<tr class="tier-{arm_tier(p["score"])[0]}"><td class="num" data-v="{i}">{i}</td>'
+    f'<td data-v="{e(p["paddle"])}">' + (f'<a href="xray/{p["xray"]}.html">{e(p["paddle"])}</a>' if p.get("xray") and os.path.exists(os.path.join(OUT, "xray", p["xray"] + ".html")) else f'<strong>{e(p["paddle"])}</strong>') + '</td>'
+    f'<td class="num arm-col" data-v="{p["score"]}"><span class="arm-pill">{p["score"]}</span></td>'
+    f'<td class="num" data-v="{p["shock"]}">{p["shock"]:.2f}</td><td class="num" data-v="{p["buzz"]}">{p["buzz"]:.2f}</td>'
+    f'<td class="num" data-v="{p["fade"]}">{p["fade"]:.1f}</td><td class="num" data-v="{p["twist"]}">{p["twist"]:,}</td></tr>'
+    for i, p in enumerate(_arm, 1))
+_stf = sorted(VIB["stiffness"], key=lambda p: -p["hz"])
+_stf_max = 600
+stiff_bars = "".join(
+    f'<li><div class="stf-name">{e(p["paddle"])}{"*" if p.get("flag") else ""}'
+    + (' <span class="arm-chip">No Arm Score yet</span>' if p.get("no_arm") else "")
+    + f'<span class="muted stf-date">Tested {e(p["tested"])}</span></div>'
+    f'<div class="stf-track"><span class="stf-fill" style="width:{p["hz"] / _stf_max * 100:.1f}%"></span><b>{p["hz"]} Hz</b></div></li>'
+    for p in _stf)
+stiff_flags = "".join(f'<li>* {e(p["flag"])}</li>' for p in _stf if p.get("flag"))
+no_arm = [p["paddle"] for p in _stf if p.get("no_arm")]
+weights_bar = "".join(f'<span style="flex:{w}" class="w{i}"><b>{w}%</b> {e(n)}</span>' for i, (n, w) in enumerate(VIB["weights"]))
+glossary = [
+    ("Arm Score", "One overall number for arm comfort. Higher is friendlier; 100 = the reference paddle."),
+    ("Shock to wrist", "The jolt your wrist feels in the first tenth of a second after impact. Lower is gentler."),
+    ("Buzz at wrist", "How much of the paddle's ringing vibration reaches your wrist. Lower means less buzz."),
+    ("Buzz fade", "How long the paddle keeps ringing after the hit. Shorter feels cleaner."),
+    ("Wrist twist", "How hard the hit rotates your wrist. Lower means a more stable paddle."),
+    ("Ring frequency", "The pitch the paddle vibrates at. A higher pitch means a stiffer, firmer face."),
+]
+glossary_html = "".join(f'<div class="gl"><dt>{e(t)}</dt><dd>{e(d)}</dd></div>' for t, d in glossary)
+write("arm-score.html", page("Arm Score: pickleball paddle vibration test results | PickleballRx", f"""
+<section class="hero arm-hero" style="padding:44px 0"><div class="wrap" style="grid-template-columns:1fr"><div>
+  <span class="tag">Arm Lab &middot; Vibration test results</span>
+  <h1>Which paddles are <em>easiest on your arm</em>?</h1>
+  <p>Most &ldquo;arm-friendly&rdquo; claims are based on feel. We put sensors on the handle and the wrist and measure what actually reaches your arm. {e(VIB["headline"])}</p>
+  <div class="arm-stats">
+    <div><b>{len(VIB["arm"])}</b><span>paddles with an Arm Score</span></div>
+    <div><b>{len(VIB["stiffness"])}</b><span>paddles stiffness-tested</span></div>
+    <div><b>1,600</b><span>sensor readings per second</span></div>
+    <div><b>~25</b><span>hits per paddle</span></div>
+  </div>
+</div></div></section>
+<div class="wrap">
+<section style="padding-bottom:0"><div class="arm-factory"><div class="ico">&#10003;</div><div><strong>Every paddle is tested exactly as it comes from the factory.</strong> Factory grip and no added weight: no overgrip, no lead tape. So the numbers compare fairly, paddle to paddle.</div></div></section>
+<section id="arm-score">
+  <div class="section-head"><div><span class="tag">Arm Score</span><h2 style="margin-top:8px">The Arm Score ranking</h2>
+  <p class="section-lead">Higher is more arm-friendly. The reference paddle, the {e(VIB["reference"])}, scores 100. Tested {e(VIB["arm_tested"])}.</p></div></div>
+  <div class="arm-legend"><span class="tier-top"><i></i>120+ Most arm-friendly</span><span class="tier-mid"><i></i>105&ndash;119 Arm-friendly</span><span class="tier-firm"><i></i>Under 105 Firmer</span><span class="arm-legend-ref"><i></i>Reference = 100</span></div>
+  <ol class="arm-ladder">{arm_ladder}</ol>
+  <p class="arm-tie"><strong>Read close scores as ties.</strong> Scores within about 15 points of each other are effectively tied. The colors are a guide, not a hard line.</p>
+</section>
+<section id="results" style="padding-top:0">
+  <h2>Full results</h2>
+  <p class="section-lead">Lower is better in every column except Arm Score. Tap a column to sort. Tap a paddle to see its X-ray.</p>
+  <div class="table-wrap"><table class="db sortable arm-table" style="min-width:760px">
+    <thead><tr><th aria-sort="ascending"><button>#</button></th><th><button>Paddle</button></th><th class="arm-col"><button>Arm Score</button></th><th><button>Shock to wrist (g)</button></th><th><button>Buzz at wrist (g)</button></th><th><button>Buzz fade (ms)</button></th><th><button>Wrist twist (&deg;/s)</button></th></tr></thead>
+    <tbody>{arm_rows}</tbody></table></div>
+  <h3 style="margin-top:28px">How the Arm Score is built</h3>
+  <p class="muted" style="max-width:70ch">Each measurement is compared with the reference paddle, then combined with these weights (a weighted geometric mean of reference &divide; paddle, &times; 100). Shock to the wrist counts most.</p>
+  <div class="arm-weights">{weights_bar}</div>
+</section>
+<section id="stiffness">
+  <div class="section-head"><div><span class="tag">Face stiffness</span><h2 style="margin-top:8px">{e(VIB["stiffness_title"])}</h2>
+  <p class="section-lead">Ring frequency is the pitch the paddle vibrates at after impact. Higher means a stiffer, firmer face. It repeats within about 2% across days.</p></div></div>
+  <div class="stf-chart"><div class="stf-axis"><span>0 Hz</span><span>Ring frequency</span><span>{_stf_max} Hz</span></div><ol class="stf-bars">{stiff_bars}</ol></div>
+  <ul class="muted" style="font-size:.9rem;margin-top:12px">
+    {stiff_flags}
+    <li><strong>A stiff face is not automatically harsh on the arm.</strong> The Jade and the Evolvs are among both the stiffest and the most arm-friendly.</li>
+    <li>Weight also affects pitch: a lighter paddle rings higher.</li>
+    {f'<li>{" and ".join(e(n) for n in no_arm)} have stiffness data but no Arm Score yet. They were tested before the controlled protocol.</li>' if no_arm else ""}
+  </ul>
+</section>
+<section id="method">
+  <h2>How we test</h2>
+  <p class="section-lead">Every paddle gets the same controlled test, so the numbers compare fairly.</p>
+  <div class="tools arm-tools">
+    <div class="tool"><div class="ico">&#9881;</div><h3>Factory setup</h3><p>Every paddle is tested with its factory grip and no added weight: no overgrip, no lead tape.</p></div>
+    <div class="tool"><div class="ico">&#8767;</div><h3>Sensors</h3><p>One motion sensor on the handle (1&Prime; below the face) and one on the back of the wrist, recording 1,600 times per second. The wrist sensor also has a gyroscope to measure twist.</p></div>
+    <div class="tool"><div class="ico">&#9673;</div><h3>Shot</h3><p>Passive forehand blocks at the center of the face, fed by a ball machine at the same speed and setting for every paddle.</p></div>
+    <div class="tool"><div class="ico">25</div><h3>Hits</h3><p>About 25 per paddle. Mishits are filtered out automatically.</p></div>
+    <div class="tool"><div class="ico">100</div><h3>Reference paddle</h3><p>The {e(VIB["reference"])} is tested in every session and scores 100, so results from different days line up.</p></div>
+  </div>
+</section>
+<section id="glossary" style="padding-top:0">
+  <h2>What the numbers mean</h2>
+  <dl class="arm-glossary">{glossary_html}</dl>
+</section>
+<section id="limits" style="padding-top:0">
+  <h2>Notes and limits</h2>
+  <p class="section-lead">These are early results from one tester; treat close scores as ties.</p>
+  <ul class="arm-limits">
+    <li><strong>One player:</strong> results reflect one arm and grip style. Rankings may shift for other players.</li>
+    <li><strong>Repeatability:</strong> ring frequency repeats within about 2% across days. Shock values depend on test conditions, so they are compared only within the same session.</li>
+    <li><strong>Paddle age matters:</strong> the Evolv (6 months) and Speedup Tide were used paddles; a new copy may score differently.</li>
+    <li><strong>Not medical advice:</strong> the test measures vibration and comfort, not injury risk.</li>
+    <li><strong>Coming next:</strong> more paddles, a second tester, and how much an overgrip or lead tape changes the numbers.</li>
+  </ul>
+  <p class="muted" style="margin-top:16px"><strong>Last updated: {e(VIB["updated"])}</strong></p>
+</section>
+<section style="padding-top:0"><div class="note"><strong>Disclosures.</strong> Evolv provided the Origin paddles, and the Grit E2 CF paddles were provided by the owner of Grit. Pickleball RX has discount codes with some brands (including Evolv, Grit and RPM) and earns commission on code or link purchases. Brands have no input into the results. This is our own test rig, not an official USA Pickleball test, and not medical advice. <a href="disclaimers.html">Disclaimers</a>.</div></section>
+</div>""", 0, "arm", desc="Pickleball paddle vibration test results: an Arm Score for arm comfort from wrist and handle sensors, plus face stiffness (ring frequency). Factory grip, no added weight.", crumbs=[("Arm Score", None)]))
+
 # ---------- codes ----------
 ccards = "\n".join(
     f'<div class="code-card"><h3>{e(c["brand"])}</h3><p class="muted" style="margin:0">{e(c["offer"][:1].upper() + c["offer"][1:])} with our code</p><code>{e(c["code"])}</code>'
@@ -1463,6 +1596,7 @@ write("about.html", page("About and how we test | PickleballRx", f'''
     <li><strong>Play it.</strong> Every paddle gets drills and real games, and a video review on <a href="{YOUTUBE}">YouTube</a>.</li>
     <li><strong>Measure it.</strong> Weight, swing weight, twist weight, dimensions and core thickness, measured ourselves.</li>
     <li><strong>Look inside.</strong> <a href="lab.html">X-rays</a> show the core and ring. A <a href="grit.html">4K microscope</a> shows face grit and wear.</li>
+    <li><strong>Measure arm comfort.</strong> Motion sensors on the handle and wrist give each paddle an <a href="arm-score.html">Arm Score</a>, tested with the factory grip and no added weight.</li>
     <li><strong>Measure spin.</strong> A fixed <a href="spin.html">spin rig</a> filmed at 960 fps, then re-tested after real play.</li>
     <li><strong>Score it.</strong> Power, spin, control and forgiveness on the same 10-point scale.</li>
   </ol>
@@ -1762,7 +1896,7 @@ write("404.html", page("Page not found | PickleballRx", '<article class="article
 
 # ---------- sitemap.xml and robots.txt (every indexable page; noindex pages are left out) ----------
 _prio = {"index.html": "1.0", "paddles.html": "0.9", "lab.html": "0.9", "best.html": "0.9", "finder.html": "0.9",
-         "grit.html": "0.8", "spin.html": "0.8", "specs.html": "0.8", "pros.html": "0.8", "codes.html": "0.8"}
+         "grit.html": "0.8", "spin.html": "0.8", "specs.html": "0.8", "arm-score.html": "0.8", "pros.html": "0.8", "codes.html": "0.8"}
 write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
     f"  <url><loc>{e(page_url(pth))}</loc><priority>{_prio.get(pth, '0.7' if '/' not in pth else '0.6')}</priority></url>\n"
     for pth in sorted(SITEMAP, key=lambda q: (q != "index.html", "/" in q, q))) + "</urlset>\n")
