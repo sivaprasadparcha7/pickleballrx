@@ -44,7 +44,7 @@ CODES = [  # confirmed by Siva 2026-11-17
     dict(brand="Speedup", code="PBRX", offer="10% off", url="https://speeduppickle.com/"),
     dict(brand="Grit", code="PBRX", offer="10% off", url="https://www.grit-shop.com/", no_disc=True),
     dict(brand="Pickle Poppers", code="PBRX", offer="10% off", url="https://www.pickle-poppers.com/", no_disc=True),  # Siva 2026-11-19
-    dict(brand="Mehau", code="PBRX", offer="15% off", url="", via="Fermiha"),  # Siva 2026-11-22; store link to come
+    dict(brand="Mehau", code="PBRX", offer="15% off", url="https://mehaupickleball.com/", via="Fermiha"),  # Siva 2026-11-22
 ]
 
 
