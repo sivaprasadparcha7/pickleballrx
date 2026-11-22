@@ -94,17 +94,63 @@
 
   /* finder: see rx.js */
 
-  /* ---------- X-Ray Rx filter ---------- */
+  /* ---------- X-Ray Rx search + filter ---------- */
   var xg = $('#x-grid');
   if (xg) {
-    var tag = '';
-    var xr = function () {
-      var q = $('#x-q').value.toLowerCase(), n = 0;
-      $$('.xcard', xg).forEach(function (c) {
-        var show = (!tag || (' ' + c.dataset.tags + ' ').indexOf(' ' + tag + ' ') > -1) && (!q || c.dataset.name.indexOf(q) > -1);
-        c.hidden = !show; if (show) n++;
+    var tag = '', xq = $('#x-q'), sugg = $('#x-sugg'), active = -1, shown = [];
+    // "Grit E2-CF", "grit e2cf" and "GRIT. E2 CF" should all find the same paddle.
+    var norm = function (s) {
+      s = String(s || '').toLowerCase();
+      if (s.normalize) s = s.normalize('NFKD').replace(/[̀-ͯ]/g, '');
+      return s.replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, ' ').trim();
+    };
+    var cards = $$('.xcard', xg).map(function (c) {
+      var n = norm(c.dataset.name);
+      return { el: c, n: ' ' + n + ' ', c: n.replace(/ /g, ''), t: norm(c.dataset.title), title: c.dataset.title, core: c.dataset.core, href: c.dataset.href };
+    });
+    // Lower score = better match; -1 = no match.
+    var score = function (x, q) {
+      if (!q) return 0;
+      var toks = q.split(' '), qc = toks.join('');
+      var all = toks.every(function (t) { return x.n.indexOf(t) > -1 || x.c.indexOf(t) > -1; });
+      if (!all && x.c.indexOf(qc) < 0) return -1;
+      if (x.t.indexOf(q) === 0) return 0;
+      if (x.n.indexOf(' ' + q) > -1) return 1;
+      if (toks.every(function (t) { return x.n.indexOf(' ' + t) > -1; })) return 2;
+      return 3;
+    };
+    var go = function (href) { if (href) location.href = href; };
+    var setActive = function (i) {
+      active = i;
+      $$('li', sugg).forEach(function (li, j) { li.setAttribute('aria-selected', j === i ? 'true' : 'false'); });
+      if (i > -1) xq.setAttribute('aria-activedescendant', 'x-sugg-' + i); else xq.removeAttribute('aria-activedescendant');
+    };
+    var closeSugg = function () { sugg.hidden = true; xq.setAttribute('aria-expanded', 'false'); setActive(-1); };
+    var xr = function (fromTyping) {
+      var q = norm(xq.value), n = 0, hits = [];
+      cards.forEach(function (x) {
+        var sc = score(x, q);
+        var show = (!tag || (' ' + x.el.dataset.tags + ' ').indexOf(' ' + tag + ' ') > -1) && sc > -1;
+        x.el.hidden = !show; if (show) n++;
+        if (q && sc > -1) hits.push({ x: x, s: sc });
       });
-      $('#x-count').textContent = n + ' paddles';
+      hits.sort(function (a, b) { return a.s - b.s || a.x.title.length - b.x.title.length || a.x.title.localeCompare(b.x.title); });
+      shown = hits.slice(0, 8).map(function (h) { return h.x; });
+      $('#x-count').innerHTML = q
+        ? n + ' of ' + cards.length + ' paddles match &ldquo;' + esc(xq.value.trim()) + '&rdquo; <button type="button" class="linkish" id="x-clear">Show all</button>'
+        : n + ' paddles';
+      var cl = $('#x-clear');
+      if (cl) cl.addEventListener('click', function () { xq.value = ''; xr(); closeSugg(); });
+      if (!fromTyping) return;
+      if (!q) { closeSugg(); return; }
+      sugg.innerHTML = shown.length
+        ? shown.map(function (x, i) { return '<li role="option" id="x-sugg-' + i + '" aria-selected="false"><a href="' + esc(x.href) + '"><strong>' + esc(x.title) + '</strong><span>' + esc(x.core) + '</span></a></li>'; }).join('') +
+          (hits.length > shown.length ? '<li class="more"><a href="#all-xrays">See all ' + hits.length + ' matches</a></li>' : '')
+        : '<li class="none">No X-ray yet for &ldquo;' + esc(xq.value.trim()) + '&rdquo;. <a href="paddles.html">Search the paddle database</a></li>';
+      sugg.hidden = false; xq.setAttribute('aria-expanded', 'true');
+      setActive(shown.length ? 0 : -1);
+      var more = $('li.more a', sugg);
+      if (more) more.addEventListener('click', closeSugg);
     };
     $$('#x-chips button').forEach(function (b) {
       b.addEventListener('click', function () {
@@ -113,7 +159,24 @@
         xr();
       });
     });
-    $('#x-q').addEventListener('input', xr);
+    xq.addEventListener('input', function () { xr(true); });
+    xq.addEventListener('focus', function () { if (xq.value.trim()) xr(true); });
+    xq.addEventListener('keydown', function (ev) {
+      if (ev.key === 'ArrowDown' && shown.length) { ev.preventDefault(); if (sugg.hidden) xr(true); setActive(Math.min(active + 1, shown.length - 1)); }
+      else if (ev.key === 'ArrowUp' && shown.length) { ev.preventDefault(); setActive(Math.max(active - 1, 0)); }
+      else if (ev.key === 'Enter') {
+        ev.preventDefault();
+        if (!norm(xq.value)) return;
+        if (sugg.hidden) xr(true);
+        if (shown.length) go(shown[Math.max(active, 0)].href);
+        else { closeSugg(); var g = $('#all-xrays'); if (g) g.scrollIntoView({ behavior: 'smooth' }); }
+      }
+      else if (ev.key === 'Escape') closeSugg();
+    });
+    document.addEventListener('click', function (ev) { if (!ev.target.closest('.xfind')) closeSugg(); });
+    // lab.html?q=jade fills the search box, so a search can be shared as a link.
+    var q0 = new URLSearchParams(location.search).get('q');
+    if (q0) xq.value = q0;
     xr();
   }
 })();
