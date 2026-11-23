@@ -1,7 +1,7 @@
 {
   "_how_to_edit": "Arm Lab (vibration test) data. Add a paddle to 'arm', 'offcenter' and/or 'stiffness', change 'updated', then run python3 build.py. Arm Score: higher = more arm-friendly, reference paddle = 100. Optional keys: photo (file in site/assets/paddles/product/), xray (slug in site/xray/), used, reference, second_tester (shows the 'Second tester' chip and the footnote in 'second_tester_note'), approx (stiffness value shown with ~).",
   "updated": "Nov 23, 2026",
-  "arm_tested": "Nov 21, 2026, one session (Franklin Whip: Nov 23, second tester)",
+  "arm_tested": "Nov 21, 2026, one session (Franklin Dynasty Whip: Nov 23, second tester)",
   "reference": "Grit E2 CF (new)",
   "headline": "The Evolv (6 months of use) and the RPM Jade are the most arm-friendly so far; both Grit E2 CF versions are the firmest.",
   "weights": [["Shock to wrist", 45], ["Buzz at wrist", 25], ["Buzz fade", 10], ["Wrist twist", 10], ["Off-center shock", 10]],
@@ -11,7 +11,7 @@
     {"paddle": "RPM Jade", "score": 133, "shock": 1.89, "buzz": 0.24, "fade": 9.4, "twist": 406, "photo": "rpm-jade.jpg", "xray": "rpm-jade"},
     {"paddle": "Evolv Origin", "score": 113, "shock": 1.70, "buzz": 0.60, "fade": 10.6, "twist": 352, "photo": "evolv-origin.jpg", "xray": "evolv-origin"},
     {"paddle": "Speedup Tide 14L (6 months of use)", "score": 110, "shock": 1.86, "buzz": 0.46, "fade": 13.1, "twist": 440, "used": true, "xray": "speedup-tide"},
-    {"paddle": "Franklin Whip", "score": 101, "shock": 1.88, "buzz": 0.81, "fade": 10.3, "twist": 327, "second_tester": true},
+    {"paddle": "Franklin Dynasty Whip", "score": 101, "shock": 1.88, "buzz": 0.81, "fade": 10.3, "twist": 327, "second_tester": true, "photo": "franklin-dynasty-whip-16mm.jpg", "xray": "franklin-dynasty-whip-16mm"},
     {"paddle": "Grit E2 CF (new, reference)", "score": 100, "shock": 2.15, "buzz": 0.58, "fade": 10.0, "twist": 427, "photo": "grit-e2-cf.jpg", "xray": "grit-e2-cf", "reference": true},
     {"paddle": "Grit E2 CF (older version)", "score": 99, "shock": 2.27, "buzz": 0.59, "fade": 10.0, "twist": 355, "photo": "grit-e2-cf.jpg", "xray": "grit-e2-cf"}
   ],
@@ -30,7 +30,7 @@
     "These were small mishits during center blocks, so bigger mishits may be worse.",
     "Early results: 7–8 hits per group, so treat small differences as ties."
   ],
-  "offcenter_second_tester": "Franklin Whip (second tester): off-center hits sent 40% more shock than center hits, the same as the Grit E2 CF in that session (+41%). It's shown as a note, not a row, because it was a different tester.",
+  "offcenter_second_tester": "Franklin Dynasty Whip (second tester): off-center hits sent 40% more shock than center hits, the same as the Grit E2 CF in that session (+41%). It's shown as a note, not a row, because it was a different tester.",
   "stiffness_title": "RPM Jade has the stiffest face, Speedup Tide the softest",
   "stiffness": [
     {"paddle": "RPM Jade", "hz": 541, "tested": "Nov 21, 2026", "flag": "RPM Jade's buzz is dominated by a higher vibration mode; its value may overstate stiffness."},
@@ -38,14 +38,14 @@
     {"paddle": "Grit E2 CF (new)", "hz": 408, "tested": "Nov 20 and 21, 2026"},
     {"paddle": "Evolv Origin", "hz": 392, "tested": "Nov 20 and 21, 2026"},
     {"paddle": "Grit E2 CF (older version)", "hz": 361, "tested": "Nov 21, 2026"},
-    {"paddle": "Franklin Whip", "hz": 350, "approx": true, "tested": "Nov 23, 2026", "second_tester": true},
+    {"paddle": "Franklin Dynasty Whip", "hz": 350, "approx": true, "tested": "Nov 23, 2026", "second_tester": true},
     {"paddle": "RPM V2", "hz": 345, "tested": "Nov 20, 2026", "no_arm": true},
     {"paddle": "Gearbox Pressure X 8M", "hz": 340, "tested": "Nov 20, 2026", "no_arm": true},
     {"paddle": "Speedup Tide 14L (6 months of use)", "hz": 298, "tested": "Nov 20 and 21, 2026"}
   ],
   "grip_test": {
     "title": "Do grip upgrades protect your arm?",
-    "lead": "Our Nov 23 grip test: Daniel's Franklin Whip in 6 setups, with the Grit E2 CF reference at the start and end of the session (corrected for player fatigue). Arm Score: Grit E2 CF = 100.",
+    "lead": "Our Nov 23 grip test: Daniel's Franklin Dynasty Whip in 6 setups, with the Grit E2 CF reference at the start and end of the session (corrected for player fatigue). Arm Score: Grit E2 CF = 100.",
     "rows": [
       ["Factory grip", "101", "Baseline"],
       ["+ Overgrip", "100", "No change in shock; paddle twisted ~24% more in hand"],

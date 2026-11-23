@@ -4265,6 +4265,7 @@
      "model": "RLD 1-16",
      "shape": "Elongated",
      "mm": "16",
+     "tested": "reload-rld1-16mm",
      "price": 200,
      "note": "Replaceable face sheets",
      "weight": "8.3oz",

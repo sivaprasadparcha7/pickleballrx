@@ -1499,7 +1499,7 @@ write("arm-score.html", page("Arm Score: pickleball paddle vibration test result
     {stiff_flags}
     <li><strong>A stiff face is not automatically harsh on the arm.</strong> The Jade and the Evolvs are among both the stiffest and the most arm-friendly.</li>
     <li>Weight also affects pitch: a lighter paddle rings higher.</li>
-    <li>The Franklin Whip was tested by a second tester on Nov 23; its value is approximate.</li>
+    <li>The Franklin Dynasty Whip was tested by a second tester on Nov 23; its value is approximate.</li>
     {f'<li>{" and ".join(e(n) for n in no_arm)} have stiffness data but no Arm Score yet. They were tested before the controlled protocol.</li>' if no_arm else ""}
   </ul>
 </section>
@@ -1507,7 +1507,7 @@ write("arm-score.html", page("Arm Score: pickleball paddle vibration test result
   <div class="section-head"><div><span class="tag">Grip test &middot; Nov 23, 2026</span><h2 style="margin-top:8px">{e(GT["title"])}</h2>
   <p class="section-lead">{e(GT["lead"])}</p></div></div>
   <div class="table-wrap"><table class="db arm-table grip-table" style="min-width:620px">
-    <thead><tr><th>Franklin Whip setup</th><th class="arm-col">Arm Score</th><th>What changed vs factory</th></tr></thead>
+    <thead><tr><th>Franklin Dynasty Whip setup</th><th class="arm-col">Arm Score</th><th>What changed vs factory</th></tr></thead>
     <tbody>{grip_rows}</tbody></table></div>
   <p class="arm-foot">* {e(GT["footnote"])}</p>
   <div class="arm-factory" style="margin-top:16px"><div class="ico">!</div><div><strong>Takeaway:</strong> {e(GT["takeaway"])} <span class="muted">{e(GT["limits"])}</span></div></div>
@@ -1535,7 +1535,7 @@ write("arm-score.html", page("Arm Score: pickleball paddle vibration test result
     <li><strong>Repeatability:</strong> ring frequency repeats within about 2% across days. Shock values depend on test conditions, so they are compared only within the same session.</li>
     <li><strong>Paddle age matters:</strong> the Evolv (6 months) and Speedup Tide were used paddles; a new copy may score differently.</li>
     <li><strong>Not medical advice:</strong> the test measures vibration and comfort, not injury risk.</li>
-    <li><strong>Second tester:</strong> the Franklin Whip was tested by a second player (Daniel) and scaled to the shared reference paddle; compare it loosely.</li>
+    <li><strong>Second tester:</strong> the Franklin Dynasty Whip was tested by a second player (Daniel) and scaled to the shared reference paddle; compare it loosely.</li>
     <li><strong>Coming next:</strong> more paddles, repeat runs on different days, more second-tester checks, and a blind feel test against the Arm Score.</li>
   </ul>
   <p class="muted" style="margin-top:16px"><strong>Last updated: {e(VIB["updated"])}</strong></p>
