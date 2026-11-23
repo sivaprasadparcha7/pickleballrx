@@ -1078,12 +1078,12 @@
      "Not published"
     ]
    ],
-   "sources": "Unreleased paddle: no specs found online (only a 14 mm \"WHIP Dynasty\" listing on puprpaddles.com). Labels are an interpretation of the X-ray, not a cutaway.",
+   "sources": "Labels are an interpretation of the X-ray, not a cutaway.",
    "tags": [
     "foam"
    ],
    "reel": "",
-   "unreleased": true
+   "unreleased": false
   },
   {
    "slug": "friday-aura-pro",

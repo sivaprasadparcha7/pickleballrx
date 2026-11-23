@@ -111,7 +111,7 @@ CODE_BRANDS = ["Arronax", "Bread & Butter", "11SIX24", "Aireo", "RPM", "Holbrook
 _CB = {b.lower() for b in CODE_BRANDS}
 
 # Never in the finder: unreleased, pre-release or pre-order-only paddles, and trainers.
-EXCLUDE = [r"dynasty whip", r"aura pro tour", r"project bluejay", r"project cardinal", r"trainer|training|trickshot|champion 12mm|essentials dash"]
+EXCLUDE = [r"aura pro tour", r"project bluejay", r"project cardinal", r"trainer|training|trickshot|champion 12mm|essentials dash"]
 
 # ---------- countries ----------
 # Chosen from DUPR's ranking of countries by players (The Dink, Oct 2024) plus the countries Siva named.

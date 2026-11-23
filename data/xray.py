@@ -104,7 +104,7 @@ REELS = {
  "gearbox-pressure-x-8e": "Gearbox Pressure X 8E reel",
  "pact-teflon": "PACT Teflon Evolve review, and PACT vs Gen 3 comparison",
 }
-UNRELEASED = {"franklin-dynasty-whip-16mm"}
+UNRELEASED = set()
 
 
 def tags(x):
