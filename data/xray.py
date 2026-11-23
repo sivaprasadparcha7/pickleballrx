@@ -62,6 +62,7 @@ NAMES = {
  "arronax-thunder-gen1": ("arronax-thunder-gen-1", "Arronax Thunder (Gen 1)", "Arronax"),
  "bread-and-butter-loco-1": ("bread-butter-loco-1", "Bread & Butter LOCO 1", "Bread & Butter"),
  "bread-and-butter-loco-2": ("bread-butter-loco-2", "Bread & Butter LOCO 2", "Bread & Butter"),
+ "reload-rld1": ("reload-rld1-16mm", "Reload RLD-1 16mm", "Reload"),
  "flik-f1": ("flik-f1", "FLiK F1 Elongated", "FLiK"),
  "nox-jc6-16mm": ("nox-x-foam-jc6", "NOX X-Foam JC6 16mm", "NOX"),
  "nox-jma": ("nox-x-foam-jma", "NOX X-Foam JMA 16mm", "NOX"),
@@ -103,7 +104,7 @@ REELS = {
  "gearbox-pressure-x-8e": "Gearbox Pressure X 8E reel",
  "pact-teflon": "PACT Teflon Evolve review, and PACT vs Gen 3 comparison",
 }
-UNRELEASED = {"franklin-dynasty-whip-16mm"}
+UNRELEASED = set()
 
 
 def tags(x):

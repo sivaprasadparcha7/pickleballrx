@@ -440,3 +440,10 @@ td .product-thumb { float: left; height: 42px; margin: 0 10px 0 0; }
 .arm-tools { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 .arm-mono, .arm-chip.ref { border: 1px solid #2a3f6c; }
 @media (max-width: 640px) { .arm-table td:nth-child(2) { white-space: normal; min-width: 150px; max-width: 170px; line-height: 1.35; } }
+/* Arm Lab additions (Nov 23): second tester, off-center table, grip test */
+.arm-weights .w4 { background: #f4c35a; color: #112240; }
+.arm-chip.second { background: #fff4d6; color: #7a5200; border-color: #e6b44a; text-decoration: none; }
+.arm-foot { margin: 12px 0 0; font-size: .9rem; color: var(--muted); max-width: 80ch; }
+.off-extra { display: inline-block; min-width: 64px; font-weight: 800; padding: 3px 10px; border-radius: 999px; background: linear-gradient(90deg, rgba(217,154,18,.35) var(--w), transparent var(--w)); border: 1px solid #e6b44a; }
+.grip-table tr.grip-base td { font-weight: 600; }
+.grip-table td.arm-col { font-weight: 800; }

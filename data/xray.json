@@ -1078,12 +1078,12 @@
      "Not published"
     ]
    ],
-   "sources": "Unreleased paddle: no specs found online (only a 14 mm \"WHIP Dynasty\" listing on puprpaddles.com). Labels are an interpretation of the X-ray, not a cutaway.",
+   "sources": "Labels are an interpretation of the X-ray, not a cutaway.",
    "tags": [
     "foam"
    ],
    "reel": "",
-   "unreleased": true
+   "unreleased": false
   },
   {
    "slug": "friday-aura-pro",
@@ -3288,6 +3288,59 @@
    "sources": "Specs: pickleballcentral.com (Peacock 15mm Elongated; Flamingo vs Peacock review). Labels interpret the X-ray, not a cutaway.",
    "tags": [
     "foam"
+   ],
+   "reel": "",
+   "unreleased": false
+  },
+  {
+   "slug": "reload-rld1-16mm",
+   "name": "Reload RLD-1 16mm",
+   "brand": "Reload",
+   "image": "reload-rld1-labeled.png",
+   "core": "PP honeycomb + expanding foam (PPA)",
+   "cell_size": "≈ 8.2 mm (measured)",
+   "ring": "≈ 9 mm foam-filled edge zone (±1)",
+   "thickness": "16 mm",
+   "face": "T700 carbon fiber, coarse peel ply",
+   "weight": "8.2 oz ± 0.2 (maker), 8.3 oz (PPA)",
+   "size": "419 x 190 mm (16.5 x 7.5 in), 16 mm",
+   "specs": [
+    [
+     "Core type",
+     "PP honeycomb + expanding foam (PPA)"
+    ],
+    [
+     "Cell size",
+     "≈ 8.2 mm (measured)"
+    ],
+    [
+     "Perimeter",
+     "≈ 9 mm foam-filled edge zone (±1)"
+    ],
+    [
+     "Face",
+     "T700 carbon fiber, coarse peel ply"
+    ],
+    [
+     "Weight",
+     "8.2 oz ± 0.2 (maker), 8.3 oz (PPA)"
+    ],
+    [
+     "Size",
+     "419 x 190 mm (16.5 x 7.5 in), 16 mm"
+    ],
+    [
+     "Shape",
+     "Hybrid"
+    ],
+    [
+     "Handle",
+     "140 mm (5.5 in), grip 4.17 in"
+    ]
+   ],
+   "sources": "Specs: Reload and the PPA Tour paddle lab. Labels interpret the X-ray, not a cutaway.",
+   "tags": [
+    "honeycomb"
    ],
    "reel": "",
    "unreleased": false

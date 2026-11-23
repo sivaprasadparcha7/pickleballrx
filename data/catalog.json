@@ -1647,6 +1647,7 @@
     {
      "model": "Dynasty Whip 16mm",
      "mm": "16",
+     "price": 259.99,
      "tested": "franklin-dynasty-whip-16mm"
     }
    ]
@@ -4265,6 +4266,7 @@
      "model": "RLD 1-16",
      "shape": "Elongated",
      "mm": "16",
+     "tested": "reload-rld1-16mm",
      "price": 200,
      "note": "Replaceable face sheets",
      "weight": "8.3oz",

@@ -1402,12 +1402,14 @@ arm_ladder = "".join(
     f'<div class="arm-main"><div class="arm-name">{e(p["paddle"])}'
     + (' <span class="arm-chip ref">Reference</span>' if p.get("reference") else "")
     + (' <span class="arm-chip used">Used paddle</span>' if p.get("used") else "")
+    + (' <a class="arm-chip second" href="#second-tester">Second tester*</a>' if p.get("second_tester") else "")
     + f'</div><div class="arm-track"><span class="arm-fill" style="width:{p["score"] / _arm_max * 100:.1f}%"></span><span class="arm-ref" style="left:{100 / _arm_max * 100:.1f}%" title="Reference = 100"></span></div></div>'
     f'<div class="arm-score"><b>{p["score"]}</b><span>{arm_tier(p["score"])[1]}</span></div></li>'
     for i, p in enumerate(_arm, 1))
 arm_rows = "".join(
     f'<tr class="tier-{arm_tier(p["score"])[0]}"><td class="num" data-v="{i}">{i}</td>'
-    f'<td data-v="{e(p["paddle"])}">' + (f'<a href="xray/{p["xray"]}.html">{e(p["paddle"])}</a>' if p.get("xray") and os.path.exists(os.path.join(OUT, "xray", p["xray"] + ".html")) else f'<strong>{e(p["paddle"])}</strong>') + '</td>'
+    f'<td data-v="{e(p["paddle"])}">' + (f'<a href="xray/{p["xray"]}.html">{e(p["paddle"])}</a>' if p.get("xray") and os.path.exists(os.path.join(OUT, "xray", p["xray"] + ".html")) else f'<strong>{e(p["paddle"])}</strong>')
+    + ('* <span class="arm-chip second">Second tester</span>' if p.get("second_tester") else "") + '</td>'
     f'<td class="num arm-col" data-v="{p["score"]}"><span class="arm-pill">{p["score"]}</span></td>'
     f'<td class="num" data-v="{p["shock"]}">{p["shock"]:.2f}</td><td class="num" data-v="{p["buzz"]}">{p["buzz"]:.2f}</td>'
     f'<td class="num" data-v="{p["fade"]}">{p["fade"]:.1f}</td><td class="num" data-v="{p["twist"]}">{p["twist"]:,}</td></tr>'
@@ -1417,11 +1419,25 @@ _stf_max = 600
 stiff_bars = "".join(
     f'<li><div class="stf-name">{e(p["paddle"])}{"*" if p.get("flag") else ""}'
     + (' <span class="arm-chip">No Arm Score yet</span>' if p.get("no_arm") else "")
+    + (' <span class="arm-chip second">Second tester</span>' if p.get("second_tester") else "")
     + f'<span class="muted stf-date">Tested {e(p["tested"])}</span></div>'
-    f'<div class="stf-track"><span class="stf-fill" style="width:{p["hz"] / _stf_max * 100:.1f}%"></span><b>{p["hz"]} Hz</b></div></li>'
+    f'<div class="stf-track"><span class="stf-fill" style="width:{p["hz"] / _stf_max * 100:.1f}%"></span><b>{"~" if p.get("approx") else ""}{p["hz"]} Hz</b></div></li>'
     for p in _stf)
 stiff_flags = "".join(f'<li>* {e(p["flag"])}</li>' for p in _stf if p.get("flag"))
 no_arm = [p["paddle"] for p in _stf if p.get("no_arm")]
+second_note = "".join(f'<p class="arm-foot" id="second-tester"><strong>* {e(p["paddle"])}, second tester.</strong> {e(VIB["second_tester_note"])}</p>' for p in _arm if p.get("second_tester"))
+_off = sorted(VIB["offcenter"], key=lambda p: p["extra"])
+off_rows = "".join(
+    f'<tr><td data-v="{e(p["paddle"])}"><strong>{e(p["paddle"])}</strong></td>'
+    f'<td class="num" data-v="{p["center"]}">{p["center"]:.2f}</td><td class="num" data-v="{p["off"]}">{p["off"]:.2f}</td>'
+    f'<td class="num arm-col" data-v="{p["extra"]}"><span class="off-extra" style="--w:{min(p["extra"], 120) / 120 * 100:.0f}%">+{p["extra"]}%</span></td>'
+    f'<td class="num" data-v="{p["twist"]}">{p["twist"]:,}</td></tr>'
+    for p in _off)
+off_notes = "".join(f'<li>{e(n)}</li>' for n in VIB["offcenter_notes"])
+GT = VIB["grip_test"]
+grip_rows = "".join(
+    f'<tr{" class=\"grip-base\"" if i == 0 else ""}><td><strong>{e(a)}</strong></td><td class="num arm-col">{e(b)}</td><td>{e(c)}</td></tr>'
+    for i, (a, b, c) in enumerate(GT["rows"]))
 weights_bar = "".join(f'<span style="flex:{w}" class="w{i}"><b>{w}%</b> {e(n)}</span>' for i, (n, w) in enumerate(VIB["weights"]))
 glossary = [
     ("Arm Score", "One overall number for arm comfort. Higher is friendlier; 100 = the reference paddle."),
@@ -1459,9 +1475,21 @@ write("arm-score.html", page("Arm Score: pickleball paddle vibration test result
   <div class="table-wrap"><table class="db sortable arm-table" style="min-width:760px">
     <thead><tr><th aria-sort="ascending"><button>#</button></th><th><button>Paddle</button></th><th class="arm-col"><button>Arm Score</button></th><th><button>Shock to wrist (g)</button></th><th><button>Buzz at wrist (g)</button></th><th><button>Buzz fade (ms)</button></th><th><button>Wrist twist (&deg;/s)</button></th></tr></thead>
     <tbody>{arm_rows}</tbody></table></div>
+  {second_note}
   <h3 style="margin-top:28px">How the Arm Score is built</h3>
-  <p class="muted" style="max-width:70ch">Each measurement is compared with the reference paddle, then combined with these weights (a weighted geometric mean of reference &divide; paddle, &times; 100). Shock to the wrist counts most.</p>
+  <p class="muted" style="max-width:70ch">Each measurement is compared with the reference paddle, then combined with these weights (a weighted geometric mean of reference &divide; paddle, &times; 100). Shock to the wrist counts most. Off-center shock comes from the <a href="#off-center">center vs off-center split</a>.</p>
   <div class="arm-weights">{weights_bar}</div>
+</section>
+<section id="off-center" style="padding-top:0">
+  <div class="section-head"><div><span class="tag">Center vs off-center</span><h2 style="margin-top:8px">How forgiving is each paddle on a mishit?</h2>
+  <p class="section-lead">{e(VIB["offcenter_lead"])} Lower extra shock = more forgiving.</p></div></div>
+  <div class="table-wrap"><table class="db sortable arm-table off-table" style="min-width:680px">
+    <thead><tr><th><button>Paddle</button></th><th><button>Center shock (g)</button></th><th><button>Off-center shock (g)</button></th><th class="arm-col" aria-sort="ascending"><button>Extra shock off-center</button></th><th><button>Off-center wrist twist (&deg;/s)</button></th></tr></thead>
+    <tbody>{off_rows}</tbody></table></div>
+  <p class="arm-foot"><strong>{e(VIB["offcenter_second_tester"].split(":")[0])}:</strong>{e(VIB["offcenter_second_tester"].split(":", 1)[1])}</p>
+  <h3 style="margin-top:22px">How we split them</h3>
+  <p class="muted" style="max-width:75ch">The wrist gyroscope measures how much each hit twists the wrist. In each paddle&rsquo;s test, the third of hits with the least twist count as center hits and the third with the most twist as off-center hits.</p>
+  <ul class="muted" style="font-size:.92rem;max-width:80ch">{off_notes}</ul>
 </section>
 <section id="stiffness">
   <div class="section-head"><div><span class="tag">Face stiffness</span><h2 style="margin-top:8px">{e(VIB["stiffness_title"])}</h2>
@@ -1471,8 +1499,18 @@ write("arm-score.html", page("Arm Score: pickleball paddle vibration test result
     {stiff_flags}
     <li><strong>A stiff face is not automatically harsh on the arm.</strong> The Jade and the Evolvs are among both the stiffest and the most arm-friendly.</li>
     <li>Weight also affects pitch: a lighter paddle rings higher.</li>
+    <li>The Franklin Dynasty Whip was tested by a second tester on Nov 23; its value is approximate.</li>
     {f'<li>{" and ".join(e(n) for n in no_arm)} have stiffness data but no Arm Score yet. They were tested before the controlled protocol.</li>' if no_arm else ""}
   </ul>
+</section>
+<section id="grip-test">
+  <div class="section-head"><div><span class="tag">Grip test &middot; Nov 23, 2026</span><h2 style="margin-top:8px">{e(GT["title"])}</h2>
+  <p class="section-lead">{e(GT["lead"])}</p></div></div>
+  <div class="table-wrap"><table class="db arm-table grip-table" style="min-width:620px">
+    <thead><tr><th>Franklin Dynasty Whip setup</th><th class="arm-col">Arm Score</th><th>What changed vs factory</th></tr></thead>
+    <tbody>{grip_rows}</tbody></table></div>
+  <p class="arm-foot">* {e(GT["footnote"])}</p>
+  <div class="arm-factory" style="margin-top:16px"><div class="ico">!</div><div><strong>Takeaway:</strong> {e(GT["takeaway"])} <span class="muted">{e(GT["limits"])}</span></div></div>
 </section>
 <section id="method">
   <h2>How we test</h2>
@@ -1497,7 +1535,8 @@ write("arm-score.html", page("Arm Score: pickleball paddle vibration test result
     <li><strong>Repeatability:</strong> ring frequency repeats within about 2% across days. Shock values depend on test conditions, so they are compared only within the same session.</li>
     <li><strong>Paddle age matters:</strong> the Evolv (6 months) and Speedup Tide were used paddles; a new copy may score differently.</li>
     <li><strong>Not medical advice:</strong> the test measures vibration and comfort, not injury risk.</li>
-    <li><strong>Coming next:</strong> more paddles, a second tester, and how much an overgrip or lead tape changes the numbers.</li>
+    <li><strong>Second tester:</strong> the Franklin Dynasty Whip was tested by a second player (Daniel) and scaled to the shared reference paddle; compare it loosely.</li>
+    <li><strong>Coming next:</strong> more paddles, repeat runs on different days, more second-tester checks, and a blind feel test against the Arm Score.</li>
   </ul>
   <p class="muted" style="margin-top:16px"><strong>Last updated: {e(VIB["updated"])}</strong></p>
 </section>

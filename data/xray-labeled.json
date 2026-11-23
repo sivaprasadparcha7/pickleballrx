@@ -467,7 +467,7 @@
     "Not published"
    ]
   ],
-  "specs_sources": "Unreleased paddle: no specs found online (only a 14 mm \"WHIP Dynasty\" listing on puprpaddles.com). Labels are an interpretation of the X-ray, not a cutaway."
+  "specs_sources": "Labels are an interpretation of the X-ray, not a cutaway."
  },
  {
   "paddle": "FRIDAY AURA PRO TOUR",
@@ -3931,5 +3931,52 @@
    ]
   ],
   "specs_sources": "Sources: Pickleheads, Pickleball Effect, Matt's Pickleball (Loco 2). Scale from 7.375\" width (Elongated). Labels interpret the X-ray, not a cutaway."
+ },
+ {
+  "paddle": "RELOAD RLD-1 16mm",
+  "file": "reload-rld1-labeled.png",
+  "core": "PP honeycomb + expanding foam (PPA)",
+  "cell_size": "≈ 8.2 mm (measured)",
+  "perimeter_ring": "≈ 9 mm foam-filled edge zone (±1)",
+  "thickness": "16 mm",
+  "face": "T700 carbon fiber, coarse peel ply",
+  "weight": "8.2 oz ± 0.2 (maker), 8.3 oz (PPA)",
+  "size": "419 x 190 mm (16.5 x 7.5 in), 16 mm",
+  "source_file": "reload-rld1-labeled.png",
+  "specs": [
+   [
+    "Core type",
+    "PP honeycomb + expanding foam (PPA)"
+   ],
+   [
+    "Cell size",
+    "≈ 8.2 mm (measured)"
+   ],
+   [
+    "Perimeter",
+    "≈ 9 mm foam-filled edge zone (±1)"
+   ],
+   [
+    "Face",
+    "T700 carbon fiber, coarse peel ply"
+   ],
+   [
+    "Weight",
+    "8.2 oz ± 0.2 (maker), 8.3 oz (PPA)"
+   ],
+   [
+    "Size",
+    "419 x 190 mm (16.5 x 7.5 in), 16 mm"
+   ],
+   [
+    "Shape",
+    "Hybrid"
+   ],
+   [
+    "Handle",
+    "140 mm (5.5 in), grip 4.17 in"
+   ]
+  ],
+  "specs_sources": "Specs: Reload and the PPA Tour paddle lab. Labels interpret the X-ray, not a cutaway."
  }
 ]
