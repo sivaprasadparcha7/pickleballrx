@@ -1498,19 +1498,20 @@ write("arm-score.html", page("Arm Score: pickleball paddle vibration test result
   <ul class="muted" style="font-size:.9rem;margin-top:12px">
     {stiff_flags}
     <li><strong>A stiff face is not automatically harsh on the arm.</strong> The Jade and the Evolvs are among both the stiffest and the most arm-friendly.</li>
-    <li>Weight also affects pitch: a lighter paddle rings higher.</li>
-    <li>The Franklin Dynasty Whip was tested by a second tester on Nov 23; its value is approximate.</li>
+    {"".join(f'<li>{e(n)}</li>' for n in VIB["stiffness_notes"])}
     {f'<li>{" and ".join(e(n) for n in no_arm)} have stiffness data but no Arm Score yet. They were tested before the controlled protocol.</li>' if no_arm else ""}
   </ul>
 </section>
 <section id="grip-test">
   <div class="section-head"><div><span class="tag">Grip test &middot; Nov 23, 2026</span><h2 style="margin-top:8px">{e(GT["title"])}</h2>
-  <p class="section-lead">{e(GT["lead"])}</p></div></div>
+  <p class="section-lead"><strong>{e(GT["headline"])}</strong> {e(GT["lead"])}</p></div></div>
   <div class="table-wrap"><table class="db arm-table grip-table" style="min-width:620px">
-    <thead><tr><th>Franklin Dynasty Whip setup</th><th class="arm-col">Arm Score</th><th>What changed vs factory</th></tr></thead>
+    <thead><tr><th>Franklin Dynasty Whip setup</th><th class="arm-col">Arm Score</th><th>What changed vs the factory grip</th></tr></thead>
     <tbody>{grip_rows}</tbody></table></div>
   <p class="arm-foot">* {e(GT["footnote"])}</p>
-  <div class="arm-factory" style="margin-top:16px"><div class="ico">!</div><div><strong>Takeaway:</strong> {e(GT["takeaway"])} <span class="muted">{e(GT["limits"])}</span></div></div>
+  <dl class="arm-glossary" style="margin-top:18px">{"".join(f'<div class="gl"><dt>{e(t)}</dt><dd>{e(x)}</dd></div>' for t, x in GT["details"] if t != "Bottom line")}</dl>
+  {"".join(f'<div class="arm-factory" style="margin-top:16px"><div class="ico">!</div><div><strong>{e(t)}:</strong> {e(x)}</div></div>' for t, x in GT["details"] if t == "Bottom line")}
+  <p class="arm-tie">{e(GT["limits"])}</p>
 </section>
 <section id="method">
   <h2>How we test</h2>
@@ -1525,6 +1526,7 @@ write("arm-score.html", page("Arm Score: pickleball paddle vibration test result
 </section>
 <section id="glossary" style="padding-top:0">
   <h2>What the numbers mean</h2>
+  <p class="section-lead">{e(VIB["glossary_lead"])}</p>
   <dl class="arm-glossary">{glossary_html}</dl>
 </section>
 <section id="limits" style="padding-top:0">
