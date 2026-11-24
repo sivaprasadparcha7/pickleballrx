@@ -503,6 +503,14 @@
    "complete": true,
    "paddles": [
     {
+     "model": "GBX Power V2",
+     "shape": "Flat top",
+     "mm": "16",
+     "price": 150,
+     "note": "Coming soon. Code PBRX saves 10% ($15).",
+     "url": "https://gearboxsports.com/"
+    },
+    {
      "model": "Pressure X 8E",
      "shape": "Elongated / Hybrid",
      "mm": "16",

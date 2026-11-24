@@ -46,6 +46,7 @@ CODES = [  # confirmed by Siva 2026-11-17
     dict(brand="Grit", code="PBRX", offer="10% off", url="https://www.grit-shop.com/", no_disc=True),
     dict(brand="Pickle Poppers", code="PBRX", offer="10% off", url="https://www.pickle-poppers.com/", no_disc=True),  # Siva 2026-11-19
     dict(brand="Mehau", code="PBRX", offer="15% off", url="https://mehaupickleball.com/", via="Fermiha"),  # Siva 2026-11-22
+    dict(brand="Gearbox", code="PBRX", offer="10% off", url="https://gearboxsports.com/", no_disc=True),  # Siva 2026-11-24
 ]
 
 
@@ -428,6 +429,12 @@ style_tiles += '<a class="style-tile" href="pros.html"><b>Pro paddles</b><span>W
 latest = "\n".join(card(p, 0) for p in PADDLES[:3])
 # ---------- Upcoming releases (public news only; mark unconfirmed items) ----------
 UPCOMING = [
+    dict(brand="Gearbox", name="GBX Power V2", status="Coming soon", anchor="gbx-power-v2",
+         when="Flat Top, 16 mm &middot; $150 &middot; code PBRX saves 10% ($15)",
+         photos=[("assets/news/gearbox-gbx-power-v2.jpg", "Gearbox GBX Power V2, coming soon")], square=True,
+         text="The next GBX Power from Gearbox, the brand behind the paddle in the top spot on our Leader Board. It's a Flat Top 16 mm paddle for $150, and code PBRX takes $15 off. Order it at gearboxsports.com. We'll get it into the lab for X-rays, microscope scans and spin tests.",
+         links=[("Gearbox spotlight", "gearbox-pickleball.html#gbx-power-v2"), ("Order at Gearbox", "https://gearboxsports.com/"), ("X-ray: Pressure X 8E", "xray/gearbox-pressure-x-8e.html")],
+         sources=[("Gearbox", "https://gearboxsports.com/")]),
     dict(brand="Proton", name="Series One: Project Bluejay and Project Cardinal", status="Pre-order",
          when="Elongated, 15 mm &middot; $295 pre-order price",
          photos=[("assets/paddles/product/proton-project-bluejay.jpg", "Proton Project Bluejay"), ("assets/paddles/product/proton-project-cardinal.jpg", "Proton Project Cardinal")],
@@ -446,8 +453,8 @@ UPCOMING = [
 def upcoming_card(u):
     links = "".join(f'<a class="badge" href="{e(h)}">{e(t)}</a>' for t, h in u["links"])
     srcs = " &middot; ".join(f'<a href="{e(h)}" rel="noopener">{e(t)}</a>' for t, h in u["sources"])
-    return (f'<div class="card" style="padding:18px"><div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">{e(u["brand"])}</div>'
-            + ('<div style="display:flex;gap:10px;margin:8px 0">' + "".join(f'<img src="{s}" alt="{e(a)}" width="80" height="120" loading="lazy" style="border-radius:8px;background:#fff;object-fit:contain">' for s, a in u["photos"]) + '</div>' if u.get("photos") else "")
+    return (f'<div class="card" style="padding:18px"{f' id="{u["anchor"]}"' if u.get("anchor") else ""}><div class="muted" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700">{e(u["brand"])}</div>'
+            + ('<div style="display:flex;gap:10px;margin:8px 0">' + "".join((f'<img src="{s}" alt="{e(a)}" width="160" height="160" loading="lazy" style="border-radius:8px;width:160px;height:160px;object-fit:cover">' if u.get("square") else f'<img src="{s}" alt="{e(a)}" width="80" height="120" loading="lazy" style="border-radius:8px;background:#fff;object-fit:contain">') for s, a in u["photos"]) + '</div>' if u.get("photos") else "")
             + f'<h3 style="margin:4px 0 6px">{e(u["name"])}</h3><span class="tag" style="align-self:flex-start">{e(u["status"])}</span>'
             f'<p class="muted" style="font-size:.88rem;margin:6px 0 8px">{u["when"]}</p><p style="font-size:.95rem">{e(u["text"])}</p>'
             f'<div class="badges" style="margin-bottom:10px">{links}</div><div class="muted" style="font-size:.78rem">Sources: {srcs}</div></div>')
@@ -567,6 +574,14 @@ write("index.html", page("Pickleball Rx | The Wikipedia of Pickleball Paddles", 
   <div class="stat"><b>{len(LABS["durability"])}</b><span>spin durability re-tests</span></div>
 </div></div>
 <div class="wrap">
+<section id="coming-soon" style="padding-bottom:0">
+  <a class="spotlight-band" href="gearbox-pickleball.html#gbx-power-v2">
+    <img src="assets/news/gearbox-gbx-power-v2.jpg" alt="Gearbox GBX Power V2, coming soon. Order at gearboxsports.com, code PBRX for 10% off" width="240" height="240" loading="lazy" style="height:240px">
+    <div><span class="tag">Coming soon</span><h2 style="margin:8px 0 6px">Gearbox GBX Power V2</h2>
+    <p>A new Flat Top 16 mm paddle from Gearbox, the brand behind the top spot on our Leader Board. It's $150, and code <strong style="color:#fcb92d">PBRX</strong> takes 10% off, so you pay $135. Order at gearboxsports.com.</p>
+    <span class="go">See the GBX Power V2 &rarr;</span></div>
+  </a>
+</section>
 <section id="leaderboard">
   <div class="section-head"><div><span class="tag">Rx top picks</span><h2 style="margin-top:8px">The Leader Board</h2>
   <p class="section-lead">The paddles that earned a spot on our wall after X-rays, microscope scans, spin tests and a lot of games. One paddle holds the top spot. Tap any badge to see the lab results behind it. <a href="best.html">See our top picks by core type &rarr;</a></p></div></div>
@@ -1806,7 +1821,7 @@ write("evolv-pickleball.html", page("Evolv Pickleball: brand spotlight | Pickleb
 
 
 # ---------- Brand spotlight: Gearbox (replaced Speedup, per Siva 2026-11-17) ----------
-# Founder story from press: The Dink (Jul 2026) and San Diego Business Journal. No PBRX code for Gearbox unless Siva confirms one.
+# Founder story from press: The Dink (Jul 2026) and San Diego Business Journal. PBRX 10% confirmed by Siva 2026-11-24.
 GEARBOX_SHOP = "https://gearboxsports.com/"
 _gb_spin = {x["paddle"]: x for x in LABS["spin"]}
 _gb_e, _gb_m = _gb_spin.get("Gearbox Pressure XE"), _gb_spin.get("Gearbox Pressure X M")
@@ -1827,11 +1842,30 @@ write("gearbox-pickleball.html", page("Gearbox Pickleball: brand spotlight | Pic
     <span class="tag">Brand spotlight: Gearbox Pickleball</span>
     <h1>Passion, <em>engineered</em>.</h1>
     <p>Rafael Filippini, Gearbox's founder and CEO, is one of the most passionate people in the paddle business. He went from pro racquetball and the Marines to building paddles in San Diego with his own patented carbon cores, and he calls his team "extremely passionate about what we do." His Pressure X 8E holds the top spot on our Leader Board.</p>
-    <div class="btn-row"><a class="btn yellow" href="{GEARBOX_SHOP}" rel="noopener" target="_blank">Shop Gearbox</a><a class="btn ghost" href="#lab">See our lab results</a></div>
+    <div class="btn-row"><a class="btn yellow" href="{GEARBOX_SHOP}" rel="noopener" target="_blank">Shop Gearbox</a><a class="btn ghost" href="#gbx-power-v2">Coming soon: GBX Power V2</a></div>
   </div>
   <figure class="hero-art" style="margin:0;text-align:center"><img src="assets/paddles/product/gearbox-pressure-x-8e.jpg" alt="Gearbox Pressure X 8E on the Pickleball RX Leader Board" width="300" height="450" style="border-radius:14px;max-width:300px;width:100%;height:auto;background:#fff;object-fit:contain"></figure>
 </div></section>
 <div class="wrap">
+<section id="gbx-power-v2">
+  <div class="gbx-feature">
+    <img src="assets/news/gearbox-gbx-power-v2.jpg" alt="Gearbox GBX Power V2 Flat Top 16 mm, coming soon" width="1080" height="1080" loading="lazy">
+    <div>
+      <span class="tag">Coming soon</span>
+      <h2 style="margin:8px 0 6px">GBX Power V2</h2>
+      <p class="section-lead" style="margin-top:0">The next GBX Power is on its way. Here's what we know so far.</p>
+      <div class="gbx-facts">
+        <div><b>Flat Top</b><span>shape</span></div>
+        <div><b>16 mm</b><span>core</span></div>
+        <div><b>$150</b><span>price</span></div>
+        <div><b>$135</b><span>with code PBRX</span></div>
+      </div>
+      {code_box("Gearbox")}
+      <div class="btn-row"><a class="btn yellow" href="{GEARBOX_SHOP}" rel="sponsored noopener" target="_blank">Order at gearboxsports.com</a></div>
+      <p class="muted" style="font-size:.88rem;margin-top:12px">As soon as we have one, it goes through the same lab as the Pressure X 8E: X-ray, 4K microscope and the 960 fps spin rig. Results will show up here.</p>
+    </div>
+  </div>
+</section>
 <section>
   <h2>Rafael's story</h2>
   <p class="section-lead">Rafael Filippini moved to the U.S. from Mexico as a young child, before he spoke English. He joined the Marines, where he first worked with composites on high-performance aircraft, then studied engineering while playing professional racquetball. After 13 years with a racquetball equipment maker, he founded Gearbox in 2007 as a racquetball racquet company.</p>
