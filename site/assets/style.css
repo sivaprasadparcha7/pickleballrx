@@ -447,3 +447,11 @@ td .product-thumb { float: left; height: 42px; margin: 0 10px 0 0; }
 .off-extra { display: inline-block; min-width: 64px; font-weight: 800; padding: 3px 10px; border-radius: 999px; background: linear-gradient(90deg, rgba(217,154,18,.35) var(--w), transparent var(--w)); border: 1px solid #e6b44a; }
 .grip-table tr.grip-base td { font-weight: 600; }
 .grip-table td.arm-col { font-weight: 800; }
+/* Gearbox GBX Power V2 coming-soon feature */
+.gbx-feature { display: grid; grid-template-columns: minmax(0, 420px) 1fr; gap: 32px; align-items: center; }
+.gbx-feature > img { width: 100%; height: auto; border-radius: var(--radius); }
+.gbx-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 16px 0 4px; }
+.gbx-facts div { background: var(--navy); color: #fff; border-radius: 10px; padding: 12px; text-align: center; }
+.gbx-facts b { display: block; font-size: 1.25rem; color: var(--yellow); }
+.gbx-facts span { font-size: .78rem; color: #c9d3ea; }
+@media (max-width: 760px) { .gbx-feature { grid-template-columns: 1fr; } .gbx-facts { grid-template-columns: repeat(2, 1fr); } }
