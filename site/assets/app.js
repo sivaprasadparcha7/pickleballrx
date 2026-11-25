@@ -136,11 +136,13 @@
       });
       hits.sort(function (a, b) { return a.s - b.s || a.x.title.length - b.x.title.length || a.x.title.localeCompare(b.x.title); });
       shown = hits.slice(0, 8).map(function (h) { return h.x; });
+      var tb = tag ? $('#x-chips button[data-t="' + tag + '"]') : null, tl = tb ? tb.dataset.label + ' ' : '';
       $('#x-count').innerHTML = q
-        ? n + ' of ' + cards.length + ' paddles match &ldquo;' + esc(xq.value.trim()) + '&rdquo; <button type="button" class="linkish" id="x-clear">Show all</button>'
+        ? n + (tag ? ' ' + tl : ' of ' + cards.length + ' ') + 'paddles match &ldquo;' + esc(xq.value.trim()) + '&rdquo; <button type="button" class="linkish" id="x-clear">Show all</button>'
+        : tag ? 'Showing ' + n + ' ' + tl + 'paddles <button type="button" class="linkish" id="x-clear">Show all ' + cards.length + '</button>'
         : n + ' paddles';
       var cl = $('#x-clear');
-      if (cl) cl.addEventListener('click', function () { xq.value = ''; xr(); closeSugg(); });
+      if (cl) cl.addEventListener('click', function () { xq.value = ''; closeSugg(); setTag(''); });
       if (!fromTyping) return;
       if (!q) { closeSugg(); return; }
       sugg.innerHTML = shown.length
@@ -152,12 +154,27 @@
       var more = $('li.more a', sugg);
       if (more) more.addEventListener('click', closeSugg);
     };
-    $$('#x-chips button').forEach(function (b) {
-      b.addEventListener('click', function () {
-        tag = b.dataset.t;
-        $$('#x-chips button').forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
-        xr();
-      });
+    // Core filter: the chips, the core badges on each card and the "See all" links all call setTag.
+    var chips = $$('#x-chips button');
+    var setTag = function (t, scroll) {
+      var b = chips.filter(function (c) { return c.dataset.t === (t || ''); })[0];
+      if (!b) { b = chips[0]; t = ''; }
+      tag = t || '';
+      chips.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      if (history.replaceState) {
+        var u = new URL(location.href);
+        if (tag) u.searchParams.set('core', tag); else u.searchParams['delete']('core');
+        history.replaceState(null, '', u.pathname + u.search + u.hash);
+      }
+      xr();
+      if (scroll) { var g = $('#all-xrays'); if (g) g.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    };
+    chips.forEach(function (b) { b.addEventListener('click', function () { setTag(b.dataset.t); }); });
+    document.addEventListener('click', function (ev) {
+      var a = ev.target.closest('a.xtag[data-t]');
+      if (!a || ev.metaKey || ev.ctrlKey || ev.shiftKey) return;
+      ev.preventDefault();
+      setTag(a.dataset.t, true);
     });
     xq.addEventListener('input', function () { xr(true); });
     xq.addEventListener('focus', function () { if (xq.value.trim()) xr(true); });
@@ -177,7 +194,9 @@
     // lab.html?q=jade fills the search box, so a search can be shared as a link.
     var q0 = new URLSearchParams(location.search).get('q');
     if (q0) xq.value = q0;
-    xr();
+    // lab.html?core=honeycomb opens the list filtered to that core.
+    var c0 = new URLSearchParams(location.search).get('core');
+    if (c0) setTag(c0.toLowerCase()); else xr();
   }
 })();
 
