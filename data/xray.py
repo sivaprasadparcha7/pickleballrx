@@ -117,6 +117,10 @@ CENTER = {
  "soxter-impact-pro": "foam",              # X-ray face reads full foam (retailers list PP honeycomb)
  "wika-predator": "honeycomb",             # honeycomb star fills the centre, EPP foam around it
  "wika-qd-fire-2": "honeycomb",            # 6 mm honeycomb centre wrapped in EPP
+ "gearbox-gx2": "carbon",                  # SST 2.0 carbon ribs, not honeycomb (Siva 2026-11-25)
+ "gearbox-pressure-x-8e": "foam",          # carbon ribs inside foam: counts as foam (Siva 2026-11-25)
+ "gearbox-pressure-xm": "foam",
+ "li-ning-hyper-power-90s": "honeycomb",   # cells too fine to see; honeycomb per Siva 2026-11-25
 }
 
 
@@ -131,8 +135,9 @@ def center(x, slug):
 
 
 def tags(x, slug):
-    if center(x, slug) == "honeycomb":
-        return ["honeycomb"]
+    c = center(x, slug)
+    if c in ("honeycomb", "carbon"):
+        return [c]
     core = (x["core"] + " " + x["cell_size"]).lower()
     t = ["foam"]
     if "epp" in core: t.append("epp")

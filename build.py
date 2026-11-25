@@ -1036,7 +1036,7 @@ def xray_img(slug, view):
     return ""
 
 
-XTAG_LABEL = {"honeycomb": "Honeycomb", "foam": "Full foam", "epp": "EPP", "mpp": "MPP", "floating": "Floating core", "voids": "Voids"}
+XTAG_LABEL = {"honeycomb": "Honeycomb", "carbon": "Carbon ribs", "foam": "Full foam", "epp": "EPP", "mpp": "MPP", "floating": "Floating core", "voids": "Voids"}
 XTAG_N = {t: sum(1 for x in XRAY if t in x["tags"]) for t in XTAG_LABEL}
 
 
@@ -1049,7 +1049,7 @@ def xray_card(x, depth):
     if x["unreleased"]: tags += '<span class="tag">Unreleased</span>'
     if x["reel"]: tags += '<span class="badge">Reel</span>'
     summary = e(x["core"]) if x["core"] else '<span class="muted">Findings coming soon</span>'
-    return f'''<article class="card xcard" data-tags="{" ".join(x["tags"])}" data-name="{e(x["name"].lower())} {e(x["brand"].lower())} {e(x["slug"].replace("-", " "))}" data-title="{e(x["name"])}" data-core="{e(x["core"])}" data-center="{"Honeycomb center" if "honeycomb" in x["tags"] else "Foam center"}" data-href="{r}xray/{x["slug"]}.html">
+    return f'''<article class="card xcard" data-tags="{" ".join(x["tags"])}" data-name="{e(x["name"].lower())} {e(x["brand"].lower())} {e(x["slug"].replace("-", " "))}" data-title="{e(x["name"])}" data-core="{e(x["core"])}" data-center="{"Honeycomb center" if "honeycomb" in x["tags"] else "Carbon rib center" if "carbon" in x["tags"] else "Foam center"}" data-href="{r}xray/{x["slug"]}.html">
   <a href="{r}xray/{x["slug"]}.html">{thumb}</a>
   <div class="badges">{tags}</div>
   <h3><a href="{r}xray/{x["slug"]}.html">{e(x["name"])}</a></h3>
