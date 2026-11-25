@@ -107,13 +107,39 @@ REELS = {
 UNRELEASED = set()
 
 
-def tags(x):
-    core = (x["core"] + " " + x["cell_size"]).lower()
-    t = []
+# Core filters go by what fills the CENTRE of the face, not the ring or edge foam around it
+# (Siva 2026-11-25). A honeycomb centre is "honeycomb" even with an EVA/EPP perimeter, and the
+# foam-type tags (EPP, MPP, floating, voids) only describe a foam centre.
+# Per-paddle calls made from the X-ray where the text alone would mislead:
+CENTER = {
+ "pickle-poppers-pop-n-rush": "foam",      # MPPE foam centre; the 7.4 mm honeycomb is only in the handle
+ "pickle-poppers-pop-n-treasure": "foam",  # MPP foam centre; honeycomb only in the handle
+ "soxter-impact-pro": "foam",              # X-ray face reads full foam (retailers list PP honeycomb)
+ "wika-predator": "honeycomb",             # honeycomb star fills the centre, EPP foam around it
+ "wika-qd-fire-2": "honeycomb",            # 6 mm honeycomb centre wrapped in EPP
+ "gearbox-gx2": "carbon",                  # SST 2.0 carbon ribs, not honeycomb (Siva 2026-11-25)
+ "gearbox-pressure-x-8e": "foam",          # carbon ribs inside foam: counts as foam (Siva 2026-11-25)
+ "gearbox-pressure-xm": "foam",
+ "li-ning-hyper-power-90s": "honeycomb",   # cells too fine to see; honeycomb per Siva 2026-11-25
+}
+
+
+def center(x, slug):
+    if slug in CENTER:
+        return CENTER[slug]
     c, cs = x["core"].lower(), x["cell_size"].lower().strip()
-    hc = ("honeycomb" in c and "no honeycomb" not in c) or cs.startswith("honeycomb,") or "listed" in cs or "narrow cell" in cs or (cs.startswith("≈") and "×" not in cs)
-    if hc: t.append("honeycomb")
-    if "foam" in x["core"].lower() and not hc: t.append("foam")
+    if "handle only" in cs or cs.startswith(("none", "n/a", "no honeycomb")):
+        return "foam"
+    hc = ("honeycomb" in c and "no honeycomb" not in c) or "listed" in cs or "narrow cell" in cs or (cs.startswith("≈") and "×" not in cs)
+    return "honeycomb" if hc else "foam"
+
+
+def tags(x, slug):
+    c = center(x, slug)
+    if c in ("honeycomb", "carbon"):
+        return [c]
+    core = (x["core"] + " " + x["cell_size"]).lower()
+    t = ["foam"]
     if "epp" in core: t.append("epp")
     if "mpp" in core: t.append("mpp")
     if "floating" in core: t.append("floating")
@@ -129,7 +155,7 @@ for x in SRC:
     slug, name, brand = NAMES[stem]
     out.append(dict(slug=slug, name=name, brand=brand, image=x["file"], core=x["core"], cell_size=x["cell_size"],
                     ring=x["perimeter_ring"], thickness=x["thickness"], face=x["face"], weight=x["weight"], size=x["size"],
-                    specs=x["specs"], sources=x["specs_sources"], tags=tags(x), reel=REELS.get(slug, ""), unreleased=slug in UNRELEASED))
+                    specs=x["specs"], sources=x["specs_sources"], tags=tags(x, slug), reel=REELS.get(slug, ""), unreleased=slug in UNRELEASED))
 out.sort(key=lambda p: p["name"].lower())
 json.dump({"paddles": out}, open(os.path.join(D, "xray.json"), "w"), indent=1, ensure_ascii=False)
 print(len(out), "paddles")
