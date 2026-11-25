@@ -1049,7 +1049,7 @@ def xray_card(x, depth):
     if x["unreleased"]: tags += '<span class="tag">Unreleased</span>'
     if x["reel"]: tags += '<span class="badge">Reel</span>'
     summary = e(x["core"]) if x["core"] else '<span class="muted">Findings coming soon</span>'
-    return f'''<article class="card xcard" data-tags="{" ".join(x["tags"])}" data-name="{e(x["name"].lower())} {e(x["brand"].lower())} {e(x["slug"].replace("-", " "))}" data-title="{e(x["name"])}" data-core="{e(x["core"])}" data-href="{r}xray/{x["slug"]}.html">
+    return f'''<article class="card xcard" data-tags="{" ".join(x["tags"])}" data-name="{e(x["name"].lower())} {e(x["brand"].lower())} {e(x["slug"].replace("-", " "))}" data-title="{e(x["name"])}" data-core="{e(x["core"])}" data-center="{"Honeycomb center" if "honeycomb" in x["tags"] else "Foam center"}" data-href="{r}xray/{x["slug"]}.html">
   <a href="{r}xray/{x["slug"]}.html">{thumb}</a>
   <div class="badges">{tags}</div>
   <h3><a href="{r}xray/{x["slug"]}.html">{e(x["name"])}</a></h3>
@@ -1085,7 +1085,7 @@ write("lab.html", page("X-Ray Rx: pickleball paddle X-rays | PickleballRx", f'''
   </div>
 </section>
 <section style="padding-top:0">
-  <div class="section-head" id="all-xrays"><div><h2>All X-rayed paddles</h2><p class="section-lead">Tap a core type to see every paddle built that way, or use the search at the top of the page.</p></div></div>
+  <div class="section-head" id="all-xrays"><div><h2>All X-rayed paddles</h2><p class="section-lead">Tap a core type to see every paddle built that way, or use the search at the top of the page. Core type goes by what fills the center of the face: a honeycomb center counts as honeycomb even with a foam ring around it.</p></div></div>
   <div class="chips" id="x-chips">
     <button aria-pressed="true" data-t="" data-label="">All <span class="n">{len(XRAY)}</span></button>{"".join(f'<button aria-pressed="false" data-t="{t}" data-label="{e(XTAG_LABEL[t] if XTAG_LABEL[t].isupper() else XTAG_LABEL[t].lower())}">{e(XTAG_LABEL[t])} <span class="n">{XTAG_N[t]}</span></button>' for t in XTAG_LABEL if XTAG_N[t])}
   </div>

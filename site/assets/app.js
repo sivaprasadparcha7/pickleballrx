@@ -106,7 +106,7 @@
     };
     var cards = $$('.xcard', xg).map(function (c) {
       var n = norm(c.dataset.name);
-      return { el: c, n: ' ' + n + ' ', c: n.replace(/ /g, ''), t: norm(c.dataset.title), title: c.dataset.title, core: c.dataset.core, href: c.dataset.href };
+      return { el: c, n: ' ' + n + ' ', c: n.replace(/ /g, ''), t: norm(c.dataset.title), title: c.dataset.title, core: c.dataset.core, center: c.dataset.center, href: c.dataset.href };
     });
     // Lower score = better match; -1 = no match.
     var score = function (x, q) {
@@ -146,7 +146,7 @@
       if (!fromTyping) return;
       if (!q) { closeSugg(); return; }
       sugg.innerHTML = shown.length
-        ? shown.map(function (x, i) { return '<li role="option" id="x-sugg-' + i + '" aria-selected="false"><a href="' + esc(x.href) + '"><strong>' + esc(x.title) + '</strong><span>' + esc(x.core) + '</span></a></li>'; }).join('') +
+        ? shown.map(function (x, i) { return '<li role="option" id="x-sugg-' + i + '" aria-selected="false"><a href="' + esc(x.href) + '"><strong>' + esc(x.title) + '</strong><span>' + (x.center ? esc(x.center) + ' &middot; ' : '') + esc(x.core) + '</span></a></li>'; }).join('') +
           (hits.length > shown.length ? '<li class="more"><a href="#all-xrays">See all ' + hits.length + ' matches</a></li>' : '')
         : '<li class="none">No X-ray yet for &ldquo;' + esc(xq.value.trim()) + '&rdquo;. <a href="paddles.html">Search the paddle database</a></li>';
       sugg.hidden = false; xq.setAttribute('aria-expanded', 'true');

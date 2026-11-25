@@ -3030,7 +3030,7 @@
    "brand": "Pickle Poppers",
    "image": "pickle-poppers-pop-n-rush-labeled.png",
    "core": "MPPE foam (white density foam)",
-   "cell_size": "Honeycomb, ≈ 7.4 mm cells",
+   "cell_size": "None in face (honeycomb in handle only, ≈ 7.4 mm)",
    "ring": "TPE 11–22 mm (top ≈ 9.5) + EVA ≈ 11 mm",
    "thickness": "16 mm, GEN4 dual density",
    "face": "T700 carbon + MAGMAGRIT grit",
@@ -3072,7 +3072,7 @@
    ],
    "sources": "Specs: pickle-poppers.com (MPPE + TPE). EVA edge inferred from the matching Pop N Treasure layout. Zone labels interpret the X-ray, not a cutaway.",
    "tags": [
-    "honeycomb",
+    "foam",
     "mpp"
    ],
    "reel": "Ep 04: Pop N Rush vs Pop N Treasure",
@@ -3084,7 +3084,7 @@
    "brand": "Pickle Poppers",
    "image": "pickle-poppers-pop-n-treasure-labeled.png",
    "core": "MPP foam (full foam)",
-   "cell_size": "Honeycomb, ≈ 7 mm cells",
+   "cell_size": "None in face (honeycomb in handle only, ≈ 7 mm)",
    "ring": "TPE 11–24 mm + EVA ≈ 11 mm",
    "thickness": "16 mm",
    "face": "Carbon fibre, coated peel-ply",
@@ -3126,7 +3126,7 @@
    ],
    "sources": "Specs: PPA Tour Paddle Lab (ppatour.com). Zone order (MPP → TPE → EVA) per owner correction. Labels interpret the X-ray, not a cutaway.",
    "tags": [
-    "honeycomb",
+    "foam",
     "mpp"
    ],
    "reel": "Ep 04: Pop N Rush vs Pop N Treasure",
@@ -3660,7 +3660,7 @@
    ],
    "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
    "tags": [
-    "honeycomb"
+    "foam"
    ],
    "reel": "",
    "unreleased": false
@@ -4253,8 +4253,7 @@
    ],
    "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
    "tags": [
-    "honeycomb",
-    "epp"
+    "honeycomb"
    ],
    "reel": "",
    "unreleased": false
@@ -4364,8 +4363,7 @@
    ],
    "sources": "Specs: brand and retailer listings (sources are on the labeled X-ray). X-ray interpretation, not a cutaway",
    "tags": [
-    "honeycomb",
-    "epp"
+    "honeycomb"
    ],
    "reel": "",
    "unreleased": false
