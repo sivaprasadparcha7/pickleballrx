@@ -46,7 +46,7 @@ CODES = [  # confirmed by Siva 2026-11-17
     dict(brand="Grit", code="PBRX", offer="10% off", url="https://www.grit-shop.com/", no_disc=True),
     dict(brand="Pickle Poppers", code="PBRX", offer="10% off", url="https://www.pickle-poppers.com/", no_disc=True),  # Siva 2026-11-19
     dict(brand="Mehau", code="PBRX", offer="15% off", url="https://mehaupickleball.com/", via="Fermiha"),  # Siva 2026-11-22
-    dict(brand="Gearbox", code="PBRX", offer="10% off", url="https://gearboxsports.com/", no_disc=True),  # Siva 2026-11-24
+    dict(brand="Gearbox", code="PBRX", offer="10% off", url="https://gearboxsports.com/"),  # Siva 2026-11-24; pays commission (Siva 2026-11-25)
 ]
 
 
@@ -1337,7 +1337,7 @@ write("spin.html", page("Spin Lab: pickleball paddle spin test results | Pickleb
     <li>Results are adjusted for ball speed but not for small differences in impact angle between sessions. The rig was re-set during October 2026, and numbers from different setups aren't directly comparable.</li>
   </ul>
 </section>
-<section style="padding-top:0"><div class="note"><strong>Disclosures.</strong> Evolv requested the CarbonSkyn durability testing and provided the three Origin paddles. The Grit E2CF paddles were provided by the owner of Grit. Pickleball RX has discount codes with some brands (including Arronax, Evolv, Holbrook, Luzz, MARK, Pakle and RPM) and earns commission on code or link purchases. Brands have no input into the results. Static-rig numbers from one setup; not an official USA Pickleball test.</div></section>
+<section style="padding-top:0"><div class="note"><strong>Disclosures.</strong> Evolv requested the CarbonSkyn durability testing and provided the three Origin paddles. The Grit E2CF paddles were provided by the owner of Grit. Pickleball RX has discount codes with some brands (including Arronax, Evolv, Gearbox, Holbrook, Luzz, MARK, Pakle and RPM) and earns commission on code or link purchases. Brands have no input into the results. Static-rig numbers from one setup; not an official USA Pickleball test.</div></section>
 </div>""", 0, "spin", desc="Pickleball paddle spin test results: RPM measured at 960 fps on the same rig and ball machine, plus spin durability re-tests after weeks of play.", crumbs=[("Spin Lab", None)]))
 
 # ---------- Spec Lab ----------
@@ -1667,7 +1667,7 @@ write("disclaimers.html", page("Disclaimers | PickleballRx", f'''
   <p class="muted">Last updated {LABS["updated"]}. Here is how our results are made, who supplied what, and where the limits are.</p>
 
   <h2 id="affiliate">Discount codes and commission</h2>
-  <p>Pickleball RX has discount codes with some brands, including Arronax, Evolv, Holbrook, Luzz, MARK, Pakle and RPM, and may earn a commission when you buy with a code or through some links. It costs you nothing extra. Deals and prices are checked on the brand's own site when we post them, but they can change or end at any time, so confirm the final price at checkout.</p>
+  <p>Pickleball RX has discount codes with some brands, including Arronax, Evolv, Gearbox, Holbrook, Luzz, MARK, Pakle and RPM, and may earn a commission when you buy with a code or through some links. It costs you nothing extra. Deals and prices are checked on the brand's own site when we post them, but they can change or end at any time, so confirm the final price at checkout.</p>
 
   <h2 id="independence">Brands have no input into results</h2>
   <p>No brand sees, edits or approves our results before they are published. Having a code with a brand never changes a number, a score or a ranking, and a brand can't pay for a spot on the Leader Board.</p>
