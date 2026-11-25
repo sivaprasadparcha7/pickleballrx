@@ -1036,11 +1036,16 @@ def xray_img(slug, view):
     return ""
 
 
+XTAG_LABEL = {"honeycomb": "Honeycomb", "foam": "Full foam", "epp": "EPP", "mpp": "MPP", "floating": "Floating core", "voids": "Voids"}
+XTAG_N = {t: sum(1 for x in XRAY if t in x["tags"]) for t in XTAG_LABEL}
+
+
 def xray_card(x, depth):
     r = "../" * depth
     img = xray_img(x["slug"], "labeled") or xray_img(x["slug"], "clean")
     thumb = f'<img src="{r}{img}" alt="{e(x["name"])} X-ray" loading="lazy" style="aspect-ratio:4/3;object-fit:cover;border-radius:10px">' if img else '<div class="lab-ph" style="border-radius:10px">X-ray image coming soon</div>'
-    tags = "".join(f'<span class="badge">{e(t)}</span>' for t in x["tags"])
+    # Core badges link to the X-Ray Rx list filtered by that core (lab.html?core=honeycomb).
+    tags = "".join(f'<a class="badge xtag" href="{r}lab.html?core={t}#all-xrays" data-t="{t}" title="Show all {e(XTAG_LABEL[t].lower())} paddles">{e(t)}</a>' for t in x["tags"])
     if x["unreleased"]: tags += '<span class="tag">Unreleased</span>'
     if x["reel"]: tags += '<span class="badge">Reel</span>'
     summary = e(x["core"]) if x["core"] else '<span class="muted">Findings coming soon</span>'
@@ -1074,15 +1079,15 @@ write("lab.html", page("X-Ray Rx: pickleball paddle X-rays | PickleballRx", f'''
 <div class="wrap">
 <section>
   <div class="tools">
-    <div class="tool"><div class="ico">8</div><h3>Honeycomb cells are about 7 to 8.5 mm</h3><p>Nearly every honeycomb core we've measured falls in that range. The Vanwin Alpha Control and the 11SIX24 Hurache-X Alpha Pro Power, both at about 10 mm, are the only large-cell paddles so far.</p></div>
-    <div class="tool"><div class="ico">F</div><h3>Foam has taken over</h3><p>{sum(1 for x in XRAY if "foam" in x["tags"])} of {len(XRAY)} paddles have no honeycomb in the face: full foam cores (EPP, MPP, EVA or dual-density), usually inside a denser perimeter ring.</p></div>
+    <div class="tool"><div class="ico">8</div><h3>Honeycomb cells are about 7 to 8.5 mm</h3><p>Nearly every honeycomb core we've measured falls in that range. The Vanwin Alpha Control and the 11SIX24 Hurache-X Alpha Pro Power, both at about 10 mm, are the only large-cell paddles so far.</p><a class="more xtag" href="?core=honeycomb#all-xrays" data-t="honeycomb">See all {XTAG_N["honeycomb"]} honeycomb paddles &rarr;</a></div>
+    <div class="tool"><div class="ico">F</div><h3>Foam has taken over</h3><p>{sum(1 for x in XRAY if "foam" in x["tags"])} of {len(XRAY)} paddles have no honeycomb in the face: full foam cores (EPP, MPP, EVA or dual-density), usually inside a denser perimeter ring.</p><a class="more xtag" href="?core=foam#all-xrays" data-t="foam">See all {XTAG_N["foam"]} full foam paddles &rarr;</a></div>
     <div class="tool"><div class="ico">R</div><h3>Rings range from about 7 to 28 mm</h3><p>Perimeter rings vary a lot, from about 7 to 8 mm (Jelly Bean 2, Kamito Dominus) to 26 to 28 mm (Facolos Elite X 2.0, Luzz Inferno 2).</p></div>
   </div>
 </section>
 <section style="padding-top:0">
-  <div class="section-head" id="all-xrays"><div><h2>All X-rayed paddles</h2><p class="section-lead">Filter by core type, or use the search at the top of the page.</p></div></div>
+  <div class="section-head" id="all-xrays"><div><h2>All X-rayed paddles</h2><p class="section-lead">Tap a core type to see every paddle built that way, or use the search at the top of the page.</p></div></div>
   <div class="chips" id="x-chips">
-    <button aria-pressed="true" data-t="">All</button><button aria-pressed="false" data-t="honeycomb">Honeycomb</button><button aria-pressed="false" data-t="foam">Full foam</button><button aria-pressed="false" data-t="epp">EPP</button><button aria-pressed="false" data-t="mpp">MPP</button><button aria-pressed="false" data-t="floating">Floating core</button><button aria-pressed="false" data-t="voids">Voids</button>
+    <button aria-pressed="true" data-t="" data-label="">All <span class="n">{len(XRAY)}</span></button>{"".join(f'<button aria-pressed="false" data-t="{t}" data-label="{e(XTAG_LABEL[t] if XTAG_LABEL[t].isupper() else XTAG_LABEL[t].lower())}">{e(XTAG_LABEL[t])} <span class="n">{XTAG_N[t]}</span></button>' for t in XTAG_LABEL if XTAG_N[t])}
   </div>
   <p class="count" id="x-count"></p>
   <div class="grid" id="x-grid">{"".join(xray_card(x, 0) for x in XRAY)}</div>
@@ -1116,7 +1121,7 @@ for x in XRAY:
     <div class="crumbs"><a href="../lab.html">X-Ray Rx</a> / {e(x["brand"])}</div>
     <h1>{e(x["name"])} X-ray</h1>
     <p class="muted" style="margin:0 0 14px">{e(x["core"])}. {e(x["ring"])}.</p>
-    <div class="badges">{"".join(f'<span class="badge">{e(t)}</span>' for t in x["tags"])}{'<span class="tag">Unreleased</span>' if x["unreleased"] else ""}</div>
+    <div class="badges">{"".join(f'<a class="badge xtag" href="../lab.html?core={t}#all-xrays" title="Show all {e(XTAG_LABEL[t].lower())} paddles">{e(t)}</a>' for t in x["tags"])}{'<span class="tag">Unreleased</span>' if x["unreleased"] else ""}</div>
     <div class="btn-row" style="margin-top:16px"><a class="btn" href="#xray">See the X-ray</a>{f'<a class="btn ghost" href="../reviews/{review["slug"]}.html">Read the full review</a>' if review else ""}</div>
   </div>
   <div class="scorecard">
