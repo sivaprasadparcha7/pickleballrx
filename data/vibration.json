@@ -1,61 +1,275 @@
 {
-  "_how_to_edit": "Arm Lab (vibration test) data. Add a paddle to 'arm', 'offcenter' and/or 'stiffness', change 'updated', then run python3 build.py. Arm Score: higher = more arm-friendly, reference paddle = 100. Optional keys: photo (file in site/assets/paddles/product/), xray (slug in site/xray/), used, reference, second_tester (shows the 'Second tester' chip and the footnote in 'second_tester_note'), approx (stiffness value shown with ~).",
-  "updated": "Nov 23, 2026",
-  "arm_tested": "Nov 21, 2026, one session (Franklin Dynasty Whip: Nov 23, second tester)",
-  "reference": "Grit E2 CF (new)",
-  "headline": "The Evolv (6 months of use) and the RPM Jade are the most arm-friendly so far; both Grit E2 CF versions are the firmest.",
-  "weights": [["Shock to wrist", 45], ["Buzz at wrist", 25], ["Buzz fade", 10], ["Wrist twist", 10], ["Off-center shock", 10]],
-  "second_tester_note": "Tested Nov 23, 2026 by a second tester (Daniel), with the Grit E2 CF reference in the same session. Its numbers are scaled to the reference so they line up with this table: compare them loosely. It ties the Grit overall: less shock and twist (it's heavier, swingweight 122 vs 110), but more buzz from its softer face.",
-  "arm": [
-    {"paddle": "Evolv (6 months of use)", "score": 144, "shock": 1.40, "buzz": 0.40, "fade": 10.6, "twist": 268, "used": true},
-    {"paddle": "RPM Jade", "score": 133, "shock": 1.89, "buzz": 0.24, "fade": 9.4, "twist": 406, "photo": "rpm-jade.jpg", "xray": "rpm-jade"},
-    {"paddle": "Evolv Origin", "score": 113, "shock": 1.70, "buzz": 0.60, "fade": 10.6, "twist": 352, "photo": "evolv-origin.jpg", "xray": "evolv-origin"},
-    {"paddle": "Speedup Tide 14L (6 months of use)", "score": 110, "shock": 1.86, "buzz": 0.46, "fade": 13.1, "twist": 440, "used": true, "xray": "speedup-tide"},
-    {"paddle": "Franklin Dynasty Whip", "score": 101, "shock": 1.88, "buzz": 0.81, "fade": 10.3, "twist": 327, "second_tester": true, "photo": "franklin-dynasty-whip-16mm.jpg", "xray": "franklin-dynasty-whip-16mm"},
-    {"paddle": "Grit E2 CF (new, reference)", "score": 100, "shock": 2.15, "buzz": 0.58, "fade": 10.0, "twist": 427, "photo": "grit-e2-cf.jpg", "xray": "grit-e2-cf", "reference": true},
-    {"paddle": "Grit E2 CF (older version)", "score": 99, "shock": 2.27, "buzz": 0.59, "fade": 10.0, "twist": 355, "photo": "grit-e2-cf.jpg", "xray": "grit-e2-cf"}
+ "_how_to_edit": "Arm Lab (vibration test) data. Add a paddle to 'arm', 'offcenter' and/or 'stiffness', change 'updated', then run python3 build.py. Arm Score: higher = more arm-friendly, reference paddle = 100. Optional keys: photo (file in site/assets/paddles/product/), xray (slug in site/xray/), used, reference, second_tester (shows the 'Second tester' chip and the footnote in 'second_tester_note'), approx (stiffness value shown with ~).",
+ "updated": "Nov 23, 2026",
+ "arm_tested": "Nov 21, 2026, one session (Franklin Dynasty Whip: Nov 23, second tester)",
+ "reference": "Grit E2 CF (new)",
+ "headline": "The Evolv (6 months of use) and the RPM Jade are the most arm-friendly so far; both Grit E2 CF versions are the firmest.",
+ "weights": [
+  [
+   "Shock to wrist",
+   45
   ],
-  "offcenter_lead": "Off-center hits sent 38–114% more shock to the wrist than center hits; the Evolvs were the most forgiving and the RPM Jade the least.",
-  "offcenter": [
-    {"paddle": "Evolv (6 months of use)", "center": 1.29, "off": 1.78, "extra": 38, "twist": 406},
-    {"paddle": "Evolv Origin", "center": 1.47, "off": 2.31, "extra": 57, "twist": 562},
-    {"paddle": "Grit E2 CF (older version)", "center": 1.45, "off": 2.60, "extra": 79, "twist": 530},
-    {"paddle": "Speedup Tide 14L (6 months of use)", "center": 1.37, "off": 2.50, "extra": 83, "twist": 738},
-    {"paddle": "Grit E2 CF (new)", "center": 1.36, "off": 2.52, "extra": 85, "twist": 617},
-    {"paddle": "RPM Jade", "center": 1.16, "off": 2.49, "extra": 114, "twist": 748}
+  [
+   "Buzz at wrist",
+   25
   ],
-  "offcenter_notes": [
-    "The RPM Jade is the cleanest paddle on center hits (1.16 g) but jumps the most on mishits, which fits its low twistweight.",
-    "Off-center hits mainly add jolt and twist, not more buzz.",
-    "These were small mishits during center blocks, so bigger mishits may be worse.",
-    "Early results: 7–8 hits per group, so treat small differences as ties."
+  [
+   "Buzz fade",
+   10
   ],
-  "offcenter_second_tester": "Franklin Dynasty Whip (second tester): off-center hits sent 40% more shock than center hits, the same as the Grit E2 CF in that session (+41%). It's shown as a note, not a row, because it was a different tester.",
-  "stiffness_title": "RPM Jade has the stiffest face, Speedup Tide the softest",
-  "stiffness": [
-    {"paddle": "RPM Jade", "hz": 541, "tested": "Nov 21, 2026", "flag": "RPM Jade's buzz is dominated by a higher vibration mode; its value may overstate stiffness."},
-    {"paddle": "Evolv (6 months of use)", "hz": 431, "tested": "Nov 21, 2026"},
-    {"paddle": "Grit E2 CF (new)", "hz": 408, "tested": "Nov 20 and 21, 2026"},
-    {"paddle": "Evolv Origin", "hz": 392, "tested": "Nov 20 and 21, 2026"},
-    {"paddle": "Grit E2 CF (older version)", "hz": 361, "tested": "Nov 21, 2026"},
-    {"paddle": "Franklin Dynasty Whip", "hz": 350, "approx": true, "tested": "Nov 23, 2026", "second_tester": true},
-    {"paddle": "RPM V2", "hz": 345, "tested": "Nov 20, 2026", "no_arm": true},
-    {"paddle": "Gearbox Pressure X 8M", "hz": 340, "tested": "Nov 20, 2026", "no_arm": true},
-    {"paddle": "Speedup Tide 14L (6 months of use)", "hz": 298, "tested": "Nov 20 and 21, 2026"}
+  [
+   "Wrist twist",
+   10
   ],
-  "grip_test": {
-    "title": "Do grip upgrades protect your arm?",
-    "lead": "Our Nov 23 grip test: Daniel's Franklin Dynasty Whip in 6 setups, with the Grit E2 CF reference at the start and end of the session (corrected for player fatigue). Arm Score: Grit E2 CF = 100.",
-    "rows": [
-      ["Factory grip", "101", "Baseline"],
-      ["+ Overgrip", "100", "No change in shock; paddle twisted ~24% more in hand"],
-      ["Bare handle + overgrip", "98", "No real change"],
-      ["Hesacore + overgrip", "96", "No measurable benefit; adds ~17 g to the handle"],
-      ["+ Overgrip + 6 g lead", "96", "Lead cut twist, no change in shock"],
-      ["+ 6 g lead (3 & 9 o'clock)", "not scored*", "~14% less twist, steadier paddle"]
-    ],
-    "footnote": "That run had softer ball contact, which inflates its score.",
-    "takeaway": "No grip upgrade reduced the shock or buzz reaching the wrist. Grips are about feel and fit, not shock protection. A little lead helped stability. For arm comfort, the paddle matters far more than the grip.",
-    "limits": "Limits: one player, one run per setup; sensors measure what reaches the wrist, not hand comfort."
+  [
+   "Off-center shock",
+   10
+  ]
+ ],
+ "second_tester_note": "Tested Nov 23, 2026 by a second tester (Daniel), with the Grit E2 CF reference in the same session. Its numbers are scaled to the reference so they line up with this table: compare them loosely. It ties the Grit overall: less shock and twist (it's heavier, swingweight 122 vs 110), but more buzz from its softer face.",
+ "arm": [
+  {
+   "paddle": "Evolv (6 months of use)",
+   "score": 144,
+   "shock": 1.4,
+   "buzz": 0.4,
+   "fade": 10.6,
+   "twist": 268,
+   "used": true
+  },
+  {
+   "paddle": "RPM Jade",
+   "score": 133,
+   "shock": 1.89,
+   "buzz": 0.24,
+   "fade": 9.4,
+   "twist": 406,
+   "photo": "rpm-jade.jpg",
+   "xray": "rpm-jade"
+  },
+  {
+   "paddle": "Evolv Origin",
+   "score": 113,
+   "shock": 1.7,
+   "buzz": 0.6,
+   "fade": 10.6,
+   "twist": 352,
+   "photo": "evolv-origin.jpg",
+   "xray": "evolv-origin"
+  },
+  {
+   "paddle": "Speedup Tide 14L (6 months of use)",
+   "score": 110,
+   "shock": 1.86,
+   "buzz": 0.46,
+   "fade": 13.1,
+   "twist": 440,
+   "used": true,
+   "xray": "speedup-tide"
+  },
+  {
+   "paddle": "Franklin Dynasty Whip",
+   "score": 101,
+   "shock": 1.88,
+   "buzz": 0.81,
+   "fade": 10.3,
+   "twist": 327,
+   "second_tester": true,
+   "photo": "franklin-dynasty-whip-16mm.jpg",
+   "xray": "franklin-dynasty-whip-16mm"
+  },
+  {
+   "paddle": "Grit E2 CF (new, reference)",
+   "score": 100,
+   "shock": 2.15,
+   "buzz": 0.58,
+   "fade": 10.0,
+   "twist": 427,
+   "photo": "grit-e2-cf.jpg",
+   "xray": "grit-e2-cf",
+   "reference": true
+  },
+  {
+   "paddle": "Grit E2 CF (older version)",
+   "score": 99,
+   "shock": 2.27,
+   "buzz": 0.59,
+   "fade": 10.0,
+   "twist": 355,
+   "photo": "grit-e2-cf.jpg",
+   "xray": "grit-e2-cf"
   }
+ ],
+ "offcenter_lead": "Off-center hits sent 38–114% more shock to the wrist than center hits; the Evolvs were the most forgiving and the RPM Jade the least.",
+ "offcenter": [
+  {
+   "paddle": "Evolv (6 months of use)",
+   "center": 1.29,
+   "off": 1.78,
+   "extra": 38,
+   "twist": 406
+  },
+  {
+   "paddle": "Evolv Origin",
+   "center": 1.47,
+   "off": 2.31,
+   "extra": 57,
+   "twist": 562
+  },
+  {
+   "paddle": "Grit E2 CF (older version)",
+   "center": 1.45,
+   "off": 2.6,
+   "extra": 79,
+   "twist": 530
+  },
+  {
+   "paddle": "Speedup Tide 14L (6 months of use)",
+   "center": 1.37,
+   "off": 2.5,
+   "extra": 83,
+   "twist": 738
+  },
+  {
+   "paddle": "Grit E2 CF (new)",
+   "center": 1.36,
+   "off": 2.52,
+   "extra": 85,
+   "twist": 617
+  },
+  {
+   "paddle": "RPM Jade",
+   "center": 1.16,
+   "off": 2.49,
+   "extra": 114,
+   "twist": 748
+  }
+ ],
+ "offcenter_notes": [
+  "The RPM Jade is the cleanest paddle on center hits (1.16 g) but jumps the most on mishits, which fits its low twistweight.",
+  "Off-center hits mainly add jolt and twist, not more buzz.",
+  "These were small mishits during center blocks, so bigger mishits may be worse.",
+  "Early results: 7–8 hits per group, so treat small differences as ties."
+ ],
+ "offcenter_second_tester": "Franklin Dynasty Whip (second tester): off-center hits sent 40% more shock than center hits, the same as the Grit E2 CF in that session (+41%). It's shown as a note, not a row, because it was a different tester.",
+ "stiffness_title": "RPM Jade has the stiffest face, Speedup Tide the softest",
+ "stiffness": [
+  {
+   "paddle": "RPM Jade",
+   "hz": 541,
+   "tested": "Nov 21, 2026",
+   "flag": "RPM Jade's buzz is dominated by a higher vibration mode; its value may overstate stiffness."
+  },
+  {
+   "paddle": "Evolv (6 months of use)",
+   "hz": 431,
+   "tested": "Nov 21, 2026"
+  },
+  {
+   "paddle": "Grit E2 CF (new)",
+   "hz": 408,
+   "tested": "Nov 20 and 21, 2026"
+  },
+  {
+   "paddle": "Evolv Origin",
+   "hz": 392,
+   "tested": "Nov 20 and 21, 2026"
+  },
+  {
+   "paddle": "Grit E2 CF (older version)",
+   "hz": 361,
+   "tested": "Nov 21, 2026"
+  },
+  {
+   "paddle": "Franklin Dynasty Whip",
+   "hz": 350,
+   "approx": true,
+   "tested": "Nov 23, 2026",
+   "second_tester": true
+  },
+  {
+   "paddle": "RPM V2",
+   "hz": 345,
+   "tested": "Nov 20, 2026",
+   "no_arm": true
+  },
+  {
+   "paddle": "Gearbox Pressure X 8M",
+   "hz": 340,
+   "tested": "Nov 20, 2026",
+   "no_arm": true
+  },
+  {
+   "paddle": "Speedup Tide 14L (6 months of use)",
+   "hz": 298,
+   "tested": "Nov 20 and 21, 2026"
+  }
+ ],
+ "grip_test": {
+  "title": "Do grip upgrades protect your arm?",
+  "lead": "We tested Daniel's Franklin Dynasty Whip in six setups on Nov 23, 2026, with the Grit E2 CF reference at the start and end of the session so we could correct for player fatigue. Arm Score: Grit E2 CF = 100.",
+  "rows": [
+   [
+    "Factory grip",
+    "101",
+    "Baseline"
+   ],
+   [
+    "+ Overgrip",
+    "100",
+    "Same shock; the paddle twisted about 24% more in the hand"
+   ],
+   [
+    "Factory grip removed + overgrip",
+    "98",
+    "No real change"
+   ],
+   [
+    "Hesacore + overgrip",
+    "96",
+    "No measurable benefit; adds about 17 g to the handle"
+   ],
+   [
+    "+ Overgrip + 6 g lead",
+    "96",
+    "Lead cut twist; same shock"
+   ],
+   [
+    "+ 6 g lead (3 g at 3 and 9 o'clock)",
+    "not scored*",
+    "About 14% less twist, a steadier paddle"
+   ]
+  ],
+  "footnote": "That run had softer ball contact, which inflates its score.",
+  "limits": "One player, one run per setup: treat these as trends, not proof.",
+  "headline": "No grip upgrade we tested reduced the shock or buzz reaching the wrist; a little lead tape made the paddle steadier.",
+  "details": [
+   [
+    "Overgrip",
+    "No change in shock or buzz at the wrist. The thicker grip let the paddle roll slightly in the hand on off-center hits."
+   ],
+   [
+    "Hesacore",
+    "Compared with the same overgrip on a bare handle, no measurable change in shock (−4%) or buzz. It mainly adds weight to the handle."
+   ],
+   [
+    "Lead tape",
+    "Raised twistweight from 6.24 to 6.75 and made the paddle steadier, but didn't reduce shock."
+   ],
+   [
+    "Why grips can still feel better",
+    "Our sensors measure what reaches the wrist, not comfort in the palm. Grips are about feel, fit and sweat control, not shock protection."
+   ],
+   [
+    "Bottom line",
+    "For arm comfort, the paddle matters far more than the grip. The most arm-friendly paddles we've tested score 30–44 points higher; no grip change moved the score more than 5."
+   ]
+  ]
+ },
+ "glossary_lead": "Every number describes what one hit does to your arm, averaged over about 25 hits.",
+ "stiffness_notes": [
+  "Weight also affects pitch (a lighter paddle rings higher), so this is face stiffness relative to the paddle's weight.",
+  "Franklin Dynasty Whip (second tester, Nov 23): about 350 Hz, a softer face than the new Grit E2 CF, in the same range as the older Grit (361 Hz) and the RPM V2 (345 Hz).",
+  "The Speedup Tide 14L has a 14 mm core."
+ ]
 }
