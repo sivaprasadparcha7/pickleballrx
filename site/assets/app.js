@@ -167,9 +167,18 @@
         history.replaceState(null, '', u.pathname + u.search + u.hash);
       }
       xr();
-      if (scroll) { var g = $('#all-xrays'); if (g) g.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      // Bring the "Showing N paddles" line to the top, under the sticky header, so the results
+      // are in view right away (on a phone the chips sit far above the first card).
+      if (scroll) {
+        var g = $('#x-count'), h = $('.site-header');
+        if (g) {
+          var top = g.getBoundingClientRect().top + window.pageYOffset - (h ? h.offsetHeight : 0) - 12;
+          var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          window.scrollTo({ top: Math.max(top, 0), behavior: reduce ? 'auto' : 'smooth' });
+        }
+      }
     };
-    chips.forEach(function (b) { b.addEventListener('click', function () { setTag(b.dataset.t); }); });
+    chips.forEach(function (b) { b.addEventListener('click', function () { setTag(b.dataset.t, true); }); });
     document.addEventListener('click', function (ev) {
       var a = ev.target.closest('a.xtag[data-t]');
       if (!a || ev.metaKey || ev.ctrlKey || ev.shiftKey) return;
