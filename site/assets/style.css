@@ -126,6 +126,7 @@ h2 { font-size: 1.65rem; margin: 0 0 6px; }
 
 /* cards */
 .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+[hidden] { display: none !important; }
 .card { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; display: flex; flex-direction: column; gap: 10px; }
 .card h3 { margin: 0; font-size: 1.1rem; }
 .card h3 a { color: var(--ink); text-decoration: none; }
