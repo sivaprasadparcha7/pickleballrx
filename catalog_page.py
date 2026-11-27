@@ -64,7 +64,7 @@ _bopts = "".join(f'<option>{e(b["brand"])}</option>' for b in CAT["brands"] if b
 _sopts = "".join(f'<option value="{e(s.lower())}">{e(s)}</option>' for s in sorted(_shapes))
 _checked = CAT["checked"]
 
-write("paddles.html", page("Paddle database: every paddle by brand | PickleballRx", f'''
+write("paddles.html", page("Paddle database: every paddle by brand | Pickleball Rx", f'''
 <div class="wrap"><section>
   <h1 class="page-title">Paddle database</h1>
   <p class="section-lead">{_n} paddles from {_nb} brands, with the key specs each brand lists. Tap a paddle's name to open its page on the brand's website. The {_nt} paddles marked <b>Tested by us</b> link to our X-ray and Grit Lab results.</p>
@@ -119,4 +119,4 @@ write("paddles.html", page("Paddle database: every paddle by brand | PickleballR
 }})();
 </script>''', 0, "paddles", desc=f"Pickleball paddle database: {_n} paddles from {_nb} brands, with brand-listed shape, thickness, weight, core, face, size and price, plus links to our lab results.", crumbs=[("Paddle database", None)]))
 
-write("all-paddles.html", '<!doctype html><meta charset="utf-8"><title>Paddle database | PickleballRx</title><meta http-equiv="refresh" content="0; url=paddles.html"><link rel="canonical" href="https://pickleballrx.org/paddles.html"><a href="paddles.html">Paddle database</a>')
+write("all-paddles.html", '<!doctype html><meta charset="utf-8"><title>Paddle database | Pickleball Rx</title><meta http-equiv="refresh" content="0; url=paddles.html"><link rel="canonical" href="https://pickleballrx.org/paddles.html"><a href="paddles.html">Paddle database</a>')

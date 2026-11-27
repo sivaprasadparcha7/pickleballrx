@@ -390,7 +390,7 @@ def _q(name, legend, opts, hint="", hidden=False, first=0):
 _country_opts = "".join(f'<option value="{c["k"]}">{e(c["n"])}</option>' for c in COUNTRIES)
 _rv_names = sorted({v[0] for v in SRC.values()})
 
-write("finder.html", page("Paddle finder: get your paddle Rx | PickleballRx", f'''
+write("finder.html", page("Paddle finder: get your paddle Rx | Pickleball Rx", f'''
 <div class="wrap"><section class="finder">
   <h1 class="page-title">Get your paddle Rx</h1>
   <p class="section-lead">Answer a few questions and our Rx algorithm ranks {_n_rx} paddles for you, using our own X-ray, spin and swing-weight testing where we have it.</p>
