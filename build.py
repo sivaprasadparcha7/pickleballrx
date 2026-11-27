@@ -154,8 +154,8 @@ def _ld(obj):
     return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + "</script>"
 
 
-def page(title, body, depth=0, current="", desc=SITE_DESC, image=None, image_alt=None, schema=None, noindex=False, og_type="website", crumbs=None):
-    r = "../" * depth
+def page(title, body, depth=0, current="", desc=SITE_DESC, image=None, image_alt=None, schema=None, noindex=False, og_type="website", crumbs=None, root=None):
+    r = "../" * depth if root is None else root
     img = _abs(image or OG_IMAGE)
     img_alt = image_alt or ("Pickleball Rx: " + TAGLINE)
     img_dims = '' if image else '\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">'
@@ -209,7 +209,7 @@ def page(title, body, depth=0, current="", desc=SITE_DESC, image=None, image_alt
 </head>
 <body>
 <header class="site-header"><div class="wrap">
-  <a class="logo" href="{r}index.html"><img src="{r}assets/logo-white.svg?v={ASSET_V}" alt="Pickleball Rx" width="149" height="58"></a>
+  <a class="logo" href="/"><img src="{r}assets/logo-white.svg?v={ASSET_V}" alt="Pickleball Rx" width="149" height="58"></a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span><span></span><span></span></button>
   <nav class="nav" id="site-nav" aria-label="Main">
     {nav("paddles.html", "Paddle database", "paddles")}
@@ -555,7 +555,7 @@ reviewers_html = "".join(
 # Latest reviews only show on the home page once at least one real (non-placeholder) review exists.
 _real = [p for p in PADDLES if not p.get("placeholder")]
 latest_section = (f'''<section>
-  <div class="section-head"><div><h2>Latest reviews</h2><p class="section-lead">Our newest full reviews.</p></div><a class="btn ghost" href="reviews/index.html">All reviews</a></div>
+  <div class="section-head"><div><h2>Latest reviews</h2><p class="section-lead">Our newest full reviews.</p></div><a class="btn ghost" href="reviews/">All reviews</a></div>
   <div class="grid">{"".join(card(p, 0) for p in _real[:3])}</div>
 </section>
 ''') if _real else ""
@@ -681,7 +681,9 @@ write("index.html", page("Pickleball Rx | The Wikipedia of Pickleball Paddles", 
 # paddles.html is built by catalog_page.py (every paddle by brand).
 
 # ---------- compare ----------
-write("compare.html", page("Compare paddles | Pickleball Rx", '''
+# Compare, the reviews index and review pages are only published once a real (non-placeholder) review exists.
+# Placeholder pages ("Sample Paddle A") look empty to Google and get reported as soft 404s.
+if HAS_REAL: write("compare.html", page("Compare paddles | Pickleball Rx", '''
 <div class="wrap"><section>
   <h1 class="page-title">Compare paddles</h1>
   <p class="section-lead">Pick up to four paddles. The best value in each row is highlighted. Copy the page link to share your comparison.</p>
@@ -872,25 +874,25 @@ write("best.html", page("Best Pickleball Paddles 2026: Lab-Tested Top Picks | Pi
 {picks_html}
 <section id="canadian" style="padding-top:10px">
   <div class="rev-head" style="margin-bottom:6px"><img class="rev-avatar" src="assets/reviewers/supasenpai.jpg" alt="Supasenpai, pickleball paddle reviewer" width="64" height="64" loading="lazy"><h2 style="margin:0">Top 5 Canadian paddles</h2></div>
-  <p class="section-lead">We did not test these paddles. These picks come from our Canadian neighbor, reviewer <a href="https://supasenpai.com/" target="_blank" rel="noopener">Supasenpai</a>, one of <a href="index.html#reviewers">our favorite reviewers</a>.</p>
+  <p class="section-lead">We did not test these paddles. These picks come from our Canadian neighbor, reviewer <a href="https://supasenpai.com/" target="_blank" rel="noopener">Supasenpai</a>, one of <a href="/#reviewers">our favorite reviewers</a>.</p>
   {senpai_links_html}
   <div class="lb-grid">{canadian_html}</div>
 </section>
 <section id="supa-senpai" style="padding-top:10px">
   <div class="rev-head" style="margin-bottom:6px"><img class="rev-avatar" src="assets/reviewers/supasenpai.jpg" alt="Supasenpai, pickleball paddle reviewer" width="64" height="64" loading="lazy"><h2 style="margin:0">Supasenpai's top picks</h2></div>
-  <p class="section-lead">Paddle picks from Supasenpai, one of <a href="index.html#reviewers">our favorite reviewers</a>. These are Supasenpai's choices, not ours, and we haven't lab-tested them yet.</p>
+  <p class="section-lead">Paddle picks from Supasenpai, one of <a href="/#reviewers">our favorite reviewers</a>. These are Supasenpai's choices, not ours, and we haven't lab-tested them yet.</p>
   {senpai_links_html}
   <div class="lb-grid">{senpai_html}</div>
 </section>
 <section id="pb-on-call" style="padding-top:10px">
   <div class="rev-head" style="margin-bottom:6px"><img class="rev-avatar" src="assets/reviewers/pb-on-call.jpg" alt="PB on Call, pickleball paddle reviewer" width="64" height="64" loading="lazy"><h2 style="margin:0">PB on Call's favorite picks</h2></div>
-  <p class="section-lead">Favorite paddles from <a href="https://www.youtube.com/@PickleballOnCall" target="_blank" rel="noopener">PB on Call</a>, one of <a href="index.html#reviewers">our favorite reviewers</a>. These are PB on Call's choices, not ours, and we haven't lab-tested most of them yet. PB on Call's own discount codes are on their linktree.</p>
+  <p class="section-lead">Favorite paddles from <a href="https://www.youtube.com/@PickleballOnCall" target="_blank" rel="noopener">PB on Call</a>, one of <a href="/#reviewers">our favorite reviewers</a>. These are PB on Call's choices, not ours, and we haven't lab-tested most of them yet. PB on Call's own discount codes are on their linktree.</p>
   {oncall_links_html}
   <div class="lb-grid">{oncall_html}</div>
 </section>
 <section id="ed" style="padding-top:10px">
   <div class="rev-head" style="margin-bottom:6px"><img class="rev-avatar" src="assets/reviewers/ed.jpg" alt="Ed, Pickleball Freak Show, pickleball paddle reviewer" width="64" height="64" loading="lazy"><h2 style="margin:0">Ed's favorite picks</h2></div>
-  <p class="section-lead">Favorite paddles from Ed of <a href="https://www.youtube.com/@pickleballfreakshow" target="_blank" rel="noopener">Pickleball Freak Show</a>, one of <a href="index.html#reviewers">our favorite reviewers</a>. These are Ed's choices, not ours. We've X-rayed all five, so tap a badge to see inside.</p>
+  <p class="section-lead">Favorite paddles from Ed of <a href="https://www.youtube.com/@pickleballfreakshow" target="_blank" rel="noopener">Pickleball Freak Show</a>, one of <a href="/#reviewers">our favorite reviewers</a>. These are Ed's choices, not ours. We've X-rayed all five, so tap a badge to see inside.</p>
   {ed_links_html}
   <div class="lb-grid">{ed_html}</div>
 </section>
@@ -902,7 +904,7 @@ write("best.html", page("Best Pickleball Paddles 2026: Lab-Tested Top Picks | Pi
 </div>''', 0, "best", desc="The best pickleball paddles of 2026, picked from our X-ray, grit microscope, spin and swing weight lab tests, plus top picks from reviewers we trust.", crumbs=[("Top picks", None)]))
 
 # ---------- reviews index ----------
-write("reviews/index.html", page("All reviews | Pickleball Rx", f'''
+if _real: write("reviews/index.html", page("All reviews | Pickleball Rx", f'''
 <div class="wrap"><section>
   <h1 class="page-title">All paddle reviews</h1>
   <p class="section-lead">Prefer a table? Use the <a href="../paddles.html">paddle database</a>.</p>
@@ -910,7 +912,7 @@ write("reviews/index.html", page("All reviews | Pickleball Rx", f'''
 </section></div>''', 1, "paddles", desc="All Pickleball Rx paddle reviews.", noindex=not _real, crumbs=[("Reviews", None)]))
 
 # ---------- review pages ----------
-for p in PADDLES:
+for p in _real:
     ov = overall(p)
     bars = "".join(f'<div class="score"><span>{k}</span><div class="bar"><i style="width:{p[k.lower()]*10}%"></i></div><b>{p[k.lower()]}</b></div>' for k in ["Power", "Spin", "Control", "Forgiveness"])
     vid = p.get("video") or next((v["id"] for v in VIDEOS if v.get("paddle") == p["slug"]), "")
@@ -2110,7 +2112,8 @@ write("pros.html", page("What paddles do the pros use? PPA and APP | Pickleball 
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "catalog_page.py")).read())
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "rx_page.py")).read())
 
-write("404.html", page("Page not found | Pickleball Rx", '<article class="article"><h1>Page not found</h1><p>That page doesn\'t exist. <a href="/">Go to the home page</a>.</p></article>', 0, desc="That page doesn't exist on Pickleball Rx.", noindex=True))
+write("404.html", page("Page not found | Pickleball Rx", '<article class="article"><h1>Page not found</h1><p>That page doesn\'t exist. <a href="/">Go to the home page</a>.</p></article>', 0, desc="That page doesn't exist on Pickleball Rx.", noindex=True, root="/")
+      .replace('<link rel="canonical" href="__PAGE_URL__">\n', "").replace('<meta property="og:url" content="__PAGE_URL__">\n', ""))
 
 
 # ---------- sitemap.xml and robots.txt (every indexable page; noindex pages are left out) ----------

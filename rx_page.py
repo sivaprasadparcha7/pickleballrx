@@ -419,7 +419,7 @@ write("finder.html", page("Paddle finder: get your paddle Rx | Pickleball Rx", f
       <li><b>Power</b> rises for full foam (a little more for EPP), elongated shapes, 14 mm cores and a higher measured swing weight from our <a href="specs.html">Spec Lab</a>.</li>
       <li><b>Defense</b> rises for Gen 3 honeycomb, 16 mm cores, wider shapes, a lighter measured swing weight and a higher twist weight.</li>
       <li><b>Forgiveness</b> rises for wide and hybrid shapes, 16 mm cores and a higher measured twist weight.</li>
-      <li>Our own picks (the <a href="index.html#leaderboard">Leader Board</a> and <a href="best.html">top picks</a>) nudge the matching rating up.</li>
+      <li>Our own picks (the <a href="/#leaderboard">Leader Board</a> and <a href="best.html">top picks</a>) nudge the matching rating up.</li>
     </ul>
     <p>Then your answers turn into a match score out of 100:</p>
     <ul>
