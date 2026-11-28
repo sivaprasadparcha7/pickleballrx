@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url><loc>https://pickleballrx.org/</loc><lastmod>2026-11-27</lastmod><priority>1.0</priority></url>
+  <url><loc>https://pickleballrx.org/</loc><lastmod>2026-11-28</lastmod><priority>1.0</priority></url>
   <url><loc>https://pickleballrx.org/about.html</loc><lastmod>2026-11-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://pickleballrx.org/arm-score.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
   <url><loc>https://pickleballrx.org/best-pickleball-paddles-for-tennis-elbow.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
-  <url><loc>https://pickleballrx.org/best.html</loc><lastmod>2026-11-27</lastmod><priority>0.9</priority></url>
-  <url><loc>https://pickleballrx.org/codes.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
+  <url><loc>https://pickleballrx.org/best.html</loc><lastmod>2026-11-28</lastmod><priority>0.9</priority></url>
+  <url><loc>https://pickleballrx.org/codes.html</loc><lastmod>2026-11-28</lastmod><priority>0.8</priority></url>
   <url><loc>https://pickleballrx.org/disclaimers.html</loc><lastmod>2026-11-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://pickleballrx.org/evolv-pickleball.html</loc><lastmod>2026-11-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://pickleballrx.org/finder.html</loc><lastmod>2026-11-27</lastmod><priority>0.9</priority></url>
@@ -14,7 +14,7 @@
   <url><loc>https://pickleballrx.org/grit.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
   <url><loc>https://pickleballrx.org/guide.html</loc><lastmod>2026-11-27</lastmod><priority>0.7</priority></url>
   <url><loc>https://pickleballrx.org/lab.html</loc><lastmod>2026-11-27</lastmod><priority>0.9</priority></url>
-  <url><loc>https://pickleballrx.org/paddles.html</loc><lastmod>2026-11-27</lastmod><priority>0.9</priority></url>
+  <url><loc>https://pickleballrx.org/paddles.html</loc><lastmod>2026-11-28</lastmod><priority>0.9</priority></url>
   <url><loc>https://pickleballrx.org/pros.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
   <url><loc>https://pickleballrx.org/specs.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
   <url><loc>https://pickleballrx.org/spin.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
@@ -46,7 +46,7 @@
   <url><loc>https://pickleballrx.org/xray/gearbox-pressure-xm.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/gearbox-pressure-xm-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/gearbox-pressure-xm-clean.jpg</image:loc></image:image></url>
   <url><loc>https://pickleballrx.org/xray/grit-e2-cf.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/grit-e2-cf-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/grit-e2-cf-clean.jpg</image:loc></image:image></url>
   <url><loc>https://pickleballrx.org/xray/holbrook-fuze.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/holbrook-fuze-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/holbrook-fuze-clean.jpg</image:loc></image:image></url>
-  <url><loc>https://pickleballrx.org/xray/honolulu-j6cr.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/honolulu-j6cr-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/honolulu-j6cr-clean.jpg</image:loc></image:image></url>
+  <url><loc>https://pickleballrx.org/xray/honolulu-j6cr.html</loc><lastmod>2026-11-28</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/honolulu-j6cr-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/honolulu-j6cr-clean.jpg</image:loc></image:image></url>
   <url><loc>https://pickleballrx.org/xray/joola-perseus-3s.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/joola-perseus-3s-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/joola-perseus-3s-clean.jpg</image:loc></image:image></url>
   <url><loc>https://pickleballrx.org/xray/joola-perseus-pro-iv.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/joola-perseus-pro-iv-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/joola-perseus-pro-iv-clean.jpg</image:loc></image:image></url>
   <url><loc>https://pickleballrx.org/xray/joola-perseus-pro-v.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/joola-perseus-pro-v-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/joola-perseus-pro-v-clean.jpg</image:loc></image:image></url>
@@ -71,7 +71,7 @@
   <url><loc>https://pickleballrx.org/xray/nordic-dots.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/nordic-dots-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/nordic-dots-clean.jpg</image:loc></image:image></url>
   <url><loc>https://pickleballrx.org/xray/nox-x-foam-jc6.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/nox-x-foam-jc6-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/nox-x-foam-jc6-clean.jpg</image:loc></image:image></url>
   <url><loc>https://pickleballrx.org/xray/nox-x-foam-jma.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/nox-x-foam-jma-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/nox-x-foam-jma-clean.jpg</image:loc></image:image></url>
-  <url><loc>https://pickleballrx.org/xray/pact-teflon.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/pact-teflon-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/pact-teflon-clean.jpg</image:loc></image:image></url>
+  <url><loc>https://pickleballrx.org/xray/pact-teflon.html</loc><lastmod>2026-11-28</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/pact-teflon-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/pact-teflon-clean.jpg</image:loc></image:image></url>
   <url><loc>https://pickleballrx.org/xray/pakle-evolution-01.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/pakle-evolution-01-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/pakle-evolution-01-clean.jpg</image:loc></image:image></url>
   <url><loc>https://pickleballrx.org/xray/pakle-fuse.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/pakle-fuse-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/pakle-fuse-clean.jpg</image:loc></image:image></url>
   <url><loc>https://pickleballrx.org/xray/pakle-infinity.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority><image:image><image:loc>https://pickleballrx.org/assets/xray/pakle-infinity-labeled.jpg</image:loc></image:image><image:image><image:loc>https://pickleballrx.org/assets/xray/pakle-infinity-clean.jpg</image:loc></image:image></url>

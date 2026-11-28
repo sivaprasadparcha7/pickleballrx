@@ -47,6 +47,9 @@ CODES = [  # confirmed by Siva 2026-11-17
     dict(brand="Pickle Poppers", code="PBRX", offer="10% off", url="https://www.pickle-poppers.com/", no_disc=True),  # Siva 2026-11-19
     dict(brand="Mehau", code="PBRX", offer="15% off", url="https://mehaupickleball.com/", via="Fermiha"),  # Siva 2026-11-22
     dict(brand="Gearbox", code="PBRX", offer="10% off", url="https://gearboxsports.com/"),  # Siva 2026-11-24; pays commission (Siva 2026-11-25)
+    # Siva 2026-11-28: PBRX works at Honolulu and PACT. Percent not given yet, and commission unknown (no_disc until Siva confirms).
+    dict(brand="Honolulu", code="PBRX", offer="a discount", url="https://808pickle.com/", no_disc=True),
+    dict(brand="PACT", code="PBRX", offer="a discount", url="https://pactpaddles.com/", no_disc=True),
 ]
 
 
