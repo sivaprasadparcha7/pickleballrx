@@ -42,7 +42,7 @@ GRIT = [
  ("Volair CMD", "HexGrit (licensed from 11SIX24)"),
  ("Arronax KVL 005", "T800 carbon, peel-ply texture"),
  ("RPM Friction Pro V2", "CarbonBite surface"),
- ("Li-Ning HyperPower 90S (14mm)", "Carbon fiber reinforced, micro-sanding finish"),
+ ("Li-Ning HyperPower 90C (14mm)", "Carbon fiber reinforced, micro-sanding finish"),
  ("Diadem Edge BluCore", "Triaxial 3D 18K carbon"),
 ]
 
@@ -69,7 +69,7 @@ GRIT_NOTES = [
  ("Volair CMD", "Volair licensed 11SIX24's HexGrit. Under matched light, a brand-new CMD shows the same kind of glassy, beaded layer with fine sparkle as the 11SIX24 HexGrit. The weave looked slightly crisper under the Volair's layer, which could be focus or the spot photographed."),
  ("Arronax KVL 005", "Tight, even plain weave with a matte peel-ply texture over T800 carbon. This is not the durable-grit version. A published spec lists its roughness at 6.58 µm Ra."),
  ("RPM Friction Pro V2", "Crisp plain carbon weave with a dark, glossy finish. The texture comes from the carbon surface itself, not added grit."),
- ("Li-Ning HyperPower 90S (14mm)", "The paddle is labeled \"carbon fiber reinforced, micro-sanding finish.\" Under the microscope, frosted, finely scratched tows give the texture, with no grit particles on top."),
+ ("Li-Ning HyperPower 90C (14mm)", "The paddle is labeled \"carbon fiber reinforced, micro-sanding finish.\" Under the microscope, frosted, finely scratched tows give the texture, with no grit particles on top."),
 ]
 
 SPIN = [

@@ -846,28 +846,28 @@
   "specs_sources": "Specs: pickleplayglobal.com, pickle-times.com, unlimitedpickleballzone.com. Labels interpret the X-ray, not a cutaway."
  },
  {
-  "paddle": "LI-NING HYPERPOWER 90S",
-  "file": "lining-hyper-power-90s-labeled.png",
-  "core": "PP high-density honeycomb",
-  "cell_size": "not resolvable (fine cells)",
+  "paddle": "LI-NING HYPERPOWER 90C",
+  "file": "li-ning-hyperpower-90c-labeled.png",
+  "core": "MCP foam (no honeycomb)",
+  "cell_size": "None (foam core)",
   "perimeter_ring": "≈ 10 mm frame band; panel ≈ 25 mm in",
-  "thickness": "14 mm (USAP: HP 90S 14MM)",
-  "face": "Carbon fiber, UV printed",
-  "weight": "223 g (≈ 7.9 oz)",
-  "size": "419 mm long (16.5 in) · width n/d",
+  "thickness": "14 mm",
+  "face": "Carbon fiber, micro-sanded finish",
+  "weight": "Not confirmed yet",
+  "size": "Not confirmed yet",
   "source_file": "lining-hyper-power-90s/LiNing_Hyper_Power_90S_Xray_Labeled.png",
   "specs": [
    [
     "Core type",
-    "PP high-density honeycomb"
+    "MCP foam (no honeycomb)"
    ],
    [
     "Cell size",
-    "not resolvable (fine cells)"
+    "None (foam core)"
    ],
    [
     "Core thickness",
-    "14 mm (USAP: HP 90S 14MM)"
+    "14 mm"
    ],
    [
     "Perimeter",
@@ -875,22 +875,22 @@
    ],
    [
     "Face",
-    "Carbon fiber, UV printed"
+    "Carbon fiber, micro-sanded finish"
    ],
    [
     "Weight",
-    "223 g (≈ 7.9 oz)"
+    "Not confirmed yet"
    ],
    [
     "Size",
-    "419 mm long (16.5 in) · width n/d"
+    "Not confirmed yet"
    ],
    [
     "Handle / grip",
-    "LG4 1/8 grip · medium balance"
+    "Not confirmed yet"
    ]
   ],
-  "specs_sources": "Specs: lining.com.vn (HyperPower 90S), USA Pickleball approved list. Width not published; labels interpret the X-ray, not a cutaway."
+  "specs_sources": "Core: MCP foam. Brand specs for the 90C are not confirmed yet. Labels interpret the X-ray, not a cutaway."
  },
  {
   "paddle": "LUZZ CANNON XPP",
@@ -1976,8 +1976,8 @@
  {
   "paddle": "STANDOUT CF4 ABSOLUTE BLACK",
   "file": "standout-cf4-labeled.png",
-  "core": "Pulse: narrow-cell PP honeycomb + foam",
-  "cell_size": "Narrow cell, not resolved (not disclosed)",
+  "core": "Pulse foam core (likely EPP)",
+  "cell_size": "None (foam core)",
   "perimeter_ring": "Denser foam ring ≈ 10 mm (not disclosed)",
   "thickness": "16 mm",
   "face": "Japanese T700 carbon fiber",
@@ -1987,11 +1987,11 @@
   "specs": [
    [
     "Core type",
-    "Pulse: narrow-cell PP honeycomb + foam"
+    "Pulse foam core (likely EPP)"
    ],
    [
     "Cell size",
-    "Narrow cell, not resolved (not disclosed)"
+    "None (foam core)"
    ],
    [
     "Core thickness",
@@ -3371,8 +3371,8 @@
  {
   "paddle": "WIKA QD FIRE 2",
   "file": "wika-qd-fire-2-labeled.png",
-  "core": "Hybrid 2.0: 6 mm honeycomb + EPP wrap",
-  "cell_size": "",
+  "core": "Likely EPP foam (Wika: Hybrid 2.0)",
+  "cell_size": "None (foam core)",
   "perimeter_ring": "≈ 20.5 mm ring (±1): 9.5 mm band + 11 mm",
   "thickness": "16 mm (14 mm also sold)",
   "face": "Carbon XK100, very rough texture",
@@ -3382,7 +3382,7 @@
   "specs": [
    [
     "Core type",
-    "Hybrid 2.0: 6 mm honeycomb + EPP wrap"
+    "Likely EPP foam (Wika: Hybrid 2.0)"
    ],
    [
     "Core thickness",
