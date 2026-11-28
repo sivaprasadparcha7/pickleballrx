@@ -449,8 +449,8 @@ UPCOMING = [
     dict(brand="Gearbox", name="GBX Power V2", status="Coming soon", anchor="gbx-power-v2",
          when="Flat Top, 16 mm &middot; $149.99 &middot; code PBRX saves 10% ($15)",
          photos=[("assets/news/gearbox-gbx-power-v2.jpg", "Gearbox GBX Power V2, coming soon")], square=True,
-         text="The new GBX Power from Gearbox, the brand behind the paddle in the top spot on our Leader Board. It's a Flat Top 16 mm paddle for $149.99, and code PBRX takes $15 off. Siva's verdict: best Gen 3 of the year, five stars. Order it at gearboxsports.com. We'll get it into the lab for X-rays, microscope scans and spin tests.",
-         links=[("Gearbox spotlight", "gearbox-pickleball.html#gbx-power-v2"), ("Order at Gearbox", "https://gearboxsports.com/"), ("X-ray: Pressure X 8E", "xray/gearbox-pressure-x-8e.html")],
+         text="The new GBX Power from Gearbox, the brand behind the paddle in the top spot on our Leader Board. It's a Flat Top 16 mm paddle for $149.99, and code PBRX takes $15 off. Siva's verdict: best Gen 3 of the year, five stars. Order it at gearboxsports.com. In our Spec Lab it measured swing weight 118, twist weight 6.40 and 8.00 oz. X-rays, microscope scans and spin tests are next.",
+         links=[("Gearbox spotlight", "gearbox-pickleball.html#gbx-power-v2"), ("Measured specs", "specs.html#gearbox-gbx-power"), ("Order at Gearbox", "https://gearboxsports.com/"), ("X-ray: Pressure X 8E", "xray/gearbox-pressure-x-8e.html")],
          sources=[("Gearbox", "https://gearboxsports.com/")]),
     dict(brand="Proton", name="Series One: Project Bluejay and Project Cardinal", status="Pre-order",
          when="Elongated, 15 mm &middot; $295 pre-order price",
@@ -1025,6 +1025,7 @@ SPEC_LINKS = {  # spec card id -> (X-ray slug, spin table name, grit collection 
     "pop-n-rush": ("pickle-poppers-pop-n-rush", "Pop N Rush", "Pickle Poppers Pop N Rush"),
     "bnb-loco": ("bread-butter-loco-2", "Bread & Butter Loco 2 Elongated", "Bread & Butter LOCO 2"),
     "arronax-boost-1": ("arronax-boost-1", "Arronax Boost", "Arronax Boost-1"),
+    "gearbox-gbx-power": (None, None, None),
 }
 
 
@@ -1445,7 +1446,7 @@ def spec_row(c):
     return (f'<tr><td><a href="#{c["id"]}">{e(c["brand"])} {e(c["model"])}</a></td><td class="num" data-v="{m["swingWeight"]}"><b>{m["swingWeight"]}</b></td>'
             f'<td class="num" data-v="{m["twistWeight"]}"><b>{m["twistWeight"]:.2f}</b></td><td class="num" data-v="{m["staticWeightOz"]}">{m["staticWeightOz"]:.2f} oz</td>'
             f'<td class="num" data-v="{d["lengthIn"]}">{d["lengthIn"]}&Prime;{star("len")}</td><td class="num" data-v="{d["widthIn"]}">{d["widthIn"]}&Prime;{star("wid")}</td>'
-            f'<td class="num" data-v="{d["thicknessMm"]}">{d["thicknessMm"]} mm{star("mm")}</td><td class="num" data-v="{d["handleIn"]}">{d["handleIn"]}&Prime;</td>'
+            f'<td class="num" data-v="{d["thicknessMm"]}">{d["thicknessMm"]} mm{star("mm")}</td><td class="num" data-v="{d["handleIn"]}">{d["handleIn"]}&Prime;{star("handle")}</td>'
             f'<td data-v="{e(c["shape"])}">{e(c["shape"])}</td><td>{" ".join(links) or "<span class=muted>&ndash;</span>"}</td></tr>')
 
 
@@ -1453,7 +1454,7 @@ def spec_card(c):
     img = "assets/specs/" + os.path.basename(c["cardImage"])
     notes = "".join(f"<li>{e(n)}</li>" for n in c["notes"])
     return (f'<figure class="lab-item" id="{c["id"]}" style="scroll-margin-top:90px"><a href="{img}"><img src="{img}" alt="{e(c["brand"])} {e(c["model"])} spec card: swing weight {c["measured"]["swingWeight"]}, twist weight {c["measured"]["twistWeight"]}, {c["measured"]["staticWeightOz"]} oz" loading="lazy" style="aspect-ratio:auto;object-fit:contain;background:#fff"></a>'
-            f'<figcaption><strong style="color:var(--ink)">{e(c["brand"])} {e(c["model"])}</strong> &middot; published specs: <a href="{e(c["source"]["url"])}" rel="noopener">{e(c["source"]["name"])}</a>'
+            f'<figcaption><strong style="color:var(--ink)">{e(c["brand"])} {e(c["model"])}</strong> &middot; ' + (f'published specs: <a href="{e(c["source"]["url"])}" rel="noopener">{e(c["source"]["name"])}</a>' if c["source"].get("url") else "all specs measured by Pickleball RX")
             + (f'<ul style="margin:6px 0 0;padding-left:18px">{notes}</ul>' if notes else "") + '</figcaption></figure>')
 
 
@@ -2018,6 +2019,7 @@ write("gearbox-pickleball.html", page("Gearbox Pickleball: brand spotlight | Pic
         <div><b>$149.99</b><span>price</span></div>
         <div><b>$134.99</b><span>with code PBRX</span></div>
       </div>
+      <p style="margin:10px 0 0"><strong>Measured in our <a href="specs.html#gearbox-gbx-power">Spec Lab</a>:</strong> swing weight 118, twist weight 6.40, static weight 8.00 oz.</p>
       {code_box("Gearbox")}
       <div class="btn-row"><a class="btn yellow" href="{GEARBOX_SHOP}" rel="sponsored noopener" target="_blank">Order at gearboxsports.com</a></div>
       <p class="muted" style="font-size:.88rem;margin-top:12px">Next it goes through the same lab as the Pressure X 8E: X-ray, 4K microscope and the 960 fps spin rig. Results will show up here.</p>
