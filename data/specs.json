@@ -1,6 +1,6 @@
 {
   "brand": "Pickleball RX",
-  "updated": "2026-11-17",
+  "updated": "2026-11-28",
   "paddles": [
     {
       "card": 1,
@@ -300,6 +300,34 @@
         "url": "https://www.arronax.my/products/boost-1"
       },
       "cardImage": "cards/11-arronax-boost-1-16mm-upgraded-grit.webp"
+    },
+    {
+      "card": 13,
+      "id": "gearbox-gbx-power",
+      "brand": "Gearbox",
+      "model": "GBX Power V2 Flat Top 16mm",
+      "shape": "Hybrid",
+      "measured": {
+        "swingWeight": 118,
+        "twistWeight": 6.4,
+        "staticWeightOz": 8
+      },
+      "dimensions": {
+        "lengthIn": 16.2,
+        "widthIn": 7.8,
+        "thicknessMm": 16,
+        "handleIn": 5.5,
+        "measuredByPickleballRx": []
+      },
+      "photo": "images/gearbox-gbx-power-v2.jpg",
+      "notes": [
+        "Size is from the GBX Power Hybrid listing. Gearbox hasn't published separate V2 dimensions."
+      ],
+      "source": {
+        "name": "Pickleball Central",
+        "url": "https://pickleballcentral.com/gearbox-gbx-power-hybrid-pickleball-paddle/"
+      },
+      "cardImage": "cards/13-gearbox-gbx-power-v2-flat-top-16mm.webp"
     }
   ]
 }
