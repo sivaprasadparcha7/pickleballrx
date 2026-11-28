@@ -47,9 +47,9 @@ CODES = [  # confirmed by Siva 2026-11-17
     dict(brand="Pickle Poppers", code="PBRX", offer="10% off", url="https://www.pickle-poppers.com/", no_disc=True),  # Siva 2026-11-19
     dict(brand="Mehau", code="PBRX", offer="15% off", url="https://mehaupickleball.com/", via="Fermiha"),  # Siva 2026-11-22
     dict(brand="Gearbox", code="PBRX", offer="10% off", url="https://gearboxsports.com/"),  # Siva 2026-11-24; pays commission (Siva 2026-11-25)
-    # Siva 2026-11-28: PBRX works at Honolulu and PACT. Percent not given yet, and commission unknown (no_disc until Siva confirms).
-    dict(brand="Honolulu", code="PBRX", offer="a discount", url="https://808pickle.com/", no_disc=True),
-    dict(brand="PACT", code="PBRX", offer="a discount", url="https://pactpaddles.com/", no_disc=True),
+    # Siva 2026-11-28: both pay commission. 15% is Siva's best recollection, not yet verified at checkout.
+    dict(brand="Honolulu", code="PBRX", offer="15% off", url="https://808pickle.com/"),
+    dict(brand="PACT", code="PBRX", offer="15% off", url="https://pactpaddles.com/"),
 ]
 
 
@@ -1818,7 +1818,7 @@ write("disclaimers.html", page("Disclaimers | Pickleball Rx", f'''
   <p class="muted">Last updated {LABS["updated"]}. Here is how our results are made, who supplied what, and where the limits are.</p>
 
   <h2 id="affiliate">Discount codes and commission</h2>
-  <p>Pickleball RX has discount codes with some brands, including Arronax, Evolv, Gearbox, Holbrook, Luzz, MARK, Pakle and RPM, and may earn a commission when you buy with a code or through some links. It costs you nothing extra. Deals and prices are checked on the brand's own site when we post them, but they can change or end at any time, so confirm the final price at checkout.</p>
+  <p>Pickleball RX has discount codes with some brands, including Arronax, Evolv, Gearbox, Holbrook, Honolulu, Luzz, MARK, PACT, Pakle and RPM, and may earn a commission when you buy with a code or through some links. It costs you nothing extra. Deals and prices are checked on the brand's own site when we post them, but they can change or end at any time, so confirm the final price at checkout.</p>
 
   <h2 id="independence">Brands have no input into results</h2>
   <p>No brand sees, edits or approves our results before they are published. Having a code with a brand never changes a number, a score or a ranking, and a brand can't pay for a spot on the Leader Board.</p>
