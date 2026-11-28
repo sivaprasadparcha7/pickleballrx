@@ -1026,6 +1026,7 @@ SPEC_LINKS = {  # spec card id -> (X-ray slug, spin table name, grit collection 
     "bnb-loco": ("bread-butter-loco-2", "Bread & Butter Loco 2 Elongated", "Bread & Butter LOCO 2"),
     "arronax-boost-1": ("arronax-boost-1", "Arronax Boost", "Arronax Boost-1"),
     "gearbox-gbx-power": (None, None, None),
+    "franklin-whip": ("franklin-dynasty-whip-16mm", None, None),
 }
 
 
@@ -1441,6 +1442,7 @@ def spec_row(c):
     if xs: links.append(f'<a class="badge" href="xray/{xs}.html">X-ray</a>')
     if sp: links.append(f'<a class="badge" href="spin.html#{slugify(sp)}">Spin</a>')
     if gr: links.append(f'<a class="badge" href="grit.html#{slugify(gr)}">Grit</a>')
+    if xs and _arm_for(xs): links.append('<a class="badge" href="arm-score.html">Arm Score</a>')
     mine = d.get("measuredByPickleballRx", [])
     star = lambda k: ' <span class="muted" title="Measured by Pickleball RX">*</span>' if k in mine else ""
     return (f'<tr><td><a href="#{c["id"]}">{e(c["brand"])} {e(c["model"])}</a></td><td class="num" data-v="{m["swingWeight"]}"><b>{m["swingWeight"]}</b></td>'
