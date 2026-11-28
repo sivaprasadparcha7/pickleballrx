@@ -447,9 +447,9 @@ latest = "\n".join(card(p, 0) for p in PADDLES[:3])
 # ---------- Upcoming releases (public news only; mark unconfirmed items) ----------
 UPCOMING = [
     dict(brand="Gearbox", name="GBX Power V2", status="Coming soon", anchor="gbx-power-v2",
-         when="Flat Top, 16 mm &middot; $150 &middot; code PBRX saves 10% ($15)",
+         when="Flat Top, 16 mm &middot; $149.99 &middot; code PBRX saves 10% ($15)",
          photos=[("assets/news/gearbox-gbx-power-v2.jpg", "Gearbox GBX Power V2, coming soon")], square=True,
-         text="The next GBX Power from Gearbox, the brand behind the paddle in the top spot on our Leader Board. It's a Flat Top 16 mm paddle for $150, and code PBRX takes $15 off. Order it at gearboxsports.com. We'll get it into the lab for X-rays, microscope scans and spin tests.",
+         text="The new GBX Power from Gearbox, the brand behind the paddle in the top spot on our Leader Board. It's a Flat Top 16 mm paddle for $149.99, and code PBRX takes $15 off. Siva's verdict: best Gen 3 of the year, five stars. Order it at gearboxsports.com. We'll get it into the lab for X-rays, microscope scans and spin tests.",
          links=[("Gearbox spotlight", "gearbox-pickleball.html#gbx-power-v2"), ("Order at Gearbox", "https://gearboxsports.com/"), ("X-ray: Pressure X 8E", "xray/gearbox-pressure-x-8e.html")],
          sources=[("Gearbox", "https://gearboxsports.com/")]),
     dict(brand="Proton", name="Series One: Project Bluejay and Project Cardinal", status="Pre-order",
@@ -593,9 +593,10 @@ write("index.html", page("Pickleball Rx | The Wikipedia of Pickleball Paddles", 
 <div class="wrap">
 <section id="coming-soon" style="padding-bottom:0">
   <a class="spotlight-band" href="gearbox-pickleball.html#gbx-power-v2">
-    <img src="assets/news/gearbox-gbx-power-v2.jpg" alt="Gearbox GBX Power V2, coming soon. Order at gearboxsports.com, code PBRX for 10% off" width="240" height="240" loading="lazy" style="height:240px">
-    <div><span class="tag">Coming soon</span><h2 style="margin:8px 0 6px">Gearbox GBX Power V2</h2>
-    <p>A new Flat Top 16 mm paddle from Gearbox, the brand behind the top spot on our Leader Board. It's $150, and code <strong style="color:#fcb92d">PBRX</strong> takes 10% off, so you pay $135. Order at gearboxsports.com.</p>
+    <img src="assets/news/gearbox-gbx-power-v2-promo.jpg" alt="Gearbox GBX Power V2: best Gen 3 I've tried this year. Five stars from Siva, Pickleball RX. $149.99, code PBRX for 10% off" width="135" height="240" loading="lazy" style="height:240px">
+    <div><span class="tag">Siva's pick &#9733;&#9733;&#9733;&#9733;&#9733;</span><h2 style="margin:8px 0 6px">Gearbox GBX Power V2: the best Gen 3 I've tried this year</h2>
+    <p>&ldquo;Such a great paddle. Gearbox hit it out of the park. I usually never say this, but it's one of the best in the current market, especially for the price.&rdquo; &mdash; Siva</p>
+    <p>A Flat Top 16 mm paddle from Gearbox, the brand behind the top spot on our Leader Board. It's $149.99, and code <strong style="color:#fcb92d">PBRX</strong> takes 10% off, so you pay $134.99. Order at gearboxsports.com.</p>
     <span class="go">See the GBX Power V2 &rarr;</span></div>
   </a>
 </section>
@@ -1998,27 +1999,28 @@ write("gearbox-pickleball.html", page("Gearbox Pickleball: brand spotlight | Pic
     <span class="tag">Brand spotlight: Gearbox Pickleball</span>
     <h1>Passion, <em>engineered</em>.</h1>
     <p>Rafael Filippini, Gearbox's founder and CEO, is one of the most passionate people in the paddle business. He went from pro racquetball and the Marines to building paddles in San Diego with his own patented carbon cores, and he calls his team "extremely passionate about what we do." His Pressure X 8E holds the top spot on our Leader Board.</p>
-    <div class="btn-row"><a class="btn yellow" href="{GEARBOX_SHOP}" rel="noopener" target="_blank">Shop Gearbox</a><a class="btn ghost" href="#gbx-power-v2">Coming soon: GBX Power V2</a></div>
+    <div class="btn-row"><a class="btn yellow" href="{GEARBOX_SHOP}" rel="noopener" target="_blank">Shop Gearbox</a><a class="btn ghost" href="#gbx-power-v2">Siva's pick: GBX Power V2</a></div>
   </div>
   <figure class="hero-art" style="margin:0;text-align:center"><img src="assets/paddles/product/gearbox-pressure-x-8e.jpg" alt="Gearbox Pressure X 8E on the Pickleball RX Leader Board" width="300" height="450" style="border-radius:14px;max-width:300px;width:100%;height:auto;background:#fff;object-fit:contain"></figure>
 </div></section>
 <div class="wrap">
 <section id="gbx-power-v2">
   <div class="gbx-feature">
-    <img src="assets/news/gearbox-gbx-power-v2.jpg" alt="Gearbox GBX Power V2 Flat Top 16 mm, coming soon" width="1080" height="1080" loading="lazy">
+    <img src="assets/news/gearbox-gbx-power-v2-promo.jpg" alt="Gearbox GBX Power V2 promo card: Gen 3+, Tier 1, durable grit. Best Gen 3 I've tried this year. Five stars from Siva, Pickleball RX. $149.99, code PBRX for 10% off" width="1080" height="1920" loading="lazy" style="max-width:380px;justify-self:center">
     <div>
-      <span class="tag">Coming soon</span>
-      <h2 style="margin:8px 0 6px">GBX Power V2</h2>
-      <p class="section-lead" style="margin-top:0">The next GBX Power is on its way. Here's what we know so far.</p>
+      <span class="tag">Siva's pick &#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <h2 style="margin:8px 0 6px">GBX Power V2: the best Gen 3 I've tried this year</h2>
+      <blockquote class="section-lead" style="margin:0 0 6px;padding-left:14px;border-left:4px solid #fcb92d">&ldquo;Such a great paddle. Gearbox hit it out of the park. I usually never say this, but it's one of the best in the current market, especially for the price.&rdquo;</blockquote>
+      <p class="muted" style="margin-top:0">&mdash; Siva, Pickleball RX</p>
       <div class="gbx-facts">
-        <div><b>Flat Top</b><span>shape</span></div>
-        <div><b>16 mm</b><span>core</span></div>
-        <div><b>$150</b><span>price</span></div>
-        <div><b>$135</b><span>with code PBRX</span></div>
+        <div><b>Gen 3+</b><span>Tier 1, durable grit</span></div>
+        <div><b>Flat Top</b><span>shape, 16 mm core</span></div>
+        <div><b>$149.99</b><span>price</span></div>
+        <div><b>$134.99</b><span>with code PBRX</span></div>
       </div>
       {code_box("Gearbox")}
       <div class="btn-row"><a class="btn yellow" href="{GEARBOX_SHOP}" rel="sponsored noopener" target="_blank">Order at gearboxsports.com</a></div>
-      <p class="muted" style="font-size:.88rem;margin-top:12px">As soon as we have one, it goes through the same lab as the Pressure X 8E: X-ray, 4K microscope and the 960 fps spin rig. Results will show up here.</p>
+      <p class="muted" style="font-size:.88rem;margin-top:12px">Next it goes through the same lab as the Pressure X 8E: X-ray, 4K microscope and the 960 fps spin rig. Results will show up here.</p>
     </div>
   </div>
 </section>
