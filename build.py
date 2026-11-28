@@ -1446,7 +1446,7 @@ def spec_row(c):
     return (f'<tr><td><a href="#{c["id"]}">{e(c["brand"])} {e(c["model"])}</a></td><td class="num" data-v="{m["swingWeight"]}"><b>{m["swingWeight"]}</b></td>'
             f'<td class="num" data-v="{m["twistWeight"]}"><b>{m["twistWeight"]:.2f}</b></td><td class="num" data-v="{m["staticWeightOz"]}">{m["staticWeightOz"]:.2f} oz</td>'
             f'<td class="num" data-v="{d["lengthIn"]}">{d["lengthIn"]}&Prime;{star("len")}</td><td class="num" data-v="{d["widthIn"]}">{d["widthIn"]}&Prime;{star("wid")}</td>'
-            f'<td class="num" data-v="{d["thicknessMm"]}">{d["thicknessMm"]} mm{star("mm")}</td><td class="num" data-v="{d["handleIn"]}">{d["handleIn"]}&Prime;</td>'
+            f'<td class="num" data-v="{d["thicknessMm"]}">{d["thicknessMm"]} mm{star("mm")}</td><td class="num" data-v="{d["handleIn"]}">{d["handleIn"]}&Prime;{star("handle")}</td>'
             f'<td data-v="{e(c["shape"])}">{e(c["shape"])}</td><td>{" ".join(links) or "<span class=muted>&ndash;</span>"}</td></tr>')
 
 
@@ -1454,7 +1454,7 @@ def spec_card(c):
     img = "assets/specs/" + os.path.basename(c["cardImage"])
     notes = "".join(f"<li>{e(n)}</li>" for n in c["notes"])
     return (f'<figure class="lab-item" id="{c["id"]}" style="scroll-margin-top:90px"><a href="{img}"><img src="{img}" alt="{e(c["brand"])} {e(c["model"])} spec card: swing weight {c["measured"]["swingWeight"]}, twist weight {c["measured"]["twistWeight"]}, {c["measured"]["staticWeightOz"]} oz" loading="lazy" style="aspect-ratio:auto;object-fit:contain;background:#fff"></a>'
-            f'<figcaption><strong style="color:var(--ink)">{e(c["brand"])} {e(c["model"])}</strong> &middot; published specs: <a href="{e(c["source"]["url"])}" rel="noopener">{e(c["source"]["name"])}</a>'
+            f'<figcaption><strong style="color:var(--ink)">{e(c["brand"])} {e(c["model"])}</strong> &middot; ' + (f'published specs: <a href="{e(c["source"]["url"])}" rel="noopener">{e(c["source"]["name"])}</a>' if c["source"].get("url") else "all specs measured by Pickleball RX")
             + (f'<ul style="margin:6px 0 0;padding-left:18px">{notes}</ul>' if notes else "") + '</figcaption></figure>')
 
 

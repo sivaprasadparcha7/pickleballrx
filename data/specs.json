@@ -302,6 +302,37 @@
       "cardImage": "cards/11-arronax-boost-1-16mm-upgraded-grit.webp"
     },
     {
+      "card": 12,
+      "id": "franklin-whip",
+      "brand": "Franklin",
+      "model": "Whip Elongated 16mm",
+      "shape": "Elongated",
+      "measured": {
+        "swingWeight": 122,
+        "twistWeight": 6.24,
+        "staticWeightOz": 8
+      },
+      "dimensions": {
+        "lengthIn": 16.5,
+        "widthIn": 7.5,
+        "thicknessMm": 16,
+        "handleIn": 5.6,
+        "measuredByPickleballRx": [
+          "len",
+          "wid",
+          "mm",
+          "handle"
+        ]
+      },
+      "photo": "images/franklin-whip.jpg",
+      "notes": [],
+      "source": {
+        "name": "Pickleball RX (all specs measured)",
+        "url": null
+      },
+      "cardImage": "cards/12-franklin-whip-elongated-16mm.webp"
+    },
+    {
       "card": 13,
       "id": "gearbox-gbx-power",
       "brand": "Gearbox",
