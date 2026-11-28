@@ -1844,7 +1844,7 @@
    "name": "Li-Ning HyperPower 90C",
    "brand": "Li-Ning",
    "image": "li-ning-hyperpower-90c-labeled.png",
-   "core": "MCP foam (no honeycomb)",
+   "core": "MPP foam (no honeycomb)",
    "cell_size": "None (foam core)",
    "ring": "≈ 10 mm frame band; panel ≈ 25 mm in",
    "thickness": "14 mm",
@@ -1854,7 +1854,7 @@
    "specs": [
     [
      "Core type",
-     "MCP foam (no honeycomb)"
+     "MPP foam (no honeycomb)"
     ],
     [
      "Cell size",
@@ -1885,9 +1885,10 @@
      "Not confirmed yet"
     ]
    ],
-   "sources": "Core: MCP foam. Brand specs for the 90C are not confirmed yet. Labels interpret the X-ray, not a cutaway.",
+   "sources": "Core: MPP foam. Brand specs for the 90C are not confirmed yet. Labels interpret the X-ray, not a cutaway.",
    "tags": [
-    "foam"
+    "foam",
+    "mpp"
    ],
    "reel": "",
    "unreleased": false

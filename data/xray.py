@@ -119,7 +119,7 @@ CENTER = {
  "gearbox-gx2": "carbon",                  # SST 2.0 carbon ribs, not honeycomb (Siva 2026-11-25)
  "gearbox-pressure-x-8e": "foam",          # carbon ribs inside foam: counts as foam (Siva 2026-11-25)
  "gearbox-pressure-xm": "foam",
- # Li-Ning HyperPower 90C (MCP foam), Standout CF4 and Wika QD Fire 2 read as foam (Siva 2026-11-28).
+ # Li-Ning HyperPower 90C (MPP foam), Standout CF4 and Wika QD Fire 2 read as foam (Siva 2026-11-28).
 }
 
 
