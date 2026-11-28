@@ -1228,6 +1228,11 @@ for x in XRAY:
 </div>''', 1, "lab", desc=(f"{x['name']} review and X-ray: see inside this {x['brand']} pickleball paddle. {x['core'] + ' core' if x['core'] else 'Labeled core'}, edge ring and handle" + (f", plus {', '.join(_xray_labs(x)).lower().replace('arm score', 'Arm Score')} results" if _xray_labs(x) else ", plus specs") + "."), og_type="article", image=(xray_img(x['slug'], 'labeled') or xray_img(x['slug'], 'clean') or product_photo(x['slug']) or None), image_alt=f"{x['name']} pickleball paddle X-ray", crumbs=[("X-Ray Rx", "lab.html"), (x['name'], None)], schema=[{"@type": "Article", "headline": f"{x['name']} review: X-ray and lab results", "about": {"@type": "Product", "name": x['name'], "brand": {"@type": "Brand", "name": x['brand']}, "category": "Pickleball paddle"}, "author": {"@id": f"{SITE_URL}/#organization"}, "publisher": {"@id": f"{SITE_URL}/#organization"}, "mainEntityOfPage": {"@id": "__PAGE_URL__#webpage"}, "image": _abs(xray_img(x['slug'], 'labeled') or xray_img(x['slug'], 'clean') or OG_IMAGE)}]))
 
 
+# Renamed X-ray pages: keep the old URL working (meta refresh + canonical, no sitemap entry).
+XRAY_MOVED = {"li-ning-hyper-power-90s": "li-ning-hyperpower-90c"}  # the "90S" was the HyperPower 90C (2026-11-28)
+for _old, _new in XRAY_MOVED.items():
+    write(f"xray/{_old}.html", f'<!doctype html><meta charset="utf-8"><title>Moved | Pickleball Rx</title><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url={_new}.html"><link rel="canonical" href="{SITE_URL}/xray/{_new}.html"><a href="{_new}.html">This page moved</a>')
+
 # ---------- Grit Lab ----------
 GRIT_DISCLAIMER = "Microscope images were taken on an Elikliv 4K digital microscope. Wear percentages are conservative visual estimates comparing each paddle's hitting zone with its own low-contact throat under matched zoom and lighting. They are not profilometer measurements, and results vary with play style, ball and court surface. Surface names are as published by each brand."
 
@@ -1275,7 +1280,7 @@ new_gallery = gallery([
     ("card-arronax-kvl-005.jpg", "<strong>Arronax KVL 005</strong> &middot; T800 carbon, peel-ply texture", "Arronax KVL 005 peel-ply surface under the microscope"),
     ("card-rpm-friction-pro-v2.jpg", "<strong>RPM Friction Pro V2</strong> &middot; CarbonBite surface, M lens", "RPM Friction Pro V2 CarbonBite surface under the microscope"),
     ("card-rpm-friction-pro-v2-lm.jpg", "<strong>RPM Friction Pro V2</strong> &middot; CarbonBite surface, L and M lenses", "RPM Friction Pro V2 at the L and M lenses"),
-    ("card-li-ning-90s.jpg", "<strong>Li-Ning HyperPower 90S (14mm)</strong> &middot; micro-sanding finish", "Li-Ning HyperPower 90S surface under the microscope"),
+    ("card-li-ning-90c.jpg", "<strong>Li-Ning HyperPower 90C (14mm)</strong> &middot; micro-sanding finish", "Li-Ning HyperPower 90C surface under the microscope"),
     ("card-loco2-l.jpg", "<strong>Bread &amp; Butter LOCO 2</strong> &middot; Space Dust Grit, L lens", "Bread and Butter LOCO 2 at the L lens"),
     ("card-loco2-m.jpg", "<strong>Bread &amp; Butter LOCO 2</strong> &middot; Space Dust Grit, M lens", "Bread and Butter LOCO 2 at the M lens"),
 ], 260)

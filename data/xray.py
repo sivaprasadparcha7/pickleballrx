@@ -27,7 +27,7 @@ NAMES = {
  "honolulu-j6-cr": ("honolulu-j6cr", "Honolulu J6CR", "Honolulu"),
  "kamito-alpha-x": ("kamito-alpha-x", "Kamito Alpha-X", "Kamito"),
  "kamito-dominus": ("kamito-dominus", "Kamito Dominus", "Kamito"),
- "lining-hyper-power-90s": ("li-ning-hyper-power-90s", "Li-Ning HyperPower 90S", "Li-Ning"),
+ "li-ning-hyperpower-90c": ("li-ning-hyperpower-90c", "Li-Ning HyperPower 90C", "Li-Ning"),
  "luzz-cannon-xpp": ("luzz-cannon-xpp", "Luzz Cannon XPP", "Luzz"),
  "luzz-glider-2026": ("luzz-glider-2026", "Luzz Glider 2026", "Luzz"),
  "luzz-inferno-2-m1": ("luzz-inferno-2", "Luzz Inferno 2 M1", "Luzz"),
@@ -116,11 +116,10 @@ CENTER = {
  "pickle-poppers-pop-n-treasure": "foam",  # MPP foam centre; honeycomb only in the handle
  "soxter-impact-pro": "foam",              # X-ray face reads full foam (retailers list PP honeycomb)
  "wika-predator": "honeycomb",             # honeycomb star fills the centre, EPP foam around it
- "wika-qd-fire-2": "honeycomb",            # 6 mm honeycomb centre wrapped in EPP
  "gearbox-gx2": "carbon",                  # SST 2.0 carbon ribs, not honeycomb (Siva 2026-11-25)
  "gearbox-pressure-x-8e": "foam",          # carbon ribs inside foam: counts as foam (Siva 2026-11-25)
  "gearbox-pressure-xm": "foam",
- "li-ning-hyper-power-90s": "honeycomb",   # cells too fine to see; honeycomb per Siva 2026-11-25
+ # Li-Ning HyperPower 90C (MCP foam), Standout CF4 and Wika QD Fire 2 read as foam (Siva 2026-11-28).
 }
 
 
